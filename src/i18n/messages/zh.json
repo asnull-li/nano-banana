@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "title": "几小时内构建任何 AI SaaS 创业项目 | ShipAny",
-    "description": "ShipAny 是一个用于构建 AI SaaS 创业项目的 NextJS 模板，提供各种模板和组件，帮助您快速启动。",
-    "keywords": "ShipAny, AI SaaS 模板, NextJS 模板"
+    "title": "Nano Banana - AI图像编辑器 | 通过对话编辑图片",
+    "description": "Nano Banana 是一个AI驱动的图像生成器，让您通过对话聊天来创建和编辑图片。Flux Kontext 的强大替代品。",
+    "keywords": ""
   },
   "user": {
     "sign_in": "登录",

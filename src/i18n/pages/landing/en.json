@@ -3,10 +3,10 @@
   "theme": "light",
   "header": {
     "brand": {
-      "title": "ShipAny",
+      "title": "Nano Banana",
       "logo": {
         "src": "/logo.png",
-        "alt": "ShipAny"
+        "alt": "Nano Banana"
       },
       "url": "/"
     },
@@ -17,28 +17,19 @@
           "url": "/#feature",
           "icon": "RiSparkling2Line"
         },
-        {
-          "title": "Pricing",
-          "url": "/pricing",
-          "icon": "RiMoneyDollarCircleLine"
-        },
+
         {
           "title": "Showcase",
-          "url": "/showcase",
+          "url": "/#showcase",
           "icon": "RiApps2Line"
-        },
-        {
-          "title": "Docs",
-          "url": "/docs",
-          "icon": "RiBookOpenLine"
         }
       ]
     },
     "buttons": [
       {
-        "title": "Get ShipAny",
-        "url": "https://shipany.ai",
-        "target": "_blank",
+        "title": "Get Nano Banana",
+        "url": "/",
+        "target": "_self",
         "variant": "link",
         "icon": "RiArrowRightUpLine"
       }
@@ -48,28 +39,28 @@
     "show_locale": true
   },
   "hero": {
-    "title": "Ship Any AI Startups in hours, not days",
-    "highlight_text": "Ship Any",
-    "description": "ShipAny is a NextJS boilerplate for building AI SaaS startups.<br/>Ship Fast with a variety of templates and components.",
+    "title": "Nano Banana",
+    "highlight_text": "Nano Banana",
+    "description": "Nano Banana's advanced AI model delivers consistent character editing and scene preservation that surpasses Flux Kontext.<br/>Choose Nano Banana to experience the future of AI image editing with simple text prompts.",
     "announcement": {
       "label": "2025",
-      "title": "🎉 Happy New Year",
-      "url": "/pricing"
+      "title": "🚀 Try Nano Banana Free",
+      "url": "/"
     },
-    "tip": "🎁 50% off before 2025",
+    "tip": "🎨 Start creating with Nano Banana today",
     "buttons": [
       {
-        "title": "Get Started",
+        "title": "Try Nano Banana",
         "icon": "RiFlashlightFill",
-        "url": "/pricing",
+        "url": "/",
         "target": "_self",
         "variant": "default"
       },
       {
-        "title": "Read Document",
+        "title": "See Nano Banana Examples",
         "icon": "RiBookOpenLine",
-        "url": "https://docs.shipany.ai",
-        "target": "_blank",
+        "url": "/#showcase",
+        "target": "_self",
         "variant": "outline"
       }
     ],
@@ -118,56 +109,56 @@
   },
   "introduce": {
     "name": "introduce",
-    "title": "What is ShipAny",
+    "title": "What is Nano Banana",
     "label": "Introduce",
-    "description": "ShipAny is a NextJS boilerplate for building AI SaaS startups. Built in a variety of templates and components.",
+    "description": "Nano Banana is a revolutionary AI-powered image generation and editing platform that delivers consistent character editing and scene preservation. Unlike traditional text-to-image models, Nano Banana performs in-context image generation, allowing you to prompt with both text and images while seamlessly extracting and modifying visual concepts.",
     "image": {
       "src": "/imgs/features/1.png"
     },
     "items": [
       {
-        "title": "Ready-to-use Templates",
-        "description": "Choose from dozens of production-ready AI SaaS templates to quickly start your project.",
-        "icon": "RiNextjsFill"
+        "title": "In-Context Image Generation",
+        "description": "Nano Banana combines text and image inputs for seamless visual concept extraction and modification, delivering coherent renderings every time.",
+        "icon": "RiImageEditLine"
       },
       {
-        "title": "Infrastructure Setup",
-        "description": "Get instant access to scalable infrastructure with best practices built-in.",
-        "icon": "RiDatabase2Line"
+        "title": "Character Consistency",
+        "description": "Nano Banana preserves unique elements like reference characters or objects across multiple scenes and environments with unmatched accuracy.",
+        "icon": "RiUserHeartLine"
       },
       {
-        "title": "Quick Deployment",
-        "description": "Deploy your AI SaaS application to production in hours, not days.",
-        "icon": "RiCloudyFill"
+        "title": "Local Editing Precision",
+        "description": "Make targeted modifications of specific elements with Nano Banana without affecting the rest of your image, enabling flexible instant editing.",
+        "icon": "RiEditBoxLine"
       }
     ]
   },
   "benefit": {
     "name": "benefit",
-    "title": "Why Choose ShipAny",
+    "title": "Why Choose Nano Banana",
     "label": "Benefits",
-    "description": "Get everything you need to launch your AI startup - from ready-to-use templates to technical support.",
+    "description": "Experience next-generation AI image editing with Nano Banana's revolutionary technology that surpasses Flux Kontext in every way.",
     "items": [
       {
-        "title": "Complete Framework",
-        "description": "Built on Next.js with authentication, payments, and AI integration - everything works out of the box.",
-        "icon": "RiNextjsFill",
+        "title": "Superior Performance",
+        "description": "Nano Banana delivers faster inference speeds and higher quality results than competing models, with state-of-the-art character consistency and context understanding.",
+        "icon": "RiRocketLine",
         "image": {
           "src": "/imgs/features/2.png"
         }
       },
       {
-        "title": "Rich Templates Library",
-        "description": "Choose from various AI SaaS templates to kickstart your project - chatbots, image generation, and more.",
-        "icon": "RiClapperboardAiLine",
+        "title": "Iterative Editing Mastery",
+        "description": "With Nano Banana, build upon previous edits through multiple turns while maintaining characters, identities, styles, and distinctive features across different scenes.",
+        "icon": "RiRefreshLine",
         "image": {
           "src": "/imgs/features/3.png"
         }
       },
       {
-        "title": "Technical Guidance",
-        "description": "Get dedicated support and join our developer community to ensure your successful launch.",
-        "icon": "RiCodeFill",
+        "title": "Style Reference Innovation",
+        "description": "Nano Banana generates novel scenes while preserving unique styles from reference images, directed by simple text prompts with minimal latency.",
+        "icon": "RiPaletteLine",
         "image": {
           "src": "/imgs/features/4.png"
         }
@@ -176,8 +167,8 @@
   },
   "usage": {
     "name": "usage",
-    "title": "How to Launch with ShipAny",
-    "description": "Get your AI SaaS startup running in three simple steps:",
+    "title": "How to Create with Nano Banana",
+    "description": "Transform your creative workflow with Nano Banana in three simple steps:",
     "image": {
       "src": "/imgs/features/1.png"
     },
@@ -185,29 +176,29 @@
     "text_align": "center",
     "items": [
       {
-        "title": "Get ShipAny",
-        "description": "Buy ShipAny with a one-time payment. Check your email for the code and documentation.",
+        "title": "Start with Nano Banana",
+        "description": "Begin your creative journey with Nano Banana by uploading your reference image or starting with a text prompt for instant generation.",
         "image": {
           "src": "/imgs/features/5.png"
         }
       },
       {
-        "title": "Start Your Project",
-        "description": "Read the documentation and clone the code of ShipAny. Start building your AI SaaS startup.",
+        "title": "Edit with Nano Banana",
+        "description": "Use Nano Banana's powerful text instructions to modify your images - change expressions, add objects, or transform entire scenes seamlessly.",
         "image": {
           "src": "/imgs/features/6.png"
         }
       },
       {
-        "title": "Customize Your Project",
-        "description": "Modify the template with your data and contents. Specific AI functionality needs.",
+        "title": "Iterate with Nano Banana",
+        "description": "Build upon previous edits with Nano Banana's iterative capabilities, refining your creation step-by-step while preserving character consistency.",
         "image": {
           "src": "/imgs/features/7.png"
         }
       },
       {
-        "title": "Deploy to Production",
-        "description": "Deploy your project to production with a few steps and start serving customers immediately.",
+        "title": "Perfect with Nano Banana",
+        "description": "Achieve your desired result with Nano Banana's precision editing - from local adjustments to complete scene transformations in minimal time.",
         "image": {
           "src": "/imgs/features/8.png"
         }
@@ -216,116 +207,116 @@
   },
   "feature": {
     "name": "feature",
-    "title": "Key Features of ShipAny",
-    "description": "Everything you need to launch your AI SaaS startup quickly and efficiently.",
+    "title": "Core Capabilities of Nano Banana",
+    "description": "Experience the most advanced AI image editing technology with Nano Banana's breakthrough features.",
     "items": [
       {
-        "title": "Next.js Boilerplate",
-        "description": "Production-ready Next.js templates with SEO-friendly structure and i18n support.",
-        "icon": "RiNextjsFill"
+        "title": "Multimodal Flow Model",
+        "description": "Nano Banana combines state-of-the-art character consistency, context understanding and local editing capabilities with strong text-to-image synthesis.",
+        "icon": "RiFlowChart"
       },
       {
-        "title": "Authentication & Payments",
-        "description": "Integrated Google OAuth, one-tap login, and Stripe payment processing.",
-        "icon": "RiKey2Fill"
+        "title": "Interactive Speed Technology",
+        "description": "Nano Banana delivers minimal latency for both image generation and editing, operating up to 8x faster than current leading models.",
+        "icon": "RiSpeedUpLine"
       },
       {
-        "title": "Data Infrastructure",
-        "description": "Built-in Supabase integration for reliable and scalable data storage.",
-        "icon": "RiDatabase2Line"
+        "title": "Text-Based Image Editing",
+        "description": "Nano Banana enables flexible instant image editing through simple text instructions - no need for complex editing workflows or fine-tuning.",
+        "icon": "RiEditLine"
       },
       {
-        "title": "One-Click Deployment",
-        "description": "Seamless deployment to Vercel or Cloudflare with automated setup.",
-        "icon": "RiCloudy2Fill"
+        "title": "Photorealistic Rendering",
+        "description": "Nano Banana provides strong prompt following, photorealistic rendering, and competitive typography with signature quality output.",
+        "icon": "RiImageLine"
       },
       {
-        "title": "Business Analytics",
-        "description": "Integrated Google Analytics and Search Console for tracking growth.",
-        "icon": "RiBarChart2Line"
+        "title": "Scene Transformation",
+        "description": "Nano Banana handles complex transformations of entire scenes while maintaining visual coherence and character consistency across viewpoints.",
+        "icon": "RiMagicLine"
       },
       {
-        "title": "AI-Ready Infrastructure",
-        "description": "Pre-configured AI integration with built-in credits system and API sales.",
-        "icon": "RiRobot2Line"
+        "title": "Quality Preservation",
+        "description": "Nano Banana maintains image quality and character consistency through iterative editing sessions, preserving distinctive features seamlessly.",
+        "icon": "RiShieldCheckLine"
       }
     ]
   },
   "stats": {
     "name": "stats",
     "label": "Stats",
-    "title": "People Love ShipAny",
-    "description": "for it's easy to use and fast to ship.",
+    "title": "Creators Choose Nano Banana",
+    "description": "for unmatched AI image editing performance and reliability.",
     "icon": "FaRegHeart",
     "items": [
       {
-        "title": "Trusted by",
-        "label": "99+",
-        "description": "Customers"
+        "title": "Nano Banana Users",
+        "label": "10K+",
+        "description": "Creators"
       },
       {
-        "title": "Built in",
-        "label": "20+",
-        "description": "Components"
+        "title": "Nano Banana Speed",
+        "label": "8x",
+        "description": "Faster"
       },
       {
-        "title": "Ship Fast in",
-        "label": "5",
-        "description": "Minutes"
+        "title": "Nano Banana Accuracy",
+        "label": "99%",
+        "description": "Consistency"
       }
     ]
   },
   "testimonial": {
     "name": "testimonial",
     "label": "Testimonial",
-    "title": "What Users Say About ShipAny",
-    "description": "Hear from developers and founders who launched their AI startups with ShipAny.",
+    "title": "What Creators Say About Nano Banana",
+    "description": "Hear from artists, designers, and content creators who transformed their workflow with Nano Banana.",
     "icon": "GoThumbsup",
     "items": [
       {
-        "title": "David Chen",
-        "label": "Founder of AIWallpaper.shop",
-        "description": "ShipAny saved us months of development time. We launched our AI wallpaper business in just 2 days and got our first paying customer within a week!",
+        "title": "Sarah Chen",
+        "label": "Digital Artist & Illustrator",
+        "description": "Nano Banana revolutionized my creative process! The character consistency is incredible - I can maintain the same character across dozens of scenes. Nano Banana saves me hours every day.",
         "image": {
           "src": "/imgs/users/1.png"
         }
       },
       {
-        "title": "Rachel Kim",
-        "label": "CTO at HeyBeauty.ai",
-        "description": "The pre-built AI infrastructure is a game-changer. We didn't have to worry about architecture - just focused on our AI beauty tech and went live fast.",
+        "title": "Michael Rodriguez",
+        "label": "Content Creator & Influencer",
+        "description": "I've tried every AI image editor, but Nano Banana is in a league of its own. The iterative editing feature lets me perfect every detail. Nano Banana makes my content stand out.",
         "image": {
           "src": "/imgs/users/2.png"
         }
       },
       {
-        "title": "Marcus Thompson",
-        "label": "Solo Developer",
-        "description": "As a solo developer, ShipAny gave me everything I needed - auth, payments, AI integration, and beautiful UI. Launched my SaaS in a weekend!",
+        "title": "Emily Watson",
+        "label": "Creative Director at PixelStudio",
+        "description": "Our team switched to Nano Banana and productivity skyrocketed. The local editing precision is unmatched - we can modify specific elements without affecting the whole image. Nano Banana is a game-changer.",
         "image": {
           "src": "/imgs/users/3.png"
         }
       },
       {
-        "title": "Sofia Garcia",
-        "label": "CEO of Melodisco",
-        "description": "The templates are production-ready and highly customizable. We built our AI music platform in hours instead of months. Incredible time-to-market!",
+        "title": "Alex Kim",
+        "label": "Freelance Designer",
+        "description": "Nano Banana's speed blew my mind! What used to take hours now takes minutes. The style reference feature keeps my brand consistent across all projects. I can't imagine working without Nano Banana.",
         "image": {
           "src": "/imgs/users/4.png"
         }
       },
       {
-        "title": "James Wilson",
-        "label": "Tech Lead at GPTs.works",
-        "description": "ShipAny's infrastructure is rock-solid. We scaled from 0 to 10k users without touching the backend. Best investment for our AI startup.",
+        "title": "Lisa Thompson",
+        "label": "Marketing Agency Owner",
+        "description": "We deliver campaigns 10x faster with Nano Banana. Clients love the photorealistic quality and we love the efficiency. Nano Banana transformed our entire creative pipeline.",
         "image": {
           "src": "/imgs/users/5.png"
         }
       },
       {
-        "title": "Anna Zhang",
-        "label": "Startup Founder",
-        "description": "From idea to launch in 3 days! ShipAny's templates and deployment tools made it possible to test our AI business concept incredibly fast.",
+        "title": "David Park",
+        "label": "Film Pre-Visualization Artist",
+        "description": "Nano Banana brings my storyboards to life! The scene transformation capabilities are perfect for rapid prototyping. Every filmmaker should be using Nano Banana for pre-viz work.",
         "image": {
           "src": "/imgs/users/6.png"
         }
@@ -335,50 +326,50 @@
   "faq": {
     "name": "faq",
     "label": "FAQ",
-    "title": "Frequently Asked Questions About ShipAny",
-    "description": "Have another question? Contact us on Discord or by email.",
+    "title": "Frequently Asked Questions About Nano Banana",
+    "description": "Have more questions about Nano Banana? Contact our support team for assistance.",
     "items": [
       {
-        "title": "What exactly is ShipAny and how does it work?",
-        "description": "ShipAny is a comprehensive NextJS boilerplate designed specifically for building AI SaaS startups. It provides ready-to-use templates, infrastructure setup, and deployment tools that help you launch your AI business in hours instead of days."
+        "title": "What exactly is Nano Banana and how does it work?",
+        "description": "Nano Banana is a revolutionary AI-powered image generation and editing platform that performs in-context image generation. Unlike traditional text-to-image models, Nano Banana combines text and image inputs for seamless visual concept extraction and modification, delivering consistent character editing and scene preservation."
       },
       {
-        "title": "Do I need advanced technical skills to use ShipAny?",
-        "description": "While basic programming knowledge is helpful, ShipAny is designed to be developer-friendly. Our templates and documentation make it easy to get started, even if you're not an expert in AI or cloud infrastructure."
+        "title": "How is Nano Banana different from Flux Kontext?",
+        "description": "Nano Banana surpasses Flux Kontext with superior performance, faster inference speeds (up to 8x faster), and enhanced character consistency. Nano Banana delivers better local editing precision, improved iterative editing capabilities, and maintains higher image quality throughout multiple editing sessions."
       },
       {
-        "title": "What types of AI SaaS can I build with ShipAny?",
-        "description": "ShipAny supports a wide range of AI applications, from content generation to data analysis tools. Our templates cover popular use cases like AI chatbots, content generators, image processing apps, and more."
+        "title": "What types of editing can I do with Nano Banana?",
+        "description": "Nano Banana supports comprehensive image editing including character consistency preservation, local editing of specific elements, style reference generation, scene transformation, and iterative editing. You can modify expressions, add objects, change backgrounds, or transform entire scenes with simple text prompts."
       },
       {
-        "title": "How long does it typically take to launch with ShipAny?",
-        "description": "With ShipAny, you can have a working prototype in hours and a production-ready application in hours. Our one-click deployment and pre-configured infrastructure significantly reduce the traditional months-long development cycle."
+        "title": "How fast is Nano Banana compared to other AI models?",
+        "description": "Nano Banana operates with minimal latency, delivering results up to 8x faster than current leading models. The interactive speed technology ensures both image generation and editing happen in real-time, making Nano Banana perfect for rapid creative workflows and iterative design processes."
       },
       {
-        "title": "What's included in the ShipAny infrastructure?",
-        "description": "ShipAny provides a complete infrastructure stack including authentication, database setup, API integration, payment processing, and scalable cloud deployment. Everything is pre-configured following industry best practices."
+        "title": "Can Nano Banana maintain character consistency across multiple edits?",
+        "description": "Yes! Nano Banana excels at character consistency, preserving unique elements like reference characters or objects across multiple scenes and environments. The advanced multimodal flow model ensures that distinctive features remain consistent through iterative editing sessions."
       },
       {
-        "title": "Can I customize the templates to match my brand?",
-        "description": "Absolutely! All ShipAny templates are fully customizable. You can modify the design, features, and functionality to match your brand identity and specific business requirements while maintaining the robust underlying infrastructure."
+        "title": "Is Nano Banana suitable for professional creative work?",
+        "description": "Absolutely! Nano Banana is designed for professional creatives, offering photorealistic rendering, competitive typography, and production-quality results. Many professional artists, designers, content creators, and creative agencies rely on Nano Banana for their daily workflows and client projects."
       }
     ]
   },
   "cta": {
     "name": "cta",
-    "title": "Ship your first AI SaaS Startup",
-    "description": "Start from here, ship with ShipAny.",
+    "title": "Transform Your Creative Workflow with Nano Banana",
+    "description": "Experience the future of AI image editing. Start creating with Nano Banana today.",
     "buttons": [
       {
-        "title": "Get ShipAny",
-        "url": "https://shipany.ai",
-        "target": "_blank",
+        "title": "Try Nano Banana Now",
+        "url": "/",
+        "target": "_self",
         "icon": "GoArrowUpRight"
       },
       {
-        "title": "Read Document",
-        "url": "https://docs.shipany.ai",
-        "target": "_blank",
+        "title": "See Nano Banana Examples",
+        "url": "/#showcase",
+        "target": "_self",
         "variant": "outline"
       }
     ]
@@ -386,19 +377,19 @@
   "footer": {
     "name": "footer",
     "brand": {
-      "title": "ShipAny",
-      "description": "ShipAny is a NextJS boilerplate for building AI SaaS startups. Ship Fast with a variety of templates and components.",
+      "title": "Nano Banana",
+      "description": "Nano Banana is the revolutionary AI-powered image generation and editing platform that delivers consistent character editing and scene preservation with superior performance.",
       "logo": {
         "src": "/logo.png",
-        "alt": "ShipAny"
+        "alt": "Nano Banana"
       },
       "url": "/"
     },
-    "copyright": "© 2025 • ShipAny All rights reserved.",
+    "copyright": "© 2025 • Nano Banana All rights reserved.",
     "nav": {
       "items": [
         {
-          "title": "About",
+          "title": "Product",
           "children": [
             {
               "title": "Features",
@@ -421,39 +412,39 @@
           "title": "Resources",
           "children": [
             {
-              "title": "Documents",
-              "url": "https://docs.shipany.ai",
-              "target": "_blank"
+              "title": "Documentation",
+              "url": "/docs",
+              "target": "_self"
             },
             {
-              "title": "Components",
-              "url": "https://shipany.ai/components",
-              "target": "_blank"
+              "title": "API Reference",
+              "url": "/docs/api",
+              "target": "_self"
             },
             {
-              "title": "Templates",
-              "url": "https://shipany.ai/templates",
-              "target": "_blank"
+              "title": "Tutorials",
+              "url": "/docs/tutorials",
+              "target": "_self"
             }
           ]
         },
         {
-          "title": "Friends",
+          "title": "Community",
           "children": [
             {
-              "title": "ThinkAny",
-              "url": "https://thinkany.ai",
-              "target": "_blank"
+              "title": "Creator Gallery",
+              "url": "/#showcase",
+              "target": "_self"
             },
             {
-              "title": "HeyBeauty",
-              "url": "https://heybeauty.ai",
-              "target": "_blank"
+              "title": "Discord Community",
+              "url": "/",
+              "target": "_self"
             },
             {
-              "title": "Pagen",
-              "url": "https://pagen.so",
-              "target": "_blank"
+              "title": "GitHub",
+              "url": "/",
+              "target": "_self"
             }
           ]
         }
@@ -464,25 +455,25 @@
         {
           "title": "X",
           "icon": "RiTwitterXFill",
-          "url": "https://x.com/shipanyai",
-          "target": "_blank"
+          "url": "/",
+          "target": "_self"
         },
         {
           "title": "Github",
           "icon": "RiGithubFill",
-          "url": "https://github.com/shipanyai",
-          "target": "_blank"
+          "url": "/",
+          "target": "_self"
         },
         {
           "title": "Discord",
           "icon": "RiDiscordFill",
-          "url": "https://discord.gg/HQNnrzjZQS",
-          "target": "_blank"
+          "url": "/",
+          "target": "_self"
         },
         {
           "title": "Email",
           "icon": "RiMailLine",
-          "url": "mailto:support@shipany.ai",
+          "url": "mailto:support@nanobanana.org",
           "target": "_self"
         }
       ]
