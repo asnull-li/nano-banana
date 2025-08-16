@@ -5,9 +5,9 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
-import { Slider } from "@/components/ui/slider";
 import { Label } from "@/components/ui/label";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { useFluxAPI } from "@/hooks/use-flux-api";
+import { toast } from "sonner";
 import {
   Upload,
   Wand2,
@@ -23,6 +23,8 @@ import {
 } from "lucide-react";
 import { useDropzone } from "react-dropzone";
 import { cn } from "@/lib/utils";
+import { Compare } from "@/components/ui/compare";
+import { downloadImage, generateImageFilename } from "@/lib/download-utils";
 
 interface ImageToImageModeProps {
   onGenerate?: (prompt: string, options: any) => Promise<void>;
@@ -32,24 +34,37 @@ interface ImageToImageModeProps {
 
 export default function ImageToImageMode({
   onGenerate,
-  isGenerating,
-  setIsGenerating,
+  isGenerating: externalIsGenerating,
+  setIsGenerating: setExternalIsGenerating,
 }: ImageToImageModeProps) {
   const [uploadedImage, setUploadedImage] = useState<string | null>(null);
-  const [generatedImage, setGeneratedImage] = useState<string | null>(null);
+  const [uploadedImageUrl, setUploadedImageUrl] = useState<string | null>(null);
+  const [uploadedFile, setUploadedFile] = useState<File | null>(null);
+  const [generatedImages, setGeneratedImages] = useState<string[]>([]);
   const [prompt, setPrompt] = useState("");
-  const [strength, setStrength] = useState([70]);
-  const [quality, setQuality] = useState("standard");
+  const [quality, setQuality] = useState("flux-kontext-pro");
   const [compareMode, setCompareMode] = useState(false);
   const [comparePosition, setComparePosition] = useState(50);
+  const [isDownloading, setIsDownloading] = useState(false);
+  
+  const { uploadImage, editImage, isGenerating, progress } = useFluxAPI();
+
+  const handleDownload = async (imageUrl: string, customFileName?: string) => {
+    await downloadImage(imageUrl, {
+      filename: customFileName || `${generateImageFilename('nano-banana', 'edited')}.jpg`,
+      onStart: () => setIsDownloading(true),
+      onComplete: () => setIsDownloading(false),
+    });
+  };
 
   const onDrop = useCallback((acceptedFiles: File[]) => {
     const file = acceptedFiles[0];
     if (file) {
+      setUploadedFile(file);
       const reader = new FileReader();
       reader.onload = (e) => {
         setUploadedImage(e.target?.result as string);
-        setGeneratedImage(null);
+        setGeneratedImages([]);
         setCompareMode(false);
       };
       reader.readAsDataURL(file);
@@ -65,21 +80,49 @@ export default function ImageToImageMode({
   });
 
   const handleGenerate = async () => {
-    if (!prompt || !uploadedImage) return;
+    if (!prompt || !uploadedFile) {
+      toast.error("Please upload an image and enter a prompt");
+      return;
+    }
     
-    setIsGenerating(true);
+    setExternalIsGenerating(true);
     try {
-      if (onGenerate) {
-        await onGenerate(prompt, { strength: strength[0], quality, image: uploadedImage });
+      // Upload image to R2 first
+      let imageUrl = uploadedImageUrl;
+      if (!imageUrl && uploadedFile) {
+        toast.info("Uploading image...");
+        imageUrl = await uploadImage(uploadedFile);
+        setUploadedImageUrl(imageUrl);
       }
-      // Simulate generation
-      setTimeout(() => {
-        setGeneratedImage(uploadedImage); // In real app, this would be the generated image
+
+      if (!imageUrl) {
+        throw new Error("Failed to upload image");
+      }
+
+      // Edit image with Flux API
+      const modelMap: Record<string, "flux-kontext-pro" | "flux-kontext-max"> = {
+        "flux-kontext-pro": "flux-kontext-pro",
+        "flux-kontext-max": "flux-kontext-max",
+      };
+
+      const result = await editImage({
+        prompt,
+        imageUrl,
+        model: modelMap[quality] || "flux-kontext-pro",
+      });
+
+      // Handle results
+      if (result && result.length > 0) {
+        const imageUrls = result.map((item: any) => item.image_url);
+        setGeneratedImages(imageUrls);
         setCompareMode(true);
-        setIsGenerating(false);
-      }, 3000);
+        toast.success("Image edited successfully!");
+      }
     } catch (error) {
-      setIsGenerating(false);
+      console.error("Generation error:", error);
+      toast.error(error instanceof Error ? error.message : "Failed to edit image");
+    } finally {
+      setExternalIsGenerating(false);
     }
   };
 
@@ -111,7 +154,7 @@ export default function ImageToImageMode({
                   size="sm"
                   onClick={() => {
                     setUploadedImage(null);
-                    setGeneratedImage(null);
+                    setGeneratedImages([]);
                     setCompareMode(false);
                   }}
                 >
@@ -164,70 +207,67 @@ export default function ImageToImageMode({
                 </div>
               </>
             ) : (
-              <div className="relative aspect-square bg-muted rounded-lg overflow-hidden">
-                {compareMode && generatedImage ? (
-                  <div className="relative w-full h-full">
-                    <img
-                      src={uploadedImage}
-                      alt="Original"
-                      className="absolute inset-0 w-full h-full object-cover"
+              <>
+                {compareMode && generatedImages.length > 0 ? (
+                  <div className="space-y-4">
+                    <Compare
+                      firstImage={uploadedImage}
+                      secondImage={generatedImages[0]}
+                      className="w-full aspect-square rounded-lg overflow-hidden"
+                      slideMode="drag"
+                      showHandlebar={true}
+                      initialSliderPercentage={50}
+                      firstImageLabel="Original"
+                      secondImageLabel="AI Edited"
                     />
-                    <div
-                      className="absolute inset-0 overflow-hidden"
-                      style={{ width: `${comparePosition}%` }}
-                    >
-                      <img
-                        src={generatedImage}
-                        alt="Generated"
-                        className="absolute inset-0 w-full h-full object-cover"
-                        style={{ minWidth: `${(100 / comparePosition) * 100}%` }}
-                      />
-                    </div>
-                    <input
-                      type="range"
-                      min="0"
-                      max="100"
-                      value={comparePosition}
-                      onChange={(e) => setComparePosition(Number(e.target.value))}
-                      className="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize"
-                    />
-                    <div
-                      className="absolute top-0 bottom-0 w-0.5 bg-white shadow-lg"
-                      style={{ left: `${comparePosition}%` }}
-                    >
-                      <div className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 bg-white rounded-full p-1 shadow-lg">
-                        <RefreshCw className="h-4 w-4" />
+                    <div className="flex items-center justify-between">
+                      <div className="flex gap-2">
+                        <Button
+                          size="sm"
+                          variant="outline"
+                          onClick={() => {
+                            setGeneratedImages([]);
+                            setCompareMode(false);
+                          }}
+                          className="border-orange-500/20 hover:border-orange-500/40 hover:bg-gradient-to-r hover:from-orange-500/10 hover:to-red-500/10"
+                        >
+                          <RefreshCw className="h-4 w-4 mr-1 text-orange-500" />
+                          New Edit
+                        </Button>
                       </div>
+                      <Button
+                        size="sm"
+                        variant="outline"
+                        onClick={() => handleDownload(generatedImages[0])}
+                        disabled={isDownloading}
+                        className="border-blue-500/20 hover:border-blue-500/40 hover:bg-gradient-to-r hover:from-blue-500/10 hover:to-cyan-500/10 disabled:opacity-50 disabled:cursor-not-allowed"
+                      >
+                        {isDownloading ? (
+                          <>
+                            <Loader2 className="h-4 w-4 mr-1 text-blue-500 animate-spin" />
+                            Downloading...
+                          </>
+                        ) : (
+                          <>
+                            <Download className="h-4 w-4 mr-1 text-blue-500" />
+                            Download
+                          </>
+                        )}
+                      </Button>
                     </div>
-                    <Badge className="absolute top-2 left-2">Before</Badge>
-                    <Badge className="absolute top-2 right-2">After</Badge>
                   </div>
                 ) : (
-                  <img
-                    src={uploadedImage}
-                    alt="Uploaded"
-                    className="w-full h-full object-cover"
-                  />
+                  <div className="relative aspect-square bg-muted rounded-lg overflow-hidden">
+                    <img
+                      src={uploadedImage}
+                      alt="Uploaded"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                 )}
-              </div>
+              </>
             )}
 
-            {uploadedImage && (
-              <div className="space-y-3">
-                <Label>Edit Strength</Label>
-                <div className="flex items-center gap-4">
-                  <Slider
-                    value={strength}
-                    onValueChange={setStrength}
-                    min={0}
-                    max={100}
-                    step={5}
-                    className="flex-1"
-                  />
-                  <span className="text-sm font-medium w-12">{strength[0]}%</span>
-                </div>
-              </div>
-            )}
           </div>
         </Card>
       </div>
@@ -265,7 +305,7 @@ export default function ImageToImageMode({
                   </div>
                 </div>
 
-                {generatedImage && (
+                {generatedImages.length > 0 && (
                   <div className="space-y-2">
                     <Label>Recent Edits</Label>
                     <div className="flex gap-2">
@@ -302,77 +342,117 @@ export default function ImageToImageMode({
             />
 
             <div className="space-y-3">
-              <Label>Quality Mode</Label>
-              <RadioGroup value={quality} onValueChange={setQuality}>
-                <div className="flex gap-4">
-                  <div className="flex items-center space-x-2">
-                    <RadioGroupItem value="standard" id="standard" />
-                    <Label htmlFor="standard" className="font-normal cursor-pointer">
-                      Standard
-                      <Badge variant="outline" className="ml-2 text-xs">
-                        2 credits
-                      </Badge>
-                    </Label>
+              <Label className="flex items-center gap-2">
+                Quality: 
+                <span className="font-semibold text-green-600 dark:text-green-400">
+                  {quality === "flux-kontext-pro" ? "Pro" : "Max"}
+                </span>
+                <span className="text-yellow-500">⚡</span>
+                <span className="text-sm font-medium">
+                  {quality === "flux-kontext-pro" ? "12" : "24"}
+                </span>
+              </Label>
+              
+              <div className="space-y-2">
+                <button
+                  onClick={() => setQuality("flux-kontext-pro")}
+                  className={`w-full p-4 rounded-lg border-2 transition-all duration-200 text-left ${
+                    quality === "flux-kontext-pro"
+                      ? "border-green-500 bg-green-500/10 shadow-md"
+                      : "border-slate-200 dark:border-slate-700 hover:border-green-300 dark:hover:border-green-600"
+                  }`}
+                >
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-3">
+                      <div className={`w-4 h-4 rounded-full border-2 ${
+                        quality === "flux-kontext-pro" 
+                          ? "border-green-500 bg-green-500" 
+                          : "border-slate-300 dark:border-slate-600"
+                      }`}>
+                        {quality === "flux-kontext-pro" && (
+                          <div className="w-2 h-2 bg-white rounded-full m-auto mt-0.5"></div>
+                        )}
+                      </div>
+                      <div>
+                        <div className="flex items-center gap-2">
+                          <span className="font-semibold">Pro</span>
+                          <span className="text-yellow-500 text-sm">⚡ 12</span>
+                        </div>
+                        <p className="text-sm text-slate-600 dark:text-slate-400">
+                          Ideal for most scenarios, precise editing
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                  <div className="flex items-center space-x-2">
-                    <RadioGroupItem value="pro" id="pro" />
-                    <Label htmlFor="pro" className="font-normal cursor-pointer">
-                      Pro
-                      <Badge variant="outline" className="ml-2 text-xs">
-                        12 credits
-                      </Badge>
-                    </Label>
+                </button>
+
+                <button
+                  onClick={() => setQuality("flux-kontext-max")}
+                  className={`w-full p-4 rounded-lg border-2 transition-all duration-200 text-left ${
+                    quality === "flux-kontext-max"
+                      ? "border-green-500 bg-green-500/10 shadow-md"
+                      : "border-slate-200 dark:border-slate-700 hover:border-green-300 dark:hover:border-green-600"
+                  }`}
+                >
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-3">
+                      <div className={`w-4 h-4 rounded-full border-2 ${
+                        quality === "flux-kontext-max" 
+                          ? "border-green-500 bg-green-500" 
+                          : "border-slate-300 dark:border-slate-600"
+                      }`}>
+                        {quality === "flux-kontext-max" && (
+                          <div className="w-2 h-2 bg-white rounded-full m-auto mt-0.5"></div>
+                        )}
+                      </div>
+                      <div>
+                        <div className="flex items-center gap-2">
+                          <span className="font-semibold">Max</span>
+                          <span className="text-yellow-500 text-sm">⚡ 24</span>
+                        </div>
+                        <p className="text-sm text-slate-600 dark:text-slate-400">
+                          Ultimate quality, perfect details
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                  <div className="flex items-center space-x-2">
-                    <RadioGroupItem value="max" id="max" />
-                    <Label htmlFor="max" className="font-normal cursor-pointer">
-                      Max
-                      <Badge variant="outline" className="ml-2 text-xs">
-                        24 credits
-                      </Badge>
-                    </Label>
-                  </div>
-                </div>
-              </RadioGroup>
+                </button>
+              </div>
             </div>
 
-            <div className="flex gap-2">
-              <Button
-                className="flex-1 bg-gradient-to-r from-green-500 to-cyan-500 hover:from-green-600 hover:to-cyan-600 text-white border-0 shadow-lg shadow-green-500/25 hover:shadow-xl hover:shadow-green-500/30 hover:scale-105 transition-all duration-300"
-                onClick={handleGenerate}
-                disabled={!uploadedImage || !prompt || isGenerating}
-              >
-                {isGenerating ? (
-                  <>
-                    <Loader2 className="h-4 w-4 mr-2 animate-spin" />
-                    Transforming...
-                  </>
-                ) : (
-                  <>
-                    <Wand2 className="h-4 w-4 mr-2" />
-                    Transform
-                  </>
-                )}
-              </Button>
-              {generatedImage && (
-                <Button variant="outline" size="icon" className="border-green-500/20 hover:border-green-500/40 hover:bg-gradient-to-r hover:from-green-500/10 hover:to-cyan-500/10">
-                  <Download className="h-4 w-4 text-green-500" />
-                </Button>
+            <Button
+              className="w-full bg-gradient-to-r from-green-500 to-cyan-500 hover:from-green-600 hover:to-cyan-600 text-white border-0 shadow-lg shadow-green-500/25 hover:shadow-xl hover:shadow-green-500/30 hover:scale-105 transition-all duration-300"
+              onClick={handleGenerate}
+              disabled={!uploadedImage || !prompt || isGenerating || externalIsGenerating}
+            >
+              {(isGenerating || externalIsGenerating) ? (
+                <>
+                  <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+                  Transforming...
+                </>
+              ) : (
+                <>
+                  <Wand2 className="h-4 w-4 mr-2" />
+                  Transform
+                </>
               )}
-            </div>
+            </Button>
 
-            {isGenerating && (
+            {(isGenerating || progress > 0) && (
               <div className="space-y-2">
                 <div className="flex items-center justify-between text-sm">
                   <span className="text-muted-foreground">Processing</span>
-                  <span className="font-medium">60%</span>
+                  <span className="font-medium">{progress}%</span>
                 </div>
                 <div className="h-2 bg-gradient-to-r from-green-500/20 to-cyan-500/20 rounded-full overflow-hidden">
                   <div
                     className="h-full bg-gradient-to-r from-green-500 to-cyan-500 transition-all duration-300 shadow-lg shadow-green-500/50"
-                    style={{ width: "60%" }}
+                    style={{ width: `${progress}%` }}
                   />
                 </div>
+                <p className="text-xs text-muted-foreground text-center">
+                  This may take 1-2 minutes...
+                </p>
               </div>
             )}
           </div>

@@ -1,21 +1,15 @@
-"use client";
+import WorkspaceWrapper from "@/components/workspace/wrapper";
+import { Metadata } from "next";
 
-import NanoBananaWorkspace from "@/components/workspace";
+export const metadata: Metadata = {
+  title: "Nano Banana Workspace - AI Image Generation & Editing",
+  description: "Transform your images with AI-powered editing and generate stunning visuals from text",
+};
 
 export default function WorkspacePage() {
   return (
-    <div className="container py-12">
-      <div className="mx-auto max-w-7xl">
-        <NanoBananaWorkspace
-          credits={100}
-          tier="pro"
-          onGenerate={async (prompt, options) => {
-            // console.log("Generating with:", { prompt, options });
-            // Implement your API call here
-            // await new Promise((resolve) => setTimeout(resolve, 3000));
-          }}
-        />
-      </div>
+    <div className="min-h-screen bg-gradient-to-br from-background via-background to-green-500/5">
+      <WorkspaceWrapper />
     </div>
   );
 }

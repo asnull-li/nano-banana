@@ -6,17 +6,24 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
 import { Label } from "@/components/ui/label";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { useFluxAPI } from "@/hooks/use-flux-api";
+import { toast } from "sonner";
 import {
   Wand2,
   Download,
   Loader2,
   Sparkles,
   RefreshCw,
-  Copy,
   Share2,
+  Square,
+  RectangleHorizontal,
+  RectangleVertical,
+  Monitor,
+  Maximize2,
+  Eye,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { downloadImage, generateImageFilename } from "@/lib/download-utils";
 
 interface TextToImageModeProps {
   onGenerate?: (prompt: string, options: any) => Promise<void>;
@@ -26,31 +33,68 @@ interface TextToImageModeProps {
 
 export default function TextToImageMode({
   onGenerate,
-  isGenerating,
-  setIsGenerating,
+  isGenerating: externalIsGenerating,
+  setIsGenerating: setExternalIsGenerating,
 }: TextToImageModeProps) {
   const [prompt, setPrompt] = useState("");
   const [generatedImages, setGeneratedImages] = useState<string[]>([]);
   const [selectedImage, setSelectedImage] = useState<number>(0);
-  const [quality, setQuality] = useState("standard");
+  const [quality, setQuality] = useState("flux-kontext-pro");
   const [aspectRatio, setAspectRatio] = useState("1:1");
-  const [style, setStyle] = useState("photo");
+  const [isDownloading, setIsDownloading] = useState(false);
+  const [isFullscreen, setIsFullscreen] = useState(false);
+  const [hasStartedGeneration, setHasStartedGeneration] = useState(false);
+  
+  const { generateImage, isGenerating, progress } = useFluxAPI();
+
+  const handleDownload = async (imageUrl: string, customFileName?: string) => {
+    await downloadImage(imageUrl, {
+      filename: customFileName || `${generateImageFilename('nano-banana', 'generated')}.jpg`,
+      onStart: () => setIsDownloading(true),
+      onComplete: () => setIsDownloading(false),
+    });
+  };
 
   const handleGenerate = async () => {
-    if (!prompt) return;
+    if (!prompt) {
+      toast.error("Please enter a prompt");
+      return;
+    }
     
-    setIsGenerating(true);
+    setHasStartedGeneration(true);
+    setExternalIsGenerating(true);
     try {
-      if (onGenerate) {
-        await onGenerate(prompt, { quality, aspectRatio, style });
+      // Map aspect ratio to size
+      const sizeMap: Record<string, string> = {
+        "1:1": "1024x1024",
+        "16:9": "1920x1080",
+        "9:16": "1080x1920",
+        "4:3": "1024x768",
+      };
+
+      const modelMap: Record<string, "flux-kontext-pro" | "flux-kontext-max"> = {
+        "flux-kontext-pro": "flux-kontext-pro",
+        "flux-kontext-max": "flux-kontext-max",
+      };
+
+      const result = await generateImage({
+        prompt,
+        model: modelMap[quality] || "flux-kontext-pro",
+        size: sizeMap[aspectRatio] || "1024x1024",
+        count: 1,
+      });
+
+      // Handle results
+      if (result && result.length > 0) {
+        const imageUrls = result.map((item: any) => item.image_url);
+        setGeneratedImages(imageUrls);
+        toast.success("Image generated successfully!");
       }
-      // Simulate generation
-      setTimeout(() => {
-        setGeneratedImages(["/api/placeholder/512/512"]);
-        setIsGenerating(false);
-      }, 3000);
     } catch (error) {
-      setIsGenerating(false);
+      console.error("Generation error:", error);
+      toast.error(error instanceof Error ? error.message : "Failed to generate image");
+    } finally {
+      setExternalIsGenerating(false);
     }
   };
 
@@ -63,18 +107,35 @@ export default function TextToImageMode({
     "Underwater fantasy world with glowing creatures",
   ];
 
-  const stylePresets = [
-    { value: "photo", label: "Photo", icon: "📸" },
-    { value: "art", label: "Art", icon: "🎨" },
-    { value: "anime", label: "Anime", icon: "✨" },
-    { value: "3d", label: "3D", icon: "🎮" },
-  ];
-
   const aspectRatios = [
-    { value: "1:1", label: "Square" },
-    { value: "16:9", label: "Landscape" },
-    { value: "9:16", label: "Portrait" },
-    { value: "4:3", label: "Classic" },
+    { 
+      value: "1:1", 
+      label: "1:1", 
+      description: "Square",
+      icon: Square,
+      iconClass: "w-5 h-5"
+    },
+    { 
+      value: "16:9", 
+      label: "16:9", 
+      description: "Landscape",
+      icon: RectangleHorizontal,
+      iconClass: "w-6 h-4"
+    },
+    { 
+      value: "9:16", 
+      label: "9:16", 
+      description: "Portrait",
+      icon: RectangleVertical,
+      iconClass: "w-4 h-6"
+    },
+    { 
+      value: "4:3", 
+      label: "4:3", 
+      description: "Classic",
+      icon: Monitor,
+      iconClass: "w-5 h-4"
+    },
   ];
 
   return (
@@ -100,197 +161,117 @@ export default function TextToImageMode({
 
             <div className="space-y-3">
               <Label>Aspect Ratio</Label>
-              <div className="grid grid-cols-4 gap-2">
-                {aspectRatios.map((ratio) => (
-                  <Button
-                    key={ratio.value}
-                    variant={aspectRatio === ratio.value ? "default" : "outline"}
-                    size="sm"
-                    className={aspectRatio === ratio.value ? "bg-gradient-to-r from-green-500 to-cyan-500 text-white border-0" : "border-green-500/20 hover:border-green-500/40 hover:bg-gradient-to-r hover:from-green-500/10 hover:to-cyan-500/10"}
-                    onClick={() => setAspectRatio(ratio.value)}
-                  >
-                    {ratio.label}
-                  </Button>
-                ))}
-              </div>
-            </div>
-
-            <div className="space-y-3">
-              <Label>Style Preset</Label>
-              <div className="grid grid-cols-4 gap-2">
-                {stylePresets.map((preset) => (
-                  <Button
-                    key={preset.value}
-                    variant={style === preset.value ? "default" : "outline"}
-                    size="sm"
-                    className={`flex flex-col gap-1 h-auto py-2 ${style === preset.value ? "bg-gradient-to-r from-green-500 to-cyan-500 text-white border-0" : "border-green-500/20 hover:border-green-500/40 hover:bg-gradient-to-r hover:from-green-500/10 hover:to-cyan-500/10"}`}
-                    onClick={() => setStyle(preset.value)}
-                  >
-                    <span className="text-lg">{preset.icon}</span>
-                    <span className="text-xs">{preset.label}</span>
-                  </Button>
-                ))}
-              </div>
-            </div>
-
-            {generatedImages.length > 0 && (
-              <div className="space-y-3">
-                <Label>Generated Result</Label>
-                <div className="relative aspect-square bg-muted rounded-lg overflow-hidden">
-                  <img
-                    src={generatedImages[selectedImage]}
-                    alt="Generated"
-                    className="w-full h-full object-cover"
-                  />
-                  <Badge className="absolute top-2 right-2 bg-gradient-to-r from-green-500/90 to-cyan-500/90 text-white border-0">
-                    <Sparkles className="h-3 w-3 mr-1" />
-                    AI Generated
-                  </Badge>
-                </div>
-                <div className="flex gap-2">
-                  <Button size="sm" variant="outline" className="flex-1 border-green-500/20 hover:border-green-500/40 hover:bg-gradient-to-r hover:from-green-500/10 hover:to-cyan-500/10">
-                    <RefreshCw className="h-4 w-4 mr-2 text-green-500" />
-                    Regenerate
-                  </Button>
-                  <Button size="sm" variant="outline" className="border-green-500/20 hover:border-green-500/40 hover:bg-gradient-to-r hover:from-green-500/10 hover:to-cyan-500/10">
-                    <Download className="h-4 w-4 text-green-500" />
-                  </Button>
-                  <Button size="sm" variant="outline" className="border-green-500/20 hover:border-green-500/40 hover:bg-gradient-to-r hover:from-green-500/10 hover:to-cyan-500/10">
-                    <Share2 className="h-4 w-4 text-cyan-500" />
-                  </Button>
-                </div>
-              </div>
-            )}
-          </div>
-        </Card>
-      </div>
-
-      {/* Right Panel - AI Assistant */}
-      <div className="space-y-4">
-        <Card className="p-6">
-          <div className="space-y-4">
-            <div className="flex items-center gap-2">
-              <Sparkles className="h-5 w-5 text-cyan-500" />
-              <h3 className="text-lg font-semibold bg-gradient-to-r from-green-500 to-cyan-500 bg-clip-text text-transparent">AI Assistant</h3>
-            </div>
-
-            <p className="text-sm text-muted-foreground">
-              I'll help you create amazing images from text! Try these inspirations:
-            </p>
-
-            <div className="space-y-2">
-              <Label>💡 Inspiration</Label>
-              <div className="space-y-2">
-                {inspirations.map((inspiration, idx) => (
-                  <Button
-                    key={idx}
-                    variant="ghost"
-                    size="sm"
-                    className="w-full justify-start text-left h-auto py-2 px-3 hover:bg-gradient-to-r hover:from-green-500/10 hover:to-cyan-500/10"
-                    onClick={() => setPrompt(inspiration)}
-                  >
-                    <span className="line-clamp-2 text-sm">{inspiration}</span>
-                  </Button>
-                ))}
-              </div>
-            </div>
-
-            {generatedImages.length > 0 && (
-              <div className="space-y-2">
-                <Label>Recent Creations</Label>
-                <div className="grid grid-cols-4 gap-2">
-                  {generatedImages.map((img, idx) => (
-                    <button
-                      key={idx}
-                      className={cn(
-                        "relative aspect-square rounded-md overflow-hidden border-2 transition-colors",
-                        selectedImage === idx
-                          ? "border-primary"
-                          : "border-transparent"
-                      )}
-                      onClick={() => setSelectedImage(idx)}
+              <div className="grid grid-cols-2 gap-3">
+                {aspectRatios.map((ratio) => {
+                  const IconComponent = ratio.icon;
+                  return (
+                    <Button
+                      key={ratio.value}
+                      variant={aspectRatio === ratio.value ? "default" : "outline"}
+                      className={`flex items-center gap-3 h-auto py-3 px-4 ${
+                        aspectRatio === ratio.value 
+                          ? "bg-gradient-to-r from-green-500 to-cyan-500 text-white border-0" 
+                          : "border-green-500/20 hover:border-green-500/40 hover:bg-gradient-to-r hover:from-green-500/10 hover:to-cyan-500/10"
+                      }`}
+                      onClick={() => setAspectRatio(ratio.value)}
                     >
-                      <img
-                        src={img}
-                        alt={`Generated ${idx + 1}`}
-                        className="w-full h-full object-cover"
-                      />
-                    </button>
-                  ))}
-                  <Button
-                    variant="outline"
-                    className="aspect-square border-green-500/20 hover:border-green-500/40 hover:bg-gradient-to-r hover:from-green-500/10 hover:to-cyan-500/10"
-                    onClick={() => {
-                      // Add new generation
-                    }}
-                  >
-                    <span className="text-2xl">➕</span>
-                  </Button>
-                </div>
+                      <IconComponent className={`${ratio.iconClass} ${aspectRatio === ratio.value ? "text-white" : "text-green-500"}`} />
+                      <div className="flex flex-col items-start">
+                        <span className="font-medium">{ratio.label}</span>
+                        <span className="text-xs opacity-70">{ratio.description}</span>
+                      </div>
+                    </Button>
+                  );
+                })}
               </div>
-            )}
-          </div>
-        </Card>
+            </div>
 
-        <Card className="p-6">
-          <div className="space-y-4">
             <div className="space-y-3">
-              <Label>Quality Mode</Label>
-              <RadioGroup value={quality} onValueChange={setQuality}>
-                <div className="space-y-2">
-                  <div className="flex items-center space-x-2">
-                    <RadioGroupItem value="standard" id="t2i-standard" />
-                    <Label htmlFor="t2i-standard" className="flex-1 font-normal cursor-pointer">
-                      <div className="flex items-center justify-between">
-                        <span>Standard</span>
-                        <Badge variant="outline" className="text-xs">
-                          2 credits
-                        </Badge>
+              <Label className="flex items-center gap-2">
+                Quality: 
+                <span className="font-semibold text-green-600 dark:text-green-400">
+                  {quality === "flux-kontext-pro" ? "Pro" : "Max"}
+                </span>
+                <span className="text-yellow-500">⚡</span>
+                <span className="text-sm font-medium">
+                  {quality === "flux-kontext-pro" ? "12" : "24"}
+                </span>
+              </Label>
+              
+              <div className="space-y-2">
+                <button
+                  onClick={() => setQuality("flux-kontext-pro")}
+                  className={`w-full p-4 rounded-lg border-2 transition-all duration-200 text-left ${
+                    quality === "flux-kontext-pro"
+                      ? "border-green-500 bg-green-500/10 shadow-md"
+                      : "border-slate-200 dark:border-slate-700 hover:border-green-300 dark:hover:border-green-600"
+                  }`}
+                >
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-3">
+                      <div className={`w-4 h-4 rounded-full border-2 ${
+                        quality === "flux-kontext-pro" 
+                          ? "border-green-500 bg-green-500" 
+                          : "border-slate-300 dark:border-slate-600"
+                      }`}>
+                        {quality === "flux-kontext-pro" && (
+                          <div className="w-2 h-2 bg-white rounded-full m-auto mt-0.5"></div>
+                        )}
                       </div>
-                      <span className="text-xs text-muted-foreground">
-                        Good quality, fast generation
-                      </span>
-                    </Label>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <RadioGroupItem value="pro" id="t2i-pro" />
-                    <Label htmlFor="t2i-pro" className="flex-1 font-normal cursor-pointer">
-                      <div className="flex items-center justify-between">
-                        <span>Pro</span>
-                        <Badge variant="outline" className="text-xs">
-                          12 credits
-                        </Badge>
+                      <div>
+                        <div className="flex items-center gap-2">
+                          <span className="font-semibold">Pro</span>
+                          <span className="text-yellow-500 text-sm">⚡ 12</span>
+                        </div>
+                        <p className="text-sm text-slate-600 dark:text-slate-400">
+                          High quality, balanced speed
+                        </p>
                       </div>
-                      <span className="text-xs text-muted-foreground">
-                        High quality, more details
-                      </span>
-                    </Label>
+                    </div>
                   </div>
-                  <div className="flex items-center space-x-2">
-                    <RadioGroupItem value="max" id="t2i-max" />
-                    <Label htmlFor="t2i-max" className="flex-1 font-normal cursor-pointer">
-                      <div className="flex items-center justify-between">
-                        <span>Max</span>
-                        <Badge variant="outline" className="text-xs">
-                          24 credits
-                        </Badge>
+                </button>
+
+                <button
+                  onClick={() => setQuality("flux-kontext-max")}
+                  className={`w-full p-4 rounded-lg border-2 transition-all duration-200 text-left ${
+                    quality === "flux-kontext-max"
+                      ? "border-green-500 bg-green-500/10 shadow-md"
+                      : "border-slate-200 dark:border-slate-700 hover:border-green-300 dark:hover:border-green-600"
+                  }`}
+                >
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-3">
+                      <div className={`w-4 h-4 rounded-full border-2 ${
+                        quality === "flux-kontext-max" 
+                          ? "border-green-500 bg-green-500" 
+                          : "border-slate-300 dark:border-slate-600"
+                      }`}>
+                        {quality === "flux-kontext-max" && (
+                          <div className="w-2 h-2 bg-white rounded-full m-auto mt-0.5"></div>
+                        )}
                       </div>
-                      <span className="text-xs text-muted-foreground">
-                        Best quality, maximum resolution
-                      </span>
-                    </Label>
+                      <div>
+                        <div className="flex items-center gap-2">
+                          <span className="font-semibold">Max</span>
+                          <span className="text-yellow-500 text-sm">⚡ 24</span>
+                        </div>
+                        <p className="text-sm text-slate-600 dark:text-slate-400">
+                          Ultimate quality, perfect details
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </RadioGroup>
+                </button>
+              </div>
             </div>
 
             <Button
               className="w-full bg-gradient-to-r from-green-500 to-cyan-500 hover:from-green-600 hover:to-cyan-600 text-white border-0 shadow-lg shadow-green-500/25 hover:shadow-xl hover:shadow-green-500/30 hover:scale-105 transition-all duration-300"
               size="lg"
               onClick={handleGenerate}
-              disabled={!prompt || isGenerating}
+              disabled={!prompt || isGenerating || externalIsGenerating}
             >
-              {isGenerating ? (
+              {(isGenerating || externalIsGenerating) ? (
                 <>
                   <Loader2 className="h-4 w-4 mr-2 animate-spin" />
                   Creating...
@@ -303,31 +284,236 @@ export default function TextToImageMode({
               )}
             </Button>
 
-            {isGenerating && (
+            {(isGenerating || progress > 0) && (
               <div className="space-y-2">
                 <div className="flex items-center justify-between text-sm">
                   <span className="text-muted-foreground">Generating</span>
-                  <span className="font-medium">45%</span>
+                  <span className="font-medium">{progress}%</span>
                 </div>
                 <div className="h-2 bg-gradient-to-r from-green-500/20 to-cyan-500/20 rounded-full overflow-hidden">
                   <div
                     className="h-full bg-gradient-to-r from-green-500 to-cyan-500 transition-all duration-300 shadow-lg shadow-green-500/50"
-                    style={{ width: "45%" }}
+                    style={{ width: `${progress}%` }}
                   />
                 </div>
                 <p className="text-xs text-muted-foreground text-center">
-                  Instant generation with Pro tier ⚡
+                  This may take 1-2 minutes...
                 </p>
               </div>
             )}
-
-            <div className="flex items-center justify-center gap-2 text-xs text-muted-foreground">
-              <Copy className="h-3 w-3" />
-              <span>Prompt copied to clipboard</span>
-            </div>
           </div>
         </Card>
       </div>
+
+      {/* Right Panel - Results & Assistant */}
+      <div className="space-y-4">
+        {/* Generated Results Section */}
+        {hasStartedGeneration ? (
+          <Card className="p-6">
+            <div className="space-y-4">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  <Sparkles className="h-5 w-5 text-green-500" />
+                  <h3 className="text-lg font-semibold bg-gradient-to-r from-green-500 to-cyan-500 bg-clip-text text-transparent">
+                    Generated Result
+                  </h3>
+                </div>
+                <Badge className="bg-gradient-to-r from-green-500/90 to-cyan-500/90 text-white border-0">
+                  <Sparkles className="h-3 w-3 mr-1" />
+                  AI Generated
+                </Badge>
+              </div>
+
+              {/* Main Image Display */}
+              <div className="relative aspect-square bg-muted rounded-lg overflow-hidden group">
+                {(isGenerating || externalIsGenerating) && generatedImages.length === 0 ? (
+                  <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-900">
+                    <div className="text-center">
+                      <Loader2 className="h-12 w-12 mx-auto mb-4 text-green-500 animate-spin" />
+                      <p className="text-sm font-medium text-green-600 dark:text-green-400 mb-2">
+                        Creating your image...
+                      </p>
+                      <div className="w-32 h-2 bg-gradient-to-r from-green-500/20 to-cyan-500/20 rounded-full overflow-hidden mx-auto">
+                        <div
+                          className="h-full bg-gradient-to-r from-green-500 to-cyan-500 transition-all duration-300"
+                          style={{ width: `${progress}%` }}
+                        />
+                      </div>
+                      <p className="text-xs text-muted-foreground mt-2">
+                        {progress}% complete
+                      </p>
+                    </div>
+                  </div>
+                ) : generatedImages.length > 0 ? (
+                  <>
+                    <img
+                      src={generatedImages[selectedImage]}
+                      alt="Generated"
+                      className="w-full h-full object-cover cursor-pointer"
+                      onClick={() => setIsFullscreen(true)}
+                    />
+                    {/* Hover overlay with view action */}
+                    <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center justify-center">
+                      <Button
+                        size="sm"
+                        variant="secondary"
+                        onClick={() => setIsFullscreen(true)}
+                        className="bg-white/90 hover:bg-white text-black"
+                      >
+                        <Eye className="h-4 w-4 mr-2" />
+                        View Full Size
+                      </Button>
+                    </div>
+                  </>
+                ) : null}
+              </div>
+
+              {/* Action Buttons */}
+              <div className="flex gap-2">
+                <Button 
+                  size="sm" 
+                  variant="outline" 
+                  className="flex-1 border-green-500/20 hover:border-green-500/40 hover:bg-gradient-to-r hover:from-green-500/10 hover:to-cyan-500/10"
+                  onClick={handleGenerate}
+                  disabled={!prompt || isGenerating || externalIsGenerating}
+                >
+                  <RefreshCw className="h-4 w-4 mr-2 text-green-500" />
+                  Regenerate
+                </Button>
+                <Button 
+                  size="sm" 
+                  variant="outline" 
+                  onClick={() => handleDownload(generatedImages[selectedImage])}
+                  disabled={isDownloading}
+                  className="border-green-500/20 hover:border-green-500/40 hover:bg-gradient-to-r hover:from-green-500/10 hover:to-cyan-500/10 disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {isDownloading ? (
+                    <Loader2 className="h-4 w-4 text-green-500 animate-spin" />
+                  ) : (
+                    <Download className="h-4 w-4 text-green-500" />
+                  )}
+                </Button>
+                <Button size="sm" variant="outline" className="border-green-500/20 hover:border-green-500/40 hover:bg-gradient-to-r hover:from-green-500/10 hover:to-cyan-500/10">
+                  <Share2 className="h-4 w-4 text-cyan-500" />
+                </Button>
+              </div>
+
+              {/* Image Gallery */}
+              {generatedImages.length > 1 && (
+                <div className="space-y-2">
+                  <Label>All Generated Images</Label>
+                  <div className="grid grid-cols-4 gap-2">
+                    {generatedImages.map((img, idx) => (
+                      <button
+                        key={idx}
+                        className={cn(
+                          "relative aspect-square rounded-md overflow-hidden border-2 transition-all duration-200",
+                          selectedImage === idx
+                            ? "border-green-500 shadow-md shadow-green-500/25"
+                            : "border-slate-200 dark:border-slate-700 hover:border-green-300 dark:hover:border-green-600"
+                        )}
+                        onClick={() => setSelectedImage(idx)}
+                      >
+                        <img
+                          src={img}
+                          alt={`Generated ${idx + 1}`}
+                          className="w-full h-full object-cover"
+                        />
+                        {selectedImage === idx && (
+                          <div className="absolute inset-0 bg-green-500/20 flex items-center justify-center">
+                            <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+                              <span className="text-white text-xs font-bold">{idx + 1}</span>
+                            </div>
+                          </div>
+                        )}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          </Card>
+        ) : (
+          /* AI Assistant Section - Show when no images */
+          <Card className="p-6">
+            <div className="space-y-4">
+              <div className="flex items-center gap-2">
+                <Sparkles className="h-5 w-5 text-cyan-500" />
+                <h3 className="text-lg font-semibold bg-gradient-to-r from-green-500 to-cyan-500 bg-clip-text text-transparent">AI Assistant</h3>
+              </div>
+
+              <p className="text-sm text-muted-foreground">
+                I'll help you create amazing images from text! Try these inspirations:
+              </p>
+
+              <div className="space-y-2">
+                <Label>💡 Inspiration</Label>
+                <div className="space-y-2">
+                  {inspirations.map((inspiration, idx) => (
+                    <Button
+                      key={idx}
+                      variant="ghost"
+                      size="sm"
+                      className="w-full justify-start text-left h-auto py-2 px-3 hover:bg-gradient-to-r hover:from-green-500/10 hover:to-cyan-500/10"
+                      onClick={() => setPrompt(inspiration)}
+                    >
+                      <span className="line-clamp-2 text-sm">{inspiration}</span>
+                    </Button>
+                  ))}
+                </div>
+              </div>
+
+            </div>
+          </Card>
+        )}
+      </div>
+
+      {/* Fullscreen Modal */}
+      {isFullscreen && generatedImages.length > 0 && (
+        <div 
+          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
+          onClick={() => setIsFullscreen(false)}
+        >
+          <div className="relative max-w-[90vw] max-h-[90vh]">
+            {/* Close button */}
+            <Button
+              size="sm"
+              variant="secondary"
+              className="absolute top-4 right-4 z-10 bg-white/90 hover:bg-white text-black"
+              onClick={() => setIsFullscreen(false)}
+            >
+              ✕
+            </Button>
+            
+            {/* Full size image */}
+            <img
+              src={generatedImages[selectedImage]}
+              alt="Generated (Full Size)"
+              className="max-w-full max-h-full object-contain rounded-lg"
+              onClick={(e) => e.stopPropagation()}
+            />
+            
+            {/* Navigation for multiple images */}
+            {generatedImages.length > 1 && (
+              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2 bg-white/90 rounded-lg p-2">
+                {generatedImages.map((_, idx) => (
+                  <button
+                    key={idx}
+                    className={cn(
+                      "w-3 h-3 rounded-full transition-colors",
+                      selectedImage === idx ? "bg-green-500" : "bg-gray-300 hover:bg-gray-400"
+                    )}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setSelectedImage(idx);
+                    }}
+                  />
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
