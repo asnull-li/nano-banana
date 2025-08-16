@@ -11,6 +11,7 @@ import Showcase from "@/components/blocks/showcase";
 import Stats from "@/components/blocks/stats";
 import Testimonial from "@/components/blocks/testimonial";
 import { getLandingPage } from "@/services/page";
+import WorkspaceWrapper from "@/components/workspace/wrapper";
 
 export async function generateMetadata({
   params,
@@ -42,6 +43,7 @@ export default async function LandingPage({
   return (
     <>
       {page.hero && <Hero hero={page.hero} />}
+      <WorkspaceWrapper />
       {/* {page.branding && <Branding section={page.branding} />} */}
       {page.introduce && <Feature1 section={page.introduce} />}
       {page.benefit && <Feature2 section={page.benefit} />}
