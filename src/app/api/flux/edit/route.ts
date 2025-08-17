@@ -1,11 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
 import { fluxAPI } from "@/lib/flux-api";
 import { getUserUuid } from "@/services/user";
-import { 
-  checkUserCredits, 
-  decreaseCredits, 
-  CreditsTransType, 
-  CreditsAmount 
+import {
+  checkUserCredits,
+  decreaseCredits,
+  CreditsTransType,
+  CreditsAmount,
 } from "@/services/credit";
 
 export async function POST(request: NextRequest) {
@@ -31,44 +31,49 @@ export async function POST(request: NextRequest) {
 
     // Determine credits cost based on model
     const modelType = model || "flux-kontext-pro";
-    const requiredCredits = modelType === "flux-kontext-max" 
-      ? CreditsAmount.FluxMaxCost 
-      : CreditsAmount.FluxProCost;
+    const requiredCredits =
+      modelType === "flux-kontext-max"
+        ? CreditsAmount.FluxMaxCost
+        : CreditsAmount.FluxProCost;
 
     // Check if user has enough credits
     const creditCheck = await checkUserCredits(user_uuid, requiredCredits);
     if (!creditCheck.hasEnough) {
       return NextResponse.json(
-        { 
-          success: false, 
+        {
+          success: false,
           error: "insufficient_credits",
-          message: `Insufficient credits. ${modelType === "flux-kontext-max" ? "Max" : "Pro"} mode requires ${requiredCredits} credits, but you only have ${creditCheck.currentCredits} credits left.`,
+          message: `Insufficient credits. ${
+            modelType === "flux-kontext-max" ? "Max" : "Pro"
+          } mode requires ${requiredCredits} credits, but you only have ${
+            creditCheck.currentCredits
+          } credits left.`,
           requiredCredits,
-          currentCredits: creditCheck.currentCredits
+          currentCredits: creditCheck.currentCredits,
         },
         { status: 402 }
       );
     }
 
     // Image to Image - Edit
-    // const result = await fluxAPI.editImage(imageUrl, prompt, {
-    //   model: model || "flux-kontext-pro",
-    //   // No callback needed, we'll poll for results
-    //   callback_url: `${process.env.NEXT_PUBLIC_API_URL}/api/flux/callback`,
-    // });
+    const result = await fluxAPI.editImage(imageUrl, prompt, {
+      model: model || "flux-kontext-pro",
+      // No callback needed, we'll poll for results
+      callback_url: `${process.env.NEXT_PUBLIC_API_URL}/api/flux/callback`,
+    });
 
-    // if (result.error) {
-    //   return NextResponse.json(
-    //     { success: false, error: result.error },
-    //     { status: 400 }
-    //   );
-    // }
+    if (result.error) {
+      return NextResponse.json(
+        { success: false, error: result.error },
+        { status: 400 }
+      );
+    }
 
-    const result = {
-      success: true,
-      task_id: "4c1ee7ff-340d-415a-a60e-59169f0e92ad",
-      trace_id: undefined,
-    };
+    // const result = {
+    //   success: true,
+    //   task_id: "4c1ee7ff-340d-415a-a60e-59169f0e92ad",
+    //   trace_id: undefined,
+    // };
 
     console.log("edit result", result);
 
@@ -80,7 +85,9 @@ export async function POST(request: NextRequest) {
           trans_type: CreditsTransType.FluxEdit,
           credits: requiredCredits,
         });
-        console.log(`Successfully deducted ${requiredCredits} credits for user ${user_uuid}`);
+        console.log(
+          `Successfully deducted ${requiredCredits} credits for user ${user_uuid}`
+        );
       } catch (error) {
         console.error("Failed to deduct credits:", error);
         // Note: Edit already succeeded, so we don't return error here

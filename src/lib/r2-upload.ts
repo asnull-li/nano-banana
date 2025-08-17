@@ -76,6 +76,48 @@ export class R2UploadService {
   }
 
   /**
+   * Upload file to R2 with custom path
+   */
+  async uploadFileWithCustomPath(
+    file: Buffer | Uint8Array,
+    fullPath: string,
+    contentType: string = "image/png"
+  ): Promise<string> {
+    try {
+      console.log("Uploading to R2 with custom path:", {
+        bucket: this.bucketName,
+        key: fullPath,
+        contentType,
+        publicUrl: this.publicUrl,
+      });
+
+      const command = new PutObjectCommand({
+        Bucket: this.bucketName,
+        Key: fullPath,
+        Body: file,
+        ContentType: contentType,
+      });
+
+      await this.client.send(command);
+
+      // Return public URL
+      const url = `${this.publicUrl}/${fullPath}`;
+      console.log("Upload successful, URL:", url);
+      return url;
+    } catch (error: any) {
+      console.error("R2 upload failed with error:", {
+        message: error.message,
+        code: error.Code,
+        statusCode: error.$metadata?.httpStatusCode,
+        requestId: error.$metadata?.requestId,
+        bucket: this.bucketName,
+        accountId: process.env.R2_ACCOUNT_ID,
+      });
+      throw new Error(`Failed to upload file to R2: ${error.message || 'Unknown error'}`);
+    }
+  }
+
+  /**
    * Generate presigned upload URL for client-side upload
    */
   async getPresignedUploadUrl(

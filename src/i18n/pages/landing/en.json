@@ -32,7 +32,7 @@
     "buttons": [
       {
         "title": "Get Nano Banana",
-        "url": "/",
+        "url": "/#workspace",
         "target": "_self",
         "variant": "link",
         "icon": "RiArrowRightUpLine"

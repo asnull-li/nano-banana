@@ -38,13 +38,19 @@ export default function NanoBananaWorkspace({
                   : "text-slate-600 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 hover:bg-white/50 dark:hover:bg-slate-700/50"
               }`}
             >
-              <Image className={`h-5 w-5 ${mode === "img2img" ? "text-white" : "text-green-500"}`} />
-              <span className="text-sm font-semibold">Image to Image</span>
+              <Image
+                className={`h-5 w-5 ${
+                  mode === "img2img" ? "text-white" : "text-green-500"
+                }`}
+              />
+              <span className="text-sm font-semibold">
+                Edit Image Whit Chat
+              </span>
               {mode === "img2img" && (
                 <div className="absolute inset-0 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg opacity-20 blur-sm"></div>
               )}
             </button>
-            
+
             <button
               onClick={() => setMode("text2img")}
               className={`relative flex items-center justify-center gap-3 px-6 py-4 rounded-lg font-medium transition-all duration-300 ${
@@ -53,7 +59,11 @@ export default function NanoBananaWorkspace({
                   : "text-slate-600 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 hover:bg-white/50 dark:hover:bg-slate-700/50"
               }`}
             >
-              <Sparkles className={`h-5 w-5 ${mode === "text2img" ? "text-white" : "text-cyan-500"}`} />
+              <Sparkles
+                className={`h-5 w-5 ${
+                  mode === "text2img" ? "text-white" : "text-cyan-500"
+                }`}
+              />
               <span className="text-sm font-semibold">Text to Image</span>
               {mode === "text2img" && (
                 <div className="absolute inset-0 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg opacity-20 blur-sm"></div>

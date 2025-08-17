@@ -76,8 +76,13 @@ export function useFluxAPI() {
     try {
       // Start progress animation
       const progressInterval = setInterval(() => {
-        setProgress((prev) => Math.min(prev + 10, 90));
-      }, 500);
+        setProgress((prev) => Math.min(prev + 10, 60));
+      }, 5000);
+
+      toast.info("Image generation started. This may take 1-2 minutes...");
+
+      // 等待50秒
+      await new Promise((resolve) => setTimeout(resolve, 50000));
 
       const response = await fetch("/api/flux/generate", {
         method: "POST",
@@ -95,14 +100,14 @@ export function useFluxAPI() {
         if (handleApiError(response, data)) {
           throw new Error("Credits required"); // This will be caught but not shown as toast
         }
-        throw new Error(data.error?.message || data.message || "Generation failed");
+        throw new Error(
+          data.error?.message || data.message || "Generation failed"
+        );
       }
-
+      setProgress(70);
       // If we got task_id, it's async - we need to poll or wait for callback
       if (data.task_id && !data.data) {
         setTaskId(data.task_id);
-        toast.info("Image generation started. This may take 1-2 minutes...");
-        
         // Poll for result
         const result = await pollForResult(data.task_id);
         setProgress(100);
@@ -137,8 +142,13 @@ export function useFluxAPI() {
     try {
       // Start progress animation
       const progressInterval = setInterval(() => {
-        setProgress((prev) => Math.min(prev + 10, 90));
-      }, 500);
+        setProgress((prev) => Math.min(prev + 10, 60));
+      }, 5000);
+
+      toast.info("Image editing started. This may take 1-2 minutes...");
+
+      // 等待50秒
+      await new Promise((resolve) => setTimeout(resolve, 50000));
 
       const response = await fetch("/api/flux/edit", {
         method: "POST",
@@ -150,6 +160,7 @@ export function useFluxAPI() {
 
       const data = await response.json();
       clearInterval(progressInterval);
+      setProgress(70);
 
       if (!data.success) {
         // Handle specific error cases
@@ -162,8 +173,7 @@ export function useFluxAPI() {
       // If we got task_id, it's async
       if (data.task_id && !data.data) {
         setTaskId(data.task_id);
-        toast.info("Image editing started. This may take 1-2 minutes...");
-        
+
         // Poll for result
         const result = await pollForResult(data.task_id);
         setProgress(100);
@@ -191,7 +201,11 @@ export function useFluxAPI() {
   /**
    * Poll for async task result using Flux tasks API
    */
-  const pollForResult = async (taskId: string, maxAttempts = 60, interval = 2000) => {
+  const pollForResult = async (
+    taskId: string,
+    maxAttempts = 60,
+    interval = 6000
+  ) => {
     for (let i = 0; i < maxAttempts; i++) {
       await new Promise((resolve) => setTimeout(resolve, interval));
 
@@ -203,19 +217,19 @@ export function useFluxAPI() {
           },
           body: JSON.stringify({ taskId }),
         });
-        
+
         const data = await response.json();
 
         if (data.success && data.completed && data.data) {
           return data.data;
         }
-        
+
         // Update progress based on actual status if available
         if (data.progress) {
           setProgress(Math.min(90, data.progress));
         } else {
           // Update progress gradually
-          setProgress(Math.min(90, 30 + i));
+          setProgress(95);
         }
       } catch (error) {
         console.error("Poll error:", error);
