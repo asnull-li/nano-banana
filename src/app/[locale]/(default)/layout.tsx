@@ -3,6 +3,7 @@ import Header from "@/components/blocks/header";
 import { ReactNode } from "react";
 import { getLandingPage } from "@/services/page";
 import Feedback from "@/components/feedback";
+import HashScroll from "@/components/hash-scroll";
 
 export default async function DefaultLayout({
   children,
@@ -16,6 +17,7 @@ export default async function DefaultLayout({
 
   return (
     <>
+      <HashScroll />
       {page.header && <Header header={page.header} />}
       <div className="h-14"></div>
       <main className="overflow-x-hidden">{children}</main>

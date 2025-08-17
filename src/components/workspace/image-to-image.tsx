@@ -155,10 +155,10 @@ export default function ImageToImageMode({
   };
 
   const quickActions = [
-    { icon: Sun, label: "Change lighting", prompt: "Change to golden hour lighting", color: "from-yellow-500 to-orange-500" },
-    { icon: Palette, label: "Style transfer", prompt: "Convert to oil painting style", color: "from-purple-500 to-pink-500" },
-    { icon: Eraser, label: "Remove background", prompt: "Remove background, keep subject", color: "from-red-500 to-rose-500" },
-    { icon: Camera, label: "Color grading", prompt: "Apply cinematic color grading", color: "from-blue-500 to-indigo-500" },
+    { icon: Sun, label: t("workspace.image_to_image.quick_action_lighting"), prompt: t("workspace.image_to_image.quick_action_lighting_prompt"), color: "from-yellow-500 to-orange-500" },
+    { icon: Palette, label: t("workspace.image_to_image.quick_action_style"), prompt: t("workspace.image_to_image.quick_action_style_prompt"), color: "from-purple-500 to-pink-500" },
+    { icon: Eraser, label: t("workspace.image_to_image.quick_action_remove_bg"), prompt: t("workspace.image_to_image.quick_action_remove_bg_prompt"), color: "from-red-500 to-rose-500" },
+    { icon: Camera, label: t("workspace.image_to_image.quick_action_color"), prompt: t("workspace.image_to_image.quick_action_color_prompt"), color: "from-blue-500 to-indigo-500" },
   ];
 
   const sampleImages = [
@@ -197,7 +197,7 @@ export default function ImageToImageMode({
             <div className="flex items-center justify-between">
               <h3 className="text-lg font-semibold flex items-center gap-2">
                 <ImageIcon className="h-5 w-5 text-green-500" />
-                Edit Mode
+                {t("workspace.image_to_image.title")}
               </h3>
               {uploadedImage && (
                 <Button
@@ -209,7 +209,7 @@ export default function ImageToImageMode({
                     setCompareMode(false);
                   }}
                 >
-                  Clear
+                  {t("workspace.image_to_image.clear_button")}
                 </Button>
               )}
             </div>
@@ -228,17 +228,17 @@ export default function ImageToImageMode({
                   <input {...getInputProps()} />
                   <div className="absolute inset-0 bg-gradient-to-r from-green-500/5 to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   <Upload className="h-12 w-12 mx-auto mb-4 text-green-500 relative z-10" />
-                  <p className="text-lg font-medium mb-1">Upload image</p>
+                  <p className="text-lg font-medium mb-1">{t("workspace.image_to_image.upload_title")}</p>
                   <p className="text-sm text-muted-foreground mb-2">
-                    Drag and drop your image here or click to browse
+                    {t("workspace.image_to_image.upload_desc")}
                   </p>
                   <p className="text-xs text-muted-foreground">
-                    JPG, PNG, WEBP up to 20MB
+                    {t("workspace.image_to_image.upload_formats")}
                   </p>
                 </div>
 
                 <div className="space-y-2">
-                  <p className="text-sm text-muted-foreground">Sample images:</p>
+                  <p className="text-sm text-muted-foreground">{t("workspace.image_to_image.sample_images")}:</p>
                   <div className="flex gap-2">
                     {sampleImages.map((emoji, idx) => (
                       <Button
@@ -268,8 +268,8 @@ export default function ImageToImageMode({
                       slideMode="drag"
                       showHandlebar={true}
                       initialSliderPercentage={50}
-                      firstImageLabel="Original"
-                      secondImageLabel="AI Edited"
+                      firstImageLabel={t("workspace.image_to_image.original")}
+                      secondImageLabel={t("workspace.image_to_image.ai_edited")}
                     />
                     <div className="flex items-center justify-between">
                       <div className="flex gap-2">
@@ -283,7 +283,7 @@ export default function ImageToImageMode({
                           className="border-orange-500/20 hover:border-orange-500/40 hover:bg-gradient-to-r hover:from-orange-500/10 hover:to-red-500/10"
                         >
                           <RefreshCw className="h-4 w-4 mr-1 text-orange-500" />
-                          New Edit
+                          {t("workspace.image_to_image.new_edit")}
                         </Button>
                       </div>
                       <Button
@@ -296,12 +296,12 @@ export default function ImageToImageMode({
                         {isDownloading ? (
                           <>
                             <Loader2 className="h-4 w-4 mr-1 text-blue-500 animate-spin" />
-                            Downloading...
+                            {t("workspace.text_to_image.download_button")}...
                           </>
                         ) : (
                           <>
                             <Download className="h-4 w-4 mr-1 text-blue-500" />
-                            Download
+                            {t("workspace.text_to_image.download_button")}
                           </>
                         )}
                       </Button>
@@ -329,17 +329,17 @@ export default function ImageToImageMode({
           <div className="space-y-4">
             <div className="flex items-center gap-2">
               <Sparkles className="h-5 w-5 text-cyan-500" />
-              <h3 className="text-lg font-semibold bg-gradient-to-r from-green-500 to-cyan-500 bg-clip-text text-transparent">AI Assistant</h3>
+              <h3 className="text-lg font-semibold bg-gradient-to-r from-green-500 to-cyan-500 bg-clip-text text-transparent">{t("workspace.image_to_image.ai_assistant_title")}</h3>
             </div>
 
             {uploadedImage ? (
               <>
                 <p className="text-sm text-muted-foreground">
-                  Image uploaded! What would you like to change?
+                  {t("workspace.image_to_image.ai_assistant_upload_prompt")}
                 </p>
 
                 <div className="space-y-2">
-                  <Label>Quick Actions</Label>
+                  <Label>{t("workspace.image_to_image.quick_actions")}</Label>
                   <div className="grid grid-cols-2 gap-2">
                     {quickActions.map((action, idx) => (
                       <Button
@@ -358,7 +358,7 @@ export default function ImageToImageMode({
 
                 {generatedImages.length > 0 && (
                   <div className="space-y-2">
-                    <Label>Recent Edits</Label>
+                    <Label>{t("workspace.image_to_image.recent_edits")}</Label>
                     <div className="flex gap-2">
                       {["🌅", "🎨", "🌙", "➕"].map((emoji, idx) => (
                         <Button
@@ -376,7 +376,7 @@ export default function ImageToImageMode({
               </>
             ) : (
               <p className="text-sm text-muted-foreground">
-                Ready to transform your image! Upload an image to get started.
+                {t("workspace.image_to_image.ai_assistant_ready")}
               </p>
             )}
           </div>
@@ -385,7 +385,7 @@ export default function ImageToImageMode({
         <Card className="p-6">
           <div className="space-y-4">
             <Textarea
-              placeholder="Describe what you want to change..."
+              placeholder={t("workspace.image_to_image.describe_changes")}
               value={prompt}
               onChange={(e) => setPrompt(e.target.value)}
               className="min-h-[100px] resize-none"
@@ -394,17 +394,17 @@ export default function ImageToImageMode({
 
             <div className="space-y-3">
               <Label className="flex items-center gap-2">
-                Quality: 
+                {t("workspace.text_to_image.quality_label")}: 
                 <span className="font-semibold text-green-600 dark:text-green-400">
-                  {quality === "flux-kontext-pro" ? "Pro" : "Max"}
+                  {quality === "flux-kontext-pro" ? t("workspace.text_to_image.quality_pro") : t("workspace.text_to_image.quality_max")}
                 </span>
                 <span className="text-yellow-500">⚡</span>
                 <span className="text-sm font-medium">
-                  {quality === "flux-kontext-pro" ? CREDITS_COST.pro : CREDITS_COST.max} credits
+                  {quality === "flux-kontext-pro" ? CREDITS_COST.pro : CREDITS_COST.max} {t("workspace.text_to_image.credits")}
                 </span>
                 {!creditsLoading && (
                   <span className="text-xs text-muted-foreground ml-2">
-                    ({credits.left_credits} left)
+                    ({credits.left_credits} {t("workspace.text_to_image.credits_left")})
                   </span>
                 )}
               </Label>
@@ -431,11 +431,11 @@ export default function ImageToImageMode({
                       </div>
                       <div>
                         <div className="flex items-center gap-2">
-                          <span className="font-semibold">Pro</span>
+                          <span className="font-semibold">{t("workspace.text_to_image.quality_pro")}</span>
                           <span className="text-yellow-500 text-sm">⚡ {CREDITS_COST.pro}</span>
                         </div>
                         <p className="text-sm text-slate-600 dark:text-slate-400">
-                          Ideal for most scenarios, precise editing
+                          {t("workspace.image_to_image.quality_pro_desc")}
                         </p>
                       </div>
                     </div>
@@ -463,11 +463,11 @@ export default function ImageToImageMode({
                       </div>
                       <div>
                         <div className="flex items-center gap-2">
-                          <span className="font-semibold">Max</span>
+                          <span className="font-semibold">{t("workspace.text_to_image.quality_max")}</span>
                           <span className="text-yellow-500 text-sm">⚡ {CREDITS_COST.max}</span>
                         </div>
                         <p className="text-sm text-slate-600 dark:text-slate-400">
-                          Ultimate quality, perfect details
+                          {t("workspace.text_to_image.quality_max_desc")}
                         </p>
                       </div>
                     </div>
@@ -484,12 +484,12 @@ export default function ImageToImageMode({
               {(isGenerating || externalIsGenerating) ? (
                 <>
                   <Loader2 className="h-4 w-4 mr-2 animate-spin" />
-                  Transforming...
+                  {t("workspace.image_to_image.transforming_button")}
                 </>
               ) : (
                 <>
                   <Wand2 className="h-4 w-4 mr-2" />
-                  Transform
+                  {t("workspace.image_to_image.transform_button")}
                 </>
               )}
             </Button>
@@ -497,7 +497,7 @@ export default function ImageToImageMode({
             {(isGenerating || progress > 0) && (
               <div className="space-y-2">
                 <div className="flex items-center justify-between text-sm">
-                  <span className="text-muted-foreground">Processing</span>
+                  <span className="text-muted-foreground">{t("workspace.image_to_image.processing")}</span>
                   <span className="font-medium">{progress}%</span>
                 </div>
                 <div className="h-2 bg-gradient-to-r from-green-500/20 to-cyan-500/20 rounded-full overflow-hidden">
@@ -507,7 +507,7 @@ export default function ImageToImageMode({
                   />
                 </div>
                 <p className="text-xs text-muted-foreground text-center">
-                  This may take 1-2 minutes...
+                  {t("workspace.text_to_image.this_may_take")}
                 </p>
               </div>
             )}

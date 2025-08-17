@@ -16,7 +16,7 @@ const NanoBananaWorkspace = dynamic(() => import("./index"), {
 
 export default function WorkspaceWrapper() {
   return (
-    <div className="container py-16 px-4 md:px-8">
+    <div id="workspace" className="container py-16 px-4 md:px-8">
       <NanoBananaWorkspace
         credits={100}
         tier="pro"

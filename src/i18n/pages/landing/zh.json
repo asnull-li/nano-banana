@@ -1,6 +1,6 @@
 {
   "template": "shipany-template-one",
-  "theme": "light",
+  "theme": "dark",
   "header": {
     "brand": {
       "title": "Nano Banana",
@@ -56,7 +56,7 @@
       {
         "title": "体验 Nano Banana",
         "icon": "RiFlashlightFill",
-        "url": "/",
+        "url": "#workspace",
         "target": "_self",
         "variant": "default"
       },

@@ -18,6 +18,7 @@
     "sign_in_description": "Sign in to your account",
     "sign_up_title": "Sign Up",
     "sign_up_description": "Create an account",
+    "login_slogan": "Free trial available after login",
     "email_title": "Email",
     "email_placeholder": "Input your email here",
     "password_title": "Password",
@@ -30,7 +31,11 @@
     "google_sign_in": "Sign in with Google",
     "github_sign_in": "Sign in with GitHub",
     "close_title": "Close",
-    "cancel_title": "Cancel"
+    "cancel_title": "Cancel",
+    "terms_text": "By continuing, you agree to our",
+    "terms_of_service": "Terms of Service",
+    "and": "and",
+    "privacy_policy": "Privacy Policy"
   },
   "my_orders": {
     "title": "My Orders",
@@ -122,9 +127,83 @@
     "rating_tip": "How do you feel about ShipAny?",
     "placeholder": "Leave your words here..."
   },
+  "pricing": {
+    "most_popular": "Most Popular"
+  },
   "workspace": {
     "sign_in_prompt": "Sign in to Start Creating with AI",
     "sign_in_description": "New users get 3 free credits to experience powerful AI creation",
-    "sign_in_button": "Sign In to Create"
+    "sign_in_button": "Sign In to Create",
+    "text_to_image": {
+      "title": "Create Mode",
+      "prompt_label": "Describe your vision",
+      "prompt_placeholder": "A futuristic city with flying cars at sunset...",
+      "aspect_ratio_label": "Aspect Ratio",
+      "aspect_ratios": {
+        "square": "Square",
+        "landscape": "Landscape",
+        "portrait": "Portrait",
+        "classic": "Classic"
+      },
+      "quality_label": "Quality",
+      "quality_pro": "Pro",
+      "quality_pro_desc": "High quality, balanced speed",
+      "quality_max": "Max",
+      "quality_max_desc": "Ultimate quality, perfect details",
+      "generate_button": "Create",
+      "generating_button": "Creating...",
+      "regenerate_button": "Regenerate",
+      "download_button": "Download",
+      "share_button": "Share",
+      "view_full_size": "View Full Size",
+      "generated_result": "Generated Result",
+      "ai_generated": "AI Generated",
+      "generating_text": "Creating your image...",
+      "complete_text": "complete",
+      "all_generated_images": "All Generated Images",
+      "ai_assistant_title": "AI Assistant",
+      "ai_assistant_desc": "I'll help you create amazing images from text! Try these inspirations:",
+      "inspiration": "Inspiration",
+      "inspirations": [
+        "Cyberpunk city at night with neon lights",
+        "Oil painting of mountains at sunset",
+        "Anime style character with blue hair",
+        "Abstract colorful geometric art",
+        "Realistic portrait of a warrior",
+        "Underwater fantasy world with glowing creatures"
+      ],
+      "credits": "credits",
+      "credits_left": "left",
+      "this_may_take": "This may take 1-2 minutes..."
+    },
+    "image_to_image": {
+      "title": "Edit Mode",
+      "upload_title": "Upload image",
+      "upload_desc": "Drag and drop your image here or click to browse",
+      "upload_formats": "JPG, PNG, WEBP up to 20MB",
+      "sample_images": "Sample images",
+      "clear_button": "Clear",
+      "original": "Original",
+      "ai_edited": "AI Edited",
+      "new_edit": "New Edit",
+      "ai_assistant_title": "AI Assistant",
+      "ai_assistant_upload_prompt": "Image uploaded! What would you like to change?",
+      "ai_assistant_ready": "Ready to transform your image! Upload an image to get started.",
+      "quick_actions": "Quick Actions",
+      "quick_action_lighting": "Change lighting",
+      "quick_action_lighting_prompt": "Change to golden hour lighting",
+      "quick_action_style": "Style transfer",
+      "quick_action_style_prompt": "Convert to oil painting style",
+      "quick_action_remove_bg": "Remove background",
+      "quick_action_remove_bg_prompt": "Remove background, keep subject",
+      "quick_action_color": "Color grading",
+      "quick_action_color_prompt": "Apply cinematic color grading",
+      "recent_edits": "Recent Edits",
+      "describe_changes": "Describe what you want to change...",
+      "transform_button": "Transform",
+      "transforming_button": "Transforming...",
+      "processing": "Processing",
+      "quality_pro_desc": "Ideal for most scenarios, precise editing"
+    }
   }
 }

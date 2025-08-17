@@ -18,6 +18,21 @@ export default function HeroContent({ hero }: { hero: HeroType }) {
 
   const isDark = mounted && resolvedTheme === "dark";
 
+  const handleScrollToWorkspace = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    // Don't prevent default - let the browser update the URL
+    // The browser will automatically scroll, but we want smooth scrolling
+    e.preventDefault();
+    
+    // Update the URL
+    window.history.pushState(null, '', '#workspace');
+    
+    // Smooth scroll to workspace
+    const workspaceElement = document.getElementById('workspace');
+    if (workspaceElement) {
+      workspaceElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   useEffect(() => {
     setMounted(true);
     setIsVisible(true);
@@ -160,6 +175,49 @@ export default function HeroContent({ hero }: { hero: HeroType }) {
             <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
               {hero.buttons.map((item, i) => {
                 const isPrimary = i === 0;
+                const isWorkspaceLink = item.url === '#workspace';
+                
+                if (isWorkspaceLink) {
+                  return (
+                    <a
+                      key={i}
+                      href="#workspace"
+                      onClick={handleScrollToWorkspace}
+                      className={`group transition-all duration-1000 ${
+                        isVisible
+                          ? "opacity-100 translate-y-0"
+                          : "opacity-0 translate-y-10"
+                      }`}
+                      style={{ transitionDelay: `${400 + i * 100}ms` }}
+                    >
+                      <Button
+                        className={`relative overflow-hidden transition-all duration-300 ${
+                          isPrimary
+                            ? "bg-gradient-to-r from-green-500 to-cyan-500 hover:from-green-600 hover:to-cyan-600 text-white border-0 shadow-lg shadow-green-500/25 hover:shadow-xl hover:shadow-green-500/30 hover:scale-105"
+                            : isDark
+                            ? "border-green-500/20 hover:border-green-500/40 bg-transparent hover:bg-green-500/10"
+                            : "border-green-500/30 hover:border-green-500/50 bg-transparent hover:bg-green-500/5"
+                        }`}
+                        size="lg"
+                        variant={isPrimary ? "default" : "outline"}
+                      >
+                        <span className="relative z-10 flex items-center gap-2">
+                          {item.icon && (
+                            <Icon name={item.icon} className="w-5 h-5" />
+                          )}
+                          {item.title}
+                          {isPrimary && (
+                            <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                          )}
+                        </span>
+                        {isPrimary && (
+                          <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 -skew-x-12 translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000" />
+                        )}
+                      </Button>
+                    </a>
+                  );
+                }
+                
                 return (
                   <Link
                     key={i}

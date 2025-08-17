@@ -1,6 +1,6 @@
 "use client";
 
-import { Check, Loader } from "lucide-react";
+import { Check, Loader, Sparkles, Zap, Crown } from "lucide-react";
 import { PricingItem, Pricing as PricingType } from "@/types/blocks/pricing";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { useEffect, useState } from "react";
@@ -11,7 +11,7 @@ import Icon from "@/components/icon";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
 import { useAppContext } from "@/contexts/app";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 export default function Pricing({ pricing }: { pricing: PricingType }) {
   if (pricing.disabled) {
@@ -19,6 +19,7 @@ export default function Pricing({ pricing }: { pricing: PricingType }) {
   }
 
   const locale = useLocale();
+  const t = useTranslations();
 
   const { user, setShowSignModal } = useAppContext();
 
@@ -90,22 +91,32 @@ export default function Pricing({ pricing }: { pricing: PricingType }) {
   }, [pricing.items]);
 
   return (
-    <section id={pricing.name} className="py-16">
-      <div className="container">
-        <div className="mx-auto mb-12 text-center">
-          <h2 className="mb-4 text-4xl font-semibold lg:text-5xl">
+    <section id={pricing.name} className="py-20 relative overflow-hidden">
+      {/* Background gradients */}
+      <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 to-cyan-500/5" />
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-br from-green-500/10 to-cyan-500/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-gradient-to-tr from-cyan-500/10 to-green-500/10 rounded-full blur-3xl" />
+
+      <div className="container relative z-10">
+        <div className="mx-auto mb-16 text-center max-w-3xl">
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-green-500 to-cyan-500 rounded-full mb-6 shadow-lg shadow-green-500/25">
+            <Sparkles className="h-8 w-8 text-white" />
+          </div>
+
+          <h2 className="mb-6 text-4xl font-bold lg:text-6xl bg-gradient-to-r from-green-500 to-cyan-500 bg-clip-text text-transparent">
             {pricing.title}
           </h2>
-          <p className="text-muted-foreground lg:text-lg">
+
+          <p className="text-muted-foreground lg:text-xl leading-relaxed">
             {pricing.description}
           </p>
         </div>
         <div className="w-full flex flex-col items-center gap-2">
           {pricing.groups && pricing.groups.length > 0 && (
-            <div className="flex h-12 mb-12 items-center rounded-md bg-muted p-1 text-lg">
+            <div className="flex h-14 mb-16 items-center rounded-xl bg-gradient-to-r from-green-500/10 to-cyan-500/10 p-1.5 text-lg border border-green-500/20 shadow-lg backdrop-blur-sm">
               <RadioGroup
                 value={group}
-                className={`h-full grid-cols-${pricing.groups.length}`}
+                className={`h-full grid-cols-${pricing.groups.length} w-full`}
                 onValueChange={(value) => {
                   setGroup(value);
                 }}
@@ -114,7 +125,7 @@ export default function Pricing({ pricing }: { pricing: PricingType }) {
                   return (
                     <div
                       key={i}
-                      className='h-full rounded-md transition-all has-[button[data-state="checked"]]:bg-white'
+                      className='h-full rounded-lg transition-all duration-300 has-[button[data-state="checked"]]:bg-gradient-to-r has-[button[data-state="checked"]]:from-green-500 has-[button[data-state="checked"]]:to-cyan-500 has-[button[data-state="checked"]]:shadow-lg has-[button[data-state="checked"]]:shadow-green-500/25'
                     >
                       <RadioGroupItem
                         value={item.name || ""}
@@ -123,13 +134,13 @@ export default function Pricing({ pricing }: { pricing: PricingType }) {
                       />
                       <Label
                         htmlFor={item.name}
-                        className="flex h-full cursor-pointer items-center justify-center px-7 font-semibold text-muted-foreground peer-data-[state=checked]:text-primary"
+                        className="flex h-full cursor-pointer items-center justify-center px-7 font-semibold text-muted-foreground peer-data-[state=checked]:text-white transition-all duration-300 hover:text-green-600"
                       >
                         {item.title}
                         {item.label && (
                           <Badge
                             variant="outline"
-                            className="border-primary bg-primary px-1.5 ml-1 text-primary-foreground"
+                            className="border-green-500 bg-green-500 px-1.5 ml-2 text-white border-0 shadow-sm"
                           >
                             {item.label}
                           </Badge>
@@ -142,7 +153,7 @@ export default function Pricing({ pricing }: { pricing: PricingType }) {
             </div>
           )}
           <div
-            className={`w-full mt-0 grid gap-6 md:grid-cols-${
+            className={`w-full mt-0 grid gap-8 md:grid-cols-${
               pricing.items?.filter(
                 (item) => !item.group || item.group === group
               )?.length
@@ -156,64 +167,106 @@ export default function Pricing({ pricing }: { pricing: PricingType }) {
               return (
                 <div
                   key={index}
-                  className={`rounded-lg p-6 ${
+                  className={`relative rounded-2xl p-8 transition-all duration-300 hover:scale-105 ${
                     item.is_featured
-                      ? "border-primary border-2 bg-card text-card-foreground"
-                      : "border-muted border"
+                      ? "bg-gradient-to-br from-green-500/10 to-cyan-500/10 border-2 border-green-500/30 shadow-2xl shadow-green-500/20 ring-1 ring-green-500/20"
+                      : "bg-white/50 dark:bg-slate-900/50 border border-green-500/10 shadow-lg hover:shadow-xl hover:border-green-500/20 backdrop-blur-sm"
                   }`}
                 >
-                  <div className="flex h-full flex-col justify-between gap-5">
-                    <div>
-                      <div className="flex items-center gap-2 mb-4">
-                        {item.title && (
-                          <h3 className="text-xl font-semibold">
-                            {item.title}
-                          </h3>
-                        )}
-                        <div className="flex-1"></div>
-                        {item.label && (
-                          <Badge
-                            variant="outline"
-                            className="border-primary bg-primary px-1.5 text-primary-foreground"
-                          >
-                            {item.label}
-                          </Badge>
-                        )}
+                  {item.is_featured && (
+                    <>
+                      <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <Badge className="bg-gradient-to-r from-green-500 to-cyan-500 text-white border-0 px-4 py-1.5 shadow-lg">
+                          <Crown className="h-3 w-3 mr-1" />
+                          {t("pricing.most_popular")}
+                        </Badge>
                       </div>
-                      <div className="flex items-end gap-2 mb-4">
+                      <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 to-cyan-500/5 rounded-2xl" />
+                    </>
+                  )}
+                  <div className="flex h-full flex-col justify-between gap-6 relative z-10">
+                    <div>
+                      <div className="flex items-center gap-3 mb-6">
+                        <div
+                          className={`w-12 h-12 rounded-xl flex items-center justify-center ${
+                            item.is_featured
+                              ? "bg-gradient-to-r from-green-500 to-cyan-500 shadow-lg shadow-green-500/25"
+                              : "bg-gradient-to-r from-green-500/20 to-cyan-500/20"
+                          }`}
+                        >
+                          {item.is_featured ? (
+                            <Crown
+                              className={`h-6 w-6 ${
+                                item.is_featured
+                                  ? "text-white"
+                                  : "text-green-600"
+                              }`}
+                            />
+                          ) : (
+                            <Zap className="h-6 w-6 text-green-600" />
+                          )}
+                        </div>
+                        <div className="flex-1">
+                          {item.title && (
+                            <h3
+                              className={`text-xl font-bold ${
+                                item.is_featured
+                                  ? "bg-gradient-to-r from-green-500 to-cyan-500 bg-clip-text text-transparent"
+                                  : "text-foreground"
+                              }`}
+                            >
+                              {item.title}
+                            </h3>
+                          )}
+                        </div>
+                      </div>
+                      <div className="flex items-end gap-3 mb-6">
                         {item.original_price && (
                           <span className="text-xl text-muted-foreground font-semibold line-through">
                             {item.original_price}
                           </span>
                         )}
                         {item.price && (
-                          <span className="text-5xl font-semibold">
+                          <span
+                            className={`text-5xl font-bold ${
+                              item.is_featured
+                                ? "bg-gradient-to-r from-green-500 to-cyan-500 bg-clip-text text-transparent"
+                                : "text-foreground"
+                            }`}
+                          >
                             {item.price}
                           </span>
                         )}
                         {item.unit && (
-                          <span className="block font-semibold">
+                          <span className="block font-semibold text-base text-muted-foreground mb-2">
                             {item.unit}
                           </span>
                         )}
                       </div>
                       {item.description && (
-                        <p className="text-muted-foreground">
+                        <p className="text-muted-foreground text-base leading-relaxed mb-6">
                           {item.description}
                         </p>
                       )}
                       {item.features_title && (
-                        <p className="mb-3 mt-6 font-semibold">
+                        <p className="mb-3 mt-6 font-semibold text-sm">
                           {item.features_title}
                         </p>
                       )}
                       {item.features && (
-                        <ul className="flex flex-col gap-3">
+                        <ul className="flex flex-col gap-4">
                           {item.features.map((feature, fi) => {
                             return (
-                              <li className="flex gap-2" key={`feature-${fi}`}>
-                                <Check className="mt-1 size-4 shrink-0" />
-                                {feature}
+                              <li
+                                className="flex gap-3 items-start"
+                                key={`feature-${fi}`}
+                              >
+                                <div className="w-5 h-5 rounded-full bg-gradient-to-r from-green-500 to-cyan-500 flex items-center justify-center mt-0.5 flex-shrink-0">
+                                  <Check className="h-3 w-3 text-white" />
+                                </div>
+                                <span className="text-foreground font-medium text-sm">
+                                  {feature}
+                                </span>
                               </li>
                             );
                           })}
@@ -221,29 +274,13 @@ export default function Pricing({ pricing }: { pricing: PricingType }) {
                       )}
                     </div>
                     <div className="flex flex-col gap-2">
-                      {item.cn_amount && item.cn_amount > 0 ? (
-                        <div className="flex items-center gap-x-2 mt-2">
-                          <span className="text-sm">人民币支付 👉</span>
-                          <div
-                            className="inline-block p-2 hover:cursor-pointer hover:bg-base-200 rounded-md"
-                            onClick={() => {
-                              if (isLoading) {
-                                return;
-                              }
-                              handleCheckout(item, true);
-                            }}
-                          >
-                            <img
-                              src="/imgs/cnpay.png"
-                              alt="cnpay"
-                              className="w-20 h-10 rounded-lg"
-                            />
-                          </div>
-                        </div>
-                      ) : null}
                       {item.button && (
                         <Button
-                          className="w-full flex items-center justify-center gap-2 font-semibold"
+                          className={`w-full h-12 flex items-center justify-center gap-3 font-semibold text-base transition-all duration-300 ${
+                            item.is_featured
+                              ? "bg-gradient-to-r from-green-500 to-cyan-500 hover:from-green-600 hover:to-cyan-600 text-white border-0 shadow-lg shadow-green-500/25 hover:shadow-xl hover:shadow-green-500/30 hover:scale-105"
+                              : "border-2 border-green-500/20 hover:border-green-500/40 hover:bg-gradient-to-r hover:from-green-500/10 hover:to-cyan-500/10 hover:scale-105"
+                          }`}
                           disabled={isLoading}
                           onClick={() => {
                             if (isLoading) {
@@ -254,22 +291,27 @@ export default function Pricing({ pricing }: { pricing: PricingType }) {
                         >
                           {(!isLoading ||
                             (isLoading && productId !== item.product_id)) && (
-                            <p>{item.button.title}</p>
+                            <>
+                              <span>{item.button.title}</span>
+                              {item.button.icon && (
+                                <Icon
+                                  name={item.button.icon}
+                                  className="h-5 w-5"
+                                />
+                              )}
+                            </>
                           )}
 
                           {isLoading && productId === item.product_id && (
-                            <p>{item.button.title}</p>
-                          )}
-                          {isLoading && productId === item.product_id && (
-                            <Loader className="mr-2 h-4 w-4 animate-spin" />
-                          )}
-                          {item.button.icon && (
-                            <Icon name={item.button.icon} className="size-4" />
+                            <>
+                              <Loader className="h-5 w-5 animate-spin" />
+                              <span>{item.button.title}</span>
+                            </>
                           )}
                         </Button>
                       )}
                       {item.tip && (
-                        <p className="text-muted-foreground text-sm mt-2">
+                        <p className="text-muted-foreground text-xs mt-4 text-center bg-muted/50 p-2 rounded-lg">
                           {item.tip}
                         </p>
                       )}

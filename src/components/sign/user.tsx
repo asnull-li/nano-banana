@@ -21,10 +21,10 @@ export default function SignUser({ user }: { user: User }) {
   const t = useTranslations();
 
   const dropdownItems: NavItem[] = [
-    // {
-    //   title: t("user.user_center"),
-    //   url: "/my-orders",
-    // },
+    {
+      title: t("user.user_center"),
+      url: "/my-orders",
+    },
     // {
     //   title: t("user.admin_system"),
     //   url: "/admin/users",

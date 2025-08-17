@@ -18,6 +18,7 @@
     "sign_in_description": "登录您的账户",
     "sign_up_title": "注册",
     "sign_up_description": "创建新账户",
+    "login_slogan": "登录之后可免费试用",
     "email_title": "邮箱",
     "email_placeholder": "请输入您的邮箱",
     "password_title": "密码",
@@ -30,7 +31,11 @@
     "google_sign_in": "使用 Google 登录",
     "github_sign_in": "使用 GitHub 登录",
     "close_title": "关闭",
-    "cancel_title": "取消"
+    "cancel_title": "取消",
+    "terms_text": "继续即表示您同意我们的",
+    "terms_of_service": "服务条款",
+    "and": "和",
+    "privacy_policy": "隐私政策"
   },
   "my_orders": {
     "title": "我的订单",
@@ -122,9 +127,83 @@
     "rating_tip": "您对 ShipAny 的看法如何？",
     "placeholder": "在这里留下您的反馈..."
   },
+  "pricing": {
+    "most_popular": "最受欢迎"
+  },
   "workspace": {
     "sign_in_prompt": "登录即可开始使用 AI 图像生成",
     "sign_in_description": "新用户免费获得 3 个积分，立即体验强大的 AI 创作功能",
-    "sign_in_button": "登录开始创作"
+    "sign_in_button": "登录开始创作",
+    "text_to_image": {
+      "title": "创作模式",
+      "prompt_label": "描述您的创意",
+      "prompt_placeholder": "在落日时分的未来城市，有飞行汽车...",
+      "aspect_ratio_label": "长宽比",
+      "aspect_ratios": {
+        "square": "正方形",
+        "landscape": "横向",
+        "portrait": "纵向",
+        "classic": "经典"
+      },
+      "quality_label": "质量",
+      "quality_pro": "Pro",
+      "quality_pro_desc": "高质量，平衡速度",
+      "quality_max": "Max",
+      "quality_max_desc": "极致质量，完美细节",
+      "generate_button": "创建",
+      "generating_button": "创建中...",
+      "regenerate_button": "重新生成",
+      "download_button": "下载",
+      "share_button": "分享",
+      "view_full_size": "查看全尺寸",
+      "generated_result": "生成结果",
+      "ai_generated": "AI 生成",
+      "generating_text": "正在创建您的图像...",
+      "complete_text": "完成",
+      "all_generated_images": "所有生成的图像",
+      "ai_assistant_title": "AI 助手",
+      "ai_assistant_desc": "我将帮助您从文字创建惊人的图像！试试这些灵感：",
+      "inspiration": "灵感",
+      "inspirations": [
+        "夜晚的赛博朋克城市，霓虹灯光",
+        "落日时分的山脉油画",
+        "蓝色头发的动漫风格角色",
+        "抽象的多彩几何艺术",
+        "现实主义风格的战士肖像",
+        "发光生物的水下奇幻世界"
+      ],
+      "credits": "积分",
+      "credits_left": "剩余",
+      "this_may_take": "这可能需要 1-2 分钟..."
+    },
+    "image_to_image": {
+      "title": "编辑模式",
+      "upload_title": "上传图像",
+      "upload_desc": "将您的图像拖放到这里或点击浏览",
+      "upload_formats": "JPG, PNG, WEBP 最大 20MB",
+      "sample_images": "示例图像",
+      "clear_button": "清除",
+      "original": "原始",
+      "ai_edited": "AI 编辑后",
+      "new_edit": "新编辑",
+      "ai_assistant_title": "AI 助手",
+      "ai_assistant_upload_prompt": "图像已上传！您想要修改什么？",
+      "ai_assistant_ready": "准备好转换您的图像！上传图像开始。",
+      "quick_actions": "快速操作",
+      "quick_action_lighting": "更改光照",
+      "quick_action_lighting_prompt": "更改为黄金时刻光照",
+      "quick_action_style": "风格转换",
+      "quick_action_style_prompt": "转换为油画风格",
+      "quick_action_remove_bg": "移除背景",
+      "quick_action_remove_bg_prompt": "移除背景，保留主体",
+      "quick_action_color": "色彩分级",
+      "quick_action_color_prompt": "应用电影色彩分级",
+      "recent_edits": "最近的编辑",
+      "describe_changes": "描述您想要的更改...",
+      "transform_button": "转换",
+      "transforming_button": "转换中...",
+      "processing": "处理中",
+      "quality_pro_desc": "适合大多数场景，精确编辑"
+    }
   }
 }

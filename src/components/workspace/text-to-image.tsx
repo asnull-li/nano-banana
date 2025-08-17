@@ -126,41 +126,34 @@ export default function TextToImageMode({
     }
   };
 
-  const inspirations = [
-    "Cyberpunk city at night with neon lights",
-    "Oil painting of mountains at sunset",
-    "Anime style character with blue hair",
-    "Abstract colorful geometric art",
-    "Realistic portrait of a warrior",
-    "Underwater fantasy world with glowing creatures",
-  ];
+  const inspirations = t.raw('workspace.text_to_image.inspirations') as string[];
 
   const aspectRatios = [
     { 
       value: "1:1", 
       label: "1:1", 
-      description: "Square",
+      description: t("workspace.text_to_image.aspect_ratios.square"),
       icon: Square,
       iconClass: "w-5 h-5"
     },
     { 
       value: "16:9", 
       label: "16:9", 
-      description: "Landscape",
+      description: t("workspace.text_to_image.aspect_ratios.landscape"),
       icon: RectangleHorizontal,
       iconClass: "w-6 h-4"
     },
     { 
       value: "9:16", 
       label: "9:16", 
-      description: "Portrait",
+      description: t("workspace.text_to_image.aspect_ratios.portrait"),
       icon: RectangleVertical,
       iconClass: "w-4 h-6"
     },
     { 
       value: "4:3", 
       label: "4:3", 
-      description: "Classic",
+      description: t("workspace.text_to_image.aspect_ratios.classic"),
       icon: Monitor,
       iconClass: "w-5 h-4"
     },
@@ -197,13 +190,13 @@ export default function TextToImageMode({
           <div className="space-y-4">
             <div className="flex items-center gap-2">
               <Sparkles className="h-5 w-5 text-green-500" />
-              <h3 className="text-lg font-semibold bg-gradient-to-r from-green-500 to-cyan-500 bg-clip-text text-transparent">Create Mode</h3>
+              <h3 className="text-lg font-semibold bg-gradient-to-r from-green-500 to-cyan-500 bg-clip-text text-transparent">{t("workspace.text_to_image.title")}</h3>
             </div>
 
             <div className="space-y-3">
-              <Label>Describe your vision</Label>
+              <Label>{t("workspace.text_to_image.prompt_label")}</Label>
               <Textarea
-                placeholder="A futuristic city with flying cars at sunset..."
+                placeholder={t("workspace.text_to_image.prompt_placeholder")}
                 value={prompt}
                 onChange={(e) => setPrompt(e.target.value)}
                 className="min-h-[150px] resize-none"
@@ -211,7 +204,7 @@ export default function TextToImageMode({
             </div>
 
             <div className="space-y-3">
-              <Label>Aspect Ratio</Label>
+              <Label>{t("workspace.text_to_image.aspect_ratio_label")}</Label>
               <div className="grid grid-cols-2 gap-3">
                 {aspectRatios.map((ratio) => {
                   const IconComponent = ratio.icon;
@@ -239,17 +232,17 @@ export default function TextToImageMode({
 
             <div className="space-y-3">
               <Label className="flex items-center gap-2">
-                Quality: 
+                {t("workspace.text_to_image.quality_label")}: 
                 <span className="font-semibold text-green-600 dark:text-green-400">
-                  {quality === "flux-kontext-pro" ? "Pro" : "Max"}
+                  {quality === "flux-kontext-pro" ? t("workspace.text_to_image.quality_pro") : t("workspace.text_to_image.quality_max")}
                 </span>
                 <span className="text-yellow-500">⚡</span>
                 <span className="text-sm font-medium">
-                  {quality === "flux-kontext-pro" ? CREDITS_COST.pro : CREDITS_COST.max} credits
+                  {quality === "flux-kontext-pro" ? CREDITS_COST.pro : CREDITS_COST.max} {t("workspace.text_to_image.credits")}
                 </span>
                 {!creditsLoading && (
                   <span className="text-xs text-muted-foreground ml-2">
-                    ({credits.left_credits} left)
+                    ({credits.left_credits} {t("workspace.text_to_image.credits_left")})
                   </span>
                 )}
               </Label>
@@ -276,11 +269,11 @@ export default function TextToImageMode({
                       </div>
                       <div>
                         <div className="flex items-center gap-2">
-                          <span className="font-semibold">Pro</span>
+                          <span className="font-semibold">{t("workspace.text_to_image.quality_pro")}</span>
                           <span className="text-yellow-500 text-sm">⚡ {CREDITS_COST.pro}</span>
                         </div>
                         <p className="text-sm text-slate-600 dark:text-slate-400">
-                          High quality, balanced speed
+                          {t("workspace.text_to_image.quality_pro_desc")}
                         </p>
                       </div>
                     </div>
@@ -308,11 +301,11 @@ export default function TextToImageMode({
                       </div>
                       <div>
                         <div className="flex items-center gap-2">
-                          <span className="font-semibold">Max</span>
+                          <span className="font-semibold">{t("workspace.text_to_image.quality_max")}</span>
                           <span className="text-yellow-500 text-sm">⚡ {CREDITS_COST.max}</span>
                         </div>
                         <p className="text-sm text-slate-600 dark:text-slate-400">
-                          Ultimate quality, perfect details
+                          {t("workspace.text_to_image.quality_max_desc")}
                         </p>
                       </div>
                     </div>
@@ -330,12 +323,12 @@ export default function TextToImageMode({
               {(isGenerating || externalIsGenerating) ? (
                 <>
                   <Loader2 className="h-4 w-4 mr-2 animate-spin" />
-                  Creating...
+                  {t("workspace.text_to_image.generating_button")}
                 </>
               ) : (
                 <>
                   <Wand2 className="h-4 w-4 mr-2" />
-                  Create
+                  {t("workspace.text_to_image.generate_button")}
                 </>
               )}
             </Button>
@@ -343,7 +336,7 @@ export default function TextToImageMode({
             {(isGenerating || progress > 0) && (
               <div className="space-y-2">
                 <div className="flex items-center justify-between text-sm">
-                  <span className="text-muted-foreground">Generating</span>
+                  <span className="text-muted-foreground">{t("workspace.text_to_image.generating_button").replace("...", "")}</span>
                   <span className="font-medium">{progress}%</span>
                 </div>
                 <div className="h-2 bg-gradient-to-r from-green-500/20 to-cyan-500/20 rounded-full overflow-hidden">
@@ -353,7 +346,7 @@ export default function TextToImageMode({
                   />
                 </div>
                 <p className="text-xs text-muted-foreground text-center">
-                  This may take 1-2 minutes...
+                  {t("workspace.text_to_image.this_may_take")}
                 </p>
               </div>
             )}
@@ -371,12 +364,12 @@ export default function TextToImageMode({
                 <div className="flex items-center gap-2">
                   <Sparkles className="h-5 w-5 text-green-500" />
                   <h3 className="text-lg font-semibold bg-gradient-to-r from-green-500 to-cyan-500 bg-clip-text text-transparent">
-                    Generated Result
+                    {t("workspace.text_to_image.generated_result")}
                   </h3>
                 </div>
                 <Badge className="bg-gradient-to-r from-green-500/90 to-cyan-500/90 text-white border-0">
                   <Sparkles className="h-3 w-3 mr-1" />
-                  AI Generated
+                  {t("workspace.text_to_image.ai_generated")}
                 </Badge>
               </div>
 
@@ -387,7 +380,7 @@ export default function TextToImageMode({
                     <div className="text-center">
                       <Loader2 className="h-12 w-12 mx-auto mb-4 text-green-500 animate-spin" />
                       <p className="text-sm font-medium text-green-600 dark:text-green-400 mb-2">
-                        Creating your image...
+                        {t("workspace.text_to_image.generating_text")}
                       </p>
                       <div className="w-32 h-2 bg-gradient-to-r from-green-500/20 to-cyan-500/20 rounded-full overflow-hidden mx-auto">
                         <div
@@ -396,7 +389,7 @@ export default function TextToImageMode({
                         />
                       </div>
                       <p className="text-xs text-muted-foreground mt-2">
-                        {progress}% complete
+                        {progress}% {t("workspace.text_to_image.complete_text")}
                       </p>
                     </div>
                   </div>
@@ -417,7 +410,7 @@ export default function TextToImageMode({
                         className="bg-white/90 hover:bg-white text-black"
                       >
                         <Eye className="h-4 w-4 mr-2" />
-                        View Full Size
+                        {t("workspace.text_to_image.view_full_size")}
                       </Button>
                     </div>
                   </>
@@ -434,7 +427,7 @@ export default function TextToImageMode({
                   disabled={!prompt || isGenerating || externalIsGenerating}
                 >
                   <RefreshCw className="h-4 w-4 mr-2 text-green-500" />
-                  Regenerate
+                  {t("workspace.text_to_image.regenerate_button")}
                 </Button>
                 <Button 
                   size="sm" 
@@ -457,7 +450,7 @@ export default function TextToImageMode({
               {/* Image Gallery */}
               {generatedImages.length > 1 && (
                 <div className="space-y-2">
-                  <Label>All Generated Images</Label>
+                  <Label>{t("workspace.text_to_image.all_generated_images")}</Label>
                   <div className="grid grid-cols-4 gap-2">
                     {generatedImages.map((img, idx) => (
                       <button
@@ -495,15 +488,15 @@ export default function TextToImageMode({
             <div className="space-y-4">
               <div className="flex items-center gap-2">
                 <Sparkles className="h-5 w-5 text-cyan-500" />
-                <h3 className="text-lg font-semibold bg-gradient-to-r from-green-500 to-cyan-500 bg-clip-text text-transparent">AI Assistant</h3>
+                <h3 className="text-lg font-semibold bg-gradient-to-r from-green-500 to-cyan-500 bg-clip-text text-transparent">{t("workspace.text_to_image.ai_assistant_title")}</h3>
               </div>
 
               <p className="text-sm text-muted-foreground">
-                I'll help you create amazing images from text! Try these inspirations:
+                {t("workspace.text_to_image.ai_assistant_desc")}
               </p>
 
               <div className="space-y-2">
-                <Label>💡 Inspiration</Label>
+                <Label>💡 {t("workspace.text_to_image.inspiration")}</Label>
                 <div className="space-y-2">
                   {inspirations.map((inspiration, idx) => (
                     <Button
