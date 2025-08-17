@@ -573,6 +573,9 @@ export default function TextToImageMode({
                   </div>
                 </div>
               </div>
+              <p className="text-sm text-muted-foreground text-center">
+                Click the download button and then right-click to save
+              </p>
             </Card>
           )}
         </div>

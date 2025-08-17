@@ -9,81 +9,62 @@ export interface DownloadOptions {
 }
 
 export async function downloadImage(
-  imageUrl: string, 
+  imageUrl: string,
   options: DownloadOptions = {}
 ): Promise<void> {
   if (!imageUrl) {
     throw new Error("No image URL provided");
   }
 
-  const {
-    filename,
-    onStart,
-    onSuccess,
-    onError,
-    onComplete
-  } = options;
+  const { filename, onStart, onSuccess, onError, onComplete } = options;
 
   try {
     onStart?.();
-    toast.loading("Preparing download...");
-    
-    // Fetch the image with error handling
-    const response = await fetch(imageUrl);
-    if (!response.ok) {
-      throw new Error(`Failed to fetch image: ${response.status} ${response.statusText}`);
-    }
-    
-    // Check content type
-    const contentType = response.headers.get('content-type');
-    if (!contentType?.startsWith('image/')) {
-      throw new Error("URL does not point to a valid image");
-    }
-    
-    // Get the blob
-    const blob = await response.blob();
-    
-    // Validate blob size
-    if (blob.size === 0) {
-      throw new Error("Downloaded image is empty");
-    }
-    
-    // Create object URL
-    const objectUrl = URL.createObjectURL(blob);
-    
-    // Generate filename if not provided
+
+    // Generate filename
     let finalFilename = filename;
     if (!finalFilename) {
-      const timestamp = new Date().toISOString().slice(0, 19).replace(/[:-]/g, '');
-      const extension = getImageExtension(imageUrl, contentType);
+      const timestamp = new Date()
+        .toISOString()
+        .slice(0, 19)
+        .replace(/[:-]/g, "");
+      const extension = getImageExtension(imageUrl);
       finalFilename = `nano-banana-${timestamp}.${extension}`;
     }
-    
-    // Create and click download link
-    const link = document.createElement('a');
-    link.href = objectUrl;
-    link.download = finalFilename;
-    link.style.display = 'none';
-    
-    // Add to DOM, click, and remove
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    
-    // Cleanup
-    URL.revokeObjectURL(objectUrl);
-    
-    toast.dismiss();
-    toast.success(`Image downloaded as ${finalFilename}`);
-    onSuccess?.(finalFilename);
-    
+
+    console.log("🚀 Opening image in new tab for download...");
+
+    // Open image directly in new tab
+    const newWindow = window.open(imageUrl, "_blank", "noopener,noreferrer");
+
+    if (newWindow) {
+      toast.success(
+        `Image opened in new tab. Right-click to save as "${finalFilename}"`
+      );
+      onSuccess?.(finalFilename);
+    } else {
+      // If popup is blocked, try using anchor tag
+      console.log("🔄 Popup blocked, trying anchor tag method...");
+      const link = document.createElement("a");
+      link.href = imageUrl;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      link.style.display = "none";
+
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+
+      toast.success(`Image link opened. Please save as "${finalFilename}"`);
+      onSuccess?.(finalFilename);
+    }
   } catch (error) {
-    console.error('Download error:', error);
-    toast.dismiss();
-    
-    const errorMessage = error instanceof Error ? error.message : "Failed to download image";
-    toast.error(errorMessage);
-    
+    console.error("Download error:", error);
+
+    const errorMessage =
+      error instanceof Error ? error.message : "Failed to open image";
+    toast.error(`Failed to open image: ${errorMessage}`);
+
     if (error instanceof Error) {
       onError?.(error);
     } else {
@@ -97,23 +78,58 @@ export async function downloadImage(
 function getImageExtension(url: string, contentType?: string | null): string {
   // Try to get extension from content type first
   if (contentType) {
-    if (contentType.includes('png')) return 'png';
-    if (contentType.includes('webp')) return 'webp';
-    if (contentType.includes('gif')) return 'gif';
-    if (contentType.includes('jpeg') || contentType.includes('jpg')) return 'jpg';
+    if (contentType.includes("png")) return "png";
+    if (contentType.includes("webp")) return "webp";
+    if (contentType.includes("gif")) return "gif";
+    if (contentType.includes("jpeg") || contentType.includes("jpg"))
+      return "jpg";
   }
-  
+
   // Fallback to URL analysis
-  if (url.includes('.png')) return 'png';
-  if (url.includes('.webp')) return 'webp';
-  if (url.includes('.gif')) return 'gif';
-  if (url.includes('.jpeg') || url.includes('.jpg')) return 'jpg';
-  
+  if (url.includes(".png")) return "png";
+  if (url.includes(".webp")) return "webp";
+  if (url.includes(".gif")) return "gif";
+  if (url.includes(".jpeg") || url.includes(".jpg")) return "jpg";
+
   // Default fallback
-  return 'jpg';
+  return "jpg";
 }
 
-export function generateImageFilename(prefix: string = 'nano-banana', type: 'generated' | 'edited' = 'generated'): string {
-  const timestamp = new Date().toISOString().slice(0, 19).replace(/[:-]/g, '');
+export function generateImageFilename(
+  prefix: string = "nano-banana",
+  type: "generated" | "edited" = "generated"
+): string {
+  const timestamp = new Date().toISOString().slice(0, 19).replace(/[:-]/g, "");
   return `${prefix}-${type}-${timestamp}`;
+}
+
+/**
+ * Simple image viewing function - open image in new tab
+ */
+export function viewImage(imageUrl: string): void {
+  if (!imageUrl) {
+    toast.error("No image URL provided");
+    return;
+  }
+
+  console.log("🖼️ Opening image in new tab:", imageUrl);
+
+  const newWindow = window.open(imageUrl, "_blank", "noopener,noreferrer");
+
+  if (newWindow) {
+    toast.success("Image opened in new tab");
+  } else {
+    // If popup is blocked, try using anchor tag
+    const link = document.createElement("a");
+    link.href = imageUrl;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    link.style.display = "none";
+
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    toast.success("Image link opened");
+  }
 }
