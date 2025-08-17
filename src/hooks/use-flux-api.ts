@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { toast } from "sonner";
+import { useRouter } from "next/navigation";
 
 interface GenerateOptions {
   prompt: string;
@@ -18,9 +19,25 @@ interface EditOptions {
 }
 
 export function useFluxAPI() {
+  const router = useRouter();
   const [isGenerating, setIsGenerating] = useState(false);
   const [taskId, setTaskId] = useState<string | null>(null);
   const [progress, setProgress] = useState(0);
+
+  // Helper function to handle API errors, especially insufficient credits
+  const handleApiError = (response: Response, data: any) => {
+    if (response.status === 402 && data.error === "insufficient_credits") {
+      toast.error(data.message, {
+        duration: 5000,
+        action: {
+          label: "Get Credits",
+          onClick: () => router.push("/pricing"),
+        },
+      });
+      return true; // Handled
+    }
+    return false; // Not handled
+  };
 
   /**
    * Upload image to R2
@@ -74,7 +91,11 @@ export function useFluxAPI() {
       clearInterval(progressInterval);
 
       if (!data.success) {
-        throw new Error(data.error?.message || "Generation failed");
+        // Handle specific error cases
+        if (handleApiError(response, data)) {
+          throw new Error("Credits required"); // This will be caught but not shown as toast
+        }
+        throw new Error(data.error?.message || data.message || "Generation failed");
       }
 
       // If we got task_id, it's async - we need to poll or wait for callback
@@ -94,7 +115,10 @@ export function useFluxAPI() {
       return data.data;
     } catch (error) {
       console.error("Generate error:", error);
-      toast.error(error instanceof Error ? error.message : "Failed to generate image");
+      // Don't show toast for credits required error as it's already handled
+      if (error instanceof Error && error.message !== "Credits required") {
+        toast.error(error.message || "Failed to generate image");
+      }
       throw error;
     } finally {
       setIsGenerating(false);
@@ -128,7 +152,11 @@ export function useFluxAPI() {
       clearInterval(progressInterval);
 
       if (!data.success) {
-        throw new Error(data.error?.message || "Edit failed");
+        // Handle specific error cases
+        if (handleApiError(response, data)) {
+          throw new Error("Credits required"); // This will be caught but not shown as toast
+        }
+        throw new Error(data.error?.message || data.message || "Edit failed");
       }
 
       // If we got task_id, it's async
@@ -148,7 +176,10 @@ export function useFluxAPI() {
       return data.data;
     } catch (error) {
       console.error("Edit error:", error);
-      toast.error(error instanceof Error ? error.message : "Failed to edit image");
+      // Don't show toast for credits required error as it's already handled
+      if (error instanceof Error && error.message !== "Credits required") {
+        toast.error(error.message || "Failed to edit image");
+      }
       throw error;
     } finally {
       setIsGenerating(false);

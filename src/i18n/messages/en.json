@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "title": "Nano Banana - AI Image Editor | Edit image with chat",
+    "title": "Nano Banana - AI Image Generator | Edit image with chat",
     "description": "Nano Banana is an AI-powered image generator that allows you to create and edit images through natural chat conversations. A powerful alternative to Flux Kontext.",
     "keywords": ""
   },
@@ -121,5 +121,10 @@
     "contact_tip": "Other ways to contact us",
     "rating_tip": "How do you feel about ShipAny?",
     "placeholder": "Leave your words here..."
+  },
+  "workspace": {
+    "sign_in_prompt": "Sign in to Start Creating with AI",
+    "sign_in_description": "New users get 3 free credits to experience powerful AI creation",
+    "sign_in_button": "Sign In to Create"
   }
 }

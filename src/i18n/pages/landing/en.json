@@ -17,7 +17,11 @@
           "url": "/#feature",
           "icon": "RiSparkling2Line"
         },
-
+        {
+          "title": "Pricing",
+          "url": "/pricing",
+          "icon": "RiMoneyDollarCircleLine"
+        },
         {
           "title": "Showcase",
           "url": "/#showcase",

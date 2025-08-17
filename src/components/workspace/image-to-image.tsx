@@ -20,11 +20,16 @@ import {
   Palette,
   Eraser,
   Camera,
+  Lock,
+  CheckCircle,
 } from "lucide-react";
 import { useDropzone } from "react-dropzone";
 import { cn } from "@/lib/utils";
 import { Compare } from "@/components/ui/compare";
 import { downloadImage, generateImageFilename } from "@/lib/download-utils";
+import { useCredits } from "@/hooks/use-credits";
+import { useAppContext } from "@/contexts/app";
+import { useTranslations } from "next-intl";
 
 interface ImageToImageModeProps {
   onGenerate?: (prompt: string, options: any) => Promise<void>;
@@ -48,6 +53,16 @@ export default function ImageToImageMode({
   const [isDownloading, setIsDownloading] = useState(false);
   
   const { uploadImage, editImage, isGenerating, progress } = useFluxAPI();
+  const { 
+    credits, 
+    isLoading: creditsLoading, 
+    validateCredits, 
+    consumeCredits, 
+    refreshCredits,
+    CREDITS_COST 
+  } = useCredits();
+  const { user, setShowSignModal } = useAppContext();
+  const t = useTranslations();
 
   const handleDownload = async (imageUrl: string, customFileName?: string) => {
     await downloadImage(imageUrl, {
@@ -84,6 +99,12 @@ export default function ImageToImageMode({
       toast.error("Please upload an image and enter a prompt");
       return;
     }
+
+    // Validate credits before editing
+    const qualityType = quality === "flux-kontext-max" ? "max" : "pro";
+    if (!validateCredits(qualityType)) {
+      return;
+    }
     
     setExternalIsGenerating(true);
     try {
@@ -116,11 +137,18 @@ export default function ImageToImageMode({
         const imageUrls = result.map((item: any) => item.image_url);
         setGeneratedImages(imageUrls);
         setCompareMode(true);
-        toast.success("Image edited successfully!");
+        
+        toast.success(`Image edited successfully! ${CREDITS_COST[qualityType]} credits deducted.`);
+        
+        // Refresh user info to get exact server state (including credits)
+        setTimeout(() => refreshCredits(), 1000);
       }
     } catch (error) {
       console.error("Generation error:", error);
-      toast.error(error instanceof Error ? error.message : "Failed to edit image");
+      // Don't show toast for credits required error as it's already handled
+      if (error instanceof Error && error.message !== "Credits required") {
+        toast.error(error.message || "Failed to edit image");
+      }
     } finally {
       setExternalIsGenerating(false);
     }
@@ -138,7 +166,30 @@ export default function ImageToImageMode({
   ];
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+    <div className="space-y-4">
+      {/* 未登录提示 */}
+      {!user && (
+        <Card className="p-4 bg-gradient-to-r from-green-500/10 to-cyan-500/10 border-green-500/30">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <Sparkles className="h-5 w-5 text-green-500" />
+              <div>
+                <p className="font-medium">{t("workspace.sign_in_prompt")}</p>
+                <p className="text-sm text-muted-foreground">{t("workspace.sign_in_description")}</p>
+              </div>
+            </div>
+            <Button 
+              size="sm"
+              className="bg-gradient-to-r from-green-500 to-cyan-500 hover:from-green-600 hover:to-cyan-600 text-white border-0"
+              onClick={() => setShowSignModal(true)}
+            >
+              {t("workspace.sign_in_button")}
+            </Button>
+          </div>
+        </Card>
+      )}
+      
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
       {/* Left Panel - Upload & Preview */}
       <div className="space-y-4">
         <Card className="p-6">
@@ -349,8 +400,13 @@ export default function ImageToImageMode({
                 </span>
                 <span className="text-yellow-500">⚡</span>
                 <span className="text-sm font-medium">
-                  {quality === "flux-kontext-pro" ? "12" : "24"}
+                  {quality === "flux-kontext-pro" ? CREDITS_COST.pro : CREDITS_COST.max} credits
                 </span>
+                {!creditsLoading && (
+                  <span className="text-xs text-muted-foreground ml-2">
+                    ({credits.left_credits} left)
+                  </span>
+                )}
               </Label>
               
               <div className="space-y-2">
@@ -376,7 +432,7 @@ export default function ImageToImageMode({
                       <div>
                         <div className="flex items-center gap-2">
                           <span className="font-semibold">Pro</span>
-                          <span className="text-yellow-500 text-sm">⚡ 12</span>
+                          <span className="text-yellow-500 text-sm">⚡ {CREDITS_COST.pro}</span>
                         </div>
                         <p className="text-sm text-slate-600 dark:text-slate-400">
                           Ideal for most scenarios, precise editing
@@ -408,7 +464,7 @@ export default function ImageToImageMode({
                       <div>
                         <div className="flex items-center gap-2">
                           <span className="font-semibold">Max</span>
-                          <span className="text-yellow-500 text-sm">⚡ 24</span>
+                          <span className="text-yellow-500 text-sm">⚡ {CREDITS_COST.max}</span>
                         </div>
                         <p className="text-sm text-slate-600 dark:text-slate-400">
                           Ultimate quality, perfect details
@@ -457,6 +513,7 @@ export default function ImageToImageMode({
             )}
           </div>
         </Card>
+      </div>
       </div>
     </div>
   );

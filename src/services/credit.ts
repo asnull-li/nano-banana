@@ -15,11 +15,15 @@ export enum CreditsTransType {
   OrderPay = "order_pay", // user pay for credits
   SystemAdd = "system_add", // system add credits
   Ping = "ping", // cost for ping api
+  FluxGenerate = "NanoBanana_generate", // cost for flux image generation
+  FluxEdit = "NanoBanana_edit", // cost for flux image editing
 }
 
 export enum CreditsAmount {
-  NewUserGet = 10,
+  NewUserGet = 3,
   PingCost = 1,
+  FluxProCost = 2,
+  FluxMaxCost = 4,
 }
 
 export async function getUserCredits(user_uuid: string): Promise<UserCredits> {
@@ -52,6 +56,25 @@ export async function getUserCredits(user_uuid: string): Promise<UserCredits> {
   } catch (e) {
     console.log("get user credits failed: ", e);
     return user_credits;
+  }
+}
+
+export async function checkUserCredits(
+  user_uuid: string,
+  requiredCredits: number
+): Promise<{ hasEnough: boolean; currentCredits: number }> {
+  try {
+    const userCredits = await getUserCredits(user_uuid);
+    return {
+      hasEnough: userCredits.left_credits >= requiredCredits,
+      currentCredits: userCredits.left_credits,
+    };
+  } catch (e) {
+    console.log("check user credits failed: ", e);
+    return {
+      hasEnough: false,
+      currentCredits: 0,
+    };
   }
 }
 

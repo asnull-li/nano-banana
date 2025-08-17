@@ -123,6 +123,7 @@ export const AppContextProvider = ({ children }: { children: ReactNode }) => {
         setUser,
         showFeedback,
         setShowFeedback,
+        fetchUserInfo,
       }}
     >
       {children}

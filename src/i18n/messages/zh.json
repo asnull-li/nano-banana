@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "title": "Nano Banana - AI图像编辑器 | 通过对话编辑图片",
+    "title": "Nano Banana - AI图像生成器 | 通过对话编辑图片",
     "description": "Nano Banana 是一个AI驱动的图像生成器，让您通过对话聊天来创建和编辑图片。Flux Kontext 的强大替代品。",
     "keywords": ""
   },
@@ -121,5 +121,10 @@
     "contact_tip": "其他联系方式",
     "rating_tip": "您对 ShipAny 的看法如何？",
     "placeholder": "在这里留下您的反馈..."
+  },
+  "workspace": {
+    "sign_in_prompt": "登录即可开始使用 AI 图像生成",
+    "sign_in_description": "新用户免费获得 3 个积分，立即体验强大的 AI 创作功能",
+    "sign_in_button": "登录开始创作"
   }
 }
