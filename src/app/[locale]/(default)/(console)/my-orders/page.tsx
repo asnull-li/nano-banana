@@ -48,13 +48,13 @@ export default async function () {
     title: t("my_orders.title"),
     toolbar: {
       items: [
-        {
-          title: t("my_orders.read_docs"),
-          icon: "RiBookLine",
-          url: "https://docs.shipany.ai",
-          target: "_blank",
-          variant: "default",
-        },
+        // {
+        //   title: t("my_orders.read_docs"),
+        //   icon: "RiBookLine",
+        //   url: "https://docs.shipany.ai",
+        //   target: "_blank",
+        //   variant: "default",
+        // },
       ],
     },
     columns: columns,
