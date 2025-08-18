@@ -1,5 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
 import { transferExternalImageToR2 } from "@/services/aws/r2";
+import { getUserUuid } from "@/services/user";
+import {
+  decreaseCredits,
+  CreditsTransType,
+  CreditsAmount,
+} from "@/services/credit";
 
 const FLUX_TASKS_URL = "https://api.acedata.cloud/flux/tasks";
 const FLUX_API_KEY = process.env.FLUX_API_KEY || "";
@@ -64,6 +70,40 @@ export async function POST(request: NextRequest) {
 
       // Check if task is completed successfully with data
       if (data.response.data) {
+        // Deduct credits for successful task completion
+        if (data.request) {
+          try {
+            const user_uuid = await getUserUuid();
+            if (user_uuid) {
+              // Get model type from task request
+              const modelType = data.request.model || "flux-kontext-pro";
+              const requiredCredits = 
+                modelType === "flux-kontext-max" 
+                  ? CreditsAmount.FluxMaxCost 
+                  : CreditsAmount.FluxProCost;
+              
+              // Determine transaction type based on action
+              const transType = data.request.action === "edit" 
+                ? CreditsTransType.FluxEdit 
+                : CreditsTransType.FluxGenerate;
+              
+              await decreaseCredits({
+                user_uuid,
+                trans_type: transType,
+                credits: requiredCredits,
+              });
+              
+              console.log(
+                `Task ${taskId} completed successfully, deducted ${requiredCredits} credits for user ${user_uuid}`
+              );
+            }
+          } catch (error) {
+            console.error("Failed to deduct credits for completed task:", error);
+            // Don't fail the request if credit deduction fails
+            // The task has already completed successfully
+          }
+        }
+
         // Transfer images to R2 before returning
         let processedData = data.response.data;
 

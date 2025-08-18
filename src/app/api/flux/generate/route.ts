@@ -79,23 +79,7 @@ export async function POST(request: NextRequest) {
 
     console.log("generate result", result);
 
-    // If generation was successful, decrease user credits
-    if (result.success && result.task_id) {
-      try {
-        await decreaseCredits({
-          user_uuid,
-          trans_type: CreditsTransType.FluxGenerate,
-          credits: requiredCredits,
-        });
-        console.log(
-          `Successfully deducted ${requiredCredits} credits for user ${user_uuid}`
-        );
-      } catch (error) {
-        console.error("Failed to deduct credits:", error);
-        // Note: Generation already succeeded, so we don't return error here
-        // But we should log this for monitoring
-      }
-    }
+    // Credits will be deducted in /api/flux/task when the task completes successfully
 
     // If we got a task_id, it means the task is async
     if (result.task_id) {
