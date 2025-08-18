@@ -53,11 +53,11 @@
           "扩展商业许可"
         ],
         "interval": "month",
-        "amount": 2999,
+        "amount": 2399,
         "cn_amount": 0,
         "currency": "USD",
-        "price": "$29.99",
-        "original_price": "$59.99",
+        "price": "$23.99",
+        "original_price": "$89.99",
         "unit": "USD",
         "is_featured": true,
         "tip": "专业创作者的最佳选择",
@@ -68,7 +68,7 @@
         },
         "product_id": "prod_SsqBq5Jdkmjp4l",
         "product_name": "Nano Banana 专业包",
-        "credits": 300,
+        "credits": 400,
         "valid_months": 1
       },
       {
