@@ -220,6 +220,21 @@ export function useFluxAPI() {
 
         const data = await response.json();
 
+        // Check if task failed (error field exists)
+        if (data.error) {
+          const errorMessage = data.error.message || "Task execution failed";
+          const errorCode = data.error.code || "unknown_error";
+          
+          // Show detailed error message to user
+          toast.error(`Image processing failed: ${errorMessage}`, {
+            description: `Error code: ${errorCode}`,
+            duration: 8000,
+          });
+          
+          throw new Error(errorMessage);
+        }
+
+        // Check if task completed successfully
         if (data.success && data.completed && data.data) {
           return data.data;
         }
@@ -233,6 +248,10 @@ export function useFluxAPI() {
         }
       } catch (error) {
         console.error("Poll error:", error);
+        // Re-throw the error to be handled by the caller
+        if (error instanceof Error) {
+          throw error;
+        }
       }
     }
 

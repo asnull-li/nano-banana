@@ -32,38 +32,30 @@ export async function downloadImage(
       finalFilename = `nano-banana-${timestamp}.${extension}`;
     }
 
-    console.log("🚀 Opening image in new tab for download...");
+    console.log("🚀 Starting direct download...");
 
-    // Open image directly in new tab
-    const newWindow = window.open(imageUrl, "_blank", "noopener,noreferrer");
+    // Use fetch to download the image directly
+    const response = await fetch(imageUrl, { mode: "cors" });
+    const blob = await response.blob();
+    const blobUrl = URL.createObjectURL(blob);
 
-    if (newWindow) {
-      toast.success(
-        `Image opened in new tab. Right-click to save as "${finalFilename}"`
-      );
-      onSuccess?.(finalFilename);
-    } else {
-      // If popup is blocked, try using anchor tag
-      console.log("🔄 Popup blocked, trying anchor tag method...");
-      const link = document.createElement("a");
-      link.href = imageUrl;
-      link.target = "_blank";
-      link.rel = "noopener noreferrer";
-      link.style.display = "none";
+    const a = document.createElement("a");
+    a.href = blobUrl;
+    a.download = finalFilename;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
 
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
+    URL.revokeObjectURL(blobUrl); // 释放内存
 
-      toast.success(`Image link opened. Please save as "${finalFilename}"`);
-      onSuccess?.(finalFilename);
-    }
+    toast.success(`Image downloaded as "${finalFilename}"`);
+    onSuccess?.(finalFilename);
   } catch (error) {
     console.error("Download error:", error);
 
     const errorMessage =
-      error instanceof Error ? error.message : "Failed to open image";
-    toast.error(`Failed to open image: ${errorMessage}`);
+      error instanceof Error ? error.message : "Failed to download image";
+    toast.error(`Failed to download image: ${errorMessage}`);
 
     if (error instanceof Error) {
       onError?.(error);

@@ -45,45 +45,63 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Check if task is completed by looking for response.data
-    if (data.response && data.response.data) {
-      // Transfer images to R2 before returning
-      let processedData = data.response.data;
-
-      try {
-        if (Array.isArray(processedData)) {
-          // Process each image in the array
-          processedData = await Promise.all(
-            processedData.map(async (item: any) => {
-              if (item.image_url) {
-                console.log(`Transferring image to R2: ${item.image_url}`);
-                try {
-                  const r2Url = await transferExternalImageToR2(item.image_url);
-                  console.log(`Image transferred successfully to: ${r2Url}`);
-                  return {
-                    ...item,
-                    image_url: r2Url,
-                  };
-                } catch (transferError) {
-                  console.error(`Failed to transfer image: ${transferError}`);
-                  // Return original URL if transfer fails
-                  return item;
-                }
-              }
-              return item;
-            })
-          );
-        }
-      } catch (error) {
-        console.error("Error processing images for R2 transfer:", error);
-        // Continue with original data if transfer fails
+    // Check if task has a response
+    if (data.response) {
+      // Handle error case where response contains error field
+      if (data.response.error) {
+        console.error(`Task ${taskId} failed:`, data.response.error);
+        return NextResponse.json({
+          success: false,
+          completed: true,
+          error: {
+            code: data.response.error?.code || "task_failed",
+            message: data.response.error?.message || "Task execution failed",
+            details: data.response.error,
+          },
+          taskId: taskId,
+        });
       }
 
-      return NextResponse.json({
-        success: true,
-        completed: true,
-        data: processedData,
-      });
+      // Check if task is completed successfully with data
+      if (data.response.data) {
+        // Transfer images to R2 before returning
+        let processedData = data.response.data;
+
+        try {
+          if (Array.isArray(processedData)) {
+            // Process each image in the array
+            processedData = await Promise.all(
+              processedData.map(async (item: any) => {
+                if (item.image_url) {
+                  console.log(`Transferring image to R2: ${item.image_url}`);
+                  try {
+                    const r2Url = await transferExternalImageToR2(item.image_url);
+                    console.log(`Image transferred successfully to: ${r2Url}`);
+                    return {
+                      ...item,
+                      image_url: r2Url,
+                    };
+                  } catch (transferError) {
+                    console.error(`Failed to transfer image: ${transferError}`);
+                    // Return original URL if transfer fails
+                    return item;
+                  }
+                }
+                return item;
+              })
+            );
+          }
+        } catch (error) {
+          console.error("Error processing images for R2 transfer:", error);
+          // Continue with original data if transfer fails
+        }
+
+        return NextResponse.json({
+          success: true,
+          completed: true,
+          data: processedData,
+        });
+      }
     }
 
     // If no response.data, task is still processing
