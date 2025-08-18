@@ -132,7 +132,7 @@
   },
   "workspace": {
     "sign_in_prompt": "登录即可开始使用 AI 图像生成",
-    "sign_in_description": "新用户免费获得 3 个积分，立即体验强大的 AI 创作功能",
+    "sign_in_description": "新用户登录免费获得积分，立即体验强大的 AI 创作功能",
     "sign_in_button": "登录开始创作",
     "text_to_image": {
       "title": "创作模式",

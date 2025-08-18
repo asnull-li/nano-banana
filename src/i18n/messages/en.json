@@ -132,7 +132,7 @@
   },
   "workspace": {
     "sign_in_prompt": "Sign in to Start Creating with AI",
-    "sign_in_description": "New users get 3 free credits to experience powerful AI creation",
+    "sign_in_description": "New users get free credits to experience powerful AI creation",
     "sign_in_button": "Sign In to Create",
     "text_to_image": {
       "title": "Create Mode",
