@@ -22,14 +22,14 @@ export default function HeroContent({ hero }: { hero: HeroType }) {
     // Don't prevent default - let the browser update the URL
     // The browser will automatically scroll, but we want smooth scrolling
     e.preventDefault();
-    
+
     // Update the URL
-    window.history.pushState(null, '', '#workspace');
-    
+    window.history.pushState(null, "", "#workspace");
+
     // Smooth scroll to workspace
-    const workspaceElement = document.getElementById('workspace');
+    const workspaceElement = document.getElementById("workspace");
     if (workspaceElement) {
-      workspaceElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      workspaceElement.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
 
@@ -175,8 +175,8 @@ export default function HeroContent({ hero }: { hero: HeroType }) {
             <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
               {hero.buttons.map((item, i) => {
                 const isPrimary = i === 0;
-                const isWorkspaceLink = item.url === '#workspace';
-                
+                const isWorkspaceLink = item.url === "#workspace";
+
                 if (isWorkspaceLink) {
                   return (
                     <a
@@ -217,7 +217,7 @@ export default function HeroContent({ hero }: { hero: HeroType }) {
                     </a>
                   );
                 }
-                
+
                 return (
                   <Link
                     key={i}
@@ -282,7 +282,7 @@ export default function HeroContent({ hero }: { hero: HeroType }) {
               </p>
             </div>
           )}
-          {hero.show_happy_users && (
+          {/* {hero.show_happy_users && (
             <div
               className={`transition-all duration-1000 ${
                 isVisible
@@ -293,7 +293,7 @@ export default function HeroContent({ hero }: { hero: HeroType }) {
             >
               <HappyUsers />
             </div>
-          )}
+          )} */}
         </div>
       </div>
     </section>

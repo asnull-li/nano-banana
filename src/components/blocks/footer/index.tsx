@@ -36,6 +36,9 @@ export default function Footer({ footer }: { footer: FooterType }) {
                   )}
                 </div>
               )}
+              <p className="text-sm text-muted-foreground">
+                Email: support@nanobanana.org
+              </p>
               {footer.social && (
                 <ul className="flex items-center space-x-6 text-muted-foreground">
                   {footer.social.items?.map((item, i) => (
