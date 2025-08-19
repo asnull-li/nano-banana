@@ -96,6 +96,19 @@ export default function Footer({ footer }: { footer: FooterType }) {
             )}
           </div>
         </footer>
+        <div className="flex items-center gap-2">
+          <a
+            href="https://startupfa.me/s/nano-banana?utm_source=nanobanana.org"
+            target="_blank"
+          >
+            <img
+              src="https://startupfa.me/badges/featured-badge-small.webp"
+              alt="Featured on Startup Fame"
+              width="224"
+              height="36"
+            />
+          </a>
+        </div>
       </div>
     </section>
   );
