@@ -108,6 +108,13 @@ export default function Footer({ footer }: { footer: FooterType }) {
               height="36"
             />
           </a>
+          <a href="https://fazier.com/launches/nanobanana.org" target="_blank">
+            <img
+              src="https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=launched&theme=light"
+              width="120"
+              alt="Fazier badge"
+            />
+          </a>
         </div>
       </div>
     </section>
