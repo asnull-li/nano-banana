@@ -2,7 +2,7 @@
 
 ## 🚀 Nano Banana란?
 
-**Nano Banana**는 구글이 곧 출시할 예정인 혁신적인 AI 모델로, 이미지 생성 및 편집 분야에서 전례 없는 기능을 제공합니다. 기존의 텍스트-이미지 생성 모델과 달리, Nano Banana는 컨텍스트 기반 이미지 생성을 수행하여 텍스트와 이미지를 동시에 입력받아 시각적 개념을 원활하게 추출하고 수정할 수 있습니다.
+**[Nano Banana](https://nanobanana.org/ko)**는 구글이 곧 출시할 예정인 혁신적인 AI 모델로, 이미지 생성 및 편집 분야에서 전례 없는 기능을 제공합니다. 기존의 텍스트-이미지 생성 모델과 달리, [Nano Banana](https://nanobanana.org/ko)는 컨텍스트 기반 이미지 생성을 수행하여 텍스트와 이미지를 동시에 입력받아 시각적 개념을 원활하게 추출하고 수정할 수 있습니다.
 
 [https://nanobanana.org/ko](https://nanobanana.org/ko)에서 Nano Banana의 강력한 기능을 직접 체험해보세요.
 
@@ -10,7 +10,7 @@
 
 ### 1. **컨텍스트 기반 이미지 생성**
 
-Nano Banana는 텍스트와 이미지 입력을 결합하여 시각적 개념을 원활하게 추출하고 수정합니다. 매번 일관된 렌더링 결과를 제공하여 창작 과정의 예측 가능성을 높입니다.
+[Nano Banana](https://nanobanana.org/ko)는 텍스트와 이미지 입력을 결합하여 시각적 개념을 원활하게 추출하고 수정합니다. 매번 일관된 렌더링 결과를 제공하여 창작 과정의 예측 가능성을 높입니다.
 
 ### 2. **캐릭터 일관성 유지**
 
@@ -48,7 +48,7 @@ Nano Banana는 텍스트와 이미지 입력을 결합하여 시각적 개념을
 
 ### **탁월한 성능**
 
-Nano Banana는 경쟁 모델보다 빠른 추론 속도와 높은 품질의 결과를 제공합니다. 최첨단 캐릭터 일관성과 컨텍스트 이해 기능을 갖추고 있습니다.
+[Nano Banana](https://nanobanana.org/ko)는 경쟁 모델보다 빠른 추론 속도와 높은 품질의 결과를 제공합니다. 최첨단 캐릭터 일관성과 컨텍스트 이해 기능을 갖추고 있습니다.
 
 ### **반복적 편집 마스터**
 
@@ -78,7 +78,7 @@ Nano Banana는 경쟁 모델보다 빠른 추론 속도와 높은 품질의 결�
 
 ## 🔬 기술적 우수성
 
-Nano Banana는 구글의 최신 AI 연구 성과를 기반으로 구축되었습니다:
+[Nano Banana](https://nanobanana.org/ko)는 구글의 최신 AI 연구 성과를 기반으로 구축되었습니다:
 
 - **고급 신경망 아키텍처**: 정밀한 이미지 처리를 위한 최신 딥러닝 기술 활용
 - **효율적인 처리**: 빠른 생성 속도와 높은 품질 간의 균형
@@ -113,13 +113,13 @@ Nano Banana는 구글의 최신 AI 연구 성과를 기반으로 구축되었습
 
 Nano Banana를 경험하는 것은 매우 간단합니다:
 
-1. [https://nanobanana.org/ko](https://nanobanana.org/ko/ko) 방문
+1. [https://nanobanana.org/ko](https://nanobanana.org/ko) 방문
 2. 무료 계정 생성
 3. 첫 번째 이미지 업로드 또는 생성
 4. AI의 마법을 경험하세요!
 
 ---
 
-**Nano Banana** - AI로 창의성의 새로운 차원을 열다
+**[Nano Banana](https://nanobanana.org/ko)** - AI로 창의성의 새로운 차원을 열다
 
 공식 웹사이트: [https://nanobanana.org/ko](https://nanobanana.org/ko)
