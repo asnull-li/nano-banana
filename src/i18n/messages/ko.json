@@ -1,0 +1,209 @@
+{
+  "metadata": {
+    "title": "Nano Banana - AI 이미지 생성기 | 채팅으로 이미지 편집",
+    "description": "Nano Banana는 자연스러운 채팅 대화를 통해 이미지를 생성하고 편집할 수 있는 AI 기반 이미지 생성기입니다. Flux Kontext의 강력한 대안입니다.",
+    "keywords": ""
+  },
+  "user": {
+    "sign_in": "로그인",
+    "sign_out": "로그아웃",
+    "credits": "크레딧",
+    "api_keys": "API 키",
+    "my_orders": "내 주문",
+    "user_center": "사용자 센터",
+    "admin_system": "관리자 시스템"
+  },
+  "sign_modal": {
+    "sign_in_title": "로그인",
+    "sign_in_description": "계정에 로그인",
+    "sign_up_title": "회원가입",
+    "sign_up_description": "계정 만들기",
+    "login_slogan": "로그인 후 무료 체험 가능",
+    "email_title": "이메일",
+    "email_placeholder": "이메일을 입력하세요",
+    "password_title": "비밀번호",
+    "password_placeholder": "비밀번호를 입력하세요",
+    "forgot_password": "비밀번호를 잊으셨나요?",
+    "or": "또는",
+    "continue": "계속",
+    "no_account": "계정이 없으신가요?",
+    "email_sign_in": "이메일로 로그인",
+    "google_sign_in": "Google로 로그인",
+    "github_sign_in": "GitHub로 로그인",
+    "close_title": "닫기",
+    "cancel_title": "취소",
+    "terms_text": "계속하면 다음에 동의하는 것입니다",
+    "terms_of_service": "서비스 약관",
+    "and": "및",
+    "privacy_policy": "개인정보 처리방침"
+  },
+  "my_orders": {
+    "title": "내 주문",
+    "description": "ShipAny로 결제한 주문",
+    "no_orders": "주문을 찾을 수 없습니다",
+    "tip": "",
+    "activate_order": "주문 활성화",
+    "actived": "활성화됨",
+    "join_discord": "Discord 참여",
+    "read_docs": "문서 읽기",
+    "table": {
+      "order_no": "주문 번호",
+      "email": "이메일",
+      "product_name": "제품 이름",
+      "amount": "금액",
+      "paid_at": "결제 일시",
+      "github_username": "GitHub 사용자명",
+      "status": "상태"
+    }
+  },
+  "my_credits": {
+    "title": "내 크레딧",
+    "left_tip": "남은 크레딧: {left_credits}",
+    "no_credits": "크레딧 기록이 없습니다",
+    "recharge": "충전",
+    "table": {
+      "trans_no": "거래 번호",
+      "trans_type": "거래 유형",
+      "credits": "크레딧",
+      "updated_at": "업데이트 일시",
+      "status": "상태"
+    }
+  },
+  "api_keys": {
+    "title": "API 키",
+    "tip": "유출을 방지하기 위해 API 키를 안전하게 보관하세요",
+    "no_api_keys": "API 키가 없습니다",
+    "create_api_key": "API 키 생성",
+    "table": {
+      "name": "이름",
+      "key": "키",
+      "created_at": "생성 일시"
+    },
+    "form": {
+      "name": "이름",
+      "name_placeholder": "API 키 이름",
+      "submit": "제출"
+    }
+  },
+  "blog": {
+    "title": "블로그",
+    "description": "ShipAny에 대한 뉴스, 리소스 및 업데이트",
+    "read_more_text": "더 읽기"
+  },
+  "my_invites": {
+    "title": "내 초대",
+    "description": "초대 기록 보기",
+    "no_invites": "초대 기록을 찾을 수 없습니다",
+    "my_invite_link": "내 초대 링크",
+    "edit_invite_link": "초대 링크 편집",
+    "copy_invite_link": "초대 링크 복사",
+    "invite_code": "초대 코드",
+    "invite_tip": "친구 1명이 ShipAny를 구매하도록 초대하면 $50를 보상받습니다.",
+    "invite_balance": "초대 보상 잔액",
+    "total_invite_count": "총 초대 수",
+    "total_paid_count": "총 결제 수",
+    "total_award_amount": "총 보상 금액",
+    "update_invite_code": "초대 코드 설정",
+    "update_invite_code_tip": "사용자 정의 초대 코드를 입력하세요",
+    "update_invite_button": "저장",
+    "no_orders": "ShipAny를 구매하기 전에는 다른 사람을 초대할 수 없습니다",
+    "no_affiliates": "다른 사람을 초대할 권한이 없습니다. 권한을 신청하려면 문의하세요.",
+    "table": {
+      "invite_time": "초대 시간",
+      "invite_user": "초대 사용자",
+      "status": "상태",
+      "reward_percent": "보상 비율",
+      "reward_amount": "보상 금액",
+      "pending": "대기 중",
+      "completed": "완료됨"
+    }
+  },
+  "feedback": {
+    "title": "피드백",
+    "description": "제품 경험이 어떠셨는지, 어떻게 개선할 수 있는지 듣고 싶습니다.",
+    "submit": "제출",
+    "loading": "제출 중...",
+    "contact_tip": "다른 연락 방법",
+    "rating_tip": "ShipAny에 대해 어떻게 생각하시나요?",
+    "placeholder": "여기에 의견을 남겨주세요..."
+  },
+  "pricing": {
+    "most_popular": "가장 인기"
+  },
+  "workspace": {
+    "sign_in_prompt": "AI로 창작을 시작하려면 로그인하세요",
+    "sign_in_description": "신규 사용자는 무료 크레딧을 받아 강력한 AI 창작을 경험할 수 있습니다",
+    "sign_in_button": "로그인하여 창작하기",
+    "text_to_image": {
+      "title": "창작 모드",
+      "prompt_label": "비전을 설명하세요",
+      "prompt_placeholder": "일몰에 하늘을 나는 자동차가 있는 미래 도시...",
+      "aspect_ratio_label": "화면 비율",
+      "aspect_ratios": {
+        "square": "정사각형",
+        "landscape": "가로",
+        "portrait": "세로",
+        "classic": "클래식"
+      },
+      "quality_label": "품질",
+      "quality_pro": "Pro",
+      "quality_pro_desc": "고품질, 균형 잡힌 속도",
+      "quality_max": "Max",
+      "quality_max_desc": "궁극의 품질, 완벽한 디테일",
+      "generate_button": "생성",
+      "generating_button": "생성 중...",
+      "regenerate_button": "재생성",
+      "download_button": "다운로드",
+      "share_button": "공유",
+      "view_full_size": "전체 크기 보기",
+      "generated_result": "생성 결과",
+      "ai_generated": "AI 생성",
+      "generating_text": "이미지를 생성하는 중...",
+      "complete_text": "완료",
+      "all_generated_images": "모든 생성된 이미지",
+      "ai_assistant_title": "AI 어시스턴트",
+      "ai_assistant_desc": "텍스트에서 놀라운 이미지를 만들 수 있도록 도와드리겠습니다! 이러한 영감을 시도해보세요:",
+      "inspiration": "영감",
+      "inspirations": [
+        "네온 불빛이 있는 밤의 사이버펑크 도시",
+        "일몰 시 산의 유화",
+        "파란 머리의 애니메이션 스타일 캐릭터",
+        "추상적인 다채로운 기하학적 예술",
+        "전사의 사실적인 초상화",
+        "빛나는 생물이 있는 수중 판타지 세계"
+      ],
+      "credits": "크레딧",
+      "credits_left": "남음",
+      "this_may_take": "1-2분 정도 걸릴 수 있습니다..."
+    },
+    "image_to_image": {
+      "title": "편집 모드",
+      "upload_title": "이미지 업로드",
+      "upload_desc": "여기에 이미지를 드래그 앤 드롭하거나 클릭하여 찾아보기",
+      "upload_formats": "JPG, PNG, WEBP 최대 20MB",
+      "sample_images": "샘플 이미지",
+      "clear_button": "지우기",
+      "original": "원본",
+      "ai_edited": "AI 편집됨",
+      "new_edit": "새 편집",
+      "ai_assistant_title": "AI 어시스턴트",
+      "ai_assistant_upload_prompt": "이미지가 업로드되었습니다! 무엇을 변경하고 싶으신가요?",
+      "ai_assistant_ready": "이미지를 변환할 준비가 되었습니다! 시작하려면 이미지를 업로드하세요.",
+      "quick_actions": "빠른 작업",
+      "quick_action_lighting": "조명 변경",
+      "quick_action_lighting_prompt": "골든 아워 조명으로 변경",
+      "quick_action_style": "스타일 전환",
+      "quick_action_style_prompt": "유화 스타일로 변환",
+      "quick_action_remove_bg": "배경 제거",
+      "quick_action_remove_bg_prompt": "배경 제거, 피사체 유지",
+      "quick_action_color": "색상 그레이딩",
+      "quick_action_color_prompt": "시네마틱 색상 그레이딩 적용",
+      "recent_edits": "최근 편집",
+      "describe_changes": "변경하고 싶은 내용을 설명하세요...",
+      "transform_button": "변환",
+      "transforming_button": "변환 중...",
+      "processing": "처리 중",
+      "quality_pro_desc": "대부분의 시나리오에 이상적, 정밀한 편집"
+    }
+  }
+}
