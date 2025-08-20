@@ -118,6 +118,12 @@ export default function Footer({ footer }: { footer: FooterType }) {
               alt="Fazier badge"
             />
           </a>
+          <a
+            className="text-black"
+            href="https://velog.io/@y4xvoc5h/Nano-Banana"
+          >
+            Nano Banana
+          </a>
         </div>
       </div>
     </section>
