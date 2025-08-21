@@ -1,0 +1,498 @@
+{
+  "template": "shipany-template-one",
+  "theme": "dark",
+  "header": {
+    "brand": {
+      "title": "Nano Banana",
+      "logo": {
+        "src": "/logo.png",
+        "alt": "Nano Banana"
+      },
+      "url": "/"
+    },
+    "nav": {
+      "items": [
+        {
+          "title": "機能",
+          "url": "/#feature",
+          "icon": "RiSparkling2Line"
+        },
+        {
+          "title": "料金",
+          "url": "/pricing",
+          "icon": "RiMoneyDollarCircleLine"
+        },
+        {
+          "title": "ショーケース",
+          "url": "/#showcase",
+          "icon": "RiApps2Line"
+        }
+      ]
+    },
+    "buttons": [
+      {
+        "title": "Nano Bananaを始める",
+        "url": "/#workspace",
+        "target": "_self",
+        "variant": "link",
+        "icon": "RiArrowRightUpLine"
+      }
+    ],
+    "show_sign": true,
+    "show_theme": true,
+    "show_locale": true
+  },
+  "hero": {
+    "title": "Nano Banana",
+    "highlight_text": "Nano Banana",
+    "description": "Nano Bananaの高度なAIモデルは、Flux Kontextを凌駕する一貫したキャラクター編集とシーン保存を実現します。<br/>シンプルなテキストプロンプトでAI画像編集の未来を体験するために、Nano Bananaを選択してください。",
+    "announcement": {
+      "label": "2025",
+      "title": "🚀 Nano Bananaを無料で試す",
+      "url": "/"
+    },
+    "tip": "🎨 今日からNano Bananaで創作を始めましょう",
+    "buttons": [
+      {
+        "title": "Nano Bananaを試す",
+        "icon": "RiFlashlightFill",
+        "url": "#workspace",
+        "target": "_self",
+        "variant": "default"
+      },
+      {
+        "title": "Nano Bananaの例を見る",
+        "icon": "RiBookOpenLine",
+        "url": "/#showcase",
+        "target": "_self",
+        "variant": "outline"
+      }
+    ],
+    "show_happy_users": true,
+    "show_badge": false
+  },
+  "branding": {
+    "title": "ShipAnyは巨人の肩の上に構築されています",
+    "items": [
+      {
+        "title": "Next.js",
+        "image": {
+          "src": "/imgs/logos/nextjs.svg",
+          "alt": "Next.js"
+        }
+      },
+      {
+        "title": "React",
+        "image": {
+          "src": "/imgs/logos/react.svg",
+          "alt": "React"
+        }
+      },
+      {
+        "title": "TailwindCSS",
+        "image": {
+          "src": "/imgs/logos/tailwindcss.svg",
+          "alt": "TailwindCSS"
+        }
+      },
+      {
+        "title": "Shadcn/UI",
+        "image": {
+          "src": "/imgs/logos/shadcn.svg",
+          "alt": "Shadcn/UI"
+        }
+      },
+      {
+        "title": "Vercel",
+        "image": {
+          "src": "/imgs/logos/vercel.svg",
+          "alt": "Vercel"
+        }
+      }
+    ]
+  },
+  "introduce": {
+    "name": "introduce",
+    "title": "Nano Bananaとは",
+    "label": "紹介",
+    "description": "Nano Bananaは、一貫したキャラクター編集とシーン保存を実現する革新的なAI搭載の画像生成・編集プラットフォームです。従来のテキストから画像へのモデルとは異なり、Nano Bananaはコンテキスト内画像生成を実行し、視覚的な概念をシームレスに抽出・修正しながら、テキストと画像の両方でプロンプトできます。",
+    "image": {
+      "src": "/imgs/features/1.png"
+    },
+    "items": [
+      {
+        "title": "コンテキスト内画像生成",
+        "description": "Nano Bananaは、シームレスな視覚概念の抽出と修正のためにテキストと画像入力を組み合わせ、毎回一貫したレンダリングを提供します。",
+        "icon": "RiImageEditLine"
+      },
+      {
+        "title": "キャラクターの一貫性",
+        "description": "Nano Bananaは、複数のシーンと環境にわたって参照キャラクターやオブジェクトなどのユニークな要素を比類のない精度で保持します。",
+        "icon": "RiUserHeartLine"
+      },
+      {
+        "title": "ローカル編集の精度",
+        "description": "Nano Bananaで画像の他の部分に影響を与えることなく、特定の要素をターゲットを絞って修正し、柔軟な即座の編集を可能にします。",
+        "icon": "RiEditBoxLine"
+      }
+    ]
+  },
+  "benefit": {
+    "name": "benefit",
+    "title": "なぜNano Bananaを選ぶのか",
+    "label": "メリット",
+    "description": "あらゆる面でFlux Kontextを凌駕するNano Bananaの革新的技術で、次世代のAI画像編集を体験してください。",
+    "items": [
+      {
+        "title": "優れたパフォーマンス",
+        "description": "Nano Bananaは、最先端のキャラクターの一貫性とコンテキスト理解により、競合モデルよりも高速な推論速度と高品質な結果を提供します。",
+        "icon": "RiRocketLine",
+        "image": {
+          "src": "/imgs/features/2.png"
+        }
+      },
+      {
+        "title": "反復編集マスタリー",
+        "description": "Nano Bananaで、異なるシーンにわたってキャラクター、アイデンティティ、スタイル、特徴的な機能を維持しながら、複数回の編集を通じて構築できます。",
+        "icon": "RiRefreshLine",
+        "image": {
+          "src": "/imgs/features/3.png"
+        }
+      },
+      {
+        "title": "スタイルリファレンスイノベーション",
+        "description": "Nano Bananaは、最小限の遅延でシンプルなテキストプロンプトに導かれながら、参照画像からユニークなスタイルを保持しつつ、新しいシーンを生成します。",
+        "icon": "RiPaletteLine",
+        "image": {
+          "src": "/imgs/features/4.png"
+        }
+      }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "title": "Nano Bananaで作成する方法",
+    "description": "3つの簡単なステップでNano Bananaでクリエイティブワークフローを変革：",
+    "image": {
+      "src": "/imgs/features/1.png"
+    },
+    "image_position": "left",
+    "text_align": "center",
+    "items": [
+      {
+        "title": "Nano Bananaで始める",
+        "description": "参照画像をアップロードするか、即座に生成するためのテキストプロンプトから始めて、Nano Bananaでクリエイティブな旅を始めましょう。",
+        "image": {
+          "src": "/imgs/features/5.png"
+        }
+      },
+      {
+        "title": "Nano Bananaで編集",
+        "description": "Nano Bananaの強力なテキスト指示を使用して画像を修正 - 表情を変更、オブジェクトを追加、またはシーン全体をシームレスに変換。",
+        "image": {
+          "src": "/imgs/features/6.png"
+        }
+      },
+      {
+        "title": "Nano Bananaで反復",
+        "description": "キャラクターの一貫性を保ちながら、創作を段階的に洗練させながら、Nano Bananaの反復機能で以前の編集を構築します。",
+        "image": {
+          "src": "/imgs/features/7.png"
+        }
+      },
+      {
+        "title": "Nano Bananaで完璧に",
+        "description": "Nano Bananaの精密編集で望む結果を達成 - ローカル調整から完全なシーン変換まで最小限の時間で。",
+        "image": {
+          "src": "/imgs/features/8.png"
+        }
+      }
+    ]
+  },
+  "feature": {
+    "name": "feature",
+    "title": "Nano Bananaのコア機能",
+    "description": "Nano Bananaの画期的な機能で最も先進的なAI画像編集技術を体験してください。",
+    "items": [
+      {
+        "title": "マルチモーダルフローモデル",
+        "description": "Nano Bananaは、強力なテキストから画像への合成と最先端のキャラクターの一貫性、コンテキスト理解、ローカル編集機能を組み合わせています。",
+        "icon": "RiFlowChart"
+      },
+      {
+        "title": "インタラクティブスピード技術",
+        "description": "Nano Bananaは、画像生成と編集の両方で最小限の遅延を提供し、現在の主要モデルより最大8倍高速に動作します。",
+        "icon": "RiSpeedUpLine"
+      },
+      {
+        "title": "テキストベースの画像編集",
+        "description": "Nano Bananaは、シンプルなテキスト指示による柔軟な即座の画像編集を可能にします - 複雑な編集ワークフローや微調整は不要です。",
+        "icon": "RiEditLine"
+      },
+      {
+        "title": "フォトリアリスティックレンダリング",
+        "description": "Nano Bananaは、強力なプロンプト追従、フォトリアリスティックレンダリング、署名品質の出力による競争力のあるタイポグラフィを提供します。",
+        "icon": "RiImageLine"
+      },
+      {
+        "title": "シーン変換",
+        "description": "Nano Bananaは、視点全体で視覚的な一貫性とキャラクターの一貫性を維持しながら、シーン全体の複雑な変換を処理します。",
+        "icon": "RiMagicLine"
+      },
+      {
+        "title": "品質保存",
+        "description": "Nano Bananaは、反復編集セッションを通じて画像品質とキャラクターの一貫性を維持し、特徴的な機能をシームレスに保持します。",
+        "icon": "RiShieldCheckLine"
+      }
+    ]
+  },
+  "stats": {
+    "name": "stats",
+    "label": "統計",
+    "title": "クリエイターがNano Bananaを選ぶ理由",
+    "description": "比類のないAI画像編集のパフォーマンスと信頼性のために。",
+    "icon": "FaRegHeart",
+    "items": [
+      {
+        "title": "Nano Bananaユーザー",
+        "label": "10K+",
+        "description": "クリエイター"
+      },
+      {
+        "title": "Nano Bananaスピード",
+        "label": "8倍",
+        "description": "高速"
+      },
+      {
+        "title": "Nano Banana精度",
+        "label": "99%",
+        "description": "一貫性"
+      }
+    ]
+  },
+  "testimonial": {
+    "name": "testimonial",
+    "label": "お客様の声",
+    "title": "クリエイターがNano Bananaについて語る",
+    "description": "Nano Bananaでワークフローを変革したアーティスト、デザイナー、コンテンツクリエイターの声をお聞きください。",
+    "icon": "GoThumbsup",
+    "items": [
+      {
+        "title": "陳サラ",
+        "label": "デジタルアーティスト＆イラストレーター",
+        "description": "Nano Bananaは私の創作プロセスに革命をもたらしました！キャラクターの一貫性は信じられないほどです - 数十のシーンで同じキャラクターを維持できます。Nano Bananaは毎日何時間も節約してくれます。",
+        "image": {
+          "src": "/imgs/users/1.png"
+        }
+      },
+      {
+        "title": "マイケル・ロドリゲス",
+        "label": "コンテンツクリエイター＆インフルエンサー",
+        "description": "すべてのAI画像エディターを試しましたが、Nano Bananaは別格です。反復編集機能により、すべての詳細を完璧にすることができます。Nano Bananaは私のコンテンツを際立たせます。",
+        "image": {
+          "src": "/imgs/users/2.png"
+        }
+      },
+      {
+        "title": "エミリー・ワトソン",
+        "label": "PixelStudioクリエイティブディレクター",
+        "description": "私たちのチームはNano Bananaに切り替え、生産性が急上昇しました。ローカル編集の精度は比類がありません - 画像全体に影響を与えることなく特定の要素を修正できます。Nano Bananaはゲームチェンジャーです。",
+        "image": {
+          "src": "/imgs/users/3.png"
+        }
+      },
+      {
+        "title": "アレックス・キム",
+        "label": "フリーランスデザイナー",
+        "description": "Nano Bananaのスピードに驚きました！何時間もかかっていたことが数分で済みます。スタイルリファレンス機能により、すべてのプロジェクトでブランドの一貫性を保ちます。Nano Bananaなしでは仕事ができません。",
+        "image": {
+          "src": "/imgs/users/4.png"
+        }
+      },
+      {
+        "title": "リサ・トンプソン",
+        "label": "マーケティングエージェンシーオーナー",
+        "description": "Nano Bananaでキャンペーンを10倍速く配信します。クライアントはフォトリアリスティックな品質を愛し、私たちは効率性を愛しています。Nano Bananaは私たちのクリエイティブパイプライン全体を変革しました。",
+        "image": {
+          "src": "/imgs/users/5.png"
+        }
+      },
+      {
+        "title": "デビッド・パーク",
+        "label": "映画プレビジュアライゼーションアーティスト",
+        "description": "Nano Bananaは私のストーリーボードに命を吹き込みます！シーン変換機能は、迅速なプロトタイピングに最適です。すべての映画製作者はプレビズ作業にNano Bananaを使用すべきです。",
+        "image": {
+          "src": "/imgs/users/6.png"
+        }
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "FAQ",
+    "title": "Nano Bananaに関するよくある質問",
+    "description": "Nano Bananaについてさらに質問がありますか？サポートチームにお問い合わせください。",
+    "items": [
+      {
+        "title": "Nano Bananaとは何で、どのように機能しますか？",
+        "description": "Nano Bananaは、コンテキスト内画像生成を実行する革新的なAI搭載の画像生成・編集プラットフォームです。従来のテキストから画像へのモデルとは異なり、Nano Bananaはシームレスな視覚概念の抽出と修正のためにテキストと画像入力を組み合わせ、一貫したキャラクター編集とシーン保存を提供します。"
+      },
+      {
+        "title": "Nano BananaはFlux Kontextとどう違いますか？",
+        "description": "Nano Bananaは、優れたパフォーマンス、より速い推論速度（最大8倍高速）、強化されたキャラクターの一貫性でFlux Kontextを凌駕します。Nano Bananaは、より良いローカル編集精度、改善された反復編集機能を提供し、複数の編集セッションを通じてより高い画像品質を維持します。"
+      },
+      {
+        "title": "Nano Bananaでどのような編集ができますか？",
+        "description": "Nano Bananaは、キャラクターの一貫性の保持、特定要素のローカル編集、スタイルリファレンス生成、シーン変換、反復編集を含む包括的な画像編集をサポートします。シンプルなテキストプロンプトで表情を修正、オブジェクトを追加、背景を変更、またはシーン全体を変換できます。"
+      },
+      {
+        "title": "Nano Bananaは他のAIモデルと比べてどれくらい速いですか？",
+        "description": "Nano Bananaは最小限の遅延で動作し、現在の主要モデルより最大8倍速い結果を提供します。インタラクティブスピード技術により、画像生成と編集の両方がリアルタイムで行われ、Nano Bananaは迅速なクリエイティブワークフローと反復デザインプロセスに最適です。"
+      },
+      {
+        "title": "Nano Bananaは複数の編集でキャラクターの一貫性を維持できますか？",
+        "description": "はい！Nano Bananaはキャラクターの一貫性に優れており、複数のシーンと環境にわたって参照キャラクターやオブジェクトなどのユニークな要素を保持します。高度なマルチモーダルフローモデルにより、反復編集セッションを通じて特徴的な機能が一貫して保たれます。"
+      },
+      {
+        "title": "Nano Bananaはプロのクリエイティブ作業に適していますか？",
+        "description": "絶対に！Nano Bananaは、フォトリアリスティックレンダリング、競争力のあるタイポグラフィ、生産品質の結果を提供するプロのクリエイター向けに設計されています。多くのプロのアーティスト、デザイナー、コンテンツクリエイター、クリエイティブエージェンシーが日々のワークフローとクライアントプロジェクトでNano Bananaに依存しています。"
+      }
+    ]
+  },
+  "cta": {
+    "name": "cta",
+    "title": "Nano Bananaでクリエイティブワークフローを変革",
+    "description": "AI画像編集の未来を体験。今日からNano Bananaで創作を始めましょう。",
+    "buttons": [
+      {
+        "title": "今すぐNano Bananaを試す",
+        "url": "/",
+        "target": "_self",
+        "icon": "GoArrowUpRight"
+      },
+      {
+        "title": "Nano Bananaの例を見る",
+        "url": "/#showcase",
+        "target": "_self",
+        "variant": "outline"
+      }
+    ]
+  },
+  "footer": {
+    "name": "footer",
+    "brand": {
+      "title": "Nano Banana",
+      "description": "Nano Bananaは、優れたパフォーマンスで一貫したキャラクター編集とシーン保存を実現する革新的なAI搭載の画像生成・編集プラットフォームです。",
+      "logo": {
+        "src": "/logo.png",
+        "alt": "Nano Banana"
+      },
+      "url": "/"
+    },
+    "copyright": "© 2025 • Nano Banana All rights reserved.",
+    "nav": {
+      "items": [
+        {
+          "title": "製品",
+          "children": [
+            {
+              "title": "機能",
+              "url": "/#feature",
+              "target": "_self"
+            },
+            {
+              "title": "ショーケース",
+              "url": "/#showcase",
+              "target": "_self"
+            },
+            {
+              "title": "料金",
+              "url": "/#pricing",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "リソース",
+          "children": [
+            {
+              "title": "ドキュメント",
+              "url": "/docs",
+              "target": "_self"
+            },
+            {
+              "title": "APIリファレンス",
+              "url": "/docs/api",
+              "target": "_self"
+            },
+            {
+              "title": "チュートリアル",
+              "url": "/docs/tutorials",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "コミュニティ",
+          "children": [
+            {
+              "title": "クリエイターギャラリー",
+              "url": "/#showcase",
+              "target": "_self"
+            },
+            {
+              "title": "Discordコミュニティ",
+              "url": "/",
+              "target": "_self"
+            },
+            {
+              "title": "GitHub",
+              "url": "/",
+              "target": "_self"
+            }
+          ]
+        }
+      ]
+    },
+    "social": {
+      "items": [
+        {
+          "title": "X",
+          "icon": "RiTwitterXFill",
+          "url": "/",
+          "target": "_self"
+        },
+        {
+          "title": "Github",
+          "icon": "RiGithubFill",
+          "url": "/",
+          "target": "_self"
+        },
+        {
+          "title": "Discord",
+          "icon": "RiDiscordFill",
+          "url": "/",
+          "target": "_self"
+        },
+        {
+          "title": "Email",
+          "icon": "RiMailLine",
+          "url": "mailto:support@nanobanana.org",
+          "target": "_self"
+        }
+      ]
+    },
+    "agreement": {
+      "items": [
+        {
+          "title": "プライバシーポリシー",
+          "url": "/privacy-policy"
+        },
+        {
+          "title": "利用規約",
+          "url": "/terms-of-service"
+        }
+      ]
+    }
+  }
+}

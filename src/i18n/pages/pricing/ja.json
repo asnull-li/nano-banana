@@ -1,0 +1,107 @@
+{
+  "pricing": {
+    "name": "pricing",
+    "label": "料金",
+    "title": "シンプルで透明な料金体系",
+    "description": "AI画像作成のニーズに最適なプランを選択してください。",
+    "groups": [],
+    "items": [
+      {
+        "title": "ベーシック",
+        "description": "AI画像生成を試したり、小規模プロジェクトに最適です。",
+        "features_title": "含まれる機能",
+        "features": [
+          "50 AI生成クレジット",
+          "プロ＆マックス品質モデル",
+          "テキストから画像への生成",
+          "画像から画像への編集",
+          "標準生成速度",
+          "標準カスタマーサポート",
+          "高解像度でダウンロード"
+        ],
+        "interval": "月",
+        "amount": 999,
+        "cn_amount": 0,
+        "currency": "USD",
+        "price": "$9.99",
+        "original_price": "$19.99",
+        "unit": "USD",
+        "is_featured": false,
+        "tip": "テストと小規模プロジェクトに最適",
+        "button": {
+          "title": "ベーシックを購読",
+          "url": "/#pricing",
+          "icon": "RiFlashlightFill"
+        },
+        "product_id": "prod_Ssq8Ltsmjqeiw9",
+        "product_name": "Nano Bananaベーシック",
+        "credits": 50,
+        "valid_months": 1
+      },
+      {
+        "title": "プロ",
+        "description": "クリエイター、デザイナー、コンテンツプロフェッショナルに理想的です。",
+        "label": "最も人気",
+        "features_title": "ベーシックのすべてを含む",
+        "features": [
+          "400 AI生成クレジット",
+          "優先処理速度",
+          "高度な編集機能",
+          "バッチ処理",
+          "高速ダウンロードチャンネル",
+          "優先カスタマーサポート",
+          "拡張商用ライセンス"
+        ],
+        "interval": "月",
+        "amount": 2399,
+        "cn_amount": 0,
+        "currency": "USD",
+        "price": "$23.99",
+        "original_price": "$89.99",
+        "unit": "USD",
+        "is_featured": true,
+        "tip": "本格的なクリエイターに最高の価値",
+        "button": {
+          "title": "プロを購読",
+          "url": "/#pricing",
+          "icon": "RiFlashlightFill"
+        },
+        "product_id": "prod_SsqBq5Jdkmjp4l",
+        "product_name": "Nano Bananaプロ",
+        "credits": 400,
+        "valid_months": 1
+      },
+      {
+        "title": "プレミアム",
+        "description": "チーム、エージェンシー、大量商用利用向けです。",
+        "features_title": "プロのすべてを含む",
+        "features": [
+          "1500 AI生成クレジット",
+          "最速生成速度",
+          "最も高度なAI編集機能",
+          "永続的な画像ストレージ",
+          "無制限の商用ライセンス",
+          "専任アカウントマネージャー"
+        ],
+        "interval": "月",
+        "amount": 8999,
+        "cn_amount": 0,
+        "currency": "USD",
+        "price": "$89.99",
+        "original_price": "$179.99",
+        "unit": "USD",
+        "is_featured": false,
+        "tip": "チームとビジネスに最適",
+        "button": {
+          "title": "プレミアムを購読",
+          "url": "/#pricing",
+          "icon": "RiFlashlightFill"
+        },
+        "product_id": "prod_SsqCkSQWvK8NzC",
+        "product_name": "Nano Bananaプレミアム",
+        "credits": 1500,
+        "valid_months": 1
+      }
+    ]
+  }
+}

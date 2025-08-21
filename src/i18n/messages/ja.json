@@ -1,0 +1,209 @@
+{
+  "metadata": {
+    "title": "Nano Banana - AI画像ジェネレーター | チャットで画像を編集",
+    "description": "Nano Bananaは、自然なチャット会話を通じて画像を作成・編集できるAI搭載の画像ジェネレーターです。Flux Kontextの強力な代替ツール。",
+    "keywords": ""
+  },
+  "user": {
+    "sign_in": "サインイン",
+    "sign_out": "サインアウト",
+    "credits": "クレジット",
+    "api_keys": "APIキー",
+    "my_orders": "マイオーダー",
+    "user_center": "ユーザーセンター",
+    "admin_system": "管理システム"
+  },
+  "sign_modal": {
+    "sign_in_title": "サインイン",
+    "sign_in_description": "アカウントにサインイン",
+    "sign_up_title": "サインアップ",
+    "sign_up_description": "アカウントを作成",
+    "login_slogan": "ログイン後に無料トライアル利用可能",
+    "email_title": "メール",
+    "email_placeholder": "メールアドレスを入力してください",
+    "password_title": "パスワード",
+    "password_placeholder": "パスワードを入力してください",
+    "forgot_password": "パスワードをお忘れですか？",
+    "or": "または",
+    "continue": "続ける",
+    "no_account": "アカウントをお持ちでない方は",
+    "email_sign_in": "メールでサインイン",
+    "google_sign_in": "Googleでサインイン",
+    "github_sign_in": "GitHubでサインイン",
+    "close_title": "閉じる",
+    "cancel_title": "キャンセル",
+    "terms_text": "続行することで、以下に同意したことになります",
+    "terms_of_service": "利用規約",
+    "and": "および",
+    "privacy_policy": "プライバシーポリシー"
+  },
+  "my_orders": {
+    "title": "マイオーダー",
+    "description": "ShipAnyで支払われた注文。",
+    "no_orders": "注文が見つかりません",
+    "tip": "",
+    "activate_order": "注文を有効化",
+    "actived": "有効化済み",
+    "join_discord": "Discordに参加",
+    "read_docs": "ドキュメントを読む",
+    "table": {
+      "order_no": "注文番号",
+      "email": "メール",
+      "product_name": "製品名",
+      "amount": "金額",
+      "paid_at": "支払日時",
+      "github_username": "GitHubユーザー名",
+      "status": "ステータス"
+    }
+  },
+  "my_credits": {
+    "title": "マイクレジット",
+    "left_tip": "残りクレジット: {left_credits}",
+    "no_credits": "クレジット記録なし",
+    "recharge": "チャージ",
+    "table": {
+      "trans_no": "取引番号",
+      "trans_type": "取引タイプ",
+      "credits": "クレジット",
+      "updated_at": "更新日時",
+      "status": "ステータス"
+    }
+  },
+  "api_keys": {
+    "title": "APIキー",
+    "tip": "漏洩を防ぐため、APIキーを安全に保管してください",
+    "no_api_keys": "APIキーがありません",
+    "create_api_key": "APIキーを作成",
+    "table": {
+      "name": "名前",
+      "key": "キー",
+      "created_at": "作成日時"
+    },
+    "form": {
+      "name": "名前",
+      "name_placeholder": "APIキー名",
+      "submit": "送信"
+    }
+  },
+  "blog": {
+    "title": "ブログ",
+    "description": "ShipAnyに関するニュース、リソース、アップデート",
+    "read_more_text": "詳細を読む"
+  },
+  "my_invites": {
+    "title": "マイ招待",
+    "description": "招待記録を表示",
+    "no_invites": "招待記録が見つかりません",
+    "my_invite_link": "マイ招待リンク",
+    "edit_invite_link": "招待リンクを編集",
+    "copy_invite_link": "招待リンクをコピー",
+    "invite_code": "招待コード",
+    "invite_tip": "友達1人をShipAny購入に招待すると、$50の報酬。",
+    "invite_balance": "招待報酬残高",
+    "total_invite_count": "総招待数",
+    "total_paid_count": "総支払数",
+    "total_award_amount": "総報酬額",
+    "update_invite_code": "招待コードを設定",
+    "update_invite_code_tip": "カスタム招待コードを入力",
+    "update_invite_button": "保存",
+    "no_orders": "ShipAnyを購入する前は他の人を招待できません",
+    "no_affiliates": "他の人を招待する権限がありません。許可を申請するためにお問い合わせください。",
+    "table": {
+      "invite_time": "招待時刻",
+      "invite_user": "招待ユーザー",
+      "status": "ステータス",
+      "reward_percent": "報酬率",
+      "reward_amount": "報酬額",
+      "pending": "保留中",
+      "completed": "完了"
+    }
+  },
+  "feedback": {
+    "title": "フィードバック",
+    "description": "良かった点や製品体験の改善点をお聞かせください。",
+    "submit": "送信",
+    "loading": "送信中...",
+    "contact_tip": "その他の連絡方法",
+    "rating_tip": "ShipAnyについてどう思いますか？",
+    "placeholder": "ご意見をお聞かせください..."
+  },
+  "pricing": {
+    "most_popular": "最も人気"
+  },
+  "workspace": {
+    "sign_in_prompt": "AIで創造を始めるためにサインイン",
+    "sign_in_description": "新規ユーザーには強力なAI創造を体験するための無料クレジットを提供",
+    "sign_in_button": "サインインして作成",
+    "text_to_image": {
+      "title": "作成モード",
+      "prompt_label": "あなたのビジョンを説明してください",
+      "prompt_placeholder": "夕暮れの空飛ぶ車がある未来都市...",
+      "aspect_ratio_label": "アスペクト比",
+      "aspect_ratios": {
+        "square": "正方形",
+        "landscape": "横長",
+        "portrait": "縦長",
+        "classic": "クラシック"
+      },
+      "quality_label": "品質",
+      "quality_pro": "プロ",
+      "quality_pro_desc": "高品質、バランスの取れた速度",
+      "quality_max": "マックス",
+      "quality_max_desc": "究極の品質、完璧なディテール",
+      "generate_button": "作成",
+      "generating_button": "作成中...",
+      "regenerate_button": "再生成",
+      "download_button": "ダウンロード",
+      "share_button": "共有",
+      "view_full_size": "フルサイズで表示",
+      "generated_result": "生成結果",
+      "ai_generated": "AI生成",
+      "generating_text": "画像を作成中...",
+      "complete_text": "完了",
+      "all_generated_images": "すべての生成画像",
+      "ai_assistant_title": "AIアシスタント",
+      "ai_assistant_desc": "テキストから素晴らしい画像を作成するお手伝いをします！これらのインスピレーションをお試しください：",
+      "inspiration": "インスピレーション",
+      "inspirations": [
+        "ネオンライトが輝く夜のサイバーパンク都市",
+        "夕暮れの山の油絵",
+        "青い髪のアニメスタイルキャラクター",
+        "抽象的なカラフルな幾何学アート",
+        "戦士のリアルな肖像画",
+        "光る生き物がいる水中ファンタジー世界"
+      ],
+      "credits": "クレジット",
+      "credits_left": "残り",
+      "this_may_take": "これには1〜2分かかる場合があります..."
+    },
+    "image_to_image": {
+      "title": "編集モード",
+      "upload_title": "画像をアップロード",
+      "upload_desc": "ここに画像をドラッグ＆ドロップまたはクリックして参照",
+      "upload_formats": "JPG、PNG、WEBP 最大20MBまで",
+      "sample_images": "サンプル画像",
+      "clear_button": "クリア",
+      "original": "オリジナル",
+      "ai_edited": "AI編集済み",
+      "new_edit": "新規編集",
+      "ai_assistant_title": "AIアシスタント",
+      "ai_assistant_upload_prompt": "画像がアップロードされました！何を変更したいですか？",
+      "ai_assistant_ready": "画像を変換する準備ができました！開始するには画像をアップロードしてください。",
+      "quick_actions": "クイックアクション",
+      "quick_action_lighting": "照明を変更",
+      "quick_action_lighting_prompt": "ゴールデンアワーの照明に変更",
+      "quick_action_style": "スタイル転送",
+      "quick_action_style_prompt": "油絵スタイルに変換",
+      "quick_action_remove_bg": "背景を削除",
+      "quick_action_remove_bg_prompt": "背景を削除、被写体を保持",
+      "quick_action_color": "カラーグレーディング",
+      "quick_action_color_prompt": "映画的なカラーグレーディングを適用",
+      "recent_edits": "最近の編集",
+      "describe_changes": "変更したい内容を説明してください...",
+      "transform_button": "変換",
+      "transforming_button": "変換中...",
+      "processing": "処理中",
+      "quality_pro_desc": "ほとんどのシナリオに最適、正確な編集"
+    }
+  }
+}
