@@ -7,11 +7,11 @@
     "groups": [],
     "items": [
       {
-        "title": "基础版",
+        "title": "试用版",
         "description": "适合体验 AI 图像生成和小型项目。",
         "features_title": "包含功能",
         "features": [
-          "50 个 AI 生成积分",
+          "30 个 AI 生成积分",
           "Pro 和 Max 质量模型",
           "文本生成图像",
           "图像编辑功能",
@@ -20,22 +20,22 @@
           "高分辨率下载"
         ],
         "interval": "month",
-        "amount": 999,
+        "amount": 599,
         "cn_amount": 0,
         "currency": "USD",
-        "price": "$9.99",
+        "price": "$5.99",
         "original_price": "$19.99",
         "unit": "USD",
         "is_featured": false,
         "tip": "适合测试和小型项目",
         "button": {
-          "title": "订阅基础版",
+          "title": "一次性试用版",
           "url": "/#pricing",
           "icon": "RiFlashlightFill"
         },
         "product_id": "prod_Ssq8Ltsmjqeiw9",
-        "product_name": "Nano Banana 基础包",
-        "credits": 50,
+        "product_name": "Nano Banana 试用包",
+        "credits": 30,
         "valid_months": 1
       },
       {

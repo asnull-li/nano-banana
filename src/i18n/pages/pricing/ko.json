@@ -7,11 +7,11 @@
     "groups": [],
     "items": [
       {
-        "title": "베이직",
+        "title": "트라이얼",
         "description": "AI 이미지 생성 체험과 소규모 프로젝트에 적합합니다.",
         "features_title": "포함 기능",
         "features": [
-          "50개 AI 생성 크레딧",
+          "30개 AI 생성 크레딧",
           "Pro & Max 품질 모델",
           "텍스트-이미지 생성",
           "이미지-이미지 편집",
@@ -19,23 +19,23 @@
           "표준 고객 지원",
           "고해상도 다운로드"
         ],
-        "interval": "month",
-        "amount": 999,
+        "interval": "one-time",
+        "amount": 599,
         "cn_amount": 0,
         "currency": "USD",
-        "price": "$9.99",
+        "price": "$5.99",
         "original_price": "$19.99",
         "unit": "USD",
         "is_featured": false,
         "tip": "테스트와 소규모 프로젝트에 적합",
         "button": {
-          "title": "베이직 구독",
+          "title": "일회용 시험 사용",
           "url": "/#pricing",
           "icon": "RiFlashlightFill"
         },
         "product_id": "prod_Ssq8Ltsmjqeiw9",
         "product_name": "Nano Banana 베이직",
-        "credits": 50,
+        "credits": 30,
         "valid_months": 1
       },
       {

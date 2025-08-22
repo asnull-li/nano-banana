@@ -7,11 +7,11 @@
     "groups": [],
     "items": [
       {
-        "title": "Basic",
+        "title": "Trial",
         "description": "Perfect for trying out AI image generation and small projects.",
         "features_title": "What's included",
         "features": [
-          "50 AI generation credits",
+          "30 AI generation credits",
           "Pro & Max quality models",
           "Text-to-image generation",
           "Image-to-image editing",
@@ -19,23 +19,23 @@
           "Standard customer support",
           "Download in high resolution"
         ],
-        "interval": "month",
-        "amount": 999,
+        "interval": "one-time",
+        "amount": 599,
         "cn_amount": 0,
         "currency": "USD",
-        "price": "$9.99",
+        "price": "$5.99",
         "original_price": "$19.99",
         "unit": "USD",
         "is_featured": false,
         "tip": "Great for testing and small projects",
         "button": {
-          "title": "Subscribe Basic",
+          "title": "One-time Trial",
           "url": "/#pricing",
           "icon": "RiFlashlightFill"
         },
         "product_id": "prod_Ssq8Ltsmjqeiw9",
-        "product_name": "Nano Banana Basic",
-        "credits": 50,
+        "product_name": "Nano Banana Trial",
+        "credits": 30,
         "valid_months": 1
       },
       {

@@ -7,11 +7,11 @@
     "groups": [],
     "items": [
       {
-        "title": "ベーシック",
+        "title": "トライアル",
         "description": "AI画像生成を試したり、小規模プロジェクトに最適です。",
         "features_title": "含まれる機能",
         "features": [
-          "50 AI生成クレジット",
+          "30 AI生成クレジット",
           "プロ＆マックス品質モデル",
           "テキストから画像への生成",
           "画像から画像への編集",
@@ -19,23 +19,23 @@
           "標準カスタマーサポート",
           "高解像度でダウンロード"
         ],
-        "interval": "月",
-        "amount": 999,
+        "interval": "one-time",
+        "amount": 599,
         "cn_amount": 0,
         "currency": "USD",
-        "price": "$9.99",
+        "price": "$5.99",
         "original_price": "$19.99",
         "unit": "USD",
         "is_featured": false,
         "tip": "テストと小規模プロジェクトに最適",
         "button": {
-          "title": "ベーシックを購読",
+          "title": "一回限りの試用",
           "url": "/#pricing",
           "icon": "RiFlashlightFill"
         },
         "product_id": "prod_Ssq8Ltsmjqeiw9",
         "product_name": "Nano Bananaベーシック",
-        "credits": 50,
+        "credits": 30,
         "valid_months": 1
       },
       {
@@ -52,7 +52,7 @@
           "優先カスタマーサポート",
           "拡張商用ライセンス"
         ],
-        "interval": "月",
+        "interval": "month",
         "amount": 2399,
         "cn_amount": 0,
         "currency": "USD",
@@ -83,7 +83,7 @@
           "無制限の商用ライセンス",
           "専任アカウントマネージャー"
         ],
-        "interval": "月",
+        "interval": "month",
         "amount": 8999,
         "cn_amount": 0,
         "currency": "USD",
