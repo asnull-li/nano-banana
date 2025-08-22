@@ -282,7 +282,7 @@ export default function HeroContent({ hero }: { hero: HeroType }) {
               </p>
             </div>
           )}
-          {/* {hero.show_happy_users && (
+          {hero.show_happy_users && (
             <div
               className={`transition-all duration-1000 ${
                 isVisible
@@ -293,7 +293,7 @@ export default function HeroContent({ hero }: { hero: HeroType }) {
             >
               <HappyUsers />
             </div>
-          )} */}
+          )}
         </div>
       </div>
     </section>
