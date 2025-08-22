@@ -27,14 +27,14 @@
         "original_price": "$19.99",
         "unit": "USD",
         "is_featured": false,
-        "tip": "Great for testing and small projects",
+        "tip": "Non-subscription one-time trial, great for testing",
         "button": {
           "title": "One-time Trial",
           "url": "/#pricing",
           "icon": "RiFlashlightFill"
         },
         "product_id": "prod_Ssq8Ltsmjqeiw9",
-        "product_name": "Nano Banana Trial",
+        "product_name": "Nano Banana One-time Trial",
         "credits": 30,
         "valid_months": 1
       },
