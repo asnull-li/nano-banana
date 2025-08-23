@@ -366,13 +366,13 @@
     "buttons": [
       {
         "title": "今すぐNano Bananaを試す",
-        "url": "/",
+        "url": "/#workspace",
         "target": "_self",
         "icon": "GoArrowUpRight"
       },
       {
         "title": "Nano Bananaの例を見る",
-        "url": "/#showcase",
+        "url": "/showcase",
         "target": "_self",
         "variant": "outline"
       }

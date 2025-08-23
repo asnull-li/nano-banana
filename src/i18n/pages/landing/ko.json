@@ -366,13 +366,13 @@
     "buttons": [
       {
         "title": "지금 Nano Banana 체험하기",
-        "url": "/",
+        "url": "/#workspace",
         "target": "_self",
         "icon": "GoArrowUpRight"
       },
       {
         "title": "Nano Banana 예시 보기",
-        "url": "/#showcase",
+        "url": "/showcase",
         "target": "_self",
         "variant": "outline"
       }

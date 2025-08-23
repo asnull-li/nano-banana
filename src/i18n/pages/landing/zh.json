@@ -366,13 +366,13 @@
     "buttons": [
       {
         "title": "立即试用 Nano Banana",
-        "url": "/",
+        "url": "/#workspace",
         "target": "_self",
         "icon": "GoArrowUpRight"
       },
       {
         "title": "查看 Nano Banana 示例",
-        "url": "/#showcase",
+        "url": "/showcase",
         "target": "_self",
         "variant": "outline"
       }

@@ -366,13 +366,13 @@
     "buttons": [
       {
         "title": "Try Nano Banana Now",
-        "url": "/",
+        "url": "/#workspace",
         "target": "_self",
         "icon": "GoArrowUpRight"
       },
       {
         "title": "See Nano Banana Examples",
-        "url": "/#showcase",
+        "url": "/showcase",
         "target": "_self",
         "variant": "outline"
       }
@@ -402,7 +402,7 @@
             },
             {
               "title": "Showcases",
-              "url": "/#showcase",
+              "url": "/showcase",
               "target": "_self"
             },
             {
