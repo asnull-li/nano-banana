@@ -1,50 +1,118 @@
-import { Card, CardContent } from "@/components/ui/card";
+"use client";
 
-import Image from "next/image";
-import Link from "next/link";
+import { useState, useEffect } from "react";
 import { Section as SectionType } from "@/types/blocks/section";
+import ShowcaseDisplay from "./showcase-display";
+import ShowcaseTabsBar from "./showcase-tabs-bar";
+import { useTheme } from "next-themes";
+import { ShowcaseItem } from "./types";
 
-export default function Showcase({ section }: { section: SectionType }) {
+interface ShowcaseSection extends SectionType {
+  items?: ShowcaseItem[];
+}
+
+export default function Showcase({ section }: { section: ShowcaseSection }) {
   if (section.disabled) {
     return null;
   }
 
-  return (
-    <section className="container py-16">
-      <div className="mx-auto mb-12 text-center">
-        <h2 className="mb-6 text-pretty text-3xl font-bold lg:text-4xl">
-          {section.title}
-        </h2>
-        <p className="mb-4 max-w-xl text-muted-foreground lg:max-w-none lg:text-lg">
-          {section.description}
-        </p>
-      </div>
+  const [currentItemIndex, setCurrentItemIndex] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const { resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {section.items?.map((item, index) => (
-          <Link key={index} href={item.url || ""} target={item.target}>
-            <Card className="overflow-hidden transition-all hover:shadow-lg dark:hover:shadow-primary/10 p-0">
-              <CardContent className="p-0">
-                <div className="relative aspect-[16/10] w-full overflow-hidden">
-                  <Image
-                    src={item.image?.src || ""}
-                    alt={item.image?.alt || item.title || ""}
-                    fill
-                    className="object-cover rounded-t-lg transition-transform duration-300 hover:scale-110"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2 line-clamp-1">
-                    {item.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground line-clamp-3">
-                    {item.description}
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-          </Link>
-        ))}
+  const isDark = mounted && resolvedTheme === "dark";
+  const items = section.items || [];
+  const currentItem = items[currentItemIndex];
+
+  useEffect(() => {
+    setMounted(true);
+    setIsVisible(true);
+  }, []);
+
+  const handleTabChange = (index: number) => {
+    setCurrentItemIndex(index);
+  };
+
+  const tabs = items.map((item) => ({
+    id: item.id,
+    label: item.category,
+  }));
+
+  return (
+    <section className="relative min-h-screen py-20 overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-green-500/5 to-cyan-500/5 opacity-30" />
+
+      <div className="container relative z-10">
+        <div
+          className={`mx-auto mb-12 text-center transition-all duration-1000 ${
+            isVisible
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 -translate-y-10"
+          }`}
+        >
+          <h2 className="mb-6 text-4xl font-bold lg:text-6xl">
+            <span
+              className={`bg-gradient-to-br bg-clip-text text-transparent ${
+                isDark ? "from-white to-gray-300" : "from-gray-900 to-gray-700"
+              }`}
+            >
+              {section.title}
+            </span>
+          </h2>
+          <p
+            className={`mx-auto max-w-2xl text-lg leading-relaxed ${
+              isDark ? "text-gray-400" : "text-gray-600"
+            }`}
+          >
+            {section.description}
+          </p>
+        </div>
+
+        {/* Category Tabs Bar */}
+        <div
+          className={`transition-all duration-1000 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
+          style={{ transitionDelay: "200ms" }}
+        >
+          <ShowcaseTabsBar
+            tabs={tabs}
+            activeTab={currentItemIndex}
+            onTabChange={handleTabChange}
+          />
+        </div>
+
+        {/* Main Content Area */}
+        {currentItem && (
+          <div
+            className={`transition-all duration-1000 ${
+              isVisible
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-10"
+            }`}
+            style={{ transitionDelay: "400ms" }}
+          >
+            <div className="mb-8 text-center">
+              <h3
+                className={`text-2xl font-semibold mb-2 ${
+                  isDark ? "text-gray-100" : "text-gray-900"
+                }`}
+              >
+                {currentItem.title}
+              </h3>
+              <p
+                className={` mx-auto ${
+                  isDark ? "text-gray-400" : "text-gray-600"
+                }`}
+              >
+                {currentItem.description}
+              </p>
+            </div>
+
+            <ShowcaseDisplay item={currentItem} />
+          </div>
+        )}
       </div>
     </section>
   );

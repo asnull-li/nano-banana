@@ -1,89 +1,159 @@
 {
   "showcase": {
-    "name": "showcase",
-    "title": "ShipAnyで構築されたAI SaaSスタートアップ",
-    "description": "使いやすく、迅速に展開できます。",
+    "name": "ショーケース",
+    "title": "Nano Banana ショーケース",
+    "description": "様々な画像処理効果を探索し、プロフェッショナルなAI技術の力を体験してください。",
+    "subtitle": "創造性を解き放ち、以下のケースに限らず、さらなる可能性を探求しましょう。",
     "items": [
       {
-        "title": "ThinkAny",
-        "description": "AI検索エンジン",
-        "url": "https://thinkany.ai",
-        "target": "_blank",
-        "image": {
-          "src": "/imgs/showcases/7.png"
-        }
+        "id": "background-replacement",
+        "category": "背景の置き換え",
+        "title": "背景の置き換え",
+        "description": "被写体を元の背景から分離し、より創造的な新しいシーンに置き換えます。",
+        "original": "https://file.nanobanana.org/showcase/1.webp",
+        "effects": [
+          {
+            "id": "vintage-desk",
+            "name": "ヴィンテージツールデスク",
+            "image": "https://file.nanobanana.org/showcase/1-1.webp",
+            "prompt": "背景を広大な草原に変更",
+            "description": "職人の工房の設定に被写体を配置"
+          },
+          {
+            "id": "tropical-beach",
+            "name": "トロピカルビーチ",
+            "image": "https://file.nanobanana.org/showcase/1-2.webp",
+            "prompt": "背景を曲がりくねった山道に変更",
+            "description": "透き通った水の晴れたビーチの背景"
+          },
+          {
+            "id": "modern-office",
+            "name": "モダンオフィス",
+            "image": "https://file.nanobanana.org/showcase/1-3.webp",
+            "prompt": "背景を曲がりくねった山道に変更",
+            "description": "清潔でミニマリストなオフィススペース"
+          }
+        ]
       },
       {
-        "title": "HeyBeauty",
-        "description": "AIバーチャル試着",
-        "url": "https://heybeauty.ai",
-        "target": "_blank",
-        "image": {
-          "src": "/imgs/showcases/5.png"
-        }
+        "id": "lighting-adjustment",
+        "category": "照明調整",
+        "title": "照明調整",
+        "description": "AIで照明効果を調整し、雰囲気を変えて写真に映画的な感覚を与えます。",
+        "original": "https://file.nanobanana.org/showcase/2.webp",
+        "effects": [
+          {
+            "id": "golden-hour",
+            "name": "ゴールデンアワー",
+            "image": "https://file.nanobanana.org/showcase/2-1.webp",
+            "prompt": "暖かい日光の効果を追加",
+            "description": "魔法のゴールデンアワーの照明を再現"
+          },
+          {
+            "id": "dramatic-shadows",
+            "name": "ドラマチックな影",
+            "image": "https://file.nanobanana.org/showcase/2-2.webp",
+            "prompt": "'ブルーアワー'のクールトーンに調整",
+            "description": "高コントラストのドラマチックな照明"
+          },
+          {
+            "id": "soft-glow",
+            "name": "ソフトグロー",
+            "image": "https://file.nanobanana.org/showcase/2-3.webp",
+            "prompt": "ポイント光源のある夜景に切り替え",
+            "description": "優しく魅力的な光の効果"
+          }
+        ]
       },
       {
-        "title": "AI Wallpaper",
-        "description": "AI壁紙ジェネレーター",
-        "url": "https://aiwallpaper.shop",
-        "target": "_blank",
-        "image": {
-          "src": "/imgs/showcases/1.png"
-        }
+        "id": "style-conversion",
+        "category": "スタイル変換",
+        "title": "スタイル変換",
+        "description": "AIで写真を異なる芸術的なスタイルに変換します。",
+        "original": "https://file.nanobanana.org/showcase/3.webp",
+        "effects": [
+          {
+            "id": "oil-painting",
+            "name": "油絵",
+            "image": "https://file.nanobanana.org/showcase/3-1.webp",
+            "prompt": "日本のアニメスタイルに変換",
+            "description": "クラシックな油絵の芸術的効果"
+          },
+          {
+            "id": "watercolor",
+            "name": "水彩画",
+            "image": "https://file.nanobanana.org/showcase/3-2.webp",
+            "prompt": "豊かな油絵スタイルに変換",
+            "description": "繊細な水彩画アートスタイル"
+          },
+          {
+            "id": "anime",
+            "name": "アニメスタイル",
+            "image": "https://file.nanobanana.org/showcase/3-3.webp",
+            "prompt": "レトロピクセルアートスタイルに変換",
+            "description": "日本のアニメキャラクタースタイル"
+          }
+        ]
       },
       {
-        "title": "AI Cover",
-        "description": "AIカバージェネレーター",
-        "url": "https://aicover.design",
-        "target": "_blank",
-        "image": {
-          "src": "/imgs/showcases/2.png"
-        }
+        "id": "color-change",
+        "category": "カラーチェンジ",
+        "title": "カラーチェンジ",
+        "description": "プロフェッショナルなカラーグレーディングで写真の雰囲気を完全に変更します。",
+        "original": "https://file.nanobanana.org/showcase/4.webp",
+        "effects": [
+          {
+            "id": "vibrant",
+            "name": "ビビッドカラー",
+            "image": "https://file.nanobanana.org/showcase/4-1.webp",
+            "prompt": "すべての緑の葉を赤に変更",
+            "description": "目を引く鮮やかな色彩"
+          },
+          {
+            "id": "moody",
+            "name": "ムーディートーン",
+            "image": "https://file.nanobanana.org/showcase/4-2.webp",
+            "prompt": "すべての緑の葉を黄色に変更",
+            "description": "深く、雰囲気のあるカラーグレーディング"
+          },
+          {
+            "id": "vintage",
+            "name": "ヴィンテージフィルム",
+            "image": "https://file.nanobanana.org/showcase/4-3.webp",
+            "prompt": "すべての緑の葉を青に変更",
+            "description": "クラシックなフィルムカラーパレット"
+          }
+        ]
       },
       {
-        "title": "GPTs Works",
-        "description": "GPTsディレクトリ",
-        "url": "https://gpts.works",
-        "target": "_blank",
-        "image": {
-          "src": "/imgs/showcases/3.png"
-        }
-      },
-      {
-        "title": "Melodisco",
-        "description": "AI音楽プレーヤー",
-        "url": "https://melodis.co",
-        "target": "_blank",
-        "image": {
-          "src": "/imgs/showcases/4.png"
-        }
-      },
-      {
-        "title": "Pagen",
-        "description": "AIランディングページジェネレーター",
-        "url": "https://pagen.so",
-        "target": "_blank",
-        "image": {
-          "src": "/imgs/showcases/6.png"
-        }
-      },
-      {
-        "title": "SoraFM",
-        "description": "AIビデオジェネレーター",
-        "url": "https://sorafm.trys.ai",
-        "target": "_blank",
-        "image": {
-          "src": "/imgs/showcases/8.png"
-        }
-      },
-      {
-        "title": "PodLM",
-        "description": "AIポッドキャストジェネレーター",
-        "url": "https://podlm.ai",
-        "target": "_blank",
-        "image": {
-          "src": "/imgs/showcases/9.png"
-        }
+        "id": "age-transformation",
+        "category": "年齢変換",
+        "title": "年齢変換",
+        "description": "高度なAI技術で異なる年齢の自分を見ることができます。",
+        "original": "https://file.nanobanana.org/showcase/5.webp",
+        "effects": [
+          {
+            "id": "younger",
+            "name": "10歳若く",
+            "image": "https://file.nanobanana.org/showcase/5-1.webp",
+            "prompt": "年齢を3歳に変更",
+            "description": "自然な若返り効果"
+          },
+          {
+            "id": "teenage",
+            "name": "ティーンエイジャー",
+            "image": "https://file.nanobanana.org/showcase/5-2.webp",
+            "prompt": "年齢を16歳に変更",
+            "description": "若々しいティーンエイジャーの外観"
+          },
+          {
+            "id": "elderly",
+            "name": "未来のあなた",
+            "image": "https://file.nanobanana.org/showcase/5-3.webp",
+            "prompt": "年齢を16歳に変更",
+            "description": "自然な老化シミュレーション"
+          }
+        ]
       }
     ]
   }

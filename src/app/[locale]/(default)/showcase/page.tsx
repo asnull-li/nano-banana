@@ -9,5 +9,5 @@ export default async function ShowcasePage({
   const { locale } = await params;
   const page = await getShowcasePage(locale);
 
-  return <>{page.showcase && <Showcase section={page.showcase} />}</>;
+  return <>{page.showcase && <Showcase section={page.showcase as any} />}</>;
 }

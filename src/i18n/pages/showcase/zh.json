@@ -1,89 +1,159 @@
 {
   "showcase": {
-    "name": "showcase",
-    "title": "使用 ShipAny 构建的 AI SaaS 创业项目",
-    "description": "易于使用，快速发布。",
+    "name": "案例展示",
+    "title": "Nano Banana 案例展示",
+    "description": "探索各种图像处理效果，体验专业AI技术的强大力量。",
+    "subtitle": "释放你的创造力，探索更多玩法，不仅限于下方案例。",
     "items": [
       {
-        "title": "ThinkAny",
-        "description": "AI 搜索引擎",
-        "url": "https://thinkany.ai",
-        "target": "_blank",
-        "image": {
-          "src": "/imgs/showcases/7.png"
-        }
+        "id": "background-replacement",
+        "category": "背景替换",
+        "title": "背景替换",
+        "description": "将主体从原始背景中分离，替换为更具创意的新场景。",
+        "original": "https://file.nanobanana.org/showcase/1.webp",
+        "effects": [
+          {
+            "id": "vintage-desk",
+            "name": "复古工具台",
+            "image": "https://file.nanobanana.org/showcase/1-1.webp",
+            "prompt": "将背景更换为广阔的草原",
+            "description": "将主体置于工匠工作室环境中"
+          },
+          {
+            "id": "tropical-beach",
+            "name": "热带海滩",
+            "image": "https://file.nanobanana.org/showcase/1-2.webp",
+            "prompt": "将背景更换为蜿蜒的山路",
+            "description": "阳光明媚的海滩背景，水晶般清澈的海水"
+          },
+          {
+            "id": "modern-office",
+            "name": "现代办公室",
+            "image": "https://file.nanobanana.org/showcase/1-3.webp",
+            "prompt": "将背景更换为蜿蜒的山路",
+            "description": "干净、极简的办公空间"
+          }
+        ]
       },
       {
-        "title": "HeyBeauty",
-        "description": "AI 虚拟试妆",
-        "url": "https://heybeauty.ai",
-        "target": "_blank",
-        "image": {
-          "src": "/imgs/showcases/5.png"
-        }
+        "id": "lighting-adjustment",
+        "category": "光线调整",
+        "title": "光线调整",
+        "description": "使用AI调整光线效果，改变氛围，赋予照片电影感。",
+        "original": "https://file.nanobanana.org/showcase/2.webp",
+        "effects": [
+          {
+            "id": "golden-hour",
+            "name": "黄金时刻",
+            "image": "https://file.nanobanana.org/showcase/2-1.webp",
+            "prompt": "添加温暖的阳光效果",
+            "description": "重现神奇的黄金时刻光线"
+          },
+          {
+            "id": "dramatic-shadows",
+            "name": "戏剧性阴影",
+            "image": "https://file.nanobanana.org/showcase/2-2.webp",
+            "prompt": "调整为'蓝调时刻'的冷色调",
+            "description": "高对比度戏剧性光线"
+          },
+          {
+            "id": "soft-glow",
+            "name": "柔和光晕",
+            "image": "https://file.nanobanana.org/showcase/2-3.webp",
+            "prompt": "切换到有点光源的夜景",
+            "description": "温柔、迷人的光线效果"
+          }
+        ]
       },
       {
-        "title": "AI Wallpaper",
-        "description": "AI 壁纸生成器",
-        "url": "https://aiwallpaper.shop",
-        "target": "_blank",
-        "image": {
-          "src": "/imgs/showcases/1.png"
-        }
+        "id": "style-conversion",
+        "category": "风格转换",
+        "title": "风格转换",
+        "description": "使用AI将您的照片转换为不同的艺术风格。",
+        "original": "https://file.nanobanana.org/showcase/3.webp",
+        "effects": [
+          {
+            "id": "oil-painting",
+            "name": "油画",
+            "image": "https://file.nanobanana.org/showcase/3-1.webp",
+            "prompt": "转换为日本动漫风格",
+            "description": "经典油画艺术效果"
+          },
+          {
+            "id": "watercolor",
+            "name": "水彩画",
+            "image": "https://file.nanobanana.org/showcase/3-2.webp",
+            "prompt": "转换为浓郁的油画风格",
+            "description": "细腻的水彩艺术风格"
+          },
+          {
+            "id": "anime",
+            "name": "动漫风格",
+            "image": "https://file.nanobanana.org/showcase/3-3.webp",
+            "prompt": "转换为复古像素艺术风格",
+            "description": "日本动漫角色风格"
+          }
+        ]
       },
       {
-        "title": "AI Cover",
-        "description": "AI 封面生成器",
-        "url": "https://aicover.design",
-        "target": "_blank",
-        "image": {
-          "src": "/imgs/showcases/2.png"
-        }
+        "id": "color-change",
+        "category": "颜色调整",
+        "title": "颜色调整",
+        "description": "专业色彩分级，彻底改变照片的情绪。",
+        "original": "https://file.nanobanana.org/showcase/4.webp",
+        "effects": [
+          {
+            "id": "vibrant",
+            "name": "鲜艳色彩",
+            "image": "https://file.nanobanana.org/showcase/4-1.webp",
+            "prompt": "将所有绿叶变为红色",
+            "description": "引人注目的鲜艳色彩"
+          },
+          {
+            "id": "moody",
+            "name": "情绪色调",
+            "image": "https://file.nanobanana.org/showcase/4-2.webp",
+            "prompt": "将所有绿叶变为黄色",
+            "description": "深沉、有氛围的色彩分级"
+          },
+          {
+            "id": "vintage",
+            "name": "复古胶片",
+            "image": "https://file.nanobanana.org/showcase/4-3.webp",
+            "prompt": "将所有绿叶变为蓝色",
+            "description": "经典胶片色彩调色板"
+          }
+        ]
       },
       {
-        "title": "GPTs Works",
-        "description": "GPTs 目录",
-        "url": "https://gpts.works",
-        "target": "_blank",
-        "image": {
-          "src": "/imgs/showcases/3.png"
-        }
-      },
-      {
-        "title": "Melodisco",
-        "description": "AI 音乐播放器",
-        "url": "https://melodis.co",
-        "target": "_blank",
-        "image": {
-          "src": "/imgs/showcases/4.png"
-        }
-      },
-      {
-        "title": "Pagen",
-        "description": "AI 落地页生成器",
-        "url": "https://pagen.so",
-        "target": "_blank",
-        "image": {
-          "src": "/imgs/showcases/6.png"
-        }
-      },
-      {
-        "title": "SoraFM",
-        "description": "AI 视频生成器",
-        "url": "https://sorafm.trys.ai",
-        "target": "_blank",
-        "image": {
-          "src": "/imgs/showcases/8.png"
-        }
-      },
-      {
-        "title": "PodLM",
-        "description": "AI 播客生成器",
-        "url": "https://podlm.ai",
-        "target": "_blank",
-        "image": {
-          "src": "/imgs/showcases/9.png"
-        }
+        "id": "age-transformation",
+        "category": "年龄变换",
+        "title": "年龄变换",
+        "description": "通过先进的AI技术，看到不同年龄的自己。",
+        "original": "https://file.nanobanana.org/showcase/5.webp",
+        "effects": [
+          {
+            "id": "younger",
+            "name": "年轻10岁",
+            "image": "https://file.nanobanana.org/showcase/5-1.webp",
+            "prompt": "将年龄改为3岁",
+            "description": "自然减龄效果"
+          },
+          {
+            "id": "teenage",
+            "name": "青少年时期",
+            "image": "https://file.nanobanana.org/showcase/5-2.webp",
+            "prompt": "将年龄改为16岁",
+            "description": "青春少年造型"
+          },
+          {
+            "id": "elderly",
+            "name": "未来的你",
+            "image": "https://file.nanobanana.org/showcase/5-3.webp",
+            "prompt": "将年龄改为16岁",
+            "description": "自然老化模拟"
+          }
+        ]
       }
     ]
   }

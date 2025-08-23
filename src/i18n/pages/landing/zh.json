@@ -24,7 +24,7 @@
         },
         {
           "title": "案例展示",
-          "url": "/#showcase",
+          "url": "/showcase",
           "icon": "RiApps2Line"
         }
       ]
@@ -49,7 +49,7 @@
     "announcement": {
       "label": "2025",
       "title": "🚀 免费体验 Nano Banana",
-      "url": "/"
+      "url": "/#workspace"
     },
     "tip": "🎨 立即开始使用 Nano Banana 创作",
     "buttons": [
@@ -63,7 +63,7 @@
       {
         "title": "查看 Nano Banana 示例",
         "icon": "RiBookOpenLine",
-        "url": "/#showcase",
+        "url": "/showcase",
         "target": "_self",
         "variant": "outline"
       }

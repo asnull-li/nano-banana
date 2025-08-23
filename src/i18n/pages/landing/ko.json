@@ -24,7 +24,7 @@
         },
         {
           "title": "쇼케이스",
-          "url": "/#showcase",
+          "url": "/showcase",
           "icon": "RiApps2Line"
         }
       ]
@@ -49,7 +49,7 @@
     "announcement": {
       "label": "2025",
       "title": "🚀 Nano Banana 무료로 체험하기",
-      "url": "/"
+      "url": "/#workspace"
     },
     "tip": "🎨 오늘 Nano Banana로 창작을 시작하세요",
     "buttons": [
@@ -63,7 +63,7 @@
       {
         "title": "Nano Banana 예시 보기",
         "icon": "RiBookOpenLine",
-        "url": "/#showcase",
+        "url": "/showcase",
         "target": "_self",
         "variant": "outline"
       }

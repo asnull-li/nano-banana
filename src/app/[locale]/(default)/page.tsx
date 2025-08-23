@@ -10,7 +10,11 @@ import Pricing from "@/components/blocks/pricing";
 import Showcase from "@/components/blocks/showcase";
 import Stats from "@/components/blocks/stats";
 import Testimonial from "@/components/blocks/testimonial";
-import { getLandingPage } from "@/services/page";
+import {
+  getLandingPage,
+  getPricingPage,
+  getShowcasePage,
+} from "@/services/page";
 import WorkspaceWrapper from "@/components/workspace/wrapper";
 
 export async function generateMetadata({
@@ -39,19 +43,24 @@ export default async function LandingPage({
 }) {
   const { locale } = await params;
   const page = await getLandingPage(locale);
+  const pricingPage = await getPricingPage(locale);
+  const showcasePage = await getShowcasePage(locale);
 
   return (
     <>
       {page.hero && <Hero hero={page.hero} />}
       <WorkspaceWrapper />
+      {showcasePage.showcase && (
+        <Showcase section={showcasePage.showcase as any} />
+      )}
       {/* {page.branding && <Branding section={page.branding} />} */}
       {page.introduce && <Feature1 section={page.introduce} />}
       {page.benefit && <Feature2 section={page.benefit} />}
       {page.usage && <Feature3 section={page.usage} />}
       {page.feature && <Feature section={page.feature} />}
-      {page.showcase && <Showcase section={page.showcase} />}
+
       {page.stats && <Stats section={page.stats} />}
-      {page.pricing && <Pricing pricing={page.pricing} />}
+      {pricingPage.pricing && <Pricing pricing={pricingPage.pricing} />}
       {page.testimonial && <Testimonial section={page.testimonial} />}
       {page.faq && <FAQ section={page.faq} />}
       {page.cta && <CTA section={page.cta} />}

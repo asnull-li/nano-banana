@@ -1,89 +1,159 @@
 {
   "showcase": {
     "name": "showcase",
-    "title": "AI SaaS Startups built with ShipAny",
-    "description": "Easy to use and fast to ship.",
+    "title": "Nano Banana Showcase",
+    "description": "Explore various types of image processing effects and experience the power of professional AI technology.",
+    "subtitle": "Unleash your creativity and explore more ways to play, not just the cases below.",
     "items": [
       {
-        "title": "ThinkAny",
-        "description": "AI Search Engine",
-        "url": "https://thinkany.ai",
-        "target": "_blank",
-        "image": {
-          "src": "/imgs/showcases/7.png"
-        }
+        "id": "background-replacement",
+        "category": "Background Replacement",
+        "title": "Background Replacement",
+        "description": "Separate the subject from the original background and replace it with a new, more creative scene.",
+        "original": "https://file.nanobanana.org/showcase/1.webp",
+        "effects": [
+          {
+            "id": "vintage-desk",
+            "name": "Vintage Tool Desk",
+            "image": "https://file.nanobanana.org/showcase/1-1.webp",
+            "prompt": "Change background to a vast grassland",
+            "description": "Place subject in a craftsman's workshop setting"
+          },
+          {
+            "id": "tropical-beach",
+            "name": "Tropical Beach",
+            "image": "https://file.nanobanana.org/showcase/1-2.webp",
+            "prompt": "Change background to a winding mountain road",
+            "description": "Sunny beach background with crystal clear water"
+          },
+          {
+            "id": "modern-office",
+            "name": "Modern Office",
+            "image": "https://file.nanobanana.org/showcase/1-3.webp",
+            "prompt": "Change background to a winding mountain road",
+            "description": "Clean, minimalist office space"
+          }
+        ]
       },
       {
-        "title": "HeyBeauty",
-        "description": "AI Virtual Try On",
-        "url": "https://heybeauty.ai",
-        "target": "_blank",
-        "image": {
-          "src": "/imgs/showcases/5.png"
-        }
+        "id": "lighting-adjustment",
+        "category": "Lighting Adjustment",
+        "title": "Lighting Adjustment",
+        "description": "Adjust lighting effects with AI to change the mood and give your pictures a cinematic feel.",
+        "original": "https://file.nanobanana.org/showcase/2.webp",
+        "effects": [
+          {
+            "id": "golden-hour",
+            "name": "Golden Hour",
+            "image": "https://file.nanobanana.org/showcase/2-1.webp",
+            "prompt": "Add warm sunlight effect",
+            "description": "Recreate magical golden hour lighting"
+          },
+          {
+            "id": "dramatic-shadows",
+            "name": "Dramatic Shadows",
+            "image": "https://file.nanobanana.org/showcase/2-2.webp",
+            "prompt": "Adjust to the cool tones of the 'blue hour'",
+            "description": "High contrast dramatic lighting"
+          },
+          {
+            "id": "soft-glow",
+            "name": "Soft Glow",
+            "image": "https://file.nanobanana.org/showcase/2-3.webp",
+            "prompt": "Switch to a night scene with point light sources",
+            "description": "Gentle, flattering light effect"
+          }
+        ]
       },
       {
-        "title": "AI Wallpaper",
-        "description": "AI Wallpaper Generator",
-        "url": "https://aiwallpaper.shop",
-        "target": "_blank",
-        "image": {
-          "src": "/imgs/showcases/1.png"
-        }
+        "id": "style-conversion",
+        "category": "Style Conversion",
+        "title": "Style Conversion",
+        "description": "Transform your photos into different artistic styles with AI.",
+        "original": "https://file.nanobanana.org/showcase/3.webp",
+        "effects": [
+          {
+            "id": "oil-painting",
+            "name": "Oil Painting",
+            "image": "https://file.nanobanana.org/showcase/3-1.webp",
+            "prompt": "Convert to Japanese anime style",
+            "description": "Classic oil painting artistic effect"
+          },
+          {
+            "id": "watercolor",
+            "name": "Watercolor",
+            "image": "https://file.nanobanana.org/showcase/3-2.webp",
+            "prompt": "Convert to a rich oil painting style",
+            "description": "Delicate watercolor art style"
+          },
+          {
+            "id": "anime",
+            "name": "Anime Style",
+            "image": "https://file.nanobanana.org/showcase/3-3.webp",
+            "prompt": "Convert to a retro pixel art style",
+            "description": "Japanese anime character style"
+          }
+        ]
       },
       {
-        "title": "AI Cover",
-        "description": "AI Cover Generator",
-        "url": "https://aicover.design",
-        "target": "_blank",
-        "image": {
-          "src": "/imgs/showcases/2.png"
-        }
+        "id": "color-change",
+        "category": "Color Change",
+        "title": "Color Change",
+        "description": "Professional color grading to completely change the mood of your photos.",
+        "original": "https://file.nanobanana.org/showcase/4.webp",
+        "effects": [
+          {
+            "id": "vibrant",
+            "name": "Vibrant Colors",
+            "image": "https://file.nanobanana.org/showcase/4-1.webp",
+            "prompt": "Change all green leaves to red",
+            "description": "Eye-catching vivid colors"
+          },
+          {
+            "id": "moody",
+            "name": "Moody Tones",
+            "image": "https://file.nanobanana.org/showcase/4-2.webp",
+            "prompt": "Change all green leaves to yellow",
+            "description": "Deep, atmospheric color grading"
+          },
+          {
+            "id": "vintage",
+            "name": "Vintage Film",
+            "image": "https://file.nanobanana.org/showcase/4-3.webp",
+            "prompt": "Change all green leaves to blue",
+            "description": "Classic film color palette"
+          }
+        ]
       },
       {
-        "title": "GPTs Works",
-        "description": "GPTs Directory",
-        "url": "https://gpts.works",
-        "target": "_blank",
-        "image": {
-          "src": "/imgs/showcases/3.png"
-        }
-      },
-      {
-        "title": "Melodisco",
-        "description": "AI Music Player",
-        "url": "https://melodis.co",
-        "target": "_blank",
-        "image": {
-          "src": "/imgs/showcases/4.png"
-        }
-      },
-      {
-        "title": "Pagen",
-        "description": "AI Landing Page Generator",
-        "url": "https://pagen.so",
-        "target": "_blank",
-        "image": {
-          "src": "/imgs/showcases/6.png"
-        }
-      },
-      {
-        "title": "SoraFM",
-        "description": "AI Video Generator",
-        "url": "https://sorafm.trys.ai",
-        "target": "_blank",
-        "image": {
-          "src": "/imgs/showcases/8.png"
-        }
-      },
-      {
-        "title": "PodLM",
-        "description": "AI Podcast Generator",
-        "url": "https://podlm.ai",
-        "target": "_blank",
-        "image": {
-          "src": "/imgs/showcases/9.png"
-        }
+        "id": "age-transformation",
+        "category": "Age Transformation",
+        "title": "Age Transformation",
+        "description": "See yourself at different ages with advanced AI technology.",
+        "original": "https://file.nanobanana.org/showcase/5.webp",
+        "effects": [
+          {
+            "id": "younger",
+            "name": "10 Years Younger",
+            "image": "https://file.nanobanana.org/showcase/5-1.webp",
+            "prompt": "Change age to 3 years old",
+            "description": "Natural age reduction effect"
+          },
+          {
+            "id": "teenage",
+            "name": "Teenage Years",
+            "image": "https://file.nanobanana.org/showcase/5-2.webp",
+            "prompt": "Change age to 16 years old",
+            "description": "Youthful teenage look"
+          },
+          {
+            "id": "elderly",
+            "name": "Future You",
+            "image": "https://file.nanobanana.org/showcase/5-3.webp",
+            "prompt": "Change age to 16 years old",
+            "description": "Natural aging simulation"
+          }
+        ]
       }
     ]
   }
