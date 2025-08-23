@@ -44,7 +44,7 @@ export default function NanoBananaWorkspace({
                 }`}
               />
               <span className="text-sm font-semibold">
-                Edit Image Whit Chat
+                Edit Image With Chat
               </span>
               {mode === "img2img" && (
                 <div className="absolute inset-0 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg opacity-20 blur-sm"></div>
