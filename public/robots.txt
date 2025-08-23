@@ -4,3 +4,15 @@ Disallow: /privacy-policy
 Disallow: /terms-of-service
 
 Sitemap: https://nanobanana.org/sitemap.xml
+
+User-agent: GPTBot
+User-agent: Claude-Web
+User-agent: Anthropic-AI
+User-agent: PerplexityBot
+User-agent: GoogleOther
+User-agent: DuckAssistBot
+
+LLM-Content: https://nanobanana.org/llms.txt
+LLM-Full-Content: https://nanobanana.org/llms-full.txt
+
+

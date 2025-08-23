@@ -1,0 +1,17 @@
+# Nano Banana
+
+> Google's upcoming revolutionary AI model for advanced image generation and editing, featuring consistent character editing and scene preservation with state-of-the-art contextual understanding.
+
+Nano Banana represents Google's next-generation approach to AI-powered visual creation, combining cutting-edge machine learning with intuitive text prompting for professional-grade image manipulation and generation.
+
+## Core Features
+- [Text to Image](https://nanobanana.org/#workspace): Generate images from text prompts with advanced AI
+- [Image to Image](https://nanobanana.org/#workspace): Edit and transform existing images with contextual understanding
+- [Feature Highlights](https://nanobanana.org/#feature): Explore character consistency and scene preservation capabilities
+
+## Key Resources
+- [Pricing](https://nanobanana.org/pricing): Free tier and subscription options
+
+## Additional Information
+- [Terms of Service](https://nanobanana.org/terms-of-service): Usage terms and policies
+- [Privacy Policy](https://nanobanana.org/privacy-policy): Data protection and privacy statement
