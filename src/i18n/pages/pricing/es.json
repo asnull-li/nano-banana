@@ -1,0 +1,107 @@
+{
+  "pricing": {
+    "name": "pricing",
+    "label": "Precios",
+    "title": "Precios Simples y Transparentes",
+    "description": "Elige el plan perfecto para tus necesidades de creación de imágenes con IA.",
+    "groups": [],
+    "items": [
+      {
+        "title": "Prueba",
+        "description": "Perfecto para probar la generación de imágenes con IA y proyectos pequeños.",
+        "features_title": "Qué incluye",
+        "features": [
+          "30 créditos de generación con IA",
+          "Modelos de calidad Pro y Max",
+          "Generación de texto a imagen",
+          "Edición de imagen a imagen",
+          "Velocidad de generación estándar",
+          "Soporte al cliente estándar",
+          "Descarga en alta resolución"
+        ],
+        "interval": "único",
+        "amount": 599,
+        "cn_amount": 0,
+        "currency": "USD",
+        "price": "$5.99",
+        "original_price": "$19.99",
+        "unit": "USD",
+        "is_featured": false,
+        "tip": "Prueba única sin suscripción, ideal para probar",
+        "button": {
+          "title": "Prueba Única",
+          "url": "/#pricing",
+          "icon": "RiFlashlightFill"
+        },
+        "product_id": "prod_Ssq8Ltsmjqeiw9",
+        "product_name": "Nano Banana Prueba Única",
+        "credits": 30,
+        "valid_months": 1
+      },
+      {
+        "title": "Pro",
+        "description": "Ideal para creadores, diseñadores y profesionales de contenido.",
+        "label": "Más Popular",
+        "features_title": "Todo lo de Básico",
+        "features": [
+          "400 créditos de generación con IA",
+          "Velocidad de procesamiento prioritaria",
+          "Funciones avanzadas de edición",
+          "Procesamiento por lotes",
+          "Canal de descarga de alta velocidad",
+          "Soporte al cliente prioritario",
+          "Licencia comercial extendida"
+        ],
+        "interval": "mes",
+        "amount": 2399,
+        "cn_amount": 0,
+        "currency": "USD",
+        "price": "$23.99",
+        "original_price": "$89.99",
+        "unit": "USD",
+        "is_featured": true,
+        "tip": "Mejor valor para creadores serios",
+        "button": {
+          "title": "Suscribirse Pro",
+          "url": "/#pricing",
+          "icon": "RiFlashlightFill"
+        },
+        "product_id": "prod_SsqBq5Jdkmjp4l",
+        "product_name": "Nano Banana Pro",
+        "credits": 400,
+        "valid_months": 1
+      },
+      {
+        "title": "Premium",
+        "description": "Para equipos, agencias y uso comercial de alto volumen.",
+        "features_title": "Todo lo de Pro",
+        "features": [
+          "1500 créditos de generación con IA",
+          "Velocidad de generación más rápida",
+          "Capacidades de edición con IA más avanzadas",
+          "Almacenamiento permanente de imágenes",
+          "Licencia comercial ilimitada",
+          "Gerente de cuenta dedicado"
+        ],
+        "interval": "mes",
+        "amount": 8999,
+        "cn_amount": 0,
+        "currency": "USD",
+        "price": "$89.99",
+        "original_price": "$179.99",
+        "unit": "USD",
+        "is_featured": false,
+        "tip": "Perfecto para equipos y empresas",
+        "button": {
+          "title": "Suscribirse Premium",
+          "url": "/#pricing",
+          "icon": "RiFlashlightFill"
+        },
+        "product_id": "prod_SsqCkSQWvK8NzC",
+        "product_name": "Nano Banana Premium",
+        "credits": 1500,
+        "valid_months": 1
+      }
+    ]
+  }
+}

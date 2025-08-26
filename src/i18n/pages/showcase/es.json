@@ -1,0 +1,160 @@
+{
+  "showcase": {
+    "name": "showcase",
+    "title": "Galería de Nano Banana",
+    "description": "Explora varios tipos de efectos de procesamiento de imágenes y experimenta el poder de la tecnología profesional de IA.",
+    "subtitle": "Libera tu creatividad y explora más formas de jugar, no solo los casos a continuación.",
+    "items": [
+      {
+        "id": "background-replacement",
+        "category": "Reemplazo de Fondo",
+        "title": "Reemplazo de Fondo",
+        "description": "Separa el sujeto del fondo original y reemplázalo con una escena nueva y más creativa.",
+        "original": "https://file.nanobanana.org/showcase/1.webp",
+        "effects": [
+          {
+            "id": "vintage-desk",
+            "name": "Mesa de Herramientas Vintage",
+            "image": "https://file.nanobanana.org/showcase/1-1.webp",
+            "prompt": "Cambiar el fondo a un vasto pastizal",
+            "description": "Colocar el sujeto en un ambiente de taller de artesano"
+          },
+          {
+            "id": "tropical-beach",
+            "name": "Playa Tropical",
+            "image": "https://file.nanobanana.org/showcase/1-2.webp",
+            "prompt": "Cambiar el fondo a un camino de montaña sinuoso",
+            "description": "Fondo de playa soleada con agua cristalina"
+          },
+          {
+            "id": "modern-office",
+            "name": "Oficina Moderna",
+            "image": "https://file.nanobanana.org/showcase/1-3.webp",
+            "prompt": "Cambiar el fondo a un camino de montaña sinuoso",
+            "description": "Espacio de oficina limpio y minimalista"
+          }
+        ]
+      },
+      {
+        "id": "lighting-adjustment",
+        "category": "Ajuste de Iluminación",
+        "title": "Ajuste de Iluminación",
+        "description": "Ajusta los efectos de iluminación con IA para cambiar el ambiente y dar a tus fotos un toque cinematográfico.",
+        "original": "https://file.nanobanana.org/showcase/2.webp",
+        "effects": [
+          {
+            "id": "golden-hour",
+            "name": "Hora Dorada",
+            "image": "https://file.nanobanana.org/showcase/2-1.webp",
+            "prompt": "Agregar efecto de luz solar cálida",
+            "description": "Recrear la iluminación mágica de la hora dorada"
+          },
+          {
+            "id": "dramatic-shadows",
+            "name": "Sombras Dramáticas",
+            "image": "https://file.nanobanana.org/showcase/2-2.webp",
+            "prompt": "Ajustar a los tonos fríos de la 'hora azul'",
+            "description": "Iluminación dramática de alto contraste"
+          },
+          {
+            "id": "soft-glow",
+            "name": "Brillo Suave",
+            "image": "https://file.nanobanana.org/showcase/2-3.webp",
+            "prompt": "Cambiar a una escena nocturna con fuentes de luz puntuales",
+            "description": "Efecto de luz suave y favorecedora"
+          }
+        ]
+      },
+      {
+        "id": "style-conversion",
+        "category": "Conversión de Estilo",
+        "title": "Conversión de Estilo",
+        "description": "Transforma tus fotos en diferentes estilos artísticos con IA.",
+        "original": "https://file.nanobanana.org/showcase/3.webp",
+        "effects": [
+          {
+            "id": "oil-painting",
+            "name": "Pintura al Óleo",
+            "image": "https://file.nanobanana.org/showcase/3-1.webp",
+            "prompt": "Convertir al estilo anime japonés",
+            "description": "Efecto artístico clásico de pintura al óleo"
+          },
+          {
+            "id": "watercolor",
+            "name": "Acuarela",
+            "image": "https://file.nanobanana.org/showcase/3-2.webp",
+            "prompt": "Convertir a un estilo rico de pintura al óleo",
+            "description": "Estilo artístico delicado de acuarela"
+          },
+          {
+            "id": "anime",
+            "name": "Estilo Anime",
+            "image": "https://file.nanobanana.org/showcase/3-3.webp",
+            "prompt": "Convertir a un estilo retro de arte píxel",
+            "description": "Estilo de personaje anime japonés"
+          }
+        ]
+      },
+      {
+        "id": "color-change",
+        "category": "Cambio de Color",
+        "title": "Cambio de Color",
+        "description": "Gradación de color profesional para cambiar completamente el ambiente de tus fotos.",
+        "original": "https://file.nanobanana.org/showcase/4.webp",
+        "effects": [
+          {
+            "id": "vibrant",
+            "name": "Colores Vibrantes",
+            "image": "https://file.nanobanana.org/showcase/4-1.webp",
+            "prompt": "Cambiar todas las hojas verdes a rojas",
+            "description": "Colores vivos llamativos"
+          },
+          {
+            "id": "moody",
+            "name": "Tonos Melancólicos",
+            "image": "https://file.nanobanana.org/showcase/4-2.webp",
+            "prompt": "Cambiar todas las hojas verdes a amarillas",
+            "description": "Gradación de color profunda y atmosférica"
+          },
+          {
+            "id": "vintage",
+            "name": "Película Vintage",
+            "image": "https://file.nanobanana.org/showcase/4-3.webp",
+            "prompt": "Cambiar todas las hojas verdes a azules",
+            "description": "Paleta de colores de película clásica"
+          }
+        ]
+      },
+      {
+        "id": "age-transformation",
+        "category": "Transformación de Edad",
+        "title": "Transformación de Edad",
+        "description": "Véte a ti mismo en diferentes edades con tecnología avanzada de IA.",
+        "original": "https://file.nanobanana.org/showcase/5.webp",
+        "effects": [
+          {
+            "id": "younger",
+            "name": "10 Años Más Joven",
+            "image": "https://file.nanobanana.org/showcase/5-1.webp",
+            "prompt": "Cambiar edad a 3 años",
+            "description": "Efecto natural de reducción de edad"
+          },
+          {
+            "id": "teenage",
+            "name": "Años Adolescentes",
+            "image": "https://file.nanobanana.org/showcase/5-2.webp",
+            "prompt": "Cambiar edad a 16 años",
+            "description": "Apariencia juvenil adolescente"
+          },
+          {
+            "id": "elderly",
+            "name": "Tu Futuro",
+            "image": "https://file.nanobanana.org/showcase/5-3.webp",
+            "prompt": "Cambiar edad a 16 años",
+            "description": "Simulación natural de envejecimiento"
+          }
+        ]
+      }
+    ]
+  }
+}
