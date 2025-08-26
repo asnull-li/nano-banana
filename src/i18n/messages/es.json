@@ -1,0 +1,209 @@
+{
+  "metadata": {
+    "title": "Nano Banana - Generador de Imágenes IA | Edita imágenes con chat",
+    "description": "Nano Banana es un generador de imágenes impulsado por IA que te permite crear y editar imágenes a través de conversaciones de chat naturales. Una poderosa alternativa a Flux Kontext.",
+    "keywords": ""
+  },
+  "user": {
+    "sign_in": "Iniciar Sesión",
+    "sign_out": "Cerrar Sesión",
+    "credits": "Créditos",
+    "api_keys": "Claves API",
+    "my_orders": "Mis Pedidos",
+    "user_center": "Centro de Usuario",
+    "admin_system": "Sistema de Administración"
+  },
+  "sign_modal": {
+    "sign_in_title": "Iniciar Sesión",
+    "sign_in_description": "Inicia sesión en tu cuenta",
+    "sign_up_title": "Registrarse",
+    "sign_up_description": "Crear una cuenta",
+    "login_slogan": "Prueba gratuita disponible después de iniciar sesión",
+    "email_title": "Correo Electrónico",
+    "email_placeholder": "Ingresa tu correo electrónico aquí",
+    "password_title": "Contraseña",
+    "password_placeholder": "Ingresa tu contraseña aquí",
+    "forgot_password": "¿Olvidaste tu contraseña?",
+    "or": "O",
+    "continue": "Continuar",
+    "no_account": "¿No tienes una cuenta?",
+    "email_sign_in": "Iniciar sesión con Correo",
+    "google_sign_in": "Iniciar sesión con Google",
+    "github_sign_in": "Iniciar sesión con GitHub",
+    "close_title": "Cerrar",
+    "cancel_title": "Cancelar",
+    "terms_text": "Al continuar, aceptas nuestros",
+    "terms_of_service": "Términos de Servicio",
+    "and": "y",
+    "privacy_policy": "Política de Privacidad"
+  },
+  "my_orders": {
+    "title": "Mis Pedidos",
+    "description": "pedidos pagados con ShipAny.",
+    "no_orders": "No se encontraron pedidos",
+    "tip": "",
+    "activate_order": "Activar Pedido",
+    "actived": "Activado",
+    "join_discord": "Unirse a Discord",
+    "read_docs": "Leer Documentación",
+    "table": {
+      "order_no": "N° de Pedido",
+      "email": "Correo Electrónico",
+      "product_name": "Nombre del Producto",
+      "amount": "Cantidad",
+      "paid_at": "Pagado el",
+      "github_username": "Usuario de GitHub",
+      "status": "Estado"
+    }
+  },
+  "my_credits": {
+    "title": "Mis Créditos",
+    "left_tip": "créditos restantes: {left_credits}",
+    "no_credits": "Sin registros de créditos",
+    "recharge": "Recargar",
+    "table": {
+      "trans_no": "N° de Transacción",
+      "trans_type": "Tipo de Transacción",
+      "credits": "Créditos",
+      "updated_at": "Actualizado el",
+      "status": "Estado"
+    }
+  },
+  "api_keys": {
+    "title": "Claves API",
+    "tip": "Por favor, mantén tu clave API segura para evitar fugas",
+    "no_api_keys": "Sin Claves API",
+    "create_api_key": "Crear Clave API",
+    "table": {
+      "name": "Nombre",
+      "key": "Clave",
+      "created_at": "Creado el"
+    },
+    "form": {
+      "name": "Nombre",
+      "name_placeholder": "Nombre de la Clave API",
+      "submit": "Enviar"
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "description": "Noticias, recursos y actualizaciones sobre ShipAny",
+    "read_more_text": "Leer Más"
+  },
+  "my_invites": {
+    "title": "Mis Invitaciones",
+    "description": "Ver tus registros de invitaciones",
+    "no_invites": "No se encontraron registros de invitaciones",
+    "my_invite_link": "Mi Enlace de Invitación",
+    "edit_invite_link": "Editar Enlace de Invitación",
+    "copy_invite_link": "Copiar Enlace de Invitación",
+    "invite_code": "Código de Invitación",
+    "invite_tip": "Invita a 1 amigo a comprar ShipAny, recibe $50 de recompensa.",
+    "invite_balance": "Saldo de Recompensa por Invitación",
+    "total_invite_count": "Total de Invitaciones",
+    "total_paid_count": "Total de Pagos",
+    "total_award_amount": "Monto Total de Recompensas",
+    "update_invite_code": "Establecer Código de Invitación",
+    "update_invite_code_tip": "Ingresa tu código de invitación personalizado",
+    "update_invite_button": "Guardar",
+    "no_orders": "No puedes invitar a otros antes de comprar ShipAny",
+    "no_affiliates": "No tienes permitido invitar a otros, por favor contáctanos para solicitar permiso.",
+    "table": {
+      "invite_time": "Hora de Invitación",
+      "invite_user": "Usuario Invitado",
+      "status": "Estado",
+      "reward_percent": "Porcentaje de Recompensa",
+      "reward_amount": "Monto de Recompensa",
+      "pending": "Pendiente",
+      "completed": "Completado"
+    }
+  },
+  "feedback": {
+    "title": "Comentarios",
+    "description": "Nos encantaría saber qué funcionó bien o cómo podemos mejorar la experiencia del producto.",
+    "submit": "Enviar",
+    "loading": "Enviando...",
+    "contact_tip": "Otras formas de contactarnos",
+    "rating_tip": "¿Cómo te sientes acerca de ShipAny?",
+    "placeholder": "Deja tus comentarios aquí..."
+  },
+  "pricing": {
+    "most_popular": "Más Popular"
+  },
+  "workspace": {
+    "sign_in_prompt": "Inicia sesión para comenzar a crear con IA",
+    "sign_in_description": "Los nuevos usuarios obtienen créditos gratuitos para experimentar la creación potente con IA",
+    "sign_in_button": "Iniciar Sesión para Crear",
+    "text_to_image": {
+      "title": "Modo Crear",
+      "prompt_label": "Describe tu visión",
+      "prompt_placeholder": "Una ciudad futurista con autos voladores al atardecer...",
+      "aspect_ratio_label": "Relación de Aspecto",
+      "aspect_ratios": {
+        "square": "Cuadrado",
+        "landscape": "Horizontal",
+        "portrait": "Vertical",
+        "classic": "Clásico"
+      },
+      "quality_label": "Calidad",
+      "quality_pro": "Pro",
+      "quality_pro_desc": "Alta calidad, velocidad equilibrada",
+      "quality_max": "Máxima",
+      "quality_max_desc": "Calidad suprema, detalles perfectos",
+      "generate_button": "Crear",
+      "generating_button": "Creando...",
+      "regenerate_button": "Regenerar",
+      "download_button": "Descargar",
+      "share_button": "Compartir",
+      "view_full_size": "Ver Tamaño Completo",
+      "generated_result": "Resultado Generado",
+      "ai_generated": "Generado por IA",
+      "generating_text": "Creando tu imagen...",
+      "complete_text": "completado",
+      "all_generated_images": "Todas las Imágenes Generadas",
+      "ai_assistant_title": "Asistente de IA",
+      "ai_assistant_desc": "¡Te ayudaré a crear imágenes increíbles desde texto! Prueba estas inspiraciones:",
+      "inspiration": "Inspiración",
+      "inspirations": [
+        "Ciudad ciberpunk de noche con luces de neón",
+        "Pintura al óleo de montañas al atardecer",
+        "Personaje estilo anime con cabello azul",
+        "Arte geométrico abstracto colorido",
+        "Retrato realista de un guerrero",
+        "Mundo de fantasía submarino con criaturas brillantes"
+      ],
+      "credits": "créditos",
+      "credits_left": "restantes",
+      "this_may_take": "Esto puede tomar 1-2 minutos..."
+    },
+    "image_to_image": {
+      "title": "Modo Editar",
+      "upload_title": "Subir imagen",
+      "upload_desc": "Arrastra y suelta tu imagen aquí o haz clic para explorar",
+      "upload_formats": "JPG, PNG, WEBP hasta 20MB",
+      "sample_images": "Imágenes de muestra",
+      "clear_button": "Limpiar",
+      "original": "Original",
+      "ai_edited": "Editado por IA",
+      "new_edit": "Nueva Edición",
+      "ai_assistant_title": "Asistente de IA",
+      "ai_assistant_upload_prompt": "¡Imagen cargada! ¿Qué te gustaría cambiar?",
+      "ai_assistant_ready": "¡Listo para transformar tu imagen! Sube una imagen para comenzar.",
+      "quick_actions": "Acciones Rápidas",
+      "quick_action_lighting": "Cambiar iluminación",
+      "quick_action_lighting_prompt": "Cambiar a iluminación de hora dorada",
+      "quick_action_style": "Transferencia de estilo",
+      "quick_action_style_prompt": "Convertir a estilo de pintura al óleo",
+      "quick_action_remove_bg": "Eliminar fondo",
+      "quick_action_remove_bg_prompt": "Eliminar fondo, mantener el sujeto",
+      "quick_action_color": "Gradación de color",
+      "quick_action_color_prompt": "Aplicar gradación de color cinematográfica",
+      "recent_edits": "Ediciones Recientes",
+      "describe_changes": "Describe lo que quieres cambiar...",
+      "transform_button": "Transformar",
+      "transforming_button": "Transformando...",
+      "processing": "Procesando",
+      "quality_pro_desc": "Ideal para la mayoría de escenarios, edición precisa"
+    }
+  }
+}
