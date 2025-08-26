@@ -26,8 +26,8 @@ export default function HeroContent({ hero }: { hero: HeroType }) {
     // Update the URL
     window.history.pushState(null, "", "#workspace");
 
-    // Smooth scroll to workspace
-    const workspaceElement = document.getElementById("workspace");
+    // Smooth scroll to banana-workspace (new workspace)
+    const workspaceElement = document.getElementById("banana-workspace");
     if (workspaceElement) {
       workspaceElement.scrollIntoView({ behavior: "smooth", block: "start" });
     }
@@ -36,6 +36,16 @@ export default function HeroContent({ hero }: { hero: HeroType }) {
   useEffect(() => {
     setMounted(true);
     setIsVisible(true);
+    
+    // Check if URL has #workspace hash and scroll to banana-workspace
+    if (window.location.hash === '#workspace') {
+      setTimeout(() => {
+        const workspaceElement = document.getElementById('banana-workspace');
+        if (workspaceElement) {
+          workspaceElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100); // Small delay to ensure DOM is ready
+    }
   }, []);
 
   useEffect(() => {

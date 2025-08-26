@@ -128,3 +128,22 @@ export const feedbacks = pgTable("feedbacks", {
   content: text(),
   rating: integer(),
 });
+
+// Nano Banana Tasks table
+export const nanoBananaTasks = pgTable("nano_banana_tasks", {
+  id: integer().primaryKey().generatedAlwaysAsIdentity(),
+  task_id: varchar({ length: 255 }).notNull().unique(),
+  request_id: varchar({ length: 255 }).notNull().unique(),
+  user_uuid: varchar({ length: 255 }).notNull(),
+  type: varchar({ length: 50 }).notNull(), // 'text-to-image' | 'image-to-image'
+  prompt: text().notNull(),
+  image_urls: text(), // JSON array for image-to-image mode
+  num_images: integer().notNull().default(1),
+  status: varchar({ length: 50 }).notNull().default('pending'), // pending | processing | completed | failed
+  result: text(), // JSON storage for result
+  credits_used: integer().notNull().default(0),
+  credits_refunded: integer().notNull().default(0),
+  error_message: text(),
+  created_at: timestamp({ withTimezone: true }).defaultNow(),
+  updated_at: timestamp({ withTimezone: true }).defaultNow(),
+});

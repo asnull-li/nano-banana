@@ -15,15 +15,19 @@ export enum CreditsTransType {
   OrderPay = "order_pay", // user pay for credits
   SystemAdd = "system_add", // system add credits
   Ping = "ping", // cost for ping api
-  FluxGenerate = "NanoBanana_generate", // cost for flux image generation
-  FluxEdit = "NanoBanana_edit", // cost for flux image editing
+  FluxGenerate = "flux_generate", // cost for flux image generation
+  FluxEdit = "flux_edit", // cost for flux image editing
+  NanoBanana_generate = "NanoBanana_generate", // cost for nano banana text-to-image
+  NanoBanana_edit = "NanoBanana_edit", // cost for nano banana image-to-image
+  NanoBanana_refund = "NanoBanana_refund", // refund for failed nano banana tasks
 }
 
 export enum CreditsAmount {
-  NewUserGet = 3,
+  NewUserGet = 5,
   PingCost = 1,
   FluxProCost = 2,
   FluxMaxCost = 4,
+  NanoBananaPerImage = 5, // cost per image for nano banana
 }
 
 export async function getUserCredits(user_uuid: string): Promise<UserCredits> {
