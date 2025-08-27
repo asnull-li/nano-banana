@@ -13,6 +13,7 @@ import {
   Trash2
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useTranslations } from "next-intl";
 import type { UploadedImage } from "../hooks/use-nano-banana";
 
 interface ImagePreviewProps {
@@ -29,6 +30,7 @@ export default function ImagePreview({
   disabled = false 
 }: ImagePreviewProps) {
   const [previewImage, setPreviewImage] = React.useState<string | null>(null);
+  const t = useTranslations();
 
   if (images.length === 0) {
     return null;
@@ -40,7 +42,7 @@ export default function ImagePreview({
       <div className="flex items-center justify-between mb-2">
         <div className="flex items-center gap-3">
           <h3 className="text-sm font-semibold bg-gradient-to-r from-green-500 to-cyan-500 bg-clip-text text-transparent">
-            已选择的参考图
+            {t("nano_banana.image_to_image.selected_references")}
           </h3>
           <span className="px-2.5 py-1 text-xs font-medium rounded-full bg-gradient-to-r from-green-500/10 to-cyan-500/10 text-green-600 dark:text-green-400 border border-green-500/20">
             {images.length}/10
@@ -55,7 +57,7 @@ export default function ImagePreview({
             className="text-red-500 hover:text-red-600 hover:bg-red-50 dark:hover:bg-red-950 transition-colors"
           >
             <Trash2 className="h-4 w-4 mr-1.5" />
-            清空全部
+            {t("nano_banana.image_to_image.clear_all")}
           </Button>
         )}
       </div>
@@ -95,7 +97,7 @@ export default function ImagePreview({
                       <div className="absolute inset-0 h-8 w-8 bg-green-500/20 rounded-full animate-ping mx-auto" />
                     </div>
                     <p className="text-sm font-semibold text-white mt-2">{image.uploadProgress}%</p>
-                    <p className="text-xs text-white/80 mt-0.5">正在上传...</p>
+                    <p className="text-xs text-white/80 mt-0.5">{t("nano_banana.image_to_image.uploading")}</p>
                   </div>
                 </div>
               )}

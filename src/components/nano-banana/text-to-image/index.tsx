@@ -28,6 +28,7 @@ import { useCredits } from "@/hooks/use-credits";
 import { useAppContext } from "@/contexts/app";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
+import { useTranslations } from "next-intl";
 
 interface TextToImageModeProps {
   prompt: string;
@@ -38,47 +39,46 @@ interface TextToImageModeProps {
   onSubmit: () => void;
 }
 
-const inspirations = [
+const getInspirations = (t: any) => [
   {
     icon: Mountain,
-    label: "风景",
-    prompt:
-      "majestic mountain landscape at sunset, golden hour lighting, photorealistic",
+    labelKey: "landscape",
+    promptKey: "landscape",
   },
   {
     icon: User,
-    label: "人像",
-    prompt: "professional portrait photography, studio lighting, sharp focus",
+    labelKey: "portrait", 
+    promptKey: "portrait",
   },
   {
     icon: Building,
-    label: "建筑",
-    prompt: "modern architecture, geometric design, minimalist style",
+    labelKey: "architecture",
+    promptKey: "architecture",
   },
   {
     icon: Palette,
-    label: "艺术",
-    prompt: "abstract art, vibrant colors, oil painting style",
+    labelKey: "art",
+    promptKey: "art",
   },
   {
     icon: Zap,
-    label: "科幻",
-    prompt: "futuristic sci-fi scene, neon lights, cyberpunk aesthetic",
+    labelKey: "sci_fi",
+    promptKey: "sci_fi",
   },
   {
     icon: Trees,
-    label: "自然",
-    prompt: "serene forest scene, morning mist, natural lighting",
+    labelKey: "nature",
+    promptKey: "nature",
   },
   {
     icon: Cat,
-    label: "动物",
-    prompt: "cute animals, detailed fur texture, natural habitat",
+    labelKey: "animals",
+    promptKey: "animals",
   },
   {
     icon: Lightbulb,
-    label: "创意",
-    prompt: "surreal creative concept, imaginative design, artistic",
+    labelKey: "creative",
+    promptKey: "creative",
   },
 ];
 
@@ -93,22 +93,29 @@ export default function TextToImageMode({
   const { credits } = useCredits();
   const { user, setShowSignModal } = useAppContext();
   const router = useRouter();
+  const t = useTranslations("nano_banana.text_to_image");
+  const tLabels = useTranslations("nano_banana.text_to_image.labels");
+  const tPrompts = useTranslations("nano_banana.text_to_image.prompts");
   const totalCredits = CREDITS_PER_IMAGE * numImages;
   const hasEnoughCredits = credits.left_credits >= totalCredits;
   const isProcessing = ["uploading", "processing", "fetching"].includes(status);
   const canSubmit = prompt.trim().length >= 3 && !isProcessing;
+  const inspirations = getInspirations(t);
   
   const handleSubmit = () => {
     // 检查登录状态
     if (!user) {
-      toast.error("请先登录账号");
+      toast.error(t("validation.please_login"));
       setShowSignModal(true);
       return;
     }
     
     // 检查积分是否充足
     if (!hasEnoughCredits) {
-      toast.error(`积分不足，需要 ${totalCredits} 积分，当前只有 ${credits.left_credits} 积分`);
+      toast.error(t("validation.insufficient_credits", {
+        needed: totalCredits,
+        current: credits.left_credits
+      }));
       setTimeout(() => {
         router.push("/pricing");
       }, 1500);
@@ -127,11 +134,11 @@ export default function TextToImageMode({
           <div className="space-y-4">
             <div className="flex items-center gap-2">
               <Sparkles className="h-5 w-5 text-cyan-500" />
-              <h3 className="text-lg font-semibold">灵感启发</h3>
+              <h3 className="text-lg font-semibold">{t("inspiration_title")}</h3>
             </div>
 
             <p className="text-sm text-muted-foreground">
-              点击下方标签快速开始创作
+              {t("inspiration_desc")}
             </p>
 
             <div className="flex flex-wrap gap-2">
@@ -145,11 +152,11 @@ export default function TextToImageMode({
                     "border-green-500/20 hover:border-green-500/40",
                     "hover:bg-gradient-to-r hover:from-green-500/10 hover:to-cyan-500/10"
                   )}
-                  onClick={() => onPromptChange(item.prompt)}
+                  onClick={() => onPromptChange(tPrompts(item.promptKey))}
                   disabled={isProcessing}
                 >
                   <item.icon className="h-3 w-3 mr-1 text-green-500 group-hover:scale-110 transition-transform" />
-                  {item.label}
+                  {tLabels(item.labelKey)}
                 </Button>
               ))}
             </div>
@@ -164,13 +171,13 @@ export default function TextToImageMode({
             {/* 标题 */}
             <div className="flex items-center justify-between">
               <h3 className="text-lg font-semibold bg-gradient-to-r from-green-500 to-cyan-500 bg-clip-text text-transparent">
-                AI 图像生成
+                {t("main_title")}
               </h3>
               <Badge
                 variant="outline"
                 className="border-green-500/30 text-green-600 dark:text-green-400"
               >
-                文生图模式
+                {t("mode_badge")}
               </Badge>
             </div>
 
@@ -180,14 +187,14 @@ export default function TextToImageMode({
                 htmlFor="prompt"
                 className="flex items-center justify-between"
               >
-                <span>描述你想要生成的图像</span>
+                <span>{t("prompt_label")}</span>
                 <span className="text-xs text-muted-foreground">
-                  {prompt.length}/5000
+                  {t("char_count", { count: prompt.length })}
                 </span>
               </Label>
               <Textarea
                 id="prompt"
-                placeholder="例如: 一只可爱的卡通猫咪，坐在彩虹上，梦幻风格，柔和的色彩..."
+                placeholder={t("prompt_placeholder")}
                 value={prompt}
                 onChange={(e) => onPromptChange(e.target.value)}
                 className={cn(
@@ -205,11 +212,11 @@ export default function TextToImageMode({
               <div className="flex items-center justify-between">
                 <Label htmlFor="num-images" className="flex items-center gap-2">
                   <Settings className="h-4 w-4 text-green-500" />
-                  生成数量
+                  {t("generation_count")}
                 </Label>
                 <div className="flex items-center gap-3">
                   <span className="text-sm font-medium px-2 py-1 rounded bg-green-500/10 text-green-600 dark:text-green-400">
-                    {numImages} 张
+                    {t("count_unit", { count: numImages })}
                   </span>
                   <Badge
                     variant="outline"
@@ -222,7 +229,7 @@ export default function TextToImageMode({
                   >
                     <Coins className="h-3 w-3" />
                     <span className="font-semibold">{totalCredits}</span>
-                    <span className="text-xs">积分</span>
+                    <span className="text-xs">{t("credits_label")}</span>
                   </Badge>
                 </div>
               </div>
@@ -237,17 +244,17 @@ export default function TextToImageMode({
                 className="[&_[role=slider]]:bg-gradient-to-r [&_[role=slider]]:from-green-500 [&_[role=slider]]:to-cyan-500"
               />
               <div className="flex justify-between text-xs text-muted-foreground">
-                <span>1 张</span>
-                <span>2 张</span>
-                <span>3 张</span>
-                <span>4 张</span>
+                <span>{t("count_unit", { count: 1 })}</span>
+                <span>{t("count_unit", { count: 2 })}</span>
+                <span>{t("count_unit", { count: 3 })}</span>
+                <span>{t("count_unit", { count: 4 })}</span>
               </div>
             </div>
 
             {/* 提示信息 */}
             <div className="p-3 rounded-lg bg-gradient-to-r from-green-500/5 to-cyan-500/5 border border-green-500/20">
               <p className="text-xs text-muted-foreground">
-                💡 提示：描述越详细，生成的图像越接近你的想象
+                {t("tip_text")}
               </p>
             </div>
           </div>
@@ -271,12 +278,12 @@ export default function TextToImageMode({
           {isProcessing ? (
             <>
               <Loader2 className="h-5 w-5 mr-2 animate-spin" />
-              正在生成中...
+              {t("generating_button")}
             </>
           ) : (
             <div className="flex items-center justify-center gap-3">
               <Wand2 className="h-5 w-5" />
-              <span>开始生成 ({numImages} 张)</span>
+              <span>{t("generate_button", { count: numImages })}</span>
               <Badge className="bg-white/20 text-white border-0">
                 <Coins className="h-3 w-3 mr-1" />
                 {totalCredits}
@@ -288,7 +295,7 @@ export default function TextToImageMode({
         {/* 错误提示 */}
         {!canSubmit && !isProcessing && prompt.trim().length < 3 && (
           <p className="text-sm text-center text-red-500">
-            请输入至少 3 个字符的描述
+            {t("validation.prompt_too_short")}
           </p>
         )}
       </div>

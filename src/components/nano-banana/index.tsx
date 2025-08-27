@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Image as ImageIcon, Sparkles } from "lucide-react";
 import { useAppContext } from "@/contexts/app";
+import { useTranslations } from "next-intl";
 
 // 导入子组件
 import { useNanoBanana } from "./hooks/use-nano-banana";
@@ -26,16 +27,17 @@ export default function NanoBananaWorkspace({
   onComplete,
 }: NanoBananaWorkspaceProps) {
   const { fetchUserInfo } = useAppContext();
-  
+  const t = useTranslations("nano_banana.mode_selector");
+
   // 包装 onComplete 回调，在完成后刷新用户信息
   const handleComplete = (results: any[]) => {
     // 调用原始的 onComplete
     onComplete?.(results);
-    
+
     // 刷新用户积分信息
     fetchUserInfo?.();
   };
-  
+
   const {
     mode,
     uploadedImages,
@@ -91,7 +93,7 @@ export default function NanoBananaWorkspace({
                 mode === "image-to-image" ? "text-white" : "text-green-500"
               )}
             />
-            <span className="font-semibold">图生图模式</span>
+            <span className="font-semibold">{t("edit_mode")}</span>
             {mode === "image-to-image" && (
               <div className="absolute inset-0 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg opacity-20 blur-sm" />
             )}
@@ -113,7 +115,7 @@ export default function NanoBananaWorkspace({
                 mode === "text-to-image" ? "text-white" : "text-cyan-500"
               )}
             />
-            <span className="font-semibold">文生图模式</span>
+            <span className="font-semibold">{t("text_mode")}</span>
             {mode === "text-to-image" && (
               <div className="absolute inset-0 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg opacity-20 blur-sm" />
             )}
@@ -131,8 +133,8 @@ export default function NanoBananaWorkspace({
 
       {/* 结果展示 */}
       {results.length > 0 && (
-        <ResultGallery 
-          results={results} 
+        <ResultGallery
+          results={results}
           mode={mode}
           aiDescription={aiDescription}
           onReset={reset}

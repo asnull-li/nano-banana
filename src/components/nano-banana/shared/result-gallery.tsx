@@ -20,6 +20,7 @@ import {
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
 import type { GenerationResult } from "../hooks/use-nano-banana";
+import { useTranslations } from "next-intl";
 
 interface ResultGalleryProps {
   results: GenerationResult[];
@@ -38,6 +39,7 @@ export default function ResultGallery({
   const [viewMode, setViewMode] = useState<"grid" | "single">("grid");
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [downloadingIndex, setDownloadingIndex] = useState<number | null>(null);
+  const t = useTranslations("nano_banana.result_gallery");
 
   if (results.length === 0) {
     return null;
@@ -61,9 +63,9 @@ export default function ResultGallery({
       document.body.removeChild(link);
       URL.revokeObjectURL(objectUrl);
 
-      toast.success("图片下载成功！");
+      toast.success(t("download_success"));
     } catch (error) {
-      toast.error("下载失败，请重试");
+      toast.error(t("download_failed"));
     } finally {
       setDownloadingIndex(null);
     }
@@ -73,9 +75,9 @@ export default function ResultGallery({
   const handleCopyLink = async (url: string) => {
     try {
       await navigator.clipboard.writeText(url);
-      toast.success("链接已复制到剪贴板");
+      toast.success(t("link_copied"));
     } catch (error) {
-      toast.error("复制失败");
+      toast.error(t("copy_failed"));
     }
   };
 
@@ -89,9 +91,9 @@ export default function ResultGallery({
               <Sparkles className="h-5 w-5 text-green-500" />
             </div>
             <div>
-              <h3 className="font-semibold">生成结果</h3>
+              <h3 className="font-semibold">{t("title")}</h3>
               <p className="text-sm text-muted-foreground">
-                成功生成 {results.length} 张图片
+                {t("success_message", { count: results.length })}
               </p>
             </div>
           </div>
@@ -133,7 +135,7 @@ export default function ResultGallery({
                 onClick={onReset}
                 className="border-green-500/20 hover:border-green-500/40 hover:bg-gradient-to-r hover:from-green-500/10 hover:to-cyan-500/10"
               >
-                重新生成
+                {t("regenerate")}
               </Button>
             )}
           </div>
@@ -146,7 +148,7 @@ export default function ResultGallery({
           <div className="flex items-start gap-3">
             <Sparkles className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
             <div className="flex-1">
-              <p className="text-sm font-medium mb-1">Nano Banana 回复</p>
+              <p className="text-sm font-medium mb-1">{t("ai_reply")}</p>
               <p className="text-sm text-muted-foreground">{aiDescription}</p>
             </div>
           </div>
@@ -287,7 +289,7 @@ export default function ResultGallery({
             <div className="p-4 border-t bg-slate-50 dark:bg-slate-900">
               <div className="flex items-center justify-between">
                 <div className="text-sm text-muted-foreground">
-                  图片 {selectedIndex + 1} / {results.length}
+                  {t("image_index", { current: selectedIndex + 1, total: results.length })}
                   {selectedImage.width &&
                     ` • ${selectedImage.width}×${selectedImage.height}`}
                 </div>
@@ -298,7 +300,7 @@ export default function ResultGallery({
                     onClick={() => handleCopyLink(selectedImage.url)}
                   >
                     <Copy className="h-4 w-4 mr-1" />
-                    复制链接
+                    {t("copy_link")}
                   </Button>
                   <Button
                     size="sm"
@@ -309,7 +311,7 @@ export default function ResultGallery({
                     disabled={downloadingIndex === selectedIndex}
                   >
                     <Download className="h-4 w-4 mr-1" />
-                    下载图片
+                    {t("download_image")}
                   </Button>
                 </div>
               </div>
@@ -351,7 +353,7 @@ export default function ResultGallery({
               }}
             >
               <Download className="h-5 w-5 mr-2" />
-              下载原图
+              {t("download_original")}
             </Button>
           </div>
         </div>

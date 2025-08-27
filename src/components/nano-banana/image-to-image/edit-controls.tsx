@@ -23,6 +23,7 @@ import { CREDITS_PER_IMAGE } from "@/lib/constants/nano-banana";
 import { useCredits } from "@/hooks/use-credits";
 import { useAppContext } from "@/contexts/app";
 import { useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
 import { toast } from "sonner";
 
 interface EditControlsProps {
@@ -34,29 +35,6 @@ interface EditControlsProps {
   isProcessing?: boolean;
   disabled?: boolean;
 }
-
-const quickPrompts = [
-  {
-    icon: Lightbulb,
-    label: "增强细节",
-    prompt: "enhance details, ultra HD, sharp focus",
-  },
-  {
-    icon: Palette,
-    label: "艺术风格",
-    prompt: "artistic style, oil painting, vibrant colors",
-  },
-  {
-    icon: Zap,
-    label: "动漫风格",
-    prompt: "anime style, cel shading, manga art",
-  },
-  {
-    icon: ImageIcon,
-    label: "写实照片",
-    prompt: "photorealistic, professional photography, 8K",
-  },
-];
 
 export default function EditControls({
   prompt,
@@ -70,21 +48,45 @@ export default function EditControls({
   const { credits, isLoading: creditsLoading } = useCredits();
   const { user, setShowSignModal } = useAppContext();
   const router = useRouter();
+  const t = useTranslations();
   const totalCredits = CREDITS_PER_IMAGE * numImages;
   const hasEnoughCredits = credits.left_credits >= totalCredits;
   const canSubmit = prompt.trim().length >= 3 && !isProcessing && !disabled;
   
+  const quickPrompts = [
+    {
+      icon: Lightbulb,
+      label: t("nano_banana.image_to_image.enhance_details"),
+      prompt: t("nano_banana.image_to_image.enhance_details_prompt"),
+    },
+    {
+      icon: Palette,
+      label: t("nano_banana.image_to_image.art_style"),
+      prompt: t("nano_banana.image_to_image.art_style_prompt"),
+    },
+    {
+      icon: Zap,
+      label: t("nano_banana.image_to_image.anime_style"),
+      prompt: t("nano_banana.image_to_image.anime_style_prompt"),
+    },
+    {
+      icon: ImageIcon,
+      label: t("nano_banana.image_to_image.realistic_photo"),
+      prompt: t("nano_banana.image_to_image.realistic_photo_prompt"),
+    },
+  ];
+  
   const handleSubmit = () => {
     // 检查登录状态
     if (!user) {
-      toast.error("请先登录账号");
+      toast.error(t("nano_banana.image_to_image.please_login"));
       setShowSignModal(true);
       return;
     }
     
     // 检查积分是否充足
     if (!hasEnoughCredits) {
-      toast.error(`积分不足，需要 ${totalCredits} 积分，当前只有 ${credits.left_credits} 积分`);
+      toast.error(t("nano_banana.image_to_image.insufficient_credits_detail", { needed: totalCredits, current: credits.left_credits }));
       setTimeout(() => {
         router.push("/pricing");
       }, 1500);
@@ -103,13 +105,13 @@ export default function EditControls({
           <div className="flex items-center gap-2">
             <Sparkles className="h-5 w-5 text-cyan-500" />
             <h3 className="text-lg font-semibold bg-gradient-to-r from-green-500 to-cyan-500 bg-clip-text text-transparent">
-              AI 图像编辑
+              {t("nano_banana.image_to_image.ai_editing")}
             </h3>
           </div>
 
           {/* 快速提示词 */}
           <div className="space-y-2">
-            <Label className="text-sm">快速风格</Label>
+            <Label className="text-sm">{t("nano_banana.image_to_image.quick_style")}</Label>
             <div className="grid grid-cols-2 gap-2">
               {quickPrompts.map((item, idx) => (
                 <Button
@@ -136,14 +138,14 @@ export default function EditControls({
           {/* 提示词输入 */}
           <div className="space-y-2">
             <Label htmlFor="prompt" className="flex items-center gap-2">
-              描述你想要的效果
+              {t("nano_banana.image_to_image.describe_effect")}
               <span className="text-xs text-muted-foreground">
                 ({prompt.length}/5000)
               </span>
             </Label>
             <Textarea
               id="prompt"
-              placeholder="例如: 将图片转换为油画风格，增加暖色调，让画面更加生动..."
+              placeholder={t("nano_banana.image_to_image.prompt_placeholder")}
               value={prompt}
               onChange={(e) => onPromptChange(e.target.value)}
               className={cn(
@@ -160,11 +162,11 @@ export default function EditControls({
             <div className="flex items-center justify-between">
               <Label htmlFor="num-images" className="flex items-center gap-2">
                 <Settings className="h-4 w-4 text-green-500" />
-                生成数量
+                {t("nano_banana.image_to_image.generate_count")}
               </Label>
               <div className="flex items-center gap-3">
                 <span className="text-sm font-medium px-2 py-1 rounded bg-green-500/10 text-green-600 dark:text-green-400">
-                  {numImages} 张
+                  {t("nano_banana.image_to_image.count_images", { count: numImages })}
                 </span>
                 <Badge
                   variant="outline"
@@ -177,7 +179,7 @@ export default function EditControls({
                 >
                   <Coins className="h-3 w-3" />
                   <span className="font-semibold">{totalCredits}</span>
-                  <span className="text-xs">积分</span>
+                  <span className="text-xs">{t("nano_banana.image_to_image.credits")}</span>
                 </Badge>
               </div>
             </div>
@@ -192,10 +194,10 @@ export default function EditControls({
               className="[&_[role=slider]]:bg-gradient-to-r [&_[role=slider]]:from-green-500 [&_[role=slider]]:to-cyan-500"
             />
             <div className="flex justify-between text-xs text-muted-foreground">
-              <span>1 张</span>
-              <span>2 张</span>
-              <span>3 张</span>
-              <span>4 张</span>
+              <span>{t("nano_banana.image_to_image.count_images", { count: 1 })}</span>
+              <span>{t("nano_banana.image_to_image.count_images", { count: 2 })}</span>
+              <span>{t("nano_banana.image_to_image.count_images", { count: 3 })}</span>
+              <span>{t("nano_banana.image_to_image.count_images", { count: 4 })}</span>
             </div>
           </div>
         </div>
@@ -219,12 +221,12 @@ export default function EditControls({
         {isProcessing ? (
           <>
             <Loader2 className="h-5 w-5 mr-2 animate-spin" />
-            正在处理中...
+            {t("nano_banana.image_to_image.processing")}
           </>
         ) : (
           <div className="flex items-center justify-center gap-3">
             <Wand2 className="h-5 w-5" />
-            <span>开始生成 ({numImages} 张)</span>
+            <span>{t("nano_banana.image_to_image.start_generation", { count: numImages })}</span>
             <Badge className="bg-white/20 text-white border-0">
               <Coins className="h-3 w-3 mr-1" />
               {totalCredits}
@@ -237,10 +239,10 @@ export default function EditControls({
       {!canSubmit && !isProcessing && (
         <p className="text-sm text-center text-red-500">
           {!hasEnoughCredits && !creditsLoading
-            ? `积分不足，需要 ${totalCredits} 积分`
+            ? t("nano_banana.image_to_image.insufficient_credits", { needed: totalCredits })
             : prompt.trim().length < 3
-            ? "请输入至少 3 个字符的提示词"
-            : "请先上传图片"}
+            ? t("nano_banana.image_to_image.prompt_too_short")
+            : t("nano_banana.image_to_image.please_upload_image")}
         </p>
       )}
     </div>
