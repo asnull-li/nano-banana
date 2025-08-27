@@ -20,28 +20,43 @@ export async function POST(request: NextRequest) {
     // 2. 验证参数
     if (!type || !prompt) {
       return NextResponse.json(
-        { success: false, error: "Missing required parameters: type and prompt" },
+        {
+          success: false,
+          error: "Missing required parameters: type and prompt",
+        },
         { status: 400 }
       );
     }
 
-    if (!['text-to-image', 'image-to-image'].includes(type)) {
+    if (!["text-to-image", "image-to-image"].includes(type)) {
       return NextResponse.json(
-        { success: false, error: "Invalid type. Must be 'text-to-image' or 'image-to-image'" },
+        {
+          success: false,
+          error: "Invalid type. Must be 'text-to-image' or 'image-to-image'",
+        },
         { status: 400 }
       );
     }
 
-    if (type === 'image-to-image' && (!image_urls || !Array.isArray(image_urls) || image_urls.length === 0)) {
+    if (
+      type === "image-to-image" &&
+      (!image_urls || !Array.isArray(image_urls) || image_urls.length === 0)
+    ) {
       return NextResponse.json(
-        { success: false, error: "image_urls required for image-to-image mode" },
+        {
+          success: false,
+          error: "image_urls required for image-to-image mode",
+        },
         { status: 400 }
       );
     }
 
-    if (type === 'image-to-image' && image_urls.length > 10) {
+    if (type === "image-to-image" && image_urls.length > 10) {
       return NextResponse.json(
-        { success: false, error: "Maximum 10 images allowed for image-to-image mode" },
+        {
+          success: false,
+          error: "Maximum 10 images allowed for image-to-image mode",
+        },
         { status: 400 }
       );
     }
@@ -55,31 +70,40 @@ export async function POST(request: NextRequest) {
 
     if (prompt.length < 3 || prompt.length > 5000) {
       return NextResponse.json(
-        { success: false, error: "Prompt must be between 3 and 5000 characters" },
+        {
+          success: false,
+          error: "Prompt must be between 3 and 5000 characters",
+        },
         { status: 400 }
       );
     }
 
     // 3. 生成webhook URL
-    const webhookUrl = process.env.NEXT_PUBLIC_API_URL 
-      ? `${process.env.NEXT_PUBLIC_API_URL}/api/nano-banana/webhook`
-      : undefined;
+    const webhookUrl =
+      process.env.NODE_ENV === "development"
+        ? "https://similarly-just-caiman.ngrok-free.app/api/nano-banana/webhook"
+        : "https://nanobanana.org/api/nano-banana/webhook";
 
     // 4. 提交到fal.ai
     let request_id: string;
     try {
-      if (type === 'text-to-image') {
+      if (type === "text-to-image") {
         request_id = await submitTextToImage(prompt, num_images, webhookUrl);
       } else {
-        request_id = await submitImageEdit(prompt, image_urls, num_images, webhookUrl);
+        request_id = await submitImageEdit(
+          prompt,
+          image_urls,
+          num_images,
+          webhookUrl
+        );
       }
     } catch (falError) {
       console.error("Fal API error:", falError);
       return NextResponse.json(
-        { 
-          success: false, 
+        {
+          success: false,
           error: "Failed to submit to image generation service",
-          details: falError instanceof Error ? falError.message : undefined
+          details: falError instanceof Error ? falError.message : undefined,
         },
         { status: 500 }
       );
@@ -93,7 +117,7 @@ export async function POST(request: NextRequest) {
         prompt,
         imageUrls: image_urls,
         numImages: num_images,
-        requestId: request_id
+        requestId: request_id,
       });
 
       return NextResponse.json({
@@ -101,29 +125,33 @@ export async function POST(request: NextRequest) {
         task_id: result.taskId,
         request_id: result.requestId,
         credits_used: result.creditsUsed,
-        remaining_credits: result.remainingCredits
+        remaining_credits: result.remainingCredits,
       });
     } catch (processError) {
       // 如果处理失败，记录错误但返回任务ID（任务已提交到fal.ai）
       console.error("Process error:", processError);
-      
+
       // 判断是否是积分不足错误
-      if (processError instanceof Error && processError.message.includes('Insufficient credits')) {
+      if (
+        processError instanceof Error &&
+        processError.message.includes("Insufficient credits")
+      ) {
         return NextResponse.json(
-          { 
-            success: false, 
+          {
+            success: false,
             error: "Insufficient credits",
-            message: processError.message
+            message: processError.message,
           },
           { status: 402 }
         );
       }
 
       return NextResponse.json(
-        { 
-          success: false, 
+        {
+          success: false,
           error: "Failed to process request",
-          details: processError instanceof Error ? processError.message : undefined
+          details:
+            processError instanceof Error ? processError.message : undefined,
         },
         { status: 500 }
       );
@@ -134,7 +162,7 @@ export async function POST(request: NextRequest) {
       {
         success: false,
         error: "Internal server error",
-        details: error instanceof Error ? error.message : undefined
+        details: error instanceof Error ? error.message : undefined,
       },
       { status: 500 }
     );

@@ -11,12 +11,7 @@ import {
   findTaskByRequestId 
 } from "@/models/nano-banana";
 import { getSnowId } from "@/lib/hash";
-
-// 定义任务类型
-export type TaskType = 'text-to-image' | 'image-to-image';
-
-// 定义积分配置
-export const CREDITS_PER_IMAGE = 5; // 每张图片5积分
+import { CREDITS_PER_IMAGE, TaskType } from "@/lib/constants/nano-banana";
 
 // 处理任务提交逻辑
 export async function processSubmitRequest({
@@ -102,8 +97,9 @@ export async function handleWebhookCallback({
     return { success: false, error: 'Task not found' };
   }
 
-  // 处理成功结果
-  if (status === 'COMPLETED' && data) {
+  // 处理成功结果 - 支持 'OK' 和 'COMPLETED' 状态
+  if ((status === 'OK' || status === 'COMPLETED') && data) {
+    console.log(`Task ${requestId} completed successfully with payload:`, data);
     await updateTaskByRequestId(requestId, {
       status: 'completed',
       result: JSON.stringify(data),
@@ -146,11 +142,16 @@ export async function refundCreditsForTask(
   amount: number
 ) {
   try {
+    // 设置退还积分的有效期为30天
+    const expiredAt = new Date();
+    expiredAt.setDate(expiredAt.getDate() + 30);
+    
     // 增加退款积分
     await increaseCredits({
       user_uuid: userUuid,
       trans_type: CreditsTransType.NanoBanana_refund,
-      credits: amount
+      credits: amount,
+      expired_at: expiredAt.toISOString()
     });
 
     // 更新任务记录

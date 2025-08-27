@@ -16,7 +16,7 @@ import {
   getShowcasePage,
 } from "@/services/page";
 import WorkspaceWrapper from "@/components/workspace/wrapper";
-import BananaWorkspaceWrapper from "@/components/banana-workspace/wrapper";
+import NanoBananaWrapper from "@/components/nano-banana/wrapper";
 
 export async function generateMetadata({
   params,
@@ -50,7 +50,7 @@ export default async function LandingPage({
   return (
     <>
       {page.hero && <Hero hero={page.hero} />}
-      <BananaWorkspaceWrapper />
+      <NanoBananaWrapper />
       <WorkspaceWrapper />
 
       {showcasePage.showcase && (
