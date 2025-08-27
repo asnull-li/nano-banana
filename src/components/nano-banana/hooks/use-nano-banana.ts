@@ -5,13 +5,7 @@ import { toast } from "sonner";
 
 export type GenerationMode = "text-to-image" | "image-to-image";
 
-export type TaskStatus =
-  | "idle"
-  | "uploading"
-  | "processing"
-  | "fetching"
-  | "completed"
-  | "failed";
+export type TaskStatus = "idle" | "uploading" | "processing" | "fetching" | "completed" | "failed";
 
 export interface UploadedImage {
   id: string;
@@ -49,17 +43,10 @@ export function useNanoBanana(options: UseNanoBananaOptions = {}) {
   const pollIntervalRef = useRef<NodeJS.Timeout | null>(null);
 
   // 上传单个图片到 R2
-  const uploadImageToR2 = async (
-    file: File,
-    imageId: string
-  ): Promise<string> => {
+  const uploadImageToR2 = async (file: File, imageId: string): Promise<string> => {
     try {
       // 更新上传进度 - 开始上传
-      setUploadedImages((prev) =>
-        prev.map((img) =>
-          img.id === imageId ? { ...img, uploadProgress: 30 } : img
-        )
-      );
+      setUploadedImages((prev) => prev.map((img) => (img.id === imageId ? { ...img, uploadProgress: 30 } : img)));
 
       const formData = new FormData();
       formData.append("file", file);
@@ -91,22 +78,14 @@ export function useNanoBanana(options: UseNanoBananaOptions = {}) {
 
       // 更新上传完成状态
       setUploadedImages((prev) =>
-        prev.map((img) =>
-          img.id === imageId
-            ? { ...img, uploadProgress: 100, url: data.url }
-            : img
-        )
+        prev.map((img) => (img.id === imageId ? { ...img, uploadProgress: 100, url: data.url } : img))
       );
 
       return data.url;
     } catch (error) {
       console.error("Upload error:", error);
       // 重置上传进度
-      setUploadedImages((prev) =>
-        prev.map((img) =>
-          img.id === imageId ? { ...img, uploadProgress: 0 } : img
-        )
-      );
+      setUploadedImages((prev) => prev.map((img) => (img.id === imageId ? { ...img, uploadProgress: 0 } : img)));
       throw error;
     }
   };
@@ -127,8 +106,7 @@ export function useNanoBanana(options: UseNanoBananaOptions = {}) {
           uploadedCount++;
 
           // 更新总体进度
-          const overallProgress =
-            Math.round((uploadedCount / uploadedImages.length) * 15) + 5;
+          const overallProgress = Math.round((uploadedCount / uploadedImages.length) * 15) + 5;
           setProgress(overallProgress);
         } catch (error) {
           throw new Error(`Failed to upload image ${image.file.name}`);
@@ -157,7 +135,7 @@ export function useNanoBanana(options: UseNanoBananaOptions = {}) {
 
       // 如果超过10张，提示用户
       if (uploadedImages.length + files.length > 10) {
-        toast.warning("最多只能上传10张图片，已自动限制数量");
+        toast.warning("Maximum 10 images allowed, automatically limited");
       }
     },
     [uploadedImages.length]
@@ -186,14 +164,12 @@ export function useNanoBanana(options: UseNanoBananaOptions = {}) {
       const data = await response.json();
 
       if (data.success && data.data?.images) {
-        const results: GenerationResult[] = data.data.images.map(
-          (img: any) => ({
-            url: img.url,
-            seed: img.seed,
-            width: img.width,
-            height: img.height,
-          })
-        );
+        const results: GenerationResult[] = data.data.images.map((img: any) => ({
+          url: img.url,
+          seed: img.seed,
+          width: img.width,
+          height: img.height,
+        }));
 
         // 保存AI描述
         if (data.data.description) {
@@ -204,7 +180,7 @@ export function useNanoBanana(options: UseNanoBananaOptions = {}) {
         setStatus("completed");
         setProgress(100);
 
-        toast.success(`成功生成 ${results.length} 张图片！`);
+        toast.success(`Successfully generated ${results.length} images!`);
         onComplete?.(results);
       } else {
         throw new Error(data.error || "Failed to get results");
@@ -212,7 +188,7 @@ export function useNanoBanana(options: UseNanoBananaOptions = {}) {
     } catch (error) {
       console.error("Failed to get result:", error);
       setStatus("failed");
-      const errorMsg = error instanceof Error ? error.message : "获取结果失败";
+      const errorMsg = error instanceof Error ? error.message : "Failed to get results";
       toast.error(errorMsg);
       onError?.(errorMsg);
     }
@@ -257,7 +233,7 @@ export function useNanoBanana(options: UseNanoBananaOptions = {}) {
           }
 
           setStatus("failed");
-          const errorMsg = data.error || "任务执行失败";
+          const errorMsg = data.error || "Task execution failed";
           toast.error(errorMsg);
           onError?.(errorMsg);
         }
@@ -273,12 +249,12 @@ export function useNanoBanana(options: UseNanoBananaOptions = {}) {
     try {
       // 验证输入
       if (!prompt.trim()) {
-        toast.error("请输入提示词");
+        toast.error("Please enter a prompt");
         return;
       }
 
       if (mode === "image-to-image" && uploadedImages.length === 0) {
-        toast.error("请上传至少一张图片");
+        toast.error("Please upload at least one image");
         return;
       }
 
@@ -292,14 +268,13 @@ export function useNanoBanana(options: UseNanoBananaOptions = {}) {
       let imageUrls: string[] = [];
       if (mode === "image-to-image") {
         try {
-          toast.info(`开始上传 ${uploadedImages.length} 张图片...`);
+          toast.info(`Starting to upload ${uploadedImages.length} images...`);
           imageUrls = await uploadAllImages();
           setProgress(20);
-          toast.success("所有图片上传完成！");
+          toast.success("All images uploaded successfully!");
         } catch (error) {
           setStatus("failed");
-          const errorMsg =
-            error instanceof Error ? error.message : "图片上传失败";
+          const errorMsg = error instanceof Error ? error.message : "Image upload failed";
           toast.error(errorMsg);
           onError?.(errorMsg);
           return;
@@ -331,17 +306,17 @@ export function useNanoBanana(options: UseNanoBananaOptions = {}) {
       setTaskId(data.task_id);
       setProgress(30);
 
-      toast.info("任务已提交，正在处理中...");
+      toast.info("Task submitted, processing...");
 
       // 开始轮询状态
       pollTaskStatus(data.task_id);
     } catch (error) {
       setStatus("failed");
-      const errorMsg = error instanceof Error ? error.message : "提交任务失败";
+      const errorMsg = error instanceof Error ? error.message : "Failed to submit task";
 
       // 特殊处理积分不足的情况
       if (errorMsg.includes("Insufficient credits")) {
-        toast.error("积分不足，请充值后再试");
+        toast.error("Insufficient credits, please recharge and try again");
       } else {
         toast.error(errorMsg);
       }
