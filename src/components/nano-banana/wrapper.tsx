@@ -20,14 +20,14 @@ export default function NanoBananaWrapper() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-green-500 to-cyan-500 bg-clip-text text-transparent">
-            Nano Banana AI 创作工作台
+            Nano Banana AI Creation Workbench
           </h2>
           <p className="text-lg text-muted-foreground">
-            使用先进的 AI 技术，将您的想象转化为精美的图像
+            Use advanced AI technology to transform your imagination into beautiful images
           </p>
         </div>
-        
-        <NanoBananaWorkspace 
+
+        <NanoBananaWorkspace
           defaultMode="image-to-image"
           onComplete={(results) => {
             console.log("Generation completed:", results);
