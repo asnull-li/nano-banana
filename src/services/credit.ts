@@ -27,7 +27,7 @@ export enum CreditsAmount {
   PingCost = 1,
   FluxProCost = 2,
   FluxMaxCost = 4,
-  NanoBananaPerImage = 5, // cost per image for nano banana
+  NanoBananaPerImage = 4, // cost per image for nano banana
 }
 
 export async function getUserCredits(user_uuid: string): Promise<UserCredits> {
