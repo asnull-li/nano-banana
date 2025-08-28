@@ -22,15 +22,13 @@ export default function HeroContent({ hero }: { hero: HeroType }) {
     // Don't prevent default - let the browser update the URL
     // The browser will automatically scroll, but we want smooth scrolling
     // e.preventDefault();
-
     // Update the URL
-    window.history.pushState(null, "", "#nano-banana");
-
-    // Smooth scroll to banana-workspace (new workspace)
-    const workspaceElement = document.getElementById("banana-workspace");
-    if (workspaceElement) {
-      workspaceElement.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
+    // window.history.pushState(null, "", "#nano-banana");
+    // // Smooth scroll to banana-workspace (new workspace)
+    // const workspaceElement = document.getElementById("banana-workspace");
+    // if (workspaceElement) {
+    //   workspaceElement.scrollIntoView({ behavior: "smooth", block: "start" });
+    // }
   };
 
   useEffect(() => {
