@@ -1,0 +1,160 @@
+{
+  "showcase": {
+    "name": "showcase",
+    "title": "Nano Banana Galerie",
+    "description": "Erkunden Sie verschiedene Arten von Bildbearbeitungseffekten und erleben Sie die Kraft professioneller KI-Technologie.",
+    "subtitle": "Entfesseln Sie Ihre Kreativität und entdecken Sie weitere Möglichkeiten, nicht nur die unten gezeigten Fälle.",
+    "items": [
+      {
+        "id": "background-replacement",
+        "category": "Background Replacement",
+        "title": "Hintergrundaustausch",
+        "description": "Trennen Sie das Motiv vom ursprünglichen Hintergrund und ersetzen Sie ihn durch eine neue, kreativere Szene.",
+        "original": "https://file.nanobanana.org/showcase/1.webp",
+        "effects": [
+          {
+            "id": "vintage-desk",
+            "name": "Vintage Werkzeugbank",
+            "image": "https://file.nanobanana.org/showcase/1-1.webp",
+            "prompt": "Change background to a vast grassland",
+            "description": "Platzieren Sie das Motiv in einer Handwerker-Werkstatt"
+          },
+          {
+            "id": "tropical-beach",
+            "name": "Tropischer Strand",
+            "image": "https://file.nanobanana.org/showcase/1-2.webp",
+            "prompt": "Change background to a winding mountain road",
+            "description": "Sonniger Strandhintergrund mit kristallklarem Wasser"
+          },
+          {
+            "id": "modern-office",
+            "name": "Modernes Büro",
+            "image": "https://file.nanobanana.org/showcase/1-3.webp",
+            "prompt": "Change background to a winding mountain road",
+            "description": "Sauberer, minimalistischer Büroraum"
+          }
+        ]
+      },
+      {
+        "id": "lighting-adjustment",
+        "category": "Lighting Adjustment",
+        "title": "Lichtanpassung",
+        "description": "Passen Sie Lichteffekte mit KI an, um die Stimmung zu ändern und Ihren Bildern ein kinoreifes Gefühl zu verleihen.",
+        "original": "https://file.nanobanana.org/showcase/2.webp",
+        "effects": [
+          {
+            "id": "golden-hour",
+            "name": "Goldene Stunde",
+            "image": "https://file.nanobanana.org/showcase/2-1.webp",
+            "prompt": "Add warm sunlight effect",
+            "description": "Magisches Licht der goldenen Stunde nachbilden"
+          },
+          {
+            "id": "dramatic-shadows",
+            "name": "Dramatische Schatten",
+            "image": "https://file.nanobanana.org/showcase/2-2.webp",
+            "prompt": "Adjust to the cool tones of the 'blue hour'",
+            "description": "Hoher Kontrast, dramatische Beleuchtung"
+          },
+          {
+            "id": "soft-glow",
+            "name": "Sanftes Leuchten",
+            "image": "https://file.nanobanana.org/showcase/2-3.webp",
+            "prompt": "Switch to a night scene with point light sources",
+            "description": "Sanfter, schmeichelhafter Lichteffekt"
+          }
+        ]
+      },
+      {
+        "id": "style-conversion",
+        "category": "Style Conversion",
+        "title": "Stilkonvertierung",
+        "description": "Verwandeln Sie Ihre Fotos mit KI in verschiedene künstlerische Stile.",
+        "original": "https://file.nanobanana.org/showcase/3.webp",
+        "effects": [
+          {
+            "id": "oil-painting",
+            "name": "Ölgemälde",
+            "image": "https://file.nanobanana.org/showcase/3-1.webp",
+            "prompt": "Convert to Japanese anime style",
+            "description": "Klassischer Ölgemälde-Kunsteffekt"
+          },
+          {
+            "id": "watercolor",
+            "name": "Aquarell",
+            "image": "https://file.nanobanana.org/showcase/3-2.webp",
+            "prompt": "Convert to a rich oil painting style",
+            "description": "Zarter Aquarell-Kunststil"
+          },
+          {
+            "id": "anime",
+            "name": "Anime-Stil",
+            "image": "https://file.nanobanana.org/showcase/3-3.webp",
+            "prompt": "Convert to a retro pixel art style",
+            "description": "Japanischer Anime-Charakterstil"
+          }
+        ]
+      },
+      {
+        "id": "color-change",
+        "category": "Color Change",
+        "title": "Farbänderung",
+        "description": "Professionelle Farbkorrektur, um die Stimmung Ihrer Fotos vollständig zu ändern.",
+        "original": "https://file.nanobanana.org/showcase/4.webp",
+        "effects": [
+          {
+            "id": "vibrant",
+            "name": "Lebendige Farben",
+            "image": "https://file.nanobanana.org/showcase/4-1.webp",
+            "prompt": "Change all green leaves to red",
+            "description": "Auffällige, lebhafte Farben"
+          },
+          {
+            "id": "moody",
+            "name": "Stimmungsvolle Töne",
+            "image": "https://file.nanobanana.org/showcase/4-2.webp",
+            "prompt": "Change all green leaves to yellow",
+            "description": "Tiefe, atmosphärische Farbkorrektur"
+          },
+          {
+            "id": "vintage",
+            "name": "Vintage-Film",
+            "image": "https://file.nanobanana.org/showcase/4-3.webp",
+            "prompt": "Change all green leaves to blue",
+            "description": "Klassische Film-Farbpalette"
+          }
+        ]
+      },
+      {
+        "id": "age-transformation",
+        "category": "Age Transformation",
+        "title": "Alterstransformation",
+        "description": "Sehen Sie sich in verschiedenen Altern mit fortschrittlicher KI-Technologie.",
+        "original": "https://file.nanobanana.org/showcase/5.webp",
+        "effects": [
+          {
+            "id": "younger",
+            "name": "10 Jahre jünger",
+            "image": "https://file.nanobanana.org/showcase/5-1.webp",
+            "prompt": "Change age to 3 years old",
+            "description": "Natürlicher Altersreduktionseffekt"
+          },
+          {
+            "id": "teenage",
+            "name": "Jugendjahre",
+            "image": "https://file.nanobanana.org/showcase/5-2.webp",
+            "prompt": "Change age to 16 years old",
+            "description": "Jugendliches Aussehen"
+          },
+          {
+            "id": "elderly",
+            "name": "Zukünftiges Ich",
+            "image": "https://file.nanobanana.org/showcase/5-3.webp",
+            "prompt": "Change age to 16 years old",
+            "description": "Natürliche Alterungssimulation"
+          }
+        ]
+      }
+    ]
+  }
+}

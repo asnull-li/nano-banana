@@ -1,6 +1,6 @@
 import { Pathnames } from "next-intl/routing";
 
-export const locales = ["en", "zh", "ko", "ja", "es"];
+export const locales = ["en", "zh", "ko", "ja", "es", "de"];
 
 export const localeNames: any = {
   en: "English",
@@ -8,6 +8,7 @@ export const localeNames: any = {
   ko: "한국어",
   ja: "日本語",
   es: "Español",
+  de: "Deutsch",
 };
 
 export const defaultLocale = "en";

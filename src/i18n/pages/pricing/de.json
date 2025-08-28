@@ -1,0 +1,109 @@
+{
+  "pricing": {
+    "name": "pricing",
+    "label": "Preise",
+    "title": "Einfache, transparente Preise",
+    "description": "Wählen Sie den perfekten Plan für Ihre KI-Bilderstellungsbedürfnisse.",
+    "groups": [],
+    "items": [
+      {
+        "title": "Testversion",
+        "description": "Perfekt zum Ausprobieren der KI-Bildgenerierung und für kleine Projekte.",
+        "features_title": "Was enthalten ist",
+        "features": [
+          "50 KI-Generierungs-Credits",
+          "Nano Banana Hochqualitätsmodelle",
+          "Text-zu-Bild-Generierung",
+          "Bild-zu-Bild-Bearbeitung",
+          "Standard-Generierungsgeschwindigkeit",
+          "Standard-Erfolgsrate",
+          "Standard-Kundensupport",
+          "Download in hoher Auflösung"
+        ],
+        "interval": "one-time",
+        "amount": 599,
+        "cn_amount": 0,
+        "currency": "USD",
+        "price": "$5.99",
+        "original_price": "$19.99",
+        "unit": "USD",
+        "is_featured": false,
+        "tip": "Einmalige Testversion ohne Abonnement, ideal zum Testen",
+        "button": {
+          "title": "Einmalige Testversion",
+          "url": "/#pricing",
+          "icon": "RiFlashlightFill"
+        },
+        "product_id": "prod_Ssq8Ltsmjqeiw9",
+        "product_name": "Nano Banana Einmalige Testversion",
+        "credits": 50,
+        "valid_months": 1
+      },
+      {
+        "title": "Pro",
+        "description": "Ideal für Kreative, Designer und Content-Profis.",
+        "label": "Am beliebtesten",
+        "features_title": "Alles aus Basic",
+        "features": [
+          "400 KI-Generierungs-Credits",
+          "Prioritätsverarbeitungsgeschwindigkeit",
+          "Hohe Erfolgsrate",
+          "Erweiterte Bearbeitungsfunktionen",
+          "Multi-Referenz-Generierung",
+          "Hochgeschwindigkeits-Download-Kanal",
+          "Prioritäts-Kundensupport",
+          "Erweiterte kommerzielle Lizenz"
+        ],
+        "interval": "month",
+        "amount": 2399,
+        "cn_amount": 0,
+        "currency": "USD",
+        "price": "$23.99",
+        "original_price": "$89.99",
+        "unit": "USD",
+        "is_featured": true,
+        "tip": "Bestes Preis-Leistungs-Verhältnis für ernsthafte Kreative",
+        "button": {
+          "title": "Pro abonnieren",
+          "url": "/#pricing",
+          "icon": "RiFlashlightFill"
+        },
+        "product_id": "prod_SsqBq5Jdkmjp4l",
+        "product_name": "Nano Banana Pro",
+        "credits": 400,
+        "valid_months": 1
+      },
+      {
+        "title": "Premium",
+        "description": "Für Teams, Agenturen und kommerzielle Nutzung mit hohem Volumen.",
+        "features_title": "Alles aus Pro",
+        "features": [
+          "2000 KI-Generierungs-Credits",
+          "Schnellste Generierungsgeschwindigkeit",
+          "Fortschrittlichste KI-Bearbeitungsfähigkeiten",
+          "Permanente Bildspeicherung",
+          "Unbegrenzte kommerzielle Lizenz",
+          "Dedizierter Account-Manager"
+        ],
+        "interval": "month",
+        "amount": 8999,
+        "cn_amount": 0,
+        "currency": "USD",
+        "price": "$89.99",
+        "original_price": "$179.99",
+        "unit": "USD",
+        "is_featured": false,
+        "tip": "Perfekt für Teams und Unternehmen",
+        "button": {
+          "title": "Premium abonnieren",
+          "url": "/#pricing",
+          "icon": "RiFlashlightFill"
+        },
+        "product_id": "prod_SsqCkSQWvK8NzC",
+        "product_name": "Nano Banana Premium",
+        "credits": 2000,
+        "valid_months": 1
+      }
+    ]
+  }
+}
