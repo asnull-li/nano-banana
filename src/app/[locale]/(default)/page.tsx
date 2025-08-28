@@ -51,7 +51,7 @@ export default async function LandingPage({
     <>
       {page.hero && <Hero hero={page.hero} />}
       <NanoBananaWrapper />
-      <WorkspaceWrapper />
+      {/* <WorkspaceWrapper /> */}
 
       {showcasePage.showcase && (
         <Showcase section={showcasePage.showcase as any} />
