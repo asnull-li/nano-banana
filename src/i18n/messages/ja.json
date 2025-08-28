@@ -131,6 +131,7 @@
     "most_popular": "最も人気"
   },
   "workspace": {
+    "loading_text": "ワークスペースを読み込み中...",
     "sign_in_prompt": "AIで創造を始めるためにサインイン",
     "sign_in_description": "新規ユーザーには強力なAI創造を体験するための無料クレジットを提供",
     "sign_in_button": "サインインして作成",
@@ -207,6 +208,28 @@
     }
   },
   "nano_banana": {
+    "wrapper": {
+      "loading_text": "Nano Bananaを読み込み中...",
+      "title": "Nano Banana AIクリエイションワークベンチ",
+      "description": "高度なAI技術を使用して、想像力を美しい画像に変換します"
+    },
+    "messages": {
+      "starting_upload": "{count}枚の画像をアップロード中...",
+      "upload_success": "すべての画像が正常にアップロードされました！",
+      "upload_failed": "画像のアップロードに失敗しました",
+      "upload_image_failed": "画像 {filename} のアップロードに失敗しました",
+      "submit_failed": "タスクの送信に失敗しました",
+      "task_submitted": "タスクが送信され、処理中です...",
+      "insufficient_credits": "クレジットが不足しています、チャージしてから再試行してください",
+      "generation_success": "{count}枚の画像を正常に生成しました！",
+      "get_results_failed": "結果の取得に失敗しました",
+      "task_failed": "タスクの実行に失敗しました",
+      "max_images_warning": "最大10枚まで、自動的に制限されました"
+    },
+    "validation": {
+      "please_enter_prompt": "プロンプトを入力してください",
+      "please_upload_image": "少なくとも1枚の画像をアップロードしてください"
+    },
     "mode_selector": {
       "edit_mode": "対話で画像を編集",
       "text_mode": "テキスト→画像モード"

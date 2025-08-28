@@ -1,17 +1,22 @@
 "use client";
 
 import dynamic from "next/dynamic";
+import { useTranslations } from "next-intl";
 
 const NanoBananaWorkspace = dynamic(() => import("./index"), {
   ssr: false,
-  loading: () => (
-    <div className="w-full h-96 flex items-center justify-center">
-      <div className="text-center">
-        <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-green-500"></div>
-        <p className="mt-2 text-sm text-muted-foreground">Loading workspace...</p>
+  loading: () => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const t = useTranslations();
+    return (
+      <div className="w-full h-96 flex items-center justify-center">
+        <div className="text-center">
+          <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-green-500"></div>
+          <p className="mt-2 text-sm text-muted-foreground">{t("workspace.loading_text")}</p>
+        </div>
       </div>
-    </div>
-  ),
+    );
+  },
 });
 
 export default function WorkspaceWrapper() {

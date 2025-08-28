@@ -131,6 +131,7 @@
     "most_popular": "Most Popular"
   },
   "workspace": {
+    "loading_text": "Loading workspace...",
     "sign_in_prompt": "Sign in to Start Creating with AI",
     "sign_in_description": "New users get free credits to experience powerful AI creation",
     "sign_in_button": "Sign In to Create",
@@ -207,6 +208,28 @@
     }
   },
   "nano_banana": {
+    "wrapper": {
+      "loading_text": "Loading Nano Banana...",
+      "title": "Nano Banana AI Creation Workbench",
+      "description": "Use advanced AI technology to transform your imagination into beautiful images"
+    },
+    "messages": {
+      "starting_upload": "Starting to upload {count} images...",
+      "upload_success": "All images uploaded successfully!",
+      "upload_failed": "Image upload failed",
+      "upload_image_failed": "Failed to upload image {filename}",
+      "submit_failed": "Failed to submit task",
+      "task_submitted": "Task submitted, processing...",
+      "insufficient_credits": "Insufficient credits, please recharge and try again",
+      "generation_success": "Successfully generated {count} images!",
+      "get_results_failed": "Failed to get results",
+      "task_failed": "Task execution failed",
+      "max_images_warning": "Maximum 10 images allowed, automatically limited"
+    },
+    "validation": {
+      "please_enter_prompt": "Please enter a prompt",
+      "please_upload_image": "Please upload at least one image"
+    },
     "mode_selector": {
       "edit_mode": "Edit Images with Chat",
       "text_mode": "Text-to-Image Mode"

@@ -131,6 +131,7 @@
     "most_popular": "最受欢迎"
   },
   "workspace": {
+    "loading_text": "正在加载工作区...",
     "sign_in_prompt": "登录即可开始使用 AI 图像生成",
     "sign_in_description": "新用户登录免费获得积分，立即体验强大的 AI 创作功能",
     "sign_in_button": "登录开始创作",
@@ -207,6 +208,28 @@
     }
   },
   "nano_banana": {
+    "wrapper": {
+      "loading_text": "正在加载 Nano Banana...",
+      "title": "Nano Banana AI 创作工作台",
+      "description": "使用先进的AI技术将您的想象力转化为美丽的图像"
+    },
+    "messages": {
+      "starting_upload": "开始上传 {count} 张图片...",
+      "upload_success": "所有图片上传成功！",
+      "upload_failed": "图片上传失败",
+      "upload_image_failed": "上传图片 {filename} 失败",
+      "submit_failed": "提交任务失败",
+      "task_submitted": "任务已提交，正在处理...",
+      "insufficient_credits": "积分不足，请充值后重试",
+      "generation_success": "成功生成 {count} 张图片！",
+      "get_results_failed": "获取结果失败",
+      "task_failed": "任务执行失败",
+      "max_images_warning": "最多允许10张图片，已自动限制"
+    },
+    "validation": {
+      "please_enter_prompt": "请输入提示词",
+      "please_upload_image": "请至少上传一张图片"
+    },
     "mode_selector": {
       "edit_mode": "通过对话编辑图像",
       "text_mode": "文生图模式"

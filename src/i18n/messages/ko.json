@@ -131,6 +131,7 @@
     "most_popular": "가장 인기"
   },
   "workspace": {
+    "loading_text": "작업 공간 로딩 중...",
     "sign_in_prompt": "AI로 창작을 시작하려면 로그인하세요",
     "sign_in_description": "신규 사용자는 무료 크레딧을 받아 강력한 AI 창작을 경험할 수 있습니다",
     "sign_in_button": "로그인하여 창작하기",
@@ -207,6 +208,28 @@
     }
   },
   "nano_banana": {
+    "wrapper": {
+      "loading_text": "Nano Banana 로딩 중...",
+      "title": "Nano Banana AI 창작 워크벤치",
+      "description": "고급 AI 기술을 사용하여 상상력을 아름다운 이미지로 변환합니다"
+    },
+    "messages": {
+      "starting_upload": "{count}개의 이미지를 업로드 중...",
+      "upload_success": "모든 이미지가 성공적으로 업로드되었습니다!",
+      "upload_failed": "이미지 업로드 실패",
+      "upload_image_failed": "{filename} 이미지 업로드 실패",
+      "submit_failed": "작업 제출 실패",
+      "task_submitted": "작업이 제출되어 처리 중입니다...",
+      "insufficient_credits": "크레딧이 부족합니다. 충전 후 다시 시도해 주세요",
+      "generation_success": "{count}개의 이미지를 성공적으로 생성했습니다!",
+      "get_results_failed": "결과 가져오기 실패",
+      "task_failed": "작업 실행 실패",
+      "max_images_warning": "최대 10개 이미지로 자동 제한됨"
+    },
+    "validation": {
+      "please_enter_prompt": "프롬프트를 입력해 주세요",
+      "please_upload_image": "최소 1개 이상의 이미지를 업로드해 주세요"
+    },
     "mode_selector": {
       "edit_mode": "채팅으로 이미지 편집",
       "text_mode": "텍스트→이미지 모드"

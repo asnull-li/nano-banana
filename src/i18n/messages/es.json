@@ -131,6 +131,7 @@
     "most_popular": "Más Popular"
   },
   "workspace": {
+    "loading_text": "Cargando espacio de trabajo...",
     "sign_in_prompt": "Inicia sesión para comenzar a crear con IA",
     "sign_in_description": "Los nuevos usuarios obtienen créditos gratuitos para experimentar la creación potente con IA",
     "sign_in_button": "Iniciar Sesión para Crear",
@@ -207,6 +208,28 @@
     }
   },
   "nano_banana": {
+    "wrapper": {
+      "loading_text": "Cargando Nano Banana...",
+      "title": "Banco de Trabajo de Creación AI Nano Banana",
+      "description": "Usa tecnología AI avanzada para transformar tu imaginación en hermosas imágenes"
+    },
+    "messages": {
+      "starting_upload": "Comenzando a subir {count} imágenes...",
+      "upload_success": "¡Todas las imágenes se subieron correctamente!",
+      "upload_failed": "Error al subir la imagen",
+      "upload_image_failed": "Error al subir la imagen {filename}",
+      "submit_failed": "Error al enviar la tarea",
+      "task_submitted": "Tarea enviada, procesando...",
+      "insufficient_credits": "Créditos insuficientes, recarga y vuelve a intentarlo",
+      "generation_success": "¡{count} imágenes generadas con éxito!",
+      "get_results_failed": "Error al obtener resultados",
+      "task_failed": "Error en la ejecución de la tarea",
+      "max_images_warning": "Máximo 10 imágenes permitidas, limitado automáticamente"
+    },
+    "validation": {
+      "please_enter_prompt": "Por favor ingresa un prompt",
+      "please_upload_image": "Por favor sube al menos una imagen"
+    },
     "mode_selector": {
       "edit_mode": "Editar Imágenes con Chat",
       "text_mode": "Modo Texto→Imagen"
