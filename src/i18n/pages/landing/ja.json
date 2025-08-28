@@ -32,7 +32,7 @@
     "buttons": [
       {
         "title": "Nano Bananaを始める",
-        "url": "/#workspace",
+        "url": "/#nano-banana",
         "target": "_self",
         "variant": "link",
         "icon": "RiArrowRightUpLine"
@@ -49,14 +49,14 @@
     "announcement": {
       "label": "2025",
       "title": "🚀 Nano Bananaを無料で試す",
-      "url": "/#workspace"
+      "url": "/#nano-banana"
     },
     "tip": "🎨 今日からNano Bananaで創作を始めましょう",
     "buttons": [
       {
         "title": "Nano Bananaを試す",
         "icon": "RiFlashlightFill",
-        "url": "#workspace",
+        "url": "/#nano-banana",
         "target": "_self",
         "variant": "default"
       },
@@ -366,7 +366,7 @@
     "buttons": [
       {
         "title": "今すぐNano Bananaを試す",
-        "url": "/#workspace",
+        "url": "/#nano-banana",
         "target": "_self",
         "icon": "GoArrowUpRight"
       },

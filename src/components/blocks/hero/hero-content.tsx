@@ -21,10 +21,10 @@ export default function HeroContent({ hero }: { hero: HeroType }) {
   const handleScrollToWorkspace = (e: React.MouseEvent<HTMLAnchorElement>) => {
     // Don't prevent default - let the browser update the URL
     // The browser will automatically scroll, but we want smooth scrolling
-    e.preventDefault();
+    // e.preventDefault();
 
     // Update the URL
-    window.history.pushState(null, "", "#workspace");
+    window.history.pushState(null, "", "#nano-banana");
 
     // Smooth scroll to banana-workspace (new workspace)
     const workspaceElement = document.getElementById("banana-workspace");
@@ -36,13 +36,16 @@ export default function HeroContent({ hero }: { hero: HeroType }) {
   useEffect(() => {
     setMounted(true);
     setIsVisible(true);
-    
-    // Check if URL has #workspace hash and scroll to banana-workspace
-    if (window.location.hash === '#workspace') {
+
+    // Check if URL has /#nano-banana hash and scroll to banana-workspace
+    if (window.location.hash === "/#nano-banana") {
       setTimeout(() => {
-        const workspaceElement = document.getElementById('banana-workspace');
+        const workspaceElement = document.getElementById("banana-workspace");
         if (workspaceElement) {
-          workspaceElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          workspaceElement.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
         }
       }, 100); // Small delay to ensure DOM is ready
     }
@@ -185,13 +188,13 @@ export default function HeroContent({ hero }: { hero: HeroType }) {
             <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
               {hero.buttons.map((item, i) => {
                 const isPrimary = i === 0;
-                const isWorkspaceLink = item.url === "#workspace";
+                const isWorkspaceLink = item.url === "/#nano-banana";
 
                 if (isWorkspaceLink) {
                   return (
                     <a
                       key={i}
-                      href="#workspace"
+                      href="#nano-banana"
                       onClick={handleScrollToWorkspace}
                       className={`group transition-all duration-1000 ${
                         isVisible
