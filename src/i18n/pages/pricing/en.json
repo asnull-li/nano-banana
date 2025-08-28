@@ -11,11 +11,12 @@
         "description": "Perfect for trying out AI image generation and small projects.",
         "features_title": "What's included",
         "features": [
-          "30 AI generation credits",
-          "Pro & Max quality models",
+          "50 AI generation credits",
+          "Nano Banana high quality models",
           "Text-to-image generation",
           "Image-to-image editing",
           "Standard generation speed",
+          "Standard success rate",
           "Standard customer support",
           "Download in high resolution"
         ],
@@ -35,7 +36,7 @@
         },
         "product_id": "prod_Ssq8Ltsmjqeiw9",
         "product_name": "Nano Banana One-time Trial",
-        "credits": 30,
+        "credits": 50,
         "valid_months": 1
       },
       {
@@ -46,8 +47,9 @@
         "features": [
           "400 AI generation credits",
           "Priority processing speed",
+          "High success rate",
           "Advanced editing features",
-          "Batch processing",
+          "Multi-reference generation",
           "High-speed download channel",
           "Priority customer support",
           "Extended commercial license"
@@ -76,7 +78,7 @@
         "description": "For teams, agencies, and high-volume commercial use.",
         "features_title": "Everything in Pro",
         "features": [
-          "1500 AI generation credits",
+          "2000 AI generation credits",
           "Fastest generation speed",
           "Most advanced AI editing capabilities",
           "Permanent image storage",
@@ -99,7 +101,7 @@
         },
         "product_id": "prod_SsqCkSQWvK8NzC",
         "product_name": "Nano Banana Premium",
-        "credits": 1500,
+        "credits": 2000,
         "valid_months": 1
       }
     ]

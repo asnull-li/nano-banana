@@ -11,11 +11,12 @@
         "description": "AI 이미지 생성 체험과 소규모 프로젝트에 적합합니다.",
         "features_title": "포함 기능",
         "features": [
-          "30개 AI 생성 크레딧",
-          "Pro & Max 품질 모델",
+          "50개 AI 생성 크레딧",
+          "Nano Banana 품질 모델",
           "텍스트-이미지 생성",
           "이미지-이미지 편집",
           "표준 생성 속도",
+          "표준 성공률",
           "표준 고객 지원",
           "고해상도 다운로드"
         ],
@@ -35,7 +36,7 @@
         },
         "product_id": "prod_Ssq8Ltsmjqeiw9",
         "product_name": "Nano Banana 베이직",
-        "credits": 30,
+        "credits": 50,
         "valid_months": 1
       },
       {
@@ -46,8 +47,9 @@
         "features": [
           "400개 AI 생성 크레딧",
           "우선 처리 속도",
+          "높은 성공률",
           "고급 편집 기능",
-          "일괄 처리",
+          "다중 참조 생성",
           "고속 다운로드 채널",
           "우선 고객 지원",
           "확장 상업용 라이선스"
@@ -76,7 +78,7 @@
         "description": "팀, 에이전시 및 대량 상업적 사용을 위한 플랜입니다.",
         "features_title": "프로의 모든 기능 포함",
         "features": [
-          "1500개 AI 생성 크레딧",
+          "2000개 AI 생성 크레딧",
           "가장 빠른 생성 속도",
           "가장 고급 AI 편집 기능",
           "영구 이미지 저장",
@@ -99,7 +101,7 @@
         },
         "product_id": "prod_SsqCkSQWvK8NzC",
         "product_name": "Nano Banana 프리미엄",
-        "credits": 1500,
+        "credits": 2000,
         "valid_months": 1
       }
     ]

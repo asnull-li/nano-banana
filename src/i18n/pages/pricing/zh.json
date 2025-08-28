@@ -11,11 +11,12 @@
         "description": "适合体验 AI 图像生成和小型项目。",
         "features_title": "包含功能",
         "features": [
-          "30 个 AI 生成积分",
-          "Pro 和 Max 质量模型",
+          "50 个 AI 生成积分",
+          "Nano Banana高质量模型",
           "文本生成图像",
           "图像编辑功能",
           "标准生成速度",
+          "标准生成成功率",
           "标准客服支持",
           "高分辨率下载"
         ],
@@ -35,7 +36,7 @@
         },
         "product_id": "prod_Ssq8Ltsmjqeiw9",
         "product_name": "Nano Banana 一次性试用版",
-        "credits": 30,
+        "credits": 50,
         "valid_months": 1
       },
       {
@@ -46,8 +47,9 @@
         "features": [
           "400 个 AI 生成积分",
           "优先处理速度",
+          "高生成成功率",
           "高级编辑功能",
-          "批量处理",
+          "多图参考生成",
           "高速下载通道",
           "优先客服支持",
           "扩展商业许可"
@@ -76,7 +78,7 @@
         "description": "适合团队、代理商和大量商业使用。",
         "features_title": "包含专业版所有功能",
         "features": [
-          "1500 个 AI 生成积分",
+          "2000 个 AI 生成积分",
           "最快的生成速度",
           "最高级的 AI 编辑能力",
           "永久的图像存储",
@@ -99,7 +101,7 @@
         },
         "product_id": "prod_SsqCkSQWvK8NzC",
         "product_name": "Nano Banana 高级包",
-        "credits": 1500,
+        "credits": 2000,
         "valid_months": 1
       }
     ]
