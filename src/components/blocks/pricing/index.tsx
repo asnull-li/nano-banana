@@ -111,12 +111,22 @@ export default function Pricing({ pricing }: { pricing: PricingType }) {
             {pricing.description}
           </p>
         </div>
-        <p className="text-center my-8">
-          Cancel anytime • Unused credits roll over monthly
-          <br />
-          Cancel subscription, please contact the support
-          email：support@nanobanana.org
-        </p>
+        <div className="text-center my-10 text-muted-foreground">
+          <p className="mb-2 font-medium">
+            <span className="text-green-600">•</span> Cancel anytime
+            <span className="text-green-600">•</span> Unused credits roll over
+            monthly
+          </p>
+          <p className="text-sm">
+            Cancel subscription, please contact the support email:
+            <a
+              href="mailto:support@nanobanana.org"
+              className="text-cyan-600 hover:text-cyan-700 hover:underline transition-colors"
+            >
+              support@nanobanana.org
+            </a>
+          </p>
+        </div>
         <div className="w-full flex flex-col items-center gap-2">
           {pricing.groups && pricing.groups.length > 0 && (
             <div className="flex h-14 mb-16 items-center rounded-xl bg-gradient-to-r from-green-500/10 to-cyan-500/10 p-1.5 text-lg border border-green-500/20 shadow-lg backdrop-blur-sm">
