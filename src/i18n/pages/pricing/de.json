@@ -45,7 +45,7 @@
         "label": "Am beliebtesten",
         "features_title": "Alles aus Basic",
         "features": [
-          "400 KI-Generierungs-Credits",
+          "500 KI-Generierungs-Credits",
           "Prioritätsverarbeitungsgeschwindigkeit",
           "Hohe Erfolgsrate",
           "Erweiterte Bearbeitungsfunktionen",
@@ -62,7 +62,7 @@
         "original_price": "$89.99",
         "unit": "USD",
         "is_featured": true,
-        "tip": "Bestes Preis-Leistungs-Verhältnis für ernsthafte Kreative",
+        "tip": "🔥 Zeitlich begrenztes Angebot! Jetzt Pro holen",
         "button": {
           "title": "Pro abonnieren",
           "url": "/#pricing",
@@ -70,7 +70,7 @@
         },
         "product_id": "prod_SsqBq5Jdkmjp4l",
         "product_name": "Nano Banana Pro",
-        "credits": 400,
+        "credits": 500,
         "valid_months": 1
       },
       {

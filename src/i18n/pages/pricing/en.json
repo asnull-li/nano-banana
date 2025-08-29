@@ -45,7 +45,7 @@
         "label": "Most Popular",
         "features_title": "Everything in Basic",
         "features": [
-          "400 AI generation credits",
+          "500 AI generation credits",
           "Priority processing speed",
           "High success rate",
           "Advanced editing features",
@@ -62,7 +62,7 @@
         "original_price": "$89.99",
         "unit": "USD",
         "is_featured": true,
-        "tip": "Best value for serious creators",
+        "tip": "🔥 Limited Time Offer! Get Pro Now",
         "button": {
           "title": "Subscribe Pro",
           "url": "/#pricing",
@@ -70,7 +70,7 @@
         },
         "product_id": "prod_SsqBq5Jdkmjp4l",
         "product_name": "Nano Banana Pro",
-        "credits": 400,
+        "credits": 500,
         "valid_months": 1
       },
       {
