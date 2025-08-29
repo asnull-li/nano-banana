@@ -111,6 +111,12 @@ export default function Pricing({ pricing }: { pricing: PricingType }) {
             {pricing.description}
           </p>
         </div>
+        <p className="text-center my-8">
+          Can be canceled at any time.
+          <br />
+          Cancel subscription, please contact the support
+          email：support@nanobanana.org
+        </p>
         <div className="w-full flex flex-col items-center gap-2">
           {pricing.groups && pricing.groups.length > 0 && (
             <div className="flex h-14 mb-16 items-center rounded-xl bg-gradient-to-r from-green-500/10 to-cyan-500/10 p-1.5 text-lg border border-green-500/20 shadow-lg backdrop-blur-sm">
