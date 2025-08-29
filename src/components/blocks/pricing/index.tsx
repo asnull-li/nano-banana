@@ -112,7 +112,7 @@ export default function Pricing({ pricing }: { pricing: PricingType }) {
           </p>
         </div>
         <p className="text-center my-8">
-          Can be canceled at any time.
+          Cancel anytime • Unused credits roll over monthly
           <br />
           Cancel subscription, please contact the support
           email：support@nanobanana.org
