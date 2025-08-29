@@ -4,7 +4,10 @@
     "label": "定价",
     "title": "简单透明的定价",
     "description": "为您的 AI 图像创作需求选择完美的计划。",
-    "groups": [],
+    "groups": [
+      { "name": "monthly", "title": "月付" },
+      { "name": "credits-packs", "title": "积分包" }
+    ],
     "items": [
       {
         "title": "试用版",
@@ -20,6 +23,7 @@
           "标准客服支持",
           "高分辨率下载"
         ],
+        "group": "monthly",
         "interval": "one-time",
         "amount": 599,
         "cn_amount": 3999,
@@ -54,9 +58,10 @@
           "优先客服支持",
           "扩展商业许可"
         ],
+        "group": "monthly",
         "interval": "month",
         "amount": 2399,
-        "cn_amount": 0,
+        "cn_amount": 16793,
         "currency": "USD",
         "price": "$23.99",
         "original_price": "$89.99",
@@ -85,9 +90,10 @@
           "无限制的商业许可",
           "专属客户经理"
         ],
+        "group": "monthly",
         "interval": "month",
         "amount": 8999,
-        "cn_amount": 0,
+        "cn_amount": 62993,
         "currency": "USD",
         "price": "$89.99",
         "original_price": "$179.99",
@@ -103,6 +109,87 @@
         "product_name": "Nano Banana 高级包",
         "credits": 2000,
         "valid_months": 1
+      },
+      {
+        "title": "入门积分包",
+        "description": "一次采购，积分永不过期",
+        "features_title": "包含功能",
+        "features": ["400 个 AI 生成积分", "永不过期", "解锁锁所有功能"],
+        "group": "credits-packs",
+        "interval": "one-time",
+        "amount": 2999,
+        "cn_amount": 19999,
+        "currency": "USD",
+        "price": "$29.99",
+        "original_price": "$40",
+        "unit": "USD",
+        "is_featured": false,
+        "tip": "🔥 限时优惠！",
+        "button": {
+          "title": "立即购买",
+          "url": "/#pricing",
+          "icon": "RiFlashlightFill"
+        },
+        "product_id": "credits-packs-1",
+        "product_name": "Nano Banana 入门积分包",
+        "credits": 400,
+        "valid_months": 12
+      },
+      {
+        "title": "专业积分包",
+        "description": "一次采购，积分永不过期",
+        "features_title": "包含功能",
+        "features": ["2000 个 AI 生成积分", "永不过期", "解锁锁所有功能"],
+        "group": "credits-packs",
+        "interval": "one-time",
+        "amount": 9999,
+        "cn_amount": 69900,
+        "currency": "USD",
+        "price": "$99.99",
+        "original_price": "$120",
+        "unit": "USD",
+        "is_featured": false,
+        "tip": "🔥 限时优惠！",
+        "button": {
+          "title": "立即购买",
+          "url": "/#pricing",
+          "icon": "RiFlashlightFill"
+        },
+        "product_id": "credits-packs-2",
+        "product_name": "Nano Banana 专业积分包",
+        "credits": 2000,
+        "valid_months": 12
+      },
+      {
+        "title": "高级积分包",
+        "description": "一次采购，积分永不过期，适合专业设计人士",
+        "features_title": "包含功能",
+        "features": [
+          "8000 个 AI 生成积分",
+          "永不过期",
+          "解锁锁所有功能",
+          "优先的客服支持",
+          "专业的生成质量"
+        ],
+        "group": "credits-packs",
+        "interval": "one-time",
+        "amount": 20000,
+        "cn_amount": 140000,
+        "currency": "USD",
+        "price": "$200",
+        "original_price": "$400",
+        "unit": "USD",
+        "is_featured": false,
+        "tip": "🔥 限时优惠！",
+        "button": {
+          "title": "立即购买",
+          "url": "/#pricing",
+          "icon": "RiFlashlightFill"
+        },
+        "product_id": "credits-packs-3",
+        "product_name": "Nano Banana 高级积分包",
+        "credits": 8000,
+        "valid_months": 12
       }
     ]
   }

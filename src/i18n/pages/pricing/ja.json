@@ -4,7 +4,10 @@
     "label": "料金",
     "title": "シンプルで透明な料金体系",
     "description": "AI画像作成のニーズに最適なプランを選択してください。",
-    "groups": [],
+    "groups": [
+      { "name": "monthly", "title": "月料金" },
+      { "name": "credits-packs", "title": "クレジットパック" }
+    ],
     "items": [
       {
         "title": "トライアル",
@@ -20,6 +23,7 @@
           "標準カスタマーサポート",
           "高解像度でダウンロード"
         ],
+        "group": "monthly",
         "interval": "one-time",
         "amount": 599,
         "cn_amount": 0,
@@ -54,6 +58,7 @@
           "優先カスタマーサポート",
           "拡張商用ライセンス"
         ],
+        "group": "monthly",
         "interval": "month",
         "amount": 2399,
         "cn_amount": 0,
@@ -85,6 +90,7 @@
           "無制限の商用ライセンス",
           "専任アカウントマネージャー"
         ],
+        "group": "monthly",
         "interval": "month",
         "amount": 8999,
         "cn_amount": 0,
@@ -103,6 +109,95 @@
         "product_name": "Nano Bananaプレミアム",
         "credits": 2000,
         "valid_months": 1
+      },
+      {
+        "title": "エントリークレジットパック",
+        "description": "一回限りの購入、クレジットは永遠に期限が切れません",
+        "features_title": "含まれる機能",
+        "features": [
+          "400個のAI生成クレジット",
+          "永遠に期限が切れません",
+          "すべての機能を解除"
+        ],
+        "group": "credits-packs",
+        "interval": "one-time",
+        "amount": 2999,
+        "cn_amount": 0,
+        "currency": "USD",
+        "price": "$29.99",
+        "original_price": "$40",
+        "unit": "USD",
+        "is_featured": false,
+        "tip": "🔥 期間限定特価！",
+        "button": {
+          "title": "今すぐ購入",
+          "url": "/#pricing",
+          "icon": "RiFlashlightFill"
+        },
+        "product_id": "credits-packs-1",
+        "product_name": "Nano Banana エントリークレジットパック",
+        "credits": 400,
+        "valid_months": 12
+      },
+      {
+        "title": "プロフェッショナルクレジットパック",
+        "description": "一回限りの購入、クレジットは永遠に期限が切れません",
+        "features_title": "含まれる機能",
+        "features": [
+          "2000個のAI生成クレジット",
+          "永遠に期限が切れません",
+          "すべての機能を解除"
+        ],
+        "group": "credits-packs",
+        "interval": "one-time",
+        "amount": 9999,
+        "cn_amount": 0,
+        "currency": "USD",
+        "price": "$99.99",
+        "original_price": "$120",
+        "unit": "USD",
+        "is_featured": false,
+        "tip": "🔥 期間限定特価！",
+        "button": {
+          "title": "今すぐ購入",
+          "url": "/#pricing",
+          "icon": "RiFlashlightFill"
+        },
+        "product_id": "credits-packs-2",
+        "product_name": "Nano Banana プロフェッショナルクレジットパック",
+        "credits": 2000,
+        "valid_months": 12
+      },
+      {
+        "title": "プレミアムクレジットパック",
+        "description": "一回限りの購入、クレジットは永遠に期限が切れません、プロフェッショナルデザイナーに最適",
+        "features_title": "含まれる機能",
+        "features": [
+          "8000個のAI生成クレジット",
+          "永遠に期限が切れません",
+          "すべての機能を解除",
+          "優先カスタマーサポート",
+          "プロフェッショナルな生成品質"
+        ],
+        "group": "credits-packs",
+        "interval": "one-time",
+        "amount": 20000,
+        "cn_amount": 0,
+        "currency": "USD",
+        "price": "$200",
+        "original_price": "$400",
+        "unit": "USD",
+        "is_featured": false,
+        "tip": "🔥 期間限定特価！",
+        "button": {
+          "title": "今すぐ購入",
+          "url": "/#pricing",
+          "icon": "RiFlashlightFill"
+        },
+        "product_id": "credits-packs-3",
+        "product_name": "Nano Banana プレミアムクレジットパック",
+        "credits": 8000,
+        "valid_months": 12
       }
     ]
   }

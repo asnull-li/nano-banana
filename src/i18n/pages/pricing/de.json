@@ -4,7 +4,10 @@
     "label": "Preise",
     "title": "Einfache, transparente Preise",
     "description": "Wählen Sie den perfekten Plan für Ihre KI-Bilderstellungsbedürfnisse.",
-    "groups": [],
+    "groups": [
+      { "name": "monthly", "title": "Monatlich" },
+      { "name": "credits-packs", "title": "Credit-Pakete" }
+    ],
     "items": [
       {
         "title": "Testversion",
@@ -20,6 +23,7 @@
           "Standard-Kundensupport",
           "Download in hoher Auflösung"
         ],
+        "group": "monthly",
         "interval": "one-time",
         "amount": 599,
         "cn_amount": 0,
@@ -54,6 +58,7 @@
           "Prioritäts-Kundensupport",
           "Erweiterte kommerzielle Lizenz"
         ],
+        "group": "monthly",
         "interval": "month",
         "amount": 2399,
         "cn_amount": 0,
@@ -85,6 +90,7 @@
           "Unbegrenzte kommerzielle Lizenz",
           "Dedizierter Account-Manager"
         ],
+        "group": "monthly",
         "interval": "month",
         "amount": 8999,
         "cn_amount": 0,
@@ -103,6 +109,95 @@
         "product_name": "Nano Banana Premium",
         "credits": 2000,
         "valid_months": 1
+      },
+      {
+        "title": "Starter Credit-Paket",
+        "description": "Einmalkauf, Credits laufen nie ab",
+        "features_title": "Was enthalten ist",
+        "features": [
+          "400 KI-Generierungs-Credits",
+          "Laufen nie ab",
+          "Alle Funktionen freischalten"
+        ],
+        "group": "credits-packs",
+        "interval": "one-time",
+        "amount": 2999,
+        "cn_amount": 19999,
+        "currency": "USD",
+        "price": "$29.99",
+        "original_price": "$40",
+        "unit": "USD",
+        "is_featured": false,
+        "tip": "🔥 Zeitlich begrenztes Angebot!",
+        "button": {
+          "title": "Jetzt kaufen",
+          "url": "/#pricing",
+          "icon": "RiFlashlightFill"
+        },
+        "product_id": "credits-packs-1",
+        "product_name": "Nano Banana Starter Credit-Paket",
+        "credits": 400,
+        "valid_months": 12
+      },
+      {
+        "title": "Professionelles Credit-Paket",
+        "description": "Einmalkauf, Credits laufen nie ab",
+        "features_title": "Was enthalten ist",
+        "features": [
+          "2000 KI-Generierungs-Credits",
+          "Laufen nie ab",
+          "Alle Funktionen freischalten"
+        ],
+        "group": "credits-packs",
+        "interval": "one-time",
+        "amount": 9999,
+        "cn_amount": 69900,
+        "currency": "USD",
+        "price": "$99.99",
+        "original_price": "$120",
+        "unit": "USD",
+        "is_featured": false,
+        "tip": "🔥 Zeitlich begrenztes Angebot!",
+        "button": {
+          "title": "Jetzt kaufen",
+          "url": "/#pricing",
+          "icon": "RiFlashlightFill"
+        },
+        "product_id": "credits-packs-2",
+        "product_name": "Nano Banana Professionelles Credit-Paket",
+        "credits": 2000,
+        "valid_months": 12
+      },
+      {
+        "title": "Premium Credit-Paket",
+        "description": "Einmalkauf, Credits laufen nie ab, perfekt für professionelle Designer",
+        "features_title": "Was enthalten ist",
+        "features": [
+          "8000 KI-Generierungs-Credits",
+          "Laufen nie ab",
+          "Alle Funktionen freischalten",
+          "Prioritäts-Kundensupport",
+          "Professionelle Generierungsqualität"
+        ],
+        "group": "credits-packs",
+        "interval": "one-time",
+        "amount": 20000,
+        "cn_amount": 140000,
+        "currency": "USD",
+        "price": "$200",
+        "original_price": "$400",
+        "unit": "USD",
+        "is_featured": false,
+        "tip": "🔥 Zeitlich begrenztes Angebot!",
+        "button": {
+          "title": "Jetzt kaufen",
+          "url": "/#pricing",
+          "icon": "RiFlashlightFill"
+        },
+        "product_id": "credits-packs-3",
+        "product_name": "Nano Banana Premium Credit-Paket",
+        "credits": 8000,
+        "valid_months": 12
       }
     ]
   }

@@ -4,7 +4,10 @@
     "label": "가격",
     "title": "간단하고 투명한 가격",
     "description": "AI 이미지 생성 요구에 맞는 완벽한 플랜을 선택하세요.",
-    "groups": [],
+    "groups": [
+      { "name": "monthly", "title": "월간" },
+      { "name": "credits-packs", "title": "크레딧 팩" }
+    ],
     "items": [
       {
         "title": "트라이얼",
@@ -20,6 +23,7 @@
           "표준 고객 지원",
           "고해상도 다운로드"
         ],
+        "group": "monthly",
         "interval": "one-time",
         "amount": 599,
         "cn_amount": 0,
@@ -54,6 +58,7 @@
           "우선 고객 지원",
           "확장 상업용 라이선스"
         ],
+        "group": "monthly",
         "interval": "month",
         "amount": 2399,
         "cn_amount": 0,
@@ -85,6 +90,7 @@
           "무제한 상업용 라이선스",
           "전담 계정 관리자"
         ],
+        "group": "monthly",
         "interval": "month",
         "amount": 8999,
         "cn_amount": 0,
@@ -103,6 +109,95 @@
         "product_name": "Nano Banana 프리미엄",
         "credits": 2000,
         "valid_months": 1
+      },
+      {
+        "title": "입문 크레딧 팩",
+        "description": "일회성 구매, 크레딧은 영원히 만료되지 않음",
+        "features_title": "포함 기능",
+        "features": [
+          "400개 AI 생성 크레딧",
+          "영원히 만료되지 않음",
+          "모든 기능 해제"
+        ],
+        "group": "credits-packs",
+        "interval": "one-time",
+        "amount": 2999,
+        "cn_amount": 0,
+        "currency": "USD",
+        "price": "$29.99",
+        "original_price": "$40",
+        "unit": "USD",
+        "is_featured": false,
+        "tip": "🔥 기간 한정 특가!",
+        "button": {
+          "title": "지금 구매",
+          "url": "/#pricing",
+          "icon": "RiFlashlightFill"
+        },
+        "product_id": "credits-packs-1",
+        "product_name": "Nano Banana 입문 크레딧 팩",
+        "credits": 400,
+        "valid_months": 12
+      },
+      {
+        "title": "전문가 크레딧 팩",
+        "description": "일회성 구매, 크레딧은 영원히 만료되지 않음",
+        "features_title": "포함 기능",
+        "features": [
+          "2000개 AI 생성 크레딧",
+          "영원히 만료되지 않음",
+          "모든 기능 해제"
+        ],
+        "group": "credits-packs",
+        "interval": "one-time",
+        "amount": 9999,
+        "cn_amount": 0,
+        "currency": "USD",
+        "price": "$99.99",
+        "original_price": "$120",
+        "unit": "USD",
+        "is_featured": false,
+        "tip": "🔥 기간 한정 특가!",
+        "button": {
+          "title": "지금 구매",
+          "url": "/#pricing",
+          "icon": "RiFlashlightFill"
+        },
+        "product_id": "credits-packs-2",
+        "product_name": "Nano Banana 전문가 크레딧 팩",
+        "credits": 2000,
+        "valid_months": 12
+      },
+      {
+        "title": "프리미엄 크레딧 팩",
+        "description": "일회성 구매, 크레딧은 영원히 만료되지 않음, 전문 디자이너에게 적합",
+        "features_title": "포함 기능",
+        "features": [
+          "8000개 AI 생성 크레딧",
+          "영원히 만료되지 않음",
+          "모든 기능 해제",
+          "우선 고객 지원",
+          "전문적인 생성 품질"
+        ],
+        "group": "credits-packs",
+        "interval": "one-time",
+        "amount": 20000,
+        "cn_amount": 0,
+        "currency": "USD",
+        "price": "$200",
+        "original_price": "$400",
+        "unit": "USD",
+        "is_featured": false,
+        "tip": "🔥 기간 한정 특가!",
+        "button": {
+          "title": "지금 구매",
+          "url": "/#pricing",
+          "icon": "RiFlashlightFill"
+        },
+        "product_id": "credits-packs-3",
+        "product_name": "Nano Banana 프리미엄 크레딧 팩",
+        "credits": 8000,
+        "valid_months": 12
       }
     ]
   }

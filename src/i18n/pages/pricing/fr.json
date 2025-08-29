@@ -4,7 +4,10 @@
     "label": "Tarifs",
     "title": "Tarification simple et transparente",
     "description": "Choisissez le plan parfait pour vos besoins de création d'images IA.",
-    "groups": [],
+    "groups": [
+      { "name": "monthly", "title": "Mensuel" },
+      { "name": "credits-packs", "title": "Packs de Crédits" }
+    ],
     "items": [
       {
         "title": "Essai",
@@ -20,6 +23,7 @@
           "Support client standard",
           "Téléchargement en haute résolution"
         ],
+        "group": "monthly",
         "interval": "one-time",
         "amount": 599,
         "cn_amount": 0,
@@ -54,6 +58,7 @@
           "Support client prioritaire",
           "Licence commerciale étendue"
         ],
+        "group": "monthly",
         "interval": "month",
         "amount": 2399,
         "cn_amount": 0,
@@ -85,6 +90,7 @@
           "Licence commerciale illimitée",
           "Gestionnaire de compte dédié"
         ],
+        "group": "monthly",
         "interval": "month",
         "amount": 8999,
         "cn_amount": 0,
@@ -103,6 +109,95 @@
         "product_name": "Nano Banana Premium",
         "credits": 2000,
         "valid_months": 1
+      },
+      {
+        "title": "Pack de Crédits Débutant",
+        "description": "Achat unique, crédits n'expirent jamais",
+        "features_title": "Ce qui est inclus",
+        "features": [
+          "400 crédits de génération IA",
+          "N'expirent jamais",
+          "Débloquer toutes les fonctionnalités"
+        ],
+        "group": "credits-packs",
+        "interval": "one-time",
+        "amount": 2999,
+        "cn_amount": 0,
+        "currency": "USD",
+        "price": "$29.99",
+        "original_price": "$40",
+        "unit": "USD",
+        "is_featured": false,
+        "tip": "🔥 Offre limitée !",
+        "button": {
+          "title": "Acheter maintenant",
+          "url": "/#pricing",
+          "icon": "RiFlashlightFill"
+        },
+        "product_id": "credits-packs-1",
+        "product_name": "Nano Banana Pack de Crédits Débutant",
+        "credits": 400,
+        "valid_months": 12
+      },
+      {
+        "title": "Pack de Crédits Professionnel",
+        "description": "Achat unique, crédits n'expirent jamais",
+        "features_title": "Ce qui est inclus",
+        "features": [
+          "2000 crédits de génération IA",
+          "N'expirent jamais",
+          "Débloquer toutes les fonctionnalités"
+        ],
+        "group": "credits-packs",
+        "interval": "one-time",
+        "amount": 9999,
+        "cn_amount": 0,
+        "currency": "USD",
+        "price": "$99.99",
+        "original_price": "$120",
+        "unit": "USD",
+        "is_featured": false,
+        "tip": "🔥 Offre limitée !",
+        "button": {
+          "title": "Acheter maintenant",
+          "url": "/#pricing",
+          "icon": "RiFlashlightFill"
+        },
+        "product_id": "credits-packs-2",
+        "product_name": "Nano Banana Pack de Crédits Professionnel",
+        "credits": 2000,
+        "valid_months": 12
+      },
+      {
+        "title": "Pack de Crédits Premium",
+        "description": "Achat unique, crédits n'expirent jamais, parfait pour les designers professionnels",
+        "features_title": "Ce qui est inclus",
+        "features": [
+          "8000 crédits de génération IA",
+          "N'expirent jamais",
+          "Débloquer toutes les fonctionnalités",
+          "Support client prioritaire",
+          "Qualité de génération professionnelle"
+        ],
+        "group": "credits-packs",
+        "interval": "one-time",
+        "amount": 20000,
+        "cn_amount": 0,
+        "currency": "USD",
+        "price": "$200",
+        "original_price": "$400",
+        "unit": "USD",
+        "is_featured": false,
+        "tip": "🔥 Offre limitée !",
+        "button": {
+          "title": "Acheter maintenant",
+          "url": "/#pricing",
+          "icon": "RiFlashlightFill"
+        },
+        "product_id": "credits-packs-3",
+        "product_name": "Nano Banana Pack de Crédits Premium",
+        "credits": 8000,
+        "valid_months": 12
       }
     ]
   }

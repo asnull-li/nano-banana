@@ -34,6 +34,13 @@ export default function Pricing({ pricing }: { pricing: PricingType }) {
         return;
       }
 
+      if (item.interval !== "one-time") {
+        toast.warning("支付宝和微信支付仅支持进行一次性购买和购买积分包。", {
+          duration: 3000,
+        });
+        return;
+      }
+
       const params = {
         product_id: item.product_id,
         currency: cn_pay ? "cny" : item.currency,
@@ -91,19 +98,19 @@ export default function Pricing({ pricing }: { pricing: PricingType }) {
   }, [pricing.items]);
 
   return (
-    <section id={pricing.name} className="py-20 relative overflow-hidden">
+    <section id={pricing.name} className="py-15 relative overflow-hidden">
       {/* Background gradients */}
       <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 to-cyan-500/5" />
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-br from-green-500/10 to-cyan-500/10 rounded-full blur-3xl" />
       <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-gradient-to-tr from-cyan-500/10 to-green-500/10 rounded-full blur-3xl" />
 
       <div className="container relative z-10">
-        <div className="mx-auto mb-16 text-center max-w-3xl">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-green-500 to-cyan-500 rounded-full mb-6 shadow-lg shadow-green-500/25">
-            <Sparkles className="h-8 w-8 text-white" />
+        <div className="mx-auto mb-10 text-center max-w-3xl">
+          <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-green-500 to-cyan-500 rounded-full mb-6 shadow-lg shadow-green-500/25">
+            <Sparkles className="h-5 w-5 text-white" />
           </div>
 
-          <h2 className="mb-6 text-4xl font-bold lg:text-6xl bg-gradient-to-r from-green-500 to-cyan-500 bg-clip-text text-transparent">
+          <h2 className="mb-4 text-3xl font-bold lg:text-5xl bg-gradient-to-r from-green-500 to-cyan-500 bg-clip-text text-transparent">
             {pricing.title}
           </h2>
 

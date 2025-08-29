@@ -4,7 +4,10 @@
     "label": "Precios",
     "title": "Precios Simples y Transparentes",
     "description": "Elige el plan perfecto para tus necesidades de creación de imágenes con IA.",
-    "groups": [],
+    "groups": [
+      { "name": "monthly", "title": "Mensual" },
+      { "name": "credits-packs", "title": "Paquetes de Créditos" }
+    ],
     "items": [
       {
         "title": "Prueba",
@@ -20,7 +23,8 @@
           "Soporte al cliente estándar",
           "Descarga en alta resolución"
         ],
-        "interval": "único",
+        "group": "monthly",
+        "interval": "one-time",
         "amount": 599,
         "cn_amount": 0,
         "currency": "USD",
@@ -54,7 +58,8 @@
           "Soporte al cliente prioritario",
           "Licencia comercial extendida"
         ],
-        "interval": "mes",
+        "group": "monthly",
+        "interval": "month",
         "amount": 2399,
         "cn_amount": 0,
         "currency": "USD",
@@ -85,7 +90,8 @@
           "Licencia comercial ilimitada",
           "Gerente de cuenta dedicado"
         ],
-        "interval": "mes",
+        "group": "monthly",
+        "interval": "month",
         "amount": 8999,
         "cn_amount": 0,
         "currency": "USD",
@@ -103,6 +109,95 @@
         "product_name": "Nano Banana Premium",
         "credits": 2000,
         "valid_months": 1
+      },
+      {
+        "title": "Paquete de Créditos Inicial",
+        "description": "Compra única, créditos nunca expiran",
+        "features_title": "Qué incluye",
+        "features": [
+          "400 créditos de generación con IA",
+          "Nunca expiran",
+          "Desbloquear todas las funciones"
+        ],
+        "group": "credits-packs",
+        "interval": "one-time",
+        "amount": 2999,
+        "cn_amount": 0,
+        "currency": "USD",
+        "price": "$29.99",
+        "original_price": "$40",
+        "unit": "USD",
+        "is_featured": false,
+        "tip": "🔥 ¡Oferta por Tiempo Limitado!",
+        "button": {
+          "title": "Comprar Ahora",
+          "url": "/#pricing",
+          "icon": "RiFlashlightFill"
+        },
+        "product_id": "credits-packs-1",
+        "product_name": "Nano Banana Paquete de Créditos Inicial",
+        "credits": 400,
+        "valid_months": 12
+      },
+      {
+        "title": "Paquete de Créditos Profesional",
+        "description": "Compra única, créditos nunca expiran",
+        "features_title": "Qué incluye",
+        "features": [
+          "2000 créditos de generación con IA",
+          "Nunca expiran",
+          "Desbloquear todas las funciones"
+        ],
+        "group": "credits-packs",
+        "interval": "one-time",
+        "amount": 9999,
+        "cn_amount": 0,
+        "currency": "USD",
+        "price": "$99.99",
+        "original_price": "$120",
+        "unit": "USD",
+        "is_featured": false,
+        "tip": "🔥 ¡Oferta por Tiempo Limitado!",
+        "button": {
+          "title": "Comprar Ahora",
+          "url": "/#pricing",
+          "icon": "RiFlashlightFill"
+        },
+        "product_id": "credits-packs-2",
+        "product_name": "Nano Banana Paquete de Créditos Profesional",
+        "credits": 2000,
+        "valid_months": 12
+      },
+      {
+        "title": "Paquete de Créditos Premium",
+        "description": "Compra única, créditos nunca expiran, perfecto para diseñadores profesionales",
+        "features_title": "Qué incluye",
+        "features": [
+          "8000 créditos de generación con IA",
+          "Nunca expiran",
+          "Desbloquear todas las funciones",
+          "Soporte al cliente prioritario",
+          "Calidad de generación profesional"
+        ],
+        "group": "credits-packs",
+        "interval": "one-time",
+        "amount": 20000,
+        "cn_amount": 0,
+        "currency": "USD",
+        "price": "$200",
+        "original_price": "$400",
+        "unit": "USD",
+        "is_featured": false,
+        "tip": "🔥 ¡Oferta por Tiempo Limitado!",
+        "button": {
+          "title": "Comprar Ahora",
+          "url": "/#pricing",
+          "icon": "RiFlashlightFill"
+        },
+        "product_id": "credits-packs-3",
+        "product_name": "Nano Banana Paquete de Créditos Premium",
+        "credits": 8000,
+        "valid_months": 12
       }
     ]
   }

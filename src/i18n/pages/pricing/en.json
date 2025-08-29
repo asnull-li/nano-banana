@@ -4,7 +4,10 @@
     "label": "Pricing",
     "title": "Simple, Transparent Pricing",
     "description": "Choose the perfect plan for your AI image creation needs. ",
-    "groups": [],
+    "groups": [
+      { "name": "monthly", "title": "Monthly" },
+      { "name": "credits-packs", "title": "Credits Packs" }
+    ],
     "items": [
       {
         "title": "Trial",
@@ -20,6 +23,7 @@
           "Standard customer support",
           "Download in high resolution"
         ],
+        "group": "monthly",
         "interval": "one-time",
         "amount": 599,
         "cn_amount": 0,
@@ -54,6 +58,7 @@
           "Priority customer support",
           "Extended commercial license"
         ],
+        "group": "monthly",
         "interval": "month",
         "amount": 2399,
         "cn_amount": 0,
@@ -85,6 +90,7 @@
           "Unlimited commercial license",
           "Dedicated account manager"
         ],
+        "group": "monthly",
         "interval": "month",
         "amount": 8999,
         "cn_amount": 0,
@@ -103,6 +109,95 @@
         "product_name": "Nano Banana Premium",
         "credits": 2000,
         "valid_months": 1
+      },
+      {
+        "title": "Starter Credits Pack",
+        "description": "One-time purchase, credits never expire",
+        "features_title": "What's included",
+        "features": [
+          "400 AI generation credits",
+          "Never expire",
+          "Unlock all features"
+        ],
+        "group": "credits-packs",
+        "interval": "one-time",
+        "amount": 2999,
+        "cn_amount": 0,
+        "currency": "USD",
+        "price": "$29.99",
+        "original_price": "$40",
+        "unit": "USD",
+        "is_featured": false,
+        "tip": "🔥 Limited Time Offer!",
+        "button": {
+          "title": "Buy Now",
+          "url": "/#pricing",
+          "icon": "RiFlashlightFill"
+        },
+        "product_id": "credits-packs-1",
+        "product_name": "Nano Banana Starter Credits Pack",
+        "credits": 400,
+        "valid_months": 12
+      },
+      {
+        "title": "Professional Credits Pack",
+        "description": "One-time purchase, credits never expire",
+        "features_title": "What's included",
+        "features": [
+          "2000 AI generation credits",
+          "Never expire",
+          "Unlock all features"
+        ],
+        "group": "credits-packs",
+        "interval": "one-time",
+        "amount": 9999,
+        "cn_amount": 0,
+        "currency": "USD",
+        "price": "$99.99",
+        "original_price": "$120",
+        "unit": "USD",
+        "is_featured": false,
+        "tip": "🔥 Limited Time Offer!",
+        "button": {
+          "title": "Buy Now",
+          "url": "/#pricing",
+          "icon": "RiFlashlightFill"
+        },
+        "product_id": "credits-packs-2",
+        "product_name": "Nano Banana Professional Credits Pack",
+        "credits": 2000,
+        "valid_months": 12
+      },
+      {
+        "title": "Premium Credits Pack",
+        "description": "One-time purchase, credits never expire, perfect for professional designers",
+        "features_title": "What's included",
+        "features": [
+          "8000 AI generation credits",
+          "Never expire",
+          "Unlock all features",
+          "Priority customer support",
+          "Professional generation quality"
+        ],
+        "group": "credits-packs",
+        "interval": "one-time",
+        "amount": 20000,
+        "cn_amount": 0,
+        "currency": "USD",
+        "price": "$200",
+        "original_price": "$400",
+        "unit": "USD",
+        "is_featured": false,
+        "tip": "🔥 Limited Time Offer!",
+        "button": {
+          "title": "Buy Now",
+          "url": "/#pricing",
+          "icon": "RiFlashlightFill"
+        },
+        "product_id": "credits-packs-3",
+        "product_name": "Nano Banana Premium Credits Pack",
+        "credits": 8000,
+        "valid_months": 12
       }
     ]
   }
