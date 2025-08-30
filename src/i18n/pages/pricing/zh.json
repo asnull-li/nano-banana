@@ -26,7 +26,7 @@
         "group": "monthly",
         "interval": "one-time",
         "amount": 599,
-        "cn_amount": 3999,
+        "cn_amount": 1999,
         "currency": "USD",
         "price": "$5.99",
         "original_price": "$19.99",

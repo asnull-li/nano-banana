@@ -36,7 +36,7 @@ export default function Pricing({ pricing }: { pricing: PricingType }) {
 
       if (item.interval !== "one-time") {
         toast.warning("支付宝和微信支付仅支持进行一次性购买和购买积分包。", {
-          duration: 3000,
+          duration: 5000,
         });
         return;
       }
@@ -266,6 +266,31 @@ export default function Pricing({ pricing }: { pricing: PricingType }) {
                           </span>
                         )}
                       </div>
+                      {item.cn_amount &&
+                      item.cn_amount > 0 &&
+                      item.interval === "one-time" &&
+                      item.title === "试用版" ? (
+                        <div className="mb-6">
+                          <div className="flex flex-col gap-2">
+                            <div className="flex items-center gap-3">
+                              {item.amount && (
+                                <span className="text-lg text-gray-400 line-through">
+                                  ¥{((item.amount / 100) * 7).toFixed(2)}
+                                </span>
+                              )}
+                              <span className="text-2xl font-bold text-green-600">
+                                ¥{(item.cn_amount / 100).toFixed(2)}
+                              </span>
+                            </div>
+                            <Badge
+                              variant="outline"
+                              className="bg-orange-100 text-orange-700 border-orange-200 text-xs px-2 py-0.5 w-fit"
+                            >
+                              使用微信支付宝支付享中国特惠试用版
+                            </Badge>
+                          </div>
+                        </div>
+                      ) : null}
                       {item.description && (
                         <p className="text-muted-foreground text-base leading-relaxed mb-6">
                           {item.description}
