@@ -121,7 +121,7 @@ export const emailAdapter: Adapter = {
       };
     } catch (err) {
       console.error("createUser error:", err);
-      return null;
+      throw new Error("Failed to create user");
     }
   },
 
@@ -151,30 +151,39 @@ export const emailAdapter: Adapter = {
 
   // These methods are not needed for email authentication but required by the Adapter interface
   async getUserByAccount() {
+    // Not implemented - only needed for OAuth providers
     return null;
   },
-  async updateUser() {
+  async updateUser(_user) {
+    // Not implemented - we don't update users through NextAuth
+    throw new Error("updateUser not implemented");
+  },
+  async deleteUser(_userId) {
+    // Not implemented - we don't delete users through NextAuth
+    throw new Error("deleteUser not implemented");
+  },
+  async linkAccount(_account) {
+    // Not implemented - only needed for OAuth providers
+    throw new Error("linkAccount not implemented");
+  },
+  async unlinkAccount(_providerAccountId) {
+    // Not implemented - only needed for OAuth providers
+    throw new Error("unlinkAccount not implemented");
+  },
+  async createSession(_session) {
+    // Not implemented - we use JWT sessions, not database sessions
+    throw new Error("createSession not implemented");
+  },
+  async getSessionAndUser(_sessionToken) {
+    // Not implemented - we use JWT sessions, not database sessions
     return null;
   },
-  async deleteUser() {
-    return null;
+  async updateSession(_session) {
+    // Not implemented - we use JWT sessions, not database sessions
+    throw new Error("updateSession not implemented");
   },
-  async linkAccount() {
-    return undefined;
-  },
-  async unlinkAccount() {
-    return undefined;
-  },
-  async createSession() {
-    return null;
-  },
-  async getSessionAndUser() {
-    return null;
-  },
-  async updateSession() {
-    return null;
-  },
-  async deleteSession() {
-    return null;
+  async deleteSession(_sessionToken) {
+    // Not implemented - we use JWT sessions, not database sessions
+    throw new Error("deleteSession not implemented");
   },
 };

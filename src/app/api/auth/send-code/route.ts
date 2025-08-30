@@ -3,8 +3,6 @@ import { Resend } from "resend";
 import { generateVerifyCode, storeVerifyCode, canSendCode } from "@/services/verifyCode";
 import { z } from "zod";
 
-const resend = new Resend(process.env.RESEND_API_KEY!);
-
 // 请求体验证
 const sendCodeSchema = z.object({
   email: z.string().email("Invalid email address"),
@@ -12,6 +10,17 @@ const sendCodeSchema = z.object({
 
 export async function POST(req: NextRequest) {
   try {
+    // 检查环境变量
+    if (!process.env.RESEND_API_KEY || !process.env.RESEND_SENDER_EMAIL) {
+      console.error("Email configuration missing");
+      return NextResponse.json(
+        { error: "Email service not configured" },
+        { status: 500 }
+      );
+    }
+
+    const resend = new Resend(process.env.RESEND_API_KEY);
+
     // 验证请求体
     const body = await req.json();
     const validation = sendCodeSchema.safeParse(body);

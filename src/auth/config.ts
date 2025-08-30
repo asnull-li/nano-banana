@@ -4,7 +4,6 @@ import GoogleProvider from "next-auth/providers/google";
 import { NextAuthConfig } from "next-auth";
 import { Provider } from "next-auth/providers/index";
 import { handleSignInUser } from "./handler";
-import { emailAdapter } from "./adapter";
 
 let providers: Provider[] = [];
 
@@ -217,8 +216,7 @@ export const providerMap = providers
   .filter((provider) => provider.id !== "google-one-tap");
 
 export const authOptions: NextAuthConfig = {
-  // Don't use adapter for CredentialsProvider
-  // adapter: process.env.NEXT_PUBLIC_AUTH_EMAIL_ENABLED === "true" ? emailAdapter : undefined,
+  // No adapter needed for CredentialsProvider with JWT strategy
   session: {
     strategy: "jwt",
   },
