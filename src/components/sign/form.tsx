@@ -8,7 +8,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { SiGithub, SiGoogle } from "react-icons/si";
-import { Mail } from "lucide-react";
+import { Mail, Loader2 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -16,7 +16,8 @@ import { Label } from "@/components/ui/label";
 import { cn } from "@/lib/utils";
 import { signIn } from "next-auth/react";
 import { useTranslations } from "next-intl";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { toast } from "sonner";
 
 export default function SignForm({
   className,
@@ -24,22 +25,87 @@ export default function SignForm({
 }: React.ComponentPropsWithoutRef<"div">) {
   const t = useTranslations();
   const [email, setEmail] = useState("");
+  const [code, setCode] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [emailSent, setEmailSent] = useState(false);
+  const [codeSent, setCodeSent] = useState(false);
+  const [countdown, setCountdown] = useState(0);
+  const [error, setError] = useState("");
+  const [codeEverSent, setCodeEverSent] = useState(false); // Track if code was ever sent
 
-  const handleEmailSignIn = async (e: React.FormEvent) => {
-    e.preventDefault();
+  // Countdown timer for resend button
+  useEffect(() => {
+    if (countdown > 0) {
+      const timer = setTimeout(() => setCountdown(countdown - 1), 1000);
+      return () => clearTimeout(timer);
+    }
+  }, [countdown]);
+
+  // Send verification code
+  const handleSendCode = async () => {
+    if (!email) {
+      setError(t("sign_modal.email_required") || "Please enter your email");
+      return;
+    }
+
     setIsLoading(true);
+    setError("");
+
     try {
-      const result = await signIn("resend", {
-        email,
-        redirect: false,
+      const response = await fetch("/api/auth/send-code", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
       });
-      if (result?.ok) {
-        setEmailSent(true);
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setCodeSent(true);
+        setCodeEverSent(true); // Mark that code has been sent at least once
+        setCountdown(60); // 60 seconds countdown
+        toast.success(t("sign_modal.code_sent") || "Verification code sent to your email");
+      } else {
+        setError(data.error || "Failed to send verification code");
       }
     } catch (error) {
-      console.error("Email sign in error:", error);
+      setError("Network error, please try again");
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  // Sign in with verification code
+  const handleCodeSignIn = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!email || !code) {
+      setError(t("sign_modal.code_required") || "Please enter email and verification code");
+      return;
+    }
+
+    setIsLoading(true);
+    setError("");
+
+    try {
+      // Directly call signIn without pre-verification
+      const result = await signIn("email-code", {
+        email,
+        code,
+        redirect: false,
+      });
+
+      if (result?.error) {
+        // NextAuth returns "CredentialsSignin" for any credential provider error
+        // We can't get the specific error, so show a user-friendly generic message
+        const errorMessage = t("sign_modal.invalid_code") || "Invalid verification code or expired";
+        setError(errorMessage);
+      } else if (result?.ok) {
+        // Redirect to home or callback URL
+        window.location.href = result.url || "/";
+      }
+    } catch (error) {
+      console.error("Sign in error:", error);
+      setError(t("sign_modal.sign_in_failed") || "Sign in failed, please try again");
     } finally {
       setIsLoading(false);
     }
@@ -81,43 +147,27 @@ export default function SignForm({
               )}
             </div>
 
-            {process.env.NEXT_PUBLIC_AUTH_EMAIL_ENABLED === "true" && (
+            {process.env.NEXT_PUBLIC_AUTH_EMAIL_ENABLED === "true" && !codeSent && (
               <Button
                 variant="outline"
                 className="w-full"
-                onClick={() => {
-                  const emailInput = document.getElementById("email") as HTMLInputElement;
-                  if (emailInput?.value) {
-                    handleEmailSignIn({ preventDefault: () => {} } as React.FormEvent);
-                  }
-                }}
-                disabled={isLoading}
+                onClick={() => setCodeSent(true)}
               >
                 <Mail className="w-4 h-4" />
                 {t("sign_modal.email_sign_in") || "Continue with Email"}
               </Button>
             )}
 
-            {(process.env.NEXT_PUBLIC_AUTH_GOOGLE_ENABLED === "true" ||
-              process.env.NEXT_PUBLIC_AUTH_GITHUB_ENABLED === "true" ||
-              process.env.NEXT_PUBLIC_AUTH_EMAIL_ENABLED === "true") && (
-              <div className="relative text-center text-sm after:absolute after:inset-0 after:top-1/2 after:z-0 after:flex after:items-center after:border-t after:border-border">
-                <span className="relative z-10 bg-background px-2 text-muted-foreground">
-                  {process.env.NEXT_PUBLIC_AUTH_EMAIL_ENABLED === "true" && "Or continue with"}
-                </span>
-              </div>
-            )}
-
-            {process.env.NEXT_PUBLIC_AUTH_EMAIL_ENABLED === "true" && (
+            {codeSent && process.env.NEXT_PUBLIC_AUTH_EMAIL_ENABLED === "true" && (
               <>
-                {emailSent ? (
-                  <div className="text-center p-4 border rounded-lg bg-muted">
-                    <p className="text-sm text-muted-foreground">
-                      {t("sign_modal.email_sent") || "Check your email for a sign in link!"}
-                    </p>
-                  </div>
-                ) : (
-                  <form onSubmit={handleEmailSignIn} className="grid gap-4">
+                <div className="relative text-center text-sm after:absolute after:inset-0 after:top-1/2 after:z-0 after:flex after:items-center after:border-t after:border-border">
+                  <span className="relative z-10 bg-background px-2 text-muted-foreground">
+                    {t("sign_modal.enter_email") || "Enter your email"}
+                  </span>
+                </div>
+                
+                {!codeEverSent ? (
+                  <form onSubmit={(e) => { e.preventDefault(); handleSendCode(); }} className="grid gap-4">
                     <div className="grid gap-2">
                       <Label htmlFor="email">{t("sign_modal.email") || "Email"}</Label>
                       <Input
@@ -130,8 +180,115 @@ export default function SignForm({
                         disabled={isLoading}
                       />
                     </div>
-                    <Button type="submit" className="w-full" disabled={isLoading}>
-                      {isLoading ? t("sign_modal.sending") || "Sending..." : t("sign_modal.send_magic_link") || "Send Magic Link"}
+
+                    {error && (
+                      <div className="text-sm text-destructive text-center">
+                        {error}
+                      </div>
+                    )}
+
+                    <Button type="submit" className="w-full" disabled={isLoading || !email}>
+                      {isLoading ? (
+                        <>
+                          <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                          {t("sign_modal.sending_code") || "Sending code..."}
+                        </>
+                      ) : (
+                        t("sign_modal.send_code") || "Send Verification Code"
+                      )}
+                    </Button>
+
+                    <Button
+                      type="button"
+                      variant="ghost"
+                      className="w-full"
+                      onClick={() => {
+                        setCodeSent(false);
+                        setCodeEverSent(false);
+                        setEmail("");
+                        setError("");
+                      }}
+                    >
+                      {t("sign_modal.back") || "Back"}
+                    </Button>
+                  </form>
+                ) : (
+                  <form onSubmit={handleCodeSignIn} className="grid gap-4">
+                    <div className="grid gap-2">
+                      <Label htmlFor="email">{t("sign_modal.email") || "Email"}</Label>
+                      <Input
+                        id="email"
+                        type="email"
+                        placeholder="m@example.com"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                        disabled={true}
+                      />
+                    </div>
+                    
+                    <div className="grid gap-2">
+                      <div className="flex items-center justify-between">
+                        <Label htmlFor="code">{t("sign_modal.verification_code") || "Verification Code"}</Label>
+                        <Button
+                          type="button"
+                          variant="link"
+                          size="sm"
+                          onClick={handleSendCode}
+                          disabled={isLoading || countdown > 0}
+                          className="h-auto p-0 text-xs"
+                        >
+                          {countdown > 0 
+                            ? `${t("sign_modal.resend_in") || "Resend in"} ${countdown}s`
+                            : t("sign_modal.resend_code") || "Resend code"
+                          }
+                        </Button>
+                      </div>
+                      <Input
+                        id="code"
+                        type="text"
+                        placeholder="000000"
+                        value={code}
+                        onChange={(e) => setCode(e.target.value.replace(/\D/g, '').slice(0, 6))}
+                        maxLength={6}
+                        required
+                        disabled={isLoading}
+                        className="text-center text-lg tracking-widest"
+                        autoFocus
+                      />
+                    </div>
+
+                    {error && (
+                      <div className="text-sm text-destructive text-center">
+                        {error}
+                      </div>
+                    )}
+
+                    <Button type="submit" className="w-full" disabled={isLoading || !email || !code}>
+                      {isLoading ? (
+                        <>
+                          <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                          {t("sign_modal.signing_in") || "Signing in..."}
+                        </>
+                      ) : (
+                        t("sign_modal.sign_in") || "Sign In"
+                      )}
+                    </Button>
+
+                    <Button
+                      type="button"
+                      variant="ghost"
+                      className="w-full"
+                      onClick={() => {
+                        setCodeSent(false);
+                        setCodeEverSent(false);
+                        setCode("");
+                        setEmail("");
+                        setError("");
+                        setCountdown(0);
+                      }}
+                    >
+                      {t("sign_modal.back") || "Back"}
                     </Button>
                   </form>
                 )}

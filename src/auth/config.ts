@@ -1,7 +1,6 @@
 import CredentialsProvider from "next-auth/providers/credentials";
 import GitHubProvider from "next-auth/providers/github";
 import GoogleProvider from "next-auth/providers/google";
-import Resend from "next-auth/providers/resend";
 import { NextAuthConfig } from "next-auth";
 import { Provider } from "next-auth/providers/index";
 import { handleSignInUser } from "./handler";
@@ -101,19 +100,110 @@ if (
   );
 }
 
-// Email Auth with Resend
+// Email Auth with Verification Code
 if (
   process.env.NEXT_PUBLIC_AUTH_EMAIL_ENABLED === "true" &&
   process.env.RESEND_API_KEY &&
   process.env.RESEND_SENDER_EMAIL
 ) {
   providers.push(
-    Resend({
-      apiKey: process.env.RESEND_API_KEY,
-      from: process.env.RESEND_SENDER_EMAIL,
+    CredentialsProvider({
+      id: "email-code",
+      name: "Email Code",
+      credentials: {
+        email: { label: "Email", type: "email" },
+        code: { label: "Verification Code", type: "text" },
+      },
+      async authorize(credentials) {
+        if (!credentials?.email || !credentials?.code) {
+          return null;
+        }
+
+        const email = credentials.email as string;
+        const code = credentials.code as string;
+
+        const { verifyCode } = await import("@/services/verifyCode");
+        const result = await verifyCode(email, code);
+        
+        if (!result.success) {
+          // CredentialsProvider doesn't properly pass error messages
+          // Return null to indicate authentication failure
+          return null;
+        }
+
+        // Check if user exists or create new user
+        const { findUserByEmail } = await import("@/models/user");
+        const existingUser = await findUserByEmail(email);
+        
+        if (existingUser) {
+          // Return existing user
+          return {
+            id: existingUser.uuid,
+            email: existingUser.email,
+            name: existingUser.nickname || existingUser.email.split("@")[0],
+            image: existingUser.avatar_url || null,
+          };
+        } else {
+          // Create new user
+          const { getUuid } = await import("@/lib/hash");
+          const uuid = getUuid();
+          const { db } = await import("@/db");
+          const { users } = await import("@/db/schema");
+          
+          const [newUser] = await db()
+            .insert(users)
+            .values({
+              uuid,
+              email: email,
+              nickname: email.split("@")[0],
+              avatar_url: "",
+              signin_type: "email",
+              signin_provider: "email-code",
+              signin_openid: email,
+              created_at: new Date(),
+              locale: "en",
+              invite_code: "",
+              invited_by: "",
+              is_affiliate: false,
+            })
+            .returning();
+
+          // Grant initial credits for new user
+          const { increaseCredits, CreditsTransType, CreditsAmount } = await import("@/services/credit");
+          const { getOneYearLaterTimestr } = await import("@/lib/time");
+          
+          await increaseCredits({
+            user_uuid: newUser.uuid,
+            trans_type: CreditsTransType.NewUser,
+            credits: CreditsAmount.NewUserGet,
+            expired_at: getOneYearLaterTimestr(),
+          });
+
+          return {
+            id: newUser.uuid,
+            email: newUser.email,
+            name: newUser.nickname || newUser.email.split("@")[0],
+            image: newUser.avatar_url || null,
+          };
+        }
+      },
     })
   );
 }
+
+// Magic Link Auth with Resend (optional - can be removed if you only want code)
+// if (
+//   process.env.NEXT_PUBLIC_AUTH_MAGIC_LINK_ENABLED === "true" &&
+//   process.env.RESEND_API_KEY &&
+//   process.env.RESEND_SENDER_EMAIL
+// ) {
+//   providers.push(
+//     Resend({
+//       apiKey: process.env.RESEND_API_KEY,
+//       from: process.env.RESEND_SENDER_EMAIL,
+//     })
+//   );
+// }
 
 export const providerMap = providers
   .map((provider) => {
@@ -127,7 +217,8 @@ export const providerMap = providers
   .filter((provider) => provider.id !== "google-one-tap");
 
 export const authOptions: NextAuthConfig = {
-  adapter: process.env.NEXT_PUBLIC_AUTH_EMAIL_ENABLED === "true" ? emailAdapter : undefined,
+  // Don't use adapter for CredentialsProvider
+  // adapter: process.env.NEXT_PUBLIC_AUTH_EMAIL_ENABLED === "true" ? emailAdapter : undefined,
   session: {
     strategy: "jwt",
   },
@@ -137,7 +228,7 @@ export const authOptions: NextAuthConfig = {
     verifyRequest: "/auth/verify-request",
   },
   callbacks: {
-    async signIn({ user, account }) {
+    async signIn() {
       const isAllowedToSignIn = true;
       if (isAllowedToSignIn) {
         return true;
