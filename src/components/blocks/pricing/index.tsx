@@ -286,7 +286,7 @@ export default function Pricing({ pricing }: { pricing: PricingType }) {
                               variant="outline"
                               className="bg-orange-100 text-orange-700 border-orange-200 text-xs px-2 py-0.5 w-fit"
                             >
-                              使用微信支付宝支付享中国特惠试用版
+                              使用微信支付宝支付享中国限时特惠
                             </Badge>
                           </div>
                         </div>

@@ -114,7 +114,7 @@
         "title": "入门积分包",
         "description": "一次采购，积分永不过期",
         "features_title": "包含功能",
-        "features": ["400 个 AI 生成积分", "永不过期", "解锁锁所有功能"],
+        "features": ["400 个 AI 生成积分", "永不过期", "解锁所有功能"],
         "group": "credits-packs",
         "interval": "one-time",
         "amount": 2999,
@@ -139,7 +139,7 @@
         "title": "专业积分包",
         "description": "一次采购，积分永不过期",
         "features_title": "包含功能",
-        "features": ["2000 个 AI 生成积分", "永不过期", "解锁锁所有功能"],
+        "features": ["2000 个 AI 生成积分", "永不过期", "解锁所有功能"],
         "group": "credits-packs",
         "interval": "one-time",
         "amount": 9999,
@@ -167,7 +167,7 @@
         "features": [
           "8000 个 AI 生成积分",
           "永不过期",
-          "解锁锁所有功能",
+          "解锁所有功能",
           "优先的客服支持",
           "专业的生成质量"
         ],
