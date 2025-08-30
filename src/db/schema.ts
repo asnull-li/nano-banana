@@ -147,3 +147,16 @@ export const nanoBananaTasks = pgTable("nano_banana_tasks", {
   created_at: timestamp({ withTimezone: true }).defaultNow(),
   updated_at: timestamp({ withTimezone: true }).defaultNow(),
 });
+
+// Verification Tokens table for email authentication
+export const verificationTokens = pgTable(
+  "verification_tokens",
+  {
+    identifier: varchar({ length: 255 }).notNull(),
+    token: varchar({ length: 255 }).notNull().unique(),
+    expires: timestamp({ withTimezone: true }).notNull(),
+  },
+  (table) => [
+    uniqueIndex("identifier_token_idx").on(table.identifier, table.token),
+  ]
+);

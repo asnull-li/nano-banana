@@ -4,7 +4,8 @@ export function isAuthEnabled(): boolean {
       process.env.NEXT_PUBLIC_AUTH_ENABLED === "true" ||
       process.env.NEXT_PUBLIC_AUTH_GOOGLE_ENABLED === "true" ||
       process.env.NEXT_PUBLIC_AUTH_GITHUB_ENABLED === "true" ||
-      process.env.NEXT_PUBLIC_AUTH_GOOGLE_ONE_TAP_ENABLED === "true"
+      process.env.NEXT_PUBLIC_AUTH_GOOGLE_ONE_TAP_ENABLED === "true" ||
+      process.env.NEXT_PUBLIC_AUTH_EMAIL_ENABLED === "true"
     ) && !!(process.env.NEXT_PUBLIC_AUTH_ENABLED !== "false")
   );
 }
@@ -25,4 +26,8 @@ export function isGoogleOneTapEnabled(): boolean {
     process.env.NEXT_PUBLIC_AUTH_GOOGLE_ONE_TAP_ENABLED === "true" &&
     process.env.NEXT_PUBLIC_AUTH_GOOGLE_ID
   );
+}
+
+export function isEmailAuthEnabled(): boolean {
+  return process.env.NEXT_PUBLIC_AUTH_EMAIL_ENABLED === "true";
 }

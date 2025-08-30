@@ -1,14 +1,11 @@
 import CredentialsProvider from "next-auth/providers/credentials";
 import GitHubProvider from "next-auth/providers/github";
 import GoogleProvider from "next-auth/providers/google";
+import Resend from "next-auth/providers/resend";
 import { NextAuthConfig } from "next-auth";
 import { Provider } from "next-auth/providers/index";
-import { User } from "@/types/user";
-import { getClientIp } from "@/lib/ip";
-import { getIsoTimestr } from "@/lib/time";
-import { getUuid } from "@/lib/hash";
-import { saveUser } from "@/services/user";
 import { handleSignInUser } from "./handler";
+import { emailAdapter } from "./adapter";
 
 let providers: Provider[] = [];
 
@@ -26,7 +23,7 @@ if (
         credential: { type: "text" },
       },
 
-      async authorize(credentials, req) {
+      async authorize(credentials) {
         const googleClientId = process.env.NEXT_PUBLIC_AUTH_GOOGLE_ID;
         if (!googleClientId) {
           console.log("invalid google auth config");
@@ -104,6 +101,20 @@ if (
   );
 }
 
+// Email Auth with Resend
+if (
+  process.env.NEXT_PUBLIC_AUTH_EMAIL_ENABLED === "true" &&
+  process.env.RESEND_API_KEY &&
+  process.env.RESEND_SENDER_EMAIL
+) {
+  providers.push(
+    Resend({
+      apiKey: process.env.RESEND_API_KEY,
+      from: process.env.RESEND_SENDER_EMAIL,
+    })
+  );
+}
+
 export const providerMap = providers
   .map((provider) => {
     if (typeof provider === "function") {
@@ -116,12 +127,17 @@ export const providerMap = providers
   .filter((provider) => provider.id !== "google-one-tap");
 
 export const authOptions: NextAuthConfig = {
+  adapter: process.env.NEXT_PUBLIC_AUTH_EMAIL_ENABLED === "true" ? emailAdapter : undefined,
+  session: {
+    strategy: "jwt",
+  },
   providers,
   pages: {
     signIn: "/auth/signin",
+    verifyRequest: "/auth/verify-request",
   },
   callbacks: {
-    async signIn({ user, account, profile, email, credentials }) {
+    async signIn({ user, account }) {
       const isAllowedToSignIn = true;
       if (isAllowedToSignIn) {
         return true;
@@ -139,7 +155,7 @@ export const authOptions: NextAuthConfig = {
       else if (new URL(url).origin === baseUrl) return url;
       return baseUrl;
     },
-    async session({ session, token, user }) {
+    async session({ session, token }) {
       if (token && token.user && token.user) {
         session.user = token.user;
       }
@@ -148,22 +164,36 @@ export const authOptions: NextAuthConfig = {
     async jwt({ token, user, account }) {
       // Persist the OAuth access_token and or the user id to the token right after signin
       try {
-        if (!user || !account) {
+        if (!user) {
           return token;
         }
 
-        const userInfo = await handleSignInUser(user, account);
-        if (!userInfo) {
-          throw new Error("save user failed");
+        // For email sign-in, use our existing user management
+        if (!account || account.provider === "resend") {
+          // Email sign-in - user already exists in DB from adapter
+          const userInfo = await handleSignInUser(user, null);
+          if (userInfo) {
+            token.user = {
+              uuid: userInfo.uuid,
+              email: userInfo.email,
+              nickname: userInfo.nickname,
+              avatar_url: userInfo.avatar_url,
+              created_at: userInfo.created_at,
+            };
+          }
+        } else {
+          // OAuth sign-in
+          const userInfo = await handleSignInUser(user, account);
+          if (userInfo) {
+            token.user = {
+              uuid: userInfo.uuid,
+              email: userInfo.email,
+              nickname: userInfo.nickname,
+              avatar_url: userInfo.avatar_url,
+              created_at: userInfo.created_at,
+            };
+          }
         }
-
-        token.user = {
-          uuid: userInfo.uuid,
-          email: userInfo.email,
-          nickname: userInfo.nickname,
-          avatar_url: userInfo.avatar_url,
-          created_at: userInfo.created_at,
-        };
 
         return token;
       } catch (e) {
