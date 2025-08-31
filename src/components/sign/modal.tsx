@@ -172,7 +172,9 @@ function ProfileForm({ className }: React.ComponentProps<"form">) {
         setCodeSent(true);
         setCodeEverSent(true);
         setCountdown(60);
-        toast.success(t("sign_modal.code_sent") || "Verification code sent to your email");
+        toast.success(
+          t("sign_modal.code_sent") || "Verification code sent to your email"
+        );
       } else {
         setError(data.error || "Failed to send verification code");
       }
@@ -186,9 +188,12 @@ function ProfileForm({ className }: React.ComponentProps<"form">) {
   // Sign in with verification code
   const handleCodeSignIn = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!email || !code) {
-      setError(t("sign_modal.code_required") || "Please enter email and verification code");
+      setError(
+        t("sign_modal.code_required") ||
+          "Please enter email and verification code"
+      );
       return;
     }
 
@@ -203,14 +208,18 @@ function ProfileForm({ className }: React.ComponentProps<"form">) {
       });
 
       if (result?.error) {
-        const errorMessage = t("sign_modal.invalid_code") || "Invalid verification code or expired";
+        const errorMessage =
+          t("sign_modal.invalid_code") ||
+          "Invalid verification code or expired";
         setError(errorMessage);
       } else if (result?.ok) {
         setShowSignModal(false);
         window.location.href = result.url || "/";
       }
     } catch (error) {
-      setError(t("sign_modal.sign_in_failed") || "Sign in failed, please try again");
+      setError(
+        t("sign_modal.sign_in_failed") || "Sign in failed, please try again"
+      );
     } finally {
       setIsLoading(false);
     }
@@ -248,8 +257,7 @@ function ProfileForm({ className }: React.ComponentProps<"form">) {
             </span>
           </Button>
         )}
-
-        {process.env.NEXT_PUBLIC_AUTH_EMAIL_ENABLED === "true" && (
+        {/* {process.env.NEXT_PUBLIC_AUTH_EMAIL_ENABLED === "true" && (
           <>
             {!codeEverSent ? (
               <Button
@@ -274,9 +282,18 @@ function ProfileForm({ className }: React.ComponentProps<"form">) {
                 </div>
 
                 {!email || (codeEverSent && countdown === 0 && !code) ? (
-                  <form onSubmit={(e) => { e.preventDefault(); handleSendCode(); }} className="space-y-4">
+                  <form
+                    onSubmit={(e) => {
+                      e.preventDefault();
+                      handleSendCode();
+                    }}
+                    className="space-y-4"
+                  >
                     <div className="space-y-2">
-                      <Label htmlFor="modal-email" className="text-sm font-medium">
+                      <Label
+                        htmlFor="modal-email"
+                        className="text-sm font-medium"
+                      >
                         {t("sign_modal.email") || "Email"}
                       </Label>
                       <Input
@@ -297,8 +314,8 @@ function ProfileForm({ className }: React.ComponentProps<"form">) {
                       </div>
                     )}
 
-                    <Button 
-                      type="submit" 
+                    <Button
+                      type="submit"
                       className="w-full h-12 bg-gradient-to-r from-green-500 to-cyan-500 hover:from-green-600 hover:to-cyan-600 text-white font-medium shadow-md hover:shadow-lg transition-all duration-300"
                       disabled={isLoading || !email}
                     >
@@ -310,7 +327,8 @@ function ProfileForm({ className }: React.ComponentProps<"form">) {
                       ) : (
                         <>
                           <Mail className="mr-2 h-4 w-4" />
-                          {t("sign_modal.send_code") || "Send Verification Code"}
+                          {t("sign_modal.send_code") ||
+                            "Send Verification Code"}
                         </>
                       )}
                     </Button>
@@ -333,7 +351,10 @@ function ProfileForm({ className }: React.ComponentProps<"form">) {
                 ) : (
                   <form onSubmit={handleCodeSignIn} className="space-y-4">
                     <div className="space-y-2">
-                      <Label htmlFor="modal-email-display" className="text-sm font-medium">
+                      <Label
+                        htmlFor="modal-email-display"
+                        className="text-sm font-medium"
+                      >
                         {t("sign_modal.email") || "Email"}
                       </Label>
                       <Input
@@ -347,8 +368,12 @@ function ProfileForm({ className }: React.ComponentProps<"form">) {
 
                     <div className="space-y-2">
                       <div className="flex items-center justify-between">
-                        <Label htmlFor="modal-code" className="text-sm font-medium">
-                          {t("sign_modal.verification_code") || "Verification Code"}
+                        <Label
+                          htmlFor="modal-code"
+                          className="text-sm font-medium"
+                        >
+                          {t("sign_modal.verification_code") ||
+                            "Verification Code"}
                         </Label>
                         <Button
                           type="button"
@@ -358,10 +383,11 @@ function ProfileForm({ className }: React.ComponentProps<"form">) {
                           disabled={isLoading || countdown > 0}
                           className="h-auto p-0 text-xs text-green-600 hover:text-green-700"
                         >
-                          {countdown > 0 
-                            ? `${t("sign_modal.resend_in") || "Resend in"} ${countdown}s`
-                            : t("sign_modal.resend_code") || "Resend code"
-                          }
+                          {countdown > 0
+                            ? `${
+                                t("sign_modal.resend_in") || "Resend in"
+                              } ${countdown}s`
+                            : t("sign_modal.resend_code") || "Resend code"}
                         </Button>
                       </div>
                       <Input
@@ -369,7 +395,9 @@ function ProfileForm({ className }: React.ComponentProps<"form">) {
                         type="text"
                         placeholder="000000"
                         value={code}
-                        onChange={(e) => setCode(e.target.value.replace(/\D/g, '').slice(0, 6))}
+                        onChange={(e) =>
+                          setCode(e.target.value.replace(/\D/g, "").slice(0, 6))
+                        }
                         maxLength={6}
                         required
                         disabled={isLoading}
@@ -384,8 +412,8 @@ function ProfileForm({ className }: React.ComponentProps<"form">) {
                       </div>
                     )}
 
-                    <Button 
-                      type="submit" 
+                    <Button
+                      type="submit"
                       className="w-full h-12 bg-gradient-to-r from-green-500 to-cyan-500 hover:from-green-600 hover:to-cyan-600 text-white font-medium shadow-md hover:shadow-lg transition-all duration-300"
                       disabled={isLoading || !email || !code}
                     >
@@ -421,8 +449,7 @@ function ProfileForm({ className }: React.ComponentProps<"form">) {
               </div>
             )}
           </>
-        )}
-
+        )} */}
         <div className="text-center pt-2">
           <p className="text-xs text-muted-foreground">
             {t("sign_modal.terms_text")}{" "}
