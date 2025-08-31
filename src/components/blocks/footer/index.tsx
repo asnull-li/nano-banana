@@ -1,6 +1,7 @@
 import { Footer as FooterType } from "@/types/blocks/footer";
 import Icon from "@/components/icon";
 import { Link } from "@/i18n/navigation";
+import FooterLanguageLinks from "@/components/locale/footer-language-links";
 
 export default function Footer({ footer }: { footer: FooterType }) {
   if (footer.disabled) {
@@ -138,6 +139,7 @@ export default function Footer({ footer }: { footer: FooterType }) {
             Nano Banana
           </a>
         </div>
+        <FooterLanguageLinks />
       </div>
     </section>
   );
