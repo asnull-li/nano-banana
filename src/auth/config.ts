@@ -123,7 +123,7 @@ if (
 
         const { verifyCode } = await import("@/services/verifyCode");
         const result = await verifyCode(email, code);
-        
+
         if (!result.success) {
           // CredentialsProvider doesn't properly pass error messages
           // Return null to indicate authentication failure
@@ -133,27 +133,27 @@ if (
         // Check if user exists or create new user
         const { findUserByEmail } = await import("@/models/user");
         const existingUser = await findUserByEmail(email);
-        
+
         if (existingUser) {
           // Get client IP from request headers
-          const clientIp = 
-            req.headers.get('x-real-ip') || 
-            req.headers.get('x-forwarded-for')?.split(',')[0] || 
-            '127.0.0.1';
-          
+          const clientIp =
+            req.headers.get("x-real-ip") ||
+            req.headers.get("x-forwarded-for")?.split(",")[0] ||
+            "127.0.0.1";
+
           // Update user's signin_ip and updated_at
           const { db } = await import("@/db");
           const { users } = await import("@/db/schema");
           const { eq } = await import("drizzle-orm");
-          
+
           await db()
             .update(users)
-            .set({ 
+            .set({
               signin_ip: clientIp,
-              updated_at: new Date()
+              updated_at: new Date(),
             })
             .where(eq(users.uuid, existingUser.uuid));
-          
+
           // Return existing user
           return {
             id: existingUser.uuid,
@@ -167,13 +167,29 @@ if (
           const uuid = getUuid();
           const { db } = await import("@/db");
           const { users } = await import("@/db/schema");
-          
+
           // Get client IP from request headers
-          const clientIp = 
-            req.headers.get('x-real-ip') || 
-            req.headers.get('x-forwarded-for')?.split(',')[0] || 
-            '127.0.0.1';
-          
+          const clientIp =
+            req.headers.get("x-real-ip") ||
+            req.headers.get("x-forwarded-for")?.split(",")[0] ||
+            "127.0.0.1";
+
+          // Check IP registration count before granting credits
+          const maxAccountsPerIp = parseInt(
+            process.env.MAX_ACCOUNTS_PER_IP_FOR_CREDITS || "2"
+          );
+          let shouldGrantCredits = true;
+
+          if (maxAccountsPerIp > 0) {
+            const { count, eq } = await import("drizzle-orm");
+            const [ipCount] = await db()
+              .select({ count: count() })
+              .from(users)
+              .where(eq(users.signin_ip, clientIp));
+
+            shouldGrantCredits = ipCount.count < maxAccountsPerIp;
+          }
+
           const [newUser] = await db()
             .insert(users)
             .values({
@@ -193,16 +209,31 @@ if (
             })
             .returning();
 
-          // Grant initial credits for new user
-          const { increaseCredits, CreditsTransType, CreditsAmount } = await import("@/services/credit");
-          const { getOneYearLaterTimestr } = await import("@/lib/time");
-          
-          await increaseCredits({
-            user_uuid: newUser.uuid,
-            trans_type: CreditsTransType.NewUser,
-            credits: CreditsAmount.NewUserGet,
-            expired_at: getOneYearLaterTimestr(),
-          });
+          // Grant initial credits for new user (if allowed)
+          if (shouldGrantCredits) {
+            const { increaseCredits, CreditsTransType, CreditsAmount } =
+              await import("@/services/credit");
+            const { getOneYearLaterTimestr } = await import("@/lib/time");
+
+            await increaseCredits({
+              user_uuid: newUser.uuid,
+              trans_type: CreditsTransType.NewUser,
+              credits: CreditsAmount.NewUserGet,
+              expired_at: getOneYearLaterTimestr(),
+            });
+
+            console.log(
+              "New user created with initial credits:",
+              newUser.email
+            );
+          } else {
+            console.log(
+              `New user created without credits (IP has ${maxAccountsPerIp}+ accounts):`,
+              newUser.email,
+              "IP:",
+              clientIp
+            );
+          }
 
           return {
             id: newUser.uuid,
