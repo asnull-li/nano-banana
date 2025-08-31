@@ -101,6 +101,19 @@ export default function Footer({ footer }: { footer: FooterType }) {
         </footer>
         <div className="flex items-center gap-2">
           <a
+            href="https://www.toolify.ai/tool/nano-banana-ai-image-generator/?ref=embed"
+            target="_blank"
+            style={{ cursor: "pointer" }}
+          >
+            <img
+              src="https://cdn.toolify.ai/featured_light.svg"
+              style={{ width: "250px", height: "60px" }}
+              width="250"
+              height="60"
+              alt="Nano Banana: AI image generator and editor with chat for consistent results."
+            />
+          </a>
+          <a
             href="https://startupfa.me/s/nano-banana?utm_source=nanobanana.org"
             target="_blank"
           >
