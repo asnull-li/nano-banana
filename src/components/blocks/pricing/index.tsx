@@ -34,7 +34,7 @@ export default function Pricing({ pricing }: { pricing: PricingType }) {
         return;
       }
 
-      if (item.interval !== "one-time") {
+      if (item.interval !== "one-time" && cn_pay) {
         toast.warning("支付宝和微信支付仅支持进行一次性购买和购买积分包。", {
           duration: 5000,
         });

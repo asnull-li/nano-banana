@@ -281,7 +281,7 @@ function ProfileForm({ className }: React.ComponentProps<"form">) {
                   </span>
                 </div>
 
-                {!email || (codeEverSent && countdown === 0 && !code) ? (
+                {!email || !codeSent ? (
                   <form
                     onSubmit={(e) => {
                       e.preventDefault();
