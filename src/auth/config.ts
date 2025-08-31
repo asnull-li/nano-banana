@@ -113,7 +113,7 @@ if (
         email: { label: "Email", type: "email" },
         code: { label: "Verification Code", type: "text" },
       },
-      async authorize(credentials) {
+      async authorize(credentials, req) {
         if (!credentials?.email || !credentials?.code) {
           return null;
         }
@@ -135,6 +135,25 @@ if (
         const existingUser = await findUserByEmail(email);
         
         if (existingUser) {
+          // Get client IP from request headers
+          const clientIp = 
+            req.headers.get('x-real-ip') || 
+            req.headers.get('x-forwarded-for')?.split(',')[0] || 
+            '127.0.0.1';
+          
+          // Update user's signin_ip and updated_at
+          const { db } = await import("@/db");
+          const { users } = await import("@/db/schema");
+          const { eq } = await import("drizzle-orm");
+          
+          await db()
+            .update(users)
+            .set({ 
+              signin_ip: clientIp,
+              updated_at: new Date()
+            })
+            .where(eq(users.uuid, existingUser.uuid));
+          
           // Return existing user
           return {
             id: existingUser.uuid,
@@ -149,6 +168,12 @@ if (
           const { db } = await import("@/db");
           const { users } = await import("@/db/schema");
           
+          // Get client IP from request headers
+          const clientIp = 
+            req.headers.get('x-real-ip') || 
+            req.headers.get('x-forwarded-for')?.split(',')[0] || 
+            '127.0.0.1';
+          
           const [newUser] = await db()
             .insert(users)
             .values({
@@ -159,6 +184,7 @@ if (
               signin_type: "email",
               signin_provider: "email-code",
               signin_openid: email,
+              signin_ip: clientIp,
               created_at: new Date(),
               locale: "en",
               invite_code: "",
