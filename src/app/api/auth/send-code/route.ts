@@ -1,7 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
-import { generateVerifyCode, storeVerifyCode, canSendCode } from "@/services/verifyCode";
+import {
+  generateVerifyCode,
+  storeVerifyCode,
+  canSendCode,
+} from "@/services/verifyCode";
 import { z } from "zod";
+import isTempEmail from "@/lib/tempEmail";
 
 // 请求体验证
 const sendCodeSchema = z.object({
@@ -24,7 +29,7 @@ export async function POST(req: NextRequest) {
     // 验证请求体
     const body = await req.json();
     const validation = sendCodeSchema.safeParse(body);
-    
+
     if (!validation.success) {
       return NextResponse.json(
         { error: "Invalid email address" },
@@ -33,6 +38,14 @@ export async function POST(req: NextRequest) {
     }
 
     const { email } = validation.data;
+
+    // 检查邮箱是否为临时邮箱
+    if (isTempEmail(email)) {
+      return NextResponse.json(
+        { error: "Invalid email address, please use a real email address" },
+        { status: 400 }
+      );
+    }
 
     // 检查是否可以发送（防止频繁发送）
     const canSend = await canSendCode(email);
@@ -45,7 +58,7 @@ export async function POST(req: NextRequest) {
 
     // 生成验证码
     const code = generateVerifyCode();
-    
+
     // 存储验证码
     const storeResult = await storeVerifyCode(email, code);
     if (!storeResult.success) {
@@ -57,7 +70,9 @@ export async function POST(req: NextRequest) {
 
     // 发送邮件
     const emailResult = await resend.emails.send({
-      from: `${process.env.RESEND_SENDER_NAME || "Nano Banana"} <${process.env.RESEND_SENDER_EMAIL}>`,
+      from: `${process.env.RESEND_SENDER_NAME || "Nano Banana"} <${
+        process.env.RESEND_SENDER_EMAIL
+      }>`,
       to: email,
       subject: `${code} is your verification code`,
       html: `
@@ -175,7 +190,6 @@ export async function POST(req: NextRequest) {
       success: true,
       message: "Verification code sent successfully",
     });
-
   } catch (error) {
     console.error("Send code error:", error);
     return NextResponse.json(
