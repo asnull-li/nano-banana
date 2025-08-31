@@ -38,4 +38,5 @@ export interface Pricing {
   description?: string;
   items?: PricingItem[];
   groups?: PricingGroup[];
+  save_yearly?: string;
 }

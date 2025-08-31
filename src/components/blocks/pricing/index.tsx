@@ -23,7 +23,7 @@ export default function Pricing({ pricing }: { pricing: PricingType }) {
 
   const { user, setShowSignModal } = useAppContext();
 
-  const [group, setGroup] = useState(pricing.groups?.[0]?.name);
+  const [group, setGroup] = useState(pricing.groups?.[1]?.name || "yearly");
   const [isLoading, setIsLoading] = useState(false);
   const [productId, setProductId] = useState<string | null>(null);
 
@@ -35,7 +35,7 @@ export default function Pricing({ pricing }: { pricing: PricingType }) {
       }
 
       if (item.interval !== "one-time" && cn_pay) {
-        toast.warning("支付宝和微信支付仅支持进行一次性购买和购买积分包。", {
+        toast.warning("支付宝和微信支付仅支持购买积分包。", {
           duration: 5000,
         });
         return;
@@ -91,11 +91,30 @@ export default function Pricing({ pricing }: { pricing: PricingType }) {
 
   useEffect(() => {
     if (pricing.items) {
-      setGroup(pricing.items[0].group);
-      setProductId(pricing.items[0].product_id);
+      // 只在 group 状态未正确设置时才更新
+      const currentGroup = group || "yearly";
+      const selectedItem = pricing.items.find(
+        (item) => item.group === currentGroup
+      );
+
+      if (selectedItem) {
+        setProductId(selectedItem.product_id);
+      } else {
+        // 如果当前选择的组不存在，回退到年费组或第一个可用项目
+        const yearlyItem = pricing.items.find(
+          (item) => item.group === "yearly"
+        );
+        if (yearlyItem) {
+          setGroup("yearly");
+          setProductId(yearlyItem.product_id);
+        } else {
+          setGroup(pricing.items[0].group || "monthly");
+          setProductId(pricing.items[0].product_id);
+        }
+      }
       setIsLoading(false);
     }
-  }, [pricing.items]);
+  }, [pricing.items, group]);
 
   return (
     <section id={pricing.name} className="py-15 relative overflow-hidden">
@@ -104,7 +123,13 @@ export default function Pricing({ pricing }: { pricing: PricingType }) {
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-br from-green-500/10 to-cyan-500/10 rounded-full blur-3xl" />
       <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-gradient-to-tr from-cyan-500/10 to-green-500/10 rounded-full blur-3xl" />
 
-      <div className="container relative z-10">
+      <div
+        className={` ${
+          group === "credits-packs"
+            ? "sm:max-w-[90vw] max-w-[92vw] mx-auto"
+            : "container"
+        } relative z-10`}
+      >
         <div className="mx-auto mb-10 text-center max-w-3xl">
           <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-green-500 to-cyan-500 rounded-full mb-6 shadow-lg shadow-green-500/25">
             <Sparkles className="h-5 w-5 text-white" />
@@ -166,6 +191,14 @@ export default function Pricing({ pricing }: { pricing: PricingType }) {
                             className="border-green-500 bg-green-500 px-1.5 ml-2 text-white border-0 shadow-sm"
                           >
                             {item.label}
+                          </Badge>
+                        )}
+                        {item.name === "yearly" && (
+                          <Badge
+                            variant="outline"
+                            className="border-orange-500 bg-orange-500 px-1.5 ml-2 text-white border-0 shadow-sm"
+                          >
+                            {pricing.save_yearly}
                           </Badge>
                         )}
                       </Label>
@@ -269,7 +302,7 @@ export default function Pricing({ pricing }: { pricing: PricingType }) {
                       {item.cn_amount &&
                       item.cn_amount > 0 &&
                       item.interval === "one-time" &&
-                      item.title === "试用版" ? (
+                      item.title === "试用积分包" ? (
                         <div className="mb-6">
                           <div className="flex flex-col gap-2">
                             <div className="flex items-center gap-3">

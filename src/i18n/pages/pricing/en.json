@@ -4,43 +4,44 @@
     "label": "Pricing",
     "title": "Simple, Transparent Pricing",
     "description": "Choose the perfect plan for your AI image creation needs. ",
+    "save_yearly": "Save 20%",
     "groups": [
       { "name": "monthly", "title": "Monthly" },
+      { "name": "yearly", "title": "Yearly" },
       { "name": "credits-packs", "title": "Credits Packs" }
     ],
     "items": [
       {
-        "title": "Trial",
+        "title": "Starter",
         "description": "Perfect for trying out AI image generation and small projects.",
         "features_title": "What's included",
         "features": [
-          "50 AI generation credits",
+          "100 AI generation credits per month",
           "Nano Banana high quality models",
           "Text-to-image generation",
-          "Image-to-image editing",
+          "Image editing features",
           "Standard generation speed",
           "Standard success rate",
-          "Standard customer support",
-          "Download in high resolution"
+          "Standard customer support"
         ],
         "group": "monthly",
-        "interval": "one-time",
-        "amount": 599,
+        "interval": "month",
+        "amount": 999,
         "cn_amount": 0,
         "currency": "USD",
-        "price": "$5.99",
+        "price": "$9.99",
         "original_price": "$19.99",
         "unit": "USD",
         "is_featured": false,
-        "tip": "Non-subscription one-time trial, great for testing",
+        "tip": "Perfect for experiencing AI image generation and editing effects.",
         "button": {
-          "title": "One-time Trial",
+          "title": "Subscribe Starter",
           "url": "/#pricing",
           "icon": "RiFlashlightFill"
         },
         "product_id": "prod_Ssq8Ltsmjqeiw9",
-        "product_name": "Nano Banana One-time Trial",
-        "credits": 50,
+        "product_name": "Nano Banana Starter",
+        "credits": 100,
         "valid_months": 1
       },
       {
@@ -49,7 +50,7 @@
         "label": "Most Popular",
         "features_title": "Everything in Basic",
         "features": [
-          "500 AI generation credits",
+          "500 AI generation credits per month",
           "Priority processing speed",
           "High success rate",
           "Advanced editing features",
@@ -83,7 +84,7 @@
         "description": "For teams, agencies, and high-volume commercial use.",
         "features_title": "Everything in Pro",
         "features": [
-          "2000 AI generation credits",
+          "2000 AI generation credits per month",
           "Fastest generation speed",
           "Most advanced AI editing capabilities",
           "Permanent image storage",
@@ -108,6 +109,135 @@
         "product_id": "prod_SsqCkSQWvK8NzC",
         "product_name": "Nano Banana Premium",
         "credits": 2000,
+        "valid_months": 1
+      },
+      {
+        "title": "Starter",
+        "description": "Perfect for trying out AI image generation and small projects.",
+        "features_title": "What's included",
+        "features": [
+          "100 AI generation credits per month",
+          "Nano Banana high quality models",
+          "Text-to-image generation",
+          "Image editing features",
+          "Standard generation speed",
+          "Standard success rate",
+          "Standard customer support"
+        ],
+        "group": "yearly",
+        "interval": "year",
+        "amount": 9588,
+        "cn_amount": 0,
+        "currency": "USD",
+        "price": "$7.99",
+        "original_price": "$19.99",
+        "unit": "USD",
+        "is_featured": false,
+        "tip": "Perfect for experiencing AI image generation and editing effects.",
+        "button": {
+          "title": "Subscribe Starter",
+          "url": "/#pricing",
+          "icon": "RiFlashlightFill"
+        },
+        "product_id": "prod_Ssq8Ltsmjqeiw9-2",
+        "product_name": "Nano Banana Starter Annual",
+        "credits": 100,
+        "valid_months": 12
+      },
+      {
+        "title": "Pro",
+        "description": "Ideal for creators, designers, and content professionals.",
+        "label": "Most Popular",
+        "features_title": "Everything in Basic",
+        "features": [
+          "500 AI generation credits per month",
+          "Priority processing speed",
+          "High success rate",
+          "Advanced editing features",
+          "Multi-reference generation",
+          "High-speed download channel",
+          "Priority customer support",
+          "Extended commercial license"
+        ],
+        "group": "yearly",
+        "interval": "year",
+        "amount": 20388,
+        "cn_amount": 0,
+        "currency": "USD",
+        "price": "$16.99",
+        "original_price": "$89.99",
+        "unit": "USD",
+        "is_featured": true,
+        "tip": "🔥 Limited Time Offer! Get Pro Now",
+        "button": {
+          "title": "Subscribe Pro",
+          "url": "/#pricing",
+          "icon": "RiFlashlightFill"
+        },
+        "product_id": "prod_SsqBq5Jdkmjp4l1-2",
+        "product_name": "Nano Banana Pro Annual",
+        "credits": 500,
+        "valid_months": 12
+      },
+      {
+        "title": "Premium",
+        "description": "For teams, agencies, and high-volume commercial use.",
+        "features_title": "Everything in Pro",
+        "features": [
+          "2000 AI generation credits per month",
+          "Fastest generation speed",
+          "Most advanced AI editing capabilities",
+          "Permanent image storage",
+          "Unlimited commercial license",
+          "Dedicated account manager"
+        ],
+        "group": "yearly",
+        "interval": "year",
+        "amount": 83988,
+        "cn_amount": 0,
+        "currency": "USD",
+        "price": "$69.99",
+        "original_price": "$179.99",
+        "unit": "USD",
+        "is_featured": false,
+        "tip": "Perfect for teams and businesses",
+        "button": {
+          "title": "Subscribe Premium",
+          "url": "/#pricing",
+          "icon": "RiFlashlightFill"
+        },
+        "product_id": "prod_SsqCkSQWvK8NzC-2",
+        "product_name": "Nano Banana Premium Annual",
+        "credits": 2000,
+        "valid_months": 12
+      },
+      {
+        "title": "Trial Credits Pack",
+        "description": "Perfect for trying out AI image generation and small projects.",
+        "features_title": "What's included",
+        "features": [
+          "50 AI generation credits",
+          "Nano Banana high quality models",
+          "Credits valid for 1 month"
+        ],
+        "group": "credits-packs",
+        "interval": "one-time",
+        "amount": 599,
+        "cn_amount": 0,
+        "currency": "USD",
+        "price": "$5.99",
+        "original_price": "$19.99",
+        "unit": "USD",
+        "is_featured": false,
+        "tip": "Perfect for testing effects",
+        "button": {
+          "title": "Buy Trial Credits Pack",
+          "url": "/#pricing",
+          "icon": "RiFlashlightFill"
+        },
+        "product_id": "prod_Ssq8Ltsmjqeiw9",
+        "product_name": "Nano Banana Trial Credits Pack",
+        "credits": 50,
         "valid_months": 1
       },
       {
@@ -156,7 +286,7 @@
         "price": "$99.99",
         "original_price": "$120",
         "unit": "USD",
-        "is_featured": false,
+        "is_featured": true,
         "tip": "🔥 Limited Time Offer!",
         "button": {
           "title": "Buy Now",
