@@ -54,6 +54,7 @@ const tempDomains = new Set([
   "tempmailgo.com",
   "tempinbox.com",
   "tempinbox.net",
+  "tempimail.org",
 
   // Mailinator系列
   "mailinator.com",
