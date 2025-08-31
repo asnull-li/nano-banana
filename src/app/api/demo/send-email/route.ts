@@ -1,13 +1,11 @@
 import { respData, respErr } from "@/lib/resp";
-import { Resend } from "resend";
+import { sendEmail } from "@/services/smtp";
 
 export async function POST(req: Request) {
   try {
     const { emails, subject, content } = await req.json();
-    const resend = new Resend(process.env.RESEND_API_KEY!);
 
-    const result = await resend.emails.send({
-      from: process.env.RESEND_SENDER_EMAIL!,
+    const result = await sendEmail({
       to: emails,
       subject: subject,
       html: content,

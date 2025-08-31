@@ -257,7 +257,7 @@ function ProfileForm({ className }: React.ComponentProps<"form">) {
             </span>
           </Button>
         )}
-        {/* {process.env.NEXT_PUBLIC_AUTH_EMAIL_ENABLED === "true" && (
+        {process.env.NEXT_PUBLIC_AUTH_EMAIL_ENABLED === "true" && (
           <>
             {!codeEverSent ? (
               <Button
@@ -449,7 +449,7 @@ function ProfileForm({ className }: React.ComponentProps<"form">) {
               </div>
             )}
           </>
-        )} */}
+        )}
         <div className="text-center pt-2">
           <p className="text-xs text-muted-foreground">
             {t("sign_modal.terms_text")}{" "}

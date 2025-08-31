@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { Resend } from "resend";
+import { sendEmail } from "@/services/smtp";
 import {
   generateVerifyCode,
   storeVerifyCode,
@@ -15,16 +15,6 @@ const sendCodeSchema = z.object({
 
 export async function POST(req: NextRequest) {
   try {
-    // 检查环境变量
-    if (!process.env.RESEND_API_KEY || !process.env.RESEND_SENDER_EMAIL) {
-      console.error("Email configuration missing");
-      return NextResponse.json(
-        { error: "Email service not configured" },
-        { status: 500 }
-      );
-    }
-
-    const resend = new Resend(process.env.RESEND_API_KEY);
 
     // 验证请求体
     const body = await req.json();
@@ -69,10 +59,7 @@ export async function POST(req: NextRequest) {
     }
 
     // 发送邮件
-    const emailResult = await resend.emails.send({
-      from: `${process.env.RESEND_SENDER_NAME || "Nano Banana"} <${
-        process.env.RESEND_SENDER_EMAIL
-      }>`,
+    const emailResult = await sendEmail({
       to: email,
       subject: `${code} is your verification code`,
       html: `
