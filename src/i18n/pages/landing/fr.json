@@ -389,7 +389,7 @@
       },
       "url": "/"
     },
-    "copyright": "© 2025 • Nano Banana Tous droits réservés.",
+    "copyright": "© 2025 • Nano Banana ORG Tous droits réservés.",
     "nav": {
       "items": [
         {
@@ -411,46 +411,6 @@
               "target": "_self"
             }
           ]
-        },
-        {
-          "title": "Ressources",
-          "children": [
-            {
-              "title": "Documentation",
-              "url": "/docs",
-              "target": "_self"
-            },
-            {
-              "title": "Référence API",
-              "url": "/docs/api",
-              "target": "_self"
-            },
-            {
-              "title": "Tutoriels",
-              "url": "/docs/tutorials",
-              "target": "_self"
-            }
-          ]
-        },
-        {
-          "title": "Communauté",
-          "children": [
-            {
-              "title": "Galerie des créateurs",
-              "url": "/#showcase",
-              "target": "_self"
-            },
-            {
-              "title": "Communauté Discord",
-              "url": "/",
-              "target": "_self"
-            },
-            {
-              "title": "GitHub",
-              "url": "/",
-              "target": "_self"
-            }
-          ]
         }
       ]
     },
@@ -459,21 +419,10 @@
         {
           "title": "X",
           "icon": "RiTwitterXFill",
-          "url": "/",
+          "url": "https://x.com/GoogleDeepMind/status/1960341906790957283",
           "target": "_self"
         },
-        {
-          "title": "Github",
-          "icon": "RiGithubFill",
-          "url": "/",
-          "target": "_self"
-        },
-        {
-          "title": "Discord",
-          "icon": "RiDiscordFill",
-          "url": "/",
-          "target": "_self"
-        },
+
         {
           "title": "Email",
           "icon": "RiMailLine",

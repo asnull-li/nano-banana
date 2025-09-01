@@ -40,7 +40,10 @@ export default function Showcase({ section }: { section: ShowcaseSection }) {
   }));
 
   return (
-    <section className="relative min-h-screen py-20 overflow-hidden">
+    <section
+      id="showcase"
+      className="relative min-h-screen py-20 overflow-hidden"
+    >
       <div className="absolute inset-0 bg-gradient-to-b from-green-500/5 to-cyan-500/5 opacity-30" />
 
       <div className="container relative z-10">
