@@ -26,6 +26,7 @@ const tempDomains = new Set([
   "10minutemail.co.uk",
   "10minemail.com",
   "10minut.com.pl",
+  "10mail.org",
 
   // Guerrilla Mail系列
   "guerrillamail.com",
