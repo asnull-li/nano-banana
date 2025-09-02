@@ -212,8 +212,8 @@ async function stripeCheckout({
   }
 
   if (order.currency === "cny") {
-    options.payment_method_types = ["wechat_pay", "card"]; // 还没通过临时注释一下
-    // options.payment_method_types = ["wechat_pay", "alipay", "card"];
+    // options.payment_method_types = ["wechat_pay", "card"]; // 还没通过临时注释一下
+    options.payment_method_types = ["wechat_pay", "alipay"];
     options.payment_method_options = {
       wechat_pay: {
         client: "web",
