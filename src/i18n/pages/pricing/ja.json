@@ -4,7 +4,9 @@
     "label": "料金",
     "title": "シンプルで透明な料金体系",
     "description": "AI画像作成のニーズに最適なプランを選択してください。",
-    "save_yearly": "20%節約",
+    "save_yearly": "25%節約",
+    "cancel_anytime": "いつでもキャンセルできます",
+    "cancel_subscription_text": "サブスクリプションのキャンセルは、サポートメールにご連絡ください：",
     "groups": [
       { "name": "monthly", "title": "月料金" },
       { "name": "yearly", "title": "年料金" },

@@ -4,7 +4,9 @@
     "label": "Tarifs",
     "title": "Tarification simple et transparente",
     "description": "Choisissez le plan parfait pour vos besoins de création d'images IA.",
-    "save_yearly": "Économisez 20%",
+    "save_yearly": "Économisez 25%",
+    "cancel_anytime": "Annuler à tout moment",
+    "cancel_subscription_text": "Pour annuler l'abonnement, veuillez contacter l'e-mail de support:",
     "groups": [
       { "name": "monthly", "title": "Mensuel" },
       { "name": "yearly", "title": "Annuel" },

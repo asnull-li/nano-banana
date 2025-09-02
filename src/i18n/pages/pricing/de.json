@@ -4,7 +4,9 @@
     "label": "Preise",
     "title": "Einfache, transparente Preise",
     "description": "Wählen Sie den perfekten Plan für Ihre KI-Bilderstellungsbedürfnisse.",
-    "save_yearly": "20% sparen",
+    "save_yearly": "25% sparen",
+    "cancel_anytime": "Jederzeit kündbar",
+    "cancel_subscription_text": "Für die Kündigung des Abonnements kontaktieren Sie bitte die Support-E-Mail:",
     "groups": [
       { "name": "monthly", "title": "Monatlich" },
       { "name": "yearly", "title": "Jährlich" },

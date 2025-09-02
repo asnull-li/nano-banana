@@ -4,7 +4,9 @@
     "label": "定价",
     "title": "简单透明的定价",
     "description": "为您的 AI 图像创作需求选择完美的计划。",
-    "save_yearly": "节省 20%",
+    "save_yearly": "节省25%",
+    "cancel_anytime": "随时取消",
+    "cancel_subscription_text": "取消订阅，请联系客服邮箱：",
     "groups": [
       { "name": "monthly", "title": "月付" },
       { "name": "yearly", "title": "年付" },

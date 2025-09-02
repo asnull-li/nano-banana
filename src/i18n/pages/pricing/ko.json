@@ -4,7 +4,9 @@
     "label": "가격",
     "title": "간단하고 투명한 가격",
     "description": "AI 이미지 생성 요구에 맞는 완벽한 플랜을 선택하세요.",
-    "save_yearly": "20% 절약",
+    "save_yearly": "25% 절약",
+    "cancel_anytime": "언제든지 취소 가능",
+    "cancel_subscription_text": "구독 취소는 지원 이메일로 문의하세요:",
     "groups": [
       { "name": "monthly", "title": "월간" },
       { "name": "yearly", "title": "연간" },

@@ -100,45 +100,7 @@ export default function Footer({ footer }: { footer: FooterType }) {
             )}
           </div>
         </footer>
-        <div className="flex items-center gap-2">
-          <a
-            href="https://www.toolify.ai/tool/nano-banana-ai-image-generator/?ref=embed"
-            target="_blank"
-            style={{ cursor: "pointer" }}
-          >
-            <img
-              src="https://cdn.toolify.ai/featured_light.svg"
-              style={{ width: "250px", height: "60px" }}
-              width="250"
-              height="60"
-              alt="Nano Banana: AI image generator and editor with chat for consistent results."
-            />
-          </a>
-          <a
-            href="https://startupfa.me/s/nano-banana?utm_source=nanobanana.org"
-            target="_blank"
-          >
-            <img
-              src="https://startupfa.me/badges/featured-badge-small.webp"
-              alt="Featured on Startup Fame"
-              width="224"
-              height="36"
-            />
-          </a>
-          <a href="https://fazier.com/launches/nanobanana.org" target="_blank">
-            <img
-              src="https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=launched&theme=light"
-              width="120"
-              alt="Fazier badge"
-            />
-          </a>
-          <a
-            className="text-black"
-            href="https://velog.io/@y4xvoc5h/Nano-Banana"
-          >
-            Nano Banana
-          </a>
-        </div>
+
         <FooterLanguageLinks />
       </div>
     </section>

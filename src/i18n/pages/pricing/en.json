@@ -4,7 +4,9 @@
     "label": "Pricing",
     "title": "Simple, Transparent Pricing",
     "description": "Choose the perfect plan for your AI image creation needs. ",
-    "save_yearly": "Save 20%",
+    "save_yearly": "Save 25%",
+    "cancel_anytime": "Cancel anytime",
+    "cancel_subscription_text": "Cancel subscription, please contact the support email:",
     "groups": [
       { "name": "monthly", "title": "Monthly" },
       { "name": "yearly", "title": "Yearly" },

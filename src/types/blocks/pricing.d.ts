@@ -39,4 +39,6 @@ export interface Pricing {
   items?: PricingItem[];
   groups?: PricingGroup[];
   save_yearly?: string;
+  cancel_anytime?: string;
+  cancel_subscription_text?: string;
 }
