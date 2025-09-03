@@ -118,7 +118,7 @@
         "description": "AI画像生成を試したり、小規模プロジェクトに最適です。",
         "features_title": "含まれる機能",
         "features": [
-          "150 AI生成クレジット毎月",
+          "1800 AI生成クレジット毎年",
           "Nano Banana高品質モデル",
           "テキストから画像への生成",
           "画像編集機能",
@@ -143,7 +143,7 @@
         },
         "product_id": "prod_Ssq8Ltsmjqeiw9-2",
         "product_name": "Nano Banana 初級版年料",
-        "credits": 150,
+        "credits": 1800,
         "valid_months": 12
       },
       {
@@ -152,7 +152,7 @@
         "label": "最も人気",
         "features_title": "ベーシックのすべてを含む",
         "features": [
-          "600 AI生成クレジット毎月",
+          "7200 AI生成クレジット毎年",
           "優先処理速度",
           "高成功率",
           "高度な編集機能",
@@ -178,7 +178,7 @@
         },
         "product_id": "prod_SsqBq5Jdkmjp4l1-2",
         "product_name": "Nano Bananaプロ年料",
-        "credits": 600,
+        "credits": 7200,
         "valid_months": 12
       },
       {
@@ -186,7 +186,7 @@
         "description": "チーム、エージェンシー、大量商用利用向けです。",
         "features_title": "プロのすべてを含む",
         "features": [
-          "3000 AI生成クレジット毎月",
+          "30000 AI生成クレジット毎年",
           "最速生成速度",
           "最も高度なAI編集機能",
           "永続的な画像ストレージ",
@@ -210,7 +210,7 @@
         },
         "product_id": "prod_SsqCkSQWvK8NzC-2",
         "product_name": "Nano Bananaプレミアム年料",
-        "credits": 3000,
+        "credits": 30000,
         "valid_months": 12
       },
       {
