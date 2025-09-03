@@ -11,6 +11,7 @@ const languageFlags: Record<string, string> = {
   ja: "🇯🇵",
   ko: "🇰🇷",
   zh: "🇨🇳",
+  ru: "🇷🇺",
 };
 
 export default function FooterLanguageLinks() {
@@ -20,7 +21,7 @@ export default function FooterLanguageLinks() {
 
   const getLocalizedPath = (targetLocale: string) => {
     if (targetLocale === currentLocale) return pathname;
-    
+
     let newPathName = pathname.replace(`/${currentLocale}`, `/${targetLocale}`);
     if (!newPathName.startsWith(`/${targetLocale}`)) {
       newPathName = `/${targetLocale}${newPathName}`;
@@ -33,16 +34,17 @@ export default function FooterLanguageLinks() {
       <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
         {locales.map((locale) => {
           const isCurrent = locale === currentLocale;
-          
+
           return (
             <a
               key={locale}
               href={getLocalizedPath(locale)}
               className={`
                 flex items-center gap-1.5 text-sm transition-all duration-200
-                ${isCurrent 
-                  ? "text-foreground font-medium" 
-                  : "text-muted-foreground hover:text-foreground"
+                ${
+                  isCurrent
+                    ? "text-foreground font-medium"
+                    : "text-muted-foreground hover:text-foreground"
                 }
               `}
             >

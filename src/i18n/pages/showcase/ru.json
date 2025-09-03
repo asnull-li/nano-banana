@@ -1,0 +1,160 @@
+{
+  "showcase": {
+    "name": "showcase",
+    "title": "Примеры Nano Banana",
+    "description": "Исследуйте различные типы эффектов обработки изображений и испытайте мощь профессиональной технологии ИИ.",
+    "subtitle": "Раскройте свою креативность и исследуйте больше способов использования, не только примеры ниже.",
+    "items": [
+      {
+        "id": "background-replacement",
+        "category": "Замена фона",
+        "title": "Замена фона",
+        "description": "Отделите объект от оригинального фона и замените его на новую, более креативную сцену.",
+        "original": "https://file.nanobanana.org/showcase/1.webp",
+        "effects": [
+          {
+            "id": "vintage-desk",
+            "name": "Винтажный стол с инструментами",
+            "image": "https://file.nanobanana.org/showcase/1-1.webp",
+            "prompt": "Change background to a vast grassland",
+            "description": "Поместить объект в обстановку мастерской"
+          },
+          {
+            "id": "tropical-beach",
+            "name": "Тропический пляж",
+            "image": "https://file.nanobanana.org/showcase/1-2.webp",
+            "prompt": "Change background to a winding mountain road",
+            "description": "Солнечный пляж с кристально чистой водой"
+          },
+          {
+            "id": "modern-office",
+            "name": "Современный офис",
+            "image": "https://file.nanobanana.org/showcase/1-3.webp",
+            "prompt": "Change background to a winding mountain road",
+            "description": "Чистое, минималистичное офисное пространство"
+          }
+        ]
+      },
+      {
+        "id": "lighting-adjustment",
+        "category": "Настройка освещения",
+        "title": "Настройка освещения",
+        "description": "Настройте световые эффекты с помощью ИИ, чтобы изменить настроение и придать вашим фотографиям кинематографический вид.",
+        "original": "https://file.nanobanana.org/showcase/2.webp",
+        "effects": [
+          {
+            "id": "golden-hour",
+            "name": "Золотой час",
+            "image": "https://file.nanobanana.org/showcase/2-1.webp",
+            "prompt": "Add warm sunlight effect",
+            "description": "Воссоздание магического освещения золотого часа"
+          },
+          {
+            "id": "dramatic-shadows",
+            "name": "Драматичные тени",
+            "image": "https://file.nanobanana.org/showcase/2-2.webp",
+            "prompt": "Adjust to the cool tones of the 'blue hour'",
+            "description": "Высококонтрастное драматичное освещение"
+          },
+          {
+            "id": "soft-glow",
+            "name": "Мягкое свечение",
+            "image": "https://file.nanobanana.org/showcase/2-3.webp",
+            "prompt": "Switch to a night scene with point light sources",
+            "description": "Нежный, льстящий световой эффект"
+          }
+        ]
+      },
+      {
+        "id": "style-conversion",
+        "category": "Преобразование стиля",
+        "title": "Преобразование стиля",
+        "description": "Трансформируйте ваши фотографии в различные художественные стили с помощью ИИ.",
+        "original": "https://file.nanobanana.org/showcase/3.webp",
+        "effects": [
+          {
+            "id": "oil-painting",
+            "name": "Масляная живопись",
+            "image": "https://file.nanobanana.org/showcase/3-1.webp",
+            "prompt": "Convert to Japanese anime style",
+            "description": "Классический эффект масляной живописи"
+          },
+          {
+            "id": "watercolor",
+            "name": "Акварель",
+            "image": "https://file.nanobanana.org/showcase/3-2.webp",
+            "prompt": "Convert to a rich oil painting style",
+            "description": "Деликатный акварельный художественный стиль"
+          },
+          {
+            "id": "anime",
+            "name": "Стиль аниме",
+            "image": "https://file.nanobanana.org/showcase/3-3.webp",
+            "prompt": "Convert to a retro pixel art style",
+            "description": "Стиль японских аниме персонажей"
+          }
+        ]
+      },
+      {
+        "id": "color-change",
+        "category": "Изменение цвета",
+        "title": "Изменение цвета",
+        "description": "Профессиональная цветокоррекция для полного изменения настроения ваших фотографий.",
+        "original": "https://file.nanobanana.org/showcase/4.webp",
+        "effects": [
+          {
+            "id": "vibrant",
+            "name": "Яркие цвета",
+            "image": "https://file.nanobanana.org/showcase/4-1.webp",
+            "prompt": "Change all green leaves to red",
+            "description": "Привлекающие внимание яркие цвета"
+          },
+          {
+            "id": "moody",
+            "name": "Атмосферные тона",
+            "image": "https://file.nanobanana.org/showcase/4-2.webp",
+            "prompt": "Change all green leaves to yellow",
+            "description": "Глубокая, атмосферная цветокоррекция"
+          },
+          {
+            "id": "vintage",
+            "name": "Винтажная пленка",
+            "image": "https://file.nanobanana.org/showcase/4-3.webp",
+            "prompt": "Change all green leaves to blue",
+            "description": "Классическая палитра пленочных цветов"
+          }
+        ]
+      },
+      {
+        "id": "age-transformation",
+        "category": "Трансформация возраста",
+        "title": "Трансформация возраста",
+        "description": "Посмотрите на себя в разном возрасте с помощью передовой технологии ИИ.",
+        "original": "https://file.nanobanana.org/showcase/5.webp",
+        "effects": [
+          {
+            "id": "younger",
+            "name": "На 10 лет моложе",
+            "image": "https://file.nanobanana.org/showcase/5-1.webp",
+            "prompt": "Change age to 3 years old",
+            "description": "Естественный эффект омоложения"
+          },
+          {
+            "id": "teenage",
+            "name": "Подростковые годы",
+            "image": "https://file.nanobanana.org/showcase/5-2.webp",
+            "prompt": "Change age to 16 years old",
+            "description": "Молодежный подростковый вид"
+          },
+          {
+            "id": "elderly",
+            "name": "Будущее вы",
+            "image": "https://file.nanobanana.org/showcase/5-3.webp",
+            "prompt": "Change age to 16 years old",
+            "description": "Естественная симуляция старения"
+          }
+        ]
+      }
+    ]
+  }
+}
