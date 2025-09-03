@@ -332,5 +332,49 @@
         "valid_months": 12
       }
     ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "Questions Fréquentes",
+    "title": "Questions Fréquentes sur les Paiements Nano Banana",
+    "description": "D'autres questions sur les paiements Nano Banana ? Contactez notre équipe de support pour obtenir de l'aide.",
+    "items": [
+      {
+        "title": "Quels modes de paiement sont pris en charge ?",
+        "description": "Nous acceptons les cartes de crédit telles que Visa, MasterCard, American Express, ainsi que divers autres modes de paiement comme Alipay et WeChat Pay. Tous les paiements sont traités via des plateformes de paiement tierces sécurisées pour assurer la sécurité de vos informations. Si vous souhaitez payer avec des cryptomonnaies, veuillez contacter notre email de support."
+      },
+      {
+        "title": "Que sont les crédits et comment les utiliser ?",
+        "description": "4 crédits permettent de générer 1 image de haute qualité. Les crédits sont automatiquement rechargés au début de chaque cycle de facturation. Pour les plans d'abonnement mensuel, les crédits sont rechargés automatiquement chaque mois et sont valables pour un mois. Pour les plans d'abonnement annuel, vous payez les frais annuels en une fois et recevez les crédits pour une année entière, valables pendant un an. Vous pouvez également acheter des packs de crédits ponctuels, ces crédits n'expirent jamais."
+      },
+      {
+        "title": "Comment gérer ou annuler mon abonnement ?",
+        "description": "Vous pouvez contacter notre équipe de support à support@nanobanana.org pour annuler votre abonnement. Nous répondons généralement dans un délai d'un jour ouvrable. Merci de votre compréhension et de votre soutien."
+      },
+      {
+        "title": "Les crédits non utilisés s'accumulent-ils ?",
+        "description": "À l'exception du pack de crédits d'essai, tous les autres packs de crédits achetés en une fois sont valides de manière permanente. Les crédits d'abonnement sont mis à jour mensuellement. Pour les plans d'abonnement mensuel, les crédits non utilisés du mois précédent sont réinitialisés lors du renouvellement de l'abonnement. Pour les plans d'abonnement annuel, les crédits non utilisés de l'année précédente sont réinitialisés lors du renouvellement de l'abonnement. Nous recommandons de choisir un plan approprié selon vos besoins d'utilisation réels."
+      },
+      {
+        "title": "Comment acheter plus de crédits ?",
+        "description": "Il existe deux façons d'obtenir des crédits supplémentaires : acheter des packs de crédits ponctuels, qui vous donnent des crédits immédiatement et n'expirent jamais, peuvent être achetés plusieurs fois et utilisés en combinaison avec votre abonnement existant. Si vous avez besoin de plus gros volumes de crédits, veuillez contacter support@nanobanana.org, nous vous fournirons un plan de crédits adapté."
+      },
+      {
+        "title": "Puis-je changer de plan d'abonnement à tout moment ?",
+        "description": "Oui, vous pouvez upgrader ou downgrader votre plan à tout moment. Pour changer d'abonnement, veuillez d'abord contacter le service client support@nanobanana.org pour annuler votre abonnement, puis vous réabonner au nouveau plan."
+      },
+      {
+        "title": "Qu'est-ce que Nano Banana exactement ?",
+        "description": "Nano Banana est une plateforme révolutionnaire de génération et d'édition d'images pilotée par l'IA. Contrairement aux modèles traditionnels, elle combine les entrées texte et image pour une création visuelle transparente, offrant des fonctionnalités puissantes telles que le maintien de la cohérence des personnages, l'édition de scènes et la fusion de références multi-images."
+      },
+      {
+        "title": "Nano Banana convient-il au travail créatif professionnel ?",
+        "description": "Absolument ! Nano Banana est conçu pour les professionnels créatifs, offrant un rendu réaliste et des résultats de qualité professionnelle. De nombreux artistes professionnels, designers, créateurs de contenu et agences créatives s'appuient sur Nano Banana pour leurs flux de travail quotidiens et leurs projets clients."
+      },
+      {
+        "title": "Comment contacter l'équipe de support client ?",
+        "description": "Si vous avez des questions, veuillez envoyer un email à support@nanobanana.io, notre équipe vous répondra dès que possible. Généralement, vous recevrez une réponse dans un délai d'un jour ouvrable."
+      }
+    ]
   }
 }

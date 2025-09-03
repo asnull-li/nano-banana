@@ -332,5 +332,49 @@
         "valid_months": 12
       }
     ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "FAQ",
+    "title": "Frequently Asked Questions About Nano Banana Payments",
+    "description": "Have more questions about Nano Banana payments? Contact our support team for help.",
+    "items": [
+      {
+        "title": "What payment methods are supported?",
+        "description": "We accept credit cards like Visa, MasterCard, American Express, as well as payment methods like Alipay and WeChat Pay. All payments are processed through secure third-party payment platforms to ensure your information security. If you wish to pay with cryptocurrency, please contact our support email."
+      },
+      {
+        "title": "What are credits and how do I use them?",
+        "description": "4 credits can generate 1 high-quality image. Credits are automatically refilled at the beginning of each billing cycle. Monthly subscription plans automatically charge and refill monthly, with credits valid for one month. Annual subscription plans charge once for the entire year, with all credits issued at once and valid for one year. You can also purchase one-time credit packs, which never expire."
+      },
+      {
+        "title": "How do I manage or cancel my subscription?",
+        "description": "You can contact our support team at support@nanobanana.org to cancel your subscription. We typically respond within one business day. Thank you for your understanding and support."
+      },
+      {
+        "title": "Do unused credits roll over?",
+        "description": "Except for trial credit packs, all other one-time purchased credit packs are valid forever. Subscription credits refresh monthly or annually - for monthly subscriptions, unused credits from the previous month are reset upon renewal, and for annual subscriptions, unused credits from the previous year are reset upon renewal. We recommend choosing a plan based on your actual usage needs."
+      },
+      {
+        "title": "How do I purchase more credits?",
+        "description": "There are two ways to get additional credits: Purchase one-time credit packs for immediate credits that never expire, which can be purchased multiple times and used alongside existing subscriptions. For larger credit needs, please contact support@nanobanana.org and we'll provide a suitable credit solution."
+      },
+      {
+        "title": "Can I change my subscription plan at any time?",
+        "description": "Yes, you can upgrade or downgrade your plan at any time. To change subscriptions, first contact support@nanobanana.org to cancel your subscription, then resubscribe to the new plan."
+      },
+      {
+        "title": "What exactly is Nano Banana?",
+        "description": "Nano Banana is a revolutionary AI-driven image generation and editing platform. Unlike traditional models, it combines text and image inputs for seamless visual creation, offering powerful features like character consistency, scene editing, and multi-image fusion references."
+      },
+      {
+        "title": "Is Nano Banana suitable for professional creative work?",
+        "description": "Absolutely! Nano Banana is designed for professional creators, offering photorealistic rendering and production-grade quality results. Many professional artists, designers, content creators, and creative agencies rely on Nano Banana for their daily workflows and client projects."
+      },
+      {
+        "title": "How do I contact the support team?",
+        "description": "If you have any questions, please email support@nanobanana.io and our team will respond as soon as possible. You will typically receive a response within one business day."
+      }
+    ]
   }
 }

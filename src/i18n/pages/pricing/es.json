@@ -332,5 +332,49 @@
         "valid_months": 12
       }
     ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "Preguntas Frecuentes",
+    "title": "Preguntas Frecuentes sobre Pagos de Nano Banana",
+    "description": "¿Tienes otras preguntas sobre los pagos de Nano Banana? Contacta con nuestro equipo de soporte para obtener ayuda.",
+    "items": [
+      {
+        "title": "¿Qué métodos de pago se admiten?",
+        "description": "Aceptamos tarjetas de crédito como Visa, MasterCard, American Express, así como varios otros métodos de pago como Alipay y WeChat Pay. Todos los pagos se procesan a través de plataformas de pago seguras de terceros para garantizar la seguridad de tu información. Si deseas pagar con criptomonedas, contacta con nuestro email de soporte."
+      },
+      {
+        "title": "¿Qué son los créditos y cómo usarlos?",
+        "description": "4 créditos pueden generar 1 imagen de alta calidad. Los créditos se recargan automáticamente al inicio de cada ciclo de facturación. Los planes de suscripción mensual se facturan y recargan automáticamente cada mes, y los créditos son válidos por 1 mes. Los planes de suscripción anual pagan la tarifa anual de una vez y proporcionan créditos para todo el año de una vez, y los créditos son válidos por 1 año. También puedes comprar paquetes de créditos únicos, estos créditos nunca expiran."
+      },
+      {
+        "title": "¿Cómo administrar o cancelar mi suscripción?",
+        "description": "Puedes contactar con nuestro equipo de soporte support@nanobanana.org para cancelar tu suscripción. Normalmente respondemos dentro de un día hábil. Gracias por tu comprensión y apoyo."
+      },
+      {
+        "title": "¿Se acumulan los créditos no utilizados?",
+        "description": "Excepto el paquete de créditos de prueba, todos los demás paquetes de créditos comprados de una vez son válidos permanentemente. Los créditos de suscripción se actualizan mensualmente. Para planes de suscripción mensual, los créditos no utilizados del mes anterior se restablecen cuando se renueva la suscripción. Para planes de suscripción anual, los créditos no utilizados del año anterior se restablecen cuando se renueva la suscripción. Recomendamos elegir un plan apropiado según tus necesidades reales de uso."
+      },
+      {
+        "title": "¿Cómo comprar más créditos?",
+        "description": "Hay dos formas de obtener créditos adicionales: comprar paquetes de créditos únicos, que te dan créditos inmediatamente y nunca expiran, se pueden comprar múltiples veces y usar en combinación con tu suscripción existente. Si necesitas volúmenes más grandes de créditos, contacta con support@nanobanana.org, te proporcionaremos un plan de créditos adecuado."
+      },
+      {
+        "title": "¿Puedo cambiar el plan de suscripción en cualquier momento?",
+        "description": "Sí, puedes actualizar o degradar tu plan en cualquier momento. Para cambiar de suscripción, primero contacta con el servicio al cliente support@nanobanana.org para cancelar tu suscripción, luego vuelve a suscribirte al nuevo plan."
+      },
+      {
+        "title": "¿Qué es exactamente Nano Banana?",
+        "description": "Nano Banana es una plataforma revolucionaria de generación y edición de imágenes impulsada por IA. A diferencia de los modelos tradicionales, combina entradas de texto e imagen para una creación visual perfecta, proporcionando funciones potentes como mantener la consistencia de personajes, edición de escenas y fusión de referencias de múltiples imágenes."
+      },
+      {
+        "title": "¿Es Nano Banana adecuado para trabajo creativo profesional?",
+        "description": "¡Absolutamente! Nano Banana está diseñado para profesionales creativos, proporcionando renderizado realista y resultados de calidad de producción. Muchos artistas profesionales, diseñadores, creadores de contenido y agencias creativas confían en Nano Banana para sus flujos de trabajo diarios y proyectos de clientes."
+      },
+      {
+        "title": "¿Cómo contactar con el equipo de soporte al cliente?",
+        "description": "Si tienes alguna pregunta, envía un email a support@nanobanana.io, nuestro equipo te responderá lo antes posible. Normalmente recibirás una respuesta dentro de un día hábil."
+      }
+    ]
   }
 }

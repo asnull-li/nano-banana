@@ -23,6 +23,7 @@ export interface LandingPage {
 
 export interface PricingPage {
   pricing?: Pricing;
+  faq?: Section;
 }
 
 export interface ShowcasePage {
