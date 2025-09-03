@@ -583,4 +583,7 @@ const tempDomains = new Set([
   "zxcv.com",
   "zxcvbnm.com",
   "zzz.com",
+
+  "passmail.com",
+  "iwatermail.com",
 ]);
