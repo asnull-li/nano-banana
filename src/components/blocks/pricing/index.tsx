@@ -269,7 +269,7 @@ export default function Pricing({ pricing }: { pricing: PricingType }) {
                         )}
                         {item.price && (
                           <span
-                            className={`text-4xl font-bold ${
+                            className={`text-5xl font-bold ${
                               item.is_featured
                                 ? "bg-gradient-to-r from-green-500 to-cyan-500 bg-clip-text text-transparent"
                                 : "text-foreground"
