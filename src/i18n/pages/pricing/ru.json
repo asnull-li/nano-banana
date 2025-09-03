@@ -7,6 +7,7 @@
     "save_yearly": "Экономия 25%",
     "cancel_anytime": "Отмена в любое время",
     "cancel_subscription_text": "Для отмены подписки, пожалуйста, свяжитесь с поддержкой:",
+    "mo": "мес.",
     "groups": [
       { "name": "monthly", "title": "Ежемесячно" },
       { "name": "yearly", "title": "Ежегодно" },

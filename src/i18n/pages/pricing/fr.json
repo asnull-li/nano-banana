@@ -7,6 +7,7 @@
     "save_yearly": "Économisez 25%",
     "cancel_anytime": "Annuler à tout moment",
     "cancel_subscription_text": "Pour annuler l'abonnement, veuillez contacter l'e-mail de support:",
+    "mo": "mois",
     "groups": [
       { "name": "monthly", "title": "Mensuel" },
       { "name": "yearly", "title": "Annuel" },

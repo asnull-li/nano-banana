@@ -7,6 +7,7 @@
     "save_yearly": "25%節約",
     "cancel_anytime": "いつでもキャンセルできます",
     "cancel_subscription_text": "サブスクリプションのキャンセルは、サポートメールにご連絡ください：",
+    "mo": "月",
     "groups": [
       { "name": "monthly", "title": "月料金" },
       { "name": "yearly", "title": "年料金" },

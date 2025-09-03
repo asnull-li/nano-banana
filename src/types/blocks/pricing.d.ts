@@ -41,4 +41,5 @@ export interface Pricing {
   save_yearly?: string;
   cancel_anytime?: string;
   cancel_subscription_text?: string;
+  mo?: string;
 }

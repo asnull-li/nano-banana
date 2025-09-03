@@ -263,13 +263,13 @@ export default function Pricing({ pricing }: { pricing: PricingType }) {
                       </div>
                       <div className="flex items-end gap-3 mb-6">
                         {item.original_price && (
-                          <span className="text-xl text-muted-foreground font-semibold line-through">
+                          <span className="text-lg text-muted-foreground font-semibold line-through">
                             {item.original_price}
                           </span>
                         )}
                         {item.price && (
                           <span
-                            className={`text-5xl font-bold ${
+                            className={`text-4xl font-bold ${
                               item.is_featured
                                 ? "bg-gradient-to-r from-green-500 to-cyan-500 bg-clip-text text-transparent"
                                 : "text-foreground"
@@ -278,11 +278,16 @@ export default function Pricing({ pricing }: { pricing: PricingType }) {
                             {item.price}
                           </span>
                         )}
-                        {item.unit && (
+                        {item.interval !== "one-time" && (
+                          <span className="text-sm text-muted-foreground">
+                            / {pricing.mo}
+                          </span>
+                        )}
+                        {/* {item.unit && (
                           <span className="block font-semibold text-base text-muted-foreground mb-2">
                             {item.unit}
                           </span>
-                        )}
+                        )} */}
                       </div>
                       {item.cn_amount &&
                       item.cn_amount > 0 &&
@@ -410,9 +415,9 @@ export default function Pricing({ pricing }: { pricing: PricingType }) {
         </div>
 
         <div className="text-center my-15 text-muted-foreground">
-          <p className="mb-2 font-medium">
+          {/* <p className="mb-2 font-medium">
             <span className="text-green-600">•</span> {pricing.cancel_anytime}
-          </p>
+          </p> */}
           <p className="text-sm">
             {pricing.cancel_subscription_text}
             <a
