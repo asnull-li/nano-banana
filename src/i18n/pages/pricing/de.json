@@ -306,7 +306,7 @@
         "description": "Einmalkauf, Credits laufen nie ab, perfekt für professionelle Designer",
         "features_title": "Was enthalten ist",
         "features": [
-          "8000 KI-Generierungs-Credits",
+          "7000 KI-Generierungs-Credits",
           "Laufen nie ab",
           "Alle Funktionen freischalten",
           "Prioritäts-Kundensupport",
@@ -329,7 +329,7 @@
         },
         "product_id": "credits-packs-3",
         "product_name": "Nano Banana Premium Credit-Paket",
-        "credits": 8000,
+        "credits": 7000,
         "valid_months": 12
       }
     ]
@@ -343,6 +343,10 @@
       {
         "title": "Welche Zahlungsmethoden werden unterstützt?",
         "description": "Wir akzeptieren Kreditkarten wie Visa, MasterCard, American Express sowie verschiedene andere Zahlungsmethoden wie Alipay und WeChat Pay. Alle Zahlungen werden über sichere Drittanbieter-Zahlungsplattformen verarbeitet, um die Sicherheit Ihrer Informationen zu gewährleisten. Wenn Sie mit Kryptowährungen bezahlen möchten, kontaktieren Sie bitte unsere Support-E-Mail."
+      },
+      {
+        "title": "Was sind Jahres-, Monatsabonnements und Credit-Pakete?",
+        "description": "Jahres-, Monatsabonnements und Credit-Pakete sind die Zahlungspläne von Nano Banana. Das Jahresabonnement ist eine einmalige Zahlung für das gesamte Jahr mit automatischer jährlicher Verlängerung, alle Credits für das Jahr werden auf einmal bereitgestellt und sind ein Jahr gültig, mit 25% Ersparnis bei der Wahl des Jahresabonnements. Das Monatsabonnement wird monatlich automatisch abgebucht und aufgeladen, Credits sind einen Monat gültig. Credit-Pakete sind einmalige Käufe, die nie ablaufen und sich nicht automatisch erneuern. Bitte prüfen Sie beim Bezahlen den tatsächlichen Zahlungsbetrag und wählen Sie den passenden Plan."
       },
       {
         "title": "Was sind Credits und wie werden sie verwendet?",

@@ -306,7 +306,7 @@
         "description": "One-time purchase, credits never expire, perfect for professional designers",
         "features_title": "What's included",
         "features": [
-          "8000 AI generation credits",
+          "7000 AI generation credits",
           "Never expire",
           "Unlock all features",
           "Priority customer support",
@@ -329,7 +329,7 @@
         },
         "product_id": "credits-packs-3",
         "product_name": "Nano Banana Premium Credits Pack",
-        "credits": 8000,
+        "credits": 7000,
         "valid_months": 12
       }
     ]
@@ -343,6 +343,10 @@
       {
         "title": "What payment methods are supported?",
         "description": "We accept credit cards like Visa, MasterCard, American Express, as well as payment methods like Alipay and WeChat Pay. All payments are processed through secure third-party payment platforms to ensure your information security. If you wish to pay with cryptocurrency, please contact our support email."
+      },
+      {
+        "title": "What are annual, monthly subscriptions, and credit packs?",
+        "description": "Annual, monthly subscriptions, and credit packs are Nano Banana's payment plans. Annual subscription is a one-time payment for the entire year with automatic renewal annually, providing all credits for the year at once that are valid for one year, with 25% savings when choosing annual subscription. Monthly subscription automatically charges and refills monthly, with credits valid for one month. Credit packs are one-time purchases that never expire and don't auto-renew. Please check the actual payment amount when paying and choose the appropriate plan."
       },
       {
         "title": "What are credits and how do I use them?",

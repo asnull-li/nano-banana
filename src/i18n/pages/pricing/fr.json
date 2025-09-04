@@ -306,7 +306,7 @@
         "description": "Achat unique, crédits n'expirent jamais, parfait pour les designers professionnels",
         "features_title": "Ce qui est inclus",
         "features": [
-          "8000 crédits de génération IA",
+          "7000 crédits de génération IA",
           "N'expirent jamais",
           "Débloquer toutes les fonctionnalités",
           "Support client prioritaire",
@@ -329,7 +329,7 @@
         },
         "product_id": "credits-packs-3",
         "product_name": "Nano Banana Pack de Crédits Premium",
-        "credits": 8000,
+        "credits": 7000,
         "valid_months": 12
       }
     ]
@@ -343,6 +343,10 @@
       {
         "title": "Quels modes de paiement sont pris en charge ?",
         "description": "Nous acceptons les cartes de crédit telles que Visa, MasterCard, American Express, ainsi que divers autres modes de paiement comme Alipay et WeChat Pay. Tous les paiements sont traités via des plateformes de paiement tierces sécurisées pour assurer la sécurité de vos informations. Si vous souhaitez payer avec des cryptomonnaies, veuillez contacter notre email de support."
+      },
+      {
+        "title": "Que sont les abonnements annuels, mensuels et les packs de crédits ?",
+        "description": "Les abonnements annuels, mensuels et les packs de crédits sont les plans de paiement de Nano Banana. L'abonnement annuel est un paiement unique pour toute l'année avec renouvellement automatique annuel, fournissant tous les crédits de l'année en une fois valables pour un an, avec 25% d'économies en choisissant l'abonnement annuel. L'abonnement mensuel se recharge automatiquement chaque mois, avec des crédits valables pour un mois. Les packs de crédits sont des achats uniques qui n'expirent jamais et ne se renouvellent pas automatiquement. Veuillez vérifier le montant réel du paiement lors du paiement et choisir le plan approprié."
       },
       {
         "title": "Que sont les crédits et comment les utiliser ?",
