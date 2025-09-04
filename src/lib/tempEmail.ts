@@ -586,4 +586,5 @@ const tempDomains = new Set([
 
   "passmail.com",
   "iwatermail.com",
+  "cloud.satkp.edu.hk",
 ]);
