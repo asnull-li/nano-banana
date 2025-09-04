@@ -28,7 +28,7 @@ export async function submitImageEdit(
   numImages: number = 1,
   webhookUrl?: string
 ): Promise<string> {
-  const { request_id } = await fal.queue.submit("fal-ai/nano-banana/edit", {
+  const res = await fal.queue.submit("fal-ai/nano-banana/edit", {
     input: {
       prompt,
       image_urls: imageUrls,
@@ -36,7 +36,8 @@ export async function submitImageEdit(
     },
     webhookUrl,
   });
-  return request_id;
+  console.log("Edit task submitted result:", res);
+  return res.request_id;
 }
 
 // 查询任务状态

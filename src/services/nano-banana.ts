@@ -1,14 +1,14 @@
-import { 
-  checkUserCredits, 
-  decreaseCredits, 
+import {
+  checkUserCredits,
+  decreaseCredits,
   increaseCredits,
-  CreditsTransType
+  CreditsTransType,
 } from "@/services/credit";
-import { 
-  insertTask, 
-  updateTaskStatus, 
+import {
+  insertTask,
+  updateTaskStatus,
   updateTaskByRequestId,
-  findTaskByRequestId 
+  findTaskByRequestId,
 } from "@/models/nano-banana";
 import { getSnowId } from "@/lib/hash";
 import { CREDITS_PER_IMAGE, TaskType } from "@/lib/constants/nano-banana";
@@ -20,7 +20,7 @@ export async function processSubmitRequest({
   prompt,
   imageUrls,
   numImages,
-  requestId
+  requestId,
 }: {
   userUuid: string;
   type: TaskType;
@@ -31,11 +31,13 @@ export async function processSubmitRequest({
 }) {
   // 计算积分消耗
   const creditsNeeded = numImages * CREDITS_PER_IMAGE;
-  
+
   // 检查用户积分
   const creditCheck = await checkUserCredits(userUuid, creditsNeeded);
   if (!creditCheck.hasEnough) {
-    throw new Error(`Insufficient credits. Required: ${creditsNeeded}, Available: ${creditCheck.currentCredits}`);
+    throw new Error(
+      `Insufficient credits. Required: ${creditsNeeded}, Available: ${creditCheck.currentCredits}`
+    );
   }
 
   // 生成任务ID
@@ -50,31 +52,32 @@ export async function processSubmitRequest({
     prompt,
     image_urls: imageUrls ? JSON.stringify(imageUrls) : null,
     num_images: numImages,
-    status: 'pending',
+    status: "pending",
     credits_used: creditsNeeded,
     credits_refunded: 0,
     created_at: new Date(),
-    updated_at: new Date()
+    updated_at: new Date(),
   });
 
   if (!task) {
-    throw new Error('Failed to create task record');
+    throw new Error("Failed to create task record");
   }
 
   // 扣除积分
   await decreaseCredits({
     user_uuid: userUuid,
-    trans_type: type === 'text-to-image' 
-      ? CreditsTransType.NanoBanana_generate 
-      : CreditsTransType.NanoBanana_edit,
-    credits: creditsNeeded
+    trans_type:
+      type === "text-to-image"
+        ? CreditsTransType.NanoBanana_generate
+        : CreditsTransType.NanoBanana_edit,
+    credits: creditsNeeded,
   });
 
   return {
     taskId,
     requestId,
     creditsUsed: creditsNeeded,
-    remainingCredits: creditCheck.currentCredits - creditsNeeded
+    remainingCredits: creditCheck.currentCredits - creditsNeeded,
   };
 }
 
@@ -83,7 +86,7 @@ export async function handleWebhookCallback({
   requestId,
   status,
   data,
-  error
+  error,
 }: {
   requestId: string;
   status: string;
@@ -94,41 +97,45 @@ export async function handleWebhookCallback({
   const task = await findTaskByRequestId(requestId);
   if (!task) {
     console.error(`Task not found for request_id: ${requestId}`);
-    return { success: false, error: 'Task not found' };
+    return { success: false, error: "Task not found" };
   }
 
   // 处理成功结果 - 支持 'OK' 和 'COMPLETED' 状态
-  if ((status === 'OK' || status === 'COMPLETED') && data) {
+  if ((status === "OK" || status === "COMPLETED") && data) {
     console.log(`Task ${requestId} completed successfully with payload:`, data);
     await updateTaskByRequestId(requestId, {
-      status: 'completed',
+      status: "completed",
       result: JSON.stringify(data),
-      updated_at: new Date()
+      updated_at: new Date(),
     });
     return { success: true };
   }
 
   // 处理失败，退还积分
-  if (status === 'FAILED' || error) {
+  if (status === "FAILED" || error) {
     await updateTaskByRequestId(requestId, {
-      status: 'failed',
-      error_message: error?.message || 'Task failed',
-      updated_at: new Date()
+      status: "failed",
+      error_message: error?.message || data.detail[0]?.msg || "Task failed",
+      updated_at: new Date(),
     });
 
     // 退还积分
     if (task.credits_used > 0 && task.credits_refunded === 0) {
-      await refundCreditsForTask(task.task_id, task.user_uuid, task.credits_used);
+      await refundCreditsForTask(
+        task.task_id,
+        task.user_uuid,
+        task.credits_used
+      );
     }
-    
+
     return { success: true };
   }
 
   // 更新处理中状态
-  if (status === 'IN_PROGRESS' || status === 'IN_QUEUE') {
+  if (status === "IN_PROGRESS" || status === "IN_QUEUE") {
     await updateTaskByRequestId(requestId, {
-      status: 'processing',
-      updated_at: new Date()
+      status: "processing",
+      updated_at: new Date(),
     });
   }
 
@@ -145,19 +152,19 @@ export async function refundCreditsForTask(
     // 设置退还积分的有效期为30天
     const expiredAt = new Date();
     expiredAt.setDate(expiredAt.getDate() + 30);
-    
+
     // 增加退款积分
     await increaseCredits({
       user_uuid: userUuid,
       trans_type: CreditsTransType.NanoBanana_refund,
       credits: amount,
-      expired_at: expiredAt.toISOString()
+      expired_at: expiredAt.toISOString(),
     });
 
     // 更新任务记录
     await updateTaskStatus(taskId, {
       credits_refunded: amount,
-      updated_at: new Date()
+      updated_at: new Date(),
     });
 
     console.log(`Refunded ${amount} credits for task ${taskId}`);

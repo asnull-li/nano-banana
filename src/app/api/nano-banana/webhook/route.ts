@@ -5,11 +5,11 @@ export async function POST(request: NextRequest) {
   try {
     // 1. 解析webhook数据
     const body = await request.json();
-    console.log("Webhook received:", {
-      request_id: body.request_id,
-      status: body.status,
-      timestamp: new Date().toISOString(),
-    });
+    // console.log("Webhook received:", {
+    //   request_id: body.request_id,
+    //   status: body.status,
+    //   timestamp: new Date().toISOString(),
+    // });
     console.log("Full webhook body:", JSON.stringify(body, null, 2));
 
     // 2. 验证必需字段
