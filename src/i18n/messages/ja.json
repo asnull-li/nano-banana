@@ -239,7 +239,7 @@
       "generation_success": "{count}枚の画像を正常に生成しました！",
       "get_results_failed": "結果の取得に失敗しました",
       "task_failed": "タスクの実行に失敗しました",
-      "max_images_warning": "最大10枚まで、自動的に制限されました"
+      "max_images_warning": "最大5枚まで、自動的に制限されました"
     },
     "validation": {
       "please_enter_prompt": "プロンプトを入力してください",
@@ -351,13 +351,13 @@
       "image_uploaded": "アップロード完了",
       "dialog_image_editing": "対話式画像編集",
       "multiple_references": "複数の参考画像",
-      "upload_multiple": "複数の参考画像（最大10枚）をアップロードし、自然な会話で編集ニーズを説明し、AIがインテリジェントに理解して正確に実行します。",
+      "upload_multiple": "複数の参考画像（最大5枚）をアップロードし、自然な会話で編集ニーズを説明し、AIがインテリジェントに理解して正確に実行します。",
       "dialog_editing": "対話編集",
       "multi_image_reference": "複数画像参照",
       "intelligent_understanding": "インテリジェント理解",
       "release_to_upload": "リリースしてアップロード",
       "drag_drop_upload": "ドラッグまたはクリックして画像をアップロード",
-      "supported_formats": "PNG, JPG, JPEG, WebP, GIF形式をサポート",
+      "supported_formats": "PNG, JPG, JPEG, WebP形式をサポート",
       "max_file_size": "1ファイル最大10MB、残り {remaining} 枚",
       "selected_count": "{current}/{max} 枚選択済み",
       "max_images_reached": "最大画像数に達しました",

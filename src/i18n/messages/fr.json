@@ -243,7 +243,7 @@
       "generation_success": "{count} images générées avec succès !",
       "get_results_failed": "Échec de l'obtention des résultats",
       "task_failed": "Échec de l'exécution de la tâche",
-      "max_images_warning": "Maximum 10 images autorisées, automatiquement limité"
+      "max_images_warning": "Maximum 5 images autorisées, automatiquement limité"
     },
     "validation": {
       "please_enter_prompt": "Veuillez entrer une description",
@@ -355,13 +355,13 @@
       "image_uploaded": "Image téléchargée",
       "dialog_image_editing": "Édition d'image conversationnelle",
       "multiple_references": "Références multiples",
-      "upload_multiple": "Téléchargez plusieurs images de référence (jusqu'à 10), décrivez les besoins d'édition via une conversation naturelle, l'IA comprend intelligemment et exécute avec précision.",
+      "upload_multiple": "Téléchargez plusieurs images de référence (jusqu'à 5), décrivez les besoins d'édition via une conversation naturelle, l'IA comprend intelligemment et exécute avec précision.",
       "dialog_editing": "Édition conversationnelle",
       "multi_image_reference": "Référence multi-images",
       "intelligent_understanding": "Compréhension intelligente",
       "release_to_upload": "Relâcher pour télécharger",
       "drag_drop_upload": "Glisser ou cliquer pour télécharger des images",
-      "supported_formats": "Supporte les formats PNG, JPG, JPEG, WebP, GIF",
+      "supported_formats": "Supporte les formats PNG, JPG, JPEG, WebP",
       "max_file_size": "Max 10 Mo par fichier, {remaining} emplacements restants",
       "selected_count": "{current}/{max} images sélectionnées",
       "max_images_reached": "Nombre maximum d'images atteint",

@@ -239,7 +239,7 @@
       "generation_success": "Erfolgreich {count} Bilder generiert!",
       "get_results_failed": "Fehler beim Abrufen der Ergebnisse",
       "task_failed": "Aufgabenausführung fehlgeschlagen",
-      "max_images_warning": "Maximal 10 Bilder erlaubt, automatisch begrenzt"
+      "max_images_warning": "Maximal 5 Bilder erlaubt, automatisch begrenzt"
     },
     "validation": {
       "please_enter_prompt": "Bitte geben Sie einen Prompt ein",
@@ -351,13 +351,13 @@
       "image_uploaded": "Bild hochgeladen",
       "dialog_image_editing": "Konversationelle Bildbearbeitung",
       "multiple_references": "Mehrere Referenzen",
-      "upload_multiple": "Laden Sie mehrere Referenzbilder hoch (bis zu 10), beschreiben Sie Bearbeitungsbedürfnisse durch natürliche Konversation, KI versteht intelligent und führt präzise aus.",
+      "upload_multiple": "Laden Sie mehrere Referenzbilder hoch (bis zu 5), beschreiben Sie Bearbeitungsbedürfnisse durch natürliche Konversation, KI versteht intelligent und führt präzise aus.",
       "dialog_editing": "Konversationelle Bearbeitung",
       "multi_image_reference": "Mehrfachbild-Referenz",
       "intelligent_understanding": "Intelligentes Verständnis",
       "release_to_upload": "Loslassen zum Hochladen",
       "drag_drop_upload": "Ziehen oder klicken, um Bilder hochzuladen",
-      "supported_formats": "Unterstützt PNG, JPG, JPEG, WebP, GIF-Formate",
+      "supported_formats": "Unterstützt PNG, JPG, JPEG, WebP-Formate",
       "max_file_size": "Max. 10MB pro Datei, {remaining} Plätze verbleibend",
       "selected_count": "Ausgewählt {current}/{max} Bilder",
       "max_images_reached": "Maximale Bildanzahl erreicht",

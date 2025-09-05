@@ -18,7 +18,7 @@ interface ImageUploaderProps {
 export default function ImageUploader({ 
   onFilesSelected, 
   currentCount, 
-  maxFiles = 10,
+  maxFiles = 5,
   disabled = false 
 }: ImageUploaderProps) {
   const remainingSlots = maxFiles - currentCount;
@@ -50,7 +50,7 @@ export default function ImageUploader({
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
     onDrop,
     accept: {
-      "image/*": [".png", ".jpg", ".jpeg", ".webp", ".gif"],
+      "image/*": [".png", ".jpg", ".jpeg", ".webp"],
     },
     maxFiles: remainingSlots,
     maxSize: 10 * 1024 * 1024, // 10MB

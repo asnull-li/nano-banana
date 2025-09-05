@@ -239,7 +239,7 @@
       "generation_success": "{count}개의 이미지를 성공적으로 생성했습니다!",
       "get_results_failed": "결과 가져오기 실패",
       "task_failed": "작업 실행 실패",
-      "max_images_warning": "최대 10개 이미지로 자동 제한됨"
+      "max_images_warning": "최대 5개 이미지로 자동 제한됨"
     },
     "validation": {
       "please_enter_prompt": "프롬프트를 입력해 주세요",
@@ -351,13 +351,13 @@
       "image_uploaded": "업로드 완료",
       "dialog_image_editing": "대화형 이미지 편집",
       "multiple_references": "다중 참조 이미지",
-      "upload_multiple": "여러 참조 이미지(최대 10장)를 업로드하고, 자연스러운 대화로 편집 요구사항을 설명하면 AI가 지능적으로 이해하고 정확하게 실행합니다.",
+      "upload_multiple": "여러 참조 이미지(최대 5장)를 업로드하고, 자연스러운 대화로 편집 요구사항을 설명하면 AI가 지능적으로 이해하고 정확하게 실행합니다.",
       "dialog_editing": "대화 편집",
       "multi_image_reference": "다중 이미지 참조",
       "intelligent_understanding": "지능형 이해",
       "release_to_upload": "놓아서 업로드",
       "drag_drop_upload": "드래그 또는 클릭하여 이미지 업로드",
-      "supported_formats": "PNG, JPG, JPEG, WebP, GIF 형식 지원",
+      "supported_formats": "PNG, JPG, JPEG, WebP 형식 지원",
       "max_file_size": "파일당 최대 10MB, {remaining}장 남음",
       "selected_count": "{current}/{max} 장 선택",
       "max_images_reached": "최대 이미지 수에 도달했습니다",

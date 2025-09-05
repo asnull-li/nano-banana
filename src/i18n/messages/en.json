@@ -244,7 +244,7 @@
       "generation_success": "Successfully generated {count} images!",
       "get_results_failed": "Failed to get results",
       "task_failed": "Task execution failed",
-      "max_images_warning": "Maximum 10 images allowed, automatically limited"
+      "max_images_warning": "Maximum 5 images allowed, automatically limited"
     },
     "validation": {
       "please_enter_prompt": "Please enter a prompt",
@@ -356,13 +356,13 @@
       "image_uploaded": "Image Uploaded",
       "dialog_image_editing": "Conversational Image Editing",
       "multiple_references": "Multiple References",
-      "upload_multiple": "Upload multiple reference images (up to 10), describe editing needs through natural conversation, AI intelligently understands and precisely executes.",
+      "upload_multiple": "Upload multiple reference images (up to 5), describe editing needs through natural conversation, AI intelligently understands and precisely executes.",
       "dialog_editing": "Conversational Editing",
       "multi_image_reference": "Multi-image Reference",
       "intelligent_understanding": "Intelligent Understanding",
       "release_to_upload": "Release to Upload",
       "drag_drop_upload": "Drag or Click to Upload Images",
-      "supported_formats": "Supports PNG, JPG, JPEG, WebP, GIF formats",
+      "supported_formats": "Supports PNG, JPG, JPEG, WebP formats",
       "max_file_size": "Max 10MB per file, {remaining} slots remaining",
       "selected_count": "Selected {current}/{max} images",
       "max_images_reached": "Maximum images reached",

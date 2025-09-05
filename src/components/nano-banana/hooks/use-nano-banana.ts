@@ -155,11 +155,11 @@ export function useNanoBanana(options: UseNanoBananaOptions = {}) {
       setUploadedImages((prev) => {
         const updated = [...prev, ...newImages];
         // 限制最多10张图片
-        return updated.slice(0, 10);
+        return updated.slice(0, 5);
       });
 
-      // 如果超过10张，提示用户
-      if (uploadedImages.length + files.length > 10) {
+      // 如果超过5张，提示用户
+      if (uploadedImages.length + files.length > 5) {
         toast.warning(t("messages.max_images_warning"));
       }
     },
@@ -181,7 +181,6 @@ export function useNanoBanana(options: UseNanoBananaOptions = {}) {
     });
     setUploadedImages([]);
   }, [uploadedImages]);
-
 
   // 轮询任务状态
   const pollTaskStatus = (taskId: string) => {
@@ -254,7 +253,7 @@ export function useNanoBanana(options: UseNanoBananaOptions = {}) {
         console.error("Status polling error:", error);
         // 继续轮询，不立即停止
       }
-    }, 5000); // 每5秒轮询一次
+    }, 10000); // 每5秒轮询一次
   };
 
   // 提交生成任务

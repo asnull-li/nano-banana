@@ -1,4 +1,5 @@
 import { handleWebhookCallback } from "@/services/nano-banana";
+import { transferImagesToR2 } from "@/lib/image-transfer";
 
 // Kie.ai webhook 回调数据结构
 interface KieWebhookSuccess {
@@ -57,17 +58,32 @@ export async function handleKieWebhookCallback(body: KieWebhookData) {
       // 解析结果 JSON
       const resultData = JSON.parse(data.resultJson);
 
+      // 转存图片到 R2
+      let finalImageUrls = resultData.resultUrls || [];
+      if (finalImageUrls.length > 0) {
+        console.log(`Transferring ${finalImageUrls.length} images to R2...`);
+        try {
+          const r2Urls = await transferImagesToR2(finalImageUrls, "kie");
+          finalImageUrls = r2Urls;
+          console.log(`Successfully transferred images to R2:`, r2Urls);
+        } catch (transferError) {
+          console.error("Failed to transfer some images to R2:", transferError);
+          // 继续使用原始 URLs（部分成功的情况下，transferImagesToR2 会返回混合结果）
+        }
+      }
+
       // 转换为系统格式并调用通用处理函数
       return await handleWebhookCallback({
         requestId: taskId, // Kie 的 taskId 就是我们的 requestId
         status: "COMPLETED",
         data: {
-          images: resultData.resultUrls?.map((url: string) => ({ url })) || [],
+          images: finalImageUrls.map((url: string) => ({ url })),
           // 保存原始 Kie 数据供日志使用
           _kieData: {
             consumeCredits: data.consumeCredits,
             remainedCredits: data.remainedCredits,
             costTime: data.costTime,
+            // originalUrls: resultData.resultUrls, // 保存原始 URLs 用于调试
           },
         },
         error: undefined,

@@ -38,7 +38,7 @@ export default function ImageToImageMode({
         <ImageUploader
           onFilesSelected={onAddImages}
           currentCount={uploadedImages.length}
-          maxFiles={10}
+          maxFiles={5}
           disabled={isProcessing}
         />
         

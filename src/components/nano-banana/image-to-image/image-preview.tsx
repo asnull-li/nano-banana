@@ -4,13 +4,13 @@ import React from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
-import { 
-  X, 
-  Loader2, 
-  CheckCircle, 
+import {
+  X,
+  Loader2,
+  CheckCircle,
   AlertCircle,
   Eye,
-  Trash2
+  Trash2,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
@@ -23,11 +23,11 @@ interface ImagePreviewProps {
   disabled?: boolean;
 }
 
-export default function ImagePreview({ 
-  images, 
-  onRemove, 
+export default function ImagePreview({
+  images,
+  onRemove,
   onClearAll,
-  disabled = false 
+  disabled = false,
 }: ImagePreviewProps) {
   const [previewImage, setPreviewImage] = React.useState<string | null>(null);
   const t = useTranslations();
@@ -45,7 +45,7 @@ export default function ImagePreview({
             {t("nano_banana.image_to_image.selected_references")}
           </h3>
           <span className="px-2.5 py-1 text-xs font-medium rounded-full bg-gradient-to-r from-green-500/10 to-cyan-500/10 text-green-600 dark:text-green-400 border border-green-500/20">
-            {images.length}/10
+            {images.length}/5
           </span>
         </div>
         {images.length > 0 && onClearAll && (
@@ -63,17 +63,21 @@ export default function ImagePreview({
       </div>
 
       {/* 图片网格 - PC端一行4张 */}
-      <div className={cn(
-        "grid gap-3",
-        "grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4"
-      )}>
+      <div
+        className={cn(
+          "grid gap-3",
+          "grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4"
+        )}
+      >
         {images.map((image) => (
-          <Card 
-            key={image.id} 
+          <Card
+            key={image.id}
             className={cn(
               "group relative overflow-hidden transition-all duration-300",
               "hover:shadow-lg hover:shadow-green-500/10",
-              image.uploadProgress > 0 && image.uploadProgress < 100 && "animate-pulse",
+              image.uploadProgress > 0 &&
+                image.uploadProgress < 100 &&
+                "animate-pulse",
               disabled && "opacity-50"
             )}
           >
@@ -87,7 +91,7 @@ export default function ImagePreview({
                   !disabled && "group-hover:scale-105"
                 )}
               />
-              
+
               {/* 上传进度遮罩 - 只在实际上传时显示 */}
               {image.uploadProgress > 0 && image.uploadProgress < 100 && (
                 <div className="absolute inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center">
@@ -96,19 +100,25 @@ export default function ImagePreview({
                       <Loader2 className="h-8 w-8 text-green-400 animate-spin mx-auto" />
                       <div className="absolute inset-0 h-8 w-8 bg-green-500/20 rounded-full animate-ping mx-auto" />
                     </div>
-                    <p className="text-sm font-semibold text-white mt-2">{image.uploadProgress}%</p>
-                    <p className="text-xs text-white/80 mt-0.5">{t("nano_banana.image_to_image.uploading")}</p>
+                    <p className="text-sm font-semibold text-white mt-2">
+                      {image.uploadProgress}%
+                    </p>
+                    <p className="text-xs text-white/80 mt-0.5">
+                      {t("nano_banana.image_to_image.uploading")}
+                    </p>
                   </div>
                 </div>
               )}
-              
+
               {/* 操作按钮 - 优化布局 */}
               {!disabled && (
-                <div className={cn(
-                  "absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent",
-                  "opacity-0 group-hover:opacity-100 transition-all duration-200",
-                  "flex items-end justify-between p-3"
-                )}>
+                <div
+                  className={cn(
+                    "absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent",
+                    "opacity-0 group-hover:opacity-100 transition-all duration-200",
+                    "flex items-end justify-between p-3"
+                  )}
+                >
                   <Button
                     size="sm"
                     variant="ghost"
@@ -127,7 +137,7 @@ export default function ImagePreview({
                   </Button>
                 </div>
               )}
-              
+
               {/* 状态指示器 - 完成上传 */}
               {image.uploadProgress === 100 && image.url && (
                 <div className="absolute top-2 right-2">
@@ -137,15 +147,15 @@ export default function ImagePreview({
                 </div>
               )}
             </div>
-            
+
             {/* 上传进度条 - 更醒目的样式 */}
             {image.uploadProgress > 0 && image.uploadProgress < 100 && (
-              <Progress 
-                value={image.uploadProgress} 
+              <Progress
+                value={image.uploadProgress}
                 className="absolute bottom-0 left-0 right-0 h-1.5 rounded-none [&>div]:bg-gradient-to-r [&>div]:from-green-500 [&>div]:to-cyan-500"
               />
             )}
-            
+
             {/* 文件信息栏 */}
             <div className="p-2 bg-gradient-to-r from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
               <p className="text-xs text-muted-foreground truncate font-medium">
@@ -161,7 +171,7 @@ export default function ImagePreview({
 
       {/* 全屏预览 */}
       {previewImage && (
-        <div 
+        <div
           className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4"
           onClick={() => setPreviewImage(null)}
         >

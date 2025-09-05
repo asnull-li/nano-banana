@@ -239,7 +239,7 @@
       "generation_success": "¡{count} imágenes generadas con éxito!",
       "get_results_failed": "Error al obtener resultados",
       "task_failed": "Error en la ejecución de la tarea",
-      "max_images_warning": "Máximo 10 imágenes permitidas, limitado automáticamente"
+      "max_images_warning": "Máximo 5 imágenes permitidas, limitado automáticamente"
     },
     "validation": {
       "please_enter_prompt": "Por favor ingresa un prompt",
@@ -351,13 +351,13 @@
       "image_uploaded": "Imagen Cargada",
       "dialog_image_editing": "Edición de Imágenes Conversacional",
       "multiple_references": "Múltiples Referencias",
-      "upload_multiple": "Sube múltiples imágenes de referencia (hasta 10), describe las necesidades de edición a través de una conversación natural, la IA entiende inteligentemente y ejecuta con precisión.",
+      "upload_multiple": "Sube múltiples imágenes de referencia (hasta 5), describe las necesidades de edición a través de una conversación natural, la IA entiende inteligentemente y ejecuta con precisión.",
       "dialog_editing": "Edición Conversacional",
       "multi_image_reference": "Referencia Multi-imagen",
       "intelligent_understanding": "Comprensión Inteligente",
       "release_to_upload": "Suelta para Cargar",
       "drag_drop_upload": "Arrastra o Haz Clic para Subir Imágenes",
-      "supported_formats": "Soporta formatos PNG, JPG, JPEG, WebP, GIF",
+      "supported_formats": "Soporta formatos PNG, JPG, JPEG, WebP",
       "max_file_size": "Máximo 10MB por archivo, {remaining} espacios restantes",
       "selected_count": "{current}/{max} imágenes seleccionadas",
       "max_images_reached": "Máximo de imágenes alcanzado",
