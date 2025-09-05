@@ -1,11 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
 import { findTaskById } from "@/models/nano-banana";
-import { fal } from "@fal-ai/client";
-
-// 配置客户端使用proxy
-fal.config({
-  proxyUrl: "/api/fal/proxy",
-});
 
 export async function GET(
   _request: NextRequest,
@@ -14,7 +8,7 @@ export async function GET(
   try {
     const { taskId } = await params;
 
-    // 1. 查询任务记录获取 request_id 和 type
+    // 1. 从数据库查询任务记录
     const task = await findTaskById(taskId);
     if (!task) {
       return NextResponse.json(
@@ -23,35 +17,54 @@ export async function GET(
       );
     }
 
-    // 2. 根据类型确定 endpoint
-    const endpoint =
-      task.type === "text-to-image"
-        ? "fal-ai/nano-banana"
-        : "fal-ai/nano-banana/edit";
-
-    // 3. 查询 fal.ai 状态
-    try {
-      const status = await fal.queue.status(endpoint, {
-        requestId: task.request_id,
-        logs: true,
-      });
-
-      // 4. 直接返回 fal.ai 的状态
+    // 2. 根据任务状态返回不同响应
+    if (task.status === "pending" || task.status === "processing") {
+      // 任务处理中
       return NextResponse.json({
         success: true,
         task_id: task.task_id,
-        ...status,
+        status: task.status,
+        message: "Task is being processed",
+        credits_used: task.credits_used,
       });
-    } catch (falError) {
-      console.error("Fal API error:", falError);
-      return NextResponse.json(
-        {
-          success: false,
-          error: "Failed to get status from fal.ai",
-          details: falError instanceof Error ? falError.message : undefined,
-        },
-        { status: 500 }
-      );
+    } else if (task.status === "completed") {
+      // 任务已完成，返回结果
+      let result = null;
+      if (task.result) {
+        try {
+          result = JSON.parse(task.result);
+        } catch (e) {
+          console.error("Failed to parse task result:", e);
+          result = task.result;
+        }
+      }
+
+      return NextResponse.json({
+        success: true,
+        task_id: task.task_id,
+        status: task.status,
+        result: result,
+        credits_used: task.credits_used,
+        completed_at: task.updated_at,
+      });
+    } else if (task.status === "failed") {
+      // 任务失败
+      return NextResponse.json({
+        success: true,
+        task_id: task.task_id,
+        status: task.status,
+        error: task.error_message || "Task failed",
+        credits_used: task.credits_used,
+        credits_refunded: task.credits_refunded,
+      });
+    } else {
+      // 未知状态
+      return NextResponse.json({
+        success: true,
+        task_id: task.task_id,
+        status: task.status,
+        message: "Unknown task status",
+      });
     }
   } catch (error) {
     console.error("Status API error:", error);

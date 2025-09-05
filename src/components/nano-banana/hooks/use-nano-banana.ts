@@ -6,7 +6,13 @@ import { useTranslations } from "next-intl";
 
 export type GenerationMode = "text-to-image" | "image-to-image";
 
-export type TaskStatus = "idle" | "uploading" | "processing" | "fetching" | "completed" | "failed";
+export type TaskStatus =
+  | "idle"
+  | "uploading"
+  | "processing"
+  | "fetching"
+  | "completed"
+  | "failed";
 
 export interface UploadedImage {
   id: string;
@@ -45,10 +51,17 @@ export function useNanoBanana(options: UseNanoBananaOptions = {}) {
   const pollIntervalRef = useRef<NodeJS.Timeout | null>(null);
 
   // 上传单个图片到 R2
-  const uploadImageToR2 = async (file: File, imageId: string): Promise<string> => {
+  const uploadImageToR2 = async (
+    file: File,
+    imageId: string
+  ): Promise<string> => {
     try {
       // 更新上传进度 - 开始上传
-      setUploadedImages((prev) => prev.map((img) => (img.id === imageId ? { ...img, uploadProgress: 30 } : img)));
+      setUploadedImages((prev) =>
+        prev.map((img) =>
+          img.id === imageId ? { ...img, uploadProgress: 30 } : img
+        )
+      );
 
       const formData = new FormData();
       formData.append("file", file);
@@ -80,14 +93,22 @@ export function useNanoBanana(options: UseNanoBananaOptions = {}) {
 
       // 更新上传完成状态
       setUploadedImages((prev) =>
-        prev.map((img) => (img.id === imageId ? { ...img, uploadProgress: 100, url: data.url } : img))
+        prev.map((img) =>
+          img.id === imageId
+            ? { ...img, uploadProgress: 100, url: data.url }
+            : img
+        )
       );
 
       return data.url;
     } catch (error) {
       console.error("Upload error:", error);
       // 重置上传进度
-      setUploadedImages((prev) => prev.map((img) => (img.id === imageId ? { ...img, uploadProgress: 0 } : img)));
+      setUploadedImages((prev) =>
+        prev.map((img) =>
+          img.id === imageId ? { ...img, uploadProgress: 0 } : img
+        )
+      );
       throw error;
     }
   };
@@ -108,10 +129,13 @@ export function useNanoBanana(options: UseNanoBananaOptions = {}) {
           uploadedCount++;
 
           // 更新总体进度
-          const overallProgress = Math.round((uploadedCount / uploadedImages.length) * 15) + 5;
+          const overallProgress =
+            Math.round((uploadedCount / uploadedImages.length) * 15) + 5;
           setProgress(overallProgress);
         } catch (error) {
-          throw new Error(t("messages.upload_image_failed", { filename: image.file.name }));
+          throw new Error(
+            t("messages.upload_image_failed", { filename: image.file.name })
+          );
         }
       }
     }
@@ -159,42 +183,6 @@ export function useNanoBanana(options: UseNanoBananaOptions = {}) {
     setUploadedImages([]);
   }, [uploadedImages]);
 
-  // 获取任务结果
-  const getTaskResult = async (taskId: string) => {
-    try {
-      const response = await fetch(`/api/nano-banana/result/${taskId}`);
-      const data = await response.json();
-
-      if (data.success && data.data?.images) {
-        const results: GenerationResult[] = data.data.images.map((img: any) => ({
-          url: img.url,
-          seed: img.seed,
-          width: img.width,
-          height: img.height,
-        }));
-
-        // 保存AI描述
-        if (data.data.description) {
-          setAiDescription(data.data.description);
-        }
-
-        setResults(results);
-        setStatus("completed");
-        setProgress(100);
-
-        toast.success(t("messages.generation_success", { count: results.length }));
-        onComplete?.(results);
-      } else {
-        throw new Error(data.error || "Failed to get results");
-      }
-    } catch (error) {
-      console.error("Failed to get result:", error);
-      setStatus("failed");
-      const errorMsg = error instanceof Error ? error.message : t("messages.get_results_failed");
-      toast.error(errorMsg);
-      onError?.(errorMsg);
-    }
-  };
 
   // 轮询任务状态
   const pollTaskStatus = (taskId: string) => {
@@ -208,27 +196,51 @@ export function useNanoBanana(options: UseNanoBananaOptions = {}) {
         const response = await fetch(`/api/nano-banana/status/${taskId}`);
         const data = await response.json();
 
-        // 更新进度（留10%给获取结果）
-        if (data.progress !== undefined) {
-          const progressPercent = Math.min(data.progress * 0.9, 90);
-          setProgress(progressPercent);
-        }
-
-        // 检查状态
-        if (data.status === "COMPLETED") {
+        // 根据不同状态处理
+        if (data.status === "pending" || data.status === "processing") {
+          // 任务处理中，继续轮询
+          // 模拟进度更新
+          setProgress((prev) => Math.min(prev + 5, 90));
+        } else if (data.status === "completed") {
+          // 任务完成，停止轮询
           if (pollIntervalRef.current) {
             clearInterval(pollIntervalRef.current);
             pollIntervalRef.current = null;
           }
 
-          setProgress(95);
-          setStatus("fetching");
+          // 直接从 status 响应中获取结果
+          if (data.result?.images) {
+            const results: GenerationResult[] = data.result.images.map(
+              (img: any) => ({
+                url: img.url,
+                seed: img.seed,
+                width: img.width,
+                height: img.height,
+              })
+            );
 
-          // 获取最终结果
-          await getTaskResult(taskId);
-        }
+            // 保存AI描述
+            if (data.result.description) {
+              setAiDescription(data.result.description);
+            }
 
-        if (data.status === "FAILED") {
+            setResults(results);
+            setStatus("completed");
+            setProgress(100);
+
+            toast.success(
+              t("messages.generation_success", { count: results.length })
+            );
+            onComplete?.(results);
+          } else {
+            // 没有结果数据
+            setStatus("failed");
+            const errorMsg = t("messages.get_results_failed");
+            toast.error(errorMsg);
+            onError?.(errorMsg);
+          }
+        } else if (data.status === "failed") {
+          // 任务失败，停止轮询
           if (pollIntervalRef.current) {
             clearInterval(pollIntervalRef.current);
             pollIntervalRef.current = null;
@@ -243,7 +255,7 @@ export function useNanoBanana(options: UseNanoBananaOptions = {}) {
         console.error("Status polling error:", error);
         // 继续轮询，不立即停止
       }
-    }, 5000); // 每2秒轮询一次
+    }, 5000); // 每5秒轮询一次
   };
 
   // 提交生成任务
@@ -270,13 +282,18 @@ export function useNanoBanana(options: UseNanoBananaOptions = {}) {
       let imageUrls: string[] = [];
       if (mode === "image-to-image") {
         try {
-          toast.info(t("messages.starting_upload", { count: uploadedImages.length }));
+          toast.info(
+            t("messages.starting_upload", { count: uploadedImages.length })
+          );
           imageUrls = await uploadAllImages();
           setProgress(20);
           toast.success(t("messages.upload_success"));
         } catch (error) {
           setStatus("failed");
-          const errorMsg = error instanceof Error ? error.message : t("messages.upload_failed");
+          const errorMsg =
+            error instanceof Error
+              ? error.message
+              : t("messages.upload_failed");
           toast.error(errorMsg);
           onError?.(errorMsg);
           return;
@@ -285,7 +302,7 @@ export function useNanoBanana(options: UseNanoBananaOptions = {}) {
 
       // 提交任务
       setStatus("processing");
-      const response = await fetch("/api/nano-banana/submit", {
+      const response = await fetch("/api/nano-banana/kie/submit", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -314,7 +331,8 @@ export function useNanoBanana(options: UseNanoBananaOptions = {}) {
       pollTaskStatus(data.task_id);
     } catch (error) {
       setStatus("failed");
-      const errorMsg = error instanceof Error ? error.message : t("messages.submit_failed");
+      const errorMsg =
+        error instanceof Error ? error.message : t("messages.submit_failed");
 
       // 特殊处理积分不足的情况
       if (errorMsg.includes("Insufficient credits")) {
