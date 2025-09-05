@@ -32,10 +32,8 @@ import { useTranslations } from "next-intl";
 
 interface TextToImageModeProps {
   prompt: string;
-  numImages: number;
   status: string;
   onPromptChange: (prompt: string) => void;
-  onNumImagesChange: (num: number) => void;
   onSubmit: () => void;
 }
 
@@ -84,10 +82,8 @@ const getInspirations = (t: any) => [
 
 export default function TextToImageMode({
   prompt,
-  numImages,
   status,
   onPromptChange,
-  onNumImagesChange,
   onSubmit,
 }: TextToImageModeProps) {
   const { credits } = useCredits();
@@ -96,7 +92,7 @@ export default function TextToImageMode({
   const t = useTranslations("nano_banana.text_to_image");
   const tLabels = useTranslations("nano_banana.text_to_image.labels");
   const tPrompts = useTranslations("nano_banana.text_to_image.prompts");
-  const totalCredits = CREDITS_PER_IMAGE * numImages;
+  const totalCredits = CREDITS_PER_IMAGE; // 固定1张
   const hasEnoughCredits = credits.left_credits >= totalCredits;
   const isProcessing = ["uploading", "processing", "fetching"].includes(status);
   const canSubmit = prompt.trim().length >= 3 && !isProcessing;
@@ -207,47 +203,29 @@ export default function TextToImageMode({
               />
             </div>
 
-            {/* 生成数量设置 */}
-            <div className="space-y-3">
-              <div className="flex items-center justify-between">
-                <Label htmlFor="num-images" className="flex items-center gap-2">
-                  <Settings className="h-4 w-4 text-green-500" />
-                  {t("generation_count")}
-                </Label>
-                <div className="flex items-center gap-3">
-                  <span className="text-sm font-medium px-2 py-1 rounded bg-green-500/10 text-green-600 dark:text-green-400">
-                    {t("count_unit", { count: numImages })}
-                  </span>
-                  <Badge
-                    variant="outline"
-                    className={cn(
-                      "flex items-center gap-1",
-                      hasEnoughCredits
-                        ? "border-yellow-500/30 bg-yellow-500/10 text-yellow-600 dark:text-yellow-400"
-                        : "border-red-500/30 bg-red-500/10 text-red-600 dark:text-red-400"
-                    )}
-                  >
-                    <Coins className="h-3 w-3" />
-                    <span className="font-semibold">{totalCredits}</span>
-                    <span className="text-xs">{t("credits_label")}</span>
-                  </Badge>
-                </div>
+            {/* 生成信息 */}
+            <div className="flex items-center justify-between p-3 rounded-lg bg-gradient-to-r from-green-500/5 to-cyan-500/5 border border-green-500/20">
+              <div className="flex items-center gap-2">
+                <Settings className="h-4 w-4 text-green-500" />
+                <span className="text-sm font-medium">{t("generation_count")}</span>
               </div>
-              <Slider
-                id="num-images"
-                min={1}
-                max={4}
-                step={1}
-                value={[numImages]}
-                onValueChange={(value) => onNumImagesChange(value[0])}
-                disabled={isProcessing}
-                className="[&_[role=slider]]:bg-gradient-to-r [&_[role=slider]]:from-green-500 [&_[role=slider]]:to-cyan-500"
-              />
-              <div className="flex justify-between text-xs text-muted-foreground">
-                <span>{t("count_unit", { count: 1 })}</span>
-                <span>{t("count_unit", { count: 2 })}</span>
-                <span>{t("count_unit", { count: 3 })}</span>
-                <span>{t("count_unit", { count: 4 })}</span>
+              <div className="flex items-center gap-3">
+                <span className="text-sm font-medium px-2 py-1 rounded bg-green-500/10 text-green-600 dark:text-green-400">
+                  {t("count_unit", { count: 1 })}
+                </span>
+                <Badge
+                  variant="outline"
+                  className={cn(
+                    "flex items-center gap-1",
+                    hasEnoughCredits
+                      ? "border-yellow-500/30 bg-yellow-500/10 text-yellow-600 dark:text-yellow-400"
+                      : "border-red-500/30 bg-red-500/10 text-red-600 dark:text-red-400"
+                  )}
+                >
+                  <Coins className="h-3 w-3" />
+                  <span className="font-semibold">{totalCredits}</span>
+                  <span className="text-xs">{t("credits_label")}</span>
+                </Badge>
               </div>
             </div>
 
@@ -283,7 +261,7 @@ export default function TextToImageMode({
           ) : (
             <div className="flex items-center justify-center gap-3">
               <Wand2 className="h-5 w-5" />
-              <span>{t("generate_button", { count: numImages })}</span>
+              <span>{t("generate_button", { count: 1 })}</span>
               <Badge className="bg-white/20 text-white border-0">
                 <Coins className="h-3 w-3 mr-1" />
                 {totalCredits}

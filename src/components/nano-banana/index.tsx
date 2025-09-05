@@ -42,7 +42,6 @@ export default function NanoBananaWorkspace({
     mode,
     uploadedImages,
     prompt,
-    numImages,
     status,
     progress,
     results,
@@ -50,7 +49,6 @@ export default function NanoBananaWorkspace({
     aiDescription,
     setMode,
     setPrompt,
-    setNumImages,
     addImages,
     removeImage,
     clearImages,
@@ -148,22 +146,18 @@ export default function NanoBananaWorkspace({
             <ImageToImageMode
               uploadedImages={uploadedImages}
               prompt={prompt}
-              numImages={numImages}
               status={status}
               onAddImages={addImages}
               onRemoveImage={removeImage}
               onClearImages={clearImages}
               onPromptChange={setPrompt}
-              onNumImagesChange={setNumImages}
               onSubmit={submitTask}
             />
           ) : (
             <TextToImageMode
               prompt={prompt}
-              numImages={numImages}
               status={status}
               onPromptChange={setPrompt}
-              onNumImagesChange={setNumImages}
               onSubmit={submitTask}
             />
           )}

@@ -5,7 +5,6 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Slider } from "@/components/ui/slider";
 import { Badge } from "@/components/ui/badge";
 import {
   Sparkles,
@@ -28,9 +27,7 @@ import { toast } from "sonner";
 
 interface EditControlsProps {
   prompt: string;
-  numImages: number;
   onPromptChange: (prompt: string) => void;
-  onNumImagesChange: (num: number) => void;
   onSubmit: () => void;
   isProcessing?: boolean;
   disabled?: boolean;
@@ -38,9 +35,7 @@ interface EditControlsProps {
 
 export default function EditControls({
   prompt,
-  numImages,
   onPromptChange,
-  onNumImagesChange,
   onSubmit,
   isProcessing = false,
   disabled = false,
@@ -49,7 +44,7 @@ export default function EditControls({
   const { user, setShowSignModal } = useAppContext();
   const router = useRouter();
   const t = useTranslations();
-  const totalCredits = CREDITS_PER_IMAGE * numImages;
+  const totalCredits = CREDITS_PER_IMAGE; // 固定1张
   const hasEnoughCredits = credits.left_credits >= totalCredits;
   const canSubmit = prompt.trim().length >= 3 && !isProcessing && !disabled;
   
@@ -157,47 +152,29 @@ export default function EditControls({
             />
           </div>
 
-          {/* 生成数量设置 */}
-          <div className="space-y-3">
-            <div className="flex items-center justify-between">
-              <Label htmlFor="num-images" className="flex items-center gap-2">
-                <Settings className="h-4 w-4 text-green-500" />
-                {t("nano_banana.image_to_image.generate_count")}
-              </Label>
-              <div className="flex items-center gap-3">
-                <span className="text-sm font-medium px-2 py-1 rounded bg-green-500/10 text-green-600 dark:text-green-400">
-                  {t("nano_banana.image_to_image.count_images", { count: numImages })}
-                </span>
-                <Badge
-                  variant="outline"
-                  className={cn(
-                    "flex items-center gap-1",
-                    hasEnoughCredits
-                      ? "border-yellow-500/30 bg-yellow-500/10 text-yellow-600 dark:text-yellow-400"
-                      : "border-red-500/30 bg-red-500/10 text-red-600 dark:text-red-400"
-                  )}
-                >
-                  <Coins className="h-3 w-3" />
-                  <span className="font-semibold">{totalCredits}</span>
-                  <span className="text-xs">{t("nano_banana.image_to_image.credits")}</span>
-                </Badge>
-              </div>
+          {/* 生成信息 */}
+          <div className="flex items-center justify-between p-3 rounded-lg bg-gradient-to-r from-green-500/5 to-cyan-500/5 border border-green-500/20">
+            <div className="flex items-center gap-2">
+              <Settings className="h-4 w-4 text-green-500" />
+              <span className="text-sm font-medium">{t("nano_banana.image_to_image.generate_count")}</span>
             </div>
-            <Slider
-              id="num-images"
-              min={1}
-              max={4}
-              step={1}
-              value={[numImages]}
-              onValueChange={(value) => onNumImagesChange(value[0])}
-              disabled={disabled || isProcessing}
-              className="[&_[role=slider]]:bg-gradient-to-r [&_[role=slider]]:from-green-500 [&_[role=slider]]:to-cyan-500"
-            />
-            <div className="flex justify-between text-xs text-muted-foreground">
-              <span>{t("nano_banana.image_to_image.count_images", { count: 1 })}</span>
-              <span>{t("nano_banana.image_to_image.count_images", { count: 2 })}</span>
-              <span>{t("nano_banana.image_to_image.count_images", { count: 3 })}</span>
-              <span>{t("nano_banana.image_to_image.count_images", { count: 4 })}</span>
+            <div className="flex items-center gap-3">
+              <span className="text-sm font-medium px-2 py-1 rounded bg-green-500/10 text-green-600 dark:text-green-400">
+                {t("nano_banana.image_to_image.count_images", { count: 1 })}
+              </span>
+              <Badge
+                variant="outline"
+                className={cn(
+                  "flex items-center gap-1",
+                  hasEnoughCredits
+                    ? "border-yellow-500/30 bg-yellow-500/10 text-yellow-600 dark:text-yellow-400"
+                    : "border-red-500/30 bg-red-500/10 text-red-600 dark:text-red-400"
+                )}
+              >
+                <Coins className="h-3 w-3" />
+                <span className="font-semibold">{totalCredits}</span>
+                <span className="text-xs">{t("nano_banana.image_to_image.credits")}</span>
+              </Badge>
             </div>
           </div>
         </div>
@@ -226,7 +203,7 @@ export default function EditControls({
         ) : (
           <div className="flex items-center justify-center gap-3">
             <Wand2 className="h-5 w-5" />
-            <span>{t("nano_banana.image_to_image.start_generation", { count: numImages })}</span>
+            <span>{t("nano_banana.image_to_image.start_generation", { count: 1 })}</span>
             <Badge className="bg-white/20 text-white border-0">
               <Coins className="h-3 w-3 mr-1" />
               {totalCredits}

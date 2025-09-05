@@ -10,26 +10,22 @@ import type { UploadedImage } from "../hooks/use-nano-banana";
 interface ImageToImageModeProps {
   uploadedImages: UploadedImage[];
   prompt: string;
-  numImages: number;
   status: string;
   onAddImages: (files: File[]) => void;
   onRemoveImage: (imageId: string) => void;
   onClearImages: () => void;
   onPromptChange: (prompt: string) => void;
-  onNumImagesChange: (num: number) => void;
   onSubmit: () => void;
 }
 
 export default function ImageToImageMode({
   uploadedImages,
   prompt,
-  numImages,
   status,
   onAddImages,
   onRemoveImage,
   onClearImages,
   onPromptChange,
-  onNumImagesChange,
   onSubmit,
 }: ImageToImageModeProps) {
   const isProcessing = ["uploading", "processing", "fetching"].includes(status);
@@ -66,9 +62,7 @@ export default function ImageToImageMode({
       <div>
         <EditControls
           prompt={prompt}
-          numImages={numImages}
           onPromptChange={onPromptChange}
-          onNumImagesChange={onNumImagesChange}
           onSubmit={onSubmit}
           isProcessing={isProcessing}
           disabled={uploadedImages.length === 0}

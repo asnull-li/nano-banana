@@ -41,7 +41,6 @@ export function useNanoBanana(options: UseNanoBananaOptions = {}) {
   const [mode, setMode] = useState<GenerationMode>("text-to-image");
   const [uploadedImages, setUploadedImages] = useState<UploadedImage[]>([]);
   const [prompt, setPrompt] = useState("");
-  const [numImages, setNumImages] = useState(1);
   const [status, setStatus] = useState<TaskStatus>("idle");
   const [progress, setProgress] = useState(0);
   const [results, setResults] = useState<GenerationResult[]>([]);
@@ -311,7 +310,7 @@ export function useNanoBanana(options: UseNanoBananaOptions = {}) {
           type: mode,
           prompt: prompt.trim(),
           image_urls: mode === "image-to-image" ? imageUrls : undefined,
-          num_images: numImages,
+          num_images: 1, // 固定为1张
         }),
       });
 
@@ -364,7 +363,6 @@ export function useNanoBanana(options: UseNanoBananaOptions = {}) {
     cancelTask();
     clearImages();
     setPrompt("");
-    setNumImages(1);
     setResults([]);
     setAiDescription("");
   }, [cancelTask, clearImages]);
@@ -386,7 +384,6 @@ export function useNanoBanana(options: UseNanoBananaOptions = {}) {
     mode,
     uploadedImages,
     prompt,
-    numImages,
     status,
     progress,
     results,
@@ -396,7 +393,6 @@ export function useNanoBanana(options: UseNanoBananaOptions = {}) {
     // 方法
     setMode,
     setPrompt,
-    setNumImages,
     addImages,
     removeImage,
     clearImages,
