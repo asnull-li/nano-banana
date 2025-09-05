@@ -118,6 +118,7 @@ export async function POST(request: NextRequest) {
         imageUrls: image_urls,
         numImages: num_images,
         requestId: request_id,
+        provider: 'fal',
       });
 
       return NextResponse.json({

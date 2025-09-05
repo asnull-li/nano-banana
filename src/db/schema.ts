@@ -136,6 +136,7 @@ export const nanoBananaTasks = pgTable("nano_banana_tasks", {
   request_id: varchar({ length: 255 }).notNull().unique(),
   user_uuid: varchar({ length: 255 }).notNull(),
   type: varchar({ length: 50 }).notNull(), // 'text-to-image' | 'image-to-image'
+  provider: varchar({ length: 20 }).notNull().default('fal'), // 'fal' | 'kie'
   prompt: text().notNull(),
   image_urls: text(), // JSON array for image-to-image mode
   num_images: integer().notNull().default(1),
@@ -152,6 +153,7 @@ export const nanoBananaTasks = pgTable("nano_banana_tasks", {
 export const verificationTokens = pgTable(
   "verification_tokens",
   {
+    id: integer().primaryKey().generatedAlwaysAsIdentity(),
     identifier: varchar({ length: 255 }).notNull(),
     token: varchar({ length: 255 }).notNull().unique(),
     expires: timestamp({ withTimezone: true }).notNull(),

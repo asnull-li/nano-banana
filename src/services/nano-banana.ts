@@ -21,6 +21,7 @@ export async function processSubmitRequest({
   imageUrls,
   numImages,
   requestId,
+  provider = 'fal',
 }: {
   userUuid: string;
   type: TaskType;
@@ -28,6 +29,7 @@ export async function processSubmitRequest({
   imageUrls?: string[];
   numImages: number;
   requestId: string;
+  provider?: 'fal' | 'kie';
 }) {
   // 计算积分消耗
   const creditsNeeded = numImages * CREDITS_PER_IMAGE;
@@ -49,6 +51,7 @@ export async function processSubmitRequest({
     request_id: requestId,
     user_uuid: userUuid,
     type,
+    provider,
     prompt,
     image_urls: imageUrls ? JSON.stringify(imageUrls) : null,
     num_images: numImages,
