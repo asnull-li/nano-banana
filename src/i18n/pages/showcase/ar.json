@@ -1,0 +1,164 @@
+{
+  "metadata": {
+    "title": "معرض أعمال Nano Banana - محرر صور Nano Banana بالذكاء الاصطناعي",
+    "description": "استكشف الأعمال الفنية الرائعة والتصاميم الإبداعية التي تم إنشاؤها بواسطة Nano Banana AI، وجرّب تقنية توليد وتحرير الصور المتقدمة"
+  },
+  "showcase": {
+    "name": "معرض الأعمال",
+    "title": "معرض أعمال Nano Banana",
+    "description": "استكشف تأثيرات معالجة الصور المختلفة، وجرّب القوة الهائلة لتقنية الذكاء الاصطناعي الاحترافية.",
+    "subtitle": "أطلق العنان لإبداعك، واستكشف المزيد من الإمكانيات، لا تقتصر على الأمثلة أدناه.",
+    "items": [
+      {
+        "id": "background-replacement",
+        "category": "استبدال الخلفية",
+        "title": "استبدال الخلفية",
+        "description": "فصل العنصر الرئيسي عن الخلفية الأصلية واستبدالها بمشهد إبداعي جديد.",
+        "original": "https://file.nanobanana.org/showcase/1.webp",
+        "effects": [
+          {
+            "id": "vintage-desk",
+            "name": "طاولة عمل عتيقة",
+            "image": "https://file.nanobanana.org/showcase/1-1.png",
+            "prompt": "استبدل الخلفية بمرج واسع",
+            "description": "وضع العنصر في بيئة ورشة الحرفيين"
+          },
+          {
+            "id": "tropical-beach",
+            "name": "شاطئ استوائي",
+            "image": "https://file.nanobanana.org/showcase/1-2.png",
+            "prompt": "استبدل الخلفية بطريق جبلي متعرج",
+            "description": "خلفية شاطئ مشمس مع مياه صافية كالبلور"
+          },
+          {
+            "id": "modern-office",
+            "name": "مكتب حديث",
+            "image": "https://file.nanobanana.org/showcase/1-3.png",
+            "prompt": "غيّر الخلفية إلى طاولة عمل عتيقة",
+            "description": "مساحة مكتبية نظيفة وبسيطة"
+          }
+        ]
+      },
+      {
+        "id": "lighting-adjustment",
+        "category": "تعديل الإضاءة",
+        "title": "تعديل الإضاءة",
+        "description": "استخدم الذكاء الاصطناعي لتعديل تأثيرات الإضاءة، وتغيير الأجواء، وإضفاء طابع سينمائي على الصور.",
+        "original": "https://file.nanobanana.org/showcase/2.webp",
+        "effects": [
+          {
+            "id": "golden-hour",
+            "name": "الساعة الذهبية",
+            "image": "https://file.nanobanana.org/showcase/2-1.png",
+            "prompt": "أضف تأثير ضوء الشمس الدافئ",
+            "description": "إعادة إنشاء إضاءة الساعة الذهبية السحرية"
+          },
+          {
+            "id": "dramatic-shadows",
+            "name": "ظلال درامية",
+            "image": "https://file.nanobanana.org/showcase/2-2.png",
+            "prompt": "اضبط على درجات 'الساعة الزرقاء' الباردة",
+            "description": "إضاءة درامية عالية التباين"
+          },
+          {
+            "id": "soft-glow",
+            "name": "توهج ناعم",
+            "image": "https://file.nanobanana.org/showcase/2-3.png",
+            "prompt": "التبديل إلى مشهد ليلي مع مصادر ضوء",
+            "description": "تأثيرات إضاءة ناعمة وساحرة"
+          }
+        ]
+      },
+      {
+        "id": "style-conversion",
+        "category": "تحويل النمط",
+        "title": "تحويل النمط",
+        "description": "استخدم الذكاء الاصطناعي لتحويل صورك إلى أنماط فنية مختلفة.",
+        "original": "https://file.nanobanana.org/showcase/3.webp",
+        "effects": [
+          {
+            "id": "oil-painting",
+            "name": "لوحة زيتية",
+            "image": "https://file.nanobanana.org/showcase/3-1.webp",
+            "prompt": "التحويل إلى أسلوب الأنمي",
+            "description": "تأثير فني كلاسيكي للوحة الزيتية"
+          },
+          {
+            "id": "watercolor",
+            "name": "لوحة مائية",
+            "image": "https://file.nanobanana.org/showcase/3-2.webp",
+            "prompt": "التحويل إلى أسلوب اللوحة الزيتية الغنية",
+            "description": "أسلوب فني مائي رقيق"
+          },
+          {
+            "id": "anime",
+            "name": "أسلوب الأنمي",
+            "image": "https://file.nanobanana.org/showcase/3-3.webp",
+            "prompt": "التحويل إلى أسلوب فن البكسل العتيق",
+            "description": "أسلوب شخصيات الأنمي الياباني"
+          }
+        ]
+      },
+      {
+        "id": "color-change",
+        "category": "تعديل الألوان",
+        "title": "تعديل الألوان",
+        "description": "تدرج ألوان احترافي، غيّر مزاج الصورة تمامًا.",
+        "original": "https://file.nanobanana.org/showcase/4.webp",
+        "effects": [
+          {
+            "id": "vibrant",
+            "name": "ألوان نابضة بالحياة",
+            "image": "https://file.nanobanana.org/showcase/4-1.png",
+            "prompt": "حوّل جميع الأوراق الخضراء إلى اللون الأحمر",
+            "description": "ألوان نابضة بالحياة تجذب الأنظار"
+          },
+          {
+            "id": "moody",
+            "name": "درجات عاطفية",
+            "image": "https://file.nanobanana.org/showcase/4-2.png",
+            "prompt": "حوّل جميع الأوراق الخضراء إلى اللون الأصفر",
+            "description": "تدرج ألوان عميق وجوّي"
+          },
+          {
+            "id": "vintage",
+            "name": "فيلم عتيق",
+            "image": "https://file.nanobanana.org/showcase/4-3.png",
+            "prompt": "حوّل جميع الأوراق الخضراء إلى اللون الأزرق",
+            "description": "لوحة ألوان الأفلام الكلاسيكية"
+          }
+        ]
+      },
+      {
+        "id": "age-transformation",
+        "category": "تحويل العمر",
+        "title": "تحويل العمر",
+        "description": "شاهد نفسك في أعمار مختلفة من خلال تقنية الذكاء الاصطناعي المتقدمة.",
+        "original": "https://file.nanobanana.org/showcase/5.webp",
+        "effects": [
+          {
+            "id": "younger",
+            "name": "أصغر بـ 10 سنوات",
+            "image": "https://file.nanobanana.org/showcase/5-1.webp",
+            "prompt": "غيّر العمر إلى 3 سنوات",
+            "description": "تأثير تقليل العمر الطبيعي"
+          },
+          {
+            "id": "teenage",
+            "name": "مرحلة المراهقة",
+            "image": "https://file.nanobanana.org/showcase/5-2.webp",
+            "prompt": "غيّر العمر إلى 16 سنة",
+            "description": "مظهر الشباب المراهق"
+          },
+          {
+            "id": "elderly",
+            "name": "أنت في المستقبل",
+            "image": "https://file.nanobanana.org/showcase/5-3.webp",
+            "prompt": "غيّر العمر إلى 16 سنة",
+            "description": "محاكاة الشيخوخة الطبيعية"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -104,4 +104,17 @@
     <loc>https://nanobanana.org/ru/pricing</loc>
     <lastmod>2025-09-06T10:00:00+00:00</lastmod>
   </url>
+  <url>
+    <loc>https://nanobanana.org/ar</loc>
+    <lastmod>2025-09-06T10:00:00+00:00</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://nanobanana.org/ar/showcase</loc>
+    <lastmod>2025-09-06T10:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://nanobanana.org/ar/pricing</loc>
+    <lastmod>2025-09-06T10:00:00+00:00</lastmod>
+  </url>
 </urlset>
