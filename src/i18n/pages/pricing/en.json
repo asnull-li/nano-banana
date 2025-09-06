@@ -1,4 +1,8 @@
 {
+  "metadata": {
+    "title": "Nano Banana Pricing - Nano Banana AI Image Editor",
+    "description": "Choose the perfect plan for your AI image generation needs."
+  },
   "pricing": {
     "name": "pricing",
     "label": "Pricing",
