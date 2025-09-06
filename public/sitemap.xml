@@ -6,19 +6,47 @@
   </url>
   <url>
     <loc>https://nanobanana.org/showcase</loc>
-    <lastmod>2025-08-26T10:00:00+00:00</lastmod>
+    <lastmod>2025-09-06T10:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://nanobanana.org/pricing</loc>
+    <lastmod>2025-09-06T10:00:00+00:00</lastmod>
   </url>
   <url>
     <loc>https://nanobanana.org/zh</loc>
     <lastmod>2025-08-15T10:00:00+00:00</lastmod>
   </url>
   <url>
+    <loc>https://nanobanana.org/zh/showcase</loc>
+    <lastmod>2025-09-06T10:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://nanobanana.org/zh/pricing</loc>
+    <lastmod>2025-09-06T10:00:00+00:00</lastmod>
+  </url>
+  <url>
     <loc>https://nanobanana.org/ko</loc>
     <lastmod>2025-08-26T10:00:00+00:00</lastmod>
   </url>
   <url>
+    <loc>https://nanobanana.org/ko/showcase</loc>
+    <lastmod>2025-09-06T10:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://nanobanana.org/ko/pricing</loc>
+    <lastmod>2025-09-06T10:00:00+00:00</lastmod>
+  </url>
+  <url>
     <loc>https://nanobanana.org/ja</loc>
     <lastmod>2025-08-26T10:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://nanobanana.org/ja/showcase</loc>
+    <lastmod>2025-09-06T10:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://nanobanana.org/ja/pricing</loc>
+    <lastmod>2025-09-06T10:00:00+00:00</lastmod>
   </url>
   <url>
     <loc>https://nanobanana.org/es</loc>
@@ -26,7 +54,11 @@
   </url>
    <url>
     <loc>https://nanobanana.org/es/showcase</loc>
-    <lastmod>2025-08-26T10:00:00+00:00</lastmod>
+    <lastmod>2025-09-06T10:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://nanobanana.org/es/pricing</loc>
+    <lastmod>2025-09-06T10:00:00+00:00</lastmod>
   </url>
   <url>
     <loc>https://nanobanana.org/de</loc>
@@ -34,7 +66,11 @@
   </url>
   <url>
     <loc>https://nanobanana.org/de/showcase</loc>
-    <lastmod>2025-08-28T10:00:00+00:00</lastmod>
+    <lastmod>2025-09-06T10:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://nanobanana.org/de/pricing</loc>
+    <lastmod>2025-09-06T10:00:00+00:00</lastmod>
   </url>
   <url>
     <loc>https://nanobanana.org/fr</loc>
@@ -42,7 +78,11 @@
   </url>
   <url>
     <loc>https://nanobanana.org/fr/showcase</loc>
-    <lastmod>2025-08-30T10:00:00+00:00</lastmod>
+    <lastmod>2025-09-06T10:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://nanobanana.org/fr/pricing</loc>
+    <lastmod>2025-09-06T10:00:00+00:00</lastmod>
   </url>
   <url>
     <loc>https://nanobanana.org/ru</loc>
@@ -50,6 +90,10 @@
   </url>
   <url>
     <loc>https://nanobanana.org/ru/showcase</loc>
-    <lastmod>2025-09-03T10:00:00+00:00</lastmod>
+    <lastmod>2025-09-06T10:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://nanobanana.org/ru/pricing</loc>
+    <lastmod>2025-09-06T10:00:00+00:00</lastmod>
   </url>
 </urlset>
