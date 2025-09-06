@@ -3,6 +3,7 @@
   <url>
     <loc>https://nanobanana.org</loc>
     <lastmod>2025-08-15T10:00:00+00:00</lastmod>
+    <priority>1.0</priority>
   </url>
   <url>
     <loc>https://nanobanana.org/showcase</loc>
@@ -15,6 +16,7 @@
   <url>
     <loc>https://nanobanana.org/zh</loc>
     <lastmod>2025-08-15T10:00:00+00:00</lastmod>
+    <priority>1.0</priority>
   </url>
   <url>
     <loc>https://nanobanana.org/zh/showcase</loc>
@@ -27,6 +29,7 @@
   <url>
     <loc>https://nanobanana.org/ko</loc>
     <lastmod>2025-08-26T10:00:00+00:00</lastmod>
+    <priority>1.0</priority>
   </url>
   <url>
     <loc>https://nanobanana.org/ko/showcase</loc>
@@ -39,6 +42,7 @@
   <url>
     <loc>https://nanobanana.org/ja</loc>
     <lastmod>2025-08-26T10:00:00+00:00</lastmod>
+    <priority>1.0</priority>
   </url>
   <url>
     <loc>https://nanobanana.org/ja/showcase</loc>
@@ -51,8 +55,9 @@
   <url>
     <loc>https://nanobanana.org/es</loc>
     <lastmod>2025-08-26T10:00:00+00:00</lastmod>
+    <priority>1.0</priority>
   </url>
-   <url>
+  <url>
     <loc>https://nanobanana.org/es/showcase</loc>
     <lastmod>2025-09-06T10:00:00+00:00</lastmod>
   </url>
@@ -63,6 +68,7 @@
   <url>
     <loc>https://nanobanana.org/de</loc>
     <lastmod>2025-08-28T10:00:00+00:00</lastmod>
+    <priority>1.0</priority>
   </url>
   <url>
     <loc>https://nanobanana.org/de/showcase</loc>
@@ -75,6 +81,7 @@
   <url>
     <loc>https://nanobanana.org/fr</loc>
     <lastmod>2025-08-30T10:00:00+00:00</lastmod>
+    <priority>1.0</priority>
   </url>
   <url>
     <loc>https://nanobanana.org/fr/showcase</loc>
@@ -87,6 +94,7 @@
   <url>
     <loc>https://nanobanana.org/ru</loc>
     <lastmod>2025-09-03T10:00:00+00:00</lastmod>
+    <priority>1.0</priority>
   </url>
   <url>
     <loc>https://nanobanana.org/ru/showcase</loc>
