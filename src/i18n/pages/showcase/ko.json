@@ -15,22 +15,22 @@
           {
             "id": "vintage-desk",
             "name": "빈티지 도구 책상",
-            "image": "https://file.nanobanana.org/showcase/1-1.webp",
+            "image": "https://file.nanobanana.org/showcase/1-1.png",
             "prompt": "배경을 광활한 초원으로 변경",
             "description": "장인의 작업장 환경에 피사체 배치"
           },
           {
             "id": "tropical-beach",
             "name": "열대 해변",
-            "image": "https://file.nanobanana.org/showcase/1-2.webp",
+            "image": "https://file.nanobanana.org/showcase/1-2.png",
             "prompt": "배경을 구불구불한 산길로 변경",
             "description": "맑은 물이 있는 햇살 가득한 해변 배경"
           },
           {
             "id": "modern-office",
             "name": "모던 오피스",
-            "image": "https://file.nanobanana.org/showcase/1-3.webp",
-            "prompt": "배경을 구불구불한 산길로 변경",
+            "image": "https://file.nanobanana.org/showcase/1-3.png",
+            "prompt": "배경을 레트로 도구 작업대로 변경",
             "description": "깨끗하고 미니멀한 사무 공간"
           }
         ]
@@ -45,21 +45,21 @@
           {
             "id": "golden-hour",
             "name": "골든 아워",
-            "image": "https://file.nanobanana.org/showcase/2-1.webp",
+            "image": "https://file.nanobanana.org/showcase/2-1.png",
             "prompt": "따뜻한 햇빛 효과 추가",
             "description": "마법 같은 골든 아워 조명 재현"
           },
           {
             "id": "dramatic-shadows",
             "name": "드라마틱한 그림자",
-            "image": "https://file.nanobanana.org/showcase/2-2.webp",
+            "image": "https://file.nanobanana.org/showcase/2-2.png",
             "prompt": "'블루 아워'의 차가운 톤으로 조정",
             "description": "고대비 드라마틱한 조명"
           },
           {
             "id": "soft-glow",
             "name": "부드러운 빛",
-            "image": "https://file.nanobanana.org/showcase/2-3.webp",
+            "image": "https://file.nanobanana.org/showcase/2-3.png",
             "prompt": "점 광원이 있는 야경으로 전환",
             "description": "부드럽고 매력적인 빛 효과"
           }
@@ -105,21 +105,21 @@
           {
             "id": "vibrant",
             "name": "생생한 색상",
-            "image": "https://file.nanobanana.org/showcase/4-1.webp",
+            "image": "https://file.nanobanana.org/showcase/4-1.png",
             "prompt": "모든 초록 잎을 빨간색으로 변경",
             "description": "눈길을 끄는 선명한 색상"
           },
           {
             "id": "moody",
             "name": "무디한 톤",
-            "image": "https://file.nanobanana.org/showcase/4-2.webp",
+            "image": "https://file.nanobanana.org/showcase/4-2.png",
             "prompt": "모든 초록 잎을 노란색으로 변경",
             "description": "깊고 분위기 있는 컬러 그레이딩"
           },
           {
             "id": "vintage",
             "name": "빈티지 필름",
-            "image": "https://file.nanobanana.org/showcase/4-3.webp",
+            "image": "https://file.nanobanana.org/showcase/4-3.png",
             "prompt": "모든 초록 잎을 파란색으로 변경",
             "description": "클래식한 필름 색상 팔레트"
           }

@@ -10,10 +10,10 @@ export const AffiliateStatus = {
 
 export const AffiliateRewardPercent = {
   Invited: 0,
-  Paied: 20, // 20%
+  Paied: 5, // 20%
 };
 
 export const AffiliateRewardAmount = {
   Invited: 0,
-  Paied: 5000, // $50
+  Paied: 2, // $50
 };

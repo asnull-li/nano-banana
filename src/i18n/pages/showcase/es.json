@@ -15,22 +15,22 @@
           {
             "id": "vintage-desk",
             "name": "Mesa de Herramientas Vintage",
-            "image": "https://file.nanobanana.org/showcase/1-1.webp",
+            "image": "https://file.nanobanana.org/showcase/1-1.png",
             "prompt": "Cambiar el fondo a un vasto pastizal",
             "description": "Colocar el sujeto en un ambiente de taller de artesano"
           },
           {
             "id": "tropical-beach",
             "name": "Playa Tropical",
-            "image": "https://file.nanobanana.org/showcase/1-2.webp",
+            "image": "https://file.nanobanana.org/showcase/1-2.png",
             "prompt": "Cambiar el fondo a un camino de montaña sinuoso",
             "description": "Fondo de playa soleada con agua cristalina"
           },
           {
             "id": "modern-office",
             "name": "Oficina Moderna",
-            "image": "https://file.nanobanana.org/showcase/1-3.webp",
-            "prompt": "Cambiar el fondo a un camino de montaña sinuoso",
+            "image": "https://file.nanobanana.org/showcase/1-3.png",
+            "prompt": "Cambiar el fondo a un banco de trabajo de herramientas retro.",
             "description": "Espacio de oficina limpio y minimalista"
           }
         ]
@@ -45,21 +45,21 @@
           {
             "id": "golden-hour",
             "name": "Hora Dorada",
-            "image": "https://file.nanobanana.org/showcase/2-1.webp",
+            "image": "https://file.nanobanana.org/showcase/2-1.png",
             "prompt": "Agregar efecto de luz solar cálida",
             "description": "Recrear la iluminación mágica de la hora dorada"
           },
           {
             "id": "dramatic-shadows",
             "name": "Sombras Dramáticas",
-            "image": "https://file.nanobanana.org/showcase/2-2.webp",
+            "image": "https://file.nanobanana.org/showcase/2-2.png",
             "prompt": "Ajustar a los tonos fríos de la 'hora azul'",
             "description": "Iluminación dramática de alto contraste"
           },
           {
             "id": "soft-glow",
             "name": "Brillo Suave",
-            "image": "https://file.nanobanana.org/showcase/2-3.webp",
+            "image": "https://file.nanobanana.org/showcase/2-3.png",
             "prompt": "Cambiar a una escena nocturna con fuentes de luz puntuales",
             "description": "Efecto de luz suave y favorecedora"
           }
@@ -105,21 +105,21 @@
           {
             "id": "vibrant",
             "name": "Colores Vibrantes",
-            "image": "https://file.nanobanana.org/showcase/4-1.webp",
+            "image": "https://file.nanobanana.org/showcase/4-1.png",
             "prompt": "Cambiar todas las hojas verdes a rojas",
             "description": "Colores vivos llamativos"
           },
           {
             "id": "moody",
             "name": "Tonos Melancólicos",
-            "image": "https://file.nanobanana.org/showcase/4-2.webp",
+            "image": "https://file.nanobanana.org/showcase/4-2.png",
             "prompt": "Cambiar todas las hojas verdes a amarillas",
             "description": "Gradación de color profunda y atmosférica"
           },
           {
             "id": "vintage",
             "name": "Película Vintage",
-            "image": "https://file.nanobanana.org/showcase/4-3.webp",
+            "image": "https://file.nanobanana.org/showcase/4-3.png",
             "prompt": "Cambiar todas las hojas verdes a azules",
             "description": "Paleta de colores de película clásica"
           }

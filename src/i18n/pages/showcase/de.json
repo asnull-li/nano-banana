@@ -15,22 +15,22 @@
           {
             "id": "vintage-desk",
             "name": "Vintage Werkzeugbank",
-            "image": "https://file.nanobanana.org/showcase/1-1.webp",
-            "prompt": "Change background to a vast grassland",
+            "image": "https://file.nanobanana.org/showcase/1-1.png",
+            "prompt": "Hintergrund zu einer weiten Graslandschaft ändern",
             "description": "Platzieren Sie das Motiv in einer Handwerker-Werkstatt"
           },
           {
             "id": "tropical-beach",
             "name": "Tropischer Strand",
-            "image": "https://file.nanobanana.org/showcase/1-2.webp",
-            "prompt": "Change background to a winding mountain road",
+            "image": "https://file.nanobanana.org/showcase/1-2.png",
+            "prompt": "Hintergrund zu einer kurvenreichen Bergstraße ändern",
             "description": "Sonniger Strandhintergrund mit kristallklarem Wasser"
           },
           {
             "id": "modern-office",
             "name": "Modernes Büro",
-            "image": "https://file.nanobanana.org/showcase/1-3.webp",
-            "prompt": "Change background to a winding mountain road",
+            "image": "https://file.nanobanana.org/showcase/1-3.png",
+            "prompt": "Ändern Sie den Hintergrund in eine Retro-Werkbank.",
             "description": "Sauberer, minimalistischer Büroraum"
           }
         ]
@@ -45,22 +45,22 @@
           {
             "id": "golden-hour",
             "name": "Goldene Stunde",
-            "image": "https://file.nanobanana.org/showcase/2-1.webp",
-            "prompt": "Add warm sunlight effect",
+            "image": "https://file.nanobanana.org/showcase/2-1.png",
+            "prompt": "Warmen Sonnenlichteffekt hinzufügen",
             "description": "Magisches Licht der goldenen Stunde nachbilden"
           },
           {
             "id": "dramatic-shadows",
             "name": "Dramatische Schatten",
-            "image": "https://file.nanobanana.org/showcase/2-2.webp",
-            "prompt": "Adjust to the cool tones of the 'blue hour'",
+            "image": "https://file.nanobanana.org/showcase/2-2.png",
+            "prompt": "An die kühlen Töne der 'blauen Stunde' anpassen",
             "description": "Hoher Kontrast, dramatische Beleuchtung"
           },
           {
             "id": "soft-glow",
             "name": "Sanftes Leuchten",
-            "image": "https://file.nanobanana.org/showcase/2-3.webp",
-            "prompt": "Switch to a night scene with point light sources",
+            "image": "https://file.nanobanana.org/showcase/2-3.png",
+            "prompt": "Zu einer Nachtszene mit Punktlichtquellen wechseln",
             "description": "Sanfter, schmeichelhafter Lichteffekt"
           }
         ]
@@ -76,21 +76,21 @@
             "id": "oil-painting",
             "name": "Ölgemälde",
             "image": "https://file.nanobanana.org/showcase/3-1.webp",
-            "prompt": "Convert to Japanese anime style",
+            "prompt": "In japanischen Anime-Stil umwandeln",
             "description": "Klassischer Ölgemälde-Kunsteffekt"
           },
           {
             "id": "watercolor",
             "name": "Aquarell",
             "image": "https://file.nanobanana.org/showcase/3-2.webp",
-            "prompt": "Convert to a rich oil painting style",
+            "prompt": "In einen reichhaltigen Ölgemälde-Stil umwandeln",
             "description": "Zarter Aquarell-Kunststil"
           },
           {
             "id": "anime",
             "name": "Anime-Stil",
             "image": "https://file.nanobanana.org/showcase/3-3.webp",
-            "prompt": "Convert to a retro pixel art style",
+            "prompt": "In einen Retro-Pixel-Art-Stil umwandeln",
             "description": "Japanischer Anime-Charakterstil"
           }
         ]
@@ -105,22 +105,22 @@
           {
             "id": "vibrant",
             "name": "Lebendige Farben",
-            "image": "https://file.nanobanana.org/showcase/4-1.webp",
-            "prompt": "Change all green leaves to red",
+            "image": "https://file.nanobanana.org/showcase/4-1.png",
+            "prompt": "Alle grünen Blätter in rote umwandeln",
             "description": "Auffällige, lebhafte Farben"
           },
           {
             "id": "moody",
             "name": "Stimmungsvolle Töne",
-            "image": "https://file.nanobanana.org/showcase/4-2.webp",
-            "prompt": "Change all green leaves to yellow",
+            "image": "https://file.nanobanana.org/showcase/4-2.png",
+            "prompt": "Alle grünen Blätter in gelbe umwandeln",
             "description": "Tiefe, atmosphärische Farbkorrektur"
           },
           {
             "id": "vintage",
             "name": "Vintage-Film",
-            "image": "https://file.nanobanana.org/showcase/4-3.webp",
-            "prompt": "Change all green leaves to blue",
+            "image": "https://file.nanobanana.org/showcase/4-3.png",
+            "prompt": "Alle grünen Blätter in blaue umwandeln",
             "description": "Klassische Film-Farbpalette"
           }
         ]
@@ -136,21 +136,21 @@
             "id": "younger",
             "name": "10 Jahre jünger",
             "image": "https://file.nanobanana.org/showcase/5-1.webp",
-            "prompt": "Change age to 3 years old",
+            "prompt": "Alter auf 3 Jahre ändern",
             "description": "Natürlicher Altersreduktionseffekt"
           },
           {
             "id": "teenage",
             "name": "Jugendjahre",
             "image": "https://file.nanobanana.org/showcase/5-2.webp",
-            "prompt": "Change age to 16 years old",
+            "prompt": "Alter auf 16 Jahre ändern",
             "description": "Jugendliches Aussehen"
           },
           {
             "id": "elderly",
             "name": "Zukünftiges Ich",
             "image": "https://file.nanobanana.org/showcase/5-3.webp",
-            "prompt": "Change age to 16 years old",
+            "prompt": "Alter auf 70 Jahre ändern",
             "description": "Natürliche Alterungssimulation"
           }
         ]
