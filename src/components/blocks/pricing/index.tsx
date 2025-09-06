@@ -135,9 +135,9 @@ export default function Pricing({ pricing }: { pricing: PricingType }) {
             <Sparkles className="h-5 w-5 text-white" />
           </div>
 
-          <h2 className="mb-4 text-3xl font-bold lg:text-5xl bg-gradient-to-r from-green-500 to-cyan-500 bg-clip-text text-transparent">
+          <h1 className="mb-4 text-3xl font-bold lg:text-5xl bg-gradient-to-r from-green-500 to-cyan-500 bg-clip-text text-transparent">
             {pricing.title}
-          </h2>
+          </h1>
 
           <p className="text-muted-foreground lg:text-xl leading-relaxed">
             {pricing.description}
