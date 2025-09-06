@@ -23,7 +23,7 @@ export enum CreditsTransType {
 }
 
 export enum CreditsAmount {
-  NewUserGet = 5,
+  NewUserGet = 10,
   PingCost = 1,
   FluxProCost = 2,
   FluxMaxCost = 4,
