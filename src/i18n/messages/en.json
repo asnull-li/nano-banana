@@ -374,5 +374,48 @@
       "insufficient_credits_detail": "Insufficient credits, need {needed} credits, you have {current} credits",
       "download_hint": "Click the download button and then right-click to save"
     }
+  },
+  "history": {
+    "title": "Nano Banana creation record",
+    "description": "View all the images you have generated and edited with Nano Banana before",
+    "status": {
+      "completed": "Completed",
+      "failed": "Failed",
+      "processing": "Processing",
+      "pending": "Pending"
+    },
+    "credits_used": "{amount} credits",
+    "credits_refunded": "Refunded {amount} credits",
+    "images": "images",
+    "view": "View",
+    "download": "Download",
+    "download_success": "Image downloaded successfully",
+    "delete_success": "Record deleted successfully",
+    "delete_error": "Failed to delete record",
+    "load_more": "Load More",
+    "loading": "Loading...",
+    "load_more_error": "Failed to load more records",
+    "no_more": "All records loaded",
+    "image_preview": "Image Preview",
+    "enhance_image": "Enhance",
+    "copy_link": "Copy Link",
+    "copied": "Copied!",
+    "link_copied": "Link copied to clipboard",
+    "copy_failed": "Failed to copy link",
+    "coming_soon": "Coming soon, stay tuned!",
+    "error": {
+      "unknown": "Unknown error occurred"
+    },
+    "empty": {
+      "title": "No Generation History",
+      "description": "Start creating amazing images with AI",
+      "action": "Start Creating"
+    },
+    "delete_confirm": {
+      "title": "Delete Record",
+      "description": "Are you sure you want to delete this generation record? This action cannot be undone.",
+      "cancel": "Cancel",
+      "confirm": "Delete"
+    }
   }
 }

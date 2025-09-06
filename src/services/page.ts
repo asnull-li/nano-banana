@@ -1,4 +1,5 @@
 import { LandingPage, PricingPage, ShowcasePage } from "@/types/pages/landing";
+import { HistoryPage } from "@/types/pages/history";
 
 export async function getLandingPage(locale: string): Promise<LandingPage> {
   return (await getPage("landing", locale)) as LandingPage;
@@ -12,10 +13,14 @@ export async function getShowcasePage(locale: string): Promise<ShowcasePage> {
   return (await getPage("showcase", locale)) as ShowcasePage;
 }
 
+export async function getHistoryPage(locale: string): Promise<HistoryPage> {
+  return (await getPage("history", locale)) as HistoryPage;
+}
+
 export async function getPage(
   name: string,
   locale: string
-): Promise<LandingPage | PricingPage | ShowcasePage> {
+): Promise<LandingPage | PricingPage | ShowcasePage | HistoryPage> {
   try {
     if (locale === "zh-CN") {
       locale = "zh";

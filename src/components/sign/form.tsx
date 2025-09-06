@@ -113,9 +113,9 @@ export default function SignForm({
 
   return (
     <div className={cn("flex flex-col gap-6", className)} {...props}>
-      <Card>
+      <Card className="border-green-500/20 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm shadow-xl">
         <CardHeader className="text-center">
-          <CardTitle className="text-xl">
+          <CardTitle className="text-xl bg-gradient-to-r from-green-500 to-cyan-500 bg-clip-text text-transparent">
             {t("sign_modal.sign_in_title")}
           </CardTitle>
           <CardDescription>
@@ -128,7 +128,7 @@ export default function SignForm({
               {process.env.NEXT_PUBLIC_AUTH_GOOGLE_ENABLED === "true" && (
                 <Button
                   variant="outline"
-                  className="w-full"
+                  className="w-full border-green-500/20 hover:border-green-500/40 hover:bg-green-500/10 transition-all duration-300"
                   onClick={() => signIn("google")}
                 >
                   <SiGoogle className="w-4 h-4" />
@@ -138,7 +138,7 @@ export default function SignForm({
               {process.env.NEXT_PUBLIC_AUTH_GITHUB_ENABLED === "true" && (
                 <Button
                   variant="outline"
-                  className="w-full"
+                  className="w-full border-green-500/20 hover:border-green-500/40 hover:bg-green-500/10 transition-all duration-300"
                   onClick={() => signIn("github")}
                 >
                   <SiGithub className="w-4 h-4" />
@@ -150,7 +150,7 @@ export default function SignForm({
             {process.env.NEXT_PUBLIC_AUTH_EMAIL_ENABLED === "true" && !codeSent && (
               <Button
                 variant="outline"
-                className="w-full"
+                className="w-full border-green-500/20 hover:border-green-500/40 hover:bg-green-500/10 transition-all duration-300"
                 onClick={() => setCodeSent(true)}
               >
                 <Mail className="w-4 h-4" />
@@ -178,6 +178,7 @@ export default function SignForm({
                         onChange={(e) => setEmail(e.target.value)}
                         required
                         disabled={isLoading}
+                        className="border-green-500/20 focus:border-green-500/40 focus:ring-green-500/20"
                       />
                     </div>
 
@@ -187,7 +188,7 @@ export default function SignForm({
                       </div>
                     )}
 
-                    <Button type="submit" className="w-full" disabled={isLoading || !email}>
+                    <Button type="submit" className="w-full bg-gradient-to-r from-green-500 to-cyan-500 hover:from-green-600 hover:to-cyan-600 text-white border-0 shadow-lg shadow-green-500/25 hover:shadow-xl hover:shadow-green-500/30 transition-all duration-300" disabled={isLoading || !email}>
                       {isLoading ? (
                         <>
                           <Loader2 className="mr-2 h-4 w-4 animate-spin" />
@@ -201,7 +202,7 @@ export default function SignForm({
                     <Button
                       type="button"
                       variant="ghost"
-                      className="w-full"
+                      className="w-full hover:bg-green-500/10"
                       onClick={() => {
                         setCodeSent(false);
                         setCodeEverSent(false);
@@ -224,6 +225,7 @@ export default function SignForm({
                         onChange={(e) => setEmail(e.target.value)}
                         required
                         disabled={true}
+                        className="border-green-500/20 focus:border-green-500/40 focus:ring-green-500/20"
                       />
                     </div>
                     
@@ -236,7 +238,7 @@ export default function SignForm({
                           size="sm"
                           onClick={handleSendCode}
                           disabled={isLoading || countdown > 0}
-                          className="h-auto p-0 text-xs"
+                          className="h-auto p-0 text-xs text-green-500 hover:text-green-600"
                         >
                           {countdown > 0 
                             ? `${t("sign_modal.resend_in") || "Resend in"} ${countdown}s`
@@ -253,7 +255,7 @@ export default function SignForm({
                         maxLength={6}
                         required
                         disabled={isLoading}
-                        className="text-center text-lg tracking-widest"
+                        className="text-center text-lg tracking-widest border-green-500/20 focus:border-green-500/40 focus:ring-green-500/20"
                         autoFocus
                       />
                     </div>
@@ -264,7 +266,7 @@ export default function SignForm({
                       </div>
                     )}
 
-                    <Button type="submit" className="w-full" disabled={isLoading || !email || !code}>
+                    <Button type="submit" className="w-full bg-gradient-to-r from-green-500 to-cyan-500 hover:from-green-600 hover:to-cyan-600 text-white border-0 shadow-lg shadow-green-500/25 hover:shadow-xl hover:shadow-green-500/30 transition-all duration-300" disabled={isLoading || !email || !code}>
                       {isLoading ? (
                         <>
                           <Loader2 className="mr-2 h-4 w-4 animate-spin" />
@@ -278,7 +280,7 @@ export default function SignForm({
                     <Button
                       type="button"
                       variant="ghost"
-                      className="w-full"
+                      className="w-full hover:bg-green-500/10"
                       onClick={() => {
                         setCodeSent(false);
                         setCodeEverSent(false);
