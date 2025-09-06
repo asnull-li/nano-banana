@@ -13,9 +13,9 @@
     "nav": {
       "items": [
         {
-          "title": "Funktionen",
-          "url": "/#feature",
-          "icon": "RiSparkling2Line"
+          "title": "Erstellungshistorie",
+          "url": "/history",
+          "icon": "RiHistoryLine"
         },
         {
           "title": "Preise",

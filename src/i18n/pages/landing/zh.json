@@ -13,9 +13,9 @@
     "nav": {
       "items": [
         {
-          "title": "功能特点",
-          "url": "/#feature",
-          "icon": "RiSparkling2Line"
+          "title": "创作记录",
+          "url": "/history",
+          "icon": "RiHistoryLine"
         },
         {
           "title": "定价",

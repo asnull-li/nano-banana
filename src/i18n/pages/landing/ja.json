@@ -13,9 +13,9 @@
     "nav": {
       "items": [
         {
-          "title": "機能",
-          "url": "/#feature",
-          "icon": "RiSparkling2Line"
+          "title": "作成履歴",
+          "url": "/history",
+          "icon": "RiHistoryLine"
         },
         {
           "title": "料金",

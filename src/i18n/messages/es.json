@@ -369,5 +369,48 @@
       "insufficient_credits_detail": "Créditos insuficientes, necesitas {needed} créditos, tienes {current} créditos",
       "download_hint": "Haz clic en el botón de descarga y luego clic derecho para guardar"
     }
+  },
+  "history": {
+    "title": "Registro de creación de Nano Banana",
+    "description": "Ver todas las imágenes que has generado y editado con Nano Banana anteriormente",
+    "status": {
+      "completed": "Completado",
+      "failed": "Fallido",
+      "processing": "Procesando",
+      "pending": "Pendiente"
+    },
+    "credits_used": "{amount} créditos",
+    "credits_refunded": "Reembolsado {amount} créditos",
+    "images": "imágenes",
+    "view": "Ver",
+    "download": "Descargar",
+    "download_success": "Imagen descargada exitosamente",
+    "delete_success": "Registro eliminado exitosamente",
+    "delete_error": "Error al eliminar el registro",
+    "load_more": "Cargar Más",
+    "loading": "Cargando...",
+    "load_more_error": "Error al cargar más registros",
+    "no_more": "Todos los registros cargados",
+    "image_preview": "Vista Previa de Imagen",
+    "enhance_image": "Mejorar",
+    "copy_link": "Copiar Enlace",
+    "copied": "¡Copiado!",
+    "link_copied": "Enlace copiado al portapapeles",
+    "copy_failed": "Error al copiar enlace",
+    "coming_soon": "¡Próximamente, mantente atento!",
+    "error": {
+      "unknown": "Ocurrió un error desconocido"
+    },
+    "empty": {
+      "title": "Sin Historial de Generación",
+      "description": "Comienza a crear imágenes increíbles con IA",
+      "action": "Comenzar a Crear"
+    },
+    "delete_confirm": {
+      "title": "Eliminar Registro",
+      "description": "¿Estás seguro de que quieres eliminar este registro de generación? Esta acción no se puede deshacer.",
+      "cancel": "Cancelar",
+      "confirm": "Eliminar"
+    }
   }
 }

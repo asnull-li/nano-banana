@@ -369,5 +369,48 @@
       "insufficient_credits_detail": "Unzureichendes Guthaben, benötigen {needed} Credits, Sie haben {current} Credits",
       "download_hint": "Klicken Sie auf die Download-Schaltfläche und dann mit der rechten Maustaste zum Speichern"
     }
+  },
+  "history": {
+    "title": "Nano Banana Erstellungsverlauf",
+    "description": "Alle zuvor mit Nano Banana generierten und bearbeiteten Bilder anzeigen",
+    "status": {
+      "completed": "Abgeschlossen",
+      "failed": "Fehlgeschlagen",
+      "processing": "In Bearbeitung",
+      "pending": "Ausstehend"
+    },
+    "credits_used": "{amount} Credits",
+    "credits_refunded": "{amount} Credits erstattet",
+    "images": "Bilder",
+    "view": "Ansehen",
+    "download": "Herunterladen",
+    "download_success": "Bild erfolgreich heruntergeladen",
+    "delete_success": "Eintrag erfolgreich gelöscht",
+    "delete_error": "Fehler beim Löschen des Eintrags",
+    "load_more": "Mehr laden",
+    "loading": "Lädt...",
+    "load_more_error": "Fehler beim Laden weiterer Einträge",
+    "no_more": "Alle Einträge geladen",
+    "image_preview": "Bildvorschau",
+    "enhance_image": "Verbessern",
+    "copy_link": "Link kopieren",
+    "copied": "Kopiert!",
+    "link_copied": "Link in die Zwischenablage kopiert",
+    "copy_failed": "Fehler beim Kopieren des Links",
+    "coming_soon": "Demnächst verfügbar!",
+    "error": {
+      "unknown": "Unbekannter Fehler aufgetreten"
+    },
+    "empty": {
+      "title": "Kein Erstellungsverlauf",
+      "description": "Beginnen Sie mit der Erstellung erstaunlicher KI-Bilder",
+      "action": "Mit Erstellen beginnen"
+    },
+    "delete_confirm": {
+      "title": "Eintrag löschen",
+      "description": "Möchten Sie diesen Erstellungseintrag wirklich löschen? Diese Aktion kann nicht rückgängig gemacht werden.",
+      "cancel": "Abbrechen",
+      "confirm": "Löschen"
+    }
   }
 }

@@ -373,5 +373,48 @@
       "insufficient_credits_detail": "Crédits insuffisants, besoin de {needed} crédits, vous avez {current} crédits",
       "download_hint": "Cliquez sur le bouton télécharger puis faites un clic droit pour enregistrer"
     }
+  },
+  "history": {
+    "title": "Historique de création Nano Banana",
+    "description": "Voir toutes les images que vous avez générées et éditées avec Nano Banana auparavant",
+    "status": {
+      "completed": "Terminé",
+      "failed": "Échoué",
+      "processing": "En cours",
+      "pending": "En attente"
+    },
+    "credits_used": "{amount} crédits",
+    "credits_refunded": "Remboursé {amount} crédits",
+    "images": "images",
+    "view": "Voir",
+    "download": "Télécharger",
+    "download_success": "Image téléchargée avec succès",
+    "delete_success": "Enregistrement supprimé avec succès",
+    "delete_error": "Échec de la suppression de l'enregistrement",
+    "load_more": "Charger Plus",
+    "loading": "Chargement...",
+    "load_more_error": "Échec du chargement d'autres enregistrements",
+    "no_more": "Tous les enregistrements chargés",
+    "image_preview": "Aperçu de l'Image",
+    "enhance_image": "Améliorer",
+    "copy_link": "Copier le Lien",
+    "copied": "Copié !",
+    "link_copied": "Lien copié dans le presse-papiers",
+    "copy_failed": "Échec de la copie du lien",
+    "coming_soon": "Bientôt disponible, restez à l'écoute !",
+    "error": {
+      "unknown": "Une erreur inconnue s'est produite"
+    },
+    "empty": {
+      "title": "Aucun Historique de Génération",
+      "description": "Commencez à créer des images incroyables avec l'IA",
+      "action": "Commencer à Créer"
+    },
+    "delete_confirm": {
+      "title": "Supprimer l'Enregistrement",
+      "description": "Êtes-vous sûr de vouloir supprimer cet enregistrement de génération ? Cette action ne peut pas être annulée.",
+      "cancel": "Annuler",
+      "confirm": "Supprimer"
+    }
   }
 }

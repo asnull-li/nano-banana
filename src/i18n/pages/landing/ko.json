@@ -13,9 +13,9 @@
     "nav": {
       "items": [
         {
-          "title": "기능",
-          "url": "/#feature",
-          "icon": "RiSparkling2Line"
+          "title": "제작 기록",
+          "url": "/history",
+          "icon": "RiHistoryLine"
         },
         {
           "title": "가격",

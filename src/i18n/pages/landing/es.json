@@ -13,9 +13,9 @@
     "nav": {
       "items": [
         {
-          "title": "Características",
-          "url": "/#feature",
-          "icon": "RiSparkling2Line"
+          "title": "Historial de Creación",
+          "url": "/history",
+          "icon": "RiHistoryLine"
         },
         {
           "title": "Precios",

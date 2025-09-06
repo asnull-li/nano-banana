@@ -369,5 +369,48 @@
       "insufficient_credits_detail": "クレジット不足、{needed} クレジット必要、現在 {current} クレジット",
       "download_hint": "ダウンロードボタンをクリックして右クリックで保存"
     }
+  },
+  "history": {
+    "title": "Nano Banana 作成記録",
+    "description": "これまでに Nano Banana で生成・編集した画像をすべて表示",
+    "status": {
+      "completed": "完了",
+      "failed": "失敗",
+      "processing": "処理中",
+      "pending": "待機中"
+    },
+    "credits_used": "{amount} クレジット",
+    "credits_refunded": "{amount} クレジット返金",
+    "images": "画像",
+    "view": "表示",
+    "download": "ダウンロード",
+    "download_success": "画像のダウンロードが完了しました",
+    "delete_success": "記録を削除しました",
+    "delete_error": "記録の削除に失敗しました",
+    "load_more": "もっと読み込む",
+    "loading": "読み込み中...",
+    "load_more_error": "追加記録の読み込みに失敗しました",
+    "no_more": "すべての記録を読み込みました",
+    "image_preview": "画像プレビュー",
+    "enhance_image": "向上",
+    "copy_link": "リンクをコピー",
+    "copied": "コピーしました！",
+    "link_copied": "リンクをクリップボードにコピーしました",
+    "copy_failed": "リンクのコピーに失敗しました",
+    "coming_soon": "近日公開予定、お楽しみに！",
+    "error": {
+      "unknown": "不明なエラーが発生しました"
+    },
+    "empty": {
+      "title": "生成履歴がありません",
+      "description": "AI で素晴らしい画像の作成を始めましょう",
+      "action": "作成を開始"
+    },
+    "delete_confirm": {
+      "title": "記録を削除",
+      "description": "この生成記録を削除してもよろしいですか？この操作は取り消せません。",
+      "cancel": "キャンセル",
+      "confirm": "削除"
+    }
   }
 }
