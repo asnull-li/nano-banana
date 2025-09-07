@@ -12,6 +12,7 @@
     "cancel_anytime": "Отмена в любое время",
     "cancel_subscription_text": "Для отмены подписки, пожалуйста, свяжитесь с поддержкой:",
     "mo": "мес.",
+    "year": "Год",
     "groups": [
       { "name": "monthly", "title": "Ежемесячно" },
       { "name": "yearly", "title": "Ежегодно" },

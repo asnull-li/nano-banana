@@ -12,6 +12,7 @@
     "cancel_anytime": "随时取消",
     "cancel_subscription_text": "取消订阅，请联系客服邮箱：",
     "mo": "月",
+    "year": "年",
     "groups": [
       { "name": "monthly", "title": "月付" },
       { "name": "yearly", "title": "年付" },

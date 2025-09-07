@@ -12,6 +12,7 @@
     "cancel_anytime": "いつでもキャンセルできます",
     "cancel_subscription_text": "サブスクリプションのキャンセルは、サポートメールにご連絡ください：",
     "mo": "月",
+    "year": "年",
     "groups": [
       { "name": "monthly", "title": "月料金" },
       { "name": "yearly", "title": "年料金" },

@@ -12,6 +12,7 @@
     "cancel_anytime": "إلغاء في أي وقت",
     "cancel_subscription_text": "لإلغاء الاشتراك، يرجى التواصل مع خدمة العملاء:",
     "mo": "شهر",
+    "year": "سنة",
     "groups": [
       { "name": "monthly", "title": "شهري" },
       { "name": "yearly", "title": "سنوي" },

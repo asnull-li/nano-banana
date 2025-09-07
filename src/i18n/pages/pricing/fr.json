@@ -12,6 +12,7 @@
     "cancel_anytime": "Annuler à tout moment",
     "cancel_subscription_text": "Pour annuler l'abonnement, veuillez contacter l'e-mail de support:",
     "mo": "mois",
+    "year": "An",
     "groups": [
       { "name": "monthly", "title": "Mensuel" },
       { "name": "yearly", "title": "Annuel" },

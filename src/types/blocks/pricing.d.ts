@@ -42,4 +42,5 @@ export interface Pricing {
   cancel_anytime?: string;
   cancel_subscription_text?: string;
   mo?: string;
+  year?: string;
 }

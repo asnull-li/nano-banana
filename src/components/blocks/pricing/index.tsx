@@ -289,6 +289,13 @@ export default function Pricing({ pricing }: { pricing: PricingType }) {
                           </span>
                         )} */}
                       </div>
+                      {item.interval === "year" && (
+                        <div className="flex justify-center mb-4">
+                          <span className="text-sm font-semibold text-green-600 bg-green-50 dark:bg-green-900/20 px-3 py-1.5 rounded-full border border-green-200 dark:border-green-800">
+                            ${(item.amount / 100).toFixed(2)} / {pricing.year}
+                          </span>
+                        </div>
+                      )}
                       {item.cn_amount &&
                       item.cn_amount > 0 &&
                       item.interval === "one-time" &&

@@ -12,6 +12,7 @@
     "cancel_anytime": "Jederzeit kündbar",
     "cancel_subscription_text": "Für die Kündigung des Abonnements kontaktieren Sie bitte die Support-E-Mail:",
     "mo": "Mon.",
+    "year": "Jahr",
     "groups": [
       { "name": "monthly", "title": "Monatlich" },
       { "name": "yearly", "title": "Jährlich" },

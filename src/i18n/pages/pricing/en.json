@@ -12,6 +12,7 @@
     "cancel_anytime": "Cancel anytime",
     "cancel_subscription_text": "Cancel subscription, please contact the support email:",
     "mo": "mo",
+    "year": "Year",
     "groups": [
       { "name": "monthly", "title": "Monthly" },
       { "name": "yearly", "title": "Yearly" },

@@ -12,6 +12,7 @@
     "cancel_anytime": "언제든지 취소 가능",
     "cancel_subscription_text": "구독 취소는 지원 이메일로 문의하세요:",
     "mo": "개월",
+    "year": "년",
     "groups": [
       { "name": "monthly", "title": "월간" },
       { "name": "yearly", "title": "연간" },
