@@ -127,7 +127,9 @@ export async function POST(req: Request) {
     };
     await insertOrder(order);
 
-    const provider = process.env.PAY_PROVIDER || "stripe";
+    // const provider = process.env.PAY_PROVIDER || "stripe";
+    // const provider = currency === "cny" && item.cn_amount ? "stripe" : "creem";
+    const provider = interval === "one-time" ? "stripe" : "creem";
 
     if (provider === "creem") {
       // checkout with creem
