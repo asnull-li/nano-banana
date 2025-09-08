@@ -312,7 +312,7 @@
         "group": "credits-packs",
         "interval": "one-time",
         "amount": 23000,
-        "cn_amount": 175000,
+        "cn_amount": 160000,
         "currency": "USD",
         "price": "$230",
         "original_price": "$400",
