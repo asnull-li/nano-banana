@@ -24,7 +24,7 @@
         "description": "Идеально для пробы генерации изображений ИИ и небольших проектов.",
         "features_title": "Что включено",
         "features": [
-          "100 кредитов генерации ИИ в месяц",
+          "200 кредитов генерации ИИ в месяц",
           "Высококачественные модели Nano Banana",
           "Генерация текст-в-изображение",
           "Функции редактирования изображений",
@@ -49,7 +49,7 @@
         },
         "product_id": "prod_Ssq8Ltsmjqeiw9",
         "product_name": "Nano Banana Starter",
-        "credits": 100,
+        "credits": 200,
         "valid_months": 1
       },
       {
@@ -58,7 +58,7 @@
         "label": "Самый популярный",
         "features_title": "Всё из Базового",
         "features": [
-          "500 кредитов генерации ИИ в месяц",
+          "700 кредитов генерации ИИ в месяц",
           "Приоритетная скорость обработки",
           "Высокий уровень успеха",
           "Расширенные функции редактирования",
@@ -84,7 +84,7 @@
         },
         "product_id": "prod_SsqBq5Jdkmjp4l",
         "product_name": "Nano Banana Pro",
-        "credits": 500,
+        "credits": 700,
         "valid_months": 1
       },
       {
@@ -124,7 +124,7 @@
         "description": "Идеально для пробы генерации изображений ИИ и небольших проектов.",
         "features_title": "Что включено",
         "features": [
-          "1800 кредитов генерации ИИ в год",
+          "2400 кредитов генерации ИИ в год",
           "Высококачественные модели Nano Banana",
           "Генерация текст-в-изображение",
           "Функции редактирования изображений",
@@ -149,7 +149,7 @@
         },
         "product_id": "prod_Ssq8Ltsmjqeiw9-2",
         "product_name": "Nano Banana Starter Annual",
-        "credits": 1800,
+        "credits": 2400,
         "valid_months": 12
       },
       {
@@ -158,7 +158,7 @@
         "label": "Самый популярный",
         "features_title": "Всё из Базового",
         "features": [
-          "7200 кредитов генерации ИИ в год",
+          "8400 кредитов генерации ИИ в год",
           "Приоритетная скорость обработки",
           "Высокий уровень успеха",
           "Расширенные функции редактирования",
@@ -184,7 +184,7 @@
         },
         "product_id": "prod_SsqBq5Jdkmjp4l1-2",
         "product_name": "Nano Banana Pro Annual",
-        "credits": 7200,
+        "credits": 8400,
         "valid_months": 12
       },
       {
@@ -253,7 +253,7 @@
         "description": "Одноразовая покупка, кредиты не истекают",
         "features_title": "Что включено",
         "features": [
-          "400 кредитов генерации ИИ",
+          "500 кредитов генерации ИИ",
           "Никогда не истекают",
           "Разблокировка всех функций"
         ],
@@ -274,7 +274,7 @@
         },
         "product_id": "credits-packs-1",
         "product_name": "Nano Banana Starter Credits Pack",
-        "credits": 400,
+        "credits": 500,
         "valid_months": 12
       },
       {
@@ -319,10 +319,10 @@
         ],
         "group": "credits-packs",
         "interval": "one-time",
-        "amount": 25000,
+        "amount": 23000,
         "cn_amount": 0,
         "currency": "USD",
-        "price": "$250",
+        "price": "$230",
         "original_price": "$400",
         "unit": "USD",
         "is_featured": false,

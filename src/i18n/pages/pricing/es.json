@@ -24,7 +24,7 @@
         "description": "Perfecto para probar la generación de imágenes con IA y proyectos pequeños.",
         "features_title": "Qué incluye",
         "features": [
-          "100 créditos de generación con IA por mes",
+          "200 créditos de generación con IA por mes",
           "Modelos de alta calidad Nano Banana",
           "Generación de texto a imagen",
           "Funciones de edición de imagen",
@@ -49,7 +49,7 @@
         },
         "product_id": "prod_Ssq8Ltsmjqeiw9",
         "product_name": "Nano Banana Principiante",
-        "credits": 100,
+        "credits": 200,
         "valid_months": 1
       },
       {
@@ -58,7 +58,7 @@
         "label": "Más Popular",
         "features_title": "Todo lo de Básico",
         "features": [
-          "500 créditos de generación con IA por mes",
+          "700 créditos de generación con IA por mes",
           "Velocidad de procesamiento prioritaria",
           "Alta tasa de éxito",
           "Funciones avanzadas de edición",
@@ -84,7 +84,7 @@
         },
         "product_id": "prod_SsqBq5Jdkmjp4l",
         "product_name": "Nano Banana Pro",
-        "credits": 500,
+        "credits": 700,
         "valid_months": 1
       },
       {
@@ -124,7 +124,7 @@
         "description": "Perfecto para probar la generación de imágenes con IA y proyectos pequeños.",
         "features_title": "Qué incluye",
         "features": [
-          "1800 créditos de generación con IA por año",
+          "2400 créditos de generación con IA por año",
           "Modelos de alta calidad Nano Banana",
           "Generación de texto a imagen",
           "Funciones de edición de imagen",
@@ -149,7 +149,7 @@
         },
         "product_id": "prod_Ssq8Ltsmjqeiw9-2",
         "product_name": "Nano Banana Principiante Anual",
-        "credits": 1800,
+        "credits": 2400,
         "valid_months": 12
       },
       {
@@ -158,7 +158,7 @@
         "label": "Más Popular",
         "features_title": "Todo lo de Básico",
         "features": [
-          "7200 créditos de generación con IA por año",
+          "8400 créditos de generación con IA por año",
           "Velocidad de procesamiento prioritaria",
           "Alta tasa de éxito",
           "Funciones avanzadas de edición",
@@ -184,7 +184,7 @@
         },
         "product_id": "prod_SsqBq5Jdkmjp4l1-2",
         "product_name": "Nano Banana Pro Anual",
-        "credits": 7200,
+        "credits": 8400,
         "valid_months": 12
       },
       {
@@ -253,7 +253,7 @@
         "description": "Compra única, créditos nunca expiran",
         "features_title": "Qué incluye",
         "features": [
-          "400 créditos de generación con IA",
+          "500 créditos de generación con IA",
           "Nunca expiran",
           "Desbloquear todas las funciones"
         ],
@@ -274,7 +274,7 @@
         },
         "product_id": "credits-packs-1",
         "product_name": "Nano Banana Paquete de Créditos Inicial",
-        "credits": 400,
+        "credits": 500,
         "valid_months": 12
       },
       {
@@ -319,10 +319,10 @@
         ],
         "group": "credits-packs",
         "interval": "one-time",
-        "amount": 25000,
+        "amount": 23000,
         "cn_amount": 175000,
         "currency": "USD",
-        "price": "$250",
+        "price": "$230",
         "original_price": "$400",
         "unit": "USD",
         "is_featured": false,

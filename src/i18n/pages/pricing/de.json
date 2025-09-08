@@ -24,7 +24,7 @@
         "description": "Perfekt zum Ausprobieren der KI-Bildgenerierung und für kleine Projekte.",
         "features_title": "Was enthalten ist",
         "features": [
-          "100 KI-Generierungs-Credits pro Monat",
+          "200 KI-Generierungs-Credits pro Monat",
           "Nano Banana Hochqualitätsmodelle",
           "Text-zu-Bild-Generierung",
           "Bildbearbeitungsfunktionen",
@@ -49,7 +49,7 @@
         },
         "product_id": "prod_Ssq8Ltsmjqeiw9",
         "product_name": "Nano Banana Einsteiger",
-        "credits": 100,
+        "credits": 200,
         "valid_months": 1
       },
       {
@@ -58,7 +58,7 @@
         "label": "Am beliebtesten",
         "features_title": "Alles aus Basic",
         "features": [
-          "500 KI-Generierungs-Credits pro Monat",
+          "700 KI-Generierungs-Credits pro Monat",
           "Prioritätsverarbeitungsgeschwindigkeit",
           "Hohe Erfolgsrate",
           "Erweiterte Bearbeitungsfunktionen",
@@ -84,7 +84,7 @@
         },
         "product_id": "prod_SsqBq5Jdkmjp4l",
         "product_name": "Nano Banana Pro",
-        "credits": 500,
+        "credits": 700,
         "valid_months": 1
       },
       {
@@ -124,7 +124,7 @@
         "description": "Perfekt zum Ausprobieren der KI-Bildgenerierung und für kleine Projekte.",
         "features_title": "Was enthalten ist",
         "features": [
-          "1800 KI-Generierungs-Credits pro Jahr",
+          "2400 KI-Generierungs-Credits pro Jahr",
           "Nano Banana Hochqualitätsmodelle",
           "Text-zu-Bild-Generierung",
           "Bildbearbeitungsfunktionen",
@@ -149,7 +149,7 @@
         },
         "product_id": "prod_Ssq8Ltsmjqeiw9-2",
         "product_name": "Nano Banana Einsteiger Jährlich",
-        "credits": 1800,
+        "credits": 2400,
         "valid_months": 12
       },
       {
@@ -158,7 +158,7 @@
         "label": "Am beliebtesten",
         "features_title": "Alles aus Basic",
         "features": [
-          "7200 KI-Generierungs-Credits pro Jahr",
+          "8400 KI-Generierungs-Credits pro Jahr",
           "Prioritätsverarbeitungsgeschwindigkeit",
           "Hohe Erfolgsrate",
           "Erweiterte Bearbeitungsfunktionen",
@@ -184,7 +184,7 @@
         },
         "product_id": "prod_SsqBq5Jdkmjp4l1-2",
         "product_name": "Nano Banana Pro Jährlich",
-        "credits": 7200,
+        "credits": 8400,
         "valid_months": 12
       },
       {
@@ -253,7 +253,7 @@
         "description": "Einmalkauf, Credits laufen nie ab",
         "features_title": "Was enthalten ist",
         "features": [
-          "400 KI-Generierungs-Credits",
+          "500 KI-Generierungs-Credits",
           "Laufen nie ab",
           "Alle Funktionen freischalten"
         ],
@@ -274,7 +274,7 @@
         },
         "product_id": "credits-packs-1",
         "product_name": "Nano Banana Starter Credit-Paket",
-        "credits": 400,
+        "credits": 500,
         "valid_months": 12
       },
       {
@@ -319,10 +319,10 @@
         ],
         "group": "credits-packs",
         "interval": "one-time",
-        "amount": 25000,
+        "amount": 23000,
         "cn_amount": 175000,
         "currency": "USD",
-        "price": "$250",
+        "price": "$230",
         "original_price": "$400",
         "unit": "USD",
         "is_featured": false,
