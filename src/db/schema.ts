@@ -162,3 +162,20 @@ export const verificationTokens = pgTable(
     uniqueIndex("identifier_token_idx").on(table.identifier, table.token),
   ]
 );
+
+// Upscaler Tasks table
+export const upscalerTasks = pgTable("upscaler_tasks", {
+  id: integer().primaryKey().generatedAlwaysAsIdentity(),
+  task_id: varchar({ length: 255 }).notNull().unique(),
+  request_id: varchar({ length: 255 }).notNull().unique(),
+  user_uuid: varchar({ length: 255 }).notNull(),
+  input: text().notNull(), // JSON storage for input parameters (image, scale, face_enhance)
+  provider: varchar({ length: 20 }).notNull().default('kie'),
+  status: varchar({ length: 50 }).notNull().default('pending'), // pending | processing | completed | failed
+  result: text(), // JSON storage for result
+  credits_used: integer().notNull().default(0),
+  credits_refunded: integer().notNull().default(0),
+  error_message: text(),
+  created_at: timestamp({ withTimezone: true }).defaultNow(),
+  updated_at: timestamp({ withTimezone: true }).defaultNow(),
+});

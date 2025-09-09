@@ -18,6 +18,11 @@
           "icon": "RiHistoryLine"
         },
         {
+          "title": "Image Upscaler",
+          "url": "/ai-image-upscaler",
+          "icon": "RiHistoryLine"
+        },
+        {
           "title": "Pricing",
           "url": "/pricing",
           "icon": "RiMoneyDollarCircleLine"
@@ -29,15 +34,7 @@
         }
       ]
     },
-    "buttons": [
-      {
-        "title": "Get Nano Banana",
-        "url": "/#nano-banana",
-        "target": "_self",
-        "variant": "link",
-        "icon": "RiArrowRightUpLine"
-      }
-    ],
+
     "show_sign": true,
     "show_theme": true,
     "show_locale": true

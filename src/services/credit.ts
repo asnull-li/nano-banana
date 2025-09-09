@@ -20,6 +20,8 @@ export enum CreditsTransType {
   NanoBanana_generate = "NanoBanana_generate", // cost for nano banana text-to-image
   NanoBanana_edit = "NanoBanana_edit", // cost for nano banana image-to-image
   NanoBanana_refund = "NanoBanana_refund", // refund for failed nano banana tasks
+  Upscaler_submit = "upscaler_submit", // cost for upscaler image processing
+  Upscaler_refund = "upscaler_refund", // refund for failed upscaler tasks
 }
 
 export enum CreditsAmount {
