@@ -1,0 +1,164 @@
+{
+  "meta": {
+    "title": "Nano Banana Image Upscaler Online - Herramienta de Mejora de Fotos con IA",
+    "description": "Nano Banana Image Upscaler utiliza tecnología de IA avanzada para mejorar y ampliar tus fotos con calidad profesional. Transforma imágenes de baja resolución en obras maestras de alta definición."
+  },
+  "hero": {
+    "title": "Nano Banana Image Upscaler",
+    "description": "Tecnología profesional de mejora y ampliación de imágenes con IA para resultados visuales impresionantes."
+  },
+  "features": {
+    "title": "Experimenta la Mejora Profesional de Imágenes con Tecnología de IA Avanzada",
+    "description": "Tecnología de IA avanzada para mejorar la calidad y resolución de imágenes con resultados de nivel profesional.",
+    "items": [
+      {
+        "title": "Mejora Superior de la Calidad de Imagen",
+        "description": "Nano Banana Image Upscaler ofrece capacidades excepcionales de mejora de imágenes, transformando fotos de baja resolución en imágenes nítidas de alta definición. Nuestra tecnología de IA preserva detalles intrincados mientras mejora dramáticamente la calidad general y claridad de la imagen."
+      },
+      {
+        "title": "Tecnología de Ampliación Inteligente",
+        "description": "Experimenta la ampliación fluida de imágenes con algoritmos de vanguardia. Amplía tus imágenes hasta 4x su resolución original manteniendo texturas naturales, bordes nítidos y preservación de detalles fotorrealistas."
+      },
+      {
+        "title": "Procesamiento de Nivel Profesional",
+        "description": "Nuestra plataforma proporciona capacidades de procesamiento de imágenes de nivel profesional adecuadas para fotógrafos, diseñadores y creativos profesionales. Logra resultados de calidad de estudio con funciones avanzadas de reducción de ruido y mejora de detalles."
+      },
+      {
+        "title": "Mejora Rápida y Eficiente",
+        "description": "Obtén resultados impresionantes en segundos con nuestro motor de procesamiento optimizado. El modelo de IA eficiente ofrece mejora de imágenes de alta calidad sin comprometer la velocidad, haciéndolo perfecto para procesamiento por lotes y flujos de trabajo profesionales."
+      }
+    ]
+  },
+  "how_to_use": {
+    "title": "Cómo Usar la Herramienta de Mejora de Imágenes con IA",
+    "description": "Mejora tus imágenes en solo tres pasos simples con nuestra interfaz intuitiva.",
+    "items": [
+      {
+        "title": "Sube tu Imagen",
+        "description": "Selecciona y sube la imagen que deseas mejorar usando Nano Banana Image Upscaler. El soporte para varios formatos incluyendo JPEG, PNG y WebP asegura compatibilidad con todas tus fotos y gráficos."
+      },
+      {
+        "title": "Elige la Configuración de Mejora",
+        "description": "Configura tus opciones de ampliación preferidas con controles intuitivos. Selecciona la resolución de salida deseada, intensidad de mejora y preferencias de procesamiento para resultados óptimos."
+      },
+      {
+        "title": "Descarga la Imagen Mejorada",
+        "description": "Descarga tu imagen profesionalmente mejorada una vez completado el procesamiento. Disfruta de resultados cristalinos de alta resolución listos para impresión, uso web o proyectos profesionales."
+      }
+    ]
+  },
+  "workspace": {
+    "title": "Espacio de Trabajo Nano Banana Image Upscaler",
+    "description": "Espacio de trabajo profesional de mejora de imágenes potenciado por tecnología de IA avanzada.",
+    "upload_zone": {
+      "title": "Subir Imagen para Mejorar",
+      "description": "Arrastra y suelta o haz clic para subir tu imagen a Nano Banana Image Upscaler",
+      "supported_formats": "Formatos soportados: JPEG, PNG, WebP",
+      "max_size": "Tamaño máximo de archivo: 10MB",
+      "error_file_too_large": "El archivo es demasiado grande. El tamaño máximo es 10MB.",
+      "error_invalid_type": "Tipo de archivo inválido. Por favor sube una imagen.",
+      "preview_alt": "Vista previa subida",
+      "delete_tooltip": "Eliminar imagen",
+      "replace_tooltip": "Reemplazar imagen",
+      "drop_text": "Suelta para subir",
+      "click_or_drag": "Haz clic o arrastra para subir",
+      "processing": "Procesando..."
+    },
+    "controls": {
+      "title": "CONTROLES",
+      "scale_factor": "Factor de Ampliación",
+      "enhance_details": "Mejora de Detalles",
+      "noise_reduction": "Reducción de Ruido",
+      "processing_mode": "Modo de Procesamiento",
+      "credits_cost": "Costo en Créditos",
+      "credits_unit": "créditos",
+      "execute_button": "EJECUTAR",
+      "restart_button": "Reiniciar",
+      "scale_1x": "Original",
+      "scale_2x": "Estándar",
+      "scale_3x": "Grande",
+      "scale_4x": "Máximo",
+      "scale_tooltip": "Elige cuánto ampliar tu imagen",
+      "face_enhance": "Mejora Facial",
+      "face_enhance_tooltip": "Usa GFPGAN para mejorar detalles faciales",
+      "face_enhance_description": "Mejora los detalles faciales y textura de la piel cuando está habilitado"
+    },
+    "status": {
+      "uploading": "Subiendo imagen para procesamiento...",
+      "processing": "Mejorando imagen con tecnología de IA...",
+      "completed": "Mejora de imagen completada exitosamente",
+      "error": "La mejora falló, por favor inténtalo de nuevo"
+    },
+    "results": {
+      "title": "VISTA PREVIA",
+      "original": "Original",
+      "enhanced": "Mejorada",
+      "upscaled": "Ampliada",
+      "download": "Descargar",
+      "downloading": "Descargando...",
+      "compare": "Comparar Imágenes",
+      "no_image_title": "No se ha subido imagen",
+      "no_image_description": "Sube una imagen para ver el resultado ampliado aquí",
+      "processing_preview_alt": "Vista previa de procesamiento",
+      "uploading_description": "Preparando tu imagen para procesamiento",
+      "processing_description": "La IA está ampliando y mejorando tu imagen",
+      "failed_title": "Procesamiento fallido",
+      "failed_description": "Algo salió mal mientras se ampliaba tu imagen",
+      "completed_badge": "Ampliación completada",
+      "click_to_enlarge": "Haz clic para ampliar y comparar",
+      "standard_resolution": "Resolución Estándar",
+      "ai_upscaled": "Ampliada y Mejorada con IA",
+      "original_image_alt": "Imagen original"
+    },
+    "messages": {
+      "upload_required": "Por favor sube una imagen primero",
+      "insufficient_credits": "Créditos insuficientes. Se necesitan ${credits} créditos para ampliar.",
+      "uploading": "Subiendo imagen...",
+      "processing_start": "Iniciando proceso de ampliación...",
+      "success": "¡Imagen ampliada exitosamente!",
+      "failed": "Ampliación fallida",
+      "error": "Error al ampliar imagen",
+      "download_preparing": "Preparando descarga...",
+      "download_success": "¡Imagen descargada exitosamente!",
+      "download_failed": "Error al descargar imagen"
+    }
+  },
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "description": "Obtén respuestas a preguntas comunes sobre Nano Banana Image Upscaler.",
+    "items": [
+      {
+        "question": "¿Qué es Nano Banana Image Upscaler?",
+        "answer": "Nano Banana Image Upscaler es una herramienta avanzada de mejora de imágenes potenciada por IA que utiliza algoritmos de aprendizaje automático de vanguardia para ampliar y mejorar la calidad de imagen. Puede aumentar la resolución de imagen hasta 4x manteniendo y mejorando detalles finos, haciéndola perfecta para fotógrafos, diseñadores y creadores de contenido."
+      },
+      {
+        "question": "¿Cómo funciona Nano Banana Image Upscaler?",
+        "answer": "Nano Banana Image Upscaler emplea modelos sofisticados de aprendizaje profundo entrenados en millones de imágenes de alta calidad. La IA analiza el contenido de tu imagen, identifica patrones y texturas, luego reconstruye inteligentemente los píxeles faltantes para crear una versión de mayor resolución con claridad y detalle mejorados."
+      },
+      {
+        "question": "¿Qué formatos de imagen soporta Nano Banana Image Upscaler?",
+        "answer": "Nano Banana Image Upscaler soporta formatos de imagen populares incluyendo JPEG, PNG, WebP y TIFF. Puedes subir imágenes de hasta 10MB de tamaño, haciéndola adecuada tanto para gráficos web como proyectos de fotografía de alta resolución."
+      },
+      {
+        "question": "¿Cuánto cuesta usar Nano Banana Image Upscaler?",
+        "answer": "Cada mejora de imagen con Nano Banana Image Upscaler cuesta 2 créditos. Esto te proporciona capacidades de ampliación y mejora de nivel profesional adecuadas para proyectos comerciales y de uso personal."
+      },
+      {
+        "question": "¿Puedo usar imágenes mejoradas por Nano Banana Image Upscaler para propósitos comerciales?",
+        "answer": "Sí, todas las imágenes procesadas a través de Nano Banana Image Upscaler son adecuadas para uso comercial. Las imágenes mejoradas mantienen estándares de calidad profesional y pueden usarse para proyectos de negocios, materiales de marketing y aplicaciones comerciales."
+      },
+      {
+        "question": "¿Cuánto tiempo toma a Nano Banana Image Upscaler procesar una imagen?",
+        "answer": "Nano Banana Image Upscaler típicamente procesa imágenes en 30-60 segundos, dependiendo del tamaño de imagen original y las opciones de mejora seleccionadas. Nuestra infraestructura de IA optimizada asegura procesamiento rápido manteniendo resultados de alta calidad."
+      },
+      {
+        "question": "¿Cuál es el factor máximo de ampliación disponible en Nano Banana Image Upscaler?",
+        "answer": "Nano Banana Image Upscaler puede ampliar imágenes hasta 4x su resolución original. Por ejemplo, una imagen de 512x512 píxeles puede ser mejorada a 2048x2048 píxeles manteniendo apariencia natural y calidad de detalle nítida."
+      },
+      {
+        "question": "¿Funciona bien Nano Banana Image Upscaler con diferentes tipos de imágenes?",
+        "answer": "Sí, Nano Banana Image Upscaler está diseñada para trabajar efectivamente con varios tipos de imagen incluyendo retratos, paisajes, arte, gráficos y fotografías. El modelo de IA ha sido entrenado en categorías diversas de imágenes para asegurar mejora óptima en diferentes tipos de contenido."
+      }
+    ]
+  }
+}

@@ -25,6 +25,7 @@ interface OutputDisplayProps {
   faceEnhance?: boolean;
   onReset?: () => void;
   className?: string;
+  pageData?: any;
 }
 
 export default function OutputDisplay({
@@ -36,6 +37,7 @@ export default function OutputDisplay({
   faceEnhance = false,
   onReset,
   className,
+  pageData,
 }: OutputDisplayProps) {
   const [isDownloading, setIsDownloading] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -47,11 +49,11 @@ export default function OutputDisplay({
       setIsDownloading(true);
       await downloadImage(upscaledImage, {
         filename: `${generateImageFilename("upscaler", "edited")}.jpg`,
-        onStart: () => toast.info("Preparing download..."),
-        onComplete: () => toast.success("Image downloaded successfully!"),
+        onStart: () => toast.info(pageData?.workspace?.messages?.download_preparing || "Preparing download..."),
+        onComplete: () => toast.success(pageData?.workspace?.messages?.download_success || "Image downloaded successfully!"),
       });
     } catch (error) {
-      toast.error("Failed to download image");
+      toast.error(pageData?.workspace?.messages?.download_failed || "Failed to download image");
       console.error("Download error:", error);
     } finally {
       setIsDownloading(false);
@@ -66,10 +68,10 @@ export default function OutputDisplay({
           <ImageIcon className="w-15 h-15 text-blak dark:text-white" />
           <div className="space-y-2">
             <h4 className="text-lg font-medium text-slate-600 dark:text-slate-400">
-              No image uploaded
+              {pageData?.workspace?.results?.no_image_title || "No image uploaded"}
             </h4>
             <p className="text-sm text-slate-500 dark:text-slate-500">
-              Upload an image to see the upscaled result here
+              {pageData?.workspace?.results?.no_image_description || "Upload an image to see the upscaled result here"}
             </p>
           </div>
         </div>
@@ -83,7 +85,7 @@ export default function OutputDisplay({
           {/* Background Image */}
           <img
             src={originalImage}
-            alt="Processing preview"
+            alt={pageData?.workspace?.results?.processing_preview_alt || "Processing preview"}
             className="w-full h-full object-contain rounded-lg opacity-30"
           />
 
@@ -98,13 +100,13 @@ export default function OutputDisplay({
               <div className="space-y-3">
                 <h4 className="text-xl font-bold text-white">
                   {status === "uploading"
-                    ? "Uploading image..."
-                    : "Enhancing image..."}
+                    ? (pageData?.workspace?.status?.uploading || "Uploading image...")
+                    : (pageData?.workspace?.status?.processing || "Enhancing image...")}
                 </h4>
                 <p className="text-slate-300 max-w-sm">
                   {status === "uploading"
-                    ? "Preparing your image for processing"
-                    : "AI is upscaling and enhancing your image"}
+                    ? (pageData?.workspace?.results?.uploading_description || "Preparing your image for processing")
+                    : (pageData?.workspace?.results?.processing_description || "AI is upscaling and enhancing your image")}
                 </p>
               </div>
 
@@ -141,10 +143,10 @@ export default function OutputDisplay({
           </div>
           <div className="space-y-2">
             <h4 className="text-lg font-medium text-red-600 dark:text-red-400">
-              Processing failed
+              {pageData?.workspace?.results?.failed_title || "Processing failed"}
             </h4>
             <p className="text-sm text-slate-500 dark:text-slate-500">
-              Something went wrong while upscaling your image
+              {pageData?.workspace?.results?.failed_description || "Something went wrong while upscaling your image"}
             </p>
           </div>
         </div>
@@ -159,7 +161,7 @@ export default function OutputDisplay({
           <div className="flex items-center justify-between">
             <Badge className="bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400 border-green-200 dark:border-green-800">
               <CheckCircle className="w-3 h-3 mr-1" />
-              Upscaling completed
+              {pageData?.workspace?.results?.completed_badge || "Upscaling completed"}
             </Badge>
 
             <Button
@@ -171,12 +173,12 @@ export default function OutputDisplay({
               {isDownloading ? (
                 <>
                   <div className="w-3 h-3 border border-white/30 border-t-white rounded-full animate-spin mr-2" />
-                  Downloading...
+                  {pageData?.workspace?.results?.downloading || "Downloading..."}
                 </>
               ) : (
                 <>
                   <Download className="w-3 h-3 mr-2" />
-                  Download
+                  {pageData?.workspace?.results?.download || "Download"}
                 </>
               )}
             </Button>
@@ -186,7 +188,7 @@ export default function OutputDisplay({
           <div
             className="rounded-xl overflow-hidden shadow-lg cursor-pointer group transition-all duration-300 hover:shadow-2xl hover:scale-[1.02] bg-slate-100 dark:bg-slate-800 relative"
             onClick={() => setIsModalOpen(true)}
-            title="点击放大查看对比"
+            title={pageData?.workspace?.results?.click_to_enlarge || "点击放大查看对比"}
           >
             <div className="relative">
               <Compare
@@ -196,8 +198,8 @@ export default function OutputDisplay({
                 secondImageClassName="object-contain w-full h-[450px]"
                 className="w-full h-[450px]"
                 slideMode="hover"
-                firstImageLabel="Original"
-                secondImageLabel="Upscaled"
+                firstImageLabel={pageData?.workspace?.results?.original || "Original"}
+                secondImageLabel={pageData?.workspace?.results?.upscaled || "Upscaled"}
               />
 
               {/* Hover Overlay with Expand Icon */}
@@ -215,18 +217,18 @@ export default function OutputDisplay({
           <div className="grid grid-cols-2 gap-4 text-center">
             <div className="space-y-1">
               <p className="text-xs font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wide">
-                Original
+                {pageData?.workspace?.results?.original || "Original"}
               </p>
               <p className="text-sm text-slate-800 dark:text-slate-200">
-                Standard Resolution
+                {pageData?.workspace?.results?.standard_resolution || "Standard Resolution"}
               </p>
             </div>
             <div className="space-y-1">
               <p className="text-xs font-medium text-green-600 dark:text-green-400 uppercase tracking-wide">
-                Enhanced
+                {pageData?.workspace?.results?.enhanced || "Enhanced"}
               </p>
               <p className="text-sm text-slate-800 dark:text-slate-200">
-                AI Upscaled & Enhanced
+                {pageData?.workspace?.results?.ai_upscaled || "AI Upscaled & Enhanced"}
               </p>
             </div>
           </div>
@@ -239,7 +241,7 @@ export default function OutputDisplay({
       <div className="h-[500px] bg-slate-100 dark:bg-slate-800 rounded-lg">
         <img
           src={originalImage}
-          alt="Original image"
+          alt={pageData?.workspace?.results?.original_image_alt || "Original image"}
           className="w-full h-full object-contain rounded-lg"
         />
       </div>

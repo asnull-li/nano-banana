@@ -6,17 +6,17 @@ import { Badge } from "@/components/ui/badge";
 import { toast } from "sonner";
 import { useCredits } from "@/hooks/use-credits";
 import { useAppContext } from "@/contexts/app";
-import { UploadCloud, Zap, Sparkles } from "lucide-react";
+import { Sparkles } from "lucide-react";
 import ImageUploadZone from "./components/image-upload-zone";
 import UpscalerControls from "./components/upscaler-controls";
 import OutputDisplay from "./components/output-display";
-import StatusIndicator from "./components/status-indicator";
 import { useUpscalerAPI } from "./hooks/use-upscaler-api";
 import { CREDITS_PER_UPSCALE } from "@/lib/constants/upscaler";
 import { useRouter } from "@/i18n/navigation";
 
 export interface UpscalerWorkspaceProps {
   className?: string;
+  pageData?: any;
 }
 
 export interface UpscalerTask {
@@ -34,6 +34,7 @@ export interface UpscalerTask {
 
 export default function UpscalerWorkspace({
   className,
+  pageData,
 }: UpscalerWorkspaceProps) {
   const [task, setTask] = useState<UpscalerTask>({
     id: "",
@@ -73,15 +74,23 @@ export default function UpscalerWorkspace({
     }
 
     if (!uploadedFile) {
-      toast.error("Please upload an image first");
+      toast.error(
+        pageData?.workspace?.messages?.upload_required ||
+          "Please upload an image first"
+      );
       return;
     }
 
     // 验证积分 (使用固定数值检查)
     if (credits.left_credits < CREDITS_PER_UPSCALE) {
-      toast.error(
-        `Insufficient credits. Need ${CREDITS_PER_UPSCALE} credits for upscaling.`
-      );
+      const insufficientCreditsMsg = pageData?.workspace?.messages
+        ?.insufficient_credits
+        ? pageData.workspace.messages.insufficient_credits.replace(
+            "${credits}",
+            CREDITS_PER_UPSCALE.toString()
+          )
+        : `Insufficient credits. Need ${CREDITS_PER_UPSCALE} credits for upscaling.`;
+      toast.error(insufficientCreditsMsg);
       router.push("/pricing");
       return;
     }
@@ -89,13 +98,18 @@ export default function UpscalerWorkspace({
     try {
       // 1. 上传图片
       setTask((prev) => ({ ...prev, status: "uploading" }));
-      toast.info("Uploading image...");
+      toast.info(
+        pageData?.workspace?.messages?.uploading || "Uploading image..."
+      );
 
       const imageUrl = await uploadImage(uploadedFile);
 
       // 2. 提交放大任务
       setTask((prev) => ({ ...prev, status: "processing" }));
-      toast.info("Starting upscale process...");
+      toast.info(
+        pageData?.workspace?.messages?.processing_start ||
+          "Starting upscale process..."
+      );
 
       const taskId = await submitUpscaleTask({
         input: {
@@ -126,7 +140,10 @@ export default function UpscalerWorkspace({
               status: "completed",
               upscaledImage: result.result?.images?.[0]?.url || null,
             }));
-            toast.success("Image upscaled successfully!");
+            toast.success(
+              pageData?.workspace?.messages?.success ||
+                "Image upscaled successfully!"
+            );
             refreshCredits();
             return;
           }
@@ -137,7 +154,11 @@ export default function UpscalerWorkspace({
               status: "failed",
               error: result.error || "Upscale failed",
             }));
-            toast.error(result.error || "Upscale failed");
+            toast.error(
+              result.error ||
+                pageData?.workspace?.messages?.failed ||
+                "Upscale failed"
+            );
             return;
           }
 
@@ -158,7 +179,9 @@ export default function UpscalerWorkspace({
         error: error instanceof Error ? error.message : "Unknown error",
       }));
       toast.error(
-        error instanceof Error ? error.message : "Failed to upscale image"
+        error instanceof Error
+          ? error.message
+          : pageData?.workspace?.messages?.error || "Failed to upscale image"
       );
     }
   };
@@ -178,32 +201,14 @@ export default function UpscalerWorkspace({
 
   return (
     <div className={`w-full ${className}`}>
-      {/* Header */}
-      <div className="mb-6">
-        <div className="flex items-center gap-3 mb-2">
-          <div className="flex items-center gap-2">
-            <div className="relative">
-              <Zap className="h-6 w-6 text-green-500" />
-              <div className="absolute inset-0 bg-green-500/20 blur-lg rounded-full"></div>
-            </div>
-            <h2 className="text-2xl font-bold bg-gradient-to-r from-green-600 to-cyan-600 bg-clip-text text-transparent">
-              Image Upscaler
-            </h2>
-          </div>
-        </div>
-        <p className="text-slate-600 dark:text-slate-400">
-          Enhance and upscale your images up to 4x resolution with AI
-        </p>
-      </div>
-
       {/* Status Indicator - 仅在处理时显示 */}
-      {(task.status === "uploading" || task.status === "processing") && (
+      {/* {(task.status === "uploading" || task.status === "processing") && (
         <StatusIndicator
           status={task.status}
           error={task.error}
           className="mb-6"
         />
-      )}
+      )} */}
 
       {/* 科幻仪表盘布局 */}
       <div className="grid lg:grid-cols-[350px_1fr] gap-8 min-h-[600px]">
@@ -213,7 +218,7 @@ export default function UpscalerWorkspace({
             <div className="flex items-center gap-2 mb-6">
               <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
               <h3 className="text-lg font-semibold text-slate-800 dark:text-slate-200">
-                CONTROLS
+                {pageData?.workspace?.controls?.title || "CONTROLS"}
               </h3>
             </div>
 
@@ -223,6 +228,7 @@ export default function UpscalerWorkspace({
                 onImageUpload={handleImageUpload}
                 disabled={isProcessing}
                 currentImage={task.originalImage}
+                pageData={pageData}
               />
             </div>
 
@@ -234,6 +240,7 @@ export default function UpscalerWorkspace({
                 faceEnhance={faceEnhance}
                 onFaceEnhanceChange={setFaceEnhance}
                 disabled={isProcessing}
+                pageData={pageData}
               />
             </div>
 
@@ -244,7 +251,8 @@ export default function UpscalerWorkspace({
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
                   <span className="text-sm font-medium text-slate-700 dark:text-slate-300">
-                    消耗积分
+                    {pageData?.workspace?.controls?.credits_cost ||
+                      "Credits Cost"}
                   </span>
                 </div>
                 <div className="flex items-center gap-1">
@@ -252,7 +260,7 @@ export default function UpscalerWorkspace({
                     {CREDITS_PER_UPSCALE}
                   </span>
                   <span className="text-sm text-slate-500 dark:text-slate-400">
-                    credits
+                    {pageData?.workspace?.controls?.credits_unit || "credits"}
                   </span>
                 </div>
               </div>
@@ -265,11 +273,15 @@ export default function UpscalerWorkspace({
                 {isProcessing ? (
                   <>
                     <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin mr-3" />
-                    {task.status === "uploading" ? "上传中..." : "处理中..."}
+                    {task.status === "uploading"
+                      ? pageData?.workspace?.status?.uploading || "Uploading..."
+                      : pageData?.workspace?.status?.processing ||
+                        "Processing..."}
                   </>
                 ) : (
                   <>
-                    <Sparkles className="w-5 h-5 mr-3" /> EXECUTE
+                    <Sparkles className="w-5 h-5 mr-3" />{" "}
+                    {pageData?.workspace?.controls?.execute_button || "EXECUTE"}
                   </>
                 )}
               </Button>
@@ -280,7 +292,8 @@ export default function UpscalerWorkspace({
                   variant="outline"
                   className="w-full border-green-200 hover:bg-green-50 dark:border-green-800 dark:hover:bg-green-950/30"
                 >
-                  🔄 重新开始
+                  🔄{" "}
+                  {pageData?.workspace?.controls?.restart_button || "Restart"}
                 </Button>
               )}
             </div>
@@ -293,7 +306,7 @@ export default function UpscalerWorkspace({
             <div className="flex items-center gap-2 mb-6">
               <div className="w-2 h-2 bg-cyan-500 rounded-full animate-pulse"></div>
               <h3 className="text-lg font-semibold text-slate-800 dark:text-slate-200">
-                PREVIEW
+                {pageData?.workspace?.results?.title || "PREVIEW"}
               </h3>
             </div>
 
@@ -305,6 +318,7 @@ export default function UpscalerWorkspace({
               scale={scale}
               faceEnhance={faceEnhance}
               onReset={handleReset}
+              pageData={pageData}
             />
           </div>
         </div>

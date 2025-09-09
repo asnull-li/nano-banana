@@ -17,10 +17,14 @@ export async function getHistoryPage(locale: string): Promise<HistoryPage> {
   return (await getPage("history", locale)) as HistoryPage;
 }
 
+export async function getAiImageUpscalerPage(locale: string): Promise<any> {
+  return (await getPage("ai-image-upscaler", locale)) as any;
+}
+
 export async function getPage(
   name: string,
   locale: string
-): Promise<LandingPage | PricingPage | ShowcasePage | HistoryPage> {
+): Promise<LandingPage | PricingPage | ShowcasePage | HistoryPage | any> {
   try {
     if (locale === "zh-CN") {
       locale = "zh";

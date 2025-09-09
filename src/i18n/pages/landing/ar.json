@@ -18,6 +18,11 @@
           "icon": "RiHistoryLine"
         },
         {
+          "title": "تحسين جودة الصور",
+          "url": "/ai-image-upscaler",
+          "icon": "RiImageAiFill"
+        },
+        {
           "title": "التسعير",
           "url": "/pricing",
           "icon": "RiMoneyDollarCircleLine"

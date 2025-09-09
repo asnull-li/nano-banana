@@ -1,20 +1,41 @@
 import { Metadata } from "next";
-import UpscalerWorkspace from "@/components/workspace/upscaler";
-// import UpscalerBg from "@/components/backgrounds/upscaler-bg";
+import { setRequestLocale } from "next-intl/server";
+import { getAiImageUpscalerPage } from "@/services/page";
+import UpscalerPageClient from "./page-client";
 
-export const metadata: Metadata = {
-  title: "Nano Banana Workspace - AI Image Generation & Editing",
-  description:
-    "Transform your images with AI-powered editing and generate stunning visuals from text",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  setRequestLocale(locale);
 
-export default function WorkspacePage() {
-  return (
-    <>
-      {/* <UpscalerBg /> */}
-      <div className="min-h-screen relative">
-        <UpscalerWorkspace className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12" />
-      </div>
-    </>
-  );
+  // 从 pages/ai-image-upscaler 读取数据
+  const page = await getAiImageUpscalerPage(locale);
+  const metadata = (page as any).meta;
+
+  let canonicalUrl = `${process.env.NEXT_PUBLIC_WEB_URL}/ai-image-upscaler`;
+  if (locale !== "en") {
+    canonicalUrl = `${process.env.NEXT_PUBLIC_WEB_URL}/${locale}/ai-image-upscaler`;
+  }
+
+  return {
+    title: metadata?.title || "Nano Banana Image Upscaler - AI Photo Enhancement Tool",
+    description: metadata?.description || "Nano Banana Image Upscaler uses advanced AI technology to enhance and upscale your photos with professional quality.",
+    alternates: {
+      canonical: canonicalUrl,
+    },
+  };
+}
+
+export default async function WorkspacePage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const page = await getAiImageUpscalerPage(locale);
+
+  return <UpscalerPageClient pageData={page} />;
 }

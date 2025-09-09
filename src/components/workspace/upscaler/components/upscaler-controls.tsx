@@ -19,6 +19,7 @@ interface UpscalerControlsProps {
   onFaceEnhanceChange: (enabled: boolean) => void;
   disabled?: boolean;
   className?: string;
+  pageData?: any;
 }
 
 export default function UpscalerControls({
@@ -28,12 +29,13 @@ export default function UpscalerControls({
   onFaceEnhanceChange,
   disabled = false,
   className,
+  pageData,
 }: UpscalerControlsProps) {
   const scaleOptions = [
-    { value: 1, label: "1x", description: "Original" },
-    { value: 2, label: "2x", description: "Standard" },
-    { value: 3, label: "3x", description: "Large" },
-    { value: 4, label: "4x", description: "Maximum" },
+    { value: 1, label: "1x", description: pageData?.workspace?.controls?.scale_1x || "Original" },
+    { value: 2, label: "2x", description: pageData?.workspace?.controls?.scale_2x || "Standard" },
+    { value: 3, label: "3x", description: pageData?.workspace?.controls?.scale_3x || "Large" },
+    { value: 4, label: "4x", description: pageData?.workspace?.controls?.scale_4x || "Maximum" },
   ];
 
   return (
@@ -45,7 +47,7 @@ export default function UpscalerControls({
               <div className="flex items-center gap-2">
                 <Zap className="w-4 h-4 text-green-500" />
                 <Label className="text-sm font-medium text-slate-700 dark:text-slate-300">
-                  Upscale Factor
+                  {pageData?.workspace?.controls?.scale_factor || "Upscale Factor"}
                 </Label>
                 <TooltipProvider>
                   <Tooltip>
@@ -54,7 +56,7 @@ export default function UpscalerControls({
                     </TooltipTrigger>
                     <TooltipContent>
                       <p className="text-xs">
-                        Choose how much to enlarge your image
+                        {pageData?.workspace?.controls?.scale_tooltip || "Choose how much to enlarge your image"}
                       </p>
                     </TooltipContent>
                   </Tooltip>
@@ -115,7 +117,7 @@ export default function UpscalerControls({
                   htmlFor="face-enhance"
                   className="text-sm font-medium text-slate-700 dark:text-slate-300 cursor-pointer"
                 >
-                  Face Enhancement
+                  {pageData?.workspace?.controls?.face_enhance || "Face Enhancement"}
                 </Label>
                 <TooltipProvider>
                   <Tooltip>
@@ -124,7 +126,7 @@ export default function UpscalerControls({
                     </TooltipTrigger>
                     <TooltipContent>
                       <p className="text-xs">
-                        Uses GFPGAN to enhance facial details
+                        {pageData?.workspace?.controls?.face_enhance_tooltip || "Uses GFPGAN to enhance facial details"}
                       </p>
                     </TooltipContent>
                   </Tooltip>
@@ -139,7 +141,7 @@ export default function UpscalerControls({
             </div>
 
             <p className="text-xs text-slate-500 dark:text-slate-400">
-              Improves facial details and skin texture when enabled
+              {pageData?.workspace?.controls?.face_enhance_description || "Improves facial details and skin texture when enabled"}
             </p>
           </div>
       </div>

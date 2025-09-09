@@ -18,6 +18,11 @@
           "icon": "RiHistoryLine"
         },
         {
+          "title": "图像增强",
+          "url": "/ai-image-upscaler",
+          "icon": "RiImageAiFill"
+        },
+        {
           "title": "定价",
           "url": "/pricing",
           "icon": "RiMoneyDollarCircleLine"

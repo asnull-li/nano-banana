@@ -11,6 +11,7 @@ interface ImageUploadZoneProps {
   disabled?: boolean;
   currentImage?: string | null;
   className?: string;
+  pageData?: any;
 }
 
 const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10MB
@@ -20,23 +21,24 @@ export default function ImageUploadZone({
   disabled = false,
   currentImage,
   className,
+  pageData,
 }: ImageUploadZoneProps) {
   const onDrop = useCallback(
     (acceptedFiles: File[], rejectedFiles: any[]) => {
       if (rejectedFiles.length > 0) {
         const rejection = rejectedFiles[0];
         if (rejection.errors[0]?.code === "file-too-large") {
-          toast.error("File is too large. Maximum size is 10MB.");
+          toast.error(pageData?.workspace?.upload_zone?.error_file_too_large || "File is too large. Maximum size is 10MB.");
           return;
         }
-        toast.error("Invalid file type. Please upload an image.");
+        toast.error(pageData?.workspace?.upload_zone?.error_invalid_type || "Invalid file type. Please upload an image.");
         return;
       }
 
       const file = acceptedFiles[0];
       if (file) {
         if (file.size > MAX_FILE_SIZE) {
-          toast.error("File is too large. Maximum size is 10MB.");
+          toast.error(pageData?.workspace?.upload_zone?.error_file_too_large || "File is too large. Maximum size is 10MB.");
           return;
         }
 
@@ -69,7 +71,7 @@ export default function ImageUploadZone({
   return (
     <div className={className}>
       <h3 className="text-sm font-medium text-slate-700 dark:text-slate-300 mb-3">
-        上传图片
+        {pageData?.workspace?.upload_zone?.title || "上传图片"}
       </h3>
 
       <div className="relative overflow-hidden rounded-2xl border-2 border-dashed border-green-300 dark:border-green-700 transition-all duration-300">
@@ -78,7 +80,7 @@ export default function ImageUploadZone({
           <div className="relative group h-48">
             <img
               src={currentImage}
-              alt="Uploaded preview"
+              alt={pageData?.workspace?.upload_zone?.preview_alt || "Uploaded preview"}
               className="w-full h-full object-contain bg-slate-50 dark:bg-slate-800"
             />
             {!disabled && (
@@ -88,7 +90,7 @@ export default function ImageUploadZone({
                   <div
                     onClick={handleClearImage}
                     className="p-2 bg-red-500/90 backdrop-blur-sm text-white rounded-full hover:bg-red-600 hover:scale-110 transition-all duration-200 cursor-pointer shadow-lg"
-                    title="删除图片"
+                    title={pageData?.workspace?.upload_zone?.delete_tooltip || "删除图片"}
                   >
                     <X className="w-4 h-4" />
                   </div>
@@ -96,7 +98,7 @@ export default function ImageUploadZone({
                     <input {...getInputProps()} />
                     <div
                       className="p-2 bg-green-500/90 backdrop-blur-sm text-white rounded-full hover:bg-green-600 hover:scale-110 transition-all duration-200 shadow-lg"
-                      title="替换图片"
+                      title={pageData?.workspace?.upload_zone?.replace_tooltip || "替换图片"}
                     >
                       <Upload className="w-4 h-4" />
                     </div>
@@ -138,10 +140,13 @@ export default function ImageUploadZone({
 
               <div className="space-y-0">
                 <p className="text-sm font-medium text-slate-800 dark:text-slate-200">
-                  {isDragActive ? "释放上传" : "点击或拖拽上传"}
+                  {isDragActive 
+                    ? (pageData?.workspace?.upload_zone?.drop_text || "释放上传")
+                    : (pageData?.workspace?.upload_zone?.click_or_drag || "点击或拖拽上传")
+                  }
                 </p>
                 <p className="text-xs text-slate-500 dark:text-slate-500">
-                  支持 PNG、JPG、JPEG、WEBP • 最大 10MB
+                  {pageData?.workspace?.upload_zone?.supported_formats || "支持 PNG、JPG、JPEG、WEBP • 最大 10MB"}
                 </p>
               </div>
             </div>
@@ -153,7 +158,7 @@ export default function ImageUploadZone({
           <div className="absolute inset-0 bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm flex items-center justify-center">
             <div className="flex items-center gap-2 text-slate-600 dark:text-slate-400">
               <div className="w-4 h-4 border-2 border-slate-300 border-t-green-500 rounded-full animate-spin"></div>
-              <span className="text-sm">处理中...</span>
+              <span className="text-sm">{pageData?.workspace?.upload_zone?.processing || "处理中..."}</span>
             </div>
           </div>
         )}

@@ -1,0 +1,164 @@
+{
+  "meta": {
+    "title": "Nano Banana 이미지 업스케일러 온라인 - AI 사진 향상 도구",
+    "description": "Nano Banana Image Upscaler는 첨단 AI 기술을 사용하여 전문적인 품질로 사진을 향상시키고 확대합니다. 저해상도 이미지를 고해상도 걸작으로 변환합니다."
+  },
+  "hero": {
+    "title": "Nano Banana 이미지 업스케일러",
+    "description": "놀라운 시각적 결과를 위한 전문적인 AI 기반 이미지 향상 및 업스케일링 기술."
+  },
+  "features": {
+    "title": "첨단 AI 기술로 전문적인 이미지 향상 경험",
+    "description": "전문급 결과를 위한 이미지 품질과 해상도를 향상시키는 첨단 AI 기술.",
+    "items": [
+      {
+        "title": "뛰어난 이미지 품질 향상",
+        "description": "Nano Banana Image Upscaler는 뛰어난 이미지 향상 기능을 제공하여 저해상도 사진을 선명하고 고화질 이미지로 변환합니다. 우리의 AI 기술은 전체적인 이미지 품질과 선명도를 극적으로 개선하면서 복잡한 디테일을 보존합니다."
+      },
+      {
+        "title": "지능형 업스케일링 기술",
+        "description": "최첨단 알고리즘으로 원활한 이미지 업스케일링을 경험하세요. 자연스러운 텍스처, 날카로운 가장자리, 사진처럼 사실적인 디테일 보존을 유지하면서 이미지를 원본 해상도의 최대 4배까지 확대할 수 있습니다."
+      },
+      {
+        "title": "전문급 처리",
+        "description": "사진작가, 디자이너, 크리에이티브 전문가에게 적합한 전문 수준의 이미지 처리 기능을 제공합니다. 고급 노이즈 감소 및 디테일 향상 기능으로 스튜디오 품질의 결과를 달성하세요."
+      },
+      {
+        "title": "빠르고 효율적인 향상",
+        "description": "최적화된 처리 엔진으로 몇 초 만에 놀라운 결과를 얻으세요. 효율적인 AI 모델은 속도를 희생하지 않고 고품질 이미지 향상을 제공하여 배치 처리 및 전문 워크플로에 완벽합니다."
+      }
+    ]
+  },
+  "how_to_use": {
+    "title": "AI 이미지 향상 도구 사용 방법",
+    "description": "직관적인 인터페이스로 단 3단계만에 이미지를 향상시키세요.",
+    "items": [
+      {
+        "title": "이미지 업로드",
+        "description": "Nano Banana Image Upscaler를 사용하여 향상시키고 싶은 이미지를 선택하고 업로드하세요. JPEG, PNG, WebP를 포함한 다양한 형식을 지원하여 모든 사진과 그래픽과의 호환성을 보장합니다."
+      },
+      {
+        "title": "향상 설정 선택",
+        "description": "직관적인 컨트롤로 원하는 업스케일링 옵션을 구성하세요. 최적의 결과를 위해 원하는 출력 해상도, 향상 강도, 처리 기본 설정을 선택하세요."
+      },
+      {
+        "title": "향상된 이미지 다운로드",
+        "description": "처리가 완료되면 전문적으로 향상된 이미지를 다운로드하세요. 인쇄, 웹 사용 또는 전문 프로젝트에 준비된 크리스털처럼 선명한 고해상도 결과를 즐기세요."
+      }
+    ]
+  },
+  "workspace": {
+    "title": "Nano Banana 이미지 업스케일러 워크스페이스",
+    "description": "첨단 AI 기술로 구동되는 전문 이미지 향상 워크스페이스.",
+    "upload_zone": {
+      "title": "향상을 위한 이미지 업로드",
+      "description": "Nano Banana Image Upscaler에 이미지를 드래그 앤 드롭하거나 클릭하여 업로드",
+      "supported_formats": "지원 형식: JPEG, PNG, WebP",
+      "max_size": "최대 파일 크기: 10MB",
+      "error_file_too_large": "파일이 너무 큽니다. 최대 크기는 10MB입니다.",
+      "error_invalid_type": "유효하지 않은 파일 형식입니다. 이미지를 업로드해주세요.",
+      "preview_alt": "업로드 미리보기",
+      "delete_tooltip": "이미지 삭제",
+      "replace_tooltip": "이미지 교체",
+      "drop_text": "드롭하여 업로드",
+      "click_or_drag": "클릭하거나 드래그하여 업로드",
+      "processing": "처리 중..."
+    },
+    "controls": {
+      "title": "컨트롤",
+      "scale_factor": "업스케일 배율",
+      "enhance_details": "디테일 향상",
+      "noise_reduction": "노이즈 감소",
+      "processing_mode": "처리 모드",
+      "credits_cost": "크레딧 비용",
+      "credits_unit": "크레딧",
+      "execute_button": "실행",
+      "restart_button": "다시 시작",
+      "scale_1x": "원본",
+      "scale_2x": "표준",
+      "scale_3x": "큰",
+      "scale_4x": "최대",
+      "scale_tooltip": "이미지를 얼마나 확대할지 선택",
+      "face_enhance": "얼굴 향상",
+      "face_enhance_tooltip": "GFPGAN을 사용하여 얼굴 디테일 향상",
+      "face_enhance_description": "활성화하면 얼굴 디테일과 피부 텍스처가 개선됩니다"
+    },
+    "status": {
+      "uploading": "처리를 위해 이미지 업로드 중...",
+      "processing": "AI 기술로 이미지 향상 중...",
+      "completed": "이미지 향상이 성공적으로 완료되었습니다",
+      "error": "향상이 실패했습니다. 다시 시도해주세요"
+    },
+    "results": {
+      "title": "미리보기",
+      "original": "원본",
+      "enhanced": "향상됨",
+      "upscaled": "업스케일됨",
+      "download": "다운로드",
+      "downloading": "다운로드 중...",
+      "compare": "이미지 비교",
+      "no_image_title": "업로드된 이미지 없음",
+      "no_image_description": "업스케일 결과를 보려면 이미지를 업로드하세요",
+      "processing_preview_alt": "처리 미리보기",
+      "uploading_description": "처리를 위해 이미지 준비 중",
+      "processing_description": "AI가 이미지를 업스케일하고 향상시키는 중",
+      "failed_title": "처리 실패",
+      "failed_description": "이미지 업스케일 중 문제가 발생했습니다",
+      "completed_badge": "업스케일 완료",
+      "click_to_enlarge": "클릭하여 확대 및 비교",
+      "standard_resolution": "표준 해상도",
+      "ai_upscaled": "AI 업스케일 및 향상",
+      "original_image_alt": "원본 이미지"
+    },
+    "messages": {
+      "upload_required": "먼저 이미지를 업로드해주세요",
+      "insufficient_credits": "크레딧이 부족합니다. 업스케일링에는 ${credits} 크레딧이 필요합니다.",
+      "uploading": "이미지 업로드 중...",
+      "processing_start": "업스케일 프로세스 시작 중...",
+      "success": "이미지 업스케일에 성공했습니다!",
+      "failed": "업스케일 실패",
+      "error": "이미지 업스케일에 실패했습니다",
+      "download_preparing": "다운로드 준비 중...",
+      "download_success": "이미지 다운로드에 성공했습니다!",
+      "download_failed": "이미지 다운로드에 실패했습니다"
+    }
+  },
+  "faq": {
+    "title": "자주 묻는 질문",
+    "description": "Nano Banana Image Upscaler에 대한 일반적인 질문의 답변을 확인하세요.",
+    "items": [
+      {
+        "question": "Nano Banana Image Upscaler란 무엇인가요?",
+        "answer": "Nano Banana Image Upscaler는 최첨단 머신러닝 알고리즘을 사용하여 이미지를 업스케일하고 품질을 개선하는 고급 AI 기반 이미지 향상 도구입니다. 세밀한 디테일을 보존하고 향상시키면서 이미지 해상도를 최대 4배까지 높일 수 있어 사진작가, 디자이너, 콘텐츠 제작자에게 완벽합니다."
+      },
+      {
+        "question": "Nano Banana Image Upscaler는 어떻게 작동하나요?",
+        "answer": "Nano Banana Image Upscaler는 수백만 개의 고품질 이미지로 훈련된 정교한 딥러닝 모델을 사용합니다. AI는 이미지의 내용을 분석하고 패턴과 텍스처를 식별한 다음 누락된 픽셀을 지능적으로 재구성하여 선명도와 디테일이 향상된 더 높은 해상도 버전을 만듭니다."
+      },
+      {
+        "question": "Nano Banana Image Upscaler는 어떤 이미지 형식을 지원하나요?",
+        "answer": "Nano Banana Image Upscaler는 JPEG, PNG, WebP, TIFF를 포함한 인기 있는 이미지 형식을 지원합니다. 최대 10MB까지의 이미지를 업로드할 수 있어 웹 그래픽과 고해상도 사진 프로젝트 모두에 적합합니다."
+      },
+      {
+        "question": "Nano Banana Image Upscaler 사용 비용은 얼마인가요?",
+        "answer": "Nano Banana Image Upscaler로 각 이미지 향상은 2 크레딧이 소요됩니다. 이는 상업적 및 개인적 사용 프로젝트에 적합한 전문급 업스케일링 및 향상 기능을 제공합니다."
+      },
+      {
+        "question": "Nano Banana Image Upscaler로 향상된 이미지를 상업적 목적으로 사용할 수 있나요?",
+        "answer": "네, Nano Banana Image Upscaler를 통해 처리된 모든 이미지는 상업적 사용에 적합합니다. 향상된 이미지는 전문적인 품질 기준을 유지하며 비즈니스 프로젝트, 마케팅 자료, 상업적 응용 프로그램에 사용할 수 있습니다."
+      },
+      {
+        "question": "Nano Banana Image Upscaler가 이미지를 처리하는 데 얼마나 걸리나요?",
+        "answer": "Nano Banana Image Upscaler는 일반적으로 원본 이미지 크기와 선택한 향상 옵션에 따라 30-60초 내에 이미지를 처리합니다. 최적화된 AI 인프라는 고품질 결과를 유지하면서 빠른 처리를 보장합니다."
+      },
+      {
+        "question": "Nano Banana Image Upscaler에서 사용할 수 있는 최대 업스케일링 배율은 얼마인가요?",
+        "answer": "Nano Banana Image Upscaler는 이미지를 원본 해상도의 최대 4배까지 업스케일할 수 있습니다. 예를 들어, 512x512 픽셀 이미지를 자연스러운 외관과 날카로운 디테일 품질을 유지하면서 2048x2048 픽셀로 향상시킬 수 있습니다."
+      },
+      {
+        "question": "Nano Banana Image Upscaler는 다양한 유형의 이미지에서 잘 작동하나요?",
+        "answer": "네, Nano Banana Image Upscaler는 인물, 풍경, 예술 작품, 그래픽, 사진을 포함한 다양한 이미지 유형에서 효과적으로 작동하도록 설계되었습니다. AI 모델은 다양한 이미지 카테고리에 대해 훈련되어 다양한 콘텐츠 유형에서 최적의 향상을 보장합니다."
+      }
+    ]
+  }
+}

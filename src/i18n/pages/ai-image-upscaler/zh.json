@@ -1,0 +1,164 @@
+{
+  "meta": {
+    "title": "Nano Banana 图像放大器 - AI照片增强工具",
+    "description": "Nano Banana Image Upscaler使用先进AI技术专业增强和放大您的照片。将低分辨率图像转换为高清杰作。"
+  },
+  "hero": {
+    "title": "Nano Banana 图像放大器",
+    "description": "专业AI驱动的图像增强和放大技术，打造令人惊艳的视觉效果。"
+  },
+  "features": {
+    "title": "体验Nano Banana Image Upscaler的专业图像增强功能",
+    "description": "先进AI技术，专业级图像质量和分辨率增强效果。",
+    "items": [
+      {
+        "title": "卓越的图像质量增强",
+        "description": "提供卓越的图像增强功能，将低分辨率照片转换为清晰的高清图像。我们的AI技术在显著提升整体图像质量和清晰度的同时，完美保留复杂细节。"
+      },
+      {
+        "title": "智能放大技术",
+        "description": "体验无缝图像放大功能，采用尖端算法。将图像放大至原始分辨率的4倍，同时保持自然纹理、锐利边缘和逼真细节保留效果。"
+      },
+      {
+        "title": "专业级处理能力",
+        "description": "提供专业级图像处理功能，适合摄影师、设计师和创意专业人士使用。通过先进降噪和细节增强功能，实现影棚级品质效果。"
+      },
+      {
+        "title": "快速高效的增强处理",
+        "description": "使用优化的处理引擎，几秒钟内获得惊艳效果。我们高效的AI模型在不妥协速度的前提下提供高质量图像增强，完美适合批量处理和专业工作流程。"
+      }
+    ]
+  },
+  "how_to_use": {
+    "title": "如何使用图像放大器",
+    "description": "通过我们直观的界面，仅需三个简单步骤即可增强您的图像。",
+    "items": [
+      {
+        "title": "上传您的图像",
+        "description": "选择并上传您想要增强的图像。支持多种格式包括JPEG、PNG和WebP，确保与您所有照片和图形的兼容性。"
+      },
+      {
+        "title": "选择增强设置",
+        "description": "通过直观控制配置您偏好的放大选项。选择所需的输出分辨率、增强强度和处理偏好，获得最佳效果。"
+      },
+      {
+        "title": "下载增强图像",
+        "description": "处理完成后下载您的专业增强图像。享受水晶般清晰的高分辨率效果，可用于打印、网络使用或专业项目。"
+      }
+    ]
+  },
+  "workspace": {
+    "title": "图像放大工作区",
+    "description": "由先进AI技术驱动的专业图像增强工作区。",
+    "upload_zone": {
+      "title": "上传图像进行增强",
+      "description": "拖放或点击上传您的图像",
+      "supported_formats": "支持格式：JPEG、PNG、WebP",
+      "max_size": "最大文件大小：10MB",
+      "error_file_too_large": "文件过大。最大尺寸为10MB。",
+      "error_invalid_type": "无效文件类型。请上传图像文件。",
+      "preview_alt": "上传预览",
+      "delete_tooltip": "删除图片",
+      "replace_tooltip": "替换图片",
+      "drop_text": "释放上传",
+      "click_or_drag": "点击或拖拽上传",
+      "processing": "处理中..."
+    },
+    "controls": {
+      "title": "控制面板",
+      "scale_factor": "放大倍数",
+      "enhance_details": "细节增强",
+      "noise_reduction": "降噪处理",
+      "processing_mode": "处理模式",
+      "credits_cost": "消耗积分",
+      "credits_unit": "积分",
+      "execute_button": "开始处理",
+      "restart_button": "重新开始",
+      "scale_1x": "原始",
+      "scale_2x": "标准",
+      "scale_3x": "大",
+      "scale_4x": "最大",
+      "scale_tooltip": "选择图像放大倍数",
+      "face_enhance": "面部增强",
+      "face_enhance_tooltip": "使用GFPGAN增强面部细节",
+      "face_enhance_description": "启用后改善面部细节和皮肤纹理"
+    },
+    "status": {
+      "uploading": "正在上传图像...",
+      "processing": "正在使用AI技术增强图像...",
+      "completed": "图像增强成功完成",
+      "error": "增强失败，请重试"
+    },
+    "results": {
+      "title": "预览窗口",
+      "original": "原始",
+      "enhanced": "增强",
+      "upscaled": "放大",
+      "download": "下载",
+      "downloading": "下载中...",
+      "compare": "对比图像",
+      "no_image_title": "未上传图像",
+      "no_image_description": "上传图像以查看放大结果",
+      "processing_preview_alt": "处理预览",
+      "uploading_description": "正在准备您的图像进行处理",
+      "processing_description": "AI正在放大和增强您的图像",
+      "failed_title": "处理失败",
+      "failed_description": "放大图像时出现问题",
+      "completed_badge": "放大完成",
+      "click_to_enlarge": "点击放大查看对比",
+      "standard_resolution": "标准分辨率",
+      "ai_upscaled": "AI放大增强",
+      "original_image_alt": "原始图像"
+    },
+    "messages": {
+      "upload_required": "请先上传图像",
+      "insufficient_credits": "积分不足。放大图像需要 ${credits} 个积分。",
+      "uploading": "正在上传图像...",
+      "processing_start": "开始处理图像...",
+      "success": "图像放大成功！",
+      "failed": "放大失败",
+      "error": "图像放大失败",
+      "download_preparing": "正在准备下载...",
+      "download_success": "图像下载成功！",
+      "download_failed": "下载图像失败"
+    }
+  },
+  "faq": {
+    "title": "常见问题",
+    "description": "获取关于Nano Banana Image Upscaler的常见问题解答。",
+    "items": [
+      {
+        "question": "什么是图像放大器？",
+        "answer": "这是一个先进的AI驱动图像增强工具，使用尖端机器学习算法来放大和改善图像质量。它可以将图像分辨率提高至4倍，同时保留和增强精细细节，非常适合摄影师、设计师和内容创作者使用。"
+      },
+      {
+        "question": "它是如何工作的？",
+        "answer": "采用在数百万高质量图像上训练的复杂深度学习模型。AI分析您图像的内容，识别图案和纹理，然后智能重建缺失像素，创建具有增强清晰度和细节的更高分辨率版本。"
+      },
+      {
+        "question": "支持哪些图像格式？",
+        "answer": "支持流行的图像格式，包括JPEG、PNG、WebP和TIFF。您可以上传最大10MB的图像，适用于网页图形和高分辨率摄影项目。"
+      },
+      {
+        "question": "使用费用是多少？",
+        "answer": "每次图像增强需要2个积分。这为您提供专业级的放大和增强功能，适用于商业和个人使用项目。"
+      },
+      {
+        "question": "增强的图像可以用于商业用途吗？",
+        "answer": "是的，所有处理过的图像都适用于商业用途。增强图像保持专业质量标准，可用于商业项目、营销材料和商业应用。"
+      },
+      {
+        "question": "处理一张图像需要多长时间？",
+        "answer": "通常在30-60秒内处理图像，具体取决于原始图像大小和所选增强选项。我们优化的AI基础设施确保快速处理，同时保持高质量结果。"
+      },
+      {
+        "question": "最大放大倍数是多少？",
+        "answer": "可以将图像放大至原始分辨率的4倍。例如，一张512x512像素的图像可以增强到2048x2048像素，同时保持自然外观和锐利的细节质量。"
+      },
+      {
+        "question": "对不同类型的图像效果如何？",
+        "answer": "设计用于有效处理各种图像类型，包括肖像、风景、艺术品、图形和照片。AI模型已在多样化的图像类别上进行训练，确保在不同内容类型上实现最佳增强效果。"
+      }
+    ]
+  }
+}
