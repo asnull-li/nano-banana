@@ -129,18 +129,18 @@ export async function POST(req: Request) {
 
     // const provider = process.env.PAY_PROVIDER || "stripe";
     // const provider = currency === "cny" && item.cn_amount ? "stripe" : "creem";
-    const provider = interval === "one-time" ? "stripe" : "creem";
+    // const provider = interval === "one-time" ? "stripe" : "creem"; // 一次性都使用 stripe
 
-    if (provider === "creem") {
-      // checkout with creem
-      const result = await creemCheckout({
-        order: order as any,
-        locale,
-        cancel_url,
-      });
+    // if (provider === "creem") {
+    //   // checkout with creem
+    //   const result = await creemCheckout({
+    //     order: order as any,
+    //     locale,
+    //     cancel_url,
+    //   });
 
-      return respData(result);
-    }
+    //   return respData(result);
+    // }
 
     // checkout with stripe
     const result = await stripeCheckout({
