@@ -126,6 +126,10 @@
   "faq": {
     "title": "常见问题",
     "description": "获取关于Nano Banana Image Upscaler的常见问题解答。",
+    "contact": {
+      "question_text": "还有其他问题？",
+      "support_link": "联系我们的支持团队"
+    },
     "items": [
       {
         "question": "什么是图像放大器？",

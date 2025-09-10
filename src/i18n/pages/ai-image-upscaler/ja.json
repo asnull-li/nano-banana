@@ -126,6 +126,10 @@
   "faq": {
     "title": "よくある質問",
     "description": "Nano Banana Image Upscalerに関するよくある質問への回答。",
+    "contact": {
+      "question_text": "他にご質問はありますか？",
+      "support_link": "サポートチームにお問い合わせ"
+    },
     "items": [
       {
         "question": "Nano Banana Image Upscalerとは何ですか？",
