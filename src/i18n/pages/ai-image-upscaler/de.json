@@ -1,167 +1,188 @@
 {
   "meta": {
-    "title": "Nano Banana Image Upscaler Online - AI Photo Enhancement Tool",
-    "description": "Uses advanced AI technology to enhance and upscale your photos with professional quality. Transform low-resolution images into high-definition masterpieces."
+    "title": "Nano Banana Bildvergrößerer Online - KI-Foto-Verbesserungs-Tool",
+    "description": "Verwendet fortschrittliche KI-Technologie, um Ihre Fotos mit professioneller Qualität zu verbessern und zu vergrößern. Verwandelt niedrigauflösende Bilder in hochauflösende Meisterwerke."
   },
   "hero": {
-    "title": "Nano Banana Image Upscaler",
-    "description": "Professional AI-driven image upscale technology improves the output image quality of Nano Banana, creating stunning visual effects."
+    "title": "Nano Banana Bildvergrößerer",
+    "description": "Professionelle KI-gesteuerte Bildvergrößerungs-technologie verbessert die Ausgabebildqualität von Nano Banana und schafft atemberaubende visuelle Effekte."
   },
   "features": {
-    "title": "Experience Professional Image Enhancement with Advanced AI Technology",
-    "description": "Advanced AI technology for enhancing image quality and resolution with professional-grade results.",
+    "title": "Erleben Sie professionelle Bildverbesserung mit fortschrittlicher KI-Technologie",
+    "description": "Fortschrittliche KI-Technologie zur Verbesserung von Bildqualität und Auflösung mit professionellen Ergebnissen.",
     "items": [
       {
-        "title": "Superior Image Quality Enhancement",
-        "description": "Nano Banana Image Upscaler delivers exceptional image enhancement capabilities, transforming low-resolution photos into crisp, high-definition images. Our AI technology preserves intricate details while dramatically improving overall image quality and clarity."
+        "title": "Überlegene Bildqualitätsverbesserung",
+        "description": "Nano Banana Bildvergrößerer liefert außergewöhnliche Bildverbesserungsfähigkeiten und verwandelt niedrigauflösende Fotos in scharfe, hochauflösende Bilder. Unsere KI-Technologie bewahrt komplizierte Details und verbessert gleichzeitig die allgemeine Bildqualität und Klarheit dramatisch."
       },
       {
-        "title": "Intelligent Upscaling Technology",
-        "description": "Experience seamless image upscaling with cutting-edge algorithms. Scale your images up to 4x their original resolution while maintaining natural textures, sharp edges, and photorealistic detail preservation."
+        "title": "Intelligente Vergrößerungstechnologie",
+        "description": "Erleben Sie nahtlose Bildvergrößerung mit modernsten Algorithmen. Skalieren Sie Ihre Bilder bis auf das 4-fache ihrer ursprünglichen Auflösung, während natürliche Texturen, scharfe Kanten und fotorealistische Detailerhaltung beibehalten werden."
       },
       {
-        "title": "Professional-Grade Processing",
-        "description": "Our platform provides professional-level image processing capabilities suitable for photographers, designers, and creative professionals. Achieve studio-quality results with advanced noise reduction and detail enhancement features."
+        "title": "Professionelle Verarbeitung",
+        "description": "Unsere Plattform bietet professionelle Bildverarbeitungsfähigkeiten, die für Fotografen, Designer und Kreativprofis geeignet sind. Erzielen Sie Studio-Qualitätsergebnisse mit erweiterten Rauschunterdrückungs- und Detailverbesserungsfeatures."
       },
       {
-        "title": "Fast and Efficient Enhancement",
-        "description": "Get stunning results in seconds with our optimized processing engine. The efficient AI model delivers high-quality image enhancement without compromising speed, making it perfect for batch processing and professional workflows."
+        "title": "Schnelle und effiziente Verbesserung",
+        "description": "Erhalten Sie in Sekunden atemberaubende Ergebnisse mit unserer optimierten Verarbeitungsmaschine. Das effiziente KI-Modell liefert hochwertige Bildverbesserung ohne Geschwindigkeitseinbußen und eignet sich perfekt für Stapelverarbeitung und professionelle Arbeitsabläufe."
       }
     ]
   },
   "how_to_use": {
-    "title": "How to Use the AI Image Enhancement Tool",
-    "description": "Enhance your images in just three simple steps with our intuitive interface.",
+    "title": "So verwenden Sie das KI-Bildverbesserungs-Tool",
+    "description": "Verbessern Sie Ihre Bilder in nur drei einfachen Schritten mit unserer intuitiven Benutzeroberfläche.",
     "items": [
       {
-        "title": "Upload Your Image",
-        "description": "Select and upload the image you want to enhance using Nano Banana Image Upscaler. Support for various formats including JPEG, PNG, and WebP ensures compatibility with all your photos and graphics."
+        "title": "Ihr Bild hochladen",
+        "description": "Wählen und laden Sie das Bild hoch, das Sie mit Nano Banana Bildvergrößerer verbessern möchten. Unterstützung für verschiedene Formate einschließlich JPEG, PNG und WebP gewährleistet Kompatibilität mit all Ihren Fotos und Grafiken."
       },
       {
-        "title": "Choose Enhancement Settings",
-        "description": "Configure your preferred upscaling options with intuitive controls. Select the desired output resolution, enhancement strength, and processing preferences for optimal results."
+        "title": "Verbesserungseinstellungen wählen",
+        "description": "Konfigurieren Sie Ihre bevorzugten Vergrößerungsoptionen mit intuitiven Bedienelementen. Wählen Sie die gewünschte Ausgabeauflösung, Verbesserungsstärke und Verarbeitungsvorlieben für optimale Ergebnisse."
       },
       {
-        "title": "Download Enhanced Image",
-        "description": "Download your professionally enhanced image once processing completes. Enjoy crystal-clear, high-resolution results ready for printing, web use, or professional projects."
+        "title": "Verbessertes Bild herunterladen",
+        "description": "Laden Sie Ihr professionell verbessertes Bild herunter, sobald die Verarbeitung abgeschlossen ist. Genießen Sie kristallklare, hochauflösende Ergebnisse, die zum Drucken, für die Web-Nutzung oder professionelle Projekte bereit sind."
       }
     ]
   },
   "workspace": {
-    "title": "Nano Banana Image Upscaler Workspace",
-    "description": "Professional image enhancement workspace powered by advanced AI technology.",
+    "title": "Nano Banana Bildvergrößerer Arbeitsbereich",
+    "description": "Professioneller Bildverbesserungs-Arbeitsbereich mit fortschrittlicher KI-Technologie.",
     "upload_zone": {
-      "title": "Upload Image",
-      "description": "Drag and drop or click to upload your image to Nano Banana Image Upscaler",
-      "supported_formats": "Supported formats: JPEG, PNG, WebP",
-      "max_size": "Maximum file size: 10MB",
-      "error_file_too_large": "File is too large. Maximum size is 10MB.",
-      "error_invalid_type": "Invalid file type. Please upload an image.",
-      "preview_alt": "Uploaded preview",
-      "delete_tooltip": "Delete image",
-      "replace_tooltip": "Replace image",
-      "drop_text": "Drop to upload",
-      "click_or_drag": "Click or drag to upload",
-      "processing": "Processing..."
+      "title": "Bild hochladen",
+      "description": "Ziehen und ablegen oder klicken, um Ihr Bild zu Nano Banana Bildvergrößerer hochzuladen",
+      "supported_formats": "Unterstützte Formate: JPEG, PNG, WebP",
+      "max_size": "Maximale Dateigröße: 10MB",
+      "error_file_too_large": "Datei ist zu groß. Maximale Größe ist 10MB.",
+      "error_invalid_type": "Ungültiger Dateityp. Bitte laden Sie ein Bild hoch.",
+      "preview_alt": "Hochgeladene Vorschau",
+      "delete_tooltip": "Bild löschen",
+      "replace_tooltip": "Bild ersetzen",
+      "drop_text": "Zum Hochladen ablegen",
+      "click_or_drag": "Klicken oder ziehen zum Hochladen",
+      "processing": "Verarbeitung läuft...",
+      "url_mode_indicator": "Bild von URL geladen",
+      "file_mode_indicator": "Bild von Datei hochgeladen",
+      "validating_url": "Bild-URL wird überprüft...",
+      "url_validation_failed": "Bild-URL kann nicht überprüft werden",
+      "url_too_large": "Bild unter URL ist zu groß (max 10MB)",
+      "url_invalid_format": "URL zeigt nicht auf eine gültige Bilddatei",
+      "cors_warning": "Überprüfung aufgrund von CORS-Beschränkungen nicht möglich"
     },
     "controls": {
-      "title": "CONTROLS",
-      "scale_factor": "Factor",
-      "enhance_details": "Detail Enhancement",
-      "noise_reduction": "Noise Reduction",
-      "processing_mode": "Processing Mode",
-      "credits_cost": "Credits Cost",
-      "credits_unit": "credits",
-      "execute_button": "EXECUTE",
-      "restart_button": "Restart",
+      "title": "BEDIENELEMENTE",
+      "scale_factor": "Faktor",
+      "enhance_details": "Detailverbesserung",
+      "noise_reduction": "Rauschunterdrückung",
+      "processing_mode": "Verarbeitungsmodus",
+      "credits_cost": "Credits-Kosten",
+      "credits_unit": "Credits",
+      "execute_button": "AUSFÜHREN",
+      "restart_button": "Neustart",
       "scale_1x": "Original",
       "scale_2x": "Standard",
-      "scale_3x": "Large",
+      "scale_3x": "Groß",
       "scale_4x": "Maximum",
-      "scale_tooltip": "Choose how much to enlarge your image",
-      "face_enhance": "Face Enhancement",
-      "face_enhance_tooltip": "Uses GFPGAN to enhance facial details",
-      "face_enhance_description": "Improves facial details and skin texture when enabled"
+      "scale_tooltip": "Wählen Sie, wie stark Ihr Bild vergrößert werden soll",
+      "face_enhance": "Gesichtsverbesserung",
+      "face_enhance_tooltip": "Verwendet GFPGAN zur Verbesserung von Gesichtsdetails",
+      "face_enhance_description": "Verbessert Gesichtsdetails und Hauttextur wenn aktiviert"
     },
     "status": {
-      "uploading": "Uploading image for processing...",
-      "processing": "Enhancing image with AI technology...",
-      "completed": "Image enhancement completed successfully",
-      "error": "Enhancement failed, please try again"
+      "uploading": "Bild für Verarbeitung wird hochgeladen...",
+      "processing": "Verarbeitung läuft...",
+      "completed": "Bildverbesserung erfolgreich abgeschlossen",
+      "error": "Verbesserung fehlgeschlagen, bitte versuchen Sie es erneut",
+      "validating": "Bild wird überprüft...",
+      "url_ready": "Bild-URL erfolgreich überprüft",
+      "url_processing": "Bild von URL wird verarbeitet..."
     },
     "results": {
-      "title": "PREVIEW",
+      "title": "VORSCHAU",
       "original": "Original",
-      "enhanced": "Enhanced",
-      "upscaled": "Upscaled",
-      "download": "Download",
-      "downloading": "Downloading...",
-      "compare": "Compare Images",
-      "no_image_title": "No image uploaded",
-      "no_image_description": "Upload an image to see the upscaled result here",
-      "processing_preview_alt": "Processing preview",
-      "uploading_description": "Preparing your image for processing",
-      "processing_description": "AI is upscaling and enhancing your image",
-      "failed_title": "Processing failed",
-      "failed_description": "Something went wrong while upscaling your image",
-      "completed_badge": "Upscaling completed",
-      "click_to_enlarge": "Click to enlarge and compare",
-      "standard_resolution": "Standard Resolution",
-      "ai_upscaled": "AI Upscaled & Enhanced",
-      "original_image_alt": "Original image"
+      "enhanced": "Verbessert",
+      "upscaled": "Vergrößert",
+      "download": "Herunterladen",
+      "downloading": "Wird heruntergeladen...",
+      "compare": "Bilder vergleichen",
+      "no_image_title": "Kein Bild hochgeladen",
+      "no_image_description": "Laden Sie ein Bild hoch, um das vergrößerte Ergebnis hier zu sehen",
+      "processing_preview_alt": "Verarbeitungsvorschau",
+      "uploading_description": "Ihr Bild wird für die Verarbeitung vorbereitet",
+      "processing_description": "KI vergrößert und verbessert Ihr Bild",
+      "failed_title": "Verarbeitung fehlgeschlagen",
+      "failed_description": "Beim Vergrößern Ihres Bildes ist etwas schiefgegangen",
+      "completed_badge": "Vergrößerung abgeschlossen",
+      "click_to_enlarge": "Klicken zum Vergrößern und Vergleichen",
+      "standard_resolution": "Standard-Auflösung",
+      "ai_upscaled": "KI-vergrößert & verbessert",
+      "original_image_alt": "Originalbild"
     },
     "messages": {
-      "upload_required": "Please upload an image first",
-      "insufficient_credits": "Insufficient credits. Need ${credits} credits for upscaling.",
-      "uploading": "Uploading image...",
-      "processing_start": "Starting upscale process...",
-      "success": "Image upscaled successfully!",
-      "failed": "Upscale failed",
-      "error": "Failed to upscale image",
-      "download_preparing": "Preparing download...",
-      "download_success": "Image downloaded successfully!",
-      "download_failed": "Failed to download image"
+      "upload_required": "Bitte laden Sie zuerst ein Bild hoch",
+      "insufficient_credits": "Unzureichende Credits. Benötige ${credits} Credits für Vergrößerung.",
+      "uploading": "Bild wird hochgeladen...",
+      "processing_start": "Vergrößerungsprozess wird gestartet...",
+      "success": "Bild erfolgreich vergrößert!",
+      "failed": "Vergrößerung fehlgeschlagen",
+      "error": "Bildvergrößerung fehlgeschlagen",
+      "download_preparing": "Download wird vorbereitet...",
+      "download_success": "Bild erfolgreich heruntergeladen!",
+      "download_failed": "Bild-Download fehlgeschlagen",
+      "image_loaded": "Bild erfolgreich geladen",
+      "image_load_failed": "Bildladen von URL fehlgeschlagen",
+      "url_validation_timeout": "URL-Überprüfung ist abgelaufen. Bitte versuchen Sie es erneut.",
+      "url_cors_error": "Kann aufgrund der CORS-Richtlinie nicht auf das Bild zugreifen. Versuchen Sie, die Datei direkt hochzuladen.",
+      "url_network_error": "Netzwerkfehler bei der Überprüfung der Bild-URL",
+      "url_size_unknown": "Kann Bildgröße von URL nicht bestimmen",
+      "url_format_unknown": "Kann Bildformat von URL nicht bestimmen",
+      "url_bypassed_validation": "URL-Überprüfung aufgrund von Beschränkungen umgangen",
+      "image_from_history": "Bild aus Erstellungsverlauf geladen",
+      "ready_to_enhance": "Bereit zur Bildverbesserung",
+      "url_mode_active": "URL-Modus - Direkte Verarbeitung ohne erneutes Hochladen"
     }
   },
   "faq": {
-    "title": "Frequently Asked Questions",
-    "description": "Get answers to common questions about Nano Banana Image Upscaler.",
+    "title": "Häufig gestellte Fragen",
+    "description": "Erhalten Sie Antworten auf häufige Fragen zu Nano Banana Bildvergrößerer.",
     "contact": {
       "question_text": "Haben Sie weitere Fragen?",
       "support_link": "Kontaktieren Sie unser Support-Team"
     },
     "items": [
       {
-        "question": "What is Nano Banana Image Upscaler?",
-        "answer": "Nano Banana Image Upscaler is an advanced AI-powered image enhancement tool that uses cutting-edge machine learning algorithms to upscale and improve image quality. It can increase image resolution up to 4x while preserving and enhancing fine details, making it perfect for photographers, designers, and content creators."
+        "question": "Was ist Nano Banana Bildvergrößerer?",
+        "answer": "Nano Banana Bildvergrößerer ist ein fortschrittliches KI-betriebenes Bildverbesserungs-Tool, das modernste maschinelle Lernalgorithmen verwendet, um Bilder zu vergrößern und die Bildqualität zu verbessern. Es kann die Bildauflösung bis um das 4-fache erhöhen und dabei feine Details bewahren und verbessern, was es perfekt für Fotografen, Designer und Content-Ersteller macht."
       },
       {
-        "question": "How does Nano Banana Image Upscaler work?",
-        "answer": "Nano Banana Image Upscaler employs sophisticated deep learning models trained on millions of high-quality images. The AI analyzes your image's content, identifies patterns and textures, then intelligently reconstructs missing pixels to create a higher resolution version with enhanced clarity and detail."
+        "question": "Wie funktioniert Nano Banana Bildvergrößerer?",
+        "answer": "Nano Banana Bildvergrößerer nutzt ausgeklügelte Deep-Learning-Modelle, die mit Millionen hochwertiger Bilder trainiert wurden. Die KI analysiert den Inhalt Ihres Bildes, identifiziert Muster und Texturen und rekonstruiert dann intelligent fehlende Pixel, um eine höhere Auflösungsversion mit verbesserter Klarheit und Detail zu schaffen."
       },
       {
-        "question": "What image formats does Nano Banana Image Upscaler support?",
-        "answer": "Nano Banana Image Upscaler supports popular image formats including JPEG, PNG, WebP, and TIFF. You can upload images up to 10MB in size, making it suitable for both web graphics and high-resolution photography projects."
+        "question": "Welche Bildformate unterstützt Nano Banana Bildvergrößerer?",
+        "answer": "Nano Banana Bildvergrößerer unterstützt beliebte Bildformate einschließlich JPEG, PNG, WebP und TIFF. Sie können Bilder mit bis zu 10MB Größe hochladen, was es sowohl für Web-Grafiken als auch für hochauflösende Fotografie-Projekte geeignet macht."
       },
       {
-        "question": "How much does it cost to use Nano Banana Image Upscaler?",
-        "answer": "Each image enhancement with Nano Banana Image Upscaler costs 2 credits. This provides you with professional-grade upscaling and enhancement capabilities suitable for commercial and personal use projects."
+        "question": "Wie viel kostet die Nutzung von Nano Banana Bildvergrößerer?",
+        "answer": "Jede Bildverbesserung mit Nano Banana Bildvergrößerer kostet 2 Credits. Das bietet Ihnen professionelle Vergrößerungs- und Verbesserungsfähigkeiten, die für kommerzielle und persönliche Nutzungsprojekte geeignet sind."
       },
       {
-        "question": "Can I use images enhanced by Nano Banana Image Upscaler for commercial purposes?",
-        "answer": "Yes, all images processed through Nano Banana Image Upscaler are suitable for commercial use. The enhanced images maintain professional quality standards and can be used for business projects, marketing materials, and commercial applications."
+        "question": "Kann ich von Nano Banana Bildvergrößerer verbesserte Bilder für kommerzielle Zwecke verwenden?",
+        "answer": "Ja, alle über Nano Banana Bildvergrößerer verarbeiteten Bilder sind für die kommerzielle Nutzung geeignet. Die verbesserten Bilder erfüllen professionelle Qualitätsstandards und können für Geschäftsprojekte, Marketingmaterialien und kommerzielle Anwendungen verwendet werden."
       },
       {
-        "question": "How long does it take for Nano Banana Image Upscaler to process an image?",
-        "answer": "Nano Banana Image Upscaler typically processes images within 30-60 seconds, depending on the original image size and selected enhancement options. Our optimized AI infrastructure ensures fast processing while maintaining high-quality results."
+        "question": "Wie lange dauert es, bis Nano Banana Bildvergrößerer ein Bild verarbeitet hat?",
+        "answer": "Nano Banana Bildvergrößerer verarbeitet Bilder typischerweise innerhalb von 30-60 Sekunden, abhängig von der ursprünglichen Bildgröße und den gewählten Verbesserungsoptionen. Unsere optimierte KI-Infrastruktur gewährleistet schnelle Verarbeitung bei Beibehaltung hochwertiger Ergebnisse."
       },
       {
-        "question": "What's the maximum upscaling factor available in Nano Banana Image Upscaler?",
-        "answer": "Nano Banana Image Upscaler can upscale images up to 4x their original resolution. For example, a 512x512 pixel image can be enhanced to 2048x2048 pixels while maintaining natural appearance and sharp detail quality."
+        "question": "Was ist der maximale Vergrößerungsfaktor, der in Nano Banana Bildvergrößerer verfügbar ist?",
+        "answer": "Nano Banana Bildvergrößerer kann Bilder bis auf das 4-fache ihrer ursprünglichen Auflösung vergrößern. Zum Beispiel kann ein 512x512 Pixel Bild auf 2048x2048 Pixel verbessert werden, während natürliches Aussehen und scharfe Detailqualität erhalten bleiben."
       },
       {
-        "question": "Does Nano Banana Image Upscaler work well with different types of images?",
-        "answer": "Yes, Nano Banana Image Upscaler is designed to work effectively with various image types including portraits, landscapes, artwork, graphics, and photographs. The AI model has been trained on diverse image categories to ensure optimal enhancement across different content types."
+        "question": "Funktioniert Nano Banana Bildvergrößerer gut mit verschiedenen Bildtypen?",
+        "answer": "Ja, Nano Banana Bildvergrößerer ist darauf ausgelegt, effektiv mit verschiedenen Bildtypen zu arbeiten, einschließlich Porträts, Landschaften, Kunstwerken, Grafiken und Fotografien. Das KI-Modell wurde mit diversen Bildkategorien trainiert, um eine optimale Verbesserung über verschiedene Inhaltstypen hinweg zu gewährleisten."
       }
     ]
   }

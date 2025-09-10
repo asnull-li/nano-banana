@@ -62,7 +62,14 @@
       "replace_tooltip": "Replace image",
       "drop_text": "Drop to upload",
       "click_or_drag": "Click or drag to upload",
-      "processing": "Processing..."
+      "processing": "Processing...",
+      "url_mode_indicator": "Image loaded from URL",
+      "file_mode_indicator": "Image uploaded from file",
+      "validating_url": "Validating image URL...",
+      "url_validation_failed": "Unable to validate image URL",
+      "url_too_large": "Image at URL is too large (max 10MB)",
+      "url_invalid_format": "URL does not point to a valid image file",
+      "cors_warning": "Unable to validate due to CORS restrictions"
     },
     "controls": {
       "title": "CONTROLS",
@@ -87,7 +94,10 @@
       "uploading": "Uploading image for processing...",
       "processing": "Processing...",
       "completed": "Image enhancement completed successfully",
-      "error": "Enhancement failed, please try again"
+      "error": "Enhancement failed, please try again",
+      "validating": "Validating image...",
+      "url_ready": "Image URL validated successfully",
+      "url_processing": "Processing image from URL..."
     },
     "results": {
       "title": "PREVIEW",
@@ -122,7 +132,16 @@
       "download_success": "Image downloaded successfully!",
       "download_failed": "Failed to download image",
       "image_loaded": "Image loaded successfully",
-      "image_load_failed": "Failed to load image from URL"
+      "image_load_failed": "Failed to load image from URL",
+      "url_validation_timeout": "URL validation timed out. Please try again.",
+      "url_cors_error": "Cannot access image due to CORS policy. Try uploading the file directly.",
+      "url_network_error": "Network error while validating image URL",
+      "url_size_unknown": "Unable to determine image size from URL",
+      "url_format_unknown": "Unable to determine image format from URL",
+      "url_bypassed_validation": "URL validation bypassed due to restrictions",
+      "image_from_history": "Image loaded from creation history",
+      "ready_to_enhance": "Ready to enhance your image",
+      "url_mode_active": "URL mode - Direct processing without re-upload"
     }
   },
   "faq": {

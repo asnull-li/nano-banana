@@ -1,167 +1,188 @@
 {
   "meta": {
-    "title": "Nano Banana 画像アップスケーラー オンライン - AI写真高画質化ツール",
-    "description": "Nano Banana Image Upscalerは先進的なAI技術を使用して、プロフェッショナル品質で写真を高画質化・拡大します。低解像度画像を高精細な傑作に変換します。"
+    "title": "Nano Banana 画像アップスケーラー オンライン - AI 写真品質向上ツール",
+    "description": "最先端のAI技術を使用して、写真をプロフェッショナル品質で向上・拡大します。低解像度画像を高精細な傑作に変換します。"
   },
   "hero": {
     "title": "Nano Banana 画像アップスケーラー",
-    "description": "プロフェッショナルなAI駆動の画像拡大技術により、Nano Bananaの出力画像品質を向上させ、素晴らしい視覚効果を創出します。"
+    "description": "プロフェッショナルなAI駆動画像アップスケール技術により、Nano Bananaの出力画像品質を向上させ、素晴らしい視覚効果を作り出します。"
   },
   "features": {
-    "title": "先進的なAI技術によるプロフェッショナルな画像高画質化を体験",
-    "description": "プロフェッショナルグレードの結果を実現する、画像品質と解像度を向上させる先進的なAI技術。",
+    "title": "最先端AI技術でプロフェッショナルな画像向上を体験",
+    "description": "プロ仕様の結果で画像品質と解像度を向上させる最先端AI技術。",
     "items": [
       {
         "title": "優れた画像品質向上",
-        "description": "Nano Banana Image Upscalerは卓越した画像高画質化機能を提供し、低解像度の写真を鮮明で高精細な画像に変換します。当社のAI技術は、全体的な画像品質と明瞭度を劇的に向上させながら、複雑な詳細を保持します。"
+        "description": "Nano Banana 画像アップスケーラーは、優れた画像向上機能を提供し、低解像度写真を鮮明で高精細な画像に変換します。我々のAI技術は、複雑な細部を保持しながら、全体的な画像品質と明瞭度を劇的に向上させます。"
       },
       {
-        "title": "インテリジェントな拡大技術",
-        "description": "最先端のアルゴリズムによるシームレスな画像拡大を体験してください。自然なテクスチャ、シャープなエッジ、フォトリアリスティックな詳細保持を維持しながら、画像を元の解像度の最大4倍まで拡大できます。"
+        "title": "インテリジェントアップスケーリング技術",
+        "description": "最先端アルゴリズムによるシームレスな画像アップスケーリングを体験してください。自然なテクスチャ、シャープなエッジ、写実的な細部保持を維持しながら、画像を元の解像度の最大4倍まで拡大できます。"
       },
       {
-        "title": "プロフェッショナルグレードの処理",
-        "description": "写真家、デザイナー、クリエイティブプロフェッショナルに適したプロフェッショナルレベルの画像処理機能を提供します。高度なノイズリダクションと詳細強調機能でスタジオ品質の結果を実現。"
+        "title": "プロ仕様の処理",
+        "description": "我々のプラットフォームは、写真家、デザイナー、クリエイティブプロフェッショナルに適したプロレベルの画像処理機能を提供します。高度なノイズ削減と細部向上機能でスタジオ品質の結果を実現します。"
       },
       {
-        "title": "高速で効率的な高画質化",
-        "description": "最適化された処理エンジンで数秒で素晴らしい結果を得られます。効率的なAIモデルは速度を犠牲にすることなく高品質な画像高画質化を提供し、バッチ処理やプロフェッショナルワークフローに最適です。"
+        "title": "高速で効率的な向上",
+        "description": "最適化された処理エンジンで数秒で素晴らしい結果を得られます。効率的なAIモデルは、速度を犠牲にすることなく高品質な画像向上を提供し、バッチ処理やプロフェッショナルワークフローに最適です。"
       }
     ]
   },
   "how_to_use": {
-    "title": "AI画像高画質化ツールの使い方",
-    "description": "直感的なインターフェースで、わずか3つの簡単なステップで画像を高画質化。",
+    "title": "AI画像向上ツールの使用方法",
+    "description": "直感的なインターフェースで、わずか3つの簡単なステップで画像を向上させます。",
     "items": [
       {
         "title": "画像をアップロード",
-        "description": "Nano Banana Image Upscalerを使用して高画質化したい画像を選択してアップロード。JPEG、PNG、WebPを含む様々なフォーマットをサポートし、すべての写真とグラフィックとの互換性を保証。"
+        "description": "Nano Banana 画像アップスケーラーを使用して、向上させたい画像を選択・アップロードします。JPEG、PNG、WebPなど様々な形式をサポートし、すべての写真やグラフィックとの互換性を保証します。"
       },
       {
-        "title": "高画質化設定を選択",
-        "description": "直感的なコントロールで好みの拡大オプションを設定。最適な結果を得るために、希望する出力解像度、強調強度、処理設定を選択。"
+        "title": "向上設定を選択",
+        "description": "直感的なコントロールで、お好みのアップスケーリングオプションを設定します。最適な結果のために、希望する出力解像度、向上強度、処理設定を選択します。"
       },
       {
-        "title": "高画質化された画像をダウンロード",
-        "description": "処理が完了したら、プロフェッショナルに高画質化された画像をダウンロード。印刷、ウェブ使用、プロフェッショナルプロジェクトに対応した、クリスタルクリアで高解像度の結果をお楽しみください。"
+        "title": "向上された画像をダウンロード",
+        "description": "処理が完了したら、プロフェッショナルに向上された画像をダウンロードします。印刷、ウェブ使用、またはプロフェッショナルプロジェクトに対応した、クリスタルクリアで高解像度の結果をお楽しみください。"
       }
     ]
   },
   "workspace": {
     "title": "Nano Banana 画像アップスケーラー ワークスペース",
-    "description": "先進的なAI技術を搭載したプロフェッショナル画像高画質化ワークスペース。",
+    "description": "最先端AI技術によるプロフェッショナル画像向上ワークスペース。",
     "upload_zone": {
-      "title": "高画質化する画像をアップロード",
-      "description": "Nano Banana Image Upscalerに画像をドラッグ&ドロップまたはクリックしてアップロード",
-      "supported_formats": "対応フォーマット：JPEG、PNG、WebP",
+      "title": "画像をアップロード",
+      "description": "ドラッグ&ドロップまたはクリックして、Nano Banana 画像アップスケーラーに画像をアップロード",
+      "supported_formats": "対応形式：JPEG、PNG、WebP",
       "max_size": "最大ファイルサイズ：10MB",
       "error_file_too_large": "ファイルが大きすぎます。最大サイズは10MBです。",
       "error_invalid_type": "無効なファイルタイプです。画像をアップロードしてください。",
-      "preview_alt": "アップロードプレビュー",
+      "preview_alt": "アップロードされたプレビュー",
       "delete_tooltip": "画像を削除",
-      "replace_tooltip": "画像を置換",
+      "replace_tooltip": "画像を置き換え",
       "drop_text": "ドロップしてアップロード",
       "click_or_drag": "クリックまたはドラッグしてアップロード",
-      "processing": "処理中..."
+      "processing": "処理中...",
+      "url_mode_indicator": "URLから画像を読み込み済み",
+      "file_mode_indicator": "ファイルから画像をアップロード済み",
+      "validating_url": "画像URLを検証中...",
+      "url_validation_failed": "画像URLの検証ができません",
+      "url_too_large": "URLの画像が大きすぎます（最大10MB）",
+      "url_invalid_format": "URLが有効な画像ファイルを指していません",
+      "cors_warning": "CORS制限により検証できません"
     },
     "controls": {
       "title": "コントロール",
-      "scale_factor": "拡大率",
-      "enhance_details": "詳細強調",
-      "noise_reduction": "ノイズリダクション",
+      "scale_factor": "倍率",
+      "enhance_details": "細部向上",
+      "noise_reduction": "ノイズ削減",
       "processing_mode": "処理モード",
-      "credits_cost": "必要クレジット",
+      "credits_cost": "クレジット消費",
       "credits_unit": "クレジット",
       "execute_button": "実行",
       "restart_button": "リスタート",
       "scale_1x": "オリジナル",
       "scale_2x": "標準",
-      "scale_3x": "大",
+      "scale_3x": "大きめ",
       "scale_4x": "最大",
-      "scale_tooltip": "画像の拡大率を選択",
-      "face_enhance": "顔の強調",
-      "face_enhance_tooltip": "GFPGANを使用して顔の詳細を強調",
-      "face_enhance_description": "有効にすると、顔の詳細と肌のテクスチャが改善されます"
+      "scale_tooltip": "画像をどの程度拡大するかを選択",
+      "face_enhance": "顔向上",
+      "face_enhance_tooltip": "GFPGANを使用して顔の細部を向上",
+      "face_enhance_description": "有効にすると顔の細部と肌のテクスチャを改善"
     },
     "status": {
-      "uploading": "画像を処理用にアップロード中...",
-      "processing": "AI技術で画像を高画質化中...",
-      "completed": "画像の高画質化が正常に完了しました",
-      "error": "高画質化に失敗しました。もう一度お試しください"
+      "uploading": "処理用画像をアップロード中...",
+      "processing": "処理中...",
+      "completed": "画像向上が正常に完了しました",
+      "error": "向上に失敗しました。再試行してください",
+      "validating": "画像を検証中...",
+      "url_ready": "画像URLの検証が正常に完了しました",
+      "url_processing": "URLから画像を処理中..."
     },
     "results": {
       "title": "プレビュー",
       "original": "オリジナル",
-      "enhanced": "高画質化",
-      "upscaled": "拡大",
+      "enhanced": "向上済み",
+      "upscaled": "アップスケール済み",
       "download": "ダウンロード",
       "downloading": "ダウンロード中...",
       "compare": "画像を比較",
       "no_image_title": "画像がアップロードされていません",
-      "no_image_description": "拡大結果を表示するには画像をアップロードしてください",
-      "processing_preview_alt": "処理プレビュー",
-      "uploading_description": "画像を処理用に準備中",
-      "processing_description": "AIが画像を拡大・高画質化中",
-      "failed_title": "処理失敗",
-      "failed_description": "画像の拡大中に問題が発生しました",
-      "completed_badge": "拡大完了",
+      "no_image_description": "アップスケールされた結果を表示するには画像をアップロードしてください",
+      "processing_preview_alt": "処理中プレビュー",
+      "uploading_description": "処理用画像を準備中",
+      "processing_description": "AIが画像をアップスケール・向上中",
+      "failed_title": "処理に失敗しました",
+      "failed_description": "画像のアップスケール中に問題が発生しました",
+      "completed_badge": "アップスケール完了",
       "click_to_enlarge": "クリックして拡大・比較",
       "standard_resolution": "標準解像度",
-      "ai_upscaled": "AI拡大・高画質化",
+      "ai_upscaled": "AI アップスケール・向上済み",
       "original_image_alt": "オリジナル画像"
     },
     "messages": {
       "upload_required": "まず画像をアップロードしてください",
-      "insufficient_credits": "クレジット不足。拡大には${credits}クレジットが必要です。",
+      "insufficient_credits": "クレジット不足。アップスケールには${credits}クレジットが必要です。",
       "uploading": "画像をアップロード中...",
-      "processing_start": "拡大処理を開始中...",
-      "success": "画像の拡大に成功しました！",
-      "failed": "拡大失敗",
-      "error": "画像の拡大に失敗しました",
-      "download_preparing": "ダウンロード準備中...",
-      "download_success": "画像のダウンロードに成功しました！",
-      "download_failed": "画像のダウンロードに失敗しました"
+      "processing_start": "アップスケール処理を開始中...",
+      "success": "画像のアップスケールが成功しました！",
+      "failed": "アップスケールに失敗しました",
+      "error": "画像のアップスケールに失敗しました",
+      "download_preparing": "ダウンロードを準備中...",
+      "download_success": "画像のダウンロードが成功しました！",
+      "download_failed": "画像のダウンロードに失敗しました",
+      "image_loaded": "画像の読み込みが成功しました",
+      "image_load_failed": "URLから画像の読み込みに失敗しました",
+      "url_validation_timeout": "URL検証がタイムアウトしました。再試行してください。",
+      "url_cors_error": "CORSポリシーのため画像にアクセスできません。ファイルを直接アップロードしてください。",
+      "url_network_error": "画像URL検証中にネットワークエラーが発生しました",
+      "url_size_unknown": "URLから画像サイズを特定できません",
+      "url_format_unknown": "URLから画像形式を特定できません",
+      "url_bypassed_validation": "制限によりURL検証をバイパスしました",
+      "image_from_history": "作成履歴から画像を読み込みました",
+      "ready_to_enhance": "画像の向上準備完了",
+      "url_mode_active": "URLモード - 再アップロードなしで直接処理"
     }
   },
   "faq": {
     "title": "よくある質問",
-    "description": "Nano Banana Image Upscalerに関するよくある質問への回答。",
+    "description": "Nano Banana 画像アップスケーラーについてよくある質問への回答。",
     "contact": {
       "question_text": "他にご質問はありますか？",
-      "support_link": "サポートチームにお問い合わせ"
+      "support_link": "サポートチームにお問い合わせください"
     },
     "items": [
       {
-        "question": "Nano Banana Image Upscalerとは何ですか？",
-        "answer": "Nano Banana Image Upscalerは、最先端の機械学習アルゴリズムを使用して画像を拡大し、品質を向上させる先進的なAI駆動の画像高画質化ツールです。細かい詳細を保持・強調しながら画像解像度を最大4倍まで向上させることができ、写真家、デザイナー、コンテンツクリエイターに最適です。"
+        "question": "Nano Banana 画像アップスケーラーとは何ですか？",
+        "answer": "Nano Banana 画像アップスケーラーは、最先端の機械学習アルゴリズムを使用してアップスケールと画像品質向上を行う高度なAI駆動画像向上ツールです。細部を保持・向上させながら画像解像度を最大4倍まで増加させ、写真家、デザイナー、コンテンツクリエイターに最適です。"
       },
       {
-        "question": "Nano Banana Image Upscalerはどのように機能しますか？",
-        "answer": "Nano Banana Image Upscalerは、数百万の高品質画像で訓練された洗練された深層学習モデルを採用しています。AIは画像のコンテンツを分析し、パターンとテクスチャを識別し、失われたピクセルをインテリジェントに再構築して、明瞭度と詳細が強調された高解像度バージョンを作成します。"
+        "question": "Nano Banana 画像アップスケーラーはどのように動作しますか？",
+        "answer": "Nano Banana 画像アップスケーラーは、何百万もの高品質画像で訓練された高度な深層学習モデルを採用しています。AIが画像の内容を分析し、パターンとテクスチャを識別した後、失われたピクセルを知的に再構築して、向上された明瞭度と細部を持つより高解像度版を作成します。"
       },
       {
-        "question": "Nano Banana Image Upscalerはどの画像フォーマットをサポートしていますか？",
-        "answer": "Nano Banana Image UpscalerはJPEG、PNG、WebP、TIFFを含む人気の画像フォーマットをサポートしています。最大10MBまでの画像をアップロードでき、ウェブグラフィックスと高解像度写真プロジェクトの両方に適しています。"
+        "question": "Nano Banana 画像アップスケーラーはどの画像形式をサポートしていますか？",
+        "answer": "Nano Banana 画像アップスケーラーは、JPEG、PNG、WebP、TIFFなどの人気のある画像形式をサポートしています。最大10MBの画像をアップロードでき、ウェブグラフィックと高解像度写真プロジェクトの両方に適しています。"
       },
       {
-        "question": "Nano Banana Image Upscalerの使用料金はいくらですか？",
-        "answer": "Nano Banana Image Upscalerでの各画像高画質化は2クレジットです。これにより、商用および個人使用プロジェクトに適したプロフェッショナルグレードの拡大と高画質化機能を提供します。"
+        "question": "Nano Banana 画像アップスケーラーの使用料金はいくらですか？",
+        "answer": "Nano Banana 画像アップスケーラーでの各画像向上は2クレジットです。これにより、商用および個人使用プロジェクトに適したプロ仕様のアップスケーリングと向上機能を提供します。"
       },
       {
-        "question": "Nano Banana Image Upscalerで高画質化された画像を商用目的で使用できますか？",
-        "answer": "はい、Nano Banana Image Upscalerで処理されたすべての画像は商用利用に適しています。高画質化された画像はプロフェッショナル品質基準を維持し、ビジネスプロジェクト、マーケティング資料、商業アプリケーションに使用できます。"
+        "question": "Nano Banana 画像アップスケーラーで向上した画像を商用目的で使用できますか？",
+        "answer": "はい、Nano Banana 画像アップスケーラーで処理されたすべての画像は商用利用に適しています。向上された画像はプロフェッショナル品質基準を維持し、ビジネスプロジェクト、マーケティング資料、商用アプリケーションに使用できます。"
       },
       {
-        "question": "Nano Banana Image Upscalerが画像を処理するのにどのくらい時間がかかりますか？",
-        "answer": "Nano Banana Image Upscalerは通常、元の画像サイズと選択した高画質化オプションに応じて、30〜60秒以内に画像を処理します。最適化されたAIインフラストラクチャにより、高品質な結果を維持しながら高速処理を保証します。"
+        "question": "Nano Banana 画像アップスケーラーで画像を処理するのにどのくらい時間がかかりますか？",
+        "answer": "Nano Banana 画像アップスケーラーは通常、元の画像サイズと選択された向上オプションに応じて、30-60秒以内に画像を処理します。我々の最適化されたAIインフラストラクチャは、高品質な結果を維持しながら高速処理を保証します。"
       },
       {
-        "question": "Nano Banana Image Upscalerで利用可能な最大拡大率は何ですか？",
-        "answer": "Nano Banana Image Upscalerは画像を元の解像度の最大4倍まで拡大できます。例えば、512x512ピクセルの画像を2048x2048ピクセルに高画質化でき、自然な外観とシャープな詳細品質を維持します。"
+        "question": "Nano Banana 画像アップスケーラーで利用可能な最大アップスケーリング倍率は何倍ですか？",
+        "answer": "Nano Banana 画像アップスケーラーは、画像を元の解像度の最大4倍までアップスケールできます。例えば、512x512ピクセルの画像を自然な外観とシャープな細部品質を維持しながら2048x2048ピクセルに向上できます。"
       },
       {
-        "question": "Nano Banana Image Upscalerは異なるタイプの画像でもうまく機能しますか？",
-        "answer": "はい、Nano Banana Image Upscalerはポートレート、風景、アートワーク、グラフィックス、写真など、様々な画像タイプで効果的に機能するように設計されています。AIモデルは多様な画像カテゴリで訓練されており、異なるコンテンツタイプ全体で最適な高画質化を保証します。"
+        "question": "Nano Banana 画像アップスケーラーは様々なタイプの画像でうまく機能しますか？",
+        "answer": "はい、Nano Banana 画像アップスケーラーは、肖像画、風景、アートワーク、グラフィック、写真など様々な画像タイプで効果的に機能するよう設計されています。AIモデルは、様々なコンテンツタイプにわたって最適な向上を保証するため、多様な画像カテゴリで訓練されています。"
       }
     ]
   }

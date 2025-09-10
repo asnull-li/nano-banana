@@ -62,7 +62,14 @@
       "replace_tooltip": "替换图片",
       "drop_text": "释放上传",
       "click_or_drag": "点击或拖拽上传",
-      "processing": "处理中..."
+      "processing": "处理中...",
+      "url_mode_indicator": "从链接加载的图像",
+      "file_mode_indicator": "从文件上传的图像",
+      "validating_url": "正在验证图像链接...",
+      "url_validation_failed": "无法验证图像链接",
+      "url_too_large": "链接中的图像过大（最大10MB）",
+      "url_invalid_format": "链接未指向有效的图像文件",
+      "cors_warning": "由于CORS限制无法验证"
     },
     "controls": {
       "title": "控制面板",
@@ -87,7 +94,10 @@
       "uploading": "正在上传图像...",
       "processing": "处理中...",
       "completed": "图像增强成功完成",
-      "error": "增强失败，请重试"
+      "error": "增强失败，请重试",
+      "validating": "正在验证图像...",
+      "url_ready": "图像链接验证成功",
+      "url_processing": "正在处理来自链接的图像..."
     },
     "results": {
       "title": "预览窗口",
@@ -122,7 +132,16 @@
       "download_success": "图像下载成功！",
       "download_failed": "下载图像失败",
       "image_loaded": "图像加载成功",
-      "image_load_failed": "图像加载失败"
+      "image_load_failed": "图像加载失败",
+      "url_validation_timeout": "链接验证超时，请重试。",
+      "url_cors_error": "由于CORS策略无法访问图像，请尝试直接上传文件。",
+      "url_network_error": "验证图像链接时发生网络错误",
+      "url_size_unknown": "无法从链接确定图像大小",
+      "url_format_unknown": "无法从链接确定图像格式",
+      "url_bypassed_validation": "由于限制跳过了链接验证",
+      "image_from_history": "从创作历史加载的图像",
+      "ready_to_enhance": "准备增强您的图像",
+      "url_mode_active": "链接模式 - 直接处理无需重新上传"
     }
   },
   "faq": {
