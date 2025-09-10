@@ -26,6 +26,7 @@ export interface PricingItem {
   amount: number;
   cn_amount?: number;
   currency: string;
+  original_cn_price?: string;
   credits?: number;
   valid_months?: number;
   group?: string;

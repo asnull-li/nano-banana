@@ -186,6 +186,15 @@ export default function Pricing({ pricing }: { pricing: PricingType }) {
                             {pricing.save_yearly}
                           </Badge>
                         )}
+                        {item.title === "积分包" && (
+                          <div className="relative">
+                            <Badge className="bg-gradient-to-r from-red-500 to-orange-500 text-white border-0 px-3 py-1.5 font-bold text-sm animate-pulse shadow-lg">
+                              <span className="mr-1">🔥</span>
+                              降50%
+                            </Badge>
+                            <div className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full animate-ping"></div>
+                          </div>
+                        )}
                       </Label>
                     </div>
                   );
@@ -296,22 +305,33 @@ export default function Pricing({ pricing }: { pricing: PricingType }) {
                           </span>
                         </div>
                       )}
+                      {item.original_cn_price && item.cn_amount && (
+                        <div className="flex items-center gap-3 mb-4">
+                          <div className="flex flex-col gap-1">
+                            <div className="flex items-center gap-2">
+                              <span className="text-lg text-gray-400 line-through">
+                                {item.original_cn_price}
+                              </span>
+                              <span className="text-2xl font-bold text-green-600">
+                                ¥{(item.cn_amount / 100).toFixed(2)}
+                              </span>
+                            </div>
+                          </div>
+                          <div className="relative">
+                            <Badge className="bg-gradient-to-r from-red-500 to-orange-500 text-white border-0 px-3 py-1.5 font-bold text-sm animate-pulse shadow-lg">
+                              <span className="mr-1">🔥</span>
+                              降50%
+                            </Badge>
+                            <div className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full animate-ping"></div>
+                          </div>
+                        </div>
+                      )}
                       {item.cn_amount &&
                       item.cn_amount > 0 &&
                       item.interval === "one-time" &&
                       item.title === "试用积分包" ? (
                         <div className="mb-6">
                           <div className="flex flex-col gap-2">
-                            <div className="flex items-center gap-3">
-                              {item.amount && (
-                                <span className="text-lg text-gray-400 line-through">
-                                  ¥{((item.amount / 100) * 7).toFixed(2)}
-                                </span>
-                              )}
-                              <span className="text-2xl font-bold text-green-600">
-                                ¥{(item.cn_amount / 100).toFixed(2)}
-                              </span>
-                            </div>
                             <Badge
                               variant="outline"
                               className="bg-orange-100 text-orange-700 border-orange-200 text-xs px-2 py-0.5 w-fit"
