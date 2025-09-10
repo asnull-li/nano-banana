@@ -13,14 +13,14 @@
     "nav": {
       "items": [
         {
-          "title": "创作记录",
-          "url": "/history",
-          "icon": "RiHistoryLine"
-        },
-        {
           "title": "图像增强",
           "url": "/ai-image-upscaler",
           "icon": "RiImageAiFill"
+        },
+        {
+          "title": "创作记录",
+          "url": "/history",
+          "icon": "RiHistoryLine"
         },
         {
           "title": "定价",
@@ -34,15 +34,6 @@
         }
       ]
     },
-    "buttons": [
-      {
-        "title": "获取 Nano Banana",
-        "url": "/#nano-banana",
-        "target": "_self",
-        "variant": "link",
-        "icon": "RiArrowRightUpLine"
-      }
-    ],
     "show_sign": true,
     "show_theme": true,
     "show_locale": true

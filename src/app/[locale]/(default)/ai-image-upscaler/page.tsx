@@ -1,7 +1,11 @@
 import { Metadata } from "next";
 import { setRequestLocale } from "next-intl/server";
 import { getAiImageUpscalerPage } from "@/services/page";
-import UpscalerPageClient from "./page-client";
+import HeroSection from "@/components/workspace/upscaler/hero-section";
+import FeaturesSection from "@/components/workspace/upscaler/features-section";
+import HowToUseSection from "@/components/workspace/upscaler/how-to-use-section";
+import FaqSection from "@/components/workspace/upscaler/faq-section";
+import UpscalerWorkspace from "@/components/workspace/upscaler";
 
 export async function generateMetadata({
   params,
@@ -21,8 +25,12 @@ export async function generateMetadata({
   }
 
   return {
-    title: metadata?.title || "Nano Banana Image Upscaler - AI Photo Enhancement Tool",
-    description: metadata?.description || "Nano Banana Image Upscaler uses advanced AI technology to enhance and upscale your photos with professional quality.",
+    title:
+      metadata?.title ||
+      "Nano Banana Image Upscaler - AI Photo Enhancement Tool",
+    description:
+      metadata?.description ||
+      "Nano Banana Image Upscaler uses advanced AI technology to enhance and upscale your photos with professional quality.",
     alternates: {
       canonical: canonicalUrl,
     },
@@ -37,5 +45,25 @@ export default async function WorkspacePage({
   const { locale } = await params;
   const page = await getAiImageUpscalerPage(locale);
 
-  return <UpscalerPageClient pageData={page} />;
+  return (
+    <>
+      {/* Hero Section */}
+      <HeroSection pageData={page} />
+
+      {/* Workspace Section */}
+      <UpscalerWorkspace
+        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12"
+        pageData={page}
+      />
+
+      {/* Features Section */}
+      <FeaturesSection pageData={page} />
+
+      {/* How To Use Section */}
+      <HowToUseSection pageData={page} />
+
+      {/* FAQ Section */}
+      <FaqSection pageData={page} />
+    </>
+  );
 }

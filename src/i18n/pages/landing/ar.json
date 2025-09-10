@@ -13,14 +13,14 @@
     "nav": {
       "items": [
         {
-          "title": "سجل الإنشاءات",
-          "url": "/history",
-          "icon": "RiHistoryLine"
-        },
-        {
           "title": "تحسين جودة الصور",
           "url": "/ai-image-upscaler",
           "icon": "RiImageAiFill"
+        },
+        {
+          "title": "سجل الإنشاءات",
+          "url": "/history",
+          "icon": "RiHistoryLine"
         },
         {
           "title": "التسعير",
@@ -34,15 +34,6 @@
         }
       ]
     },
-    "buttons": [
-      {
-        "title": "احصل على Nano Banana",
-        "url": "/#nano-banana",
-        "target": "_self",
-        "variant": "link",
-        "icon": "RiArrowRightUpLine"
-      }
-    ],
     "show_sign": true,
     "show_theme": true,
     "show_locale": true
