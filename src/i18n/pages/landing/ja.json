@@ -13,15 +13,16 @@
     "nav": {
       "items": [
         {
-          "title": "作成履歴",
-          "url": "/history",
-          "icon": "RiHistoryLine"
-        },
-        {
           "title": "画像超解像",
           "url": "/ai-image-upscaler",
           "icon": "RiImageAiFill"
         },
+        {
+          "title": "作成履歴",
+          "url": "/history",
+          "icon": "RiHistoryLine"
+        },
+
         {
           "title": "料金",
           "url": "/pricing",
@@ -34,15 +35,7 @@
         }
       ]
     },
-    "buttons": [
-      {
-        "title": "Nano Bananaを始める",
-        "url": "/#nano-banana",
-        "target": "_self",
-        "variant": "link",
-        "icon": "RiArrowRightUpLine"
-      }
-    ],
+
     "show_sign": true,
     "show_theme": true,
     "show_locale": true

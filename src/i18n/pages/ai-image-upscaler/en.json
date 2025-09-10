@@ -1,11 +1,11 @@
 {
   "meta": {
     "title": "Nano Banana Image Upscaler Online - AI Photo Enhancement Tool",
-    "description": "Nano Banana Image Upscaler uses advanced AI technology to enhance and upscale your photos with professional quality. Transform low-resolution images into high-definition masterpieces."
+    "description": "Uses advanced AI technology to enhance and upscale your photos with professional quality. Transform low-resolution images into high-definition masterpieces."
   },
   "hero": {
     "title": "Nano Banana Image Upscaler",
-    "description": "Professional AI-powered image enhancement and upscaling technology for stunning visual results."
+    "description": "Professional AI-driven image upscale technology improves the output image quality of Nano Banana, creating stunning visual effects."
   },
   "features": {
     "title": "Experience Professional Image Enhancement with Advanced AI Technology",
@@ -51,7 +51,7 @@
     "title": "Nano Banana Image Upscaler Workspace",
     "description": "Professional image enhancement workspace powered by advanced AI technology.",
     "upload_zone": {
-      "title": "Upload Image for Enhancement",
+      "title": "Upload Image",
       "description": "Drag and drop or click to upload your image to Nano Banana Image Upscaler",
       "supported_formats": "Supported formats: JPEG, PNG, WebP",
       "max_size": "Maximum file size: 10MB",
@@ -66,7 +66,7 @@
     },
     "controls": {
       "title": "CONTROLS",
-      "scale_factor": "Upscale Factor",
+      "scale_factor": "Factor",
       "enhance_details": "Detail Enhancement",
       "noise_reduction": "Noise Reduction",
       "processing_mode": "Processing Mode",

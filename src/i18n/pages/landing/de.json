@@ -13,14 +13,14 @@
     "nav": {
       "items": [
         {
-          "title": "Erstellungshistorie",
-          "url": "/history",
-          "icon": "RiHistoryLine"
-        },
-        {
           "title": "Bild-Upscaler",
           "url": "/ai-image-upscaler",
           "icon": "RiImageAiFill"
+        },
+        {
+          "title": "Erstellungshistorie",
+          "url": "/history",
+          "icon": "RiHistoryLine"
         },
         {
           "title": "Preise",
@@ -34,15 +34,6 @@
         }
       ]
     },
-    "buttons": [
-      {
-        "title": "Nano Banana erhalten",
-        "url": "/#nano-banana",
-        "target": "_self",
-        "variant": "link",
-        "icon": "RiArrowRightUpLine"
-      }
-    ],
     "show_sign": true,
     "show_theme": true,
     "show_locale": true

@@ -13,14 +13,14 @@
     "nav": {
       "items": [
         {
-          "title": "My Creations",
-          "url": "/history",
-          "icon": "RiHistoryLine"
-        },
-        {
           "title": "Image Upscaler",
           "url": "/ai-image-upscaler",
           "icon": "RiImageAiFill"
+        },
+        {
+          "title": "My Creations",
+          "url": "/history",
+          "icon": "RiHistoryLine"
         },
         {
           "title": "Pricing",
