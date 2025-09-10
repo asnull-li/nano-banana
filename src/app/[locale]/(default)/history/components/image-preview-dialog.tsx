@@ -18,6 +18,7 @@ import {
 } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { toast } from "sonner";
+import { useRouter } from "@/i18n/navigation";
 
 interface ImagePreviewDialogProps {
   images: string[] | null;
@@ -31,6 +32,7 @@ export default function ImagePreviewDialog({
   onDownload,
 }: ImagePreviewDialogProps) {
   const t = useTranslations("history");
+  const router = useRouter();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
 
@@ -61,8 +63,26 @@ export default function ImagePreviewDialog({
   };
 
   const handleEnhance = () => {
-    // 显示敬请期待的提示
-    toast.info(t("coming_soon"));
+    if (!currentImage) {
+      toast.error(t("no_image_selected") || "No image selected");
+      return;
+    }
+
+    try {
+      // 验证图片URL是否有效
+      new URL(currentImage);
+
+      // 将当前图片URL作为查询参数，跳转到AI图像放大器页面
+      const searchParams = new URLSearchParams();
+      searchParams.set("imageUrl", currentImage);
+
+      // toast.info(t("redirecting_to_upscaler") || "Redirecting to image upscaler...");
+      router.push(`/ai-image-upscaler?${searchParams.toString()}`);
+      onClose();
+    } catch (error) {
+      console.error("Invalid image URL:", error);
+      toast.error(t("invalid_image_url") || "Invalid image URL");
+    }
   };
 
   return (
@@ -116,7 +136,7 @@ export default function ImagePreviewDialog({
                 <Button
                   size="sm"
                   variant="outline"
-                  className="flex-1 max-w-[120px] sm:max-w-[150px] border-white/30 bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 hover:border-white/50 text-xs sm:text-sm"
+                  className="flex-1 max-w-[120px] sm:max-w-[150px] bg-gradient-to-r from-green-500 to-cyan-500 text-white hover:from-green-600 hover:to-cyan-600 shadow-lg shadow-green-500/25 backdrop-blur-sm text-xs sm:text-sm"
                   onClick={handleEnhance}
                 >
                   <Sparkles className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />

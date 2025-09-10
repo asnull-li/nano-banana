@@ -1,6 +1,17 @@
 {
   "metadata": {
-    "title": "Erstellungsverlauf - Nano Banana",
-    "description": "Anzeigen und verwalten Sie Ihren KI-generierten Bilderstellungsverlauf"
-  }
+    "title": "Creation History - Nano Banana",
+    "description": "View and manage your AI-generated image creation history"
+  },
+  "image_preview": "Image Preview",
+  "download": "Download",
+  "enhance_image": "Enhance Image",
+  "copy_link": "Copy Link",
+  "copied": "Copied",
+  "link_copied": "Link copied to clipboard",
+  "copy_failed": "Failed to copy",
+  "coming_soon": "Coming Soon",
+  "no_image_selected": "No image selected",
+  "redirecting_to_upscaler": "Redirecting to image upscaler...",
+  "invalid_image_url": "Invalid image URL"
 }

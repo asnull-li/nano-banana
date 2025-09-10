@@ -85,7 +85,7 @@
     },
     "status": {
       "uploading": "正在上传图像...",
-      "processing": "正在使用AI技术增强图像...",
+      "processing": "处理中...",
       "completed": "图像增强成功完成",
       "error": "增强失败，请重试"
     },
@@ -120,7 +120,9 @@
       "error": "图像放大失败",
       "download_preparing": "正在准备下载...",
       "download_success": "图像下载成功！",
-      "download_failed": "下载图像失败"
+      "download_failed": "下载图像失败",
+      "image_loaded": "图像加载成功",
+      "image_load_failed": "图像加载失败"
     }
   },
   "faq": {

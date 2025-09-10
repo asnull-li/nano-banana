@@ -39,11 +39,17 @@ export async function generateMetadata({
 
 export default async function WorkspacePage({
   params,
+  searchParams,
 }: {
   params: Promise<{ locale: string }>;
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }) {
   const { locale } = await params;
+  const resolvedSearchParams = await searchParams;
   const page = await getAiImageUpscalerPage(locale);
+  
+  // 从URL查询参数中获取初始图片URL
+  const initialImageUrl = typeof resolvedSearchParams.imageUrl === 'string' ? resolvedSearchParams.imageUrl : null;
 
   return (
     <>
@@ -54,6 +60,7 @@ export default async function WorkspacePage({
       <UpscalerWorkspace
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12"
         pageData={page}
+        initialImageUrl={initialImageUrl}
       />
 
       {/* Features Section */}

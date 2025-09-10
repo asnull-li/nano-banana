@@ -85,7 +85,7 @@
     },
     "status": {
       "uploading": "Uploading image for processing...",
-      "processing": "Enhancing image with AI technology...",
+      "processing": "Procesando...",
       "completed": "Image enhancement completed successfully",
       "error": "Enhancement failed, please try again"
     },

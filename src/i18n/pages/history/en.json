@@ -2,5 +2,45 @@
   "metadata": {
     "title": "Creation History - Nano Banana",
     "description": "View and manage your AI-generated image creation history"
-  }
+  },
+  "status": {
+    "completed": "Completed",
+    "failed": "Failed",
+    "processing": "Processing",
+    "pending": "Pending"
+  },
+  "actions": {
+    "view": "View",
+    "download": "Download",
+    "delete": "Delete",
+    "enhance": "Enhance"
+  },
+  "labels": {
+    "prompt": "Prompt",
+    "images": "Images",
+    "credits": "Credits",
+    "created_at": "Created",
+    "provider": "Provider"
+  },
+  "messages": {
+    "no_tasks": "No creation history",
+    "loading": "Loading...",
+    "load_more": "Load More",
+    "delete_confirm": "Are you sure you want to delete this task?",
+    "delete_success": "Deleted successfully",
+    "delete_failed": "Failed to delete",
+    "download_success": "Downloaded successfully",
+    "download_failed": "Failed to download"
+  },
+  "image_preview": "Image Preview",
+  "download": "Download",
+  "enhance_image": "Enhance Image",
+  "copy_link": "Copy Link",
+  "copied": "Copied",
+  "link_copied": "Link copied to clipboard",
+  "copy_failed": "Failed to copy",
+  "coming_soon": "Coming Soon",
+  "no_image_selected": "No image selected",
+  "redirecting_to_upscaler": "Redirecting to image upscaler...",
+  "invalid_image_url": "Invalid image URL"
 }

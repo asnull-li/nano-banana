@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { toast } from "sonner";
@@ -17,6 +17,7 @@ import { useRouter } from "@/i18n/navigation";
 export interface UpscalerWorkspaceProps {
   className?: string;
   pageData?: any;
+  initialImageUrl?: string | null;
 }
 
 export interface UpscalerTask {
@@ -30,11 +31,16 @@ export interface UpscalerTask {
     face_enhance: boolean;
   } | null;
   error?: string;
+  // 新增字段支持URL模式
+  isUrlMode?: boolean;
+  originalFileName?: string;
+  originalContentType?: string;
 }
 
 export default function UpscalerWorkspace({
   className,
   pageData,
+  initialImageUrl,
 }: UpscalerWorkspaceProps) {
   const [task, setTask] = useState<UpscalerTask>({
     id: "",
@@ -42,6 +48,9 @@ export default function UpscalerWorkspace({
     originalImage: null,
     upscaledImage: null,
     input: null,
+    isUrlMode: false,
+    originalFileName: undefined,
+    originalContentType: undefined,
   });
 
   const [uploadedFile, setUploadedFile] = useState<File | null>(null);
@@ -52,11 +61,11 @@ export default function UpscalerWorkspace({
   const { user, setShowSignModal } = useAppContext();
   const { submitUpscaleTask, getTaskStatus, uploadImage } = useUpscalerAPI();
   const router = useRouter();
-  const canGenerate = uploadedFile && task.status === "idle";
+  const canGenerate = (uploadedFile || task.isUrlMode) && task.status === "idle";
   const isProcessing =
     task.status === "uploading" || task.status === "processing";
 
-  const handleImageUpload = (file: File, preview: string) => {
+  const handleImageUpload = useCallback((file: File, preview: string) => {
     setUploadedFile(file);
     setTask((prev) => ({
       ...prev,
@@ -64,8 +73,162 @@ export default function UpscalerWorkspace({
       upscaledImage: null,
       status: "idle",
       error: undefined,
+      isUrlMode: false,
+      originalFileName: file.name,
+      originalContentType: file.type,
     }));
-  };
+  }, []);
+
+  // 处理从URL加载的图片（不下载，直接使用URL）
+  const handleImageUploadFromUrl = useCallback((url: string, filename: string, contentType: string) => {
+    // 清除File对象，因为我们使用URL模式
+    setUploadedFile(null);
+    setTask((prev) => ({
+      ...prev,
+      originalImage: url, // 直接使用原始URL作为预览
+      upscaledImage: null,
+      status: "idle",
+      error: undefined,
+      isUrlMode: true,
+      originalFileName: filename,
+      originalContentType: contentType,
+    }));
+  }, []);
+
+  // 验证图片URL并直接使用（不下载）
+  const loadImageFromUrl = useCallback(
+    async (url: string) => {
+      try {
+        // 验证URL格式
+        let validUrl: URL;
+        try {
+          validUrl = new URL(url);
+        } catch {
+          throw new Error("Invalid URL format");
+        }
+
+        // 检查是否为图片URL（基本检查）
+        const validExtensions = [".jpg", ".jpeg", ".png", ".webp", ".gif"];
+        const hasImageExtension = validExtensions.some((ext) =>
+          validUrl.pathname.toLowerCase().endsWith(ext)
+        );
+
+        if (
+          !hasImageExtension &&
+          !url.includes("blob:") &&
+          !url.includes("data:")
+        ) {
+          // 如果没有明显的图片扩展名，我们仍然尝试验证，但给出提示
+          console.warn(
+            "URL might not be an image, but attempting to validate anyway"
+          );
+        }
+
+        setTask((prev) => ({ ...prev, status: "uploading" }));
+
+        // 使用HEAD请求验证图片信息（不下载内容）
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 15000); // 15秒超时（HEAD请求更快）
+
+        let response: Response;
+        let contentType = "";
+        let contentLength: string | null = null;
+
+        try {
+          response = await fetch(url, {
+            method: "HEAD",
+            signal: controller.signal,
+            mode: "cors",
+            headers: {
+              Accept: "image/*",
+            },
+          });
+
+          clearTimeout(timeoutId);
+
+          if (!response.ok) {
+            throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+          }
+
+          contentType = response.headers.get("content-type") || "";
+          contentLength = response.headers.get("content-length");
+        } catch (headError) {
+          clearTimeout(timeoutId);
+          
+          // HEAD请求失败时的降级策略：直接使用URL但发出警告
+          console.warn("HEAD request failed, proceeding with URL validation bypass:", headError);
+          
+          // 基于URL扩展名进行基本验证
+          if (!hasImageExtension && !url.includes("blob:") && !url.includes("data:")) {
+            throw new Error("Unable to validate image format. Please ensure the URL points to a valid image file.");
+          }
+          
+          // 跳过其他验证，直接使用URL
+          contentType = "image/jpeg"; // 默认类型
+          console.warn("Proceeding without server-side validation due to CORS or network restrictions.");
+        }
+
+        // 验证内容类型（如果获得了响应）
+        if (contentType && !contentType.startsWith("image/")) {
+          throw new Error(
+            `Invalid content type: ${contentType}. Expected an image.`
+          );
+        }
+
+        // 检查文件大小（从Content-Length头部，如果可用）
+        if (contentLength) {
+          const fileSize = parseInt(contentLength, 10);
+          const maxSize = 10 * 1024 * 1024; // 10MB
+          if (fileSize > maxSize) {
+            throw new Error("Image is too large. Maximum size is 10MB.");
+          }
+        }
+
+        // 直接使用原始URL进行预览和处理
+        handleImageUploadFromUrl(url, validUrl.pathname.split("/").pop() || "image.jpg", contentType);
+
+        // toast.success(pageData?.workspace?.messages?.image_loaded || "Image loaded successfully");
+      } catch (error) {
+        console.error("Failed to validate image from URL:", error);
+
+        let errorMessage =
+          pageData?.workspace?.messages?.image_load_failed ||
+          "Failed to load image from URL";
+
+        // 提供更具体的错误消息
+        if (error instanceof Error) {
+          if (error.name === "AbortError") {
+            errorMessage = "Request timed out. Please try again.";
+          } else if (error.message.includes("CORS")) {
+            errorMessage =
+              "Unable to access image due to CORS policy. Please try uploading the image directly.";
+          } else if (error.message.includes("Invalid URL")) {
+            errorMessage = "Invalid image URL format.";
+          } else if (error.message.includes("Invalid content type")) {
+            errorMessage = "The URL doesn't point to a valid image file.";
+          } else if (error.message.includes("too large")) {
+            errorMessage =
+              "Image is too large. Please use an image smaller than 10MB.";
+          }
+        }
+
+        toast.error(errorMessage);
+        setTask((prev) => ({ ...prev, status: "idle" }));
+      }
+    },
+    [
+      handleImageUploadFromUrl,
+      pageData?.workspace?.messages?.image_loaded,
+      pageData?.workspace?.messages?.image_load_failed,
+    ]
+  );
+
+  // 处理初始图片URL
+  useEffect(() => {
+    if (initialImageUrl && initialImageUrl.trim()) {
+      loadImageFromUrl(initialImageUrl);
+    }
+  }, [initialImageUrl, loadImageFromUrl]);
 
   const handleGenerate = async () => {
     if (!user) {
@@ -73,7 +236,7 @@ export default function UpscalerWorkspace({
       return;
     }
 
-    if (!uploadedFile) {
+    if (!uploadedFile && !task.isUrlMode) {
       toast.error(
         pageData?.workspace?.messages?.upload_required ||
           "Please upload an image first"
@@ -96,21 +259,34 @@ export default function UpscalerWorkspace({
     }
 
     try {
-      // 1. 上传图片
-      setTask((prev) => ({ ...prev, status: "uploading" }));
-      toast.info(
-        pageData?.workspace?.messages?.uploading || "Uploading image..."
-      );
+      let imageUrl: string;
 
-      const imageUrl = await uploadImage(uploadedFile);
+      if (task.isUrlMode) {
+        // URL模式：直接使用原始URL，跳过上传步骤
+        imageUrl = task.originalImage!;
+        setTask((prev) => ({ ...prev, status: "processing" }));
+        toast.info(
+          pageData?.workspace?.messages?.processing_start ||
+            "Starting upscale process..."
+        );
+      } else {
+        // File模式：需要先上传文件
+        setTask((prev) => ({ ...prev, status: "uploading" }));
+        toast.info(
+          pageData?.workspace?.messages?.uploading || "Uploading image..."
+        );
 
-      // 2. 提交放大任务
-      setTask((prev) => ({ ...prev, status: "processing" }));
-      toast.info(
-        pageData?.workspace?.messages?.processing_start ||
-          "Starting upscale process..."
-      );
+        imageUrl = await uploadImage(uploadedFile!);
 
+        // 上传完成后开始处理
+        setTask((prev) => ({ ...prev, status: "processing" }));
+        toast.info(
+          pageData?.workspace?.messages?.processing_start ||
+            "Starting upscale process..."
+        );
+      }
+
+      // 提交放大任务
       const taskId = await submitUpscaleTask({
         input: {
           image: imageUrl,
@@ -193,6 +369,9 @@ export default function UpscalerWorkspace({
       originalImage: null,
       upscaledImage: null,
       input: null,
+      isUrlMode: false,
+      originalFileName: undefined,
+      originalContentType: undefined,
     });
     setUploadedFile(null);
     setScale(2);

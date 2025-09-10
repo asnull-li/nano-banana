@@ -85,7 +85,7 @@
     },
     "status": {
       "uploading": "Uploading image for processing...",
-      "processing": "Enhancing image with AI technology...",
+      "processing": "Processing...",
       "completed": "Image enhancement completed successfully",
       "error": "Enhancement failed, please try again"
     },
@@ -120,7 +120,9 @@
       "error": "Failed to upscale image",
       "download_preparing": "Preparing download...",
       "download_success": "Image downloaded successfully!",
-      "download_failed": "Failed to download image"
+      "download_failed": "Failed to download image",
+      "image_loaded": "Image loaded successfully",
+      "image_load_failed": "Failed to load image from URL"
     }
   },
   "faq": {
