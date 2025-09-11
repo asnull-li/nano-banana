@@ -8,7 +8,7 @@
     "label": "Pricing",
     "title": "Simple and transparent Nano Banana pricing",
     "description": "Choose the perfect plan for your AI image creation needs. ",
-    "save_yearly": "Save 25%",
+    "save_yearly": "Save 50%",
     "cancel_anytime": "Cancel anytime",
     "cancel_subscription_text": "Cancel subscription, please contact the support email:",
     "mo": "mo",
@@ -173,6 +173,8 @@
         "cn_amount": 0,
         "currency": "USD",
         "price": "$16.99",
+        "discount_price": "$11.99",
+        "discount_amount": 14388,
         "original_price": "$89.99",
         "unit": "USD",
         "is_featured": true,
@@ -205,6 +207,8 @@
         "cn_amount": 0,
         "currency": "USD",
         "price": "$69.99",
+        "discount_price": "$44.99",
+        "discount_amount": 53988,
         "original_price": "$179.99",
         "unit": "USD",
         "is_featured": false,
@@ -351,7 +355,7 @@
       },
       {
         "title": "What are annual, monthly subscriptions, and credit packs?",
-        "description": "Annual, monthly subscriptions, and credit packs are Nano Banana's payment plans. Annual subscription is a one-time payment for the entire year with automatic renewal annually, providing all credits for the year at once that are valid for one year, with 25% savings when choosing annual subscription. Monthly subscription automatically charges and refills monthly, with credits valid for one month. Credit packs are one-time purchases that never expire and don't auto-renew. Please check the actual payment amount when paying and choose the appropriate plan."
+        "description": "Annual, monthly subscriptions, and credit packs are Nano Banana's payment plans. Annual subscription is a one-time payment for the entire year with automatic renewal annually, providing all credits for the year at once that are valid for one year, with 50% savings when choosing annual subscription. Monthly subscription automatically charges and refills monthly, with credits valid for one month. Credit packs are one-time purchases that never expire and don't auto-renew. Please check the actual payment amount when paying and choose the appropriate plan."
       },
       {
         "title": "What are credits and how do I use them?",

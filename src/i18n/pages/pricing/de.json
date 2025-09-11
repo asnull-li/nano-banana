@@ -8,7 +8,7 @@
     "label": "Preise",
     "title": "Einfache und transparente Nano Banana Preisgestaltung",
     "description": "Wählen Sie den perfekten Plan für Ihre KI-Bilderstellungsbedürfnisse.",
-    "save_yearly": "25% sparen",
+    "save_yearly": "50% sparen",
     "cancel_anytime": "Jederzeit kündbar",
     "cancel_subscription_text": "Für die Kündigung des Abonnements kontaktieren Sie bitte die Support-E-Mail:",
     "mo": "Mon.",
@@ -173,6 +173,8 @@
         "cn_amount": 0,
         "currency": "USD",
         "price": "$16.99",
+        "discount_price": "$11.99",
+        "discount_amount": 14388,
         "original_price": "$89.99",
         "unit": "USD",
         "is_featured": true,
@@ -205,6 +207,8 @@
         "cn_amount": 0,
         "currency": "USD",
         "price": "$69.99",
+        "discount_price": "$44.99",
+        "discount_amount": 53988,
         "original_price": "$179.99",
         "unit": "USD",
         "is_featured": false,
@@ -351,7 +355,7 @@
       },
       {
         "title": "Was sind Jahres-, Monatsabonnements und Credit-Pakete?",
-        "description": "Jahres-, Monatsabonnements und Credit-Pakete sind die Zahlungspläne von Nano Banana. Das Jahresabonnement ist eine einmalige Zahlung für das gesamte Jahr mit automatischer jährlicher Verlängerung, alle Credits für das Jahr werden auf einmal bereitgestellt und sind ein Jahr gültig, mit 25% Ersparnis bei der Wahl des Jahresabonnements. Das Monatsabonnement wird monatlich automatisch abgebucht und aufgeladen, Credits sind einen Monat gültig. Credit-Pakete sind einmalige Käufe, die nie ablaufen und sich nicht automatisch erneuern. Bitte prüfen Sie beim Bezahlen den tatsächlichen Zahlungsbetrag und wählen Sie den passenden Plan."
+        "description": "Jahres-, Monatsabonnements und Credit-Pakete sind die Zahlungspläne von Nano Banana. Das Jahresabonnement ist eine einmalige Zahlung für das gesamte Jahr mit automatischer jährlicher Verlängerung, alle Credits für das Jahr werden auf einmal bereitgestellt und sind ein Jahr gültig, mit 50% Ersparnis bei der Wahl des Jahresabonnements. Das Monatsabonnement wird monatlich automatisch abgebucht und aufgeladen, Credits sind einen Monat gültig. Credit-Pakete sind einmalige Käufe, die nie ablaufen und sich nicht automatisch erneuern. Bitte prüfen Sie beim Bezahlen den tatsächlichen Zahlungsbetrag und wählen Sie den passenden Plan."
       },
       {
         "title": "Was sind Credits und wie werden sie verwendet?",

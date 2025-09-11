@@ -13,6 +13,8 @@ export interface PricingItem {
   label?: string;
   price?: string;
   original_price?: string;
+  discount_price?: string;
+  discount_amount?: number;
   currency?: string;
   unit?: string;
   features_title?: string;

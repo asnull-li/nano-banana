@@ -8,7 +8,7 @@
     "label": "Precios",
     "title": "Precios simples y transparentes de Nano Banana",
     "description": "Elige el plan perfecto para tus necesidades de creación de imágenes con IA.",
-    "save_yearly": "Ahorra  25%",
+    "save_yearly": "Ahorra  50%",
     "cancel_anytime": "Cancela en cualquier momento",
     "cancel_subscription_text": "Para cancelar la suscripción, contacta con el correo de soporte:",
     "mo": "mes",
@@ -173,6 +173,8 @@
         "cn_amount": 0,
         "currency": "USD",
         "price": "$16.99",
+        "discount_price": "$11.99",
+        "discount_amount": 14388,
         "original_price": "$89.99",
         "unit": "USD",
         "is_featured": true,
@@ -205,6 +207,8 @@
         "cn_amount": 0,
         "currency": "USD",
         "price": "$69.99",
+        "discount_price": "$44.99",
+        "discount_amount": 53988,
         "original_price": "$179.99",
         "unit": "USD",
         "is_featured": false,
@@ -351,7 +355,7 @@
       },
       {
         "title": "¿Qué son las suscripciones anuales, mensuales y paquetes de créditos?",
-        "description": "Las suscripciones anuales, mensuales y paquetes de créditos son los planes de pago de Nano Banana. La suscripción anual es un pago único por todo el año con renovación automática anual, proporcionando todos los créditos del año de una vez que son válidos por un año, con un ahorro del 25% al elegir la suscripción anual. La suscripción mensual se cobra y recarga automáticamente cada mes, con créditos válidos por un mes. Los paquetes de créditos son compras únicas que nunca expiran y no se renuevan automáticamente. Por favor, verifica el monto de pago real al pagar y elige el plan apropiado."
+        "description": "Las suscripciones anuales, mensuales y paquetes de créditos son los planes de pago de Nano Banana. La suscripción anual es un pago único por todo el año con renovación automática anual, proporcionando todos los créditos del año de una vez que son válidos por un año, con un ahorro del 50% al elegir la suscripción anual. La suscripción mensual se cobra y recarga automáticamente cada mes, con créditos válidos por un mes. Los paquetes de créditos son compras únicas que nunca expiran y no se renuevan automáticamente. Por favor, verifica el monto de pago real al pagar y elige el plan apropiado."
       },
       {
         "title": "¿Qué son los créditos y cómo usarlos?",

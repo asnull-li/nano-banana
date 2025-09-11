@@ -8,7 +8,7 @@
     "label": "定价",
     "title": "简单透明的Nano Banana定价",
     "description": "为您的 AI 图像创作需求选择完美的计划。",
-    "save_yearly": "节省25%",
+    "save_yearly": "节省50%",
     "cancel_anytime": "随时取消",
     "cancel_subscription_text": "取消订阅，请联系客服邮箱：",
     "mo": "月",
@@ -173,6 +173,8 @@
         "cn_amount": 142716,
         "currency": "USD",
         "price": "$16.99",
+        "discount_price": "$11.99",
+        "discount_amount": 14388,
         "original_price": "$89.99",
         "unit": "USD",
         "is_featured": true,
@@ -205,6 +207,8 @@
         "cn_amount": 587916,
         "currency": "USD",
         "price": "$69.99",
+        "discount_price": "$44.99",
+        "discount_amount": 53988,
         "original_price": "$179.99",
         "unit": "USD",
         "is_featured": false,
@@ -347,7 +351,7 @@
       },
       {
         "title": "什么是年付、月付、积分包？",
-        "description": "年付、月付、积分包是Nano Banana的付费方案。年付是一次性支付全年费用，以年为周期自动扣款，直接给全年的积分，积分在一年内有效，选择年付订阅可以节省 25% 的费用。月付是每月自动扣款充值，每次充值的积分在一个月内有效。积分包是一次性购买积分，积分永不过期，不会自动扣费。在支付时，请注意查看实际的支付金额，选择合适的方案。"
+        "description": "年付、月付、积分包是Nano Banana的付费方案。年付是一次性支付全年费用，以年为周期自动扣款，直接给全年的积分，积分在一年内有效，选择年付订阅可以节省 50% 的费用。月付是每月自动扣款充值，每次充值的积分在一个月内有效。积分包是一次性购买积分，积分永不过期，不会自动扣费。在支付时，请注意查看实际的支付金额，选择合适的方案。"
       },
       {
         "title": "积分是什么，如何使用？",

@@ -8,7 +8,7 @@
     "label": "Tarifs",
     "title": "Tarification simple et transparente de Nano Banana",
     "description": "Choisissez le plan parfait pour vos besoins de création d'images IA.",
-    "save_yearly": "Économisez 25%",
+    "save_yearly": "Économisez 50%",
     "cancel_anytime": "Annuler à tout moment",
     "cancel_subscription_text": "Pour annuler l'abonnement, veuillez contacter l'e-mail de support:",
     "mo": "mois",
@@ -173,6 +173,8 @@
         "cn_amount": 0,
         "currency": "USD",
         "price": "$16.99",
+        "discount_price": "$11.99",
+        "discount_amount": 14388,
         "original_price": "$89.99",
         "unit": "USD",
         "is_featured": true,
@@ -205,6 +207,8 @@
         "cn_amount": 0,
         "currency": "USD",
         "price": "$69.99",
+        "discount_price": "$44.99",
+        "discount_amount": 53988,
         "original_price": "$179.99",
         "unit": "USD",
         "is_featured": false,
@@ -351,7 +355,7 @@
       },
       {
         "title": "Que sont les abonnements annuels, mensuels et les packs de crédits ?",
-        "description": "Les abonnements annuels, mensuels et les packs de crédits sont les plans de paiement de Nano Banana. L'abonnement annuel est un paiement unique pour toute l'année avec renouvellement automatique annuel, fournissant tous les crédits de l'année en une fois valables pour un an, avec 25% d'économies en choisissant l'abonnement annuel. L'abonnement mensuel se recharge automatiquement chaque mois, avec des crédits valables pour un mois. Les packs de crédits sont des achats uniques qui n'expirent jamais et ne se renouvellent pas automatiquement. Veuillez vérifier le montant réel du paiement lors du paiement et choisir le plan approprié."
+        "description": "Les abonnements annuels, mensuels et les packs de crédits sont les plans de paiement de Nano Banana. L'abonnement annuel est un paiement unique pour toute l'année avec renouvellement automatique annuel, fournissant tous les crédits de l'année en une fois valables pour un an, avec 50% d'économies en choisissant l'abonnement annuel. L'abonnement mensuel se recharge automatiquement chaque mois, avec des crédits valables pour un mois. Les packs de crédits sont des achats uniques qui n'expirent jamais et ne se renouvellent pas automatiquement. Veuillez vérifier le montant réel du paiement lors du paiement et choisir le plan approprié."
       },
       {
         "title": "Que sont les crédits et comment les utiliser ?",

@@ -22,6 +22,11 @@ export default function Pricing({ pricing }: { pricing: PricingType }) {
   const t = useTranslations();
 
   const { user, setShowSignModal } = useAppContext();
+  // console.log(user);
+
+  // 是否开启折扣
+  const is_discount = user ? user?.credits.left_credits < 500 : true; // 500积分以下开启折扣
+  // const is_discount = false;
 
   const [group, setGroup] = useState(pricing.groups?.[1]?.name || "yearly");
   const [isLoading, setIsLoading] = useState(false);
@@ -143,6 +148,14 @@ export default function Pricing({ pricing }: { pricing: PricingType }) {
             {pricing.description}
           </p>
         </div>
+        {is_discount && (
+          <div className="flex justify-center mb-4">
+            <Badge className="bg-gradient-to-r ml-1 rounded-full from-red-500 to-orange-500 text-white border-0 px-3 py-1.5 font-bold text-sm  shadow-lg">
+              <span className="mr-1">🔥 LIMITED TIME:</span>
+              {pricing.save_yearly}
+            </Badge>
+          </div>
+        )}
 
         <div className="w-full flex flex-col items-center gap-2">
           {pricing.groups && pricing.groups.length > 0 && (
@@ -178,14 +191,17 @@ export default function Pricing({ pricing }: { pricing: PricingType }) {
                             {item.label}
                           </Badge>
                         )}
-                        {item.name === "yearly" && (
-                          <Badge
-                            variant="outline"
-                            className="border-orange-500 bg-orange-500 px-1.5 ml-2 text-white border-0 shadow-sm"
-                          >
-                            {pricing.save_yearly}
-                          </Badge>
+
+                        {item.name === "yearly" && is_discount && (
+                          <div className="relative">
+                            <Badge className="bg-gradient-to-r from-red-500 to-orange-500 text-white border-0 px-3 py-1.5 font-bold text-sm animate-pulse shadow-lg">
+                              <span className="mr-1">🔥</span>
+                              {pricing.save_yearly}
+                            </Badge>
+                            <div className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full animate-ping"></div>
+                          </div>
                         )}
+
                         {item.title === "积分包" && (
                           <div className="relative">
                             <Badge className="bg-gradient-to-r from-red-500 to-orange-500 text-white border-0 px-3 py-1.5 font-bold text-sm animate-pulse shadow-lg">
@@ -284,7 +300,13 @@ export default function Pricing({ pricing }: { pricing: PricingType }) {
                                 : "text-foreground"
                             }`}
                           >
-                            {item.price}
+                            {/* {item.price} */}
+                            {/* 打折 */}
+                            {item.interval === "year" &&
+                            is_discount &&
+                            item.product_id !== "prod_Ssq8Ltsmjqeiw9-2"
+                              ? item.discount_price
+                              : item.price}
                           </span>
                         )}
                         {item.interval !== "one-time" && (
@@ -301,8 +323,25 @@ export default function Pricing({ pricing }: { pricing: PricingType }) {
                       {item.interval === "year" && (
                         <div className="flex justify-center mb-4">
                           <span className="text-sm font-semibold text-green-600 bg-green-50 dark:bg-green-900/20 px-3 py-1.5 rounded-full border border-green-200 dark:border-green-800">
-                            ${(item.amount / 100).toFixed(2)} / {pricing.year}
+                            {/* ${(item.amount / 100).toFixed(2)} / {pricing.year} */}
+                            {item.interval === "year" &&
+                            is_discount &&
+                            item.discount_amount
+                              ? (item.discount_amount / 100).toFixed(2)
+                              : (item.amount / 100).toFixed(2)}
+                            / {pricing.year}
                           </span>
+                          {item.interval === "year" &&
+                            is_discount &&
+                            item.product_id !== "prod_Ssq8Ltsmjqeiw9-2" && (
+                              <div className="relative">
+                                <Badge className="bg-gradient-to-r ml-1 rounded-full from-red-500 to-orange-500 text-white border-0 px-3 py-1.5 font-bold text-sm animate-pulse shadow-lg">
+                                  <span className="mr-1">🔥</span>
+                                  {pricing.save_yearly}
+                                </Badge>
+                                <div className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full animate-ping"></div>
+                              </div>
+                            )}
                         </div>
                       )}
                       {item.original_cn_price && item.cn_amount && (

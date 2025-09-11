@@ -11,6 +11,8 @@ import { newStripeClient } from "@/integrations/stripe";
 import { Order } from "@/types/order";
 import { newCreemClient } from "@/integrations/creem";
 
+const is_discount = true;
+
 export async function POST(req: Request) {
   try {
     let { product_id, currency, locale } = await req.json();
@@ -53,6 +55,11 @@ export async function POST(req: Request) {
 
     if (interval === "month" && valid_months !== 1) {
       return respErr("invalid valid_months");
+    }
+
+    // 应用折扣价
+    if (interval === "year" && is_discount && item.discount_amount) {
+      amount = item.discount_amount;
     }
 
     if (currency === "cny") {
