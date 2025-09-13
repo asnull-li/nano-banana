@@ -219,11 +219,24 @@ export default function Pricing({ pricing }: { pricing: PricingType }) {
             </div>
           )}
           <div
-            className={`w-full mt-0 grid gap-8 md:grid-cols-${
-              pricing.items?.filter(
-                (item) => !item.group || item.group === group
-              )?.length
-            }`}
+            className={`w-full mt-0 grid gap-8 ${(() => {
+              const itemCount =
+                pricing.items?.filter(
+                  (item) => !item.group || item.group === group
+                )?.length || 1;
+
+              // 预定义的类名映射，确保 Tailwind 能识别
+              const gridColsMap: { [key: number]: string } = {
+                1: "md:grid-cols-1",
+                2: "md:grid-cols-2",
+                3: "md:grid-cols-3",
+                4: "md:grid-cols-4",
+                5: "md:grid-cols-5",
+                6: "md:grid-cols-6",
+              };
+
+              return gridColsMap[itemCount] || "md:grid-cols-1";
+            })()}`}
           >
             {pricing.items?.map((item, index) => {
               if (item.group && item.group !== group) {
