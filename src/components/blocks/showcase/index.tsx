@@ -54,7 +54,7 @@ export default function Showcase({ section }: { section: ShowcaseSection }) {
               : "opacity-0 -translate-y-10"
           }`}
         >
-          <h1 className="mb-6 text-4xl font-bold lg:text-6xl">
+          <h2 className="mb-6 text-4xl font-bold lg:text-6xl">
             <span
               className={`bg-gradient-to-br bg-clip-text text-transparent ${
                 isDark ? "from-white to-gray-300" : "from-gray-900 to-gray-700"
@@ -62,7 +62,7 @@ export default function Showcase({ section }: { section: ShowcaseSection }) {
             >
               {section.title}
             </span>
-          </h1>
+          </h2>
           <p
             className={`mx-auto max-w-2xl text-lg leading-relaxed ${
               isDark ? "text-gray-400" : "text-gray-600"
