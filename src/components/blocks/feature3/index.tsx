@@ -17,15 +17,28 @@ export default function Feature3({ section }: { section: SectionType }) {
       {/* 动态背景 */}
       <div className="absolute inset-0 -z-10">
         {/* 流动的线条 */}
-        <svg className="absolute inset-0 w-full h-full opacity-30 [.dark_&]:opacity-40" xmlns="http://www.w3.org/2000/svg">
+        <svg
+          className="absolute inset-0 w-full h-full opacity-30 [.dark_&]:opacity-40"
+          xmlns="http://www.w3.org/2000/svg"
+        >
           <defs>
-            <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-              <path d="M 40 0 L 0 0 0 40" fill="none" className="stroke-green-500/10 [.dark_&]:stroke-green-400/20" strokeWidth="1"/>
+            <pattern
+              id="grid"
+              width="40"
+              height="40"
+              patternUnits="userSpaceOnUse"
+            >
+              <path
+                d="M 40 0 L 0 0 0 40"
+                fill="none"
+                className="stroke-green-500/10 [.dark_&]:stroke-green-400/20"
+                strokeWidth="1"
+              />
             </pattern>
           </defs>
           <rect width="100%" height="100%" fill="url(#grid)" />
         </svg>
-        
+
         {/* 渐变球体 */}
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-radial from-cyan-500/20 to-transparent [.dark_&]:from-cyan-400/30 rounded-full blur-3xl" />
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-radial from-green-500/20 to-transparent [.dark_&]:from-green-400/30 rounded-full blur-3xl" />
@@ -58,32 +71,42 @@ export default function Feature3({ section }: { section: SectionType }) {
                     value={`tab-${index + 1}`}
                     className="group w-full data-[state=active]:bg-transparent p-0"
                   >
-                    <div className={`relative w-full flex items-start gap-4 p-5 rounded-xl bg-gradient-to-r from-white/60 to-slate-50/40 [.dark_&]:from-slate-800/40 [.dark_&]:to-slate-900/30 border transition-all duration-300 ${
-                      activeTab === `tab-${index + 1}` 
-                        ? 'border-green-500/50 [.dark_&]:border-green-400/60 shadow-lg shadow-green-500/10 [.dark_&]:shadow-green-400/20' 
-                        : 'border-slate-200/60 [.dark_&]:border-slate-700/50 hover:border-green-500/30 [.dark_&]:hover:border-green-400/40'
-                    }`}>
+                    <div
+                      className={`relative w-full flex items-start gap-4 p-5 rounded-xl bg-gradient-to-r from-white/60 to-slate-50/40 [.dark_&]:from-slate-800/40 [.dark_&]:to-slate-900/30 border transition-all duration-300 ${
+                        activeTab === `tab-${index + 1}`
+                          ? "border-green-500/50 [.dark_&]:border-green-400/60 shadow-lg shadow-green-500/10 [.dark_&]:shadow-green-400/20"
+                          : "border-slate-200/60 [.dark_&]:border-slate-700/50 hover:border-green-500/30 [.dark_&]:hover:border-green-400/40"
+                      }`}
+                    >
                       {/* 步骤数字 */}
                       <div className="relative flex-shrink-0">
-                        <div className={`absolute inset-0 bg-gradient-to-br from-green-500 to-cyan-500 [.dark_&]:from-green-400 [.dark_&]:to-cyan-400 rounded-lg blur-md transition-opacity ${
-                          activeTab === `tab-${index + 1}` ? 'opacity-60' : 'opacity-0'
-                        }`} />
-                        <div className={`relative w-10 h-10 rounded-lg flex items-center justify-center font-bold transition-all ${
-                          activeTab === `tab-${index + 1}`
-                            ? 'bg-gradient-to-br from-green-500 to-cyan-500 [.dark_&]:from-green-400 [.dark_&]:to-cyan-400 text-white'
-                            : 'bg-slate-100 [.dark_&]:bg-slate-800 text-slate-600 [.dark_&]:text-slate-400'
-                        }`}>
-                          {String(index + 1).padStart(2, '0')}
+                        <div
+                          className={`absolute inset-0 bg-gradient-to-br from-green-500 to-cyan-500 [.dark_&]:from-green-400 [.dark_&]:to-cyan-400 rounded-lg blur-md transition-opacity ${
+                            activeTab === `tab-${index + 1}`
+                              ? "opacity-60"
+                              : "opacity-0"
+                          }`}
+                        />
+                        <div
+                          className={`relative w-10 h-10 rounded-lg flex items-center justify-center font-bold transition-all ${
+                            activeTab === `tab-${index + 1}`
+                              ? "bg-gradient-to-br from-green-500 to-cyan-500 [.dark_&]:from-green-400 [.dark_&]:to-cyan-400 text-white"
+                              : "bg-slate-100 [.dark_&]:bg-slate-800 text-slate-600 [.dark_&]:text-slate-400"
+                          }`}
+                        >
+                          {String(index + 1).padStart(2, "0")}
                         </div>
                       </div>
 
                       {/* 内容 */}
                       <div className="flex-1">
-                        <h3 className={`font-semibold mb-2 transition-colors ${
-                          activeTab === `tab-${index + 1}`
-                            ? 'text-green-600 [.dark_&]:text-green-400'
-                            : 'text-slate-800 [.dark_&]:text-slate-200'
-                        }`}>
+                        <h3
+                          className={`font-semibold mb-2 transition-colors ${
+                            activeTab === `tab-${index + 1}`
+                              ? "text-green-600 [.dark_&]:text-green-400"
+                              : "text-slate-800 [.dark_&]:text-slate-200"
+                          }`}
+                        >
                           {item.title}
                         </h3>
                         <p className="text-sm text-slate-600 [.dark_&]:text-slate-400 leading-relaxed">
@@ -138,7 +161,7 @@ export default function Feature3({ section }: { section: SectionType }) {
                       <div className="relative group">
                         {/* 装饰边框 */}
                         <div className="absolute -inset-2 bg-gradient-to-r from-green-500 via-cyan-500 to-green-500 [.dark_&]:from-green-400 [.dark_&]:via-cyan-400 [.dark_&]:to-green-400 rounded-2xl blur-lg opacity-30 group-hover:opacity-50 transition-opacity" />
-                        
+
                         {/* 主图片容器 */}
                         <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-slate-100 to-white [.dark_&]:from-slate-900 [.dark_&]:to-slate-800 p-1">
                           <img
@@ -146,7 +169,7 @@ export default function Feature3({ section }: { section: SectionType }) {
                             alt={item.image.alt || item.title}
                             className="w-full h-auto rounded-xl object-cover"
                           />
-                          
+
                           {/* 图片覆盖层 */}
                           <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                         </div>
@@ -154,7 +177,7 @@ export default function Feature3({ section }: { section: SectionType }) {
                         {/* 角标装饰 */}
                         <div className="absolute -top-4 -right-4 w-20 h-20 border-t-2 border-r-2 border-green-500/30 [.dark_&]:border-green-400/50 rounded-tr-2xl" />
                         <div className="absolute -bottom-4 -left-4 w-20 h-20 border-b-2 border-l-2 border-cyan-500/30 [.dark_&]:border-cyan-400/50 rounded-bl-2xl" />
-                        
+
                         {/* 步骤标签 */}
                         <div className="absolute top-4 left-4 bg-black/50 [.dark_&]:bg-white/20 backdrop-blur-sm rounded-lg px-3 py-1">
                           <span className="text-xs font-medium text-white">

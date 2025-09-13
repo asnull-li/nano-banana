@@ -1,0 +1,33 @@
+/* Feature2 组件的自定义动画 */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out;
+}
+
+/* 优化 details/summary 的样式 */
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+details[open] summary ~ * {
+  animation: fade-in 0.3s ease-out;
+}
+
+/* 确保内容在打开时有平滑过渡 */
+details summary {
+  transition: all 0.3s ease;
+}
+
+details[open] summary {
+  margin-bottom: 0;
+}
