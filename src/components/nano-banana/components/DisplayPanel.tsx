@@ -11,8 +11,9 @@ import EmptyState from "./display/EmptyState";
 import ProgressState from "./display/ProgressState";
 import ImagePreview from "./display/ImagePreview";
 import ThumbnailList from "./display/ThumbnailList";
-import ActionButtons from "./display/ActionButtons";
 import AIDescription from "./display/AIDescription";
+import ImageActionBar from "./display/ImageActionBar";
+import ImageViewerDialog from "./display/ImageViewerDialog";
 
 interface DisplayPanelProps {
   status: string;
@@ -36,6 +37,7 @@ export default function DisplayPanel({
   const [copiedId, setCopiedId] = useState<string | null>(null);
   const [selectedResult, setSelectedResult] = useState(0);
   const [elapsedTime] = useState(0);
+  const [isViewerOpen, setIsViewerOpen] = useState(false);
 
   const isProcessing = ["uploading", "processing", "fetching"].includes(status);
 
@@ -102,13 +104,16 @@ export default function DisplayPanel({
         </div>
 
         {/* 主图展示 */}
-        <div className="flex-1 p-6">
-          <ImagePreview 
-            imageUrl={currentResult.url}
-            onDownload={handleDownload}
-            onShare={handleShare}
-            isShared={copiedId === currentResult.url}
-          />
+        <div className="flex-1 p-6 flex items-center justify-center">
+          <div className="w-full max-w-md max-h-96 aspect-square">
+            <ImagePreview 
+              imageUrl={currentResult.url}
+              onDownload={handleDownload}
+              onShare={handleShare}
+              isShared={copiedId === currentResult.url}
+              onImageClick={() => setIsViewerOpen(true)}
+            />
+          </div>
         </div>
 
         {/* 多图缩略图 */}
@@ -118,18 +123,27 @@ export default function DisplayPanel({
           onSelect={setSelectedResult}
         />
 
-        {/* 底部操作按钮 */}
-        <ActionButtons
+        {/* 操作区 */}
+        <ImageActionBar
           imageUrl={currentResult.url}
-          isShared={copiedId === currentResult.url}
           onDownload={handleDownload}
-          onShare={handleShare}
+          onContinueEdit={() => toast.info("继续编辑功能即将上线")}
         />
 
         {/* AI 描述 */}
         {aiDescription && (
           <AIDescription description={aiDescription} />
         )}
+
+        {/* 图片预览弹窗 */}
+        <ImageViewerDialog
+          isOpen={isViewerOpen}
+          onClose={() => setIsViewerOpen(false)}
+          results={results}
+          selectedResult={selectedResult}
+          onSelect={setSelectedResult}
+          onDownload={handleDownload}
+        />
       </div>
     );
   };

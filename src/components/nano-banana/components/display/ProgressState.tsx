@@ -1,7 +1,7 @@
-import React from 'react';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Loader2, Clock, X } from 'lucide-react';
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Loader2, Clock, X } from "lucide-react";
 
 interface ProgressStateProps {
   progress: number;
@@ -10,11 +10,11 @@ interface ProgressStateProps {
   onCancel?: () => void;
 }
 
-export default function ProgressState({ 
-  progress, 
-  elapsedTime = 0, 
-  taskId, 
-  onCancel 
+export default function ProgressState({
+  progress,
+  elapsedTime = 0,
+  taskId,
+  onCancel,
 }: ProgressStateProps) {
   return (
     <div className="h-full flex flex-col items-center justify-center p-8 text-center">
@@ -47,7 +47,7 @@ export default function ProgressState({
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -skew-x-12 translate-x-[-200%] animate-shimmer" />
           </div>
         </div>
-        
+
         <div className="flex items-center justify-between text-sm text-slate-600 dark:text-slate-400">
           <span>{progress}%</span>
           <div className="flex items-center gap-1">
@@ -63,7 +63,7 @@ export default function ProgressState({
         </Badge>
       )}
 
-      {onCancel && (
+      {/* {onCancel && (
         <Button
           variant="outline"
           size="sm"
@@ -73,7 +73,7 @@ export default function ProgressState({
           <X className="h-4 w-4 mr-2" />
           取消生成
         </Button>
-      )}
+      )} */}
     </div>
   );
 }
