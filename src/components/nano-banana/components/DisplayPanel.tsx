@@ -23,6 +23,7 @@ interface DisplayPanelProps {
   aiDescription?: string;
   onCancel?: () => void;
   onReset?: () => void;
+  onContinueEdit?: (imageUrl: string) => Promise<void>;
 }
 
 export default function DisplayPanel({
@@ -33,6 +34,7 @@ export default function DisplayPanel({
   aiDescription,
   onCancel,
   onReset,
+  onContinueEdit,
 }: DisplayPanelProps) {
   const [copiedId, setCopiedId] = useState<string | null>(null);
   const [selectedResult, setSelectedResult] = useState(0);
@@ -127,7 +129,7 @@ export default function DisplayPanel({
         <ImageActionBar
           imageUrl={currentResult.url}
           onDownload={handleDownload}
-          onContinueEdit={() => toast.info("继续编辑功能即将上线")}
+          onContinueEdit={onContinueEdit ? () => onContinueEdit(currentResult.url) : undefined}
         />
 
         {/* AI 描述 */}

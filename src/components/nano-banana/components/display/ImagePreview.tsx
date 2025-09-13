@@ -56,7 +56,7 @@ export default function ImagePreview({
   };
 
   return (
-    <div className="relative h-full rounded-lg overflow-hidden bg-slate-100 dark:bg-slate-800 group">
+    <div className="relative h-full rounded-lg overflow-hidden group">
       <img
         src={imageUrl}
         alt="Generated"

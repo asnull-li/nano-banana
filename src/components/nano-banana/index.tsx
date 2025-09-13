@@ -43,6 +43,7 @@ export default function NanoBananaWorkspace({
     setMode,
     setPrompt,
     addImages,
+    addImageFromUrl,
     removeImage,
     clearImages,
     submitTask,
@@ -95,6 +96,7 @@ export default function NanoBananaWorkspace({
             aiDescription={aiDescription}
             onCancel={cancelTask}
             onReset={reset}
+            onContinueEdit={addImageFromUrl}
           />
         </div>
       </div>

@@ -6,13 +6,7 @@ import { useDropzone, FileRejection } from "react-dropzone";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
 import ImageCard from "./ImageCard";
-
-interface UploadedImage {
-  id: string;
-  preview: string;
-  file: File;
-  uploadProgress?: number;
-}
+import type { UploadedImage } from "../../hooks/use-nano-banana";
 
 interface ImageUploadAreaProps {
   uploadedImages: UploadedImage[];

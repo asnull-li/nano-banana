@@ -8,7 +8,7 @@ interface ImageActionBarProps {
   imageUrl: string;
   onDownload: () => void;
   onEnhance?: () => void;
-  onContinueEdit?: () => void;
+  onContinueEdit?: () => Promise<void> | void;
   disabled?: boolean;
 }
 
@@ -42,9 +42,9 @@ export default function ImageActionBar({
     }
   };
 
-  const handleContinueEdit = () => {
+  const handleContinueEdit = async () => {
     if (onContinueEdit) {
-      onContinueEdit();
+      await onContinueEdit();
     } else {
       toast.info("继续编辑功能即将上线");
     }

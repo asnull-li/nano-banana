@@ -16,7 +16,7 @@ export type TaskStatus =
 
 export interface UploadedImage {
   id: string;
-  file: File;
+  file: File | null; // 支持URL模式，file可为null
   preview: string;
   uploadProgress: number;
   url?: string;
@@ -121,7 +121,8 @@ export function useNanoBanana(options: UseNanoBananaOptions = {}) {
       if (image.url) {
         urls.push(image.url);
         uploadedCount++;
-      } else {
+      } else if (image.file) {
+        // 只有当 file 存在时才上传（跳过URL类型图片）
         try {
           const url = await uploadImageToR2(image.file, image.id);
           urls.push(url);
@@ -226,6 +227,37 @@ export function useNanoBanana(options: UseNanoBananaOptions = {}) {
     });
     setUploadedImages([]);
   }, [uploadedImages]);
+
+  // 从URL添加图片（用于再次编辑功能）
+  const addImageFromUrl = useCallback(async (imageUrl: string) => {
+    try {
+      // 验证URL
+      new URL(imageUrl);
+      
+      // 清空当前图片
+      clearImages();
+      
+      // 创建虚拟的UploadedImage对象
+      const newImage: UploadedImage = {
+        id: `url-${Date.now()}-${Math.random()}`,
+        file: null, // 标记为URL图片
+        preview: imageUrl, // 直接使用URL作为预览
+        uploadProgress: 100, // 已完成状态
+        url: imageUrl, // 已有URL
+      };
+
+      // 添加新图片
+      setUploadedImages([newImage]);
+      
+      // 切换到图生图模式
+      setMode("image-to-image");
+      
+      toast.success("图片已应用到参考区域");
+    } catch (error) {
+      console.error("Invalid image URL:", error);
+      toast.error("无效的图片链接");
+    }
+  }, [clearImages, setMode]);
 
   // 轮询任务状态
   const pollTaskStatus = (taskId: string) => {
@@ -438,6 +470,7 @@ export function useNanoBanana(options: UseNanoBananaOptions = {}) {
     setMode,
     setPrompt,
     addImages,
+    addImageFromUrl,
     removeImage,
     clearImages,
     submitTask,

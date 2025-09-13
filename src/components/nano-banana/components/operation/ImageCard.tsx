@@ -1,12 +1,6 @@
 import React, { useState } from 'react';
 import { X, ImageOff } from 'lucide-react';
-
-interface UploadedImage {
-  id: string;
-  preview: string;
-  file: File;
-  uploadProgress?: number;
-}
+import type { UploadedImage } from "../../hooks/use-nano-banana";
 
 interface ImageCardProps {
   image: UploadedImage;
@@ -88,7 +82,7 @@ export default function ImageCard({
       
       {/* 文件大小 */}
       <div className="absolute bottom-2 left-2 bg-black/60 text-white px-2 py-1 rounded text-xs font-medium file-size-label">
-        {formatFileSize(image.file.size)}
+        {image.file ? formatFileSize(image.file.size) : "从链接"}
       </div>
 
       {/* 上传进度条 */}

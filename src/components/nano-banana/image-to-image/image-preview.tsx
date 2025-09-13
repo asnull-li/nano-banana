@@ -159,10 +159,10 @@ export default function ImagePreview({
             {/* 文件信息栏 */}
             <div className="p-2 bg-gradient-to-r from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
               <p className="text-xs text-muted-foreground truncate font-medium">
-                {image.file.name}
+                {image.file?.name || "图片链接"}
               </p>
               <p className="text-[10px] text-muted-foreground mt-0.5">
-                {(image.file.size / 1024 / 1024).toFixed(2)} MB
+                {image.file ? (image.file.size / 1024 / 1024).toFixed(2) + " MB" : "从链接"}
               </p>
             </div>
           </Card>

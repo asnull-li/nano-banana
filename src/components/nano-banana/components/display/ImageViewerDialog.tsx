@@ -117,18 +117,6 @@ export default function ImageViewerDialog({
             </div>
           </div>
 
-          {/* 关闭按钮 */}
-          <div className="absolute top-4 right-4 z-10">
-            <Button
-              size="sm"
-              variant="ghost"
-              className="text-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-full"
-              onClick={onClose}
-            >
-              <X className="h-5 w-5" />
-            </Button>
-          </div>
-
           {/* 主图片区域 - 充分显示 */}
           <div className="relative flex items-center justify-center min-h-[60vh] p-8 group">
             <img
@@ -140,7 +128,7 @@ export default function ImageViewerDialog({
                 maxHeight: "calc(100vh - 12rem)",
               }}
             />
-            
+
             {/* 悬浮操作按钮 - 在图片底部，鼠标悬停时显示 */}
             <div className="absolute bottom-4 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
               <div className="flex items-center gap-3 bg-black/60 dark:bg-black/70 backdrop-blur-sm px-4 py-2 rounded-full">
