@@ -150,24 +150,35 @@ export function useNanoBanana(options: UseNanoBananaOptions = {}) {
       // 验证文件
       const validFiles = files.filter((file) => {
         // 检查文件类型
-        const validTypes = ['image/jpeg', 'image/png', 'image/webp'];
-        const validExtensions = ['.jpg', '.jpeg', '.png', '.webp'];
-        const fileExtension = file.name.toLowerCase().substring(file.name.lastIndexOf('.'));
-        
+        const validTypes = ["image/jpeg", "image/png", "image/webp"];
+        const validExtensions = [".jpg", ".jpeg", ".png", ".webp"];
+        const fileExtension = file.name
+          .toLowerCase()
+          .substring(file.name.lastIndexOf("."));
+
         // 同时检查MIME类型和文件扩展名
-        if (!validTypes.includes(file.type) && !validExtensions.includes(fileExtension)) {
-          toast.error(`${file.name}: 不支持的文件格式，仅支持 JPG、PNG、WebP`);
+        if (
+          !validTypes.includes(file.type) &&
+          !validExtensions.includes(fileExtension)
+        ) {
+          toast.error(
+            `${file.name}: ${t("hooks.file_validation.unsupported_format")}`
+          );
           return false;
         }
-        
+
         // 检查文件大小 (10MB = 10 * 1024 * 1024)
         const maxSize = 10 * 1024 * 1024;
         if (file.size > maxSize) {
           const sizeMB = (file.size / (1024 * 1024)).toFixed(1);
-          toast.error(`${file.name}: 文件大小为 ${sizeMB}MB，超过 10MB 限制`);
+          toast.error(
+            `${file.name}: ${t("hooks.file_validation.file_too_large", {
+              sizeMB,
+            })}`
+          );
           return false;
         }
-        
+
         return true;
       });
 
@@ -184,21 +195,24 @@ export function useNanoBanana(options: UseNanoBananaOptions = {}) {
 
       setUploadedImages((prev) => {
         const updated = [...prev, ...newImages];
-        
+
         // 如果超过5张，需要清理被移除图片的 Blob URL
         if (updated.length > 5) {
           const toRemove = updated.slice(5);
-          console.log("清理超出限制的图片 Blob URLs:", toRemove.map(img => img.preview));
+          console.log(
+            "清理超出限制的图片 Blob URLs:",
+            toRemove.map((img) => img.preview)
+          );
           toRemove.forEach((img) => {
             if (img.preview.startsWith("blob:")) {
               URL.revokeObjectURL(img.preview);
             }
           });
-          
+
           // 如果超过5张，提示用户
           toast.warning(t("messages.max_images_warning"));
         }
-        
+
         // 限制最多5张图片
         return updated.slice(0, 5);
       });
@@ -217,7 +231,6 @@ export function useNanoBanana(options: UseNanoBananaOptions = {}) {
     });
   }, []);
 
-
   // 清空所有图片
   const clearImages = useCallback(() => {
     // 清理预览URL
@@ -230,35 +243,38 @@ export function useNanoBanana(options: UseNanoBananaOptions = {}) {
   }, [uploadedImages]);
 
   // 从URL添加图片（用于再次编辑功能）
-  const addImageFromUrl = useCallback(async (imageUrl: string) => {
-    try {
-      // 验证URL
-      new URL(imageUrl);
-      
-      // 清空当前图片
-      clearImages();
-      
-      // 创建虚拟的UploadedImage对象
-      const newImage: UploadedImage = {
-        id: `url-${Date.now()}-${Math.random()}`,
-        file: null, // 标记为URL图片
-        preview: imageUrl, // 直接使用URL作为预览
-        uploadProgress: 100, // 已完成状态
-        url: imageUrl, // 已有URL
-      };
+  const addImageFromUrl = useCallback(
+    async (imageUrl: string) => {
+      try {
+        // 验证URL
+        new URL(imageUrl);
 
-      // 添加新图片
-      setUploadedImages([newImage]);
-      
-      // 切换到图生图模式
-      setMode("image-to-image");
-      
-      toast.success("图片已应用到参考区域");
-    } catch (error) {
-      console.error("Invalid image URL:", error);
-      toast.error("无效的图片链接");
-    }
-  }, [clearImages, setMode]);
+        // 清空当前图片
+        clearImages();
+
+        // 创建虚拟的UploadedImage对象
+        const newImage: UploadedImage = {
+          id: `url-${Date.now()}-${Math.random()}`,
+          file: null, // 标记为URL图片
+          preview: imageUrl, // 直接使用URL作为预览
+          uploadProgress: 100, // 已完成状态
+          url: imageUrl, // 已有URL
+        };
+
+        // 添加新图片
+        setUploadedImages([newImage]);
+
+        // 切换到图生图模式
+        setMode("image-to-image");
+
+        toast.success(t("hooks.file_validation.image_applied"));
+      } catch (error) {
+        console.error("Invalid image URL:", error);
+        toast.error(t("hooks.file_validation.invalid_image_url"));
+      }
+    },
+    [clearImages, setMode]
+  );
 
   // 轮询任务状态
   const pollTaskStatus = (taskId: string) => {

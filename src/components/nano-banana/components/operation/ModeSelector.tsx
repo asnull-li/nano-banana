@@ -1,6 +1,7 @@
-import React from 'react';
-import { Image as ImageIcon, Sparkles } from 'lucide-react';
-import { cn } from '@/lib/utils';
+import React from "react";
+import { Image as ImageIcon, Sparkles } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { useTranslations } from "next-intl";
 
 interface ModeSelectorProps {
   mode: "image-to-image" | "text-to-image";
@@ -8,7 +9,13 @@ interface ModeSelectorProps {
   disabled?: boolean;
 }
 
-export default function ModeSelector({ mode, onModeChange, disabled = false }: ModeSelectorProps) {
+export default function ModeSelector({
+  mode,
+  onModeChange,
+  disabled = false,
+}: ModeSelectorProps) {
+  const t = useTranslations("nano_banana.workspace.mode_selector");
+
   return (
     <div className="space-y-3">
       <div className="relative bg-slate-100 dark:bg-slate-800 rounded-lg p-1">
@@ -24,9 +31,9 @@ export default function ModeSelector({ mode, onModeChange, disabled = false }: M
             disabled={disabled}
           >
             <ImageIcon className="h-4 w-4 inline mr-2" />
-            图片编辑
+            {t("image_edit")}
           </button>
-          
+
           <button
             className={cn(
               "relative px-3 py-2 rounded-md text-sm font-medium transition-all duration-200",
@@ -38,7 +45,7 @@ export default function ModeSelector({ mode, onModeChange, disabled = false }: M
             disabled={disabled}
           >
             <Sparkles className="h-4 w-4 inline mr-2" />
-            文生图
+            {t("text_to_image")}
           </button>
         </div>
       </div>

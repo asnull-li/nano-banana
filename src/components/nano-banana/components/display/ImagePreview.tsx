@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { Maximize2, Download, Share2, Check } from "lucide-react";
 import { toast } from "sonner";
+import { useTranslations } from "next-intl";
 
 interface ImagePreviewProps {
   imageUrl: string;
@@ -18,6 +19,8 @@ export default function ImagePreview({
   isShared = false,
   onImageClick,
 }: ImagePreviewProps) {
+  const t = useTranslations("nano_banana.workspace.image_preview");
+
   const handleDownload = async () => {
     if (onDownload) {
       onDownload();
@@ -35,9 +38,9 @@ export default function ImagePreview({
       a.click();
       document.body.removeChild(a);
       window.URL.revokeObjectURL(url);
-      toast.success("图片下载成功");
+      toast.success(t("download_success"));
     } catch (error) {
-      toast.error("下载失败");
+      toast.error(t("download_failed"));
     }
   };
 
@@ -49,9 +52,9 @@ export default function ImagePreview({
 
     try {
       await navigator.clipboard.writeText(imageUrl);
-      toast.success("链接已复制");
+      toast.success(t("link_copied"));
     } catch (error) {
-      toast.error("复制失败");
+      toast.error(t("copy_failed"));
     }
   };
 
@@ -109,7 +112,7 @@ export default function ImagePreview({
       {onImageClick && (
         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity">
           <div className="bg-black/60 text-white text-xs px-3 py-1 rounded-full backdrop-blur-sm">
-            点击查看大图
+            {t("click_to_view")}
           </div>
         </div>
       )}

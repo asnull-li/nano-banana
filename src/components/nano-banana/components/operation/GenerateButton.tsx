@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Wand2, Loader2, Coins } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useTranslations } from "next-intl";
 
 interface GenerateButtonProps {
   canSubmit: boolean;
@@ -17,6 +18,8 @@ export default function GenerateButton({
   creditsPerImage,
   onSubmit,
 }: GenerateButtonProps) {
+  const t = useTranslations("nano_banana.workspace.operation_panel");
+
   return (
     <div className="p-6 pt-4">
       <Button
@@ -37,12 +40,12 @@ export default function GenerateButton({
         {isProcessing ? (
           <>
             <Loader2 className="h-5 w-5 mr-2 animate-spin" />
-            生成中...
+            {t("generating")}
           </>
         ) : (
           <>
             <Wand2 className="h-5 w-5 mr-2" />
-            开始创作
+            {t("start_creation")}
             <Badge className="ml-2 bg-white/20 text-white border-0">
               <Coins className="h-3 w-3 mr-1" />
               {creditsPerImage}

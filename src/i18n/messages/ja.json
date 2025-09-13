@@ -5,46 +5,51 @@
     "keywords": ""
   },
   "user": {
-    "sign_in": "サインイン",
-    "sign_out": "サインアウト",
+    "sign_in": "ログイン",
+    "sign_out": "ログアウト",
     "credits": "クレジット",
     "api_keys": "APIキー",
-    "my_orders": "マイオーダー",
+    "my_orders": "注文履歴",
     "user_center": "ユーザーセンター",
     "admin_system": "管理システム"
   },
   "sign_modal": {
-    "sign_in_title": "サインイン",
-    "sign_in_description": "アカウントにサインイン",
-    "sign_up_title": "サインアップ",
-    "sign_up_description": "アカウントを作成",
-    "login_slogan": "ログイン後に無料トライアル利用可能",
+    "sign_in_title": "ログイン",
+    "sign_in_description": "アカウントにログイン",
+    "sign_up_title": "新規登録",
+    "sign_up_description": "新しいアカウントを作成",
+    "login_slogan": "ログイン後に無料トライアルが利用可能",
+    "email": "メール",
     "email_title": "メール",
     "email_placeholder": "メールアドレスを入力してください",
     "password_title": "パスワード",
     "password_placeholder": "パスワードを入力してください",
-    "forgot_password": "パスワードをお忘れですか？",
+    "forgot_password": "パスワードを忘れましたか？",
     "or": "または",
-    "continue": "続ける",
-    "no_account": "アカウントをお持ちでない方は",
-    "email_sign_in": "メールでサインイン",
-    "google_sign_in": "Googleでサインイン",
-    "github_sign_in": "GitHubでサインイン",
+    "continue": "続行",
+    "no_account": "まだアカウントをお持ちでないですか？",
+    "email_sign_in": "メールでログイン",
+    "google_sign_in": "Googleでログイン",
+    "github_sign_in": "GitHubでログイン",
+    "send_magic_link": "ログインリンクを送信",
+    "sending": "送信中...",
+    "email_sent": "メールをご確認ください。ログインリンクを送信しました！",
     "email_required": "メールアドレスを入力してください",
     "code_required": "メールアドレスと認証コードを入力してください",
-    "code_sent": "認証コードをメールに送信しました",
+    "code_sent": "認証コードがメールに送信されました",
     "enter_email": "メールアドレスを入力",
     "enter_code": "認証コードを入力",
     "send_code": "認証コードを送信",
     "sending_code": "送信中...",
     "verification_code": "認証コード",
     "resend_code": "再送信",
-    "resend_in": "再送信まで",
-    "sign_in": "サインイン",
-    "signing_in": "サインイン中...",
+    "resend_in": "再送信カウントダウン",
+    "sign_in": "ログイン",
+    "signing_in": "ログイン中...",
     "back": "戻る",
-    "invalid_code": "認証コードが無効です",
+    "invalid_code": "認証コードが正しくありません",
     "code_expired": "認証コードが期限切れまたは存在しません",
+    "sign_in_failed": "ログインに失敗しました。もう一度お試しください",
     "close_title": "閉じる",
     "cancel_title": "キャンセル",
     "terms_text": "続行することで、以下に同意したことになります",
@@ -53,8 +58,8 @@
     "privacy_policy": "プライバシーポリシー"
   },
   "my_orders": {
-    "title": "マイオーダー",
-    "description": "ShipAnyで支払われた注文。",
+    "title": "注文履歴",
+    "description": "ShipAnyで購入した注文。",
     "no_orders": "注文が見つかりません",
     "tip": "",
     "activate_order": "注文を有効化",
@@ -74,7 +79,7 @@
   "my_credits": {
     "title": "マイクレジット",
     "left_tip": "残りクレジット: {left_credits}",
-    "no_credits": "クレジット記録なし",
+    "no_credits": "クレジット記録がありません",
     "recharge": "チャージ",
     "table": {
       "trans_no": "取引番号",
@@ -86,7 +91,7 @@
   },
   "api_keys": {
     "title": "APIキー",
-    "tip": "漏洩を防ぐため、APIキーを安全に保管してください",
+    "tip": "APIキーを安全に保管し、漏洩を防いでください",
     "no_api_keys": "APIキーがありません",
     "create_api_key": "APIキーを作成",
     "table": {
@@ -106,10 +111,10 @@
     "read_more_text": "詳細を読む"
   },
   "my_invites": {
-    "title": "マイ招待",
+    "title": "招待履歴",
     "description": "招待記録を表示",
     "no_invites": "招待記録が見つかりません",
-    "my_invite_link": "マイ招待リンク",
+    "my_invite_link": "招待リンク",
     "edit_invite_link": "招待リンクを編集",
     "copy_invite_link": "招待リンクをコピー",
     "invite_code": "招待コード",
@@ -121,121 +126,178 @@
     "update_invite_code": "招待コードを設定",
     "update_invite_code_tip": "カスタム招待コードを入力",
     "update_invite_button": "保存",
-    "no_orders": "ShipAnyを購入する前は他の人を招待できません",
-    "no_affiliates": "他の人を招待する権限がありません。許可を申請するためにお問い合わせください。",
+    "no_orders": "友達を招待する前に、まずShipAnyを購入する必要があります",
+    "no_affiliates": "まだ友達を招待する権限がありません。申請のためにお問い合わせください。",
     "table": {
       "invite_time": "招待時刻",
       "invite_user": "招待ユーザー",
       "status": "ステータス",
       "reward_percent": "報酬率",
       "reward_amount": "報酬額",
-      "pending": "保留中",
-      "completed": "完了"
+      "pending": "登録済み、未支払い",
+      "completed": "支払い済み"
     }
   },
   "feedback": {
     "title": "フィードバック",
-    "description": "良かった点や製品体験の改善点をお聞かせください。",
+    "description": "製品についてのご意見や、製品体験を改善する方法をお聞かせください。",
     "submit": "送信",
     "loading": "送信中...",
     "contact_tip": "その他の連絡方法",
     "rating_tip": "ShipAnyについてどう思いますか？",
-    "placeholder": "ご意見をお聞かせください..."
+    "placeholder": "こちらにフィードバックを残してください..."
   },
   "pricing": {
     "most_popular": "最も人気"
   },
-  "workspace": {
-    "loading_text": "ワークスペースを読み込み中...",
-    "sign_in_prompt": "AIで創造を始めるためにサインイン",
-    "sign_in_description": "新規ユーザーには強力なAI創造を体験するための無料クレジットを提供",
-    "sign_in_button": "サインインして作成",
-    "text_to_image": {
-      "title": "作成モード",
-      "prompt_label": "あなたのビジョンを説明してください",
-      "prompt_placeholder": "夕暮れの空飛ぶ車がある未来都市...",
-      "aspect_ratio_label": "アスペクト比",
-      "aspect_ratios": {
-        "square": "正方形",
-        "landscape": "横長",
-        "portrait": "縦長",
-        "classic": "クラシック"
-      },
-      "quality_label": "品質",
-      "quality_pro": "プロ",
-      "quality_pro_desc": "高品質、バランスの取れた速度",
-      "quality_max": "マックス",
-      "quality_max_desc": "究極の品質、完璧なディテール",
-      "generate_button": "作成",
-      "generating_button": "作成中...",
-      "regenerate_button": "再生成",
-      "download_button": "ダウンロード",
-      "share_button": "共有",
-      "view_full_size": "フルサイズで表示",
-      "generated_result": "生成結果",
-      "ai_generated": "AI生成",
-      "generating_text": "画像を作成中...",
-      "complete_text": "完了",
-      "all_generated_images": "すべての生成画像",
-      "ai_assistant_title": "AIアシスタント",
-      "ai_assistant_desc": "テキストから素晴らしい画像を作成するお手伝いをします！これらのインスピレーションをお試しください：",
-      "inspiration": "インスピレーション",
-      "inspirations": [
-        "ネオンライトが輝く夜のサイバーパンク都市",
-        "夕暮れの山の油絵",
-        "青い髪のアニメスタイルキャラクター",
-        "抽象的なカラフルな幾何学アート",
-        "戦士のリアルな肖像画",
-        "光る生き物がいる水中ファンタジー世界"
-      ],
-      "credits": "クレジット",
-      "credits_left": "残り",
-      "this_may_take": "これには1〜2分かかる場合があります..."
-    },
-    "image_to_image": {
-      "title": "編集モード",
-      "upload_title": "画像をアップロード",
-      "upload_desc": "ここに画像をドラッグ＆ドロップまたはクリックして参照",
-      "upload_formats": "JPG、PNG、WEBP 最大20MBまで",
-      "sample_images": "サンプル画像",
-      "clear_button": "クリア",
-      "original": "オリジナル",
-      "ai_edited": "AI編集済み",
-      "new_edit": "新規編集",
-      "ai_assistant_title": "AIアシスタント",
-      "ai_assistant_upload_prompt": "画像がアップロードされました！何を変更したいですか？",
-      "ai_assistant_ready": "画像を変換する準備ができました！開始するには画像をアップロードしてください。",
-      "quick_actions": "クイックアクション",
-      "quick_action_lighting": "照明を変更",
-      "quick_action_lighting_prompt": "ゴールデンアワーの照明に変更",
-      "quick_action_style": "スタイル転送",
-      "quick_action_style_prompt": "油絵スタイルに変換",
-      "quick_action_remove_bg": "背景を削除",
-      "quick_action_remove_bg_prompt": "背景を削除、被写体を保持",
-      "quick_action_color": "カラーグレーディング",
-      "quick_action_color_prompt": "映画的なカラーグレーディングを適用",
-      "recent_edits": "最近の編集",
-      "describe_changes": "変更したい内容を説明してください...",
-      "transform_button": "変換",
-      "transforming_button": "変換中...",
-      "processing": "処理中",
-      "quality_pro_desc": "ほとんどのシナリオに最適、正確な編集"
-    }
-  },
   "nano_banana": {
     "wrapper": {
       "loading_text": "Nano Bananaを読み込み中...",
-      "title": "Nano Banana AIクリエイションワークベンチ",
+      "title": "Nano Banana AI創作ワークベンチ",
       "description": "高度なAI技術を使用して、想像力を美しい画像に変換します"
     },
+    "workspace": {
+      "mode_selector": {
+        "image_edit": "画像編集",
+        "text_to_image": "テキストから画像"
+      },
+      "operation_panel": {
+        "login_required": "先にログインしてください",
+        "insufficient_credits": "クレジット不足、{amount} クレジットが必要です",
+        "please_enter_prompt": "プロンプトを入力してください",
+        "prompt_min_length": "少なくとも3文字入力してください",
+        "generating": "生成中...",
+        "start_creation": "創作を開始"
+      },
+      "image_upload": {
+        "title": "参考画像",
+        "add_image": "画像を追加",
+        "max_size": "最大10MB",
+        "supported_formats": "JPG, PNG, WebP",
+        "drag_to_upload": "ファイルをリリース",
+        "clear_all": "すべての画像をクリア",
+        "error_invalid_type": "サポートされていないファイル形式です。JPG、PNG、WebPのみサポートされています",
+        "error_too_large": "ファイルサイズが10MBの制限を超えています",
+        "error_too_many": "一度に最大5ファイルまでアップロードできます"
+      },
+      "prompt_input": {
+        "title": "アイデアを描写してください",
+        "placeholder_image_edit": "スタイル、色、構図などの詳細を含む、希望する効果を描写してください...",
+        "placeholder_text_to_image": "主体、シーン、スタイル、色などを含む、生成したい画像を詳細に描写してください...",
+        "tip": "詳細な描写がより良い結果をもたらします"
+      },
+      "credits_display": {
+        "title": "クレジット消費",
+        "unit": "クレジット"
+      },
+      "display_panel": {
+        "generation_complete": "生成完了！",
+        "regenerate": "再生成",
+        "image_download_success": "画像のダウンロードが成功しました",
+        "download_failed": "ダウンロードに失敗しました",
+        "link_copied": "リンクがコピーされました",
+        "copy_failed": "コピーに失敗しました"
+      },
+      "empty_state": {
+        "title": "創作を始める準備はできましたか？",
+        "description": "左側でモードを選択し、画像をアップロードするか説明を入力して、AIに素晴らしいビジュアルを作成させましょう",
+        "feature_ai": "AI知能",
+        "feature_speed": "超高速生成",
+        "feature_quality": "高品質"
+      },
+      "progress_state": {
+        "title": "AIが創作中...",
+        "description": "しばらくお待ちください、素晴らしいものが生まれようとしています",
+        "task_id": "タスクID: {taskId}"
+      },
+      "error_state": {
+        "title": "生成に失敗しました",
+        "default_message": "申し訳ございませんが、画像生成中に問題が発生しました。後でもう一度お試しください。問題が継続する場合は、技術サポートチームにお問い合わせください。",
+        "support_message": "問題が継続する場合、技術サポートチームがお手伝いします",
+        "retry_button": "再試行",
+        "contact_support": "サポートに連絡",
+        "support_email_text": "技術サポートメール:",
+        "email_subject": "Nano Banana - 技術サポート要請",
+        "email_body": "こんにちは、\\n\\nNano Bananaの使用中に問題が発生しました：\\n\\nエラーメッセージ: {title}\\n詳細説明: {message}\\n\\n解決のサポートをお願いします、ありがとうございます！\\n\\nユーザー"
+      },
+      "image_card": {
+        "image_load_failed": "画像の読み込みに失敗しました",
+        "image_number": "画像 #{number}",
+        "from_link": "リンクから"
+      },
+      "image_action_bar": {
+        "download": "ダウンロード",
+        "enhance": "画像強化",
+        "continue_edit": "再編集",
+        "image_not_found": "画像が見つかりません",
+        "invalid_image_url": "無効な画像URL",
+        "continue_edit_coming_soon": "継続編集機能は近日公開予定"
+      },
+      "ai_description": {
+        "title": "AI生成説明"
+      },
+      "action_buttons": {
+        "download": "ダウンロード",
+        "copy_link": "リンクをコピー",
+        "copied": "コピーしました",
+        "view_large": "大きく表示"
+      },
+      "image_preview": {
+        "download_success": "画像のダウンロードが成功しました",
+        "download_failed": "ダウンロードに失敗しました",
+        "link_copied": "リンクがコピーされました",
+        "copy_failed": "コピーに失敗しました",
+        "click_to_view": "クリックして大きな画像を表示"
+      },
+      "image_viewer": {
+        "image_not_found": "画像が見つかりません",
+        "invalid_image_url": "無効な画像URL",
+        "download": "ダウンロード",
+        "enhance": "画像強化",
+        "close": "閉じる",
+        "prev_image": "前へ",
+        "next_image": "次へ",
+        "image_count": "{current} / {total}"
+      },
+      "quick_prompts": {
+        "image_mode": {
+          "enhance_details": "詳細を強化",
+          "enhance_details_prompt": "詳細を強化、高解像度、精細",
+          "art_style": "アートスタイル",
+          "art_style_prompt": "アートスタイル、油絵のテクスチャ",
+          "anime_style": "アニメスタイル",
+          "anime_style_prompt": "アニメスタイル、2D",
+          "realistic_photo": "リアルな写真",
+          "realistic_photo_prompt": "リアルなスタイル、写真のテクスチャ"
+        },
+        "text_mode": {
+          "art_creation": "アート創作",
+          "art_creation_prompt": "アートスタイル、高品質、精巧",
+          "realistic_style": "リアルなスタイル",
+          "realistic_style_prompt": "リアルなスタイル、高解像度写真",
+          "sci_fi": "SF未来",
+          "sci_fi_prompt": "SFスタイル、未来的",
+          "creative_design": "クリエイティブデザイン",
+          "creative_design_prompt": "クリエイティブデザイン、独特な視点"
+        }
+      }
+    },
+    "hooks": {
+      "file_validation": {
+        "unsupported_format": "サポートされていないファイル形式です。JPG、PNG、WebPのみサポートされています",
+        "file_too_large": "ファイルサイズが{sizeMB}MB、10MBの制限を超えています",
+        "image_applied": "画像が参考エリアに適用されました",
+        "invalid_image_url": "無効な画像URL"
+      }
+    },
     "messages": {
-      "starting_upload": "{count}枚の画像をアップロード中...",
+      "starting_upload": "{count}枚の画像のアップロードを開始...",
       "upload_success": "すべての画像が正常にアップロードされました！",
       "upload_failed": "画像のアップロードに失敗しました",
       "upload_image_failed": "画像 {filename} のアップロードに失敗しました",
       "submit_failed": "タスクの送信に失敗しました",
       "task_submitted": "タスクが送信され、処理中です...",
-      "insufficient_credits": "クレジットが不足しています、チャージしてから再試行してください",
+      "insufficient_credits": "クレジット不足です。チャージしてから再試行してください",
       "generation_success": "{count}枚の画像を正常に生成しました！",
       "get_results_failed": "結果の取得に失敗しました",
       "task_failed": "タスクの実行に失敗しました",
@@ -244,135 +306,11 @@
     "validation": {
       "please_enter_prompt": "プロンプトを入力してください",
       "please_upload_image": "少なくとも1枚の画像をアップロードしてください"
-    },
-    "mode_selector": {
-      "edit_mode": "対話で画像を編集",
-      "text_mode": "テキスト→画像モード"
-    },
-    "text_to_image": {
-      "inspiration_title": "インスピレーション",
-      "inspiration_desc": "下のタグをクリックして素早く作成を開始",
-      "labels": {
-        "landscape": "風景",
-        "portrait": "ポートレート",
-        "architecture": "建築",
-        "art": "アート",
-        "sci_fi": "SF",
-        "nature": "自然",
-        "animals": "動物",
-        "creative": "クリエイティブ"
-      },
-      "prompts": {
-        "landscape": "夕暮れの雄大な山の風景、ゴールデンアワーの照明、写真リアリスティック",
-        "portrait": "プロのポートレート撮影、スタジオ照明、シャープフォーカス",
-        "architecture": "現代建築、幾何学的デザイン、ミニマリストスタイル",
-        "art": "抽象芸術、鮮やかな色彩、油絵スタイル",
-        "sci_fi": "未来のSFシーン、ネオンライト、サイバーパンク美学",
-        "nature": "静寂な森の場面、朝霧、自然照明",
-        "animals": "可愛い動物、詳細な毛皮のテクスチャ、自然の生息地",
-        "creative": "シュールなクリエイティブコンセプト、想像力豊かなデザイン、芸術的"
-      },
-      "main_title": "AI画像生成",
-      "mode_badge": "テキスト→画像モード",
-      "prompt_label": "生成したい画像を説明",
-      "prompt_placeholder": "例：虹の上に座る可愛いカートゥーンの猫、夢のようなスタイル、柔らかい色...",
-      "char_count": "{count}/5000",
-      "generation_count": "生成数",
-      "count_unit": "{count} 枚",
-      "credits_label": "クレジット",
-      "generate_button": "生成開始 ({count} 枚)",
-      "generating_button": "生成中...",
-      "tip_text": "💡 ヒント：詳細に描写するほど、生成される画像があなたの想像に近くなります",
-      "validation": {
-        "prompt_too_short": "3文字以上の説明を入力してください",
-        "please_login": "先にログインしてください",
-        "insufficient_credits": "クレジット不足、{needed} クレジット必要、現在 {current} クレジット"
-      }
-    },
-    "generation_status": {
-      "ready": "準備完了",
-      "ready_desc": "生成開始を待機中",
-      "uploading": "アップロード中",
-      "uploading_desc": "画像をサーバーにアップロード中...",
-      "processing": "生成中",
-      "processing_desc": "AIがリクエストを処理中...",
-      "fetching": "結果取得中",
-      "fetching_desc": "生成された画像を取得中...",
-      "completed": "生成完了",
-      "completed_desc": "画像生成が成功しました！",
-      "failed": "生成失敗",
-      "failed_desc": "生成過程でエラーが発生しました",
-      "cancel": "キャンセル",
-      "progress": "進行状況",
-      "task_id": "タスクID: {taskId}",
-      "ai_working": "AIが懸命に作成中、お待ちください...",
-      "estimate_time": "約 {time} 秒"
-    },
-    "result_gallery": {
-      "title": "生成結果",
-      "success_message": "{count} 枚の画像を正常に生成しました",
-      "regenerate": "再生成",
-      "ai_reply": "Nano Banana の返信",
-      "download_success": "画像のダウンロードが成功しました！",
-      "download_failed": "ダウンロードに失敗しました、再試行してください",
-      "link_copied": "リンクがクリップボードにコピーされました",
-      "copy_failed": "コピーに失敗しました",
-      "image_index": "画像 {current} / {total}",
-      "copy_link": "リンクをコピー",
-      "download_image": "画像をダウンロード",
-      "download_original": "オリジナルをダウンロード",
-      "fullscreen": "全画面"
-    },
-    "image_to_image": {
-      "ai_editing": "AI画像編集",
-      "quick_style": "クイックスタイル",
-      "enhance_details": "詳細を強化",
-      "enhance_details_prompt": "enhance details, ultra HD, sharp focus",
-      "art_style": "アートスタイル",
-      "art_style_prompt": "artistic style, oil painting, vibrant colors",
-      "anime_style": "アニメスタイル",
-      "anime_style_prompt": "anime style, cel shading, manga art",
-      "realistic_photo": "リアルな写真",
-      "realistic_photo_prompt": "photorealistic, professional photography, 8K",
-      "describe_effect": "希望する効果を説明",
-      "prompt_placeholder": "例：画像を油絵スタイルに変換し、暖かいトーンを追加し、シーンをより鮮やかに...",
-      "generate_count": "生成数",
-      "count_images": "{count} 枚",
-      "credits": "クレジット",
-      "start_generation": "生成開始 ({count} 枚)",
-      "processing": "処理中...",
-      "insufficient_credits": "クレジット不足、{needed} クレジット必要",
-      "prompt_too_short": "3文字以上入力してください",
-      "please_upload_image": "先に画像をアップロードしてください",
-      "selected_references": "選択した参考画像",
-      "clear_all": "すべてクリア",
-      "uploading": "アップロード中...",
-      "preview": "プレビュー",
-      "image_uploaded": "アップロード完了",
-      "dialog_image_editing": "対話式画像編集",
-      "multiple_references": "複数の参考画像",
-      "upload_multiple": "複数の参考画像（最大5枚）をアップロードし、自然な会話で編集ニーズを説明し、AIがインテリジェントに理解して正確に実行します。",
-      "dialog_editing": "対話編集",
-      "multi_image_reference": "複数画像参照",
-      "intelligent_understanding": "インテリジェント理解",
-      "release_to_upload": "リリースしてアップロード",
-      "drag_drop_upload": "ドラッグまたはクリックして画像をアップロード",
-      "supported_formats": "PNG, JPG, JPEG, WebP形式をサポート",
-      "max_file_size": "1ファイル最大10MB、残り {remaining} 枚",
-      "selected_count": "{current}/{max} 枚選択済み",
-      "max_images_reached": "最大画像数に達しました",
-      "max_upload_limit": "最大 {max} 枚までアップロード可能",
-      "file_too_large": "ファイル {filename} が大きすぎます、最大10MB",
-      "unsupported_format": "ファイル {filename} の形式はサポートされていません",
-      "can_only_upload": "あと {count} 枚しかアップロードできません",
-      "please_login": "先にログインしてください",
-      "insufficient_credits_detail": "クレジット不足、{needed} クレジット必要、現在 {current} クレジット",
-      "download_hint": "ダウンロードボタンをクリックして右クリックで保存"
     }
   },
   "history": {
-    "title": "Nano Banana 作成記録",
-    "description": "これまでに Nano Banana で生成・編集した画像をすべて表示",
+    "title": "Nano Banana創作記録",
+    "description": "これまでにNano Bananaで生成・編集した全ての画像を表示",
     "status": {
       "completed": "完了",
       "failed": "失敗",
@@ -384,31 +322,31 @@
     "images": "画像",
     "view": "表示",
     "download": "ダウンロード",
-    "download_success": "画像のダウンロードが完了しました",
-    "delete_success": "記録を削除しました",
+    "download_success": "画像のダウンロードが成功しました",
+    "delete_success": "記録が正常に削除されました",
     "delete_error": "記録の削除に失敗しました",
     "load_more": "もっと読み込む",
     "loading": "読み込み中...",
     "load_more_error": "追加記録の読み込みに失敗しました",
-    "no_more": "すべての記録を読み込みました",
+    "no_more": "すべての記録が読み込まれました",
     "image_preview": "画像プレビュー",
-    "enhance_image": "向上",
+    "enhance_image": "強化",
     "copy_link": "リンクをコピー",
     "copied": "コピーしました！",
-    "link_copied": "リンクをクリップボードにコピーしました",
+    "link_copied": "リンクがクリップボードにコピーされました",
     "copy_failed": "リンクのコピーに失敗しました",
-    "coming_soon": "近日公開予定、お楽しみに！",
+    "coming_soon": "近日公開！",
     "error": {
       "unknown": "不明なエラーが発生しました"
     },
     "empty": {
       "title": "生成履歴がありません",
-      "description": "AI で素晴らしい画像の作成を始めましょう",
-      "action": "作成を開始"
+      "description": "AIで素晴らしい画像の作成を始めましょう",
+      "action": "創作を開始"
     },
     "delete_confirm": {
       "title": "記録を削除",
-      "description": "この生成記録を削除してもよろしいですか？この操作は取り消せません。",
+      "description": "この生成記録を削除してもよろしいですか？この操作は元に戻せません。",
       "cancel": "キャンセル",
       "confirm": "削除"
     }

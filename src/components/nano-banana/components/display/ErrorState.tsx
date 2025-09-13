@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { AlertTriangle, RefreshCw, Mail } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 interface ErrorStateProps {
   title?: string;
@@ -11,15 +12,20 @@ interface ErrorStateProps {
 }
 
 export default function ErrorState({
-  title = "生成失败",
-  message = "很抱歉，图片生成过程中遇到了问题。请稍后重试，如果问题持续存在，请联系我们的技术支持团队。",
+  title,
+  message,
   onRetry,
-  supportEmail = "support@nano-banana.com"
+  supportEmail = "support@nano-banana.com",
 }: ErrorStateProps) {
+  const t = useTranslations("nano_banana.workspace.error_state");
+
+  const displayTitle = title || t("title");
+  const displayMessage = message || t("default_message");
+
   const handleEmailContact = () => {
-    const subject = encodeURIComponent("Nano Banana - 技术支持请求");
+    const subject = encodeURIComponent(t("email_subject"));
     const body = encodeURIComponent(
-      `您好，\n\n我在使用 Nano Banana 时遇到了问题：\n\n错误信息：${title}\n详细描述：${message}\n\n请协助解决，谢谢！\n\n用户`
+      t("email_body", { title: displayTitle, message: displayMessage })
     );
     window.open(`mailto:${supportEmail}?subject=${subject}&body=${body}`);
   };
@@ -31,13 +37,13 @@ export default function ErrorState({
         <div className="mx-auto w-20 h-20 bg-red-100 dark:bg-red-900/20 rounded-full flex items-center justify-center">
           <AlertTriangle className="h-10 w-10 text-red-500" />
         </div>
-        
+
         <div className="space-y-2">
           <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100">
-            {title}
+            {displayTitle}
           </h3>
           <p className="text-gray-600 dark:text-gray-400 max-w-md leading-relaxed">
-            {message}
+            {displayMessage}
           </p>
         </div>
       </div>
@@ -46,7 +52,7 @@ export default function ErrorState({
       <Alert className="max-w-md border-red-200 dark:border-red-800">
         <AlertTriangle className="h-4 w-4 text-red-500" />
         <AlertDescription className="text-sm text-gray-700 dark:text-gray-300">
-          如果问题持续存在，我们的技术支持团队将为您提供帮助
+          {t("support_message")}
         </AlertDescription>
       </Alert>
 
@@ -58,23 +64,23 @@ export default function ErrorState({
             className="flex-1 bg-gradient-to-r from-green-500 to-cyan-500 text-white hover:from-green-600 hover:to-cyan-600 shadow-lg shadow-green-500/25 transition-all duration-200"
           >
             <RefreshCw className="h-4 w-4 mr-2" />
-            重新尝试
+            {t("retry_button")}
           </Button>
         )}
-        
+
         <Button
           onClick={handleEmailContact}
           variant="outline"
           className="flex-1 border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors duration-200"
         >
           <Mail className="h-4 w-4 mr-2" />
-          联系支持
+          {t("contact_support")}
         </Button>
       </div>
 
       {/* 支持信息 */}
       <div className="text-center text-sm text-gray-500 dark:text-gray-400 space-y-1">
-        <p>技术支持邮箱：</p>
+        <p>{t("support_email_text")}</p>
         <p className="font-mono text-green-600 dark:text-green-400">
           {supportEmail}
         </p>

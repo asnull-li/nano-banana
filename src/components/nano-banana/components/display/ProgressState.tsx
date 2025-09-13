@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Loader2, Clock, X } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 interface ProgressStateProps {
   progress: number;
@@ -16,6 +17,8 @@ export default function ProgressState({
   taskId,
   onCancel,
 }: ProgressStateProps) {
+  const t = useTranslations("nano_banana.workspace.progress_state");
+
   return (
     <div className="h-full flex flex-col items-center justify-center p-8 text-center">
       {/* 动画加载器 */}
@@ -30,11 +33,9 @@ export default function ProgressState({
 
       <div className="space-y-4 max-w-md">
         <h3 className="text-xl font-bold text-slate-800 dark:text-slate-200">
-          AI 正在创作中...
+          {t("title")}
         </h3>
-        <p className="text-slate-600 dark:text-slate-400">
-          请稍等片刻，精彩即将呈现
-        </p>
+        <p className="text-slate-600 dark:text-slate-400">{t("description")}</p>
       </div>
 
       {/* 进度条 */}
@@ -48,32 +49,20 @@ export default function ProgressState({
           </div>
         </div>
 
-        <div className="flex items-center justify-between text-sm text-slate-600 dark:text-slate-400">
+        {/* <div className="flex items-center justify-between text-sm text-slate-600 dark:text-slate-400">
           <span>{progress}%</span>
           <div className="flex items-center gap-1">
             <Clock className="h-3 w-3" />
             <span>{elapsedTime}s</span>
           </div>
-        </div>
+        </div> */}
       </div>
 
       {taskId && (
         <Badge variant="outline" className="mt-4 font-mono text-xs">
-          任务 ID: {taskId}
+          {t("task_id", { taskId })}
         </Badge>
       )}
-
-      {/* {onCancel && (
-        <Button
-          variant="outline"
-          size="sm"
-          onClick={onCancel}
-          className="mt-6 hover:border-red-500 hover:text-red-500"
-        >
-          <X className="h-4 w-4 mr-2" />
-          取消生成
-        </Button>
-      )} */}
     </div>
   );
 }

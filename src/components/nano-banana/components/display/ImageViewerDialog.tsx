@@ -10,6 +10,7 @@ import { ChevronLeft, ChevronRight, Download, Sparkles, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
 
 interface Result {
   url: string;
@@ -34,11 +35,12 @@ export default function ImageViewerDialog({
 }: ImageViewerDialogProps) {
   const router = useRouter();
   const currentResult = results[selectedResult];
+  const t = useTranslations("nano_banana.workspace.image_viewer");
 
   // 处理图片增强
   const handleEnhance = () => {
     if (!currentResult?.url) {
-      toast.error("未找到图片");
+      toast.error(t("image_not_found"));
       return;
     }
 
@@ -54,7 +56,7 @@ export default function ImageViewerDialog({
       onClose();
     } catch (error) {
       console.error("Invalid image URL:", error);
-      toast.error("无效的图片链接");
+      toast.error(t("invalid_image_url"));
     }
   };
 
@@ -106,7 +108,10 @@ export default function ImageViewerDialog({
       >
         <DialogTitle className="sr-only">图片预览</DialogTitle>
         <DialogDescription className="sr-only">
-          图片预览弹窗，第 {selectedResult + 1} 张，共 {results.length} 张
+          {t("image_count", {
+            current: selectedResult + 1,
+            total: results.length,
+          })}
         </DialogDescription>
 
         <div className="relative bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden flex flex-col">

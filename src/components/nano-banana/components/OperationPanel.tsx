@@ -6,6 +6,7 @@ import { useAppContext } from "@/contexts/app";
 import { CREDITS_PER_IMAGE } from "@/lib/constants/nano-banana";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
 
 // 导入子组件
 import ModeSelector from "./operation/ModeSelector";
@@ -44,6 +45,7 @@ export default function OperationPanel({
   const { credits } = useCredits();
   const { user, setShowSignModal } = useAppContext();
   const router = useRouter();
+  const t = useTranslations("nano_banana.workspace.operation_panel");
 
   const isProcessing = ["uploading", "processing", "fetching"].includes(status);
   const hasEnoughCredits = credits.left_credits >= CREDITS_PER_IMAGE;
@@ -54,13 +56,13 @@ export default function OperationPanel({
 
   const handleSubmit = () => {
     if (!user) {
-      toast.error("请先登录");
+      toast.warning(t("login_required"));
       setShowSignModal(true);
       return;
     }
 
     if (!hasEnoughCredits) {
-      toast.error(`积分不足，需要 ${CREDITS_PER_IMAGE} 积分`);
+      toast.warning(t("insufficient_credits", { amount: CREDITS_PER_IMAGE }));
       router.push("/pricing");
       return;
     }

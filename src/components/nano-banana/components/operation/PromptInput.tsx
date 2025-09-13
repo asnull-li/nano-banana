@@ -1,5 +1,6 @@
 import React from "react";
 import { Textarea } from "@/components/ui/textarea";
+import { useTranslations } from "next-intl";
 
 interface PromptInputProps {
   mode: "image-to-image" | "text-to-image";
@@ -14,11 +15,13 @@ export default function PromptInput({
   onPromptChange,
   disabled = false,
 }: PromptInputProps) {
+  const t = useTranslations("nano_banana.workspace.prompt_input");
+
   return (
     <div className="space-y-3">
       <div className="flex items-center justify-between">
         <h3 className="text-sm font-semibold text-slate-700 dark:text-slate-300">
-          描述你的想法
+          {t("title")}
         </h3>
         <span
           className={`text-xs transition-colors ${
@@ -45,8 +48,8 @@ export default function PromptInput({
       <Textarea
         placeholder={
           mode === "image-to-image"
-            ? "描述你想要的效果，可以包含风格、色彩、构图等细节..."
-            : "详细描述你想要生成的图片，包含主体、场景、风格、色彩等..."
+            ? t("placeholder_image_edit")
+            : t("placeholder_text_to_image")
         }
         value={prompt}
         onChange={(e) => {
@@ -60,7 +63,7 @@ export default function PromptInput({
         disabled={disabled}
       />
       <div className="text-xs text-slate-400 dark:text-slate-500">
-        详细描述能获得更好效果
+        {t("tip")}
       </div>
     </div>
   );

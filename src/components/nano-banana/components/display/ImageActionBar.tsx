@@ -2,7 +2,8 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { Download, Sparkles, Edit3 } from "lucide-react";
 import { toast } from "sonner";
-import { useRouter } from "next/navigation";
+import { useRouter } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 
 interface ImageActionBarProps {
   imageUrl: string;
@@ -20,10 +21,11 @@ export default function ImageActionBar({
   disabled = false,
 }: ImageActionBarProps) {
   const router = useRouter();
+  const t = useTranslations("nano_banana.workspace.image_action_bar");
 
   const handleEnhance = () => {
     if (!imageUrl) {
-      toast.error("未找到图片");
+      toast.error(t("image_not_found"));
       return;
     }
 
@@ -38,7 +40,7 @@ export default function ImageActionBar({
       router.push(`/ai-image-upscaler?${searchParams.toString()}`);
     } catch (error) {
       console.error("Invalid image URL:", error);
-      toast.error("无效的图片链接");
+      toast.error(t("invalid_image_url"));
     }
   };
 
@@ -46,7 +48,7 @@ export default function ImageActionBar({
     if (onContinueEdit) {
       await onContinueEdit();
     } else {
-      toast.info("继续编辑功能即将上线");
+      toast.info(t("continue_edit_coming_soon"));
     }
   };
 
@@ -61,7 +63,7 @@ export default function ImageActionBar({
           size="sm"
         >
           <Download className="h-4 w-4 mr-2" />
-          下载
+          {t("download")}
         </Button>
 
         {/* 图片增强按钮 */}
@@ -73,7 +75,7 @@ export default function ImageActionBar({
           size="sm"
         >
           <Sparkles className="h-4 w-4 mr-2" />
-          图片增强
+          {t("enhance")}
         </Button>
 
         {/* 继续编辑按钮 */}
@@ -85,7 +87,7 @@ export default function ImageActionBar({
           size="sm"
         >
           <Edit3 className="h-4 w-4 mr-2" />
-          再次编辑
+          {t("continue_edit")}
         </Button>
       </div>
     </div>

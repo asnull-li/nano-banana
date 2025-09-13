@@ -5,6 +5,7 @@ import { Upload, X } from "lucide-react";
 import { useDropzone, FileRejection } from "react-dropzone";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
+import { useTranslations } from "next-intl";
 import ImageCard from "./ImageCard";
 import type { UploadedImage } from "../../hooks/use-nano-banana";
 
@@ -23,6 +24,8 @@ export default function ImageUploadArea({
   onClearImages,
   disabled = false,
 }: ImageUploadAreaProps) {
+  const t = useTranslations("nano_banana.workspace.image_upload");
+
   // 处理被拒绝的文件
   const handleDropRejected = (fileRejections: FileRejection[]) => {
     fileRejections.forEach((rejection) => {
@@ -33,13 +36,13 @@ export default function ImageUploadArea({
 
         switch (error.code) {
           case "file-invalid-type":
-            errorMessage += "不支持的文件格式，仅支持 JPG、PNG、WebP";
+            errorMessage += t("error_invalid_type");
             break;
           case "file-too-large":
-            errorMessage += `文件大小超过 10MB 限制`;
+            errorMessage += t("error_too_large");
             break;
           case "too-many-files":
-            errorMessage += "一次最多上传5个文件";
+            errorMessage += t("error_too_many");
             break;
           default:
             errorMessage += error.message;
@@ -68,7 +71,7 @@ export default function ImageUploadArea({
     <div className="space-y-3">
       <div className="flex items-center justify-between">
         <h3 className="text-sm font-semibold text-slate-700 dark:text-slate-300">
-          参考图片
+          {t("title")}
         </h3>
         {uploadedImages.length > 0 && (
           <Badge className="bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400 border-green-200 dark:border-green-700">
@@ -121,13 +124,13 @@ export default function ImageUploadArea({
             </div>
             <div className="text-center">
               <p className="text-xs font-medium text-green-600 dark:text-green-400 group-hover:text-green-700 dark:group-hover:text-green-300">
-                Add Image
+                {t("add_image")}
               </p>
               <p className="text-[10px] text-green-500 dark:text-green-500">
-                JPG, PNG, WebP
+                {t("supported_formats")}
               </p>
               <p className="text-[10px] text-green-500 dark:text-green-500">
-                Max 10MB
+                {t("max_size")}
               </p>
             </div>
 
@@ -135,7 +138,7 @@ export default function ImageUploadArea({
             {isDragActive && (
               <div className="absolute inset-0 rounded-xl bg-green-400/20 flex items-center justify-center">
                 <div className="text-green-600 font-medium animate-bounce">
-                  释放文件
+                  {t("drag_to_upload")}
                 </div>
               </div>
             )}
@@ -164,7 +167,7 @@ export default function ImageUploadArea({
           className="w-full text-red-500 border-red-200 hover:bg-red-50 dark:hover:bg-red-950/20"
         >
           <X className="h-4 w-4 mr-2" />
-          清空所有图片
+          {t("clear_all")}
         </Button>
       )}
     </div>

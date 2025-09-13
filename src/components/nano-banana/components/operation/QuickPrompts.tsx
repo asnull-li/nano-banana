@@ -1,6 +1,7 @@
-import React from 'react';
-import { Button } from '@/components/ui/button';
-import { Lightbulb, Palette, Zap, Camera, Sparkles } from 'lucide-react';
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Lightbulb, Palette, Zap, Camera, Sparkles } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 interface QuickPromptsProps {
   mode: "image-to-image" | "text-to-image";
@@ -9,18 +10,60 @@ interface QuickPromptsProps {
   disabled?: boolean;
 }
 
-export default function QuickPrompts({ mode, prompt, onPromptChange, disabled = false }: QuickPromptsProps) {
-  const quickPrompts = mode === "image-to-image" ? [
-    { icon: Lightbulb, label: "增强细节", prompt: "增强细节，高清，精细" },
-    { icon: Palette, label: "艺术风格", prompt: "艺术风格，油画质感" },
-    { icon: Zap, label: "动漫风格", prompt: "动漫风格，二次元" },
-    { icon: Camera, label: "写实照片", prompt: "写实风格，摄影质感" },
-  ] : [
-    { icon: Palette, label: "艺术创作", prompt: "艺术风格，高质量，精美" },
-    { icon: Camera, label: "写实风格", prompt: "写实风格，高清摄影" },
-    { icon: Sparkles, label: "科幻未来", prompt: "科幻风格，未来感" },
-    { icon: Lightbulb, label: "创意设计", prompt: "创意设计，独特视角" },
-  ];
+export default function QuickPrompts({
+  mode,
+  prompt,
+  onPromptChange,
+  disabled = false,
+}: QuickPromptsProps) {
+  const t = useTranslations("nano_banana.workspace.quick_prompts");
+
+  const quickPrompts =
+    mode === "image-to-image"
+      ? [
+          {
+            icon: Lightbulb,
+            label: t("image_mode.enhance_details"),
+            prompt: t("image_mode.enhance_details_prompt"),
+          },
+          {
+            icon: Palette,
+            label: t("image_mode.art_style"),
+            prompt: t("image_mode.art_style_prompt"),
+          },
+          {
+            icon: Zap,
+            label: t("image_mode.anime_style"),
+            prompt: t("image_mode.anime_style_prompt"),
+          },
+          {
+            icon: Camera,
+            label: t("image_mode.realistic_photo"),
+            prompt: t("image_mode.realistic_photo_prompt"),
+          },
+        ]
+      : [
+          {
+            icon: Palette,
+            label: t("text_mode.art_creation"),
+            prompt: t("text_mode.art_creation_prompt"),
+          },
+          {
+            icon: Camera,
+            label: t("text_mode.realistic_style"),
+            prompt: t("text_mode.realistic_style_prompt"),
+          },
+          {
+            icon: Sparkles,
+            label: t("text_mode.sci_fi"),
+            prompt: t("text_mode.sci_fi_prompt"),
+          },
+          {
+            icon: Lightbulb,
+            label: t("text_mode.creative_design"),
+            prompt: t("text_mode.creative_design_prompt"),
+          },
+        ];
 
   return (
     <div className="grid grid-cols-2 gap-1">
@@ -30,7 +73,9 @@ export default function QuickPrompts({ mode, prompt, onPromptChange, disabled = 
           variant="outline"
           size="sm"
           className="h-auto py-2 px-2 justify-start text-xs border-slate-200 hover:border-green-400 hover:bg-green-50 dark:hover:bg-green-950/20"
-          onClick={() => onPromptChange(prompt ? `${prompt}, ${item.prompt}` : item.prompt)}
+          onClick={() =>
+            onPromptChange(prompt ? `${prompt}, ${item.prompt}` : item.prompt)
+          }
           disabled={disabled}
         >
           <item.icon className="h-3 w-3 mr-1 text-green-500" />

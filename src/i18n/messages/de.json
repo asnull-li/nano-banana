@@ -11,56 +11,61 @@
     "api_keys": "API-Schlüssel",
     "my_orders": "Meine Bestellungen",
     "user_center": "Benutzerzentrum",
-    "admin_system": "Admin-System"
+    "admin_system": "Verwaltungssystem"
   },
   "sign_modal": {
     "sign_in_title": "Anmelden",
     "sign_in_description": "Melden Sie sich bei Ihrem Konto an",
     "sign_up_title": "Registrieren",
-    "sign_up_description": "Konto erstellen",
+    "sign_up_description": "Neues Konto erstellen",
     "login_slogan": "Kostenlose Testversion nach Anmeldung verfügbar",
+    "email": "E-Mail",
     "email_title": "E-Mail",
-    "email_placeholder": "Geben Sie hier Ihre E-Mail ein",
+    "email_placeholder": "Bitte geben Sie Ihre E-Mail ein",
     "password_title": "Passwort",
-    "password_placeholder": "Geben Sie hier Ihr Passwort ein",
+    "password_placeholder": "Bitte geben Sie Ihr Passwort ein",
     "forgot_password": "Passwort vergessen?",
     "or": "Oder",
     "continue": "Weiter",
-    "no_account": "Noch kein Konto?",
+    "no_account": "Haben Sie noch kein Konto?",
     "email_sign_in": "Mit E-Mail anmelden",
     "google_sign_in": "Mit Google anmelden",
     "github_sign_in": "Mit GitHub anmelden",
+    "send_magic_link": "Anmelde-Link senden",
+    "sending": "Wird gesendet...",
+    "email_sent": "Bitte überprüfen Sie Ihre E-Mail, wir haben Ihnen einen Anmelde-Link gesendet!",
     "email_required": "Bitte geben Sie Ihre E-Mail ein",
     "code_required": "Bitte geben Sie E-Mail und Verifizierungscode ein",
     "code_sent": "Verifizierungscode wurde an Ihre E-Mail gesendet",
     "enter_email": "E-Mail eingeben",
     "enter_code": "Verifizierungscode eingeben",
     "send_code": "Verifizierungscode senden",
-    "sending_code": "Sende...",
+    "sending_code": "Wird gesendet...",
     "verification_code": "Verifizierungscode",
-    "resend_code": "Code erneut senden",
-    "resend_in": "Erneut senden in",
+    "resend_code": "Erneut senden",
+    "resend_in": "Countdown für erneutes Senden",
     "sign_in": "Anmelden",
-    "signing_in": "Anmeldung läuft...",
+    "signing_in": "Wird angemeldet...",
     "back": "Zurück",
     "invalid_code": "Ungültiger Verifizierungscode",
-    "code_expired": "Verifizierungscode abgelaufen oder nicht gefunden",
+    "code_expired": "Verifizierungscode ist abgelaufen oder existiert nicht",
+    "sign_in_failed": "Anmeldung fehlgeschlagen, bitte versuchen Sie es erneut",
     "close_title": "Schließen",
     "cancel_title": "Abbrechen",
-    "terms_text": "Mit der Fortsetzung stimmen Sie unseren",
+    "terms_text": "Durch Fortfahren stimmen Sie unseren",
     "terms_of_service": "Nutzungsbedingungen",
     "and": "und",
-    "privacy_policy": "Datenschutzrichtlinien zu"
+    "privacy_policy": "Datenschutzrichtlinie zu"
   },
   "my_orders": {
     "title": "Meine Bestellungen",
-    "description": "mit ShipAny bezahlte Bestellungen.",
+    "description": "Auf ShipAny gekaufte Bestellungen.",
     "no_orders": "Keine Bestellungen gefunden",
     "tip": "",
     "activate_order": "Bestellung aktivieren",
     "actived": "Aktiviert",
     "join_discord": "Discord beitreten",
-    "read_docs": "Dokumente lesen",
+    "read_docs": "Dokumentation lesen",
     "table": {
       "order_no": "Bestellnummer",
       "email": "E-Mail",
@@ -73,11 +78,11 @@
   },
   "my_credits": {
     "title": "Mein Guthaben",
-    "left_tip": "verbleibendes Guthaben: {left_credits}",
-    "no_credits": "Keine Guthabenaufzeichnungen",
+    "left_tip": "Verbleibendes Guthaben: {left_credits}",
+    "no_credits": "Keine Guthaben-Aufzeichnungen",
     "recharge": "Aufladen",
     "table": {
-      "trans_no": "Transaktionsnr.",
+      "trans_no": "Transaktionsnummer",
       "trans_type": "Transaktionstyp",
       "credits": "Guthaben",
       "updated_at": "Aktualisiert am",
@@ -96,7 +101,7 @@
     },
     "form": {
       "name": "Name",
-      "name_placeholder": "API-Schlüsselname",
+      "name_placeholder": "API-Schlüssel-Name",
       "submit": "Absenden"
     }
   },
@@ -116,299 +121,232 @@
     "invite_tip": "Laden Sie 1 Freund ein, ShipAny zu kaufen, Belohnung $50.",
     "invite_balance": "Einladungsbelohnungsguthaben",
     "total_invite_count": "Gesamtanzahl der Einladungen",
-    "total_paid_count": "Gesamtanzahl bezahlter",
+    "total_paid_count": "Gesamtanzahl der Zahlungen",
     "total_award_amount": "Gesamtbelohnungsbetrag",
     "update_invite_code": "Einladungscode festlegen",
     "update_invite_code_tip": "Geben Sie Ihren benutzerdefinierten Einladungscode ein",
     "update_invite_button": "Speichern",
-    "no_orders": "Sie können andere nicht einladen, bevor Sie ShipAny gekauft haben",
-    "no_affiliates": "Sie dürfen andere nicht einladen. Bitte kontaktieren Sie uns, um eine Genehmigung zu beantragen.",
+    "no_orders": "Sie müssen zuerst ShipAny kaufen, bevor Sie Freunde einladen",
+    "no_affiliates": "Sie haben noch keine Berechtigung, Freunde einzuladen, bitte kontaktieren Sie uns für eine Anfrage.",
     "table": {
       "invite_time": "Einladungszeit",
       "invite_user": "Eingeladener Benutzer",
       "status": "Status",
-      "reward_percent": "Belohnungsprozent",
+      "reward_percent": "Belohnungsprozentsatz",
       "reward_amount": "Belohnungsbetrag",
-      "pending": "Ausstehend",
-      "completed": "Abgeschlossen"
+      "pending": "Registriert, nicht bezahlt",
+      "completed": "Bezahlt"
     }
   },
   "feedback": {
     "title": "Feedback",
-    "description": "Wir würden gerne hören, was gut gelaufen ist oder wie wir die Produkterfahrung verbessern können.",
+    "description": "Wir würden gerne Ihre Meinungen über das Produkt erfahren oder wie wir die Produkterfahrung verbessern können.",
     "submit": "Absenden",
-    "loading": "Wird übermittelt...",
-    "contact_tip": "Andere Möglichkeiten, uns zu kontaktieren",
-    "rating_tip": "Was halten Sie von ShipAny?",
-    "placeholder": "Hinterlassen Sie hier Ihre Nachricht..."
+    "loading": "Wird gesendet...",
+    "contact_tip": "Andere Kontaktmethoden",
+    "rating_tip": "Was denken Sie über ShipAny?",
+    "placeholder": "Hinterlassen Sie hier Ihr Feedback..."
   },
   "pricing": {
     "most_popular": "Am beliebtesten"
   },
-  "workspace": {
-    "loading_text": "Arbeitsbereich wird geladen...",
-    "sign_in_prompt": "Anmelden, um mit KI zu erstellen",
-    "sign_in_description": "Neue Benutzer erhalten kostenlose Credits, um leistungsstarke KI-Erstellung zu erleben",
-    "sign_in_button": "Anmelden zum Erstellen",
-    "text_to_image": {
-      "title": "Erstellungsmodus",
-      "prompt_label": "Beschreiben Sie Ihre Vision",
-      "prompt_placeholder": "Eine futuristische Stadt mit fliegenden Autos bei Sonnenuntergang...",
-      "aspect_ratio_label": "Seitenverhältnis",
-      "aspect_ratios": {
-        "square": "Quadratisch",
-        "landscape": "Querformat",
-        "portrait": "Hochformat",
-        "classic": "Klassisch"
-      },
-      "quality_label": "Qualität",
-      "quality_pro": "Pro",
-      "quality_pro_desc": "Hohe Qualität, ausgewogene Geschwindigkeit",
-      "quality_max": "Max",
-      "quality_max_desc": "Ultimative Qualität, perfekte Details",
-      "generate_button": "Erstellen",
-      "generating_button": "Erstelle...",
-      "regenerate_button": "Neu generieren",
-      "download_button": "Herunterladen",
-      "share_button": "Teilen",
-      "view_full_size": "In voller Größe anzeigen",
-      "generated_result": "Generiertes Ergebnis",
-      "ai_generated": "KI-generiert",
-      "generating_text": "Erstelle Ihr Bild...",
-      "complete_text": "abgeschlossen",
-      "all_generated_images": "Alle generierten Bilder",
-      "ai_assistant_title": "KI-Assistent",
-      "ai_assistant_desc": "Ich helfe Ihnen, erstaunliche Bilder aus Text zu erstellen! Probieren Sie diese Inspirationen:",
-      "inspiration": "Inspiration",
-      "inspirations": [
-        "Cyberpunk-Stadt bei Nacht mit Neonlichtern",
-        "Ölgemälde von Bergen bei Sonnenuntergang",
-        "Anime-Stil Charakter mit blauen Haaren",
-        "Abstrakte bunte geometrische Kunst",
-        "Realistisches Porträt eines Kriegers",
-        "Unterwasser-Fantasiewelt mit leuchtenden Kreaturen"
-      ],
-      "credits": "Guthaben",
-      "credits_left": "verbleibend",
-      "this_may_take": "Dies kann 1-2 Minuten dauern..."
-    },
-    "image_to_image": {
-      "title": "Bearbeitungsmodus",
-      "upload_title": "Bild hochladen",
-      "upload_desc": "Ziehen Sie Ihr Bild hierher oder klicken Sie zum Durchsuchen",
-      "upload_formats": "JPG, PNG, WEBP bis zu 20MB",
-      "sample_images": "Beispielbilder",
-      "clear_button": "Löschen",
-      "original": "Original",
-      "ai_edited": "KI-bearbeitet",
-      "new_edit": "Neue Bearbeitung",
-      "ai_assistant_title": "KI-Assistent",
-      "ai_assistant_upload_prompt": "Bild hochgeladen! Was möchten Sie ändern?",
-      "ai_assistant_ready": "Bereit, Ihr Bild zu transformieren! Laden Sie ein Bild hoch, um zu beginnen.",
-      "quick_actions": "Schnellaktionen",
-      "quick_action_lighting": "Beleuchtung ändern",
-      "quick_action_lighting_prompt": "Zu goldener Stunde Beleuchtung ändern",
-      "quick_action_style": "Stilübertragung",
-      "quick_action_style_prompt": "In Ölgemälde-Stil konvertieren",
-      "quick_action_remove_bg": "Hintergrund entfernen",
-      "quick_action_remove_bg_prompt": "Hintergrund entfernen, Motiv behalten",
-      "quick_action_color": "Farbkorrektur",
-      "quick_action_color_prompt": "Kinematografische Farbkorrektur anwenden",
-      "recent_edits": "Kürzliche Bearbeitungen",
-      "describe_changes": "Beschreiben Sie, was Sie ändern möchten...",
-      "transform_button": "Transformieren",
-      "transforming_button": "Transformiere...",
-      "processing": "Verarbeitung",
-      "quality_pro_desc": "Ideal für die meisten Szenarien, präzise Bearbeitung"
-    }
-  },
   "nano_banana": {
     "wrapper": {
-      "loading_text": "Lade Nano Banana...",
-      "title": "Nano Banana KI-Kreations-Werkbank",
-      "description": "Verwenden Sie fortschrittliche KI-Technologie, um Ihre Fantasie in wunderschöne Bilder zu verwandeln"
+      "loading_text": "Nano Banana wird geladen...",
+      "title": "Nano Banana KI-Kreations-Workbench",
+      "description": "Verwenden Sie fortschrittliche KI-Technologie, um Ihre Vorstellungskraft in schöne Bilder zu verwandeln"
+    },
+    "workspace": {
+      "mode_selector": {
+        "image_edit": "Bildbearbeitung",
+        "text_to_image": "Text zu Bild"
+      },
+      "operation_panel": {
+        "login_required": "Bitte melden Sie sich zuerst an",
+        "insufficient_credits": "Unzureichendes Guthaben, benötigt {amount} Guthaben",
+        "please_enter_prompt": "Bitte geben Sie eine Beschreibung ein",
+        "prompt_min_length": "Bitte geben Sie mindestens 3 Zeichen ein",
+        "generating": "Wird generiert...",
+        "start_creation": "Kreation starten"
+      },
+      "image_upload": {
+        "title": "Referenzbilder",
+        "add_image": "Bild hinzufügen",
+        "max_size": "Max 10MB",
+        "supported_formats": "JPG, PNG, WebP",
+        "drag_to_upload": "Datei loslassen",
+        "clear_all": "Alle Bilder löschen",
+        "error_invalid_type": "Nicht unterstütztes Dateiformat, nur JPG, PNG, WebP werden unterstützt",
+        "error_too_large": "Dateigröße überschreitet 10MB-Limit",
+        "error_too_many": "Maximal 5 Dateien können gleichzeitig hochgeladen werden"
+      },
+      "prompt_input": {
+        "title": "Beschreiben Sie Ihre Idee",
+        "placeholder_image_edit": "Beschreiben Sie den gewünschten Effekt, einschließlich Stil, Farbe, Komposition und andere Details...",
+        "placeholder_text_to_image": "Beschreiben Sie detailliert das Bild, das Sie generieren möchten, einschließlich Subjekt, Szene, Stil, Farbe usw...",
+        "tip": "Detaillierte Beschreibungen führen zu besseren Ergebnissen"
+      },
+      "credits_display": {
+        "title": "Guthabenverbrauch",
+        "unit": "Guthaben"
+      },
+      "display_panel": {
+        "generation_complete": "Generierung abgeschlossen!",
+        "regenerate": "Neu generieren",
+        "image_download_success": "Bild erfolgreich heruntergeladen",
+        "download_failed": "Download fehlgeschlagen",
+        "link_copied": "Link kopiert",
+        "copy_failed": "Kopieren fehlgeschlagen"
+      },
+      "empty_state": {
+        "title": "Bereit, mit dem Erstellen zu beginnen?",
+        "description": "Wählen Sie links einen Modus, laden Sie Bilder hoch oder geben Sie Beschreibungen ein, und lassen Sie die KI erstaunliche Bilder für Sie erstellen",
+        "feature_ai": "KI-Intelligenz",
+        "feature_speed": "Ultraschnelle Generierung",
+        "feature_quality": "Hohe Qualität"
+      },
+      "progress_state": {
+        "title": "KI erstellt gerade...",
+        "description": "Bitte warten Sie einen Moment, etwas Erstaunliches kommt",
+        "task_id": "Aufgaben-ID: {taskId}"
+      },
+      "error_state": {
+        "title": "Generierung fehlgeschlagen",
+        "default_message": "Entschuldigung, es gab ein Problem bei der Bildgenerierung. Bitte versuchen Sie es später erneut. Wenn das Problem weiterhin besteht, wenden Sie sich bitte an unser technisches Support-Team.",
+        "support_message": "Wenn das Problem weiterhin besteht, wird unser technisches Support-Team Ihnen helfen",
+        "retry_button": "Erneut versuchen",
+        "contact_support": "Support kontaktieren",
+        "support_email_text": "Technischer Support E-Mail:",
+        "email_subject": "Nano Banana - Technischer Support-Antrag",
+        "email_body": "Hallo,\\n\\nIch bin auf ein Problem bei der Verwendung von Nano Banana gestoßen:\\n\\nFehlermeldung: {title}\\nDetaillierte Beschreibung: {message}\\n\\nBitte helfen Sie bei der Lösung, vielen Dank!\\n\\nBenutzer"
+      },
+      "image_card": {
+        "image_load_failed": "Bildladevorgang fehlgeschlagen",
+        "image_number": "Bild #{number}",
+        "from_link": "Vom Link"
+      },
+      "image_action_bar": {
+        "download": "Herunterladen",
+        "enhance": "Bildverbesserung",
+        "continue_edit": "Erneut bearbeiten",
+        "image_not_found": "Bild nicht gefunden",
+        "invalid_image_url": "Ungültige Bild-URL",
+        "continue_edit_coming_soon": "Funktion zur Weiterbearbeitung kommt bald"
+      },
+      "ai_description": {
+        "title": "KI-generierte Beschreibung"
+      },
+      "action_buttons": {
+        "download": "Herunterladen",
+        "copy_link": "Link kopieren",
+        "copied": "Kopiert",
+        "view_large": "Groß anzeigen"
+      },
+      "image_preview": {
+        "download_success": "Bild erfolgreich heruntergeladen",
+        "download_failed": "Download fehlgeschlagen",
+        "link_copied": "Link kopiert",
+        "copy_failed": "Kopieren fehlgeschlagen",
+        "click_to_view": "Klicken Sie, um das große Bild anzuzeigen"
+      },
+      "image_viewer": {
+        "image_not_found": "Bild nicht gefunden",
+        "invalid_image_url": "Ungültige Bild-URL",
+        "download": "Herunterladen",
+        "enhance": "Bildverbesserung",
+        "close": "Schließen",
+        "prev_image": "Vorheriges",
+        "next_image": "Nächstes",
+        "image_count": "{current} / {total}"
+      },
+      "quick_prompts": {
+        "image_mode": {
+          "enhance_details": "Details verbessern",
+          "enhance_details_prompt": "Details verbessern, hochauflösend, fein",
+          "art_style": "Kunststil",
+          "art_style_prompt": "Kunststil, Ölgemälde-Textur",
+          "anime_style": "Anime-Stil",
+          "anime_style_prompt": "Anime-Stil, 2D",
+          "realistic_photo": "Realistisches Foto",
+          "realistic_photo_prompt": "realistischer Stil, fotografische Textur"
+        },
+        "text_mode": {
+          "art_creation": "Kunstschöpfung",
+          "art_creation_prompt": "Kunststil, hohe Qualität, exquisit",
+          "realistic_style": "Realistischer Stil",
+          "realistic_style_prompt": "realistischer Stil, hochauflösende Fotografie",
+          "sci_fi": "Sci-Fi-Zukunft",
+          "sci_fi_prompt": "Sci-Fi-Stil, futuristisch",
+          "creative_design": "Kreatives Design",
+          "creative_design_prompt": "kreatives Design, einzigartige Perspektive"
+        }
+      }
+    },
+    "hooks": {
+      "file_validation": {
+        "unsupported_format": "Nicht unterstütztes Dateiformat, nur JPG, PNG, WebP werden unterstützt",
+        "file_too_large": "Dateigröße beträgt {sizeMB}MB, überschreitet 10MB-Limit",
+        "image_applied": "Bild auf Referenzbereich angewendet",
+        "invalid_image_url": "Ungültige Bild-URL"
+      }
     },
     "messages": {
       "starting_upload": "Beginne mit dem Hochladen von {count} Bildern...",
       "upload_success": "Alle Bilder erfolgreich hochgeladen!",
       "upload_failed": "Bild-Upload fehlgeschlagen",
-      "upload_image_failed": "Fehler beim Hochladen des Bildes {filename}",
-      "submit_failed": "Fehler beim Senden der Aufgabe",
+      "upload_image_failed": "Upload von Bild {filename} fehlgeschlagen",
+      "submit_failed": "Aufgabenübermittlung fehlgeschlagen",
       "task_submitted": "Aufgabe übermittelt, wird verarbeitet...",
-      "insufficient_credits": "Unzureichendes Guthaben, bitte aufladen und erneut versuchen",
-      "generation_success": "Erfolgreich {count} Bilder generiert!",
-      "get_results_failed": "Fehler beim Abrufen der Ergebnisse",
+      "insufficient_credits": "Unzureichendes Guthaben, bitte laden Sie auf und versuchen Sie es erneut",
+      "generation_success": "{count} Bilder erfolgreich generiert!",
+      "get_results_failed": "Ergebnisse abrufen fehlgeschlagen",
       "task_failed": "Aufgabenausführung fehlgeschlagen",
       "max_images_warning": "Maximal 5 Bilder erlaubt, automatisch begrenzt"
     },
     "validation": {
-      "please_enter_prompt": "Bitte geben Sie einen Prompt ein",
+      "please_enter_prompt": "Bitte geben Sie eine Beschreibung ein",
       "please_upload_image": "Bitte laden Sie mindestens ein Bild hoch"
-    },
-    "mode_selector": {
-      "edit_mode": "Bilder mit Chat bearbeiten",
-      "text_mode": "Text-zu-Bild-Modus"
-    },
-    "text_to_image": {
-      "inspiration_title": "Inspiration",
-      "inspiration_desc": "Klicken Sie auf die Tags unten, um schnell mit dem Erstellen zu beginnen",
-      "labels": {
-        "landscape": "Landschaft",
-        "portrait": "Porträt",
-        "architecture": "Architektur",
-        "art": "Kunst",
-        "sci_fi": "Sci-Fi",
-        "nature": "Natur",
-        "animals": "Tiere",
-        "creative": "Kreativ"
-      },
-      "prompts": {
-        "landscape": "majestätische Berglandschaft bei Sonnenuntergang, goldenes Stundenlicht, fotorealistisch",
-        "portrait": "professionelle Porträtfotografie, Studiobeleuchtung, scharfer Fokus",
-        "architecture": "moderne Architektur, geometrisches Design, minimalistischer Stil",
-        "art": "abstrakte Kunst, lebendige Farben, Ölgemälde-Stil",
-        "sci_fi": "futuristische Sci-Fi-Szene, Neonlichter, Cyberpunk-Ästhetik",
-        "nature": "ruhige Waldszene, Morgennebel, natürliche Beleuchtung",
-        "animals": "niedliche Tiere, detaillierte Felltextur, natürlicher Lebensraum",
-        "creative": "surreales kreatives Konzept, einfallsreiches Design, künstlerisch"
-      },
-      "main_title": "KI-Bildgenerierung",
-      "mode_badge": "Text-zu-Bild-Modus",
-      "prompt_label": "Beschreiben Sie das Bild, das Sie generieren möchten",
-      "prompt_placeholder": "Zum Beispiel: Eine niedliche Cartoon-Katze sitzt auf einem Regenbogen, verträumter Stil, weiche Farben...",
-      "char_count": "{count}/5000",
-      "generation_count": "Anzahl der Generierungen",
-      "count_unit": "{count} Bilder",
-      "credits_label": "Guthaben",
-      "generate_button": "Generierung starten ({count} Bilder)",
-      "generating_button": "Generiere...",
-      "tip_text": "💡 Tipp: Je detaillierter die Beschreibung, desto näher wird das generierte Bild Ihrer Vorstellung sein",
-      "validation": {
-        "prompt_too_short": "Bitte geben Sie eine Beschreibung mit mindestens 3 Zeichen ein",
-        "please_login": "Bitte melden Sie sich zuerst an",
-        "insufficient_credits": "Unzureichendes Guthaben, benötigen {needed} Credits, Sie haben {current} Credits"
-      }
-    },
-    "generation_status": {
-      "ready": "Bereit",
-      "ready_desc": "Warte auf Start der Generierung",
-      "uploading": "Hochladen",
-      "uploading_desc": "Lade Bilder auf den Server hoch...",
-      "processing": "Generierung",
-      "processing_desc": "KI verarbeitet Ihre Anfrage...",
-      "fetching": "Ergebnisse abrufen",
-      "fetching_desc": "Generierte Bilder werden abgerufen...",
-      "completed": "Generierung abgeschlossen",
-      "completed_desc": "Bildgenerierung erfolgreich!",
-      "failed": "Generierung fehlgeschlagen",
-      "failed_desc": "Ein Fehler ist während der Generierung aufgetreten",
-      "cancel": "Abbrechen",
-      "progress": "Fortschritt",
-      "task_id": "Aufgaben-ID: {taskId}",
-      "ai_working": "KI arbeitet hart, bitte warten...",
-      "estimate_time": "Etwa {time}s"
-    },
-    "result_gallery": {
-      "title": "Generierungsergebnisse",
-      "success_message": "Erfolgreich {count} Bilder generiert",
-      "regenerate": "Neu generieren",
-      "ai_reply": "Nano Banana Antwort",
-      "download_success": "Bild erfolgreich heruntergeladen!",
-      "download_failed": "Download fehlgeschlagen, bitte erneut versuchen",
-      "link_copied": "Link in Zwischenablage kopiert",
-      "copy_failed": "Kopieren fehlgeschlagen",
-      "image_index": "Bild {current} / {total}",
-      "copy_link": "Link kopieren",
-      "download_image": "Bild herunterladen",
-      "download_original": "Original herunterladen",
-      "fullscreen": "Vollbild"
-    },
-    "image_to_image": {
-      "ai_editing": "KI-Bildbearbeitung",
-      "quick_style": "Schnellstile",
-      "enhance_details": "Details verbessern",
-      "enhance_details_prompt": "Details verbessern, Ultra HD, scharfer Fokus",
-      "art_style": "Kunststil",
-      "art_style_prompt": "künstlerischer Stil, Ölgemälde, lebendige Farben",
-      "anime_style": "Anime-Stil",
-      "anime_style_prompt": "Anime-Stil, Cel-Shading, Manga-Kunst",
-      "realistic_photo": "Realistisches Foto",
-      "realistic_photo_prompt": "fotorealistisch, professionelle Fotografie, 8K",
-      "describe_effect": "Beschreiben Sie den gewünschten Effekt",
-      "prompt_placeholder": "Zum Beispiel: Bild in Ölgemälde-Stil verwandeln, warme Töne hinzufügen, die Szene lebendiger machen...",
-      "generate_count": "Anzahl der Generierungen",
-      "count_images": "{count} Bilder",
-      "credits": "Guthaben",
-      "start_generation": "Generierung starten ({count} Bilder)",
-      "processing": "Verarbeitung...",
-      "insufficient_credits": "Unzureichendes Guthaben, benötigen {needed} Credits",
-      "prompt_too_short": "Bitte geben Sie mindestens 3 Zeichen ein",
-      "please_upload_image": "Bitte laden Sie zuerst ein Bild hoch",
-      "selected_references": "Ausgewählte Referenzen",
-      "clear_all": "Alles löschen",
-      "uploading": "Hochladen...",
-      "preview": "Vorschau",
-      "image_uploaded": "Bild hochgeladen",
-      "dialog_image_editing": "Konversationelle Bildbearbeitung",
-      "multiple_references": "Mehrere Referenzen",
-      "upload_multiple": "Laden Sie mehrere Referenzbilder hoch (bis zu 5), beschreiben Sie Bearbeitungsbedürfnisse durch natürliche Konversation, KI versteht intelligent und führt präzise aus.",
-      "dialog_editing": "Konversationelle Bearbeitung",
-      "multi_image_reference": "Mehrfachbild-Referenz",
-      "intelligent_understanding": "Intelligentes Verständnis",
-      "release_to_upload": "Loslassen zum Hochladen",
-      "drag_drop_upload": "Ziehen oder klicken, um Bilder hochzuladen",
-      "supported_formats": "Unterstützt PNG, JPG, JPEG, WebP-Formate",
-      "max_file_size": "Max. 10MB pro Datei, {remaining} Plätze verbleibend",
-      "selected_count": "Ausgewählt {current}/{max} Bilder",
-      "max_images_reached": "Maximale Bildanzahl erreicht",
-      "max_upload_limit": "Kann bis zu {max} Bilder hochladen",
-      "file_too_large": "Datei {filename} ist zu groß, max. 10MB",
-      "unsupported_format": "Datei {filename} Format wird nicht unterstützt",
-      "can_only_upload": "Kann nur noch {count} weitere Bilder hochladen",
-      "please_login": "Bitte melden Sie sich zuerst an",
-      "insufficient_credits_detail": "Unzureichendes Guthaben, benötigen {needed} Credits, Sie haben {current} Credits",
-      "download_hint": "Klicken Sie auf die Download-Schaltfläche und dann mit der rechten Maustaste zum Speichern"
     }
   },
   "history": {
-    "title": "Nano Banana Erstellungsverlauf",
-    "description": "Alle zuvor mit Nano Banana generierten und bearbeiteten Bilder anzeigen",
+    "title": "Nano Banana Kreationshistorie",
+    "description": "Alle Bilder anzeigen, die Sie zuvor mit Nano Banana generiert und bearbeitet haben",
     "status": {
       "completed": "Abgeschlossen",
       "failed": "Fehlgeschlagen",
-      "processing": "In Bearbeitung",
+      "processing": "Wird verarbeitet",
       "pending": "Ausstehend"
     },
-    "credits_used": "{amount} Credits",
-    "credits_refunded": "{amount} Credits erstattet",
+    "credits_used": "{amount} Guthaben",
+    "credits_refunded": "{amount} Guthaben erstattet",
     "images": "Bilder",
-    "view": "Ansehen",
+    "view": "Anzeigen",
     "download": "Herunterladen",
     "download_success": "Bild erfolgreich heruntergeladen",
-    "delete_success": "Eintrag erfolgreich gelöscht",
-    "delete_error": "Fehler beim Löschen des Eintrags",
+    "delete_success": "Datensatz erfolgreich gelöscht",
+    "delete_error": "Fehler beim Löschen des Datensatzes",
     "load_more": "Mehr laden",
-    "loading": "Lädt...",
-    "load_more_error": "Fehler beim Laden weiterer Einträge",
-    "no_more": "Alle Einträge geladen",
+    "loading": "Wird geladen...",
+    "load_more_error": "Fehler beim Laden weiterer Datensätze",
+    "no_more": "Alle Datensätze geladen",
     "image_preview": "Bildvorschau",
     "enhance_image": "Verbessern",
     "copy_link": "Link kopieren",
     "copied": "Kopiert!",
     "link_copied": "Link in die Zwischenablage kopiert",
-    "copy_failed": "Fehler beim Kopieren des Links",
+    "copy_failed": "Link kopieren fehlgeschlagen",
     "coming_soon": "Demnächst verfügbar!",
     "error": {
-      "unknown": "Unbekannter Fehler aufgetreten"
+      "unknown": "Ein unbekannter Fehler ist aufgetreten"
     },
     "empty": {
-      "title": "Kein Erstellungsverlauf",
-      "description": "Beginnen Sie mit der Erstellung erstaunlicher KI-Bilder",
-      "action": "Mit Erstellen beginnen"
+      "title": "Keine Generierungshistorie",
+      "description": "Beginnen Sie mit der Erstellung erstaunlicher Bilder mit KI",
+      "action": "Kreation beginnen"
     },
     "delete_confirm": {
-      "title": "Eintrag löschen",
-      "description": "Möchten Sie diesen Erstellungseintrag wirklich löschen? Diese Aktion kann nicht rückgängig gemacht werden.",
+      "title": "Datensatz löschen",
+      "description": "Sind Sie sicher, dass Sie diesen Generierungsdatensatz löschen möchten? Diese Aktion kann nicht rückgängig gemacht werden.",
       "cancel": "Abbrechen",
       "confirm": "Löschen"
     }

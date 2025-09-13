@@ -11,25 +11,29 @@
     "api_keys": "API 키",
     "my_orders": "내 주문",
     "user_center": "사용자 센터",
-    "admin_system": "관리자 시스템"
+    "admin_system": "관리 시스템"
   },
   "sign_modal": {
     "sign_in_title": "로그인",
     "sign_in_description": "계정에 로그인",
     "sign_up_title": "회원가입",
-    "sign_up_description": "계정 만들기",
-    "login_slogan": "로그인 후 무료 체험 가능",
+    "sign_up_description": "새 계정 만들기",
+    "login_slogan": "로그인 후 무료 체험 이용 가능",
+    "email": "이메일",
     "email_title": "이메일",
-    "email_placeholder": "이메일을 입력하세요",
+    "email_placeholder": "이메일을 입력해주세요",
     "password_title": "비밀번호",
-    "password_placeholder": "비밀번호를 입력하세요",
+    "password_placeholder": "비밀번호를 입력해주세요",
     "forgot_password": "비밀번호를 잊으셨나요?",
     "or": "또는",
     "continue": "계속",
-    "no_account": "계정이 없으신가요?",
+    "no_account": "아직 계정이 없으신가요?",
     "email_sign_in": "이메일로 로그인",
     "google_sign_in": "Google로 로그인",
     "github_sign_in": "GitHub로 로그인",
+    "send_magic_link": "로그인 링크 전송",
+    "sending": "전송 중...",
+    "email_sent": "이메일을 확인해주세요. 로그인 링크를 보냈습니다!",
     "email_required": "이메일을 입력해주세요",
     "code_required": "이메일과 인증 코드를 입력해주세요",
     "code_sent": "인증 코드가 이메일로 전송되었습니다",
@@ -39,12 +43,13 @@
     "sending_code": "전송 중...",
     "verification_code": "인증 코드",
     "resend_code": "재전송",
-    "resend_in": "재전송까지",
+    "resend_in": "재전송 카운트다운",
     "sign_in": "로그인",
     "signing_in": "로그인 중...",
     "back": "뒤로",
-    "invalid_code": "잘못된 인증 코드입니다",
+    "invalid_code": "인증 코드가 올바르지 않습니다",
     "code_expired": "인증 코드가 만료되었거나 존재하지 않습니다",
+    "sign_in_failed": "로그인에 실패했습니다. 다시 시도해주세요",
     "close_title": "닫기",
     "cancel_title": "취소",
     "terms_text": "계속하면 다음에 동의하는 것입니다",
@@ -54,7 +59,7 @@
   },
   "my_orders": {
     "title": "내 주문",
-    "description": "ShipAny로 결제한 주문",
+    "description": "ShipAny에서 구매한 주문.",
     "no_orders": "주문을 찾을 수 없습니다",
     "tip": "",
     "activate_order": "주문 활성화",
@@ -113,7 +118,7 @@
     "edit_invite_link": "초대 링크 편집",
     "copy_invite_link": "초대 링크 복사",
     "invite_code": "초대 코드",
-    "invite_tip": "친구 1명이 ShipAny를 구매하도록 초대하면 $50를 보상받습니다.",
+    "invite_tip": "친구 1명이 ShipAny를 구매하도록 초대하면 $50 보상.",
     "invite_balance": "초대 보상 잔액",
     "total_invite_count": "총 초대 수",
     "total_paid_count": "총 결제 수",
@@ -121,106 +126,29 @@
     "update_invite_code": "초대 코드 설정",
     "update_invite_code_tip": "사용자 정의 초대 코드를 입력하세요",
     "update_invite_button": "저장",
-    "no_orders": "ShipAny를 구매하기 전에는 다른 사람을 초대할 수 없습니다",
-    "no_affiliates": "다른 사람을 초대할 권한이 없습니다. 권한을 신청하려면 문의하세요.",
+    "no_orders": "친구를 초대하기 전에 먼저 ShipAny를 구매해야 합니다",
+    "no_affiliates": "아직 친구를 초대할 권한이 없습니다. 신청을 위해 문의해주세요.",
     "table": {
       "invite_time": "초대 시간",
       "invite_user": "초대 사용자",
       "status": "상태",
       "reward_percent": "보상 비율",
       "reward_amount": "보상 금액",
-      "pending": "대기 중",
-      "completed": "완료됨"
+      "pending": "등록됨, 미결제",
+      "completed": "결제됨"
     }
   },
   "feedback": {
     "title": "피드백",
-    "description": "제품 경험이 어떠셨는지, 어떻게 개선할 수 있는지 듣고 싶습니다.",
+    "description": "제품에 대한 의견이나 제품 경험을 개선하는 방법을 듣고 싶습니다.",
     "submit": "제출",
     "loading": "제출 중...",
-    "contact_tip": "다른 연락 방법",
+    "contact_tip": "기타 연락 방법",
     "rating_tip": "ShipAny에 대해 어떻게 생각하시나요?",
-    "placeholder": "여기에 의견을 남겨주세요..."
+    "placeholder": "여기에 피드백을 남겨주세요..."
   },
   "pricing": {
     "most_popular": "가장 인기"
-  },
-  "workspace": {
-    "loading_text": "작업 공간 로딩 중...",
-    "sign_in_prompt": "AI로 창작을 시작하려면 로그인하세요",
-    "sign_in_description": "신규 사용자는 무료 크레딧을 받아 강력한 AI 창작을 경험할 수 있습니다",
-    "sign_in_button": "로그인하여 창작하기",
-    "text_to_image": {
-      "title": "창작 모드",
-      "prompt_label": "비전을 설명하세요",
-      "prompt_placeholder": "일몰에 하늘을 나는 자동차가 있는 미래 도시...",
-      "aspect_ratio_label": "화면 비율",
-      "aspect_ratios": {
-        "square": "정사각형",
-        "landscape": "가로",
-        "portrait": "세로",
-        "classic": "클래식"
-      },
-      "quality_label": "품질",
-      "quality_pro": "Pro",
-      "quality_pro_desc": "고품질, 균형 잡힌 속도",
-      "quality_max": "Max",
-      "quality_max_desc": "궁극의 품질, 완벽한 디테일",
-      "generate_button": "생성",
-      "generating_button": "생성 중...",
-      "regenerate_button": "재생성",
-      "download_button": "다운로드",
-      "share_button": "공유",
-      "view_full_size": "전체 크기 보기",
-      "generated_result": "생성 결과",
-      "ai_generated": "AI 생성",
-      "generating_text": "이미지를 생성하는 중...",
-      "complete_text": "완료",
-      "all_generated_images": "모든 생성된 이미지",
-      "ai_assistant_title": "AI 어시스턴트",
-      "ai_assistant_desc": "텍스트에서 놀라운 이미지를 만들 수 있도록 도와드리겠습니다! 이러한 영감을 시도해보세요:",
-      "inspiration": "영감",
-      "inspirations": [
-        "네온 불빛이 있는 밤의 사이버펑크 도시",
-        "일몰 시 산의 유화",
-        "파란 머리의 애니메이션 스타일 캐릭터",
-        "추상적인 다채로운 기하학적 예술",
-        "전사의 사실적인 초상화",
-        "빛나는 생물이 있는 수중 판타지 세계"
-      ],
-      "credits": "크레딧",
-      "credits_left": "남음",
-      "this_may_take": "1-2분 정도 걸릴 수 있습니다..."
-    },
-    "image_to_image": {
-      "title": "편집 모드",
-      "upload_title": "이미지 업로드",
-      "upload_desc": "여기에 이미지를 드래그 앤 드롭하거나 클릭하여 찾아보기",
-      "upload_formats": "JPG, PNG, WEBP 최대 20MB",
-      "sample_images": "샘플 이미지",
-      "clear_button": "지우기",
-      "original": "원본",
-      "ai_edited": "AI 편집됨",
-      "new_edit": "새 편집",
-      "ai_assistant_title": "AI 어시스턴트",
-      "ai_assistant_upload_prompt": "이미지가 업로드되었습니다! 무엇을 변경하고 싶으신가요?",
-      "ai_assistant_ready": "이미지를 변환할 준비가 되었습니다! 시작하려면 이미지를 업로드하세요.",
-      "quick_actions": "빠른 작업",
-      "quick_action_lighting": "조명 변경",
-      "quick_action_lighting_prompt": "골든 아워 조명으로 변경",
-      "quick_action_style": "스타일 전환",
-      "quick_action_style_prompt": "유화 스타일로 변환",
-      "quick_action_remove_bg": "배경 제거",
-      "quick_action_remove_bg_prompt": "배경 제거, 피사체 유지",
-      "quick_action_color": "색상 그레이딩",
-      "quick_action_color_prompt": "시네마틱 색상 그레이딩 적용",
-      "recent_edits": "최근 편집",
-      "describe_changes": "변경하고 싶은 내용을 설명하세요...",
-      "transform_button": "변환",
-      "transforming_button": "변환 중...",
-      "processing": "처리 중",
-      "quality_pro_desc": "대부분의 시나리오에 이상적, 정밀한 편집"
-    }
   },
   "nano_banana": {
     "wrapper": {
@@ -228,150 +156,160 @@
       "title": "Nano Banana AI 창작 워크벤치",
       "description": "고급 AI 기술을 사용하여 상상력을 아름다운 이미지로 변환합니다"
     },
-    "messages": {
-      "starting_upload": "{count}개의 이미지를 업로드 중...",
-      "upload_success": "모든 이미지가 성공적으로 업로드되었습니다!",
-      "upload_failed": "이미지 업로드 실패",
-      "upload_image_failed": "{filename} 이미지 업로드 실패",
-      "submit_failed": "작업 제출 실패",
-      "task_submitted": "작업이 제출되어 처리 중입니다...",
-      "insufficient_credits": "크레딧이 부족합니다. 충전 후 다시 시도해 주세요",
-      "generation_success": "{count}개의 이미지를 성공적으로 생성했습니다!",
-      "get_results_failed": "결과 가져오기 실패",
-      "task_failed": "작업 실행 실패",
-      "max_images_warning": "최대 5개 이미지로 자동 제한됨"
-    },
-    "validation": {
-      "please_enter_prompt": "프롬프트를 입력해 주세요",
-      "please_upload_image": "최소 1개 이상의 이미지를 업로드해 주세요"
-    },
-    "mode_selector": {
-      "edit_mode": "채팅으로 이미지 편집",
-      "text_mode": "텍스트→이미지 모드"
-    },
-    "text_to_image": {
-      "inspiration_title": "영감",
-      "inspiration_desc": "아래 태그를 클릭하여 빠르게 창작 시작",
-      "labels": {
-        "landscape": "풍경",
-        "portrait": "인물",
-        "architecture": "건축",
-        "art": "예술",
-        "sci_fi": "SF",
-        "nature": "자연",
-        "animals": "동물",
-        "creative": "창의적"
+    "workspace": {
+      "mode_selector": {
+        "image_edit": "이미지 편집",
+        "text_to_image": "텍스트를 이미지로"
       },
-      "prompts": {
-        "landscape": "일몰에 웅장한 산 풍경, 골든 아워 조명, 사진 사실적",
-        "portrait": "전문 인물 사진, 스튜디오 조명, 선명한 초점",
-        "architecture": "현대 건축, 기하학적 디자인, 미니멀리스트 스타일",
-        "art": "추상 예술, 생생한 색상, 유화 스타일",
-        "sci_fi": "미래의 SF 장면, 네온 조명, 사이버펑크 미학",
-        "nature": "고요한 숲 장면, 아침 안개, 자연 조명",
-        "animals": "귀여운 동물, 세밀한 털 질감, 자연 서식지",
-        "creative": "초현실적 창의적 컨셉, 상상력이 풍부한 디자인, 예술적"
+      "operation_panel": {
+        "login_required": "먼저 로그인해주세요",
+        "insufficient_credits": "크레딧 부족, {amount} 크레딧이 필요합니다",
+        "please_enter_prompt": "프롬프트를 입력해주세요",
+        "prompt_min_length": "최소 3글자 이상 입력해주세요",
+        "generating": "생성 중...",
+        "start_creation": "창작 시작"
       },
-      "main_title": "AI 이미지 생성",
-      "mode_badge": "텍스트→이미지 모드",
-      "prompt_label": "생성하고 싶은 이미지를 설명하세요",
-      "prompt_placeholder": "예: 무지개 위에 앉은 귀여운 만화 고양이, 꿈같은 스타일, 부드러운 색상...",
-      "char_count": "{count}/5000",
-      "generation_count": "생성 수량",
-      "count_unit": "{count} 장",
-      "credits_label": "크레딧",
-      "generate_button": "생성 시작 ({count} 장)",
-      "generating_button": "생성 중...",
-      "tip_text": "💡 팁: 더 자세하게 설명할수록 생성되는 이미지가 당신의 상상에 더 가까워집니다",
-      "validation": {
-        "prompt_too_short": "최소 3글자 이상의 설명을 입력해주세요",
-        "please_login": "먼저 로그인해주세요",
-        "insufficient_credits": "크레딧 부족, {needed} 크레딧 필요, 현재 {current} 크레딧"
+      "image_upload": {
+        "title": "참고 이미지",
+        "add_image": "이미지 추가",
+        "max_size": "최대 10MB",
+        "supported_formats": "JPG, PNG, WebP",
+        "drag_to_upload": "파일 놓기",
+        "clear_all": "모든 이미지 지우기",
+        "error_invalid_type": "지원되지 않는 파일 형식입니다. JPG, PNG, WebP만 지원됩니다",
+        "error_too_large": "파일 크기가 10MB 제한을 초과합니다",
+        "error_too_many": "한 번에 최대 5개 파일만 업로드할 수 있습니다"
+      },
+      "prompt_input": {
+        "title": "아이디어 설명하기",
+        "placeholder_image_edit": "스타일, 색상, 구도 등의 세부 사항을 포함하여 원하는 효과를 설명해주세요...",
+        "placeholder_text_to_image": "주제, 장면, 스타일, 색상 등을 포함하여 생성하고 싶은 이미지를 자세히 설명해주세요...",
+        "tip": "자세한 설명이 더 나은 결과를 가져옵니다"
+      },
+      "credits_display": {
+        "title": "크레딧 소모",
+        "unit": "크레딧"
+      },
+      "display_panel": {
+        "generation_complete": "생성 완료!",
+        "regenerate": "재생성",
+        "image_download_success": "이미지 다운로드 성공",
+        "download_failed": "다운로드 실패",
+        "link_copied": "링크 복사됨",
+        "copy_failed": "복사 실패"
+      },
+      "empty_state": {
+        "title": "창작을 시작할 준비가 되셨나요?",
+        "description": "왼쪽에서 모드를 선택하고, 이미지를 업로드하거나 설명을 입력하여 AI가 멋진 비주얼을 만들도록 하세요",
+        "feature_ai": "AI 지능",
+        "feature_speed": "초고속 생성",
+        "feature_quality": "고품질"
+      },
+      "progress_state": {
+        "title": "AI가 창작 중...",
+        "description": "잠시만 기다려주세요, 멋진 것이 곧 나타날 예정입니다",
+        "task_id": "작업 ID: {taskId}"
+      },
+      "error_state": {
+        "title": "생성 실패",
+        "default_message": "죄송합니다. 이미지 생성 중에 문제가 발생했습니다. 나중에 다시 시도해주세요. 문제가 지속되면 기술 지원팀에 문의해주세요.",
+        "support_message": "문제가 지속되면 기술 지원팀이 도와드리겠습니다",
+        "retry_button": "다시 시도",
+        "contact_support": "지원팀에 문의",
+        "support_email_text": "기술 지원 이메일:",
+        "email_subject": "Nano Banana - 기술 지원 요청",
+        "email_body": "안녕하세요,\\n\\nNano Banana 사용 중 문제가 발생했습니다:\\n\\n오류 메시지: {title}\\n상세 설명: {message}\\n\\n해결을 위해 도움을 주세요, 감사합니다!\\n\\n사용자"
+      },
+      "image_card": {
+        "image_load_failed": "이미지 로딩 실패",
+        "image_number": "이미지 #{number}",
+        "from_link": "링크에서"
+      },
+      "image_action_bar": {
+        "download": "다운로드",
+        "enhance": "이미지 향상",
+        "continue_edit": "다시 편집",
+        "image_not_found": "이미지를 찾을 수 없습니다",
+        "invalid_image_url": "유효하지 않은 이미지 URL",
+        "continue_edit_coming_soon": "계속 편집 기능이 곧 출시됩니다"
+      },
+      "ai_description": {
+        "title": "AI 생성 설명"
+      },
+      "action_buttons": {
+        "download": "다운로드",
+        "copy_link": "링크 복사",
+        "copied": "복사됨",
+        "view_large": "크게 보기"
+      },
+      "image_preview": {
+        "download_success": "이미지 다운로드 성공",
+        "download_failed": "다운로드 실패",
+        "link_copied": "링크 복사됨",
+        "copy_failed": "복사 실패",
+        "click_to_view": "클릭하여 큰 이미지 보기"
+      },
+      "image_viewer": {
+        "image_not_found": "이미지를 찾을 수 없습니다",
+        "invalid_image_url": "유효하지 않은 이미지 URL",
+        "download": "다운로드",
+        "enhance": "이미지 향상",
+        "close": "닫기",
+        "prev_image": "이전",
+        "next_image": "다음",
+        "image_count": "{current} / {total}"
+      },
+      "quick_prompts": {
+        "image_mode": {
+          "enhance_details": "세부 사항 향상",
+          "enhance_details_prompt": "세부 사항 향상, 고해상도, 정밀",
+          "art_style": "예술 스타일",
+          "art_style_prompt": "예술 스타일, 유화 질감",
+          "anime_style": "애니메이션 스타일",
+          "anime_style_prompt": "애니메이션 스타일, 2D",
+          "realistic_photo": "사실적인 사진",
+          "realistic_photo_prompt": "사실적인 스타일, 사진 질감"
+        },
+        "text_mode": {
+          "art_creation": "예술 창작",
+          "art_creation_prompt": "예술 스타일, 고품질, 정교함",
+          "realistic_style": "사실적인 스타일",
+          "realistic_style_prompt": "사실적인 스타일, 고해상도 사진",
+          "sci_fi": "SF 미래",
+          "sci_fi_prompt": "SF 스타일, 미래적",
+          "creative_design": "창의적 디자인",
+          "creative_design_prompt": "창의적 디자인, 독특한 관점"
+        }
       }
     },
-    "generation_status": {
-      "ready": "준비 완료",
-      "ready_desc": "생성 시작 대기 중",
-      "uploading": "업로드 중",
-      "uploading_desc": "서버에 이미지를 업로드 중...",
-      "processing": "생성 중",
-      "processing_desc": "AI가 요청을 처리 중...",
-      "fetching": "결과 가져오는 중",
-      "fetching_desc": "생성된 이미지를 가져오는 중...",
-      "completed": "생성 완료",
-      "completed_desc": "이미지 생성에 성공했습니다!",
-      "failed": "생성 실패",
-      "failed_desc": "생성 과정에서 오류가 발생했습니다",
-      "cancel": "취소",
-      "progress": "진행상황",
-      "task_id": "작업 ID: {taskId}",
-      "ai_working": "AI가 열심히 작업 중입니다, 잠시 기다려주세요...",
-      "estimate_time": "약 {time} 초"
+    "hooks": {
+      "file_validation": {
+        "unsupported_format": "지원되지 않는 파일 형식입니다. JPG, PNG, WebP만 지원됩니다",
+        "file_too_large": "파일 크기가 {sizeMB}MB로 10MB 제한을 초과합니다",
+        "image_applied": "이미지가 참고 영역에 적용되었습니다",
+        "invalid_image_url": "유효하지 않은 이미지 URL"
+      }
     },
-    "result_gallery": {
-      "title": "생성 결과",
-      "success_message": "{count}장의 이미지를 성공적으로 생성했습니다",
-      "regenerate": "재생성",
-      "ai_reply": "Nano Banana 답변",
-      "download_success": "이미지 다운로드가 성공했습니다!",
-      "download_failed": "다운로드에 실패했습니다, 다시 시도해주세요",
-      "link_copied": "링크가 클립보드에 복사되었습니다",
-      "copy_failed": "복사에 실패했습니다",
-      "image_index": "이미지 {current} / {total}",
-      "copy_link": "링크 복사",
-      "download_image": "이미지 다운로드",
-      "download_original": "원본 다운로드",
-      "fullscreen": "전체화면"
+    "messages": {
+      "starting_upload": "{count}개 이미지 업로드 시작...",
+      "upload_success": "모든 이미지가 성공적으로 업로드되었습니다!",
+      "upload_failed": "이미지 업로드 실패",
+      "upload_image_failed": "이미지 {filename} 업로드 실패",
+      "submit_failed": "작업 제출 실패",
+      "task_submitted": "작업이 제출되어 처리 중입니다...",
+      "insufficient_credits": "크레딧이 부족합니다. 충전 후 다시 시도해주세요",
+      "generation_success": "{count}개 이미지를 성공적으로 생성했습니다!",
+      "get_results_failed": "결과 가져오기 실패",
+      "task_failed": "작업 실행 실패",
+      "max_images_warning": "최대 5개 이미지만 허용, 자동으로 제한됨"
     },
-    "image_to_image": {
-      "ai_editing": "AI 이미지 편집",
-      "quick_style": "빠른 스타일",
-      "enhance_details": "세부 사항 향상",
-      "enhance_details_prompt": "enhance details, ultra HD, sharp focus",
-      "art_style": "예술 스타일",
-      "art_style_prompt": "artistic style, oil painting, vibrant colors",
-      "anime_style": "애니메이션 스타일",
-      "anime_style_prompt": "anime style, cel shading, manga art",
-      "realistic_photo": "사실적인 사진",
-      "realistic_photo_prompt": "photorealistic, professional photography, 8K",
-      "describe_effect": "원하는 효과 설명",
-      "prompt_placeholder": "예시: 이미지를 유화 스타일로 변환하고, 따뜻한 톤을 추가하며, 장면을 더 생생하게...",
-      "generate_count": "생성 수량",
-      "count_images": "{count} 장",
-      "credits": "크레딧",
-      "start_generation": "생성 시작 ({count} 장)",
-      "processing": "처리 중...",
-      "insufficient_credits": "크레딧 부족, {needed} 크레딧 필요",
-      "prompt_too_short": "최소 3글자 이상 입력해주세요",
-      "please_upload_image": "먼저 이미지를 업로드해주세요",
-      "selected_references": "선택된 참조 이미지",
-      "clear_all": "모두 지우기",
-      "uploading": "업로드 중...",
-      "preview": "미리보기",
-      "image_uploaded": "업로드 완료",
-      "dialog_image_editing": "대화형 이미지 편집",
-      "multiple_references": "다중 참조 이미지",
-      "upload_multiple": "여러 참조 이미지(최대 5장)를 업로드하고, 자연스러운 대화로 편집 요구사항을 설명하면 AI가 지능적으로 이해하고 정확하게 실행합니다.",
-      "dialog_editing": "대화 편집",
-      "multi_image_reference": "다중 이미지 참조",
-      "intelligent_understanding": "지능형 이해",
-      "release_to_upload": "놓아서 업로드",
-      "drag_drop_upload": "드래그 또는 클릭하여 이미지 업로드",
-      "supported_formats": "PNG, JPG, JPEG, WebP 형식 지원",
-      "max_file_size": "파일당 최대 10MB, {remaining}장 남음",
-      "selected_count": "{current}/{max} 장 선택",
-      "max_images_reached": "최대 이미지 수에 도달했습니다",
-      "max_upload_limit": "최대 {max} 장까지 업로드 가능",
-      "file_too_large": "파일 {filename}이(가) 너무 큽니다, 최대 10MB",
-      "unsupported_format": "파일 {filename} 형식이 지원되지 않습니다",
-      "can_only_upload": "{count}장만 더 업로드할 수 있습니다",
-      "please_login": "먼저 로그인해주세요",
-      "insufficient_credits_detail": "크레딧 부족, {needed} 크레딧 필요, 현재 {current} 크레딧",
-      "download_hint": "다운로드 버튼을 클릭한 후 마우스 오른쪽 버튼으로 저장"
+    "validation": {
+      "please_enter_prompt": "프롬프트를 입력해주세요",
+      "please_upload_image": "최소 1개 이미지를 업로드해주세요"
     }
   },
   "history": {
-    "title": "Nano Banana 생성 기록",
+    "title": "Nano Banana 창작 기록",
     "description": "이전에 Nano Banana로 생성하고 편집한 모든 이미지 보기",
     "status": {
       "completed": "완료됨",
@@ -397,14 +335,14 @@
     "copied": "복사됨!",
     "link_copied": "링크가 클립보드에 복사됨",
     "copy_failed": "링크 복사 실패",
-    "coming_soon": "곧 출시 예정, 기대해 주세요!",
+    "coming_soon": "곧 출시 예정!",
     "error": {
       "unknown": "알 수 없는 오류가 발생했습니다"
     },
     "empty": {
       "title": "생성 기록 없음",
-      "description": "AI로 놀라운 이미지 생성을 시작해보세요",
-      "action": "생성 시작"
+      "description": "AI로 멋진 이미지 생성을 시작해보세요",
+      "action": "창작 시작"
     },
     "delete_confirm": {
       "title": "기록 삭제",

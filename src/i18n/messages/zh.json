@@ -150,88 +150,145 @@
   "pricing": {
     "most_popular": "最受欢迎"
   },
-  "workspace": {
-    "loading_text": "正在加载工作区...",
-    "sign_in_prompt": "登录即可开始使用 AI 图像生成",
-    "sign_in_description": "新用户登录免费获得积分，立即体验强大的 AI 创作功能",
-    "sign_in_button": "登录开始创作",
-    "text_to_image": {
-      "title": "创作模式",
-      "prompt_label": "描述您的创意",
-      "prompt_placeholder": "在落日时分的未来城市，有飞行汽车...",
-      "aspect_ratio_label": "长宽比",
-      "aspect_ratios": {
-        "square": "正方形",
-        "landscape": "横向",
-        "portrait": "纵向",
-        "classic": "经典"
-      },
-      "quality_label": "质量",
-      "quality_pro": "Pro",
-      "quality_pro_desc": "高质量，平衡速度",
-      "quality_max": "Max",
-      "quality_max_desc": "极致质量，完美细节",
-      "generate_button": "创建",
-      "generating_button": "创建中...",
-      "regenerate_button": "重新生成",
-      "download_button": "下载",
-      "share_button": "分享",
-      "view_full_size": "查看全尺寸",
-      "generated_result": "生成结果",
-      "ai_generated": "AI 生成",
-      "generating_text": "正在创建您的图像...",
-      "complete_text": "完成",
-      "all_generated_images": "所有生成的图像",
-      "ai_assistant_title": "AI 助手",
-      "ai_assistant_desc": "我将帮助您从文字创建惊人的图像！试试这些灵感：",
-      "inspiration": "灵感",
-      "inspirations": [
-        "夜晚的赛博朋克城市，霓虹灯光",
-        "落日时分的山脉油画",
-        "蓝色头发的动漫风格角色",
-        "抽象的多彩几何艺术",
-        "现实主义风格的战士肖像",
-        "发光生物的水下奇幻世界"
-      ],
-      "credits": "积分",
-      "credits_left": "剩余",
-      "this_may_take": "这可能需要 1-2 分钟..."
-    },
-    "image_to_image": {
-      "title": "编辑模式",
-      "upload_title": "上传图像",
-      "upload_desc": "将您的图像拖放到这里或点击浏览",
-      "upload_formats": "JPG, PNG, WEBP 最大 20MB",
-      "sample_images": "示例图像",
-      "clear_button": "清除",
-      "original": "原始",
-      "ai_edited": "AI 编辑后",
-      "new_edit": "新编辑",
-      "ai_assistant_title": "AI 助手",
-      "ai_assistant_upload_prompt": "图像已上传！您想要修改什么？",
-      "ai_assistant_ready": "准备好转换您的图像！上传图像开始。",
-      "quick_actions": "快速操作",
-      "quick_action_lighting": "更改光照",
-      "quick_action_lighting_prompt": "更改为黄金时刻光照",
-      "quick_action_style": "风格转换",
-      "quick_action_style_prompt": "转换为油画风格",
-      "quick_action_remove_bg": "移除背景",
-      "quick_action_remove_bg_prompt": "移除背景，保留主体",
-      "quick_action_color": "色彩分级",
-      "quick_action_color_prompt": "应用电影色彩分级",
-      "recent_edits": "最近的编辑",
-      "describe_changes": "描述您想要的更改...",
-      "transform_button": "转换",
-      "transforming_button": "转换中...",
-      "processing": "处理中",
-      "quality_pro_desc": "适合大多数场景，精确编辑"
-    }
-  },
   "nano_banana": {
     "wrapper": {
       "loading_text": "正在加载 Nano Banana...",
       "title": "Nano Banana AI 创作工作台",
       "description": "使用先进的AI技术将您的想象力转化为美丽的图像"
+    },
+    "workspace": {
+      "mode_selector": {
+        "image_edit": "图片编辑",
+        "text_to_image": "文生图"
+      },
+      "operation_panel": {
+        "login_required": "请先登录",
+        "insufficient_credits": "积分不足，需要 {amount} 积分",
+        "please_enter_prompt": "请输入提示词",
+        "prompt_min_length": "请输入至少3个字符",
+        "generating": "生成中...",
+        "start_creation": "开始创作"
+      },
+      "image_upload": {
+        "title": "参考图片",
+        "add_image": "添加图片",
+        "max_size": "Max 10MB",
+        "supported_formats": "JPG, PNG, WebP",
+        "drag_to_upload": "释放文件",
+        "clear_all": "清空所有图片",
+        "error_invalid_type": "不支持的文件格式，仅支持 JPG、PNG、WebP",
+        "error_too_large": "文件大小超过 10MB 限制",
+        "error_too_many": "一次最多上传5个文件"
+      },
+      "prompt_input": {
+        "title": "描述你的想法",
+        "placeholder_image_edit": "描述你想要的效果，可以包含风格、色彩、构图等细节...",
+        "placeholder_text_to_image": "详细描述你想要生成的图片，包含主体、场景、风格、色彩等...",
+        "tip": "详细描述能获得更好效果"
+      },
+      "credits_display": {
+        "title": "积分消耗",
+        "unit": "积分"
+      },
+      "display_panel": {
+        "generation_complete": "生成完成！",
+        "regenerate": "重新生成",
+        "image_download_success": "图片下载成功",
+        "download_failed": "下载失败",
+        "link_copied": "链接已复制",
+        "copy_failed": "复制失败"
+      },
+      "empty_state": {
+        "title": "准备好开始创作了吗？",
+        "description": "在左侧选择模式，上传图片或输入描述，让 AI 为你创造精彩的视觉作品",
+        "feature_ai": "AI 智能",
+        "feature_speed": "极速生成",
+        "feature_quality": "高质量"
+      },
+      "progress_state": {
+        "title": "AI 正在创作中...",
+        "description": "请稍等片刻，精彩即将呈现",
+        "task_id": "任务 ID: {taskId}"
+      },
+      "error_state": {
+        "title": "生成失败",
+        "default_message": "很抱歉，图片生成过程中遇到了问题。请稍后重试，如果问题持续存在，请联系我们的技术支持团队。",
+        "support_message": "如果问题持续存在，我们的技术支持团队将为您提供帮助",
+        "retry_button": "重新尝试",
+        "contact_support": "联系支持",
+        "support_email_text": "技术支持邮箱：",
+        "email_subject": "Nano Banana - 技术支持请求",
+        "email_body": "您好，\n\n我在使用 Nano Banana 时遇到了问题：\n\n错误信息：{title}\n详细描述：{message}\n\n请协助解决，谢谢！\n\n用户"
+      },
+      "image_card": {
+        "image_load_failed": "图片加载失败",
+        "image_number": "Image #{number}",
+        "from_link": "从链接"
+      },
+      "image_action_bar": {
+        "download": "下载",
+        "enhance": "图片增强",
+        "continue_edit": "再次编辑",
+        "image_not_found": "未找到图片",
+        "invalid_image_url": "无效的图片链接",
+        "continue_edit_coming_soon": "继续编辑功能即将上线"
+      },
+      "ai_description": {
+        "title": "AI 生成描述"
+      },
+      "action_buttons": {
+        "download": "下载",
+        "copy_link": "复制链接",
+        "copied": "已复制",
+        "view_large": "查看大图"
+      },
+      "image_preview": {
+        "download_success": "图片下载成功",
+        "download_failed": "下载失败",
+        "link_copied": "链接已复制",
+        "copy_failed": "复制失败",
+        "click_to_view": "点击查看大图"
+      },
+      "image_viewer": {
+        "image_not_found": "未找到图片",
+        "invalid_image_url": "无效的图片链接",
+        "download": "下载",
+        "enhance": "图片增强",
+        "close": "关闭",
+        "prev_image": "上一张",
+        "next_image": "下一张",
+        "image_count": "{current} / {total}"
+      },
+      "quick_prompts": {
+        "image_mode": {
+          "enhance_details": "增强细节",
+          "enhance_details_prompt": "增强细节，高清，精细",
+          "art_style": "艺术风格",
+          "art_style_prompt": "艺术风格，油画质感",
+          "anime_style": "动漫风格",
+          "anime_style_prompt": "动漫风格，二次元",
+          "realistic_photo": "写实照片",
+          "realistic_photo_prompt": "写实风格，摄影质感"
+        },
+        "text_mode": {
+          "art_creation": "艺术创作",
+          "art_creation_prompt": "艺术风格，高质量，精美",
+          "realistic_style": "写实风格",
+          "realistic_style_prompt": "写实风格，高清摄影",
+          "sci_fi": "科幻未来",
+          "sci_fi_prompt": "科幻风格，未来感",
+          "creative_design": "创意设计",
+          "creative_design_prompt": "创意设计，独特视角"
+        }
+      }
+    },
+    "hooks": {
+      "file_validation": {
+        "unsupported_format": "不支持的文件格式，仅支持 JPG、PNG、WebP",
+        "file_too_large": "文件大小为 {sizeMB}MB，超过 10MB 限制",
+        "image_applied": "图片已应用到参考区域",
+        "invalid_image_url": "无效的图片链接"
+      }
     },
     "messages": {
       "starting_upload": "开始上传 {count} 张图片...",
@@ -249,130 +306,6 @@
     "validation": {
       "please_enter_prompt": "请输入提示词",
       "please_upload_image": "请至少上传一张图片"
-    },
-    "mode_selector": {
-      "edit_mode": "通过对话编辑图像",
-      "text_mode": "文生图模式"
-    },
-    "text_to_image": {
-      "inspiration_title": "灵感启发",
-      "inspiration_desc": "点击下方标签快速开始创作",
-      "labels": {
-        "landscape": "风景",
-        "portrait": "人像",
-        "architecture": "建筑",
-        "art": "艺术",
-        "sci_fi": "科幻",
-        "nature": "自然",
-        "animals": "动物",
-        "creative": "创意"
-      },
-      "prompts": {
-        "landscape": "落日时分雄伟的山脉景观，黄金时刻的光照，超写实风格",
-        "portrait": "专业人像摄影，工作室光照，锐利焦点",
-        "architecture": "现代建筑，几何设计，简约风格",
-        "art": "抽象艺术，鲜艳色彩，油画风格",
-        "sci_fi": "未来科幻场景，霓虹灯，赛博朋克美学",
-        "nature": "宁静的森林场景，晨雾，自然光照",
-        "animals": "可爱的动物，细致的毛发纹理，自然栖息地",
-        "creative": "超现实的创意概念，富有想象力的设计，艺术性"
-      },
-      "main_title": "AI 图像生成",
-      "mode_badge": "文生图模式",
-      "prompt_label": "描述你想要生成的图像",
-      "prompt_placeholder": "例如: 一只可爱的卡通猫咪，坐在彩虹上，梦幻风格，柔和的色彩...",
-      "char_count": "{count}/5000",
-      "generation_count": "生成数量",
-      "count_unit": "{count} 张",
-      "credits_label": "积分",
-      "generate_button": "开始生成 ({count} 张)",
-      "generating_button": "正在生成中...",
-      "tip_text": "💡 提示：描述越详细，生成的图像越接近你的想象",
-      "validation": {
-        "prompt_too_short": "请输入至少 3 个字符的描述",
-        "please_login": "请先登录账号",
-        "insufficient_credits": "积分不足，需要 {needed} 积分，当前只有 {current} 积分"
-      }
-    },
-    "generation_status": {
-      "ready": "准备就绪",
-      "ready_desc": "等待开始生成",
-      "uploading": "正在上传",
-      "uploading_desc": "正在上传图片到服务器...",
-      "processing": "正在生成",
-      "processing_desc": "AI 正在处理您的请求...",
-      "fetching": "获取结果",
-      "fetching_desc": "正在获取生成的图片...",
-      "completed": "生成完成",
-      "completed_desc": "图片生成成功！",
-      "failed": "生成失败",
-      "failed_desc": "生成过程中出现错误",
-      "cancel": "取消",
-      "progress": "进度",
-      "task_id": "任务ID: {taskId}",
-      "ai_working": "AI 正在努力创作中，请稍候...",
-      "estimate_time": "约 {time} 秒"
-    },
-    "result_gallery": {
-      "title": "生成结果",
-      "success_message": "成功生成 {count} 张图片",
-      "regenerate": "重新生成",
-      "ai_reply": "Nano Banana 回复",
-      "download_success": "图片下载成功！",
-      "download_failed": "下载失败，请重试",
-      "link_copied": "链接已复制到剪贴板",
-      "copy_failed": "复制失败",
-      "image_index": "图片 {current} / {total}",
-      "copy_link": "复制链接",
-      "download_image": "下载图片",
-      "download_original": "下载原图",
-      "fullscreen": "全屏"
-    },
-    "image_to_image": {
-      "ai_editing": "AI 图像编辑",
-      "quick_style": "快速风格",
-      "enhance_details": "增强细节",
-      "enhance_details_prompt": "enhance details, ultra HD, sharp focus",
-      "art_style": "艺术风格",
-      "art_style_prompt": "artistic style, oil painting, vibrant colors",
-      "anime_style": "动漫风格",
-      "anime_style_prompt": "anime style, cel shading, manga art",
-      "realistic_photo": "写实照片",
-      "realistic_photo_prompt": "photorealistic, professional photography, 8K",
-      "describe_effect": "描述你想要的效果",
-      "prompt_placeholder": "例如: 将图片转换为油画风格，增加暖色调，让画面更加生动...",
-      "generate_count": "生成数量",
-      "count_images": "{count} 张",
-      "credits": "积分",
-      "start_generation": "开始生成 ({count} 张)",
-      "processing": "正在处理中...",
-      "insufficient_credits": "积分不足，需要 {needed} 积分",
-      "prompt_too_short": "请输入至少 3 个字符的提示词",
-      "please_upload_image": "请先上传图片",
-      "selected_references": "已选择的参考图",
-      "clear_all": "清空全部",
-      "uploading": "正在上传...",
-      "preview": "预览",
-      "image_uploaded": "已上传",
-      "dialog_image_editing": "对话式图像编辑",
-      "multiple_references": "多张参考图",
-      "upload_multiple": "上传多张参考图（最多5张），通过自然对话描述编辑需求，AI 智能理解并精准执行。",
-      "dialog_editing": "对话编辑",
-      "multi_image_reference": "多图参考",
-      "intelligent_understanding": "智能理解",
-      "release_to_upload": "松开以上传图片",
-      "drag_drop_upload": "拖拽或点击上传图片",
-      "supported_formats": "支持 PNG, JPG, JPEG, WebP 格式",
-      "max_file_size": "单个文件最大 10MB，还可上传 {remaining} 张",
-      "selected_count": "已选择 {current}/{max} 张图片",
-      "max_images_reached": "已达到最大图片数量",
-      "max_upload_limit": "最多可以上传 {max} 张图片",
-      "file_too_large": "文件 {filename} 太大，最大支持 10MB",
-      "unsupported_format": "文件 {filename} 格式不支持",
-      "can_only_upload": "只能再上传 {count} 张图片",
-      "please_login": "请先登录账号",
-      "insufficient_credits_detail": "积分不足，需要 {needed} 积分，当前只有 {current} 积分",
-      "download_hint": "点击下载按钮后右键保存"
     }
   },
   "history": {
