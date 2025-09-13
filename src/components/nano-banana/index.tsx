@@ -66,7 +66,7 @@ export default function NanoBananaWorkspace({
   return (
     <div className={cn("w-full h-full overflow-hidden ", className)}>
       {/* 左右分屏布局 */}
-      <div className="nano-workspace grid grid-cols-1 lg:grid-cols-[420px_1fr] gap-4 h-full min-h-[700px] p-4">
+      <div className="nano-workspace grid grid-cols-1 lg:grid-cols-[500px_1fr] gap-4 h-full min-h-[700px] py-4 px-0 lg:px-4">
         {/* 左侧操作面板 - 卡片形式 */}
         <div className="operation-panel bg-white/80 dark:bg-zinc-800/50 backdrop-blur-sm border border-slate-200/50 dark:border-zinc-700/50 rounded-xl shadow-xl">
           <div className="h-full nano-scrollbar overflow-y-auto p-1">

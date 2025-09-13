@@ -29,29 +29,28 @@ export default function ImageUploadArea({
   onClearImages,
   disabled = false,
 }: ImageUploadAreaProps) {
-
   // 处理被拒绝的文件
   const handleDropRejected = (fileRejections: FileRejection[]) => {
     fileRejections.forEach((rejection) => {
       const { file, errors } = rejection;
-      
+
       errors.forEach((error) => {
         let errorMessage = `${file.name}: `;
-        
+
         switch (error.code) {
-          case 'file-invalid-type':
-            errorMessage += '不支持的文件格式，仅支持 JPG、PNG、WebP';
+          case "file-invalid-type":
+            errorMessage += "不支持的文件格式，仅支持 JPG、PNG、WebP";
             break;
-          case 'file-too-large':
+          case "file-too-large":
             errorMessage += `文件大小超过 10MB 限制`;
             break;
-          case 'too-many-files':
-            errorMessage += '一次最多上传5个文件';
+          case "too-many-files":
+            errorMessage += "一次最多上传5个文件";
             break;
           default:
             errorMessage += error.message;
         }
-        
+
         toast.error(errorMessage);
       });
     });
@@ -60,10 +59,10 @@ export default function ImageUploadArea({
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
     onDrop: (acceptedFiles) => onAddImages(acceptedFiles),
     onDropRejected: handleDropRejected,
-    accept: { 
+    accept: {
       "image/jpeg": [".jpg", ".jpeg"],
       "image/png": [".png"],
-      "image/webp": [".webp"]
+      "image/webp": [".webp"],
     },
     disabled: disabled,
     multiple: true,
@@ -85,7 +84,7 @@ export default function ImageUploadArea({
       </div>
 
       {/* 卡片式图片网格 */}
-      <div className="grid grid-cols-2 gap-3">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
         {/* 已上传的图片 */}
         {uploadedImages.map((img, index) => (
           <ImageCard
@@ -113,7 +112,7 @@ export default function ImageUploadArea({
             <input {...getInputProps()} />
             <div
               className={cn(
-                "p-4 rounded-full transition-all duration-300",
+                "p-3 rounded-full transition-all duration-300",
                 "bg-green-100 dark:bg-green-900/30",
                 "group-hover:bg-green-200 dark:group-hover:bg-green-800/50",
                 "group-hover:scale-110"
@@ -121,19 +120,19 @@ export default function ImageUploadArea({
             >
               <Upload
                 className={cn(
-                  "h-6 w-6 text-green-500 transition-transform duration-300",
+                  "h-4 w-4 text-green-500 transition-transform duration-300",
                   "group-hover:rotate-12"
                 )}
               />
             </div>
             <div className="text-center">
-              <p className="text-sm font-medium text-green-600 dark:text-green-400 group-hover:text-green-700 dark:group-hover:text-green-300">
+              <p className="text-xs font-medium text-green-600 dark:text-green-400 group-hover:text-green-700 dark:group-hover:text-green-300">
                 Add Image
               </p>
-              <p className="text-xs text-green-500 dark:text-green-500">
+              <p className="text-[10px] text-green-500 dark:text-green-500">
                 JPG, PNG, WebP
               </p>
-              <p className="text-xs text-green-500 dark:text-green-500">
+              <p className="text-[10px] text-green-500 dark:text-green-500">
                 Max 10MB
               </p>
             </div>
@@ -174,7 +173,6 @@ export default function ImageUploadArea({
           清空所有图片
         </Button>
       )}
-
     </div>
   );
 }
