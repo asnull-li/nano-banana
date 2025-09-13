@@ -145,7 +145,35 @@ export function useNanoBanana(options: UseNanoBananaOptions = {}) {
   // 添加图片到上传列表 - 不设置上传进度，避免闪烁
   const addImages = useCallback(
     (files: File[]) => {
-      const newImages: UploadedImage[] = files.map((file) => ({
+      // 验证文件
+      const validFiles = files.filter((file) => {
+        // 检查文件类型
+        const validTypes = ['image/jpeg', 'image/png', 'image/webp'];
+        const validExtensions = ['.jpg', '.jpeg', '.png', '.webp'];
+        const fileExtension = file.name.toLowerCase().substring(file.name.lastIndexOf('.'));
+        
+        // 同时检查MIME类型和文件扩展名
+        if (!validTypes.includes(file.type) && !validExtensions.includes(fileExtension)) {
+          toast.error(`${file.name}: 不支持的文件格式，仅支持 JPG、PNG、WebP`);
+          return false;
+        }
+        
+        // 检查文件大小 (10MB = 10 * 1024 * 1024)
+        const maxSize = 10 * 1024 * 1024;
+        if (file.size > maxSize) {
+          const sizeMB = (file.size / (1024 * 1024)).toFixed(1);
+          toast.error(`${file.name}: 文件大小为 ${sizeMB}MB，超过 10MB 限制`);
+          return false;
+        }
+        
+        return true;
+      });
+
+      if (validFiles.length === 0) {
+        return;
+      }
+
+      const newImages: UploadedImage[] = validFiles.map((file) => ({
         id: `${Date.now()}-${Math.random()}`,
         file,
         preview: URL.createObjectURL(file),
@@ -154,22 +182,39 @@ export function useNanoBanana(options: UseNanoBananaOptions = {}) {
 
       setUploadedImages((prev) => {
         const updated = [...prev, ...newImages];
-        // 限制最多10张图片
+        
+        // 如果超过5张，需要清理被移除图片的 Blob URL
+        if (updated.length > 5) {
+          const toRemove = updated.slice(5);
+          console.log("清理超出限制的图片 Blob URLs:", toRemove.map(img => img.preview));
+          toRemove.forEach((img) => {
+            if (img.preview.startsWith("blob:")) {
+              URL.revokeObjectURL(img.preview);
+            }
+          });
+          
+          // 如果超过5张，提示用户
+          toast.warning(t("messages.max_images_warning"));
+        }
+        
+        // 限制最多5张图片
         return updated.slice(0, 5);
       });
-
-      // 如果超过5张，提示用户
-      if (uploadedImages.length + files.length > 5) {
-        toast.warning(t("messages.max_images_warning"));
-      }
     },
-    [uploadedImages.length]
+    [t]
   );
 
   // 移除图片
   const removeImage = useCallback((imageId: string) => {
-    setUploadedImages((prev) => prev.filter((img) => img.id !== imageId));
+    setUploadedImages((prev) => {
+      const imageToRemove = prev.find((img) => img.id === imageId);
+      if (imageToRemove && imageToRemove.preview.startsWith("blob:")) {
+        URL.revokeObjectURL(imageToRemove.preview);
+      }
+      return prev.filter((img) => img.id !== imageId);
+    });
   }, []);
+
 
   // 清空所有图片
   const clearImages = useCallback(() => {
