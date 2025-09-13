@@ -46,6 +46,7 @@ export function useNanoBanana(options: UseNanoBananaOptions = {}) {
   const [results, setResults] = useState<GenerationResult[]>([]);
   const [taskId, setTaskId] = useState<string | null>(null);
   const [aiDescription, setAiDescription] = useState<string>("");
+  const [errorMessage, setErrorMessage] = useState<string>("");
 
   const pollIntervalRef = useRef<NodeJS.Timeout | null>(null);
 
@@ -323,6 +324,7 @@ export function useNanoBanana(options: UseNanoBananaOptions = {}) {
 
           setStatus("failed");
           const errorMsg = data.error || t("messages.task_failed");
+          setErrorMessage(errorMsg);
           toast.error(errorMsg);
           onError?.(errorMsg);
         }
@@ -409,6 +411,8 @@ export function useNanoBanana(options: UseNanoBananaOptions = {}) {
       const errorMsg =
         error instanceof Error ? error.message : t("messages.submit_failed");
 
+      setErrorMessage(errorMsg);
+
       // 特殊处理积分不足的情况
       if (errorMsg.includes("Insufficient credits")) {
         toast.error(t("messages.insufficient_credits"));
@@ -441,6 +445,7 @@ export function useNanoBanana(options: UseNanoBananaOptions = {}) {
     setPrompt("");
     setResults([]);
     setAiDescription("");
+    setErrorMessage("");
   }, [cancelTask, clearImages]);
 
   // 清理副作用
@@ -465,6 +470,7 @@ export function useNanoBanana(options: UseNanoBananaOptions = {}) {
     results,
     taskId,
     aiDescription,
+    errorMessage,
 
     // 方法
     setMode,

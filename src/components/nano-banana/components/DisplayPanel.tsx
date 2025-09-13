@@ -9,6 +9,7 @@ import { toast } from "sonner";
 // 导入子组件
 import EmptyState from "./display/EmptyState";
 import ProgressState from "./display/ProgressState";
+import ErrorState from "./display/ErrorState";
 import ImagePreview from "./display/ImagePreview";
 import ThumbnailList from "./display/ThumbnailList";
 import AIDescription from "./display/AIDescription";
@@ -21,8 +22,10 @@ interface DisplayPanelProps {
   results: any[];
   taskId?: string;
   aiDescription?: string;
+  errorMessage?: string;
   onCancel?: () => void;
   onReset?: () => void;
+  onRetry?: () => void;
   onContinueEdit?: (imageUrl: string) => Promise<void>;
 }
 
@@ -32,8 +35,10 @@ export default function DisplayPanel({
   results,
   taskId,
   aiDescription,
+  errorMessage,
   onCancel,
   onReset,
+  onRetry,
   onContinueEdit,
 }: DisplayPanelProps) {
   const [copiedId, setCopiedId] = useState<string | null>(null);
@@ -46,13 +51,13 @@ export default function DisplayPanel({
   // 结果展示
   const ResultState = () => {
     const currentResult = results[selectedResult];
-    
+
     const handleDownload = async () => {
       try {
         const response = await fetch(currentResult.url);
         const blob = await response.blob();
         const url = window.URL.createObjectURL(blob);
-        const a = document.createElement('a');
+        const a = document.createElement("a");
         a.href = url;
         a.download = `nano-banana-${Date.now()}.png`;
         document.body.appendChild(a);
@@ -91,7 +96,7 @@ export default function DisplayPanel({
               </Badge>
             )}
           </div>
-          
+
           {onReset && (
             <Button
               variant="outline"
@@ -108,7 +113,7 @@ export default function DisplayPanel({
         {/* 主图展示 */}
         <div className="flex-1 p-6 flex items-center justify-center">
           <div className="w-full max-w-md max-h-96 aspect-square">
-            <ImagePreview 
+            <ImagePreview
               imageUrl={currentResult.url}
               onDownload={handleDownload}
               onShare={handleShare}
@@ -129,13 +134,13 @@ export default function DisplayPanel({
         <ImageActionBar
           imageUrl={currentResult.url}
           onDownload={handleDownload}
-          onContinueEdit={onContinueEdit ? () => onContinueEdit(currentResult.url) : undefined}
+          onContinueEdit={
+            onContinueEdit ? () => onContinueEdit(currentResult.url) : undefined
+          }
         />
 
         {/* AI 描述 */}
-        {aiDescription && (
-          <AIDescription description={aiDescription} />
-        )}
+        {aiDescription && <AIDescription description={aiDescription} />}
 
         {/* 图片预览弹窗 */}
         <ImageViewerDialog
@@ -153,16 +158,27 @@ export default function DisplayPanel({
   // 根据状态渲染不同内容
   return (
     <div className="h-full">
-      {status === 'idle' && results.length === 0 && <EmptyState />}
+      {status === "idle" && results.length === 0 && <EmptyState />}
       {isProcessing && (
-        <ProgressState 
+        <ProgressState
           progress={progress}
           elapsedTime={elapsedTime}
           taskId={taskId}
           onCancel={onCancel}
         />
       )}
-      {results.length > 0 && <ResultState />}
+      {status === "failed" && (
+        <ErrorState
+          title="生成失败"
+          message={
+            errorMessage ||
+            "很抱歉，图片生成过程中遇到了问题。请稍后重试，如果问题持续存在，请联系我们的技术支持团队。"
+          }
+          onRetry={onRetry || onReset}
+          supportEmail="support@nanobanana.org"
+        />
+      )}
+      {results.length > 0 && status !== "failed" && <ResultState />}
     </div>
   );
 }
