@@ -6,10 +6,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { Compare } from "@/components/ui/compare";
-import { Download, RotateCcw, X } from "lucide-react";
 import { downloadImage, generateImageFilename } from "@/lib/download-utils";
 import { useState } from "react";
 import { toast } from "sonner";

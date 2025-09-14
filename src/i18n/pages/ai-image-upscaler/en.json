@@ -91,7 +91,7 @@
       "face_enhance_description": "Improves facial details and skin texture when enabled"
     },
     "status": {
-      "uploading": "Uploading image for processing...",
+      "uploading": "Uploading...",
       "processing": "Processing...",
       "completed": "Image enhancement completed successfully",
       "error": "Enhancement failed, please try again",
