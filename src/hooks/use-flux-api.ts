@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
+import { useR2Upload } from "@/hooks/use-r2-upload";
 
 interface GenerateOptions {
   prompt: string;
@@ -24,6 +25,14 @@ export function useFluxAPI() {
   const [taskId, setTaskId] = useState<string | null>(null);
   const [progress, setProgress] = useState(0);
 
+  // 使用统一的客户端上传
+  const { uploadWithValidation } = useR2Upload({
+    onError: (error) => {
+      console.error("Upload error in flux:", error);
+      toast.error(error);
+    }
+  });
+
   // Helper function to handle API errors, especially insufficient credits
   const handleApiError = (response: Response, data: any) => {
     if (response.status === 402 && data.error === "insufficient_credits") {
@@ -43,27 +52,13 @@ export function useFluxAPI() {
    * Upload image to R2
    */
   const uploadImage = async (file: File): Promise<string> => {
-    try {
-      const formData = new FormData();
-      formData.append("file", file);
+    const result = await uploadWithValidation(file);
 
-      const response = await fetch("/api/upload", {
-        method: "POST",
-        body: formData,
-      });
-
-      const data = await response.json();
-
-      if (!data.success) {
-        throw new Error(data.error || "Upload failed");
-      }
-
-      return data.url;
-    } catch (error) {
-      console.error("Upload error:", error);
-      toast.error("Failed to upload image");
-      throw error;
+    if (!result.success) {
+      throw new Error(result.error || "Failed to upload image");
     }
+
+    return result.url!;
   };
 
   /**

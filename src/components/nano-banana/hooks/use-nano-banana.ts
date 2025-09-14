@@ -3,6 +3,7 @@
 import { useState, useCallback, useRef } from "react";
 import { toast } from "sonner";
 import { useTranslations } from "next-intl";
+import { useR2Upload } from "@/hooks/use-r2-upload";
 
 export type GenerationMode = "text-to-image" | "image-to-image";
 
@@ -50,6 +51,13 @@ export function useNanoBanana(options: UseNanoBananaOptions = {}) {
 
   const pollIntervalRef = useRef<NodeJS.Timeout | null>(null);
 
+  // 使用统一的客户端上传
+  const { uploadWithValidation } = useR2Upload({
+    onError: (error) => {
+      console.error("Upload error in nano-banana:", error);
+    }
+  });
+
   // 上传单个图片到 R2
   const uploadImageToR2 = async (
     file: File,
@@ -59,48 +67,27 @@ export function useNanoBanana(options: UseNanoBananaOptions = {}) {
       // 更新上传进度 - 开始上传
       setUploadedImages((prev) =>
         prev.map((img) =>
-          img.id === imageId ? { ...img, uploadProgress: 30 } : img
+          img.id === imageId ? { ...img, uploadProgress: 10 } : img
         )
       );
 
-      const formData = new FormData();
-      formData.append("file", file);
+      // 使用新的客户端上传
+      const result = await uploadWithValidation(file);
 
-      // 模拟上传进度
-      const progressInterval = setInterval(() => {
-        setUploadedImages((prev) =>
-          prev.map((img) => {
-            if (img.id === imageId && img.uploadProgress < 90) {
-              return { ...img, uploadProgress: img.uploadProgress + 10 };
-            }
-            return img;
-          })
-        );
-      }, 200);
-
-      const response = await fetch("/api/upload", {
-        method: "POST",
-        body: formData,
-      });
-
-      clearInterval(progressInterval);
-
-      const data = await response.json();
-
-      if (!data.success) {
-        throw new Error(data.error || "Upload failed");
+      if (!result.success) {
+        throw new Error(result.error || "Upload failed");
       }
 
       // 更新上传完成状态
       setUploadedImages((prev) =>
         prev.map((img) =>
           img.id === imageId
-            ? { ...img, uploadProgress: 100, url: data.url }
+            ? { ...img, uploadProgress: 100, url: result.url }
             : img
         )
       );
 
-      return data.url;
+      return result.url!;
     } catch (error) {
       console.error("Upload error:", error);
       // 重置上传进度

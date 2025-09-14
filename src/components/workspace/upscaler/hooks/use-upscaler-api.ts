@@ -3,6 +3,7 @@
 import { useState, useCallback } from "react";
 import { toast } from "sonner";
 import { UpscalerInput } from "@/lib/constants/upscaler";
+import { useR2Upload } from "@/hooks/use-r2-upload";
 
 export interface UpscaleRequest {
   input: UpscalerInput;
@@ -34,25 +35,24 @@ export interface TaskStatusResponse {
 export function useUpscalerAPI() {
   const [isLoading, setIsLoading] = useState(false);
 
+  // 使用统一的客户端上传
+  const { uploadWithValidation } = useR2Upload({
+    onError: (error) => {
+      console.error("Upload error in upscaler:", error);
+      toast.error(error);
+    }
+  });
+
   // Upload image to R2 storage
   const uploadImage = useCallback(async (file: File): Promise<string> => {
-    const formData = new FormData();
-    formData.append("file", file);
-    formData.append("type", "upscaler");
+    const result = await uploadWithValidation(file);
 
-    const response = await fetch("/api/upload", {
-      method: "POST",
-      body: formData,
-    });
-
-    if (!response.ok) {
-      const error = await response.json();
-      throw new Error(error.message || "Failed to upload image");
+    if (!result.success) {
+      throw new Error(result.error || "Failed to upload image");
     }
 
-    const result = await response.json();
-    return result.url;
-  }, []);
+    return result.url!;
+  }, [uploadWithValidation]);
 
   // Submit upscale task
   const submitUpscaleTask = useCallback(async (request: UpscaleRequest): Promise<string> => {
