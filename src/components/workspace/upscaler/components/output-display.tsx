@@ -262,6 +262,7 @@ export default function OutputDisplay({
           scale={scale}
           faceEnhance={faceEnhance}
           onReset={onReset}
+          pageData={pageData}
         />
       )}
     </>

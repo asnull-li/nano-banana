@@ -144,6 +144,10 @@
       "url_mode_active": "URL 모드 - 재업로드 없이 직접 처리"
     }
   },
+  "compare_modal": {
+    "title": "AI 이미지 비교",
+    "drag_hint": "↔️ 구분선을 드래그하여 이미지 비교"
+  },
   "faq": {
     "title": "자주 묻는 질문",
     "description": "Nano Banana Image Upscaler에 대한 일반적인 질문에 대한 답변을 확인하세요.",

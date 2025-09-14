@@ -144,6 +144,10 @@
       "url_mode_active": "URLモード - 再アップロードなしで直接処理"
     }
   },
+  "compare_modal": {
+    "title": "AI画像比較",
+    "drag_hint": "↔️ 仕切り線をドラッグして画像を比較"
+  },
   "faq": {
     "title": "よくある質問",
     "description": "Nano Banana 画像アップスケーラーについてよくある質問への回答。",

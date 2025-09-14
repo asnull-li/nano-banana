@@ -144,6 +144,10 @@
       "url_mode_active": "链接模式 - 直接处理无需重新上传"
     }
   },
+  "compare_modal": {
+    "title": "AI 图片对比",
+    "drag_hint": "↔️ 拖拽分割线对比图片"
+  },
   "faq": {
     "title": "常见问题",
     "description": "获取关于Nano Banana Image Upscaler的常见问题解答。",

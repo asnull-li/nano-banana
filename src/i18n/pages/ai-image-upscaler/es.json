@@ -144,6 +144,10 @@
       "url_mode_active": "Modo URL - Procesamiento directo sin re-subida"
     }
   },
+  "compare_modal": {
+    "title": "Comparación de Imagen AI",
+    "drag_hint": "↔️ Arrastra el divisor para comparar imágenes"
+  },
   "faq": {
     "title": "Preguntas frecuentes",
     "description": "Obtén respuestas a preguntas comunes sobre Nano Banana Image Upscaler.",

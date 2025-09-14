@@ -144,6 +144,10 @@
       "url_mode_active": "URL-Modus - Direkte Verarbeitung ohne erneutes Hochladen"
     }
   },
+  "compare_modal": {
+    "title": "AI-Bildvergleich",
+    "drag_hint": "↔️ Trennlinie ziehen, um Bilder zu vergleichen"
+  },
   "faq": {
     "title": "Häufig gestellte Fragen",
     "description": "Erhalten Sie Antworten auf häufige Fragen zu Nano Banana Bildvergrößerer.",
