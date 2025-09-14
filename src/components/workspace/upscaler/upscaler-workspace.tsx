@@ -61,7 +61,7 @@ export default function UpscalerWorkspace({
   const { user, setShowSignModal } = useAppContext();
   const { submitUpscaleTask, getTaskStatus, uploadImage } = useUpscalerAPI();
   const router = useRouter();
-  const canGenerate = (uploadedFile || task.isUrlMode) && task.status === "idle";
+  const canGenerate = (uploadedFile || task.isUrlMode) && ["idle", "failed"].includes(task.status);
   const isProcessing =
     task.status === "uploading" || task.status === "processing";
 
