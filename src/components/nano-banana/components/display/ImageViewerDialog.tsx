@@ -103,10 +103,10 @@ export default function ImageViewerDialog({
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent
-        className="max-w-[95vw] max-h-[95vh] w-auto h-auto p-0 border-0 bg-white dark:bg-gray-900 shadow-2xl overflow-hidden"
+        className="max-w-[98vw] max-h-[98vh] w-full h-auto p-0 border-0 bg-white dark:bg-gray-900 shadow-2xl overflow-hidden"
         onPointerDownOutside={onClose}
       >
-        <DialogTitle className="sr-only">图片预览</DialogTitle>
+        <DialogTitle className="sr-only">Image Preview</DialogTitle>
         <DialogDescription className="sr-only">
           {t("image_count", {
             current: selectedResult + 1,
@@ -121,17 +121,13 @@ export default function ImageViewerDialog({
               {selectedResult + 1} / {results.length}
             </div>
           </div>
-
           {/* 主图片区域 - 充分显示 */}
-          <div className="relative flex items-center justify-center min-h-[60vh] p-8 group">
+
+          <div className="relative flex items-center justify-center p-4 group">
             <img
               src={currentResult.url}
               alt={`Result ${selectedResult + 1}`}
-              className="max-w-full max-h-full object-contain rounded-lg shadow-lg"
-              style={{
-                maxWidth: "calc(100vw - 4rem)",
-                maxHeight: "calc(100vh - 12rem)",
-              }}
+              className="w-auto h-auto max-w-[94vw] max-h-[90vh] object-contain rounded-lg shadow-lg"
             />
 
             {/* 悬浮操作按钮 - 在图片底部，鼠标悬停时显示 */}
@@ -157,7 +153,6 @@ export default function ImageViewerDialog({
               </div>
             </div>
           </div>
-
           {/* 导航按钮 */}
           {results.length > 1 && (
             <>
@@ -182,7 +177,6 @@ export default function ImageViewerDialog({
               </Button>
             </>
           )}
-
           {/* 底部缩略图导航 */}
           {results.length > 1 && (
             <div className="bg-black/70 dark:bg-black/80 backdrop-blur-sm p-4">

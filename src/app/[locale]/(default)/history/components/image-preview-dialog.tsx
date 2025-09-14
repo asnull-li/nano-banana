@@ -87,7 +87,7 @@ export default function ImagePreviewDialog({
 
   return (
     <Dialog open={!!images} onOpenChange={onClose}>
-      <DialogContent className="md:max-w-5xl max-w-[95vw] max-h-[90vh] p-0 overflow-hidden">
+      <DialogContent className="max-w-[98vw] max-h-[90vh] p-0 overflow-hidden">
         <DialogHeader className="p-4 pb-2">
           <DialogTitle className="flex items-center justify-between">
             <span>
@@ -115,7 +115,7 @@ export default function ImagePreviewDialog({
             <img
               src={currentImage}
               alt={`Preview ${currentIndex + 1}`}
-              className="max-w-full max-h-[60vh] object-contain"
+              className="max-w-full max-h-[85vh] object-contain"
             />
 
             {/* 操作区域 - 悬浮在图片底部 */}
