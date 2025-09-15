@@ -1,8 +1,8 @@
 import {
   checkUserCredits,
   decreaseCredits,
-  increaseCredits,
   CreditsTransType,
+  refundCreditsWithOriginalExpiry,
 } from "@/services/credit";
 import {
   insertTask,
@@ -152,33 +152,35 @@ export async function handleUpscalerWebhookCallback({
   return { success: true };
 }
 
-// 退还积分
+// 退还积分 - 使用通用的智能退款函数
 export async function refundCreditsForTask(
   taskId: string,
   userUuid: string,
   amount: number
 ) {
   try {
-    // 设置退还积分的有效期为30天
-    const expiredAt = new Date();
-    expiredAt.setDate(expiredAt.getDate() + 30);
-
-    // 增加退款积分
-    await increaseCredits({
-      user_uuid: userUuid,
-      trans_type: CreditsTransType.Upscaler_refund,
-      credits: amount,
-      expired_at: expiredAt.toISOString(),
+    // 使用通用退款函数
+    const refundResult = await refundCreditsWithOriginalExpiry({
+      userUuid,
+      amount,
+      refundTransType: CreditsTransType.Upscaler_refund,
+      consumptionTransType: CreditsTransType.Upscaler_submit,
+      taskId,
     });
 
-    // 更新任务记录
-    await updateTaskStatus(taskId, {
-      credits_refunded: amount,
-      updated_at: new Date(),
-    });
+    if (refundResult.success) {
+      // 更新任务记录
+      await updateTaskStatus(taskId, {
+        credits_refunded: amount,
+        updated_at: new Date(),
+      });
 
-    console.log(`Refunded ${amount} credits for upscaler task ${taskId}`);
-    return true;
+      console.log(`Refunded ${amount} credits for upscaler task ${taskId} with expiry: ${refundResult.expiredAt}, order: ${refundResult.orderNo || 'unknown'}`);
+      return true;
+    } else {
+      console.error(`Failed to refund credits for upscaler task ${taskId}`);
+      return false;
+    }
   } catch (error) {
     console.error(`Failed to refund credits for upscaler task ${taskId}:`, error);
     return false;

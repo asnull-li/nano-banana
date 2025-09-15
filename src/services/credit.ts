@@ -4,6 +4,8 @@ import {
   insertCredit,
 } from "@/models/credit";
 import { credits as creditsTable } from "@/db/schema";
+import { db } from "@/db";
+import { and, eq, desc } from "drizzle-orm";
 import { getIsoTimestr } from "@/lib/time";
 import { getSnowId } from "@/lib/hash";
 import { Order } from "@/types/order";
@@ -179,5 +181,108 @@ export async function updateCreditForOrder(order: Order) {
   } catch (e) {
     console.log("update credit for order failed: ", e);
     throw e;
+  }
+}
+
+// 通用的智能退款函数
+export async function refundCreditsWithOriginalExpiry({
+  userUuid,
+  amount,
+  refundTransType,
+  consumptionTransType,
+  taskId,
+}: {
+  userUuid: string;
+  amount: number;
+  refundTransType: CreditsTransType;
+  consumptionTransType: CreditsTransType;
+  taskId?: string;
+}): Promise<{ success: boolean; expiredAt?: Date; orderNo?: string }> {
+  try {
+    // 查找对应的消费记录
+    const consumptionRecord = await findConsumptionRecordByType(
+      userUuid,
+      amount,
+      consumptionTransType
+    );
+
+    // 确定退款积分的有效期和订单号
+    let expiredAt: Date;
+    let originalOrderNo = "";
+
+    if (consumptionRecord && consumptionRecord.expired_at) {
+      // 使用原积分的有效期
+      expiredAt = new Date(consumptionRecord.expired_at);
+      originalOrderNo = consumptionRecord.order_no;
+      console.log(`Using original credit expiry: ${expiredAt}, order: ${originalOrderNo}`);
+    } else {
+      // fallback: 查找用户最新的有效积分过期时间
+      const validCredits = await getUserValidCredits(userUuid);
+      if (validCredits && validCredits.length > 0) {
+        expiredAt = validCredits[0].expired_at ? new Date(validCredits[0].expired_at) : new Date();
+        originalOrderNo = validCredits[0].order_no || "";
+        console.log(`Using latest valid credit expiry: ${expiredAt}`);
+      } else {
+        // 最终fallback: 默认1年有效期
+        expiredAt = new Date();
+        expiredAt.setFullYear(expiredAt.getFullYear() + 1);
+        console.log(`Using fallback 1-year expiry: ${expiredAt}`);
+      }
+    }
+
+    // 增加退款积分，保持原有效期和订单关联
+    await increaseCredits({
+      user_uuid: userUuid,
+      trans_type: refundTransType,
+      credits: amount,
+      expired_at: expiredAt.toISOString(),
+      order_no: originalOrderNo, // 记录原订单号
+    });
+
+    console.log(`Refunded ${amount} credits for user ${userUuid} with expiry: ${expiredAt}, order: ${originalOrderNo || 'unknown'}`);
+
+    return {
+      success: true,
+      expiredAt,
+      orderNo: originalOrderNo,
+    };
+  } catch (error) {
+    console.error(`Failed to refund credits for user ${userUuid}:`, error);
+    return { success: false };
+  }
+}
+
+// 查找指定用户的消费记录（通用版本）
+async function findConsumptionRecordByType(
+  userUuid: string,
+  amount: number,
+  transType: CreditsTransType
+): Promise<{ expired_at: Date | null; order_no: string } | null> {
+  try {
+    // 查找最近的对应消费记录
+    const consumptionRecord = await db()
+      .select()
+      .from(creditsTable)
+      .where(
+        and(
+          eq(creditsTable.user_uuid, userUuid),
+          eq(creditsTable.trans_type, transType),
+          eq(creditsTable.credits, -amount) // 负数表示消费
+        )
+      )
+      .orderBy(desc(creditsTable.created_at))
+      .limit(1);
+
+    if (consumptionRecord[0]) {
+      return {
+        expired_at: consumptionRecord[0].expired_at,
+        order_no: consumptionRecord[0].order_no || ""
+      };
+    }
+
+    return null;
+  } catch (error) {
+    console.error("Failed to find consumption record:", error);
+    return null;
   }
 }
