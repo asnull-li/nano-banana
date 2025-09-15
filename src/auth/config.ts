@@ -118,7 +118,7 @@ if (
           return null;
         }
 
-        const email = credentials.email as string;
+        const email = (credentials.email as string).toLowerCase().trim();
         const code = credentials.code as string;
 
         const { verifyCode } = await import("@/services/verifyCode");
@@ -196,7 +196,7 @@ if (
             .insert(users)
             .values({
               uuid,
-              email: email,
+              email,
               nickname: email.split("@")[0],
               avatar_url: "",
               signin_type: "email",

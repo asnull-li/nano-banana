@@ -13,6 +13,8 @@ export async function insertUser(
 export async function findUserByEmail(
   email: string
 ): Promise<typeof users.$inferSelect | undefined> {
+  email = email.toLowerCase().trim();
+
   const [user] = await db()
     .select()
     .from(users)
@@ -102,6 +104,8 @@ export async function findUserByInviteCode(
 export async function getUserUuidsByEmail(
   email: string
 ): Promise<string[] | undefined> {
+  email = email.toLowerCase().trim();
+
   const data = await db()
     .select({ uuid: users.uuid })
     .from(users)

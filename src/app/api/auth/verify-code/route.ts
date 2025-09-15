@@ -21,7 +21,8 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const { email, code } = validation.data;
+    const { email: rawEmail, code } = validation.data;
+    const email = rawEmail.toLowerCase().trim();
 
     // 检查验证码（不删除）
     const result = await checkCode(email, code);

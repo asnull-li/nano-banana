@@ -21,6 +21,9 @@ function generateTokenId(): string {
 // 存储验证码
 export async function storeVerifyCode(email: string, code: string, expiresInMinutes: number = 5) {
   try {
+    // 统一邮箱格式
+    email = email.toLowerCase().trim();
+
     // 删除该邮箱的旧验证码
     await db()
       .delete(verificationTokens)
@@ -46,6 +49,9 @@ export async function storeVerifyCode(email: string, code: string, expiresInMinu
 // 检查验证码（不删除）
 export async function checkCode(email: string, code: string) {
   try {
+    // 统一邮箱格式
+    email = email.toLowerCase().trim();
+
     // 查找有效的验证码
     const [record] = await db()
       .select()
@@ -79,6 +85,9 @@ export async function checkCode(email: string, code: string) {
 // 验证验证码（验证并删除）
 export async function verifyCode(email: string, code: string) {
   try {
+    // 统一邮箱格式
+    email = email.toLowerCase().trim();
+
     // 先检查验证码
     const checkResult = await checkCode(email, code);
     if (!checkResult.success) {
@@ -100,6 +109,9 @@ export async function verifyCode(email: string, code: string) {
 // 检查是否可以发送验证码（防止频繁发送）
 export async function canSendCode(email: string): Promise<boolean> {
   try {
+    // 统一邮箱格式
+    email = email.toLowerCase().trim();
+
     // 检查最近1分钟内是否已发送
     // 验证码创建时间 = expires - 5分钟
     // 如果 expires > 当前时间 + 4分钟，说明是在最近1分钟内创建的

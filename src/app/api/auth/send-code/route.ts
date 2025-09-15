@@ -27,7 +27,8 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const { email } = validation.data;
+    const { email: rawEmail } = validation.data;
+    const email = rawEmail.toLowerCase().trim();
 
     // 检查邮箱是否为临时邮箱
     if (isTempEmail(email)) {
