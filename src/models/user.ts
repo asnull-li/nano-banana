@@ -1,6 +1,7 @@
 import { users } from "@/db/schema";
 import { db } from "@/db";
 import { desc, eq, gte, inArray } from "drizzle-orm";
+import { standardizeEmail } from "@/lib/emailUtils";
 
 export async function insertUser(
   data: typeof users.$inferInsert
@@ -13,7 +14,7 @@ export async function insertUser(
 export async function findUserByEmail(
   email: string
 ): Promise<typeof users.$inferSelect | undefined> {
-  email = email.toLowerCase().trim();
+  email = standardizeEmail(email);
 
   const [user] = await db()
     .select()
@@ -104,7 +105,7 @@ export async function findUserByInviteCode(
 export async function getUserUuidsByEmail(
   email: string
 ): Promise<string[] | undefined> {
-  email = email.toLowerCase().trim();
+  email = standardizeEmail(email);
 
   const data = await db()
     .select({ uuid: users.uuid })

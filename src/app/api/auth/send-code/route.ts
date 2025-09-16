@@ -7,6 +7,7 @@ import {
 } from "@/services/verifyCode";
 import { z } from "zod";
 import isTempEmail from "@/lib/tempEmail";
+import { standardizeEmail } from "@/lib/emailUtils";
 
 // 请求体验证
 const sendCodeSchema = z.object({
@@ -28,7 +29,7 @@ export async function POST(req: NextRequest) {
     }
 
     const { email: rawEmail } = validation.data;
-    const email = rawEmail.toLowerCase().trim();
+    const email = standardizeEmail(rawEmail);
 
     // 检查邮箱是否为临时邮箱
     if (isTempEmail(email)) {

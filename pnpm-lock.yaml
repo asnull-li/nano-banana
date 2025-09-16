@@ -185,6 +185,9 @@ importers:
       drizzle-orm:
         specifier: ^0.44.2
         version: 0.44.2(@opentelemetry/api@1.9.0)(postgres@3.4.7)
+      email-normalizer:
+        specifier: ^1.0.0
+        version: 1.0.0
       embla-carousel-auto-scroll:
         specifier: ^8.5.1
         version: 8.5.1(embla-carousel@8.5.1)
@@ -4027,6 +4030,9 @@ packages:
     resolution: {integrity: sha512-pk+k0oK0PVXdlT4oRp4lwh+unuKB7Ng4iZ2HB+EZ7QCEQizX360Rp/F4aRpgpRgdP2ufB35N+1KppHmYjqIGSg==}
     engines: {node: '>=16'}
     hasBin: true
+
+  email-normalizer@1.0.0:
+    resolution: {integrity: sha512-wZYuuMtL4kUOmg/TPtCrf9hAZjbFq+FcjWA85Z5nr2lGllRnWJPxCJw3gy4Cx+adMoyVw4VJfGGvt/OHgIW+qg==}
 
   embla-carousel-auto-scroll@8.5.1:
     resolution: {integrity: sha512-fbkZ5+kPHJnJ0aVhRClodnBuaWp8RvV/AW4ex+YhXtvkTld9ApAxmyKQsZzycQc24uz15kzyRjSTNfEvzXPYuQ==}
@@ -10868,6 +10874,10 @@ snapshots:
       pretty-ms: 7.0.1
       signal-exit: 4.0.2
       time-span: 4.0.0
+
+  email-normalizer@1.0.0:
+    dependencies:
+      typescript: 5.7.2
 
   embla-carousel-auto-scroll@8.5.1(embla-carousel@8.5.1):
     dependencies:

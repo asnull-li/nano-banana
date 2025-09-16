@@ -2,6 +2,7 @@ import { db } from "@/db";
 import { verificationTokens } from "@/db/schema";
 import { eq, and, gte, lte } from "drizzle-orm";
 import crypto from "crypto";
+import { standardizeEmail } from "@/lib/emailUtils";
 
 /**
  * 验证码服务
@@ -22,7 +23,7 @@ function generateTokenId(): string {
 export async function storeVerifyCode(email: string, code: string, expiresInMinutes: number = 5) {
   try {
     // 统一邮箱格式
-    email = email.toLowerCase().trim();
+    email = standardizeEmail(email);
 
     // 删除该邮箱的旧验证码
     await db()
@@ -50,7 +51,7 @@ export async function storeVerifyCode(email: string, code: string, expiresInMinu
 export async function checkCode(email: string, code: string) {
   try {
     // 统一邮箱格式
-    email = email.toLowerCase().trim();
+    email = standardizeEmail(email);
 
     // 查找有效的验证码
     const [record] = await db()
@@ -86,7 +87,7 @@ export async function checkCode(email: string, code: string) {
 export async function verifyCode(email: string, code: string) {
   try {
     // 统一邮箱格式
-    email = email.toLowerCase().trim();
+    email = standardizeEmail(email);
 
     // 先检查验证码
     const checkResult = await checkCode(email, code);
@@ -110,7 +111,7 @@ export async function verifyCode(email: string, code: string) {
 export async function canSendCode(email: string): Promise<boolean> {
   try {
     // 统一邮箱格式
-    email = email.toLowerCase().trim();
+    email = standardizeEmail(email);
 
     // 检查最近1分钟内是否已发送
     // 验证码创建时间 = expires - 5分钟

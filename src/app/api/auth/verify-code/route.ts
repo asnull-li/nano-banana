@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { checkCode } from "@/services/verifyCode";
 import { z } from "zod";
+import { standardizeEmail } from "@/lib/emailUtils";
 
 // 请求体验证
 const verifyCodeSchema = z.object({
@@ -22,7 +23,7 @@ export async function POST(req: NextRequest) {
     }
 
     const { email: rawEmail, code } = validation.data;
-    const email = rawEmail.toLowerCase().trim();
+    const email = standardizeEmail(rawEmail);
 
     // 检查验证码（不删除）
     const result = await checkCode(email, code);

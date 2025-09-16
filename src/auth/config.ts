@@ -118,7 +118,8 @@ if (
           return null;
         }
 
-        const email = (credentials.email as string).toLowerCase().trim();
+        const { standardizeEmail } = await import("@/lib/emailUtils");
+        const email = standardizeEmail(credentials.email as string);
         const code = credentials.code as string;
 
         const { verifyCode } = await import("@/services/verifyCode");
