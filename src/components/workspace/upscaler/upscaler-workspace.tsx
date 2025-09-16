@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { toast } from "sonner";
 import { useCredits } from "@/hooks/use-credits";
 import { useAppContext } from "@/contexts/app";
@@ -10,6 +9,7 @@ import { Sparkles } from "lucide-react";
 import ImageUploadZone from "./components/image-upload-zone";
 import UpscalerControls from "./components/upscaler-controls";
 import OutputDisplay from "./components/output-display";
+import UpgradeModal from "./components/upgrade-modal";
 import { useUpscalerAPI } from "./hooks/use-upscaler-api";
 import { CREDITS_PER_UPSCALE } from "@/lib/constants/upscaler";
 import { useRouter } from "@/i18n/navigation";
@@ -56,6 +56,8 @@ export default function UpscalerWorkspace({
   const [uploadedFile, setUploadedFile] = useState<File | null>(null);
   const [scale, setScale] = useState(2);
   const [faceEnhance, setFaceEnhance] = useState(false);
+  const [showUpgradeModal, setShowUpgradeModal] = useState(false);
+  const [upgradeScale, setUpgradeScale] = useState(3);
 
   const { credits, refreshCredits } = useCredits();
   const { user, setShowSignModal } = useAppContext();
@@ -64,6 +66,12 @@ export default function UpscalerWorkspace({
   const canGenerate = (uploadedFile || task.isUrlMode) && ["idle", "failed"].includes(task.status);
   const isProcessing =
     task.status === "uploading" || task.status === "processing";
+
+  // 处理升级提示
+  const handleUpgradeRequired = (requiredScale: number) => {
+    setUpgradeScale(requiredScale);
+    setShowUpgradeModal(true);
+  };
 
   const handleImageUpload = useCallback((file: File, preview: string) => {
     setUploadedFile(file);
@@ -420,6 +428,7 @@ export default function UpscalerWorkspace({
                 onFaceEnhanceChange={setFaceEnhance}
                 disabled={isProcessing}
                 pageData={pageData}
+                onUpgradeRequired={handleUpgradeRequired}
               />
             </div>
 
@@ -502,6 +511,13 @@ export default function UpscalerWorkspace({
           </div>
         </div>
       </div>
+
+      {/* 升级模态框 */}
+      <UpgradeModal
+        open={showUpgradeModal}
+        onOpenChange={setShowUpgradeModal}
+        scale={upgradeScale}
+      />
     </div>
   );
 }
