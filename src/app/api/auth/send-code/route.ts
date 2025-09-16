@@ -50,16 +50,7 @@ export async function POST(req: NextRequest) {
     // 生成验证码
     const code = generateVerifyCode();
 
-    // 存储验证码
-    const storeResult = await storeVerifyCode(email, code);
-    if (!storeResult.success) {
-      return NextResponse.json(
-        { error: "Failed to generate verification code" },
-        { status: 500 }
-      );
-    }
-
-    // 发送邮件
+    // 先发送邮件
     const emailResult = await sendEmail({
       to: email,
       subject: `${code} is your verification code`,
@@ -170,6 +161,16 @@ export async function POST(req: NextRequest) {
       console.error("Send email error:", emailResult.error);
       return NextResponse.json(
         { error: "Failed to send verification email" },
+        { status: 500 }
+      );
+    }
+
+    // 邮件发送成功后，存储验证码到数据库
+    const storeResult = await storeVerifyCode(email, code);
+    if (!storeResult.success) {
+      console.error("Store verify code error after email sent:", storeResult.error);
+      return NextResponse.json(
+        { error: "Failed to generate verification code" },
         { status: 500 }
       );
     }
