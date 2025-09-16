@@ -57,20 +57,18 @@ export default function SignModal() {
               <div className="mx-auto w-16 h-16 bg-gradient-to-r from-green-500 to-cyan-500 rounded-full flex items-center justify-center shadow-lg shadow-green-500/25">
                 <Sparkles className="h-8 w-8 text-white" />
               </div>
-
               <DialogTitle className="text-2xl font-bold text-center bg-gradient-to-r from-green-500 to-cyan-500 bg-clip-text text-transparent">
                 {t("sign_modal.sign_in_title")}
               </DialogTitle>
-
               <DialogDescription className="text-center text-muted-foreground">
                 {t("sign_modal.sign_in_description")}
               </DialogDescription>
 
               <div className="flex items-center justify-center">
-                <Badge className="bg-gradient-to-r from-green-500/90 to-cyan-500/90 text-white border-0 shadow-md hover:shadow-lg transition-shadow duration-200">
-                  <Gift className="h-3 w-3 mr-1" />
+                <div className="flex rounded-full bg-green-600 text-base text-white border-0 shadow-sm px-3 py-1.5 font-bold">
+                  <Gift className="h-6 w-6 mr-2 " />
                   {t("sign_modal.login_slogan")}
-                </Badge>
+                </div>
               </div>
             </DialogHeader>
           </div>
@@ -95,20 +93,18 @@ export default function SignModal() {
             <div className="mx-auto w-12 h-12 bg-gradient-to-r from-green-500 to-cyan-500 rounded-full flex items-center justify-center shadow-lg shadow-green-500/25 mb-3">
               <Sparkles className="h-6 w-6 text-white" />
             </div>
-
             <DrawerTitle className="text-xl font-bold bg-gradient-to-r from-green-500 to-cyan-500 bg-clip-text text-transparent">
               {t("sign_modal.sign_in_title")}
             </DrawerTitle>
-
             <DrawerDescription className="text-muted-foreground mt-2">
               {t("sign_modal.sign_in_description")}
             </DrawerDescription>
 
-            <div className="flex items-center justify-center mt-4">
-              <Badge className="bg-gradient-to-r from-green-500/90 to-cyan-500/90 text-white border-0 shadow-md">
-                <Gift className="h-3 w-3 mr-1" />
+            <div className="flex items-center justify-center">
+              <div className="flex rounded-full bg-green-600 text-base text-white border-0 shadow-sm px-3 py-1.5 font-bold">
+                <Gift className="h-6 w-6 mr-2 " />
                 {t("sign_modal.login_slogan")}
-              </Badge>
+              </div>
             </div>
           </DrawerHeader>
         </div>
