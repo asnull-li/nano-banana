@@ -148,6 +148,17 @@
     "title": "AI 이미지 비교",
     "drag_hint": "↔️ 구분선을 드래그하여 이미지 비교"
   },
+  "upgrade_modal": {
+    "title": "Pro+ 이상으로 업그레이드하여 고배율 확대 잠금 해제",
+    "description": "${scale}x 확대는 Pro+ 이상 전용 기능입니다. 지금 업그레이드하여 더욱 강력한 이미지 확대 기능을 즐겨보세요",
+    "vip_exclusive": "VIP 전용 기능",
+    "features_title": "Pro+ 특권",
+    "feature_high_scale": "3x, 4x 고해상도 이미지 확대 지원",
+    "feature_more_credits": "더 많은 크레딧, 무제한 사용",
+    "feature_priority": "우선 처리, 더 빠른 생성 속도",
+    "upgrade_button": "지금 멤버십 업그레이드",
+    "cancel_button": "나중에 할게요"
+  },
   "faq": {
     "title": "자주 묻는 질문",
     "description": "Nano Banana Image Upscaler에 대한 일반적인 질문에 대한 답변을 확인하세요.",

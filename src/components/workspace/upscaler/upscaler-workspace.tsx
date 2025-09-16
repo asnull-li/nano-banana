@@ -63,6 +63,7 @@ export default function UpscalerWorkspace({
   const { user, setShowSignModal } = useAppContext();
   const { submitUpscaleTask, getTaskStatus, uploadImage } = useUpscalerAPI();
   const router = useRouter();
+
   const canGenerate = (uploadedFile || task.isUrlMode) && ["idle", "failed"].includes(task.status);
   const isProcessing =
     task.status === "uploading" || task.status === "processing";
@@ -357,6 +358,22 @@ export default function UpscalerWorkspace({
       // 开始轮询
       setTimeout(checkStatus, 2000);
     } catch (error) {
+      // 检查是否为会员权限错误
+      if (error instanceof Error &&
+          (error as any).code === "VIP_REQUIRED" &&
+          (error as any).statusCode === 403) {
+        // 显示升级模态框而不是错误提示
+        setUpgradeScale((error as any).scale || 3);
+        setShowUpgradeModal(true);
+        // 重置任务状态
+        setTask((prev) => ({
+          ...prev,
+          status: "idle",
+        }));
+        return; // 不显示错误 toast
+      }
+
+      // 其他错误的正常处理
       setTask((prev) => ({
         ...prev,
         status: "failed",
@@ -517,6 +534,7 @@ export default function UpscalerWorkspace({
         open={showUpgradeModal}
         onOpenChange={setShowUpgradeModal}
         scale={upgradeScale}
+        pageData={pageData}
       />
     </div>
   );

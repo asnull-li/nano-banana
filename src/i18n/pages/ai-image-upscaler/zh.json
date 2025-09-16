@@ -148,6 +148,17 @@
     "title": "AI 图片对比",
     "drag_hint": "↔️ 拖拽分割线对比图片"
   },
+  "upgrade_modal": {
+    "title": "升级至Pro 及以上解锁高倍放大",
+    "description": "${scale}x 放大是Pro 及以上专属功能，升级后即可享受更强大的图片放大能力",
+    "vip_exclusive": "VIP 专属功能",
+    "features_title": "Pro+特权",
+    "feature_high_scale": "支持 3x、4x 高清晰度图片放大",
+    "feature_more_credits": "更多积分，无限制使用",
+    "feature_priority": "优先处理，更快生成速度",
+    "upgrade_button": "立即升级会员",
+    "cancel_button": "稍后再说"
+  },
   "faq": {
     "title": "常见问题",
     "description": "获取关于Nano Banana Image Upscaler的常见问题解答。",

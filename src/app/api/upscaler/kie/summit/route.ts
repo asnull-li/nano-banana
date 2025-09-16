@@ -2,11 +2,12 @@ import { NextRequest, NextResponse } from "next/server";
 import { getUserUuid } from "@/services/user";
 import { processUpscalerSubmit } from "@/services/upscaler";
 import { submitUpscaleTask } from "@/lib/kie-upscaler-client";
-import { 
-  UpscalerInput, 
-  MIN_SCALE, 
-  MAX_SCALE, 
-  DEFAULT_SCALE 
+import { getUserCredits } from "@/services/credit";
+import {
+  UpscalerInput,
+  MIN_SCALE,
+  MAX_SCALE,
+  DEFAULT_SCALE
 } from "@/lib/constants/upscaler";
 
 export async function POST(request: NextRequest) {
@@ -80,6 +81,22 @@ export async function POST(request: NextRequest) {
         },
         { status: 400 }
       );
+    }
+
+    // 检查 3x/4x 放大的会员权限
+    if (scale === 3 || scale === 4) {
+      const userCredits = await getUserCredits(user_uuid);
+      if (!userCredits.is_recharged) {
+        return NextResponse.json(
+          {
+            success: false,
+            error: "Upgrade to a membership is required to use the 3x/4x high magnification feature.",
+            code: "VIP_REQUIRED",
+            scale: scale,
+          },
+          { status: 403 }
+        );
+      }
     }
 
     // 3. 生成webhook URL

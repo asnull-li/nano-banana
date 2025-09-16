@@ -148,6 +148,17 @@
     "title": "مقارنة الصور بالذكاء الاصطناعي",
     "drag_hint": "↔️ اسحب الفاصل لمقارنة الصور"
   },
+  "upgrade_modal": {
+    "title": "ترقية إلى Pro+ لإلغاء قفل التكبير العالي",
+    "description": "التكبير ${scale}x هو ميزة حصرية لـ Pro+. قم بالترقية الآن للاستمتاع بقدرات أكثر قوة لتحسين الصور",
+    "vip_exclusive": "ميزة VIP الحصرية",
+    "features_title": "مزايا Pro+",
+    "feature_high_scale": "دعم تكبير الصور عالي الدقة 3x، 4x",
+    "feature_more_credits": "المزيد من النقاط، استخدام غير محدود",
+    "feature_priority": "معالجة ذات أولوية، سرعة توليد أسرع",
+    "upgrade_button": "الترقية إلى العضوية الآن",
+    "cancel_button": "ربما لاحقاً"
+  },
   "faq": {
     "title": "الأسئلة الشائعة",
     "description": "احصل على إجابات للأسئلة الشائعة حول Nano Banana Image Upscaler.",

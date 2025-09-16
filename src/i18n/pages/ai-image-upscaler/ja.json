@@ -148,6 +148,17 @@
     "title": "AI画像比較",
     "drag_hint": "↔️ 仕切り線をドラッグして画像を比較"
   },
+  "upgrade_modal": {
+    "title": "Pro+にアップグレードして高倍率拡大を解除",
+    "description": "${scale}x拡大はPro+専用機能です。今すぐアップグレードして、より強力な画像拡大機能をお楽しみください",
+    "vip_exclusive": "VIP専用機能",
+    "features_title": "Pro+特典",
+    "feature_high_scale": "3x、4x高解像度画像拡大をサポート",
+    "feature_more_credits": "より多くのクレジット、無制限利用",
+    "feature_priority": "優先処理、より高速な生成スピード",
+    "upgrade_button": "今すぐメンバーシップにアップグレード",
+    "cancel_button": "後で"
+  },
   "faq": {
     "title": "よくある質問",
     "description": "Nano Banana 画像アップスケーラーについてよくある質問への回答。",

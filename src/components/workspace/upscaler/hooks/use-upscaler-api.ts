@@ -16,6 +16,8 @@ export interface UpscaleResponse {
   credits_used: number;
   remaining_credits: number;
   error?: string;
+  code?: string;
+  scale?: number;
 }
 
 export interface TaskStatusResponse {
@@ -70,7 +72,12 @@ export function useUpscalerAPI() {
       const data: UpscaleResponse = await response.json();
 
       if (!data.success) {
-        throw new Error(data.error || "Failed to submit upscale task");
+        // 创建包含错误码和额外信息的错误对象
+        const error = new Error(data.error || "Failed to submit upscale task");
+        (error as any).code = data.code;
+        (error as any).scale = data.scale;
+        (error as any).statusCode = response.status;
+        throw error;
       }
 
       return data.task_id;

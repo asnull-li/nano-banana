@@ -27,15 +27,30 @@ interface UpgradeModalProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
   scale?: number;
+  pageData?: any;
 }
 
 export default function UpgradeModal({
   open,
   onOpenChange,
   scale = 3,
+  pageData,
 }: UpgradeModalProps) {
   const isDesktop = useMediaQuery("(min-width: 768px)");
   const router = useRouter();
+
+  // 从 pageData 获取多语言文案，提供默认值作为回退
+  const texts = {
+    title: pageData?.upgrade_modal?.title || "升级至会员解锁高倍放大",
+    description: pageData?.upgrade_modal?.description || "${scale}x 放大是会员专属功能，升级后即可享受更强大的图片放大能力",
+    vip_exclusive: pageData?.upgrade_modal?.vip_exclusive || "VIP 专属功能",
+    features_title: pageData?.upgrade_modal?.features_title || "会员特权",
+    feature_high_scale: pageData?.upgrade_modal?.feature_high_scale || "支持 3x、4x 高倍率图片放大",
+    feature_more_credits: pageData?.upgrade_modal?.feature_more_credits || "更多积分，无限制使用",
+    feature_priority: pageData?.upgrade_modal?.feature_priority || "优先处理，更快生成速度",
+    upgrade_button: pageData?.upgrade_modal?.upgrade_button || "立即升级会员",
+    cancel_button: pageData?.upgrade_modal?.cancel_button || "稍后再说",
+  };
 
   const handleUpgrade = () => {
     onOpenChange(false);
@@ -58,17 +73,17 @@ export default function UpgradeModal({
               </div>
 
               <DialogTitle className="text-2xl font-bold text-center bg-gradient-to-r from-amber-500 to-orange-500 bg-clip-text text-transparent">
-                升级至会员解锁高倍放大
+                {texts.title}
               </DialogTitle>
 
               <DialogDescription className="text-center text-muted-foreground">
-                {scale}x 放大是会员专属功能，升级后即可享受更强大的图片放大能力
+                {texts.description.replace("${scale}", scale.toString())}
               </DialogDescription>
 
               <div className="flex items-center justify-center">
                 <Badge className="bg-gradient-to-r from-amber-500/90 to-orange-500/90 text-white border-0 shadow-md hover:shadow-lg transition-shadow duration-200">
                   <Crown className="h-3 w-3 mr-1" />
-                  VIP 专属功能
+                  {texts.vip_exclusive}
                 </Badge>
               </div>
             </DialogHeader>
@@ -79,7 +94,7 @@ export default function UpgradeModal({
               {/* Features */}
               <div className="space-y-4">
                 <h3 className="text-lg font-semibold text-center text-slate-800 dark:text-slate-200">
-                  会员特权
+                  {texts.features_title}
                 </h3>
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
@@ -87,7 +102,7 @@ export default function UpgradeModal({
                       <Zap className="h-4 w-4 text-white" />
                     </div>
                     <span className="text-sm text-slate-700 dark:text-slate-300">
-                      支持 3x、4x 高倍率图片放大
+                      {texts.feature_high_scale}
                     </span>
                   </div>
                   <div className="flex items-center gap-3">
@@ -95,7 +110,7 @@ export default function UpgradeModal({
                       <Sparkles className="h-4 w-4 text-white" />
                     </div>
                     <span className="text-sm text-slate-700 dark:text-slate-300">
-                      更多积分，无限制使用
+                      {texts.feature_more_credits}
                     </span>
                   </div>
                   <div className="flex items-center gap-3">
@@ -103,7 +118,7 @@ export default function UpgradeModal({
                       <Crown className="h-4 w-4 text-white" />
                     </div>
                     <span className="text-sm text-slate-700 dark:text-slate-300">
-                      优先处理，更快生成速度
+                      {texts.feature_priority}
                     </span>
                   </div>
                 </div>
@@ -116,7 +131,7 @@ export default function UpgradeModal({
                   className="w-full h-12 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white shadow-lg shadow-amber-500/25 text-lg font-semibold"
                 >
                   <Crown className="w-5 h-5 mr-3" />
-                  立即升级会员
+                  {texts.upgrade_button}
                 </Button>
 
                 <Button
@@ -124,7 +139,7 @@ export default function UpgradeModal({
                   variant="outline"
                   className="w-full border-amber-200 hover:bg-amber-50 dark:border-amber-800 dark:hover:bg-amber-950/30"
                 >
-                  稍后再说
+                  {texts.cancel_button}
                 </Button>
               </div>
             </div>
@@ -148,17 +163,17 @@ export default function UpgradeModal({
             </div>
 
             <DrawerTitle className="text-xl font-bold bg-gradient-to-r from-amber-500 to-orange-500 bg-clip-text text-transparent">
-              升级至会员解锁高倍放大
+              {texts.title}
             </DrawerTitle>
 
             <DrawerDescription className="text-muted-foreground mt-2">
-              {scale}x 放大是会员专属功能，升级后即可享受更强大的图片放大能力
+              {texts.description.replace("${scale}", scale.toString())}
             </DrawerDescription>
 
             <div className="flex items-center justify-center mt-4">
               <Badge className="bg-gradient-to-r from-amber-500/90 to-orange-500/90 text-white border-0 shadow-md">
                 <Crown className="h-3 w-3 mr-1" />
-                VIP 专属功能
+                {texts.vip_exclusive}
               </Badge>
             </div>
           </DrawerHeader>
@@ -169,7 +184,7 @@ export default function UpgradeModal({
             {/* Features */}
             <div className="space-y-4">
               <h3 className="text-lg font-semibold text-center text-slate-800 dark:text-slate-200">
-                会员特权
+                {texts.features_title}
               </h3>
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
@@ -177,7 +192,7 @@ export default function UpgradeModal({
                     <Zap className="h-4 w-4 text-white" />
                   </div>
                   <span className="text-sm text-slate-700 dark:text-slate-300">
-                    支持 3x、4x 高倍率图片放大
+                    {texts.feature_high_scale}
                   </span>
                 </div>
                 <div className="flex items-center gap-3">
@@ -185,7 +200,7 @@ export default function UpgradeModal({
                     <Sparkles className="h-4 w-4 text-white" />
                   </div>
                   <span className="text-sm text-slate-700 dark:text-slate-300">
-                    更多积分，无限制使用
+                    {texts.feature_more_credits}
                   </span>
                 </div>
                 <div className="flex items-center gap-3">
@@ -193,7 +208,7 @@ export default function UpgradeModal({
                     <Crown className="h-4 w-4 text-white" />
                   </div>
                   <span className="text-sm text-slate-700 dark:text-slate-300">
-                    优先处理，更快生成速度
+                    {texts.feature_priority}
                   </span>
                 </div>
               </div>
@@ -206,7 +221,7 @@ export default function UpgradeModal({
                 className="w-full h-12 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white shadow-lg shadow-amber-500/25 text-lg font-semibold"
               >
                 <Crown className="w-5 h-5 mr-3" />
-                立即升级会员
+                {texts.upgrade_button}
               </Button>
             </div>
           </div>
@@ -218,7 +233,7 @@ export default function UpgradeModal({
               variant="outline"
               className="border-amber-500/20 hover:border-amber-500/40 hover:bg-amber-500/5 transition-all duration-200"
             >
-              稍后再说
+              {texts.cancel_button}
             </Button>
           </DrawerClose>
         </DrawerFooter>

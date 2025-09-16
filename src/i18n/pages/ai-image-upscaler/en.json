@@ -148,6 +148,17 @@
     "title": "AI Image Comparison",
     "drag_hint": "↔️ Drag divider to compare images"
   },
+  "upgrade_modal": {
+    "title": "Upgrade to Pro+ to Unlock High Magnification",
+    "description": "${scale}x magnification is a Pro+ exclusive feature. Upgrade now to enjoy more powerful image upscaling capabilities",
+    "vip_exclusive": "VIP Exclusive Feature",
+    "features_title": "Pro+ Benefits",
+    "feature_high_scale": "Support for 3x, 4x high-definition image upscaling",
+    "feature_more_credits": "More credits, unlimited usage",
+    "feature_priority": "Priority processing, faster generation speed",
+    "upgrade_button": "Upgrade to Membership Now",
+    "cancel_button": "Maybe Later"
+  },
   "faq": {
     "title": "Frequently Asked Questions",
     "description": "Get answers to common questions about Nano Banana Image Upscaler.",

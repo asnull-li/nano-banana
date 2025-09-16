@@ -148,6 +148,17 @@
     "title": "Comparaison d'Image IA",
     "drag_hint": "↔️ Faites glisser le séparateur pour comparer les images"
   },
+  "upgrade_modal": {
+    "title": "Passez à Pro+ pour débloquer la haute magnificence",
+    "description": "La magnificence ${scale}x est une fonctionnalité exclusive Pro+. Passez maintenant à un niveau supérieur pour profiter de capacités d'amélioration d'image plus puissantes",
+    "vip_exclusive": "Fonctionnalité exclusive VIP",
+    "features_title": "Avantages Pro+",
+    "feature_high_scale": "Support pour l'amélioration d'image haute définition 3x, 4x",
+    "feature_more_credits": "Plus de crédits, utilisation illimitée",
+    "feature_priority": "Traitement prioritaire, vitesse de génération plus rapide",
+    "upgrade_button": "Passer à l'abonnement maintenant",
+    "cancel_button": "Peut-être plus tard"
+  },
   "faq": {
     "title": "Questions fréquemment posées",
     "description": "Obtenez des réponses aux questions courantes sur Nano Banana Image Upscaler.",

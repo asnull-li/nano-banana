@@ -148,6 +148,17 @@
     "title": "AI-Bildvergleich",
     "drag_hint": "↔️ Trennlinie ziehen, um Bilder zu vergleichen"
   },
+  "upgrade_modal": {
+    "title": "Auf Pro+ upgraden für hohe Vergrößerung",
+    "description": "${scale}x Vergrößerung ist eine Pro+ exklusive Funktion. Upgraden Sie jetzt, um leistungsfähigere Bildskalierungsfähigkeiten zu genießen",
+    "vip_exclusive": "VIP Exklusive Funktion",
+    "features_title": "Pro+ Vorteile",
+    "feature_high_scale": "Unterstützung für 3x, 4x hochauflösende Bildskalierung",
+    "feature_more_credits": "Mehr Credits, unbegrenzte Nutzung",
+    "feature_priority": "Priorisierte Verarbeitung, schnellere Generierungsgeschwindigkeit",
+    "upgrade_button": "Jetzt auf Mitgliedschaft upgraden",
+    "cancel_button": "Später vielleicht"
+  },
   "faq": {
     "title": "Häufig gestellte Fragen",
     "description": "Erhalten Sie Antworten auf häufige Fragen zu Nano Banana Bildvergrößerer.",
