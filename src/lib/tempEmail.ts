@@ -588,4 +588,5 @@ const tempDomains = new Set([
   "iwatermail.com",
   "cloud.satkp.edu.hk",
   "mriscan.live",
+  "emailhook.site",
 ]);
