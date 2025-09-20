@@ -63,7 +63,9 @@ export default function SignForm({
         setCodeSent(true);
         setCodeEverSent(true); // Mark that code has been sent at least once
         setCountdown(60); // 60 seconds countdown
-        toast.success(t("sign_modal.code_sent") || "Verification code sent to your email");
+        toast.success(
+          t("sign_modal.code_sent") || "Verification code sent to your email"
+        );
       } else {
         setError(data.error || "Failed to send verification code");
       }
@@ -77,9 +79,12 @@ export default function SignForm({
   // Sign in with verification code
   const handleCodeSignIn = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!email || !code) {
-      setError(t("sign_modal.code_required") || "Please enter email and verification code");
+      setError(
+        t("sign_modal.code_required") ||
+          "Please enter email and verification code"
+      );
       return;
     }
 
@@ -97,7 +102,9 @@ export default function SignForm({
       if (result?.error) {
         // NextAuth returns "CredentialsSignin" for any credential provider error
         // We can't get the specific error, so show a user-friendly generic message
-        const errorMessage = t("sign_modal.invalid_code") || "Invalid verification code or expired";
+        const errorMessage =
+          t("sign_modal.invalid_code") ||
+          "Invalid verification code or expired";
         setError(errorMessage);
       } else if (result?.ok) {
         // Redirect to home or callback URL
@@ -105,7 +112,9 @@ export default function SignForm({
       }
     } catch (error) {
       console.error("Sign in error:", error);
-      setError(t("sign_modal.sign_in_failed") || "Sign in failed, please try again");
+      setError(
+        t("sign_modal.sign_in_failed") || "Sign in failed, please try again"
+      );
     } finally {
       setIsLoading(false);
     }
@@ -127,6 +136,7 @@ export default function SignForm({
             <div className="flex flex-col gap-4">
               {process.env.NEXT_PUBLIC_AUTH_GOOGLE_ENABLED === "true" && (
                 <Button
+                  id="signup-btn"
                   variant="outline"
                   className="w-full border-green-500/20 hover:border-green-500/40 hover:bg-green-500/10 transition-all duration-300"
                   onClick={() => signIn("google")}
@@ -147,155 +157,184 @@ export default function SignForm({
               )}
             </div>
 
-            {process.env.NEXT_PUBLIC_AUTH_EMAIL_ENABLED === "true" && !codeSent && (
-              <Button
-                variant="outline"
-                className="w-full border-green-500/20 hover:border-green-500/40 hover:bg-green-500/10 transition-all duration-300"
-                onClick={() => setCodeSent(true)}
-              >
-                <Mail className="w-4 h-4" />
-                {t("sign_modal.email_sign_in") || "Continue with Email"}
-              </Button>
-            )}
+            {process.env.NEXT_PUBLIC_AUTH_EMAIL_ENABLED === "true" &&
+              !codeSent && (
+                <Button
+                  variant="outline"
+                  className="w-full border-green-500/20 hover:border-green-500/40 hover:bg-green-500/10 transition-all duration-300"
+                  onClick={() => setCodeSent(true)}
+                >
+                  <Mail className="w-4 h-4" />
+                  {t("sign_modal.email_sign_in") || "Continue with Email"}
+                </Button>
+              )}
 
-            {codeSent && process.env.NEXT_PUBLIC_AUTH_EMAIL_ENABLED === "true" && (
-              <>
-                <div className="relative text-center text-sm after:absolute after:inset-0 after:top-1/2 after:z-0 after:flex after:items-center after:border-t after:border-border">
-                  <span className="relative z-10 bg-background px-2 text-muted-foreground">
-                    {t("sign_modal.enter_email") || "Enter your email"}
-                  </span>
-                </div>
-                
-                {!codeEverSent ? (
-                  <form onSubmit={(e) => { e.preventDefault(); handleSendCode(); }} className="grid gap-4">
-                    <div className="grid gap-2">
-                      <Label htmlFor="email">{t("sign_modal.email") || "Email"}</Label>
-                      <Input
-                        id="email"
-                        type="email"
-                        placeholder="m@example.com"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        required
-                        disabled={isLoading}
-                        className="border-green-500/20 focus:border-green-500/40 focus:ring-green-500/20"
-                      />
-                    </div>
+            {codeSent &&
+              process.env.NEXT_PUBLIC_AUTH_EMAIL_ENABLED === "true" && (
+                <>
+                  <div className="relative text-center text-sm after:absolute after:inset-0 after:top-1/2 after:z-0 after:flex after:items-center after:border-t after:border-border">
+                    <span className="relative z-10 bg-background px-2 text-muted-foreground">
+                      {t("sign_modal.enter_email") || "Enter your email"}
+                    </span>
+                  </div>
 
-                    {error && (
-                      <div className="text-sm text-destructive text-center">
-                        {error}
-                      </div>
-                    )}
-
-                    <Button type="submit" className="w-full bg-gradient-to-r from-green-500 to-cyan-500 hover:from-green-600 hover:to-cyan-600 text-white border-0 shadow-lg shadow-green-500/25 hover:shadow-xl hover:shadow-green-500/30 transition-all duration-300" disabled={isLoading || !email}>
-                      {isLoading ? (
-                        <>
-                          <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                          {t("sign_modal.sending_code") || "Sending code..."}
-                        </>
-                      ) : (
-                        t("sign_modal.send_code") || "Send Verification Code"
-                      )}
-                    </Button>
-
-                    <Button
-                      type="button"
-                      variant="ghost"
-                      className="w-full hover:bg-green-500/10"
-                      onClick={() => {
-                        setCodeSent(false);
-                        setCodeEverSent(false);
-                        setEmail("");
-                        setError("");
+                  {!codeEverSent ? (
+                    <form
+                      onSubmit={(e) => {
+                        e.preventDefault();
+                        handleSendCode();
                       }}
+                      className="grid gap-4"
                     >
-                      {t("sign_modal.back") || "Back"}
-                    </Button>
-                  </form>
-                ) : (
-                  <form onSubmit={handleCodeSignIn} className="grid gap-4">
-                    <div className="grid gap-2">
-                      <Label htmlFor="email">{t("sign_modal.email") || "Email"}</Label>
-                      <Input
-                        id="email"
-                        type="email"
-                        placeholder="m@example.com"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        required
-                        disabled={true}
-                        className="border-green-500/20 focus:border-green-500/40 focus:ring-green-500/20"
-                      />
-                    </div>
-                    
-                    <div className="grid gap-2">
-                      <div className="flex items-center justify-between">
-                        <Label htmlFor="code">{t("sign_modal.verification_code") || "Verification Code"}</Label>
-                        <Button
-                          type="button"
-                          variant="link"
-                          size="sm"
-                          onClick={handleSendCode}
-                          disabled={isLoading || countdown > 0}
-                          className="h-auto p-0 text-xs text-green-500 hover:text-green-600"
-                        >
-                          {countdown > 0 
-                            ? `${t("sign_modal.resend_in") || "Resend in"} ${countdown}s`
-                            : t("sign_modal.resend_code") || "Resend code"
+                      <div className="grid gap-2">
+                        <Label htmlFor="email">
+                          {t("sign_modal.email") || "Email"}
+                        </Label>
+                        <Input
+                          id="email"
+                          type="email"
+                          placeholder="m@example.com"
+                          value={email}
+                          onChange={(e) => setEmail(e.target.value)}
+                          required
+                          disabled={isLoading}
+                          className="border-green-500/20 focus:border-green-500/40 focus:ring-green-500/20"
+                        />
+                      </div>
+
+                      {error && (
+                        <div className="text-sm text-destructive text-center">
+                          {error}
+                        </div>
+                      )}
+
+                      <Button
+                        type="submit"
+                        className="w-full bg-gradient-to-r from-green-500 to-cyan-500 hover:from-green-600 hover:to-cyan-600 text-white border-0 shadow-lg shadow-green-500/25 hover:shadow-xl hover:shadow-green-500/30 transition-all duration-300"
+                        disabled={isLoading || !email}
+                      >
+                        {isLoading ? (
+                          <>
+                            <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                            {t("sign_modal.sending_code") || "Sending code..."}
+                          </>
+                        ) : (
+                          t("sign_modal.send_code") || "Send Verification Code"
+                        )}
+                      </Button>
+
+                      <Button
+                        type="button"
+                        variant="ghost"
+                        className="w-full hover:bg-green-500/10"
+                        onClick={() => {
+                          setCodeSent(false);
+                          setCodeEverSent(false);
+                          setEmail("");
+                          setError("");
+                        }}
+                      >
+                        {t("sign_modal.back") || "Back"}
+                      </Button>
+                    </form>
+                  ) : (
+                    <form onSubmit={handleCodeSignIn} className="grid gap-4">
+                      <div className="grid gap-2">
+                        <Label htmlFor="email">
+                          {t("sign_modal.email") || "Email"}
+                        </Label>
+                        <Input
+                          id="email"
+                          type="email"
+                          placeholder="m@example.com"
+                          value={email}
+                          onChange={(e) => setEmail(e.target.value)}
+                          required
+                          disabled={true}
+                          className="border-green-500/20 focus:border-green-500/40 focus:ring-green-500/20"
+                        />
+                      </div>
+
+                      <div className="grid gap-2">
+                        <div className="flex items-center justify-between">
+                          <Label htmlFor="code">
+                            {t("sign_modal.verification_code") ||
+                              "Verification Code"}
+                          </Label>
+                          <Button
+                            type="button"
+                            variant="link"
+                            size="sm"
+                            onClick={handleSendCode}
+                            disabled={isLoading || countdown > 0}
+                            className="h-auto p-0 text-xs text-green-500 hover:text-green-600"
+                          >
+                            {countdown > 0
+                              ? `${
+                                  t("sign_modal.resend_in") || "Resend in"
+                                } ${countdown}s`
+                              : t("sign_modal.resend_code") || "Resend code"}
+                          </Button>
+                        </div>
+                        <Input
+                          id="code"
+                          type="text"
+                          placeholder="000000"
+                          value={code}
+                          onChange={(e) =>
+                            setCode(
+                              e.target.value.replace(/\D/g, "").slice(0, 6)
+                            )
                           }
-                        </Button>
+                          maxLength={6}
+                          required
+                          disabled={isLoading}
+                          className="text-center text-lg tracking-widest border-green-500/20 focus:border-green-500/40 focus:ring-green-500/20"
+                          autoFocus
+                        />
                       </div>
-                      <Input
-                        id="code"
-                        type="text"
-                        placeholder="000000"
-                        value={code}
-                        onChange={(e) => setCode(e.target.value.replace(/\D/g, '').slice(0, 6))}
-                        maxLength={6}
-                        required
-                        disabled={isLoading}
-                        className="text-center text-lg tracking-widest border-green-500/20 focus:border-green-500/40 focus:ring-green-500/20"
-                        autoFocus
-                      />
-                    </div>
 
-                    {error && (
-                      <div className="text-sm text-destructive text-center">
-                        {error}
-                      </div>
-                    )}
-
-                    <Button type="submit" className="w-full bg-gradient-to-r from-green-500 to-cyan-500 hover:from-green-600 hover:to-cyan-600 text-white border-0 shadow-lg shadow-green-500/25 hover:shadow-xl hover:shadow-green-500/30 transition-all duration-300" disabled={isLoading || !email || !code}>
-                      {isLoading ? (
-                        <>
-                          <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                          {t("sign_modal.signing_in") || "Signing in..."}
-                        </>
-                      ) : (
-                        t("sign_modal.sign_in") || "Sign In"
+                      {error && (
+                        <div className="text-sm text-destructive text-center">
+                          {error}
+                        </div>
                       )}
-                    </Button>
 
-                    <Button
-                      type="button"
-                      variant="ghost"
-                      className="w-full hover:bg-green-500/10"
-                      onClick={() => {
-                        setCodeSent(false);
-                        setCodeEverSent(false);
-                        setCode("");
-                        setEmail("");
-                        setError("");
-                        setCountdown(0);
-                      }}
-                    >
-                      {t("sign_modal.back") || "Back"}
-                    </Button>
-                  </form>
-                )}
-              </>
-            )}
+                      <Button
+                        id="signup-btn"
+                        type="submit"
+                        className="w-full bg-gradient-to-r from-green-500 to-cyan-500 hover:from-green-600 hover:to-cyan-600 text-white border-0 shadow-lg shadow-green-500/25 hover:shadow-xl hover:shadow-green-500/30 transition-all duration-300"
+                        disabled={isLoading || !email || !code}
+                      >
+                        {isLoading ? (
+                          <>
+                            <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                            {t("sign_modal.signing_in") || "Signing in..."}
+                          </>
+                        ) : (
+                          t("sign_modal.sign_in") || "Sign In"
+                        )}
+                      </Button>
+
+                      <Button
+                        type="button"
+                        variant="ghost"
+                        className="w-full hover:bg-green-500/10"
+                        onClick={() => {
+                          setCodeSent(false);
+                          setCodeEverSent(false);
+                          setCode("");
+                          setEmail("");
+                          setError("");
+                          setCountdown(0);
+                        }}
+                      >
+                        {t("sign_modal.back") || "Back"}
+                      </Button>
+                    </form>
+                  )}
+                </>
+              )}
 
             {false && (
               <>
@@ -338,7 +377,6 @@ export default function SignForm({
                 </div>
               </>
             )}
-
           </div>
         </CardContent>
       </Card>

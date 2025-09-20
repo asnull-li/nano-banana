@@ -226,6 +226,7 @@ function ProfileForm({ className }: React.ComponentProps<"form">) {
       <div className="space-y-4">
         {process.env.NEXT_PUBLIC_AUTH_GOOGLE_ENABLED === "true" && (
           <Button
+            id="signup-btn"
             variant="outline"
             className="w-full flex items-center justify-center gap-3 h-12 text-base font-medium border-green-500/20 hover:border-green-500/40 hover:bg-gradient-to-r hover:from-green-500/10 hover:to-cyan-500/10 transition-all duration-300 group shadow-sm hover:shadow-md"
             onClick={() => {
@@ -303,7 +304,6 @@ function ProfileForm({ className }: React.ComponentProps<"form">) {
                         className="h-12 border-green-500/20 focus:border-green-500/40 focus:ring-green-500/20"
                       />
                     </div>
-
                     {error && (
                       <div className="text-sm text-red-500 text-center bg-red-50 dark:bg-red-500/10 p-2 rounded-md">
                         {error}
@@ -328,7 +328,6 @@ function ProfileForm({ className }: React.ComponentProps<"form">) {
                         </>
                       )}
                     </Button>
-
                     <Button
                       type="button"
                       variant="ghost"
@@ -409,6 +408,7 @@ function ProfileForm({ className }: React.ComponentProps<"form">) {
                     )}
 
                     <Button
+                      id="signup-btn"
                       type="submit"
                       className="w-full h-12 bg-gradient-to-r from-green-500 to-cyan-500 hover:from-green-600 hover:to-cyan-600 text-white font-medium shadow-md hover:shadow-lg transition-all duration-300"
                       disabled={isLoading || !email || !code}
