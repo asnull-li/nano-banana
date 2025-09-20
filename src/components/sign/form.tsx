@@ -139,7 +139,11 @@ export default function SignForm({
                   id="google-signup-btn"
                   variant="outline"
                   className="w-full border-green-500/20 hover:border-green-500/40 hover:bg-green-500/10 transition-all duration-300"
-                  onClick={() => signIn("google")}
+                  onClick={() => {
+                    setTimeout(() => {
+                      signIn("google");
+                    }, 300);
+                  }}
                 >
                   <SiGoogle className="w-4 h-4" />
                   {t("sign_modal.google_sign_in")}

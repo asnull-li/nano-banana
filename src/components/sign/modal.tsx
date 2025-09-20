@@ -230,7 +230,9 @@ function ProfileForm({ className }: React.ComponentProps<"form">) {
             variant="outline"
             className="w-full flex items-center justify-center gap-3 h-12 text-base font-medium border-green-500/20 hover:border-green-500/40 hover:bg-gradient-to-r hover:from-green-500/10 hover:to-cyan-500/10 transition-all duration-300 group shadow-sm hover:shadow-md"
             onClick={() => {
-              signIn("google");
+              setTimeout(() => {
+                signIn("google");
+              }, 300);
             }}
           >
             <SiGoogle className="w-5 h-5 text-[#4285f4] group-hover:scale-110 transition-transform duration-200" />
