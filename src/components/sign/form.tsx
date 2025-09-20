@@ -136,7 +136,7 @@ export default function SignForm({
             <div className="flex flex-col gap-4">
               {process.env.NEXT_PUBLIC_AUTH_GOOGLE_ENABLED === "true" && (
                 <Button
-                  id="signup-btn"
+                  id="google-signup-btn"
                   variant="outline"
                   className="w-full border-green-500/20 hover:border-green-500/40 hover:bg-green-500/10 transition-all duration-300"
                   onClick={() => signIn("google")}

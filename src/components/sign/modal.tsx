@@ -226,7 +226,7 @@ function ProfileForm({ className }: React.ComponentProps<"form">) {
       <div className="space-y-4">
         {process.env.NEXT_PUBLIC_AUTH_GOOGLE_ENABLED === "true" && (
           <Button
-            id="signup-btn"
+            id="google-signup-btn"
             variant="outline"
             className="w-full flex items-center justify-center gap-3 h-12 text-base font-medium border-green-500/20 hover:border-green-500/40 hover:bg-gradient-to-r hover:from-green-500/10 hover:to-cyan-500/10 transition-all duration-300 group shadow-sm hover:shadow-md"
             onClick={() => {
