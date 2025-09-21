@@ -43,7 +43,9 @@ export async function GET(req: Request) {
 
     await updateOrder({ order_no, paid_email, paid_detail });
 
-    redirectUrl = process.env.NEXT_PUBLIC_PAY_SUCCESS_URL || "/";
+    redirectUrl =
+      `${process.env.NEXT_PUBLIC_PAY_SUCCESS_URL}?order_no=${order_no}&value=${result.order.amount}&currency=${result.order.currency}` ||
+      "/";
   } catch (e) {
     console.log("handle creem callback failed:", e);
     redirectUrl = process.env.NEXT_PUBLIC_PAY_FAIL_URL || "/";

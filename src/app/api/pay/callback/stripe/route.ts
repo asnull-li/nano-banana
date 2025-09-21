@@ -36,8 +36,11 @@ export async function GET(req: Request) {
     const paid_detail = JSON.stringify(session);
 
     await updateOrder({ order_no, paid_email, paid_detail });
+    console.log("stripe callback success：", session);
 
-    redirectUrl = process.env.NEXT_PUBLIC_PAY_SUCCESS_URL || "/";
+    redirectUrl =
+      `${process.env.NEXT_PUBLIC_PAY_SUCCESS_URL}?order_no=${order_no}&value=${session.amount_total}&currency=${session.currency}` ||
+      "/";
   } catch (e) {
     console.log("handle stripe callback failed: ", e);
     redirectUrl = process.env.NEXT_PUBLIC_PAY_FAIL_URL || "/";

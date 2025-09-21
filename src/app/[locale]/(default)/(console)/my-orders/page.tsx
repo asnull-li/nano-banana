@@ -7,6 +7,8 @@ import { Table as TableSlotType } from "@/types/slots/table";
 import { getTranslations } from "next-intl/server";
 import moment from "moment";
 import { redirect } from "next/navigation";
+import { Suspense } from "react";
+import OrderTracking from "./components/order-tracking";
 
 export default async function () {
   const t = await getTranslations();
@@ -62,5 +64,12 @@ export default async function () {
     empty_message: t("my_orders.no_orders"),
   };
 
-  return <TableSlot {...table} />;
+  return (
+    <>
+      <TableSlot {...table} />
+      <Suspense fallback={null}>
+        <OrderTracking />
+      </Suspense>
+    </>
+  );
 }
