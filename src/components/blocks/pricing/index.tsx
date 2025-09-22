@@ -315,9 +315,7 @@ export default function Pricing({ pricing }: { pricing: PricingType }) {
                           >
                             {/* {item.price} */}
                             {/* 打折 */}
-                            {item.interval === "year" &&
-                            is_discount &&
-                            item.product_id !== "prod_Ssq8Ltsmjqeiw9-2"
+                            {item.interval === "year" && is_discount
                               ? item.discount_price
                               : item.price}
                           </span>
@@ -345,17 +343,15 @@ export default function Pricing({ pricing }: { pricing: PricingType }) {
                               : (item.amount / 100).toFixed(2)}
                             / {pricing.year}
                           </span>
-                          {item.interval === "year" &&
-                            is_discount &&
-                            item.product_id !== "prod_Ssq8Ltsmjqeiw9-2" && (
-                              <div className="relative">
-                                <Badge className="bg-gradient-to-r ml-1 rounded-full from-red-500 to-orange-500 text-white border-0 px-3 py-1.5 font-bold text-sm animate-pulse shadow-lg">
-                                  <span className="mr-1">🔥</span>
-                                  {pricing.save_yearly}
-                                </Badge>
-                                <div className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full animate-ping"></div>
-                              </div>
-                            )}
+                          {item.interval === "year" && is_discount && (
+                            <div className="relative">
+                              <Badge className="bg-gradient-to-r ml-1 rounded-full from-red-500 to-orange-500 text-white border-0 px-3 py-1.5 font-bold text-sm animate-pulse shadow-lg">
+                                <span className="mr-1">🔥</span>
+                                {pricing.save_yearly}
+                              </Badge>
+                              <div className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full animate-ping"></div>
+                            </div>
+                          )}
                         </div>
                       )}
                       {item.original_cn_price && item.cn_amount && (

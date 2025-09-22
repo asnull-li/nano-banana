@@ -138,6 +138,8 @@
         "cn_amount": 0,
         "currency": "USD",
         "price": "$7.99",
+        "discount_price": "$4.99",
+        "discount_amount": 5988,
         "original_price": "$19.99",
         "unit": "USD",
         "is_featured": false,
