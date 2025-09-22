@@ -2,6 +2,7 @@ import React from "react";
 import { Sparkles, Zap, Wand2, ImageIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
+import { LuBanana } from "react-icons/lu";
 
 export default function EmptyState() {
   const t = useTranslations("nano_banana.workspace.empty_state");
@@ -14,7 +15,9 @@ export default function EmptyState() {
           <div className="w-32 h-32 bg-gradient-to-r from-green-400 to-cyan-400 rounded-full" />
         </div>
         <div className="relative w-32 h-32 rounded-full bg-gradient-to-br from-green-500 to-cyan-500 flex items-center justify-center shadow-2xl shadow-green-500/25">
-          <Sparkles className="h-16 w-16 text-white animate-pulse" />
+          {/* <Sparkles className="h-16 w-16 text-white animate-pulse" />
+           */}
+          <LuBanana className="h-16 w-16 text-yellow-500 animate-pulse" />
         </div>
 
         {/* 环绕图标 */}
