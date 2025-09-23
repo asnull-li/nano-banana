@@ -154,7 +154,7 @@
             "id": "elderly",
             "name": "미래의 당신",
             "image": "https://file.nanobanana.org/showcase/5-3.webp",
-            "prompt": "나이를 16살로 변경",
+            "prompt": "나이를 60살로 변경",
             "description": "자연스러운 노화 시뮬레이션"
           }
         ]

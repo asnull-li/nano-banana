@@ -154,7 +154,7 @@
             "id": "elderly",
             "name": "Future You",
             "image": "https://file.nanobanana.org/showcase/5-3.webp",
-            "prompt": "Change age to 16 years old",
+            "prompt": "Change age to 60 years old",
             "description": "Natural aging simulation"
           }
         ]

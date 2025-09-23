@@ -154,7 +154,7 @@
             "id": "elderly",
             "name": "Tu Futuro",
             "image": "https://file.nanobanana.org/showcase/5-3.webp",
-            "prompt": "Cambiar edad a 16 años",
+            "prompt": "Cambiar edad a 60 años",
             "description": "Simulación natural de envejecimiento"
           }
         ]

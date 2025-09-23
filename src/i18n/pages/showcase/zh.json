@@ -154,7 +154,7 @@
             "id": "elderly",
             "name": "未来的你",
             "image": "https://file.nanobanana.org/showcase/5-3.webp",
-            "prompt": "将年龄改为16岁",
+            "prompt": "将年龄改为60岁",
             "description": "自然老化模拟"
           }
         ]
