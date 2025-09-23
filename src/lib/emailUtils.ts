@@ -3,7 +3,6 @@
  * 提供基本的邮箱标准化功能
  */
 
-
 /**
  * 标准化邮箱地址
  * 进行基本的邮箱格式清理
@@ -20,16 +19,13 @@
  * standardizeEmail(' USER@EXAMPLE.COM')    // 返回: user@example.com
  */
 export function standardizeEmail(email: string): string {
-  if (!email || typeof email !== 'string') {
+  if (!email || typeof email !== "string") {
     return email;
   }
 
   // 只做基本清理：转小写、去空格
   return email.toLowerCase().trim();
 }
-
-
-
 /**
  * 检查两个邮箱是否为同一个邮箱
  *
