@@ -26,6 +26,7 @@ export function standardizeEmail(email: string): string {
   // 只做基本清理：转小写、去空格
   return email.toLowerCase().trim();
 }
+
 /**
  * 检查两个邮箱是否为同一个邮箱
  *
