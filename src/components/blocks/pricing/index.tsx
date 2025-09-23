@@ -73,7 +73,11 @@ export default function Pricing({ pricing }: { pricing: PricingType }) {
 
       const { code, message, data } = await response.json();
       if (code !== 0) {
-        toast.error(message);
+        if (message === "Trial credits pack can only be purchased once") {
+          toast.warning(pricing.trial_pack_limit_error);
+        } else {
+          toast.error(message);
+        }
         return;
       }
 

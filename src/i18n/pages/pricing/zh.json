@@ -11,6 +11,7 @@
     "save_yearly": "节省50%",
     "cancel_anytime": "随时取消",
     "cancel_subscription_text": "取消订阅，请联系客服邮箱：",
+    "trial_pack_limit_error": "试用积分包只能购买一次",
     "mo": "月",
     "year": "年",
     "groups": [

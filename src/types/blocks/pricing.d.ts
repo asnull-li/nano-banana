@@ -39,6 +39,7 @@ export interface Pricing {
   name?: string;
   title?: string;
   description?: string;
+  trial_pack_limit_error?: string;
   items?: PricingItem[];
   groups?: PricingGroup[];
   save_yearly?: string;

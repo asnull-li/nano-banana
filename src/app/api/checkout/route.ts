@@ -1,5 +1,5 @@
 import { getUserEmail, getUserUuid } from "@/services/user";
-import { insertOrder, OrderStatus, updateOrderSession } from "@/models/order";
+import { insertOrder, OrderStatus, updateOrderSession, getPaidOrdersByUserAndProduct } from "@/models/order";
 import { respData, respErr } from "@/lib/resp";
 
 import Stripe from "stripe";
@@ -88,6 +88,14 @@ export async function POST(req: Request) {
     }
     if (!user_email) {
       return respErr("invalid user");
+    }
+
+    // 检查试用积分包是否已购买
+    if (product_id === "credits-packs-0") {
+      const existingOrder = await getPaidOrdersByUserAndProduct(user_uuid, product_id);
+      if (existingOrder) {
+        return respErr("Trial credits pack can only be purchased once");
+      }
     }
 
     // generate order_no

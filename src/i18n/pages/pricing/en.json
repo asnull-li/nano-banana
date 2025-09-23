@@ -11,6 +11,7 @@
     "save_yearly": "Save 50%",
     "cancel_anytime": "Cancel anytime",
     "cancel_subscription_text": "Cancel subscription, please contact the support email:",
+    "trial_pack_limit_error": "Trial credits pack can only be purchased once",
     "mo": "mo",
     "year": "Year",
     "groups": [

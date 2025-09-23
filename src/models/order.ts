@@ -192,6 +192,25 @@ export async function getPaidOrdersTotal(): Promise<number | undefined> {
   return total;
 }
 
+export async function getPaidOrdersByUserAndProduct(
+  user_uuid: string,
+  product_id: string
+): Promise<typeof orders.$inferSelect | undefined> {
+  const [order] = await db()
+    .select()
+    .from(orders)
+    .where(
+      and(
+        eq(orders.user_uuid, user_uuid),
+        eq(orders.product_id, product_id),
+        eq(orders.status, OrderStatus.Paid)
+      )
+    )
+    .limit(1);
+
+  return order;
+}
+
 export async function getOrderCountByDate(
   startTime: string,
   status?: string
