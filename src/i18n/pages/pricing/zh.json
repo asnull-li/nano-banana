@@ -66,7 +66,7 @@
           "多图参考生成",
           "高速下载通道",
           "优先客服支持",
-          "扩展商业许可"
+          "商业许可"
         ],
         "group": "monthly",
         "interval": "month",
@@ -97,7 +97,6 @@
           "最快的生成速度",
           "最高级的 AI 编辑能力",
           "永久的图像存储",
-          "无限制的商业许可",
           "专属客户经理"
         ],
         "group": "monthly",
@@ -141,8 +140,6 @@
         "cn_amount": 67116,
         "currency": "USD",
         "price": "$7.99",
-        "discount_price": "$4.99",
-        "discount_amount": 5988,
         "discount_price": "$4.99",
         "discount_amount": 5988,
         "original_price": "$19.99",
