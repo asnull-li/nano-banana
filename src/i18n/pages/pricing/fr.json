@@ -28,6 +28,7 @@
           "Modèles haute qualité Nano Banana",
           "Génération texte vers image",
           "Fonctionnalités d'édition d'image",
+          "Service d'amélioration d'image 3x,4x",
           "Vitesse de génération standard",
           "Taux de réussite standard",
           "Support client standard"
@@ -56,7 +57,7 @@
         "title": "Pro",
         "description": "Idéal pour les créateurs, designers et professionnels du contenu.",
         "label": "Le plus populaire",
-        "features_title": "Tout dans Basic",
+        "features_title": "Tout dans Débutant",
         "features": [
           "700 crédits de génération IA par mois",
           "Vitesse de traitement prioritaire",
@@ -128,9 +129,11 @@
           "Modèles haute qualité Nano Banana",
           "Génération texte vers image",
           "Fonctionnalités d'édition d'image",
+          "Service d'amélioration d'image 3x,4x",
           "Vitesse de génération standard",
           "Taux de réussite standard",
-          "Support client standard"
+          "Support client standard",
+          "Licence commerciale"
         ],
         "group": "yearly",
         "interval": "year",
@@ -158,7 +161,7 @@
         "title": "Pro",
         "description": "Idéal pour les créateurs, designers et professionnels du contenu.",
         "label": "Le plus populaire",
-        "features_title": "Tout dans Basic",
+        "features_title": "Tout dans Débutant",
         "features": [
           "8400 crédits de génération IA par an",
           "Vitesse de traitement prioritaire",
@@ -167,7 +170,7 @@
           "Génération multi-références",
           "Canal de téléchargement haute vitesse",
           "Support client prioritaire",
-          "Licence commerciale étendue"
+          "Licence commerciale"
         ],
         "group": "yearly",
         "interval": "year",
