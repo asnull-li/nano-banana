@@ -175,7 +175,7 @@ export default function Pricing({ pricing }: { pricing: PricingType }) {
                   return (
                     <div
                       key={i}
-                      className='flex-1 min-w-[120px] max-w-[200px] h-auto min-h-12 rounded-lg transition-all duration-300 has-[button[data-state="checked"]]:bg-gradient-to-r has-[button[data-state="checked"]]:from-green-500 has-[button[data-state="checked"]]:to-cyan-500 has-[button[data-state="checked"]]:shadow-md'
+                      className='flex-1 min-w-fit h-auto min-h-12 rounded-lg transition-all duration-300 has-[button[data-state="checked"]]:bg-gradient-to-r has-[button[data-state="checked"]]:from-green-500 has-[button[data-state="checked"]]:to-cyan-500 has-[button[data-state="checked"]]:shadow-md'
                     >
                       <RadioGroupItem
                         value={item.name || ""}
@@ -184,7 +184,7 @@ export default function Pricing({ pricing }: { pricing: PricingType }) {
                       />
                       <Label
                         htmlFor={item.name}
-                        className="flex h-full cursor-pointer flex-col md:flex-row md:items-center justify-center px-2 md:px-7 py-2 md:py-0 font-semibold text-muted-foreground peer-data-[state=checked]:text-white transition-all duration-300 hover:text-green-600 gap-1 md:gap-0 min-h-12 md:min-h-0"
+                        className="flex h-full cursor-pointer flex-col md:flex-row md:items-center justify-center px-3 md:px-7 py-2 md:py-0 font-semibold text-muted-foreground peer-data-[state=checked]:text-white transition-all duration-300 hover:text-green-600 gap-1 md:gap-0 min-h-12 md:min-h-0"
                       >
                         <span className="text-sm md:text-base whitespace-nowrap">{item.title}</span>
 
