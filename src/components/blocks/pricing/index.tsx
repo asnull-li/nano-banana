@@ -163,10 +163,10 @@ export default function Pricing({ pricing }: { pricing: PricingType }) {
 
         <div className="w-full flex flex-col items-center gap-2">
           {pricing.groups && pricing.groups.length > 0 && (
-            <div className="flex h-14 mb-16 items-center rounded-xl bg-gradient-to-r from-green-500/10 to-cyan-500/10 p-1.5 text-lg border border-green-500/20 shadow-lg backdrop-blur-sm">
+            <div className="flex min-h-14 mb-16 items-center justify-center rounded-xl bg-gradient-to-r from-green-500/10 to-cyan-500/10 p-1.5 text-lg border border-green-500/20 shadow-lg backdrop-blur-sm overflow-hidden">
               <RadioGroup
                 value={group}
-                className={`h-full grid-cols-${pricing.groups.length} w-full`}
+                className="flex flex-wrap gap-2 w-full justify-center"
                 onValueChange={(value) => {
                   setGroup(value);
                 }}
@@ -175,7 +175,7 @@ export default function Pricing({ pricing }: { pricing: PricingType }) {
                   return (
                     <div
                       key={i}
-                      className='h-full rounded-lg transition-all duration-300 has-[button[data-state="checked"]]:bg-gradient-to-r has-[button[data-state="checked"]]:from-green-500 has-[button[data-state="checked"]]:to-cyan-500 has-[button[data-state="checked"]]:shadow-lg has-[button[data-state="checked"]]:shadow-green-500/25'
+                      className='flex-1 min-w-[120px] max-w-[200px] h-auto min-h-12 rounded-lg transition-all duration-300 has-[button[data-state="checked"]]:bg-gradient-to-r has-[button[data-state="checked"]]:from-green-500 has-[button[data-state="checked"]]:to-cyan-500 has-[button[data-state="checked"]]:shadow-md'
                     >
                       <RadioGroupItem
                         value={item.name || ""}
@@ -184,37 +184,40 @@ export default function Pricing({ pricing }: { pricing: PricingType }) {
                       />
                       <Label
                         htmlFor={item.name}
-                        className="flex h-full cursor-pointer items-center justify-center px-7 font-semibold text-muted-foreground peer-data-[state=checked]:text-white transition-all duration-300 hover:text-green-600"
+                        className="flex h-full cursor-pointer flex-col md:flex-row md:items-center justify-center px-2 md:px-7 py-2 md:py-0 font-semibold text-muted-foreground peer-data-[state=checked]:text-white transition-all duration-300 hover:text-green-600 gap-1 md:gap-0 min-h-12 md:min-h-0"
                       >
-                        {item.title}
-                        {item.label && (
-                          <Badge
-                            variant="outline"
-                            className="border-green-500 bg-green-500 px-1.5 ml-2 text-white border-0 shadow-sm"
-                          >
-                            {item.label}
-                          </Badge>
-                        )}
+                        <span className="text-sm md:text-base whitespace-nowrap">{item.title}</span>
 
-                        {item.name === "yearly" && is_discount && (
-                          <div className="relative">
-                            <Badge className="bg-gradient-to-r from-red-500 to-orange-500 text-white border-0 px-3 py-1.5 font-bold text-sm animate-pulse shadow-lg">
-                              <span className="mr-1">🔥</span>
-                              {pricing.save_yearly}
+                        <div className="flex items-center gap-1 md:ml-2">
+                          {item.label && (
+                            <Badge
+                              variant="outline"
+                              className="border-green-500 bg-green-500 px-1.5 md:px-1.5 text-white border-0 shadow-sm text-xs"
+                            >
+                              {item.label}
                             </Badge>
-                            <div className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full animate-ping"></div>
-                          </div>
-                        )}
+                          )}
 
-                        {item.title === "积分包" && (
-                          <div className="relative">
-                            <Badge className="bg-gradient-to-r from-red-500 to-orange-500 text-white border-0 px-3 py-1.5 font-bold text-sm animate-pulse shadow-lg">
-                              <span className="mr-1">🔥</span>
-                              降50%
-                            </Badge>
-                            <div className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full animate-ping"></div>
-                          </div>
-                        )}
+                          {item.name === "yearly" && is_discount && (
+                            <div className="relative">
+                              <Badge className="bg-gradient-to-r from-red-500 to-orange-500 text-white border-0 px-2 md:px-3 py-0.5 md:py-1.5 font-bold text-xs md:text-sm animate-pulse shadow-lg">
+                                <span className="mr-1">🔥</span>
+                                {pricing.save_yearly}
+                              </Badge>
+                              <div className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full animate-ping"></div>
+                            </div>
+                          )}
+
+                          {item.title === "积分包" && (
+                            <div className="relative">
+                              <Badge className="bg-gradient-to-r from-red-500 to-orange-500 text-white border-0 px-2 md:px-3 py-0.5 md:py-1.5 font-bold text-xs md:text-sm animate-pulse shadow-lg">
+                                <span className="mr-1">🔥</span>
+                                降50%
+                              </Badge>
+                              <div className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full animate-ping"></div>
+                            </div>
+                          )}
+                        </div>
                       </Label>
                     </div>
                   );
