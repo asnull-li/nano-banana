@@ -438,6 +438,10 @@
         {
           "title": "서비스 약관",
           "url": "/terms-of-service"
+        },
+        {
+          "title": "환불 정책",
+          "url": "/refund-policy"
         }
       ]
     }

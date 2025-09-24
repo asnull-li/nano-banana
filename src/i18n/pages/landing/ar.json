@@ -435,6 +435,10 @@
         {
           "title": "شروط الخدمة",
           "url": "/terms-of-service"
+        },
+        {
+          "title": "سياسة الاسترداد",
+          "url": "/refund-policy"
         }
       ]
     }

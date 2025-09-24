@@ -435,6 +435,10 @@
         {
           "title": "Termos de Serviço",
           "url": "/terms-of-service"
+        },
+        {
+          "title": "Política de Reembolso",
+          "url": "/refund-policy"
         }
       ]
     }
