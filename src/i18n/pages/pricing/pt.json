@@ -1,0 +1,401 @@
+{
+  "metadata": {
+    "title": "Preços Nano Banana - Editor de Imagens AI Nano Banana",
+    "description": "Escolha o plano perfeito para suas necessidades de geração de imagens IA."
+  },
+  "pricing": {
+    "name": "pricing",
+    "label": "Preços",
+    "title": "Preços simples e transparentes do Nano Banana",
+    "description": "Escolha o plano perfeito para suas necessidades de criação de imagens IA.",
+    "save_yearly": "Economize 50%",
+    "cancel_anytime": "Cancelar a qualquer momento",
+    "cancel_subscription_text": "Para cancelar assinatura, entre em contato com o email de suporte:",
+    "trial_pack_limit_error": "Pacote de créditos de teste pode ser comprado apenas uma vez",
+    "mo": "mês",
+    "year": "Ano",
+    "groups": [
+      { "name": "monthly", "title": "Mensal" },
+      { "name": "yearly", "title": "Anual" },
+      { "name": "credits-packs", "title": "Pacotes de Créditos" }
+    ],
+    "items": [
+      {
+        "title": "Iniciante",
+        "description": "Perfeito para experimentar geração de imagens IA e projetos pequenos.",
+        "features_title": "O que está incluído",
+        "features": [
+          "200 créditos de geração IA por mês",
+          "Modelos de alta qualidade Nano Banana",
+          "Geração de texto para imagem",
+          "Recursos de edição de imagem",
+          "Serviço de melhoria de imagem 3x,4x",
+          "Velocidade de geração padrão",
+          "Taxa de sucesso padrão",
+          "Suporte ao cliente padrão"
+        ],
+        "group": "monthly",
+        "interval": "month",
+        "amount": 999,
+        "cn_amount": 0,
+        "currency": "USD",
+        "price": "$9.99",
+        "original_price": "$19.99",
+        "unit": "USD",
+        "is_featured": false,
+        "tip": "Perfeito para experimentar geração e edição de imagens IA.",
+        "button": {
+          "title": "Assinar Iniciante",
+          "url": "/#pricing",
+          "icon": "RiFlashlightFill"
+        },
+        "product_id": "prod_Ssq8Ltsmjqeiw9",
+        "product_name": "Nano Banana Iniciante",
+        "credits": 200,
+        "valid_months": 1
+      },
+      {
+        "title": "Pro",
+        "description": "Ideal para criadores, designers e profissionais de conteúdo.",
+        "label": "Mais Popular",
+        "features_title": "Tudo do Iniciante",
+        "features": [
+          "700 créditos de geração IA por mês",
+          "Velocidade de processamento prioritária",
+          "Alta taxa de sucesso",
+          "Recursos avançados de edição",
+          "Geração multi-referência",
+          "Canal de download de alta velocidade",
+          "Suporte ao cliente prioritário",
+          "Licença comercial"
+        ],
+        "group": "monthly",
+        "interval": "month",
+        "amount": 2399,
+        "cn_amount": 0,
+        "currency": "USD",
+        "price": "$23.99",
+        "original_price": "$89.99",
+        "unit": "USD",
+        "is_featured": true,
+        "tip": "🔥 Oferta por Tempo Limitado! Obtenha Pro Agora",
+        "button": {
+          "title": "Assinar Pro",
+          "url": "/#pricing",
+          "icon": "RiFlashlightFill"
+        },
+        "product_id": "prod_SsqBq5Jdkmjp4l",
+        "product_name": "Nano Banana Pro",
+        "credits": 700,
+        "valid_months": 1
+      },
+      {
+        "title": "Premium",
+        "description": "Para equipes, agências e uso comercial de alto volume.",
+        "features_title": "Tudo do Pro",
+        "features": [
+          "2000 créditos de geração IA por mês",
+          "Velocidade de geração mais rápida",
+          "Capacidades de edição IA mais avançadas",
+          "Armazenamento permanente de imagem",
+          "Gerente de conta dedicado"
+        ],
+        "group": "monthly",
+        "interval": "month",
+        "amount": 8999,
+        "cn_amount": 0,
+        "currency": "USD",
+        "price": "$89.99",
+        "original_price": "$179.99",
+        "unit": "USD",
+        "is_featured": false,
+        "tip": "Perfeito para equipes e empresas",
+        "button": {
+          "title": "Assinar Premium",
+          "url": "/#pricing",
+          "icon": "RiFlashlightFill"
+        },
+        "product_id": "prod_SsqCkSQWvK8NzC",
+        "product_name": "Nano Banana Premium",
+        "credits": 2000,
+        "valid_months": 1
+      },
+      {
+        "title": "Iniciante",
+        "description": "Perfeito para experimentar geração de imagens IA e projetos pequenos.",
+        "features_title": "O que está incluído",
+        "features": [
+          "2400 créditos de geração IA por ano",
+          "Modelos de alta qualidade Nano Banana",
+          "Geração de texto para imagem",
+          "Recursos de edição de imagem",
+          "Serviço de melhoria de imagem 3x,4x",
+          "Velocidade de geração padrão",
+          "Taxa de sucesso padrão",
+          "Suporte ao cliente padrão",
+          "Licença comercial"
+        ],
+        "group": "yearly",
+        "interval": "year",
+        "amount": 9588,
+        "cn_amount": 0,
+        "currency": "USD",
+        "price": "$7.99",
+        "discount_price": "$4.99",
+        "discount_amount": 5988,
+        "original_price": "$19.99",
+        "unit": "USD",
+        "is_featured": false,
+        "tip": "Perfeito para experimentar geração e edição de imagens IA.",
+        "button": {
+          "title": "Assinar Iniciante",
+          "url": "/#pricing",
+          "icon": "RiFlashlightFill"
+        },
+        "product_id": "prod_Ssq8Ltsmjqeiw9-2",
+        "product_name": "Nano Banana Iniciante Anual",
+        "credits": 2400,
+        "valid_months": 12
+      },
+      {
+        "title": "Pro",
+        "description": "Ideal para criadores, designers e profissionais de conteúdo.",
+        "label": "Mais Popular",
+        "features_title": "Tudo do Iniciante",
+        "features": [
+          "8400 créditos de geração IA por ano",
+          "Velocidade de processamento prioritária",
+          "Alta taxa de sucesso",
+          "Recursos avançados de edição",
+          "Geração multi-referência",
+          "Canal de download de alta velocidade",
+          "Suporte ao cliente prioritário"
+        ],
+        "group": "yearly",
+        "interval": "year",
+        "amount": 20388,
+        "cn_amount": 0,
+        "currency": "USD",
+        "price": "$16.99",
+        "discount_price": "$11.99",
+        "discount_amount": 14388,
+        "original_price": "$89.99",
+        "unit": "USD",
+        "is_featured": true,
+        "tip": "🔥 Oferta por Tempo Limitado! Obtenha Pro Agora",
+        "button": {
+          "title": "Assinar Pro",
+          "url": "/#pricing",
+          "icon": "RiFlashlightFill"
+        },
+        "product_id": "prod_SsqBq5Jdkmjp4l1-2",
+        "product_name": "Nano Banana Pro Anual",
+        "credits": 8400,
+        "valid_months": 12
+      },
+      {
+        "title": "Premium",
+        "description": "Para equipes, agências e uso comercial de alto volume.",
+        "features_title": "Tudo do Pro",
+        "features": [
+          "30000 créditos de geração IA por ano",
+          "Velocidade de geração mais rápida",
+          "Capacidades de edição IA mais avançadas",
+          "Armazenamento permanente de imagem",
+          "Gerente de conta dedicado"
+        ],
+        "group": "yearly",
+        "interval": "year",
+        "amount": 83988,
+        "cn_amount": 0,
+        "currency": "USD",
+        "price": "$69.99",
+        "discount_price": "$44.99",
+        "discount_amount": 53988,
+        "original_price": "$179.99",
+        "unit": "USD",
+        "is_featured": false,
+        "tip": "Perfeito para equipes e empresas",
+        "button": {
+          "title": "Assinar Premium",
+          "url": "/#pricing",
+          "icon": "RiFlashlightFill"
+        },
+        "product_id": "prod_SsqCkSQWvK8NzC-2",
+        "product_name": "Nano Banana Premium Anual",
+        "credits": 30000,
+        "valid_months": 12
+      },
+      {
+        "title": "Pacote de Créditos de Teste",
+        "description": "Perfeito para experimentar geração de imagens IA e projetos pequenos.",
+        "features_title": "O que está incluído",
+        "features": [
+          "50 créditos de geração IA",
+          "Modelos de alta qualidade Nano Banana",
+          "Créditos válidos por 1 mês"
+        ],
+        "group": "credits-packs",
+        "interval": "one-time",
+        "amount": 599,
+        "cn_amount": 0,
+        "currency": "USD",
+        "price": "$5.99",
+        "original_price": "$19.99",
+        "unit": "USD",
+        "is_featured": false,
+        "tip": "Perfeito para testar efeitos",
+        "button": {
+          "title": "Comprar Pacote de Créditos de Teste",
+          "url": "/#pricing",
+          "icon": "RiFlashlightFill"
+        },
+        "product_id": "credits-packs-0",
+        "product_name": "Nano Banana Pacote de Créditos de Teste",
+        "credits": 50,
+        "valid_months": 1
+      },
+      {
+        "title": "Pacote de Créditos Iniciante",
+        "description": "Compra única, créditos nunca expiram",
+        "features_title": "O que está incluído",
+        "features": [
+          "500 créditos de geração IA",
+          "Nunca expiram",
+          "Desbloqueie todos os recursos"
+        ],
+        "group": "credits-packs",
+        "interval": "one-time",
+        "amount": 2999,
+        "cn_amount": 0,
+        "currency": "USD",
+        "price": "$29.99",
+        "original_price": "$40",
+        "unit": "USD",
+        "is_featured": false,
+        "tip": "🔥 Oferta por Tempo Limitado!",
+        "button": {
+          "title": "Comprar Agora",
+          "url": "/#pricing",
+          "icon": "RiFlashlightFill"
+        },
+        "product_id": "credits-packs-1",
+        "product_name": "Nano Banana Pacote de Créditos Iniciante",
+        "credits": 500,
+        "valid_months": 12
+      },
+      {
+        "title": "Pacote de Créditos Profissional",
+        "description": "Compra única, créditos nunca expiram",
+        "features_title": "O que está incluído",
+        "features": [
+          "2000 créditos de geração IA",
+          "Nunca expiram",
+          "Desbloqueie todos os recursos"
+        ],
+        "group": "credits-packs",
+        "interval": "one-time",
+        "amount": 9999,
+        "cn_amount": 0,
+        "currency": "USD",
+        "price": "$99.99",
+        "original_price": "$120",
+        "unit": "USD",
+        "is_featured": true,
+        "tip": "🔥 Oferta por Tempo Limitado!",
+        "button": {
+          "title": "Comprar Agora",
+          "url": "/#pricing",
+          "icon": "RiFlashlightFill"
+        },
+        "product_id": "credits-packs-2",
+        "product_name": "Nano Banana Pacote de Créditos Profissional",
+        "credits": 2000,
+        "valid_months": 12
+      },
+      {
+        "title": "Pacote de Créditos Premium",
+        "description": "Compra única, créditos nunca expiram, perfeito para designers profissionais",
+        "features_title": "O que está incluído",
+        "features": [
+          "7000 créditos de geração IA",
+          "Nunca expiram",
+          "Desbloqueie todos os recursos",
+          "Suporte ao cliente prioritário",
+          "Qualidade de geração profissional"
+        ],
+        "group": "credits-packs",
+        "interval": "one-time",
+        "amount": 23000,
+        "cn_amount": 0,
+        "currency": "USD",
+        "price": "$230",
+        "original_price": "$400",
+        "unit": "USD",
+        "is_featured": false,
+        "tip": "🔥 Oferta por Tempo Limitado!",
+        "button": {
+          "title": "Comprar Agora",
+          "url": "/#pricing",
+          "icon": "RiFlashlightFill"
+        },
+        "product_id": "credits-packs-3",
+        "product_name": "Nano Banana Pacote de Créditos Premium",
+        "credits": 7000,
+        "valid_months": 12
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "FAQ",
+    "title": "Perguntas Frequentes Sobre Pagamentos Nano Banana",
+    "description": "Tem mais perguntas sobre pagamentos Nano Banana? Entre em contato com nossa equipe de suporte para ajuda.",
+    "items": [
+      {
+        "title": "Quais métodos de pagamento são suportados?",
+        "description": "Aceitamos cartões de crédito como Visa, MasterCard, American Express, bem como métodos de pagamento como Alipay e WeChat Pay. Todos os pagamentos são processados através de plataformas de pagamento terceirizadas seguras para garantir a segurança de suas informações. Se desejar pagar com criptomoeda, entre em contato com nosso email de suporte."
+      },
+      {
+        "title": "O que são assinaturas anuais, mensais e pacotes de créditos?",
+        "description": "Assinaturas anuais, mensais e pacotes de créditos são os planos de pagamento do Nano Banana. Assinatura anual é um pagamento único para o ano inteiro com renovação automática anual, fornecendo todos os créditos do ano de uma só vez que são válidos por um ano, com 50% de economia ao escolher assinatura anual. Assinatura mensal cobra e reabastece automaticamente mensalmente, com créditos válidos por um mês. Pacotes de créditos são compras únicas que nunca expiram e não renovam automaticamente. Verifique o valor real do pagamento ao pagar e escolha o plano apropriado."
+      },
+      {
+        "title": "O que são créditos e como uso eles?",
+        "description": "4 créditos podem gerar 1 imagem de alta qualidade. Créditos são automaticamente reabastecidos no início de cada ciclo de cobrança. Planos de assinatura mensal cobram e reabastecem automaticamente mensalmente, com créditos válidos por um mês. Planos de assinatura anual cobram uma vez para o ano inteiro, com todos os créditos emitidos de uma vez e válidos por um ano. Você também pode comprar pacotes de créditos únicos, que nunca expiram."
+      },
+      {
+        "title": "Como gerencio ou cancelo minha assinatura?",
+        "description": "Você pode entrar em contato com nossa equipe de suporte em support@nanobanana.org para cancelar sua assinatura. Normalmente respondemos dentro de um dia útil. Obrigado pela sua compreensão e apoio."
+      },
+      {
+        "title": "Como usar WeChat ou Alipay para pagamento?",
+        "description": "Na barra de navegação superior do site, mude o idioma para chinês, e você pode ver os canais de pagamento WeChat e Alipay na página de preços."
+      },
+      {
+        "title": "Créditos não utilizados são transferidos?",
+        "description": "Exceto pelos pacotes de créditos de teste, todos os outros pacotes de créditos comprados uma vez são válidos para sempre. Créditos de assinatura são renovados mensalmente ou anualmente - para assinaturas mensais, créditos não utilizados do mês anterior são resetados na renovação, e para assinaturas anuais, créditos não utilizados do ano anterior são resetados na renovação. Recomendamos escolher um plano baseado em suas necessidades reais de uso."
+      },
+      {
+        "title": "Como compro mais créditos?",
+        "description": "Há duas maneiras de obter créditos adicionais: Comprar pacotes de créditos únicos para créditos imediatos que nunca expiram, que podem ser comprados várias vezes e usados junto com assinaturas existentes. Para necessidades maiores de créditos, entre em contato com support@nanobanana.org e forneceremos uma solução de créditos adequada."
+      },
+      {
+        "title": "Posso alterar meu plano de assinatura a qualquer momento?",
+        "description": "Sim, você pode fazer upgrade ou downgrade do seu plano a qualquer momento. Para alterar assinaturas, primeiro entre em contato com support@nanobanana.org para cancelar sua assinatura, depois reinscreva-se no novo plano."
+      },
+      {
+        "title": "O que é exatamente Nano Banana?",
+        "description": "Nano Banana é uma plataforma revolucionária de geração e edição de imagens alimentada por IA. Ao contrário dos modelos tradicionais, combina entradas de texto e imagem para criação visual perfeita, oferecendo recursos poderosos como consistência de personagem, edição de cena e referências de fusão multi-imagem."
+      },
+      {
+        "title": "Nano Banana é adequado para trabalho criativo profissional?",
+        "description": "Absolutamente! Nano Banana é projetado para criadores profissionais, oferecendo renderização fotorrealista e resultados de qualidade de produção. Muitos artistas profissionais, designers, criadores de conteúdo e agências criativas confiam no Nano Banana para seus fluxos de trabalho diários e projetos de clientes."
+      },
+      {
+        "title": "Como entro em contato com a equipe de suporte?",
+        "description": "Se você tiver alguma dúvida, envie um email para support@nanobanana.io e nossa equipe responderá o mais rápido possível. Você normalmente receberá uma resposta dentro de um dia útil."
+      }
+    ]
+  }
+}

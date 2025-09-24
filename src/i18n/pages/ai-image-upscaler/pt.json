@@ -1,0 +1,204 @@
+{
+  "meta": {
+    "title": "Ampliador de Imagem Nano Banana Online - Ferramenta de Melhoria de Foto IA",
+    "description": "Usa tecnologia IA avançada para melhorar e ampliar suas fotos com qualidade profissional. Transforme imagens de baixa resolução em obras-primas de alta definição."
+  },
+  "hero": {
+    "title": "Ampliador de Imagem Nano Banana",
+    "description": "Tecnologia profissional de ampliação de imagem alimentada por IA melhora a qualidade da imagem de saída do Nano Banana, criando efeitos visuais impressionantes."
+  },
+  "features": {
+    "title": "Experimente Melhoria Profissional de Imagem com Tecnologia IA Avançada",
+    "description": "Tecnologia IA avançada para melhorar qualidade e resolução de imagens com resultados de nível profissional.",
+    "items": [
+      {
+        "title": "Melhoria de Qualidade de Imagem Superior",
+        "description": "Ampliador de Imagem Nano Banana oferece capacidades excepcionais de melhoria de imagem, transformando fotos de baixa resolução em imagens nítidas e de alta definição. Nossa tecnologia IA preserva detalhes intrincados enquanto melhora drasticamente a qualidade e clareza geral da imagem."
+      },
+      {
+        "title": "Tecnologia de Ampliação Inteligente",
+        "description": "Experimente ampliação de imagem perfeita com algoritmos de ponta. Amplie suas imagens até 4x sua resolução original mantendo texturas naturais, bordas nítidas e preservação de detalhes fotorrealistas."
+      },
+      {
+        "title": "Processamento de Nível Profissional",
+        "description": "Nossa plataforma fornece capacidades de processamento de imagem de nível profissional adequadas para fotógrafos, designers e profissionais criativos. Alcance resultados de qualidade de estúdio com recursos avançados de redução de ruído e melhoria de detalhes."
+      },
+      {
+        "title": "Melhoria Rápida e Eficiente",
+        "description": "Obtenha resultados impressionantes em segundos com nosso motor de processamento otimizado. O modelo IA eficiente entrega melhoria de imagem de alta qualidade sem comprometer a velocidade, tornando-o perfeito para processamento em lote e fluxos de trabalho profissionais."
+      }
+    ]
+  },
+  "how_to_use": {
+    "title": "Como Usar a Ferramenta de Melhoria de Imagem IA",
+    "description": "Melhore suas imagens em apenas três passos simples com nossa interface intuitiva.",
+    "items": [
+      {
+        "title": "Carregue Sua Imagem",
+        "description": "Selecione e carregue a imagem que você deseja melhorar usando o Ampliador de Imagem Nano Banana. Suporte para vários formatos incluindo JPEG, PNG e WebP garante compatibilidade com todas suas fotos e gráficos."
+      },
+      {
+        "title": "Escolha Configurações de Melhoria",
+        "description": "Configure suas opções de ampliação preferidas com controles intuitivos. Selecione a resolução de saída desejada, força de melhoria e preferências de processamento para resultados ótimos."
+      },
+      {
+        "title": "Baixe a Imagem Melhorada",
+        "description": "Baixe sua imagem profissionalmente melhorada uma vez que o processamento seja concluído. Desfrute de resultados cristalinos e de alta resolução prontos para impressão, uso na web ou projetos profissionais."
+      }
+    ]
+  },
+  "workspace": {
+    "title": "Área de Trabalho do Ampliador de Imagem Nano Banana",
+    "description": "Área de trabalho profissional de melhoria de imagem alimentada por tecnologia IA avançada.",
+    "upload_zone": {
+      "title": "Carregar Imagem",
+      "description": "Arraste e solte ou clique para carregar sua imagem no Ampliador de Imagem Nano Banana",
+      "supported_formats": "Formatos suportados: JPEG, PNG, WebP",
+      "max_size": "Tamanho máximo do arquivo: 10MB",
+      "error_file_too_large": "Arquivo muito grande. Tamanho máximo é 10MB.",
+      "error_invalid_type": "Tipo de arquivo inválido. Por favor, carregue uma imagem.",
+      "preview_alt": "Pré-visualização carregada",
+      "delete_tooltip": "Excluir imagem",
+      "replace_tooltip": "Substituir imagem",
+      "drop_text": "Solte para carregar",
+      "click_or_drag": "Clique ou arraste para carregar",
+      "processing": "Processando...",
+      "url_mode_indicator": "Imagem carregada da URL",
+      "file_mode_indicator": "Imagem carregada do arquivo",
+      "validating_url": "Validando URL da imagem...",
+      "url_validation_failed": "Não foi possível validar URL da imagem",
+      "url_too_large": "Imagem na URL é muito grande (máx 10MB)",
+      "url_invalid_format": "URL não aponta para um arquivo de imagem válido",
+      "cors_warning": "Não foi possível validar devido a restrições CORS"
+    },
+    "controls": {
+      "title": "CONTROLES",
+      "scale_factor": "Fator",
+      "enhance_details": "Melhoria de Detalhes",
+      "noise_reduction": "Redução de Ruído",
+      "processing_mode": "Modo de Processamento",
+      "credits_cost": "Custo de Créditos",
+      "credits_unit": "créditos",
+      "execute_button": "EXECUTAR",
+      "restart_button": "Reiniciar",
+      "scale_1x": "Original",
+      "scale_2x": "Padrão",
+      "scale_3x": "Grande",
+      "scale_4x": "Máximo",
+      "scale_tooltip": "Escolha o quanto ampliar sua imagem",
+      "face_enhance": "Melhoria Facial",
+      "face_enhance_tooltip": "Usa GFPGAN para melhorar detalhes faciais",
+      "face_enhance_description": "Melhora detalhes faciais e textura da pele quando habilitado"
+    },
+    "status": {
+      "uploading": "Carregando...",
+      "processing": "Processando...",
+      "completed": "Melhoria de imagem concluída com sucesso",
+      "error": "Melhoria falhou, tente novamente",
+      "validating": "Validando imagem...",
+      "url_ready": "URL da imagem validada com sucesso",
+      "url_processing": "Processando imagem da URL..."
+    },
+    "results": {
+      "title": "PRÉ-VISUALIZAÇÃO",
+      "original": "Original",
+      "enhanced": "Melhorada",
+      "upscaled": "Ampliada",
+      "download": "Download",
+      "downloading": "Baixando...",
+      "compare": "Comparar Imagens",
+      "no_image_title": "Nenhuma imagem carregada",
+      "no_image_description": "Carregue uma imagem para ver o resultado ampliado aqui",
+      "processing_preview_alt": "Pré-visualização do processamento",
+      "uploading_description": "Preparando sua imagem para processamento",
+      "processing_description": "IA está ampliando e melhorando sua imagem",
+      "failed_title": "Processamento falhou",
+      "failed_description": "Algo deu errado ao ampliar sua imagem",
+      "completed_badge": "Ampliação concluída",
+      "click_to_enlarge": "Clique para ampliar e comparar",
+      "standard_resolution": "Resolução Padrão",
+      "ai_upscaled": "Ampliada e Melhorada por IA",
+      "original_image_alt": "Imagem original"
+    },
+    "messages": {
+      "upload_required": "Por favor, carregue uma imagem primeiro",
+      "insufficient_credits": "Créditos insuficientes. Precisa de ${credits} créditos para ampliação.",
+      "uploading": "Carregando imagem...",
+      "processing_start": "Iniciando processo de ampliação...",
+      "success": "Imagem ampliada com sucesso!",
+      "failed": "Ampliação falhou",
+      "error": "Falha ao ampliar imagem",
+      "download_preparing": "Preparando download...",
+      "download_success": "Imagem baixada com sucesso!",
+      "download_failed": "Falha ao baixar imagem",
+      "image_loaded": "Imagem carregada com sucesso",
+      "image_load_failed": "Falha ao carregar imagem da URL",
+      "url_validation_timeout": "Validação de URL esgotou o tempo. Tente novamente.",
+      "url_cors_error": "Não é possível acessar imagem devido à política CORS. Tente carregar o arquivo diretamente.",
+      "url_network_error": "Erro de rede ao validar URL da imagem",
+      "url_size_unknown": "Não foi possível determinar o tamanho da imagem da URL",
+      "url_format_unknown": "Não foi possível determinar o formato da imagem da URL",
+      "url_bypassed_validation": "Validação de URL ignorada devido a restrições",
+      "image_from_history": "Imagem carregada do histórico de criação",
+      "ready_to_enhance": "Pronto para melhorar sua imagem",
+      "url_mode_active": "Modo URL - Processamento direto sem re-upload"
+    }
+  },
+  "compare_modal": {
+    "title": "Comparação de Imagem IA",
+    "drag_hint": "↔️ Arraste o divisor para comparar imagens"
+  },
+  "upgrade_modal": {
+    "title": "Atualize para Pro+ para Desbloquear Alta Ampliação",
+    "description": "Ampliação ${scale}x é um recurso exclusivo Pro+. Atualize agora para desfrutar de capacidades de ampliação de imagem mais poderosas",
+    "vip_exclusive": "Recurso Exclusivo VIP",
+    "features_title": "Benefícios Pro+",
+    "feature_high_scale": "Suporte para ampliação de imagem de alta definição 3x, 4x",
+    "feature_more_credits": "Mais créditos, uso ilimitado",
+    "feature_priority": "Processamento prioritário, velocidade de geração mais rápida",
+    "upgrade_button": "Atualizar para Membros Agora",
+    "cancel_button": "Talvez Mais Tarde"
+  },
+  "faq": {
+    "title": "Perguntas Frequentes",
+    "description": "Obtenha respostas para perguntas comuns sobre o Ampliador de Imagem Nano Banana.",
+    "contact": {
+      "question_text": "Tem mais perguntas?",
+      "support_link": "Entre em contato com nossa equipe de suporte"
+    },
+    "items": [
+      {
+        "question": "O que é o Ampliador de Imagem Nano Banana?",
+        "answer": "Ampliador de Imagem Nano Banana é uma ferramenta avançada de melhoria de imagem alimentada por IA que usa algoritmos de aprendizado de máquina de ponta para ampliar e melhorar a qualidade da imagem. Pode aumentar a resolução da imagem até 4x preservando e melhorando detalhes finos, tornando-o perfeito para fotógrafos, designers e criadores de conteúdo."
+      },
+      {
+        "question": "Como funciona o Ampliador de Imagem Nano Banana?",
+        "answer": "Ampliador de Imagem Nano Banana emprega modelos sofisticados de aprendizado profundo treinados em milhões de imagens de alta qualidade. A IA analisa o conteúdo da sua imagem, identifica padrões e texturas, então reconstrói inteligentemente pixels ausentes para criar uma versão de resolução mais alta com clareza e detalhes melhorados."
+      },
+      {
+        "question": "Quais formatos de imagem o Ampliador de Imagem Nano Banana suporta?",
+        "answer": "Ampliador de Imagem Nano Banana suporta formatos de imagem populares incluindo JPEG, PNG, WebP e TIFF. Você pode carregar imagens de até 10MB de tamanho, tornando-o adequado tanto para gráficos web quanto para projetos de fotografia de alta resolução."
+      },
+      {
+        "question": "Quanto custa usar o Ampliador de Imagem Nano Banana?",
+        "answer": "Cada melhoria de imagem com Ampliador de Imagem Nano Banana custa 2 créditos. Isso fornece capacidades de ampliação e melhoria de nível profissional adequadas para projetos comerciais e de uso pessoal."
+      },
+      {
+        "question": "Posso usar imagens melhoradas pelo Ampliador de Imagem Nano Banana para fins comerciais?",
+        "answer": "Sim, todas as imagens processadas através do Ampliador de Imagem Nano Banana são adequadas para uso comercial. As imagens melhoradas mantêm padrões de qualidade profissional e podem ser usadas para projetos de negócios, materiais de marketing e aplicações comerciais."
+      },
+      {
+        "question": "Quanto tempo leva para o Ampliador de Imagem Nano Banana processar uma imagem?",
+        "answer": "Ampliador de Imagem Nano Banana normalmente processa imagens dentro de 30-60 segundos, dependendo do tamanho da imagem original e opções de melhoria selecionadas. Nossa infraestrutura IA otimizada garante processamento rápido mantendo resultados de alta qualidade."
+      },
+      {
+        "question": "Qual é o fator máximo de ampliação disponível no Ampliador de Imagem Nano Banana?",
+        "answer": "Ampliador de Imagem Nano Banana pode ampliar imagens até 4x sua resolução original. Por exemplo, uma imagem de 512x512 pixels pode ser melhorada para 2048x2048 pixels mantendo aparência natural e qualidade de detalhes nítidos."
+      },
+      {
+        "question": "O Ampliador de Imagem Nano Banana funciona bem com diferentes tipos de imagens?",
+        "answer": "Sim, Ampliador de Imagem Nano Banana é projetado para trabalhar efetivamente com vários tipos de imagem incluindo retratos, paisagens, arte, gráficos e fotografias. O modelo IA foi treinado em categorias diversas de imagens para garantir melhoria ótima através de diferentes tipos de conteúdo."
+      }
+    ]
+  }
+}

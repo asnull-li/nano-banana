@@ -1,7 +1,6 @@
-"use client";
-
-import { useParams, usePathname } from "next/navigation";
+import { getLocale } from "next-intl/server";
 import { locales, localeNames } from "@/i18n/locale";
+import { Link } from "@/i18n/navigation";
 
 const languageFlags: Record<string, string> = {
   en: "🇺🇸",
@@ -12,22 +11,12 @@ const languageFlags: Record<string, string> = {
   ko: "🇰🇷",
   zh: "🇨🇳",
   ru: "🇷🇺",
+  ar: "🇸🇦",
+  pt: "🇵🇹",
 };
 
-export default function FooterLanguageLinks() {
-  const params = useParams();
-  const currentLocale = params.locale as string;
-  const pathname = usePathname();
-
-  const getLocalizedPath = (targetLocale: string) => {
-    if (targetLocale === currentLocale) return pathname;
-
-    let newPathName = pathname.replace(`/${currentLocale}`, `/${targetLocale}`);
-    if (!newPathName.startsWith(`/${targetLocale}`)) {
-      newPathName = `/${targetLocale}${newPathName}`;
-    }
-    return newPathName;
-  };
+export default async function FooterLanguageLinks() {
+  const currentLocale = await getLocale();
 
   return (
     <div className="w-full mt-12 pt-6 border-t border-muted-foreground/10">
@@ -36,9 +25,10 @@ export default function FooterLanguageLinks() {
           const isCurrent = locale === currentLocale;
 
           return (
-            <a
+            <Link
               key={locale}
-              href={getLocalizedPath(locale)}
+              href="/"
+              locale={locale}
               className={`
                 flex items-center gap-1.5 text-sm transition-all duration-200
                 ${
@@ -50,7 +40,7 @@ export default function FooterLanguageLinks() {
             >
               <span className="text-base">{languageFlags[locale]}</span>
               <span>{localeNames[locale]}</span>
-            </a>
+            </Link>
           );
         })}
       </div>

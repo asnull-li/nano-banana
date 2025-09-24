@@ -1,0 +1,46 @@
+{
+  "metadata": {
+    "title": "Histórico de Criação - Nano Banana",
+    "description": "Visualize e gerencie seu histórico de criação de imagens geradas por IA"
+  },
+  "status": {
+    "completed": "Concluído",
+    "failed": "Falhado",
+    "processing": "Processando",
+    "pending": "Pendente"
+  },
+  "actions": {
+    "view": "Ver",
+    "download": "Download",
+    "delete": "Excluir",
+    "enhance": "Melhorar"
+  },
+  "labels": {
+    "prompt": "Prompt",
+    "images": "Imagens",
+    "credits": "Créditos",
+    "created_at": "Criado",
+    "provider": "Provedor"
+  },
+  "messages": {
+    "no_tasks": "Nenhum histórico de criação",
+    "loading": "Carregando...",
+    "load_more": "Carregar Mais",
+    "delete_confirm": "Tem certeza de que deseja excluir esta tarefa?",
+    "delete_success": "Excluído com sucesso",
+    "delete_failed": "Falha ao excluir",
+    "download_success": "Baixado com sucesso",
+    "download_failed": "Falha no download"
+  },
+  "image_preview": "Pré-visualização da Imagem",
+  "download": "Download",
+  "enhance_image": "Melhorar Imagem",
+  "copy_link": "Copiar Link",
+  "copied": "Copiado",
+  "link_copied": "Link copiado para a área de transferência",
+  "copy_failed": "Falha ao copiar",
+  "coming_soon": "Em Breve",
+  "no_image_selected": "Nenhuma imagem selecionada",
+  "redirecting_to_upscaler": "Redirecionando para o ampliador de imagem...",
+  "invalid_image_url": "URL da imagem inválida"
+}
