@@ -15,7 +15,6 @@ import {
   getPricingPage,
   getShowcasePage,
 } from "@/services/page";
-import WorkspaceWrapper from "@/components/workspace/wrapper";
 import NanoBananaWrapper from "@/components/nano-banana/wrapper";
 
 export async function generateMetadata({
