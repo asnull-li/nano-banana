@@ -64,7 +64,9 @@ export default function UpscalerWorkspace({
   const { submitUpscaleTask, getTaskStatus, uploadImage } = useUpscalerAPI();
   const router = useRouter();
 
-  const canGenerate = (uploadedFile || task.isUrlMode) && ["idle", "failed"].includes(task.status);
+  const canGenerate =
+    (uploadedFile || task.isUrlMode) &&
+    ["idle", "failed"].includes(task.status);
   const isProcessing =
     task.status === "uploading" || task.status === "processing";
 
@@ -89,20 +91,23 @@ export default function UpscalerWorkspace({
   }, []);
 
   // 处理从URL加载的图片（不下载，直接使用URL）
-  const handleImageUploadFromUrl = useCallback((url: string, filename: string, contentType: string) => {
-    // 清除File对象，因为我们使用URL模式
-    setUploadedFile(null);
-    setTask((prev) => ({
-      ...prev,
-      originalImage: url, // 直接使用原始URL作为预览
-      upscaledImage: null,
-      status: "idle",
-      error: undefined,
-      isUrlMode: true,
-      originalFileName: filename,
-      originalContentType: contentType,
-    }));
-  }, []);
+  const handleImageUploadFromUrl = useCallback(
+    (url: string, filename: string, contentType: string) => {
+      // 清除File对象，因为我们使用URL模式
+      setUploadedFile(null);
+      setTask((prev) => ({
+        ...prev,
+        originalImage: url, // 直接使用原始URL作为预览
+        upscaledImage: null,
+        status: "idle",
+        error: undefined,
+        isUrlMode: true,
+        originalFileName: filename,
+        originalContentType: contentType,
+      }));
+    },
+    []
+  );
 
   // 验证图片URL并直接使用（不下载）
   const loadImageFromUrl = useCallback(
@@ -163,18 +168,29 @@ export default function UpscalerWorkspace({
           contentLength = response.headers.get("content-length");
         } catch (headError) {
           clearTimeout(timeoutId);
-          
+
           // HEAD请求失败时的降级策略：直接使用URL但发出警告
-          console.warn("HEAD request failed, proceeding with URL validation bypass:", headError);
-          
+          console.warn(
+            "HEAD request failed, proceeding with URL validation bypass:",
+            headError
+          );
+
           // 基于URL扩展名进行基本验证
-          if (!hasImageExtension && !url.includes("blob:") && !url.includes("data:")) {
-            throw new Error("Unable to validate image format. Please ensure the URL points to a valid image file.");
+          if (
+            !hasImageExtension &&
+            !url.includes("blob:") &&
+            !url.includes("data:")
+          ) {
+            throw new Error(
+              "Unable to validate image format. Please ensure the URL points to a valid image file."
+            );
           }
-          
+
           // 跳过其他验证，直接使用URL
           contentType = "image/jpeg"; // 默认类型
-          console.warn("Proceeding without server-side validation due to CORS or network restrictions.");
+          console.warn(
+            "Proceeding without server-side validation due to CORS or network restrictions."
+          );
         }
 
         // 验证内容类型（如果获得了响应）
@@ -194,7 +210,11 @@ export default function UpscalerWorkspace({
         }
 
         // 直接使用原始URL进行预览和处理
-        handleImageUploadFromUrl(url, validUrl.pathname.split("/").pop() || "image.jpg", contentType);
+        handleImageUploadFromUrl(
+          url,
+          validUrl.pathname.split("/").pop() || "image.jpg",
+          contentType
+        );
 
         // toast.success(pageData?.workspace?.messages?.image_loaded || "Image loaded successfully");
       } catch (error) {
@@ -359,9 +379,11 @@ export default function UpscalerWorkspace({
       setTimeout(checkStatus, 2000);
     } catch (error) {
       // 检查是否为会员权限错误
-      if (error instanceof Error &&
-          (error as any).code === "VIP_REQUIRED" &&
-          (error as any).statusCode === 403) {
+      if (
+        error instanceof Error &&
+        (error as any).code === "VIP_REQUIRED" &&
+        (error as any).statusCode === 403
+      ) {
         // 显示升级模态框而不是错误提示
         setUpgradeScale((error as any).scale || 3);
         setShowUpgradeModal(true);
@@ -405,20 +427,11 @@ export default function UpscalerWorkspace({
 
   return (
     <div className={`w-full ${className}`}>
-      {/* Status Indicator - 仅在处理时显示 */}
-      {/* {(task.status === "uploading" || task.status === "processing") && (
-        <StatusIndicator
-          status={task.status}
-          error={task.error}
-          className="mb-6"
-        />
-      )} */}
-
       {/* 科幻仪表盘布局 */}
       <div className="grid lg:grid-cols-[350px_1fr] gap-8 min-h-[600px]">
         {/* Left Panel - Controls */}
         <div className="space-y-6">
-          <div className="p-6 bg-gradient-to-br from-slate-50 to-slate-100 dark:from-zinc-800 dark:to-zinc-900 border border-green-200/30 dark:border-green-800/30 shadow-lg backdrop-blur-sm rounded-xl">
+          <div className="p-6 bg-white/80 dark:bg-zinc-800/50 backdrop-blur-sm border border-slate-200/50 dark:border-zinc-700/50 rounded-xl shadow-xl h-full">
             <div className="flex items-center gap-2 mb-6">
               <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
               <h3 className="text-lg font-semibold text-slate-800 dark:text-slate-200">
@@ -507,7 +520,7 @@ export default function UpscalerWorkspace({
 
         {/* Right Panel - Preview */}
         <div className="space-y-4">
-          <div className="p-6 bg-gradient-to-br from-slate-50 to-slate-100 dark:from-zinc-800 dark:to-zinc-900 border border-green-200/30 dark:border-green-800/30 shadow-lg backdrop-blur-sm h-full rounded-xl">
+          <div className="p-6 bg-white/80 dark:bg-zinc-800/50 backdrop-blur-sm border border-slate-200/50 dark:border-zinc-700/50 rounded-xl shadow-xl h-full">
             <div className="flex items-center gap-2 mb-6">
               <div className="w-2 h-2 bg-cyan-500 rounded-full animate-pulse"></div>
               <h3 className="text-lg font-semibold text-slate-800 dark:text-slate-200">

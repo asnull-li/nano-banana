@@ -49,11 +49,22 @@ export default function OutputDisplay({
       setIsDownloading(true);
       await downloadImage(upscaledImage, {
         filename: `${generateImageFilename("upscaler", "edited")}.jpg`,
-        onStart: () => toast.info(pageData?.workspace?.messages?.download_preparing || "Preparing download..."),
-        onComplete: () => toast.success(pageData?.workspace?.messages?.download_success || "Image downloaded successfully!"),
+        onStart: () =>
+          toast.info(
+            pageData?.workspace?.messages?.download_preparing ||
+              "Preparing download..."
+          ),
+        onComplete: () =>
+          toast.success(
+            pageData?.workspace?.messages?.download_success ||
+              "Image downloaded successfully!"
+          ),
       });
     } catch (error) {
-      toast.error(pageData?.workspace?.messages?.download_failed || "Failed to download image");
+      toast.error(
+        pageData?.workspace?.messages?.download_failed ||
+          "Failed to download image"
+      );
       console.error("Download error:", error);
     } finally {
       setIsDownloading(false);
@@ -64,15 +75,33 @@ export default function OutputDisplay({
     // Empty State
     if (!originalImage) {
       return (
-        <div className="h-[500px] flex flex-col items-center justify-center text-center space-y-4">
-          <ImageIcon className="w-15 h-15 text-blak dark:text-white" />
-          <div className="space-y-2">
-            <h4 className="text-lg font-medium text-slate-600 dark:text-slate-400">
-              {pageData?.workspace?.results?.no_image_title || "No image uploaded"}
-            </h4>
-            <p className="text-sm text-slate-500 dark:text-slate-500">
-              {pageData?.workspace?.results?.no_image_description || "Upload an image to see the upscaled result here"}
-            </p>
+        <div className="space-y-6">
+          {/* Demo Showcase */}
+          <div className="space-y-3">
+            <div className="text-center space-y-1">
+              <h5 className="text-lg font-semibold bg-gradient-to-r from-green-600 to-cyan-600 bg-clip-text text-transparent">
+                {pageData?.workspace?.results?.demo_title || "Effect Demo"}
+              </h5>
+            </div>
+
+            {/* Demo Compare */}
+            <div className="rounded-xl overflow-hidden shadow-lg bg-slate-100 dark:bg-slate-800">
+              <Compare
+                firstImage="https://file.nanobanana.org/showcase/upscaler-showcase-before.jpeg"
+                secondImage="https://file.nanobanana.org/showcase/upscaler-showcase-after.png"
+                firstImageClassName="object-cover w-full h-[500px]"
+                secondImageClassName="object-cover w-full h-[500px]"
+                className="w-full h-[500px]"
+                slideMode="hover"
+                autoplay={false}
+                firstImageLabel={
+                  pageData?.workspace?.results?.demo_before || "Before"
+                }
+                secondImageLabel={
+                  pageData?.workspace?.results?.demo_after || "After"
+                }
+              />
+            </div>
           </div>
         </div>
       );
@@ -85,7 +114,10 @@ export default function OutputDisplay({
           {/* Background Image */}
           <img
             src={originalImage}
-            alt={pageData?.workspace?.results?.processing_preview_alt || "Processing preview"}
+            alt={
+              pageData?.workspace?.results?.processing_preview_alt ||
+              "Processing preview"
+            }
             className="w-full h-full object-contain rounded-lg opacity-30"
           />
 
@@ -100,13 +132,17 @@ export default function OutputDisplay({
               <div className="space-y-3">
                 <h4 className="text-xl font-bold text-white">
                   {status === "uploading"
-                    ? (pageData?.workspace?.status?.uploading || "Uploading image...")
-                    : (pageData?.workspace?.status?.processing || "Enhancing image...")}
+                    ? pageData?.workspace?.status?.uploading ||
+                      "Uploading image..."
+                    : pageData?.workspace?.status?.processing ||
+                      "Enhancing image..."}
                 </h4>
                 <p className="text-slate-300 max-w-sm">
                   {status === "uploading"
-                    ? (pageData?.workspace?.results?.uploading_description || "Preparing your image for processing")
-                    : (pageData?.workspace?.results?.processing_description || "AI is upscaling and enhancing your image")}
+                    ? pageData?.workspace?.results?.uploading_description ||
+                      "Preparing your image for processing"
+                    : pageData?.workspace?.results?.processing_description ||
+                      "AI is upscaling and enhancing your image"}
                 </p>
               </div>
 
@@ -143,10 +179,12 @@ export default function OutputDisplay({
           </div>
           <div className="space-y-2">
             <h4 className="text-lg font-medium text-red-600 dark:text-red-400">
-              {pageData?.workspace?.results?.failed_title || "Processing failed"}
+              {pageData?.workspace?.results?.failed_title ||
+                "Processing failed"}
             </h4>
             <p className="text-sm text-slate-500 dark:text-slate-500">
-              {pageData?.workspace?.results?.failed_description || "Something went wrong while upscaling your image"}
+              {pageData?.workspace?.results?.failed_description ||
+                "Something went wrong while upscaling your image"}
             </p>
           </div>
         </div>
@@ -161,7 +199,8 @@ export default function OutputDisplay({
           <div className="flex items-center justify-between">
             <Badge className="bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400 border-green-200 dark:border-green-800">
               <CheckCircle className="w-3 h-3 mr-1" />
-              {pageData?.workspace?.results?.completed_badge || "Upscaling completed"}
+              {pageData?.workspace?.results?.completed_badge ||
+                "Upscaling completed"}
             </Badge>
 
             <Button
@@ -173,7 +212,8 @@ export default function OutputDisplay({
               {isDownloading ? (
                 <>
                   <div className="w-3 h-3 border border-white/30 border-t-white rounded-full animate-spin mr-2" />
-                  {pageData?.workspace?.results?.downloading || "Downloading..."}
+                  {pageData?.workspace?.results?.downloading ||
+                    "Downloading..."}
                 </>
               ) : (
                 <>
@@ -188,7 +228,10 @@ export default function OutputDisplay({
           <div
             className="rounded-xl overflow-hidden shadow-lg cursor-pointer group transition-all duration-300 hover:shadow-2xl hover:scale-[1.02] bg-slate-100 dark:bg-slate-800 relative"
             onClick={() => setIsModalOpen(true)}
-            title={pageData?.workspace?.results?.click_to_enlarge || "点击放大查看对比"}
+            title={
+              pageData?.workspace?.results?.click_to_enlarge ||
+              "Click to enlarge and compare"
+            }
           >
             <div className="relative">
               <Compare
@@ -198,8 +241,12 @@ export default function OutputDisplay({
                 secondImageClassName="object-contain w-full h-[450px]"
                 className="w-full h-[450px]"
                 slideMode="hover"
-                firstImageLabel={pageData?.workspace?.results?.original || "Original"}
-                secondImageLabel={pageData?.workspace?.results?.upscaled || "Upscaled"}
+                firstImageLabel={
+                  pageData?.workspace?.results?.original || "Original"
+                }
+                secondImageLabel={
+                  pageData?.workspace?.results?.upscaled || "Upscaled"
+                }
               />
 
               {/* Hover Overlay with Expand Icon */}
@@ -220,7 +267,8 @@ export default function OutputDisplay({
                 {pageData?.workspace?.results?.original || "Original"}
               </p>
               <p className="text-sm text-slate-800 dark:text-slate-200">
-                {pageData?.workspace?.results?.standard_resolution || "Standard Resolution"}
+                {pageData?.workspace?.results?.standard_resolution ||
+                  "Standard Resolution"}
               </p>
             </div>
             <div className="space-y-1">
@@ -228,7 +276,8 @@ export default function OutputDisplay({
                 {pageData?.workspace?.results?.enhanced || "Enhanced"}
               </p>
               <p className="text-sm text-slate-800 dark:text-slate-200">
-                {pageData?.workspace?.results?.ai_upscaled || "AI Upscaled & Enhanced"}
+                {pageData?.workspace?.results?.ai_upscaled ||
+                  "AI Upscaled & Enhanced"}
               </p>
             </div>
           </div>
@@ -236,14 +285,36 @@ export default function OutputDisplay({
       );
     }
 
-    // Original Image Only (waiting for processing)
+    // Original Image Only (waiting for processing) - Show demo instead
     return (
-      <div className="h-[500px] bg-slate-100 dark:bg-slate-800 rounded-lg">
-        <img
-          src={originalImage}
-          alt={pageData?.workspace?.results?.original_image_alt || "Original image"}
-          className="w-full h-full object-contain rounded-lg"
-        />
+      <div className="space-y-6">
+        {/* Demo Showcase */}
+        <div className="space-y-3">
+          <div className="text-center space-y-1">
+            <h5 className="text-lg font-semibold bg-gradient-to-r from-green-600 to-cyan-600 bg-clip-text text-transparent">
+              {pageData?.workspace?.results?.demo_title || "Effect Demo"}
+            </h5>
+          </div>
+
+          {/* Demo Compare */}
+          <div className="rounded-xl overflow-hidden shadow-lg bg-slate-100 dark:bg-slate-800">
+            <Compare
+              firstImage="https://file.nanobanana.org/showcase/upscaler-showcase-before.jpeg"
+              secondImage="https://file.nanobanana.org/showcase/upscaler-showcase-after.png"
+              firstImageClassName="object-cover w-full h-[500px]"
+              secondImageClassName="object-cover w-full h-[500px]"
+              className="w-full h-[500px]"
+              slideMode="hover"
+              autoplay={false}
+              firstImageLabel={
+                pageData?.workspace?.results?.demo_before || "Before"
+              }
+              secondImageLabel={
+                pageData?.workspace?.results?.demo_after || "After"
+              }
+            />
+          </div>
+        </div>
       </div>
     );
   };
