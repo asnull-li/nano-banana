@@ -144,7 +144,7 @@ export default function DisplayPanel({
         {/* AI 描述 */}
         {aiDescription && <AIDescription description={aiDescription} />}
 
-        {/* 图片预览弹窗 */}
+        {/* 图片预览弹窗  */}
         <ImageViewerDialog
           isOpen={isViewerOpen}
           onClose={() => setIsViewerOpen(false)}
