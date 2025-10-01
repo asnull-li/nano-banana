@@ -51,6 +51,14 @@ export default function HistoryCard({
 }: HistoryCardProps) {
   const t = useTranslations("history");
 
+  // 根据当前域名转换图片 URL
+  const transformImageUrl = (url: string) => {
+    if (typeof window !== "undefined" && window.location.hostname === "nanobananaorg.org") {
+      return url.replace("file.nanobanana.org", "file.nanobananaorg.org");
+    }
+    return url;
+  };
+
   // 获取状态配置
   const getStatusConfig = (status: string) => {
     switch (status) {
@@ -96,6 +104,12 @@ export default function HistoryCard({
   const result = parseResult(task.result);
   const images = result?.images || [];
 
+  // 转换图片 URLs
+  const transformedImages = images.map((img: any) => ({
+    ...img,
+    url: transformImageUrl(img.url),
+  }));
+
   return (
     <Card className="group relative overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-xl border-green-500/10 hover:border-green-500/30">
       {/* 渐变背景 */}
@@ -123,7 +137,7 @@ export default function HistoryCard({
         {/* 图片预览区域 */}
         <CardImagePreview
           task={task}
-          images={images}
+          images={transformedImages}
           onViewImage={onViewImage}
         />
 
@@ -136,7 +150,7 @@ export default function HistoryCard({
         {/* 操作按钮 */}
         <CardActions
           task={task}
-          images={images}
+          images={transformedImages}
           onViewImage={onViewImage}
           onDownload={onDownload}
           onDelete={onDelete}

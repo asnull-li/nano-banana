@@ -50,13 +50,28 @@ export default function DisplayPanel({
 
   const isProcessing = ["uploading", "processing", "fetching"].includes(status);
 
+  // 根据当前域名转换图片 URL
+  const transformImageUrl = (url: string) => {
+    if (typeof window !== "undefined" && window.location.hostname === "nanobananaorg.org") {
+      return url.replace("file.nanobanana.org", "file.nanobananaorg.org");
+    }
+    return url;
+  };
+
+  // 转换所有结果的图片 URL
+  const transformedResults = results.map((result) => ({
+    ...result,
+    url: transformImageUrl(result.url),
+  }));
+
   // 结果展示
   const ResultState = () => {
-    const currentResult = results[selectedResult];
+    const currentResult = transformedResults[selectedResult];
+    const imageUrl = currentResult.url;
 
     const handleDownload = async () => {
       try {
-        const response = await fetch(currentResult.url);
+        const response = await fetch(imageUrl);
         const blob = await response.blob();
         const url = window.URL.createObjectURL(blob);
         const a = document.createElement("a");
@@ -74,8 +89,8 @@ export default function DisplayPanel({
 
     const handleShare = async () => {
       try {
-        await navigator.clipboard.writeText(currentResult.url);
-        setCopiedId(currentResult.url);
+        await navigator.clipboard.writeText(imageUrl);
+        setCopiedId(imageUrl);
         toast.success(t("link_copied"));
         setTimeout(() => setCopiedId(null), 2000);
       } catch (error) {
@@ -116,10 +131,10 @@ export default function DisplayPanel({
         <div className="flex-1 p-6 flex items-center justify-center">
           <div className="w-full max-w-md max-h-96 aspect-square">
             <ImagePreview
-              imageUrl={currentResult.url}
+              imageUrl={imageUrl}
               onDownload={handleDownload}
               onShare={handleShare}
-              isShared={copiedId === currentResult.url}
+              isShared={copiedId === imageUrl}
               onImageClick={() => setIsViewerOpen(true)}
             />
           </div>
@@ -127,17 +142,17 @@ export default function DisplayPanel({
 
         {/* 多图缩略图 */}
         <ThumbnailList
-          results={results}
+          results={transformedResults}
           selectedResult={selectedResult}
           onSelect={setSelectedResult}
         />
 
         {/* 操作区 */}
         <ImageActionBar
-          imageUrl={currentResult.url}
+          imageUrl={imageUrl}
           onDownload={handleDownload}
           onContinueEdit={
-            onContinueEdit ? () => onContinueEdit(currentResult.url) : undefined
+            onContinueEdit ? () => onContinueEdit(imageUrl) : undefined
           }
         />
 
@@ -148,7 +163,7 @@ export default function DisplayPanel({
         <ImageViewerDialog
           isOpen={isViewerOpen}
           onClose={() => setIsViewerOpen(false)}
-          results={results}
+          results={transformedResults}
           selectedResult={selectedResult}
           onSelect={setSelectedResult}
           onDownload={handleDownload}
@@ -160,7 +175,7 @@ export default function DisplayPanel({
   // 根据状态渲染不同内容
   return (
     <div className="h-full">
-      {status === "idle" && results.length === 0 && <EmptyState />}
+      {status === "idle" && transformedResults.length === 0 && <EmptyState />}
       {isProcessing && (
         <ProgressState
           progress={progress}
@@ -177,7 +192,7 @@ export default function DisplayPanel({
           supportEmail="support@nanobanana.org"
         />
       )}
-      {results.length > 0 && status !== "failed" && <ResultState />}
+      {transformedResults.length > 0 && status !== "failed" && <ResultState />}
     </div>
   );
 }

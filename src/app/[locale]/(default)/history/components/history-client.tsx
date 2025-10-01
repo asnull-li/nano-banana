@@ -48,6 +48,14 @@ export default function HistoryClient({
   const [hasMore, setHasMore] = useState(initialTasks.length === 20);
   const [page, setPage] = useState(1);
 
+  // 根据当前域名转换图片 URL
+  const transformImageUrl = (url: string) => {
+    if (typeof window !== "undefined" && window.location.hostname === "nanobananaorg.org") {
+      return url.replace("file.nanobanana.org", "file.nanobananaorg.org");
+    }
+    return url;
+  };
+
   // 下载图片
   const handleDownload = async (
     url: string,
@@ -145,7 +153,7 @@ export default function HistoryClient({
   const handleImageClick = (task: NanoBananaTask) => {
     const result = parseResult(task.result);
     if (result?.images && result.images.length > 0) {
-      const imageUrls = result.images.map((img: any) => img.url);
+      const imageUrls = result.images.map((img: any) => transformImageUrl(img.url));
       setSelectedImages(imageUrls);
     }
   };
