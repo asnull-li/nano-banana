@@ -27,6 +27,7 @@ const tempDomains = new Set([
   "10minemail.com",
   "10minut.com.pl",
   "10mail.org",
+  "0minutes.email",
 
   // Guerrilla Mail系列
   "guerrillamail.com",
@@ -589,4 +590,10 @@ const tempDomains = new Set([
   "cloud.satkp.edu.hk",
   "mriscan.live",
   "emailhook.site",
+  "nespf.com",
+  "bk.ru",
+  "hiepth.com",
+  "2925.com",
+  "mv6a.com",
+  "inbox.ru",
 ]);
