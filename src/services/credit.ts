@@ -24,6 +24,10 @@ export enum CreditsTransType {
   NanoBanana_refund = "NanoBanana_refund", // refund for failed nano banana tasks
   Upscaler_submit = "upscaler_submit", // cost for upscaler image processing
   Upscaler_refund = "upscaler_refund", // refund for failed upscaler tasks
+  Veo3_fast = "veo3_fast", // cost for veo3_fast video generation
+  Veo3_quality = "veo3_quality", // cost for veo3 high quality video generation
+  Veo3_1080p = "veo3_1080p", // cost for upgrading to 1080P video
+  Veo3_refund = "veo3_refund", // refund for failed veo3 tasks
 }
 
 export enum CreditsAmount {
