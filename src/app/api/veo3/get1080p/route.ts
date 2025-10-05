@@ -88,6 +88,19 @@ export async function POST(request: NextRequest) {
       video1080pUrl = await get1080pVideo(task.request_id, index);
     } catch (veo3Error) {
       console.error("Veo3 get1080p API error:", veo3Error);
+
+      // 检查是否是处理中状态
+      if ((veo3Error as any).code === "PROCESSING") {
+        return NextResponse.json(
+          {
+            success: false,
+            error: "PROCESSING",
+            message: veo3Error instanceof Error ? veo3Error.message : "1080P video is still processing",
+          },
+          { status: 425 } // 425 Too Early
+        );
+      }
+
       return NextResponse.json(
         {
           success: false,

@@ -9,6 +9,7 @@ import {
   updateTaskStatus,
   updateTaskByRequestId,
   findTaskByRequestId,
+  findTaskById,
 } from "@/models/veo3";
 import { getSnowId } from "@/lib/hash";
 import {
@@ -104,26 +105,33 @@ export async function processSubmitRequest({
   };
 }
 
-// Veo3 webhook 回调数据结构
+// Veo3 webhook 回调数据结构（根据官方文档 https://docs.kie.ai/cn/veo3-api/generate-veo-3-video-callbacks.md）
 interface Veo3WebhookSuccess {
   code: 200;
   data: {
     taskId: string;
-    resultUrls: string[];
-    originUrls?: string[];
-    resolution: string;
+    info: {
+      resultUrls: string[];
+      result_urls?: string[]; // 别名字段
+      originUrls?: string[]; // 仅当宽高比不是16:9时存在
+      resolution: string;
+      has_audio_list?: boolean[];
+      media_ids?: string[];
+      seeds?: number[];
+    };
+    fallbackFlag: boolean; // 是否使用托底模型
+    promptJson?: string; // 原始请求参数JSON
   };
   msg: string;
 }
 
 interface Veo3WebhookFailure {
-  code: number;
+  code: 400 | 422 | 500 | 501; // 失败状态码
   data: {
     taskId: string;
-    errorCode: string;
-    errorMessage: string;
+    fallbackFlag: boolean;
   };
-  msg: string;
+  msg: string; // 错误描述信息
 }
 
 type Veo3WebhookData = Veo3WebhookSuccess | Veo3WebhookFailure;
@@ -147,11 +155,13 @@ export async function handleVeo3WebhookCallback(body: Veo3WebhookData): Promise<
   }
 
   // 根据状态处理
-  if (body.code === 200 && "resultUrls" in data) {
+  if (body.code === 200 && "info" in data) {
     // 成功状态
     try {
-      const resultUrls = data.resultUrls || [];
-      const resolution = data.resolution;
+      const info = data.info;
+      const resultUrls = info.resultUrls || info.result_urls || [];
+      const originUrls = info.originUrls;
+      const resolution = info.resolution;
 
       if (resultUrls.length === 0) {
         console.error("No video URLs in webhook response");
@@ -180,16 +190,19 @@ export async function handleVeo3WebhookCallback(body: Veo3WebhookData): Promise<
       await updateTaskByRequestId(taskId, {
         status: "completed",
         result: JSON.stringify({
-          resultUrls: data.resultUrls,
-          originUrls: data.originUrls,
+          resultUrls,
+          originUrls,
           resolution,
+          fallbackFlag: data.fallbackFlag,
+          seeds: info.seeds,
+          has_audio_list: info.has_audio_list,
         }),
         video_720p_url: video720pUrl,
         completed_at: new Date(),
         updated_at: new Date(),
       });
 
-      console.log(`Task ${taskId} completed successfully`);
+      console.log(`Task ${taskId} completed successfully (fallback: ${data.fallbackFlag})`);
       return { success: true };
     } catch (error) {
       console.error("Failed to process success webhook:", error);
@@ -200,13 +213,11 @@ export async function handleVeo3WebhookCallback(body: Veo3WebhookData): Promise<
       );
     }
   } else {
-    // 失败状态
-    const failData = data as Veo3WebhookFailure["data"];
+    // 失败状态 (code: 400, 422, 500, 501)
     return await handleFailure(
       taskId,
       task,
-      failData.errorMessage || "Task failed",
-      failData.errorCode
+      body.msg || "Task failed"
     );
   }
 }
@@ -292,6 +303,12 @@ export async function processGet1080pRequest({
   taskId: string;
   video1080pUrl: string;
 }) {
+  // 先查询任务获取当前的 credits_used（taskId 是 task_id 主键）
+  const task = await findTaskById(taskId);
+  if (!task) {
+    throw new Error(`Task not found: ${taskId}`);
+  }
+
   // 检查用户积分
   const creditCheck = await checkUserCredits(userUuid, CREDITS_PER_1080P);
   if (!creditCheck.hasEnough) {
@@ -313,7 +330,7 @@ export async function processGet1080pRequest({
     const r2Url = await transferVideoToR2(
       video1080pUrl,
       userUuid,
-      taskId,
+      task.task_id,
       "1080p"
     );
     finalUrl = r2Url;
@@ -324,10 +341,10 @@ export async function processGet1080pRequest({
   }
 
   // 更新任务记录
-  await updateTaskStatus(taskId, {
+  await updateTaskStatus(task.task_id, {
     video_1080p_url: finalUrl,
     has_1080p: true,
-    credits_used: (await findTaskByRequestId(taskId))!.credits_used + CREDITS_PER_1080P,
+    credits_used: task.credits_used + CREDITS_PER_1080P,
     updated_at: new Date(),
   });
 

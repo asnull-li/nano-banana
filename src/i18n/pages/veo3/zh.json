@@ -1,0 +1,227 @@
+{
+  "meta": {
+    "title": "Veo3 AI视频生成器 - 文本生成视频和图片生成视频",
+    "description": "使用 Veo3 创建惊艳视频，Google 的 AI 视频生成器。文本生成视频和图片生成视频，支持 720P/1080P 高清质量。专业视频生成。"
+  },
+  "hero": {
+    "title": "Veo3 AI视频生成器",
+    "description": "释放 Veo3 的强大力量，通过文本提示词或图片创建专业级视频。Google 的 Veo3 模型提供卓越的视频生成能力，支持原生音频、4K 画质和高级创意控制。"
+  },
+  "features": {
+    "title": "体验 Veo3 AI 技术带来的专业视频创作",
+    "description": "Google 的 Veo3 为电影制作人和内容创作者带来最先进的视频生成技术，具有无与伦比的质量和创意控制能力。",
+    "items": [
+      {
+        "title": "先进的 Veo3 视频生成",
+        "description": "Veo3 提供卓越的视频质量，支持 4K 分辨率。这个强大的 Veo3 模型生成高度逼真的视频，具有改进的物理模拟、自然运动和照片级细节保留。无论您是从文本还是图片创作，Veo3 每次都能确保专业效果。"
+      },
+      {
+        "title": "Veo3 文本生成视频和图片生成视频",
+        "description": "体验 Veo3 双模式生成带来的无缝视频创作。将文本提示词转换为令人惊叹的视频，或将静态图片转换为动态内容。Veo3 的高级提示词理解技术能够以前所未有的准确度遵循复杂的多场景指令。"
+      },
+      {
+        "title": "Veo3 原生音频生成",
+        "description": "Veo3 以原生音频生成功能脱颖而出。Veo3 模型自动生成与视频内容完美匹配的同步音效、对话和背景音频。这个独特的 Veo3 功能以专业音频质量让您的视频栩栩如生。"
+      },
+      {
+        "title": "Veo3 创意控制",
+        "description": "用 Veo3 的高级控制释放无限创意。使用参考图片进行风格匹配，保持场景间的角色一致性，定义相机运动，控制运动路径。Veo3 为您提供专业视频制作和故事讲述所需的精确工具。"
+      }
+    ]
+  },
+  "how_to_use": {
+    "title": "如何使用 Veo3 AI 视频生成器创建视频",
+    "description": "通过我们直观的界面，只需三个简单步骤即可用 Veo3 生成专业视频。",
+    "items": [
+      {
+        "title": "输入提示词或上传图片",
+        "description": "通过输入详细的文本提示词或上传图片开始您的 Veo3 视频创作。Veo3 同时支持文本生成视频和图片生成视频，为您提供灵活的创作方式。提示词越详细，Veo3 就越能理解您的创意愿景。"
+      },
+      {
+        "title": "配置 Veo3 生成设置",
+        "description": "使用高级选项自定义您的 Veo3 视频。在文本生成视频或图片生成视频模式之间选择，选择 720P 标准质量或升级到 1080P 高清。Veo3 允许您优化创意控制，以获得符合您特定需求的最佳效果。"
+      },
+      {
+        "title": "生成并下载您的 Veo3 视频",
+        "description": "点击生成，让 Veo3 创建您的专业视频。一旦 Veo3 完成处理，预览带有同步音频的视频并以您喜欢的质量下载。您的 Veo3 生成的视频已准备好分享、编辑或商业使用。"
+      }
+    ]
+  },
+  "workspace": {
+    "mode_selector": {
+      "text_to_video": "文本生成视频",
+      "image_to_video": "图片生成视频"
+    },
+    "upload_zone": {
+      "title": "上传参考图片",
+      "description": "上传图片用于 Veo3 图片生成视频",
+      "supported_formats": "支持格式：JPEG、PNG、WebP",
+      "max_size": "最大文件大小：10MB",
+      "error_file_too_large": "文件过大。最大大小为 10MB。",
+      "error_invalid_type": "无效的文件类型。请上传图片。",
+      "preview_alt": "Veo3 参考图片预览",
+      "delete_tooltip": "移除图片",
+      "replace_tooltip": "替换图片",
+      "drop_text": "拖放到此处上传到 Veo3",
+      "click_or_drag": "点击或拖拽上传"
+    },
+    "prompt": {
+      "label": "提示词",
+      "tooltip": "描述您想生成的视频。具体详细的描述将获得最佳效果。",
+      "placeholder": "描述您的视频... 例如：'一只可爱的猫正在玩毛线球，慢动作，电影级打光，4K 画质'",
+      "min_chars_required": "最少需要 ${count} 个字符",
+      "approaching_limit": "接近字符限制"
+    },
+    "controls": {
+      "model_label": "模型",
+      "model_tooltip_line1": "快速模式：快速生成",
+      "model_tooltip_line2": "质量模式：最佳质量输出",
+      "model_fast": "快速模式",
+      "model_fast_desc": "快速生成",
+      "model_quality": "质量模式",
+      "model_quality_desc": "高质量输出",
+      "aspect_ratio_label": "宽高比",
+      "aspect_ratio_tooltip_line1": "16:9 支持 1080P 升级",
+      "aspect_ratio_tooltip_line2": "9:16 适合移动端视频",
+      "aspect_ratio_tooltip_line3": "自动让 AI 决定",
+      "advanced_options": "高级选项",
+      "watermark_label": "水印",
+      "watermark_placeholder": "添加文字水印...",
+      "random_seed_label": "随机种子",
+      "random_seed_tooltip_line1": "控制视频随机性 (10000-99999)。",
+      "random_seed_tooltip_line2": "相同种子生成相似视频。",
+      "random_seed_tooltip_line3": "留空自动分配。",
+      "random_seed_placeholder": "10000 - 99999",
+      "random_seed_hint": "相同种子生成相似视频。留空自动分配。",
+      "auto_translate_label": "自动翻译提示词",
+      "auto_translate_tooltip_line1": "自动将非英文提示词翻译为英文，以获得更好的视频生成质量。",
+      "auto_translate_tooltip_line2": "建议保持启用以获得最佳效果。",
+      "auto_translate_enabled": "提示词将自动翻译为英文",
+      "auto_translate_disabled": "将使用原始提示词语言"
+    },
+    "generate_button": {
+      "uploading": "上传中...",
+      "generating": "生成中...",
+      "generate": "生成视频 (${credits} 积分)"
+    },
+    "empty_state": {
+      "title": "还没有视频",
+      "description": "输入提示词并点击生成，用 Veo3 创建您的第一个视频",
+      "modes": "文本生成视频或图片生成视频"
+    },
+    "processing_state": {
+      "uploading_title": "上传中...",
+      "generating_title": "正在生成视频...",
+      "uploading_description": "正在上传您的图片到服务器...",
+      "generating_description": "您的视频正在生成中。这可能需要几分钟...",
+      "model_quality": "质量模式",
+      "model_fast": "快速模式",
+      "prompt_label": "提示词：",
+      "dont_close": "生成过程中请不要关闭此页面..."
+    },
+    "failed_state": {
+      "title": "生成失败",
+      "error_default": "视频生成过程中发生意外错误",
+      "prompt_label": "您的提示词：",
+      "credits_refunded": "您的积分已退还。如果问题持续存在，请联系我们的支持团队。",
+      "try_again": "重试",
+      "contact_support": "联系客服",
+      "need_help": "需要帮助？发送邮件至："
+    },
+    "completed_state": {
+      "quality_720p": "720p",
+      "quality_1080p": "1080p 高清",
+      "download": "下载",
+      "downloading": "下载中...",
+      "preparing_1080p": "正在准备 1080P 高清版本",
+      "preparing_1080p_hint": "这可能需要 1-2 分钟。视频准备好后会自动出现...",
+      "completed": "已完成",
+      "mode_quality": "质量",
+      "mode_fast": "快速",
+      "upgrade_button": "升级到 1080p (${credits} 积分)",
+      "upgrading": "升级中...",
+      "input_image_label": "输入图片："
+    },
+    "upgrade_modal": {
+      "title": "升级到 1080P",
+      "description": "将您的视频升级到超清晰的 1080P 分辨率，获得更好的观看体验。",
+      "enhanced_quality_title": "增强质量",
+      "enhanced_quality_description": "将您的视频升级到超清晰的 1080P 分辨率，获得更好的观看体验和专业呈现效果。",
+      "cost_label": "费用",
+      "balance_label": "您的余额",
+      "insufficient_credits": "您的积分不足。请先充值。",
+      "hint": "升级后的 1080P 视频将被生成并保存在您的 720P 版本旁边。您可以随时在它们之间切换。",
+      "cancel": "取消",
+      "confirm": "确认 (${credits} 积分)",
+      "confirming": "升级中..."
+    },
+    "toast": {
+      "video_generated": "视频已生成！您的视频已准备好观看。",
+      "error_occurred": "生成过程中发生错误",
+      "prompt_required": "请输入提示词以生成视频",
+      "prompt_length_error": "提示词必须在 3 到 5000 个字符之间",
+      "image_required": "请上传图片以进行图片生成视频",
+      "login_required": "请登录以生成视频",
+      "insufficient_credits": "您需要 ${credits} 积分来使用 ${mode} 模式生成",
+      "uploading_image": "正在上传图片...",
+      "image_uploaded": "图片上传成功",
+      "upload_failed": "上传图片失败",
+      "upgraded_1080p": "已升级到 1080P！您的高清视频已准备就绪",
+      "upgrade_timeout": "1080P 升级超时。服务器仍在处理中，请稍后重试。",
+      "preparing_1080p": "服务器正在准备 1080P 视频。这将需要 1-2 分钟，请稍候...",
+      "still_processing": "仍在处理中... (已过 ${seconds} 秒)",
+      "upgrade_failed": "升级视频失败",
+      "need_credits_1080p": "您需要 ${credits} 积分进行 1080P 升级",
+      "downloading_video": "正在下载 ${quality} 视频...",
+      "download_success": "${quality} 视频下载成功",
+      "download_failed": "下载视频失败。请重试。",
+      "new_video": "新视频"
+    }
+  },
+  "faq": {
+    "title": "Veo3 视频生成器 - 常见问题",
+    "description": "获取关于 Veo3 AI 视频生成的常见问题解答。",
+    "contact": {
+      "question_text": "有更多关于 Veo3 的问题？",
+      "support_link": "联系我们的 Veo3 支持团队"
+    },
+    "items": [
+      {
+        "question": "什么是 Veo3？它是如何工作的？",
+        "answer": "Veo3 是 Google 最先进的 AI 视频生成模型，可以从文本提示词或图片创建专业质量的视频。Veo3 使用先进的机器学习技术生成具有 4K 分辨率、原生音频和照片级真实感的视频。Veo3 模型擅长理解复杂的提示词并保持场景间的一致性，非常适合内容创作者和电影制作人使用。"
+      },
+      {
+        "question": "Veo3 可以从文本和图片生成视频吗？",
+        "answer": "是的！Veo3 是一个多功能的视频生成器，支持文本生成视频和图片生成视频两种模式。您可以用文字描述您的愿景，让 Veo3 从零开始创建，或者上传现有图片，让 Veo3 将其动画化为动态视频。两种模式都利用 Veo3 强大的 AI 能力来获得专业效果。"
+      },
+      {
+        "question": "Veo3 包含音频生成吗？",
+        "answer": "当然！原生音频生成是 Veo3 的突出功能之一。与其他视频生成器不同，Veo3 会自动创建与您的视频内容完美匹配的同步音效、对话和背景音乐。这使得 Veo3 生成的视频完整且无需额外的音频编辑即可使用。"
+      },
+      {
+        "question": "Veo3 生成一个视频需要多长时间？",
+        "answer": "Veo3 视频生成通常需要 2-5 分钟，具体取决于提示词的复杂性、选择的质量和当前服务器负载。Pro+ 会员享有优先处理，这意味着更快的 Veo3 生成时间。Veo3 系统经过优化，在保持最高质量输出的同时提高效率。"
+      },
+      {
+        "question": "Veo3 与其他 AI 视频生成器有什么不同？",
+        "answer": "Veo3 具有多项独特优势：原生音频生成、4K 质量支持、高级提示词理解、改进的物理模拟，以及角色一致性和相机运动等创意控制。Veo3 由 Google DeepMind 开发，将尖端研究应用于实际的视频生成。Veo3 模型提供比上一代工具更真实和可控的结果。"
+      },
+      {
+        "question": "我可以将 Veo3 生成的视频用于商业用途吗？",
+        "answer": "是的，通过我们平台使用 Veo3 生成的所有视频都适合商业使用。Veo3 根据您的提示词创建原创内容，非常适合营销视频、社交媒体内容、演示文稿和专业项目。请始终确保您的提示词不侵犯版权材料。"
+      },
+      {
+        "question": "Veo3 视频生成的费用是多少？",
+        "answer": "Veo3 视频生成使用基于积分的系统。每个 720P Veo3 视频需要一定数量的积分，而 1080P 高清生成需要额外的积分。这种灵活的定价确保您只为创建的 Veo3 视频付费。查看工作区控制面板了解当前的积分费用。"
+      },
+      {
+        "question": "Veo3 提供哪些创意控制？",
+        "answer": "Veo3 提供高级创意控制，包括参考图片的风格匹配、跨场景的角色一致性、相机运动定义和运动路径控制。这些 Veo3 功能为您提供精确控制视频生成的能力，使其适合专业电影制作和复杂的故事讲述项目。"
+      },
+      {
+        "question": "Veo3 适合初学者吗？",
+        "answer": "绝对适合！虽然 Veo3 为专业人士提供了高级功能，但它的设计旨在让每个人都能轻松使用。只需输入文字描述或上传图片，Veo3 就会处理复杂的视频生成过程。我们直观的界面让您可以立即开始创建专业的 Veo3 视频，无论您的技术背景如何。"
+      }
+    ]
+  }
+}

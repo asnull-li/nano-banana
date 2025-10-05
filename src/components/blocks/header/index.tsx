@@ -60,7 +60,7 @@ export default function Header({ header }: { header: HeaderType }) {
       {/* 顶部装饰线 */}
       <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-green-500/50 to-transparent [.dark_&]:via-green-400/60" />
       
-      <div className="container">
+      <div className="w-full px-4 md:px-6 lg:px-8">
         <nav className="hidden justify-between lg:flex">
           <div className="flex items-center gap-6">
             <Link

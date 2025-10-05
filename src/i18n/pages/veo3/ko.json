@@ -1,0 +1,227 @@
+{
+  "meta": {
+    "title": "Veo3 AI 동영상 생성기 - Veo3로 텍스트를 동영상으로, 이미지를 동영상으로",
+    "description": "Veo3로 멋진 동영상 제작. Google의 Veo3 AI 동영상 생성기로 텍스트를 동영상으로, 이미지를 동영상으로 생성. 720P/1080P 고품질 지원."
+  },
+  "hero": {
+    "title": "Veo3 AI 동영상 생성기",
+    "description": "Veo3의 힘을 발휘하여 텍스트 프롬프트나 이미지로부터 전문가 수준의 동영상을 만드세요. Google의 Veo3 모델은 네이티브 오디오, 4K 품질, 고급 창작 제어 기능을 갖춘 탁월한 동영상 생성을 제공합니다."
+  },
+  "features": {
+    "title": "Veo3 AI 기술로 전문 동영상 제작 경험",
+    "description": "Google의 Veo3는 영화 제작자와 콘텐츠 크리에이터를 위해 비교할 수 없는 품질과 창작 제어 기능을 갖춘 최첨단 동영상 생성을 제공합니다.",
+    "items": [
+      {
+        "title": "고급 Veo3 동영상 생성",
+        "description": "Veo3는 4K 해상도 지원으로 탁월한 동영상 품질을 제공합니다. 이 강력한 Veo3 모델은 개선된 물리 시뮬레이션, 자연스러운 움직임, 사실적인 디테일 보존을 갖춘 매우 사실적인 동영상을 생성합니다. 텍스트나 이미지로 만들든, Veo3는 항상 전문적인 결과를 보장합니다."
+      },
+      {
+        "title": "Veo3로 텍스트를 동영상으로, 이미지를 동영상으로",
+        "description": "Veo3의 듀얼 모드 생성으로 원활한 동영상 제작을 경험하세요. 텍스트 프롬프트를 멋진 동영상으로 변환하거나 정지 이미지를 역동적인 콘텐츠로 변환하세요. Veo3의 고급 프롬프트 준수 기술은 이전보다 더 높은 정확도로 복잡한 다중 장면 지침을 따릅니다."
+      },
+      {
+        "title": "Veo3의 네이티브 오디오 생성",
+        "description": "Veo3는 네이티브 오디오 생성 기능으로 돋보입니다. Veo3 모델은 동영상 콘텐츠와 완벽하게 동기화되는 음향 효과, 대화, 배경 오디오를 자동으로 생성합니다. 이 독특한 Veo3 기능은 전문적인 오디오 품질로 동영상에 생명을 불어넣습니다."
+      },
+      {
+        "title": "Veo3의 창작 제어",
+        "description": "Veo3의 고급 제어 기능으로 무한한 창의성을 발휘하세요. 스타일 매칭을 위한 참조 이미지 사용, 장면 간 캐릭터 일관성 유지, 카메라 움직임 정의, 모션 경로 제어가 가능합니다. Veo3는 전문 동영상 제작과 스토리텔링에 필요한 정밀 도구를 제공합니다."
+      }
+    ]
+  },
+  "how_to_use": {
+    "title": "Veo3 AI 동영상 생성기로 동영상을 만드는 방법",
+    "description": "직관적인 인터페이스를 사용하여 단 3단계로 Veo3로 전문 동영상 생성.",
+    "items": [
+      {
+        "title": "프롬프트 입력 또는 이미지 업로드",
+        "description": "상세한 텍스트 프롬프트를 입력하거나 이미지를 업로드하여 Veo3 동영상 제작을 시작하세요. Veo3는 텍스트를 동영상으로, 이미지를 동영상으로 변환하는 두 가지 생성을 모두 지원하여 제작 방법에 유연성을 제공합니다. 프롬프트가 상세할수록 Veo3가 당신의 창작 비전을 더 잘 이해할 수 있습니다."
+      },
+      {
+        "title": "Veo3 생성 설정 구성",
+        "description": "고급 옵션으로 Veo3 동영상을 맞춤 설정하세요. 텍스트를 동영상으로 또는 이미지를 동영상으로 모드를 선택하고, 720P 표준 품질 또는 1080P 고화질로 업그레이드를 선택하세요. Veo3를 사용하면 특정 요구 사항에 맞는 최적의 결과를 위해 창작 제어를 조정할 수 있습니다."
+      },
+      {
+        "title": "Veo3 동영상 생성 및 다운로드",
+        "description": "생성을 클릭하고 Veo3가 전문 동영상을 만들도록 하세요. Veo3가 처리를 완료하면 동기화된 오디오로 동영상을 미리 보고 원하는 품질로 다운로드하세요. Veo3 생성 동영상은 공유, 편집 또는 상업적 사용 준비가 완료되었습니다."
+      }
+    ]
+  },
+  "workspace": {
+    "mode_selector": {
+      "text_to_video": "텍스트를 동영상으로",
+      "image_to_video": "이미지를 동영상으로"
+    },
+    "upload_zone": {
+      "title": "참조 이미지 업로드",
+      "description": "Veo3 이미지를 동영상으로 생성하기 위한 이미지 업로드",
+      "supported_formats": "지원 형식: JPEG, PNG, WebP",
+      "max_size": "최대 파일 크기: 10MB",
+      "error_file_too_large": "파일이 너무 큽니다. 최대 크기는 10MB입니다.",
+      "error_invalid_type": "잘못된 파일 형식입니다. 이미지를 업로드하세요.",
+      "preview_alt": "Veo3 참조 이미지 미리보기",
+      "delete_tooltip": "이미지 삭제",
+      "replace_tooltip": "이미지 교체",
+      "drop_text": "Veo3에 업로드하려면 드롭",
+      "click_or_drag": "클릭하거나 드래그하여 업로드"
+    },
+    "prompt": {
+      "label": "프롬프트",
+      "tooltip": "생성하고 싶은 동영상을 설명하세요. 최상의 결과를 위해 구체적이고 상세하게 작성하세요.",
+      "placeholder": "동영상을 설명하세요... 예: '슬로우 모션으로 털실 공과 노는 귀여운 고양이, 영화 같은 조명, 4K 품질'",
+      "min_chars_required": "최소 ${count}자 필요",
+      "approaching_limit": "문자 수 제한에 근접"
+    },
+    "controls": {
+      "model_label": "모델",
+      "model_tooltip_line1": "빠른 모드: 빠른 생성",
+      "model_tooltip_line2": "품질 모드: 최고 품질 출력",
+      "model_fast": "빠른 모드",
+      "model_fast_desc": "빠른 생성",
+      "model_quality": "품질 모드",
+      "model_quality_desc": "고품질 출력",
+      "aspect_ratio_label": "종횡비",
+      "aspect_ratio_tooltip_line1": "16:9는 1080P 업그레이드 지원",
+      "aspect_ratio_tooltip_line2": "9:16은 모바일 동영상용",
+      "aspect_ratio_tooltip_line3": "자동은 AI가 결정",
+      "advanced_options": "고급 옵션",
+      "watermark_label": "워터마크",
+      "watermark_placeholder": "텍스트 워터마크 추가...",
+      "random_seed_label": "랜덤 시드",
+      "random_seed_tooltip_line1": "동영상 무작위성 제어(10000-99999).",
+      "random_seed_tooltip_line2": "같은 시드로 유사한 동영상 생성.",
+      "random_seed_tooltip_line3": "비워두면 자동 할당.",
+      "random_seed_placeholder": "10000 - 99999",
+      "random_seed_hint": "같은 시드로 유사한 동영상 생성. 비워두면 자동 할당.",
+      "auto_translate_label": "프롬프트 자동 번역",
+      "auto_translate_tooltip_line1": "영어가 아닌 프롬프트를 자동으로 영어로 번역하여 더 나은 동영상 생성 품질을 실현.",
+      "auto_translate_tooltip_line2": "최적의 결과를 위해 활성화 상태 유지 권장.",
+      "auto_translate_enabled": "프롬프트가 자동으로 영어로 번역됩니다",
+      "auto_translate_disabled": "원본 프롬프트 언어가 사용됩니다"
+    },
+    "generate_button": {
+      "uploading": "업로드 중...",
+      "generating": "생성 중...",
+      "generate": "동영상 생성 (${credits} 크레딧)"
+    },
+    "empty_state": {
+      "title": "아직 동영상 없음",
+      "description": "프롬프트를 입력하고 생성을 클릭하여 Veo3로 첫 번째 동영상 만들기",
+      "modes": "텍스트를 동영상으로 또는 이미지를 동영상으로 생성"
+    },
+    "processing_state": {
+      "uploading_title": "업로드 중...",
+      "generating_title": "동영상 생성 중...",
+      "uploading_description": "이미지를 서버에 업로드 중...",
+      "generating_description": "동영상을 생성 중입니다. 몇 분 정도 걸릴 수 있습니다...",
+      "model_quality": "품질 모드",
+      "model_fast": "빠른 모드",
+      "prompt_label": "프롬프트:",
+      "dont_close": "생성 중에는 이 페이지를 닫지 마세요..."
+    },
+    "failed_state": {
+      "title": "생성 실패",
+      "error_default": "동영상 생성 중 예기치 않은 오류 발생",
+      "prompt_label": "귀하의 프롬프트:",
+      "credits_refunded": "크레딧이 환불되었습니다. 문제가 계속되면 고객 지원팀에 문의하세요.",
+      "try_again": "다시 시도",
+      "contact_support": "고객 지원 문의",
+      "need_help": "도움이 필요하신가요? 이메일로 문의:"
+    },
+    "completed_state": {
+      "quality_720p": "720p",
+      "quality_1080p": "1080p HD",
+      "download": "다운로드",
+      "downloading": "다운로드 중...",
+      "preparing_1080p": "1080P HD 버전 준비 중",
+      "preparing_1080p_hint": "1-2분 정도 걸릴 수 있습니다. 준비되면 동영상이 자동으로 나타납니다...",
+      "completed": "완료",
+      "mode_quality": "품질",
+      "mode_fast": "빠름",
+      "upgrade_button": "1080p로 업그레이드 (${credits} 크레딧)",
+      "upgrading": "업그레이드 중...",
+      "input_image_label": "입력 이미지:"
+    },
+    "upgrade_modal": {
+      "title": "1080P로 업그레이드",
+      "description": "동영상을 선명한 1080P 해상도로 업그레이드하여 더 나은 시청 경험을.",
+      "enhanced_quality_title": "향상된 품질",
+      "enhanced_quality_description": "동영상을 선명한 1080P 해상도로 업그레이드하여 더 나은 시청 경험과 전문적인 프레젠테이션을 실현.",
+      "cost_label": "비용",
+      "balance_label": "잔액",
+      "insufficient_credits": "크레딧이 부족합니다. 먼저 충전하세요.",
+      "hint": "업그레이드된 1080P 동영상은 720P 버전과 함께 생성되고 저장됩니다. 언제든지 전환할 수 있습니다.",
+      "cancel": "취소",
+      "confirm": "확인 (${credits} 크레딧)",
+      "confirming": "업그레이드 중..."
+    },
+    "toast": {
+      "video_generated": "동영상이 생성되었습니다! 동영상을 볼 수 있습니다.",
+      "error_occurred": "생성 중 오류 발생",
+      "prompt_required": "동영상 생성을 위한 프롬프트를 입력하세요",
+      "prompt_length_error": "프롬프트는 3-5000자여야 합니다",
+      "image_required": "이미지를 동영상으로 생성하기 위해 이미지를 업로드하세요",
+      "login_required": "동영상을 생성하려면 로그인하세요",
+      "insufficient_credits": "${mode} 모드로 생성하려면 ${credits} 크레딧이 필요합니다",
+      "uploading_image": "이미지 업로드 중...",
+      "image_uploaded": "이미지가 성공적으로 업로드되었습니다",
+      "upload_failed": "이미지 업로드 실패",
+      "upgraded_1080p": "1080P로 업그레이드했습니다! 고품질 동영상이 준비되었습니다",
+      "upgrade_timeout": "1080P 업그레이드 시간 초과. 서버가 아직 처리 중입니다. 나중에 다시 시도하세요.",
+      "preparing_1080p": "1080P 동영상을 서버에서 준비 중입니다. 1-2분 정도 걸리니 기다려주세요...",
+      "still_processing": "아직 처리 중... (${seconds}초 경과)",
+      "upgrade_failed": "동영상 업그레이드 실패",
+      "need_credits_1080p": "1080P 업그레이드에는 ${credits} 크레딧이 필요합니다",
+      "downloading_video": "${quality} 동영상 다운로드 중...",
+      "download_success": "${quality} 동영상 다운로드 완료",
+      "download_failed": "동영상 다운로드 실패. 다시 시도하세요.",
+      "new_video": "새 동영상"
+    }
+  },
+  "faq": {
+    "title": "Veo3 동영상 생성기 - 자주 묻는 질문",
+    "description": "Veo3 AI 동영상 생성에 관한 일반적인 질문에 대한 답변.",
+    "contact": {
+      "question_text": "Veo3에 대해 더 궁금한 점이 있으신가요?",
+      "support_link": "Veo3 지원팀에 문의하기"
+    },
+    "items": [
+      {
+        "question": "Veo3란 무엇이며 어떻게 작동하나요?",
+        "answer": "Veo3는 텍스트 프롬프트나 이미지로부터 전문가 수준의 동영상을 만드는 Google의 최첨단 AI 동영상 생성 모델입니다. Veo3는 고급 기계 학습을 사용하여 4K 해상도, 네이티브 오디오, 사실적인 품질의 동영상을 생성합니다. Veo3 모델은 복잡한 프롬프트를 이해하고 장면 간 일관성을 유지하는 데 탁월하며, 콘텐츠 크리에이터와 영화 제작자에게 완벽합니다."
+      },
+      {
+        "question": "Veo3는 텍스트와 이미지 모두에서 동영상을 생성할 수 있나요?",
+        "answer": "네! Veo3는 텍스트를 동영상으로, 이미지를 동영상으로 변환하는 두 가지 생성을 모두 지원하는 다목적 동영상 생성기입니다. 텍스트로 비전을 설명하고 Veo3가 처음부터 만들도록 하거나, 기존 이미지를 업로드하여 Veo3가 역동적인 동영상으로 애니메이션화하도록 할 수 있습니다. 두 모드 모두 전문적인 결과를 위해 Veo3의 강력한 AI 기능을 활용합니다."
+      },
+      {
+        "question": "Veo3에는 오디오 생성이 포함되어 있나요?",
+        "answer": "물론입니다! Veo3의 두드러진 기능 중 하나는 네이티브 오디오 생성입니다. 다른 동영상 생성기와 달리 Veo3는 동영상 콘텐츠와 완벽하게 동기화되는 음향 효과, 대화, 배경 음악을 자동으로 생성합니다. 이를 통해 Veo3 생성 동영상은 완전하며 추가 오디오 편집 없이 바로 사용할 수 있습니다."
+      },
+      {
+        "question": "Veo3로 동영상을 생성하는 데 얼마나 걸리나요?",
+        "answer": "Veo3 동영상 생성은 일반적으로 프롬프트의 복잡성, 선택한 품질, 현재 서버 부하에 따라 2-5분 정도 걸립니다. Pro+ 회원은 우선 처리의 혜택을 받아 더 빠른 Veo3 생성 시간을 누릴 수 있습니다. Veo3 시스템은 최고 품질의 출력을 유지하면서 효율성을 위해 최적화되어 있습니다."
+      },
+      {
+        "question": "Veo3가 다른 AI 동영상 생성기와 다른 점은 무엇인가요?",
+        "answer": "Veo3는 네이티브 오디오 생성, 4K 품질 지원, 고급 프롬프트 준수, 개선된 물리 시뮬레이션, 캐릭터 일관성 및 카메라 움직임과 같은 창작 제어 등 여러 독특한 장점으로 돋보입니다. Veo3는 Google DeepMind에서 개발하여 실용적인 동영상 생성에 최첨단 연구를 제공합니다. Veo3 모델은 이전 세대 도구보다 더 사실적이고 제어 가능한 결과를 제공합니다."
+      },
+      {
+        "question": "Veo3 생성 동영상을 상업적 목적으로 사용할 수 있나요?",
+        "answer": "네, 당사 플랫폼을 통해 Veo3로 생성된 모든 동영상은 상업적 사용에 적합합니다. Veo3는 프롬프트를 기반으로 독창적인 콘텐츠를 만들어 마케팅 동영상, 소셜 미디어 콘텐츠, 프레젠테이션 및 전문 프로젝트에 완벽합니다. 프롬프트가 저작권으로 보호된 자료를 침해하지 않도록 항상 확인하세요."
+      },
+      {
+        "question": "Veo3 동영상 생성 비용은 얼마인가요?",
+        "answer": "Veo3 동영상 생성은 크레딧 기반 시스템을 사용합니다. 각 720P Veo3 동영상은 일정량의 크레딧이 소모되며, 1080P HD 생성에는 추가 크레딧이 필요합니다. 이 유연한 가격 책정은 생성한 Veo3 동영상에 대해서만 지불하도록 보장합니다. 현재 크레딧 비용은 작업 공간 제어를 확인하세요."
+      },
+      {
+        "question": "Veo3는 어떤 창작 제어 기능을 제공하나요?",
+        "answer": "Veo3는 참조 이미지의 스타일 매칭, 장면 간 캐릭터 일관성, 카메라 움직임 정의, 모션 경로 제어를 포함한 고급 창작 제어 기능을 제공합니다. 이러한 Veo3 기능은 동영상 생성에 대한 정밀한 제어를 제공하여 전문 영화 제작 및 복잡한 스토리텔링 프로젝트에 적합합니다."
+      },
+      {
+        "question": "Veo3는 초보자에게 적합한가요?",
+        "answer": "물론입니다! Veo3는 전문가를 위한 고급 기능을 제공하지만 모두가 접근할 수 있도록 설계되었습니다. 텍스트 설명을 입력하거나 이미지를 업로드하기만 하면 Veo3가 복잡한 동영상 생성 프로세스를 처리합니다. 직관적인 인터페이스로 기술적 배경에 관계없이 즉시 전문 Veo3 동영상 제작을 시작할 수 있습니다."
+      }
+    ]
+  }
+}

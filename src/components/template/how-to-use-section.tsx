@@ -1,10 +1,23 @@
+interface HowToUseStep {
+  title: string;
+  description: string;
+}
+
+interface HowToUseData {
+  title: string;
+  description: string;
+  items?: HowToUseStep[];
+}
+
 interface HowToUseSectionProps {
-  pageData?: any;
+  pageData?: {
+    how_to_use?: HowToUseData;
+  };
 }
 
 export default function HowToUseSection({ pageData }: HowToUseSectionProps) {
   const howToUseData = pageData?.how_to_use;
-  
+
   if (!howToUseData) {
     return null;
   }
@@ -15,10 +28,16 @@ export default function HowToUseSection({ pageData }: HowToUseSectionProps) {
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-20 left-16 w-64 h-64 bg-cyan-500/8 rounded-full blur-3xl" />
         <div className="absolute bottom-20 right-16 w-80 h-80 bg-green-500/8 rounded-full blur-3xl" />
-        
+
         {/* Grid Pattern */}
         <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.08]">
-          <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle, #10b981 1px, transparent 1px)', backgroundSize: '50px 50px' }} />
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: 'radial-gradient(circle, #10b981 1px, transparent 1px)',
+              backgroundSize: '50px 50px',
+            }}
+          />
         </div>
       </div>
 
@@ -45,7 +64,7 @@ export default function HowToUseSection({ pageData }: HowToUseSectionProps) {
               </div>
             </div>
 
-            {howToUseData.items?.map((item: any, index: number) => (
+            {howToUseData.items?.map((item, index) => (
               <div key={index} className="relative group">
                 {/* Step Card */}
                 <div className="relative p-6 lg:p-8 rounded-2xl bg-gradient-to-br from-white/90 to-slate-50/70 dark:from-slate-800/70 dark:to-slate-900/60 backdrop-blur-sm border border-slate-200/60 dark:border-slate-700/50 hover:border-green-500/40 dark:hover:border-green-400/60 transition-all duration-500 hover:shadow-xl hover:shadow-green-500/15 dark:hover:shadow-green-400/25 hover:-translate-y-2">
@@ -57,9 +76,7 @@ export default function HowToUseSection({ pageData }: HowToUseSectionProps) {
                     <div className="relative">
                       <div className="absolute inset-0 bg-gradient-to-br from-green-500 to-cyan-500 dark:from-green-400 dark:to-cyan-400 rounded-full blur-xl opacity-50 group-hover:opacity-70 transition-opacity animate-pulse" />
                       <div className="relative w-16 h-16 bg-gradient-to-br from-green-500 to-cyan-500 dark:from-green-400 dark:to-cyan-400 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                        <span className="text-2xl font-bold text-white">
-                          {index + 1}
-                        </span>
+                        <span className="text-2xl font-bold text-white">{index + 1}</span>
                       </div>
                     </div>
                   </div>
@@ -88,10 +105,15 @@ export default function HowToUseSection({ pageData }: HowToUseSectionProps) {
                 </div>
 
                 {/* Arrow (visible only between steps on desktop) */}
-                {index < howToUseData.items.length - 1 && (
+                {howToUseData.items && index < howToUseData.items.length - 1 && (
                   <div className="hidden md:block absolute top-24 -right-6 lg:-right-8 z-20">
                     <div className="w-12 h-8 flex items-center justify-center">
-                      <svg className="w-8 h-6 text-green-500/60 dark:text-green-400/70 group-hover:text-green-500 dark:group-hover:text-green-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg
+                        className="w-8 h-6 text-green-500/60 dark:text-green-400/70 group-hover:text-green-500 dark:group-hover:text-green-400 transition-colors"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                       </svg>
                     </div>

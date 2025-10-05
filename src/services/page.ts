@@ -21,6 +21,10 @@ export async function getAiImageUpscalerPage(locale: string): Promise<any> {
   return (await getPage("ai-image-upscaler", locale)) as any;
 }
 
+export async function getVeo3Page(locale: string): Promise<any> {
+  return (await getPage("veo3", locale)) as any;
+}
+
 export async function getPage(
   name: string,
   locale: string

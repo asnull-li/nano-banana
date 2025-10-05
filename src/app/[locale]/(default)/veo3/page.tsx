@@ -1,11 +1,11 @@
 import { Metadata } from "next";
 import { setRequestLocale } from "next-intl/server";
-import { getAiImageUpscalerPage } from "@/services/page";
+import { getVeo3Page } from "@/services/page";
 import HeroSection from "@/components/template/hero-section";
 import FeaturesSection from "@/components/template/features-section";
 import HowToUseSection from "@/components/template/how-to-use-section";
 import FaqSection from "@/components/template/faq-section";
-import UpscalerWorkspace from "@/components/workspace/upscaler";
+import { Veo3Workspace } from "@/components/workspace/veo3";
 
 export async function generateMetadata({
   params,
@@ -15,29 +15,29 @@ export async function generateMetadata({
   const { locale } = await params;
   setRequestLocale(locale);
 
-  // 从 pages/ai-image-upscaler 读取数据
-  const page = await getAiImageUpscalerPage(locale);
+  // 从 pages/veo3 读取数据
+  const page = await getVeo3Page(locale);
   const metadata = (page as any).meta;
 
-  let canonicalUrl = `${process.env.NEXT_PUBLIC_WEB_URL}/ai-image-upscaler`;
+  let canonicalUrl = `${process.env.NEXT_PUBLIC_WEB_URL}/veo3`;
   if (locale !== "en") {
-    canonicalUrl = `${process.env.NEXT_PUBLIC_WEB_URL}/${locale}/ai-image-upscaler`;
+    canonicalUrl = `${process.env.NEXT_PUBLIC_WEB_URL}/${locale}/veo3`;
   }
 
   return {
     title:
       metadata?.title ||
-      "Nano Banana Image Upscaler - AI Photo Enhancement Tool",
+      "Veo3 AI Video Generator - Text to Video & Image to Video with Veo3",
     description:
       metadata?.description ||
-      "Nano Banana Image Upscaler uses advanced AI technology to enhance and upscale your photos with professional quality.",
+      "Create stunning videos with Veo3, Google's advanced AI video generator. Transform text to video and image to video with Veo3's 720P/1080P quality.",
     alternates: {
       canonical: canonicalUrl,
     },
   };
 }
 
-export default async function WorkspacePage({
+export default async function Veo3Page({
   params,
   searchParams,
 }: {
@@ -46,8 +46,8 @@ export default async function WorkspacePage({
 }) {
   const { locale } = await params;
   const resolvedSearchParams = await searchParams;
-  const page = await getAiImageUpscalerPage(locale);
-  
+  const page = await getVeo3Page(locale);
+
   // 从URL查询参数中获取初始图片URL
   const initialImageUrl = typeof resolvedSearchParams.imageUrl === 'string' ? resolvedSearchParams.imageUrl : null;
 
@@ -57,7 +57,7 @@ export default async function WorkspacePage({
       <HeroSection pageData={page} />
 
       {/* Workspace Section */}
-      <UpscalerWorkspace
+      <Veo3Workspace
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12"
         pageData={page}
         initialImageUrl={initialImageUrl}

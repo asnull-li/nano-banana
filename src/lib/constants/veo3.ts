@@ -2,8 +2,8 @@
 // 这个文件可以在客户端和服务器端使用
 
 // 每个视频消耗的积分数
-export const CREDITS_PER_VEO3_FAST = 40; // veo3_fast 模型
-export const CREDITS_PER_VEO3_QUALITY = 300; // veo3 模型（高质量）
+export const CREDITS_PER_VEO3_FAST = 50; // veo3_fast 模型
+export const CREDITS_PER_VEO3_QUALITY = 180; // veo3 模型（高质量）
 export const CREDITS_PER_1080P = 8; // 升级到 1080P
 
 // 视频模型类型
@@ -24,7 +24,7 @@ export const ASPECT_RATIOS_SUPPORT_1080P: AspectRatio[] = ["16:9"];
 
 // 提示词长度限制
 export const MIN_PROMPT_LENGTH = 3;
-export const MAX_PROMPT_LENGTH = 5000;
+export const MAX_PROMPT_LENGTH = 2000;
 
 // 图片URL数量限制（image-to-video 模式）
 export const MAX_IMAGE_URLS = 1; // Veo3 目前支持1张图片
