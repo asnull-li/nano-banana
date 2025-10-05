@@ -1,0 +1,132 @@
+/* Veo3 工作区样式 */
+
+/* 自定义滚动条 */
+.nano-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.nano-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 3px;
+}
+
+.nano-scrollbar::-webkit-scrollbar-thumb {
+  background: rgb(148 163 184 / 0.4);
+  border-radius: 3px;
+  transition: background 0.2s;
+}
+
+.nano-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgb(148 163 184 / 0.6);
+}
+
+/* 暗色模式滚动条 */
+.dark .nano-scrollbar::-webkit-scrollbar-thumb {
+  background: rgb(71 85 105 / 0.4);
+}
+
+.dark .nano-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgb(71 85 105 / 0.6);
+}
+
+/* 响应式优化 */
+@media (max-width: 1024px) {
+  /* 移动端单列布局 */
+  .veo3-workspace {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* 小屏幕优化 */
+  .veo3-workspace {
+    gap: 0.75rem !important;
+  }
+
+  /* 减少内边距 */
+  .veo3-panel-content {
+    padding: 1rem !important;
+  }
+
+  /* 标题字体缩小 */
+  .veo3-title {
+    font-size: 1.5rem !important;
+  }
+}
+
+/* 优化触摸设备体验 */
+@media (hover: none) {
+  .hover-lift:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  /* 增大触摸目标 */
+  button {
+    min-height: 44px;
+  }
+}
+
+/* 玻璃效果 */
+.glass-effect {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* 渐变边框 */
+.gradient-border {
+  position: relative;
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(135deg, #10b981, #06b6d4) border-box;
+  border: 2px solid transparent;
+  border-radius: 8px;
+}
+
+.dark .gradient-border {
+  background: linear-gradient(rgb(39, 39, 42), rgb(39, 39, 42)) padding-box,
+              linear-gradient(135deg, #10b981, #06b6d4) border-box;
+}
+
+/* 视频播放器全屏优化 */
+video:fullscreen {
+  object-fit: contain;
+}
+
+video:-webkit-full-screen {
+  object-fit: contain;
+}
+
+video:-moz-full-screen {
+  object-fit: contain;
+}
+
+/* 加载动画 */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-200%) skewX(-12deg);
+  }
+  100% {
+    transform: translateX(200%) skewX(-12deg);
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+/* 脉冲动画 */
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 1;
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4);
+  }
+  50% {
+    opacity: 0.9;
+    box-shadow: 0 0 0 8px rgba(16, 185, 129, 0);
+  }
+}
+
+.pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}

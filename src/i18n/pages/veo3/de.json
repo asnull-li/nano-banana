@@ -1,0 +1,227 @@
+{
+  "meta": {
+    "title": "Veo3 AI Video-Generator - Text zu Video & Bild zu Video mit Veo3",
+    "description": "Erstellen Sie beeindruckende Videos mit Veo3, Googles AI Video-Generator. Text zu Video & Bild zu Video mit 720P/1080P Qualität. Professionelle Videogenerierung."
+  },
+  "hero": {
+    "title": "Veo3 AI Video-Generator",
+    "description": "Entfesseln Sie die Kraft von Veo3, um professionelle Videos aus Textprompts oder Bildern zu erstellen. Googles Veo3-Modell bietet außergewöhnliche Videogenerierung mit nativem Audio, 4K-Qualität und erweiterten kreativen Kontrollen."
+  },
+  "features": {
+    "title": "Erleben Sie professionelle Videoerstellung mit Veo3 AI-Technologie",
+    "description": "Googles Veo3 bietet modernste Videogenerierung mit unvergleichlicher Qualität und kreativer Kontrolle für Filmemacher und Content-Ersteller.",
+    "items": [
+      {
+        "title": "Erweiterte Veo3 Videogenerierung",
+        "description": "Veo3 liefert außergewöhnliche Videoqualität mit Unterstützung für 4K-Auflösung. Dieses leistungsstarke Veo3-Modell generiert hochrealistische Videos mit verbesserter Physiksimulation, natürlichen Bewegungen und fotorealistischer Detailerhaltung. Ob Sie aus Text oder Bildern erstellen, Veo3 gewährleistet jedes Mal professionelle Ergebnisse."
+      },
+      {
+        "title": "Text zu Video und Bild zu Video mit Veo3",
+        "description": "Erleben Sie nahtlose Videoerstellung mit Veo3s Dual-Modus-Generierung. Konvertieren Sie Textprompts in beeindruckende Videos oder transformieren Sie statische Bilder in dynamische Inhalte. Veo3s fortschrittliche Prompt-Adhärenz-Technologie folgt komplexen Multi-Szenen-Anweisungen mit größerer Genauigkeit als je zuvor."
+      },
+      {
+        "title": "Native Audiogenerierung in Veo3",
+        "description": "Veo3 hebt sich durch native Audiogenerierungsfunktionen ab. Das Veo3-Modell generiert automatisch synchronisierte Soundeffekte, Dialoge und Hintergrundaudio, die perfekt zu Ihrem Videoinhalt passen. Diese einzigartige Veo3-Funktion erweckt Ihre Videos mit professioneller Audioqualität zum Leben."
+      },
+      {
+        "title": "Kreative Kontrolle mit Veo3",
+        "description": "Entfesseln Sie unbegrenzte Kreativität mit Veo3s erweiterten Kontrollen. Verwenden Sie Referenzbilder für Stilanpassung, erhalten Sie Charakterkonsistenz über Szenen hinweg, definieren Sie Kamerabewegungen und kontrollieren Sie Bewegungspfade. Veo3 gibt Ihnen die Präzisionswerkzeuge, die für professionelle Videoproduktion und Storytelling benötigt werden."
+      }
+    ]
+  },
+  "how_to_use": {
+    "title": "So erstellen Sie Videos mit dem Veo3 AI Video-Generator",
+    "description": "Generieren Sie professionelle Videos mit Veo3 in nur drei einfachen Schritten mit unserer intuitiven Oberfläche.",
+    "items": [
+      {
+        "title": "Geben Sie Ihren Prompt ein oder laden Sie ein Bild hoch",
+        "description": "Beginnen Sie Ihre Veo3-Videoerstellung, indem Sie einen detaillierten Textprompt eingeben oder ein Bild hochladen. Veo3 unterstützt sowohl Text-zu-Video- als auch Bild-zu-Video-Generierung und bietet Ihnen Flexibilität in der Erstellung. Je detaillierter Ihr Prompt, desto besser kann Veo3 Ihre kreative Vision verstehen."
+      },
+      {
+        "title": "Konfigurieren Sie die Veo3-Generierungseinstellungen",
+        "description": "Passen Sie Ihr Veo3-Video mit erweiterten Optionen an. Wählen Sie zwischen Text-zu-Video- oder Bild-zu-Video-Modus, wählen Sie 720P-Standardqualität oder aktualisieren Sie auf 1080P High Definition. Veo3 ermöglicht es Ihnen, kreative Kontrollen für optimale Ergebnisse zu verfeinern, die Ihren spezifischen Anforderungen entsprechen."
+      },
+      {
+        "title": "Generieren und laden Sie Ihr Veo3-Video herunter",
+        "description": "Klicken Sie auf generieren und lassen Sie Veo3 Ihr professionelles Video erstellen. Sobald Veo3 die Verarbeitung abgeschlossen hat, sehen Sie sich Ihr Video mit synchronisiertem Audio in der Vorschau an und laden Sie es in Ihrer bevorzugten Qualität herunter. Ihr Veo3-generiertes Video ist bereit zum Teilen, Bearbeiten oder für kommerzielle Nutzung."
+      }
+    ]
+  },
+  "workspace": {
+    "mode_selector": {
+      "text_to_video": "Text zu Video",
+      "image_to_video": "Bild zu Video"
+    },
+    "upload_zone": {
+      "title": "Referenzbild hochladen",
+      "description": "Laden Sie ein Bild für die Veo3 Bild-zu-Video-Generierung hoch",
+      "supported_formats": "Unterstützte Formate: JPEG, PNG, WebP",
+      "max_size": "Maximale Dateigröße: 10MB",
+      "error_file_too_large": "Die Datei ist zu groß. Die maximale Größe beträgt 10MB.",
+      "error_invalid_type": "Ungültiger Dateityp. Bitte laden Sie ein Bild hoch.",
+      "preview_alt": "Veo3 Referenzbild Vorschau",
+      "delete_tooltip": "Bild entfernen",
+      "replace_tooltip": "Bild ersetzen",
+      "drop_text": "Zum Hochladen auf Veo3 ablegen",
+      "click_or_drag": "Klicken oder ziehen Sie zum Hochladen"
+    },
+    "prompt": {
+      "label": "Prompt",
+      "tooltip": "Beschreiben Sie das Video, das Sie generieren möchten. Seien Sie spezifisch und detailliert für beste Ergebnisse.",
+      "placeholder": "Beschreiben Sie Ihr Video... z.B. 'Eine süße Katze, die in Zeitlupe mit einem Wollknäuel spielt, kinematografische Beleuchtung, 4K-Qualität'",
+      "min_chars_required": "Mindestens ${count} Zeichen erforderlich",
+      "approaching_limit": "Nähert sich dem Zeichenlimit"
+    },
+    "controls": {
+      "model_label": "Modell",
+      "model_tooltip_line1": "Schnellmodus: Schnelle Generierung",
+      "model_tooltip_line2": "Qualitätsmodus: Beste Qualitätsausgabe",
+      "model_fast": "Schnellmodus",
+      "model_fast_desc": "Schnelle Generierung",
+      "model_quality": "Qualitätsmodus",
+      "model_quality_desc": "Hochwertige Ausgabe",
+      "aspect_ratio_label": "Seitenverhältnis",
+      "aspect_ratio_tooltip_line1": "16:9 unterstützt 1080P-Upgrade",
+      "aspect_ratio_tooltip_line2": "9:16 für mobile Videos",
+      "aspect_ratio_tooltip_line3": "Auto lässt KI entscheiden",
+      "advanced_options": "Erweiterte Optionen",
+      "watermark_label": "Wasserzeichen",
+      "watermark_placeholder": "Text-Wasserzeichen hinzufügen...",
+      "random_seed_label": "Zufallsseed",
+      "random_seed_tooltip_line1": "Steuert Video-Zufälligkeit (10000-99999).",
+      "random_seed_tooltip_line2": "Gleicher Seed generiert ähnliche Videos.",
+      "random_seed_tooltip_line3": "Leer lassen für automatische Zuweisung.",
+      "random_seed_placeholder": "10000 - 99999",
+      "random_seed_hint": "Gleicher Seed generiert ähnliche Videos. Leer lassen für automatische Zuweisung.",
+      "auto_translate_label": "Automatische Prompt-Übersetzung",
+      "auto_translate_tooltip_line1": "Übersetzen Sie nicht-englische Prompts automatisch ins Englische für bessere Videogenerierungsqualität.",
+      "auto_translate_tooltip_line2": "Empfohlen aktiviert zu lassen für optimale Ergebnisse.",
+      "auto_translate_enabled": "Prompts werden automatisch ins Englische übersetzt",
+      "auto_translate_disabled": "Die ursprüngliche Prompt-Sprache wird verwendet"
+    },
+    "generate_button": {
+      "uploading": "Hochladen...",
+      "generating": "Generieren...",
+      "generate": "Video generieren (${credits} Credits)"
+    },
+    "empty_state": {
+      "title": "Noch kein Video",
+      "description": "Geben Sie einen Prompt ein und klicken Sie auf generieren, um Ihr erstes Video mit Veo3 zu erstellen",
+      "modes": "Text-zu-Video- oder Bild-zu-Video-Generierung"
+    },
+    "processing_state": {
+      "uploading_title": "Hochladen...",
+      "generating_title": "Video wird generiert...",
+      "uploading_description": "Ihr Bild wird auf den Server hochgeladen...",
+      "generating_description": "Ihr Video wird generiert. Dies kann einige Minuten dauern...",
+      "model_quality": "Qualitätsmodus",
+      "model_fast": "Schnellmodus",
+      "prompt_label": "Prompt:",
+      "dont_close": "Bitte schließen Sie diese Seite nicht während der Generierung..."
+    },
+    "failed_state": {
+      "title": "Generierung fehlgeschlagen",
+      "error_default": "Ein unerwarteter Fehler ist während der Videogenerierung aufgetreten",
+      "prompt_label": "Ihr Prompt:",
+      "credits_refunded": "Ihre Credits wurden erstattet. Wenn das Problem weiterhin besteht, wenden Sie sich bitte an unser Support-Team.",
+      "try_again": "Erneut versuchen",
+      "contact_support": "Support kontaktieren",
+      "need_help": "Benötigen Sie Hilfe? Senden Sie uns eine E-Mail an:"
+    },
+    "completed_state": {
+      "quality_720p": "720p",
+      "quality_1080p": "1080p HD",
+      "download": "Herunterladen",
+      "downloading": "Herunterladen...",
+      "preparing_1080p": "1080P HD-Version wird vorbereitet",
+      "preparing_1080p_hint": "Dies kann 1-2 Minuten dauern. Das Video wird automatisch angezeigt, wenn es fertig ist...",
+      "completed": "Abgeschlossen",
+      "mode_quality": "Qualität",
+      "mode_fast": "Schnell",
+      "upgrade_button": "Auf 1080p aktualisieren (${credits} Credits)",
+      "upgrading": "Aktualisierung...",
+      "input_image_label": "Eingabebild:"
+    },
+    "upgrade_modal": {
+      "title": "Auf 1080P aktualisieren",
+      "description": "Aktualisieren Sie Ihr Video auf kristallklare 1080P-Auflösung für ein besseres Seherlebnis.",
+      "enhanced_quality_title": "Verbesserte Qualität",
+      "enhanced_quality_description": "Aktualisieren Sie Ihr Video auf kristallklare 1080P-Auflösung für ein besseres Seherlebnis und professionelle Präsentation.",
+      "cost_label": "Kosten",
+      "balance_label": "Ihr Guthaben",
+      "insufficient_credits": "Sie haben nicht genügend Credits. Bitte laden Sie zuerst auf.",
+      "hint": "Das aktualisierte 1080P-Video wird generiert und neben Ihrer 720P-Version gespeichert. Sie können jederzeit zwischen ihnen wechseln.",
+      "cancel": "Abbrechen",
+      "confirm": "Bestätigen (${credits} Credits)",
+      "confirming": "Aktualisierung..."
+    },
+    "toast": {
+      "video_generated": "Video generiert! Ihr Video ist bereit zur Ansicht.",
+      "error_occurred": "Ein Fehler ist während der Generierung aufgetreten",
+      "prompt_required": "Bitte geben Sie einen Prompt für die Videogenerierung ein",
+      "prompt_length_error": "Der Prompt muss zwischen 3 und 5000 Zeichen lang sein",
+      "image_required": "Bitte laden Sie ein Bild für die Bild-zu-Video-Generierung hoch",
+      "login_required": "Bitte melden Sie sich an, um Videos zu generieren",
+      "insufficient_credits": "Sie benötigen ${credits} Credits, um mit ${mode}-Modus zu generieren",
+      "uploading_image": "Bild wird hochgeladen...",
+      "image_uploaded": "Bild erfolgreich hochgeladen",
+      "upload_failed": "Fehler beim Hochladen des Bildes",
+      "upgraded_1080p": "Auf 1080P aktualisiert! Ihr hochwertiges Video ist bereit",
+      "upgrade_timeout": "1080P-Upgrade-Zeitüberschreitung. Der Server verarbeitet noch, bitte versuchen Sie es später erneut.",
+      "preparing_1080p": "1080P-Video wird vom Server vorbereitet. Dies dauert 1-2 Minuten, bitte warten Sie...",
+      "still_processing": "Verarbeitung läuft noch... (${seconds}s vergangen)",
+      "upgrade_failed": "Fehler beim Aktualisieren des Videos",
+      "need_credits_1080p": "Sie benötigen ${credits} Credits für 1080P-Upgrade",
+      "downloading_video": "${quality} Video wird heruntergeladen...",
+      "download_success": "${quality} Video erfolgreich heruntergeladen",
+      "download_failed": "Fehler beim Herunterladen des Videos. Bitte versuchen Sie es erneut.",
+      "new_video": "Neues Video"
+    }
+  },
+  "faq": {
+    "title": "Veo3 Video-Generator - Häufig gestellte Fragen",
+    "description": "Erhalten Sie Antworten auf häufige Fragen zur Veo3 AI-Videogenerierung.",
+    "contact": {
+      "question_text": "Haben Sie weitere Fragen zu Veo3?",
+      "support_link": "Kontaktieren Sie unser Veo3-Support-Team"
+    },
+    "items": [
+      {
+        "question": "Was ist Veo3 und wie funktioniert es?",
+        "answer": "Veo3 ist Googles hochmodernes KI-Videogenerierungsmodell, das professionelle Videos aus Textprompts oder Bildern erstellt. Veo3 verwendet fortschrittliches maschinelles Lernen, um Videos mit 4K-Auflösung, nativem Audio und fotorealistischer Qualität zu generieren. Das Veo3-Modell zeichnet sich durch das Verständnis komplexer Prompts und die Aufrechterhaltung der Konsistenz über Szenen hinweg aus und ist perfekt für Content-Ersteller und Filmemacher."
+      },
+      {
+        "question": "Kann Veo3 Videos sowohl aus Text als auch aus Bildern generieren?",
+        "answer": "Ja! Veo3 ist ein vielseitiger Video-Generator, der sowohl Text-zu-Video- als auch Bild-zu-Video-Generierung unterstützt. Sie können Ihre Vision in Text beschreiben und Veo3 von Grund auf erstellen lassen, oder ein vorhandenes Bild hochladen und Veo3 es in ein dynamisches Video animieren lassen. Beide Modi nutzen Veo3s leistungsstarke KI-Fähigkeiten für professionelle Ergebnisse."
+      },
+      {
+        "question": "Beinhaltet Veo3 Audiogenerierung?",
+        "answer": "Absolut! Eines der herausragenden Merkmale von Veo3 ist die native Audiogenerierung. Im Gegensatz zu anderen Video-Generatoren erstellt Veo3 automatisch synchronisierte Soundeffekte, Dialoge und Hintergrundmusik, die perfekt zu Ihrem Videoinhalt passen. Dies macht Veo3-generierte Videos komplett und ohne zusätzliche Audiobearbeitung einsatzbereit."
+      },
+      {
+        "question": "Wie lange dauert es, bis Veo3 ein Video generiert?",
+        "answer": "Die Veo3-Videogenerierung dauert normalerweise 2-5 Minuten, abhängig von der Komplexität Ihres Prompts, der ausgewählten Qualität und der aktuellen Serverauslastung. Pro+-Mitglieder profitieren von bevorzugter Verarbeitung, was schnellere Veo3-Generierungszeiten bedeutet. Das Veo3-System ist für Effizienz optimiert und behält gleichzeitig die höchste Qualitätsausgabe bei."
+      },
+      {
+        "question": "Was macht Veo3 anders als andere KI-Video-Generatoren?",
+        "answer": "Veo3 hebt sich mit mehreren einzigartigen Vorteilen ab: native Audiogenerierung, 4K-Qualitätsunterstützung, erweiterte Prompt-Adhärenz, verbesserte Physiksimulation und kreative Kontrollen wie Charakterkonsistenz und Kamerabewegung. Veo3 wird von Google DeepMind entwickelt und bringt modernste Forschung in die praktische Videogenerierung. Das Veo3-Modell liefert realistischere und kontrollierbarere Ergebnisse als frühere Generationstools."
+      },
+      {
+        "question": "Kann ich Veo3-generierte Videos für kommerzielle Zwecke verwenden?",
+        "answer": "Ja, alle über unsere Plattform mit Veo3 generierten Videos sind für kommerzielle Nutzung geeignet. Veo3 erstellt originelle Inhalte basierend auf Ihren Prompts und eignet sich perfekt für Marketingvideos, Social-Media-Inhalte, Präsentationen und professionelle Projekte. Stellen Sie immer sicher, dass Ihre Prompts keine urheberrechtlich geschützten Materialien verletzen."
+      },
+      {
+        "question": "Wie viel kostet die Veo3-Videogenerierung?",
+        "answer": "Die Veo3-Videogenerierung verwendet ein kreditbasiertes System. Jedes 720P Veo3-Video kostet eine bestimmte Anzahl von Credits, während die 1080P HD-Generierung zusätzliche Credits erfordert. Diese flexible Preisgestaltung stellt sicher, dass Sie nur für die Veo3-Videos bezahlen, die Sie erstellen. Überprüfen Sie die Arbeitsbereichssteuerungen für aktuelle Credit-Kosten."
+      },
+      {
+        "question": "Welche kreativen Kontrollen bietet Veo3?",
+        "answer": "Veo3 bietet erweiterte kreative Kontrollen einschließlich Stilanpassung aus Referenzbildern, Charakterkonsistenz über Szenen hinweg, Kamerabewegungsdefinitionen und Bewegungspfadsteuerung. Diese Veo3-Funktionen geben Ihnen präzise Kontrolle über Ihre Videogenerierung und machen es geeignet für professionelle Filmproduktion und komplexe Storytelling-Projekte."
+      },
+      {
+        "question": "Ist Veo3 für Anfänger geeignet?",
+        "answer": "Absolut! Während Veo3 erweiterte Funktionen für Profis bietet, ist es so konzipiert, dass es für jeden zugänglich ist. Geben Sie einfach eine Textbeschreibung ein oder laden Sie ein Bild hoch, und Veo3 übernimmt den komplexen Videogenerierungsprozess. Unsere intuitive Oberfläche macht es einfach, sofort mit der Erstellung professioneller Veo3-Videos zu beginnen, unabhängig von Ihrem technischen Hintergrund."
+      }
+    ]
+  }
+}

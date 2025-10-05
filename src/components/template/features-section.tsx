@@ -1,10 +1,23 @@
+interface Feature {
+  title: string;
+  description: string;
+}
+
+interface FeaturesData {
+  title: string;
+  description: string;
+  items?: Feature[];
+}
+
 interface FeaturesSectionProps {
-  pageData?: any;
+  pageData?: {
+    features?: FeaturesData;
+  };
 }
 
 export default function FeaturesSection({ pageData }: FeaturesSectionProps) {
   const featuresData = pageData?.features;
-  
+
   if (!featuresData) {
     return null;
   }
@@ -33,14 +46,14 @@ export default function FeaturesSection({ pageData }: FeaturesSectionProps) {
 
         {/* Features Grid */}
         <div className="grid md:grid-cols-2 gap-6 lg:gap-8 max-w-6xl mx-auto">
-          {featuresData.items?.map((item: any, index: number) => (
-            <div 
+          {featuresData.items?.map((item, index) => (
+            <div
               key={index}
               className="group relative p-6 lg:p-8 rounded-2xl bg-gradient-to-br from-white/80 to-slate-50/60 dark:from-slate-800/60 dark:to-slate-900/50 backdrop-blur-sm border border-slate-200/60 dark:border-slate-700/50 hover:border-green-500/30 dark:hover:border-green-400/50 transition-all duration-500 hover:shadow-xl hover:shadow-green-500/10 dark:hover:shadow-green-400/20 hover:-translate-y-1"
             >
               {/* Glow Effect */}
               <div className="absolute -inset-0.5 bg-gradient-to-r from-green-500 to-cyan-500 dark:from-green-400 dark:to-cyan-400 rounded-2xl opacity-0 group-hover:opacity-20 blur-sm transition-all duration-500" />
-              
+
               {/* Content */}
               <div className="relative z-10">
                 {/* Feature Number */}

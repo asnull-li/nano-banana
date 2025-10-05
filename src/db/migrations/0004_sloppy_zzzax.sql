@@ -1,0 +1,23 @@
+CREATE TABLE "veo3_tasks" (
+	"id" integer PRIMARY KEY GENERATED ALWAYS AS IDENTITY (sequence name "veo3_tasks_id_seq" INCREMENT BY 1 MINVALUE 1 MAXVALUE 2147483647 START WITH 1 CACHE 1),
+	"task_id" varchar(255) NOT NULL,
+	"request_id" varchar(255) NOT NULL,
+	"user_uuid" varchar(255) NOT NULL,
+	"type" varchar(50) NOT NULL,
+	"model" varchar(50) NOT NULL,
+	"input" text NOT NULL,
+	"status" varchar(50) DEFAULT 'pending' NOT NULL,
+	"result" text,
+	"video_720p_url" text,
+	"video_1080p_url" text,
+	"has_1080p" boolean DEFAULT false NOT NULL,
+	"credits_used" integer DEFAULT 0 NOT NULL,
+	"credits_refunded" integer DEFAULT 0 NOT NULL,
+	"error_message" text,
+	"error_code" varchar(50),
+	"created_at" timestamp with time zone DEFAULT now(),
+	"updated_at" timestamp with time zone DEFAULT now(),
+	"completed_at" timestamp with time zone,
+	CONSTRAINT "veo3_tasks_task_id_unique" UNIQUE("task_id"),
+	CONSTRAINT "veo3_tasks_request_id_unique" UNIQUE("request_id")
+);

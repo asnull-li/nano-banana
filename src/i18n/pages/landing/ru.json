@@ -18,6 +18,11 @@
           "icon": "RiImageAiFill"
         },
         {
+          "title": "Veo3",
+          "url": "/veo3",
+          "icon": "RiImageAiFill"
+        },
+        {
           "title": "История создания",
           "url": "/history",
           "icon": "RiHistoryLine"

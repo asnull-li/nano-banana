@@ -1,10 +1,10 @@
 import { Metadata } from "next";
 import { setRequestLocale } from "next-intl/server";
 import { getAiImageUpscalerPage } from "@/services/page";
-import HeroSection from "@/components/workspace/upscaler/hero-section";
-import FeaturesSection from "@/components/workspace/upscaler/features-section";
-import HowToUseSection from "@/components/workspace/upscaler/how-to-use-section";
-import FaqSection from "@/components/workspace/upscaler/faq-section";
+import HeroSection from "@/components/template/hero-section";
+import FeaturesSection from "@/components/template/features-section";
+import HowToUseSection from "@/components/template/how-to-use-section";
+import FaqSection from "@/components/template/faq-section";
 import UpscalerWorkspace from "@/components/workspace/upscaler";
 
 export async function generateMetadata({

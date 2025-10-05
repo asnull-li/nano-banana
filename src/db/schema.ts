@@ -179,3 +179,26 @@ export const upscalerTasks = pgTable("upscaler_tasks", {
   created_at: timestamp({ withTimezone: true }).defaultNow(),
   updated_at: timestamp({ withTimezone: true }).defaultNow(),
 });
+
+// Veo3 Video Tasks table
+export const veo3Tasks = pgTable("veo3_tasks", {
+  id: integer().primaryKey().generatedAlwaysAsIdentity(),
+  task_id: varchar({ length: 255 }).notNull().unique(),
+  request_id: varchar({ length: 255 }).notNull().unique(),
+  user_uuid: varchar({ length: 255 }).notNull(),
+  type: varchar({ length: 50 }).notNull(), // 'text-to-video' | 'image-to-video'
+  model: varchar({ length: 50 }).notNull(), // 'veo3' | 'veo3_fast'
+  input: text().notNull(), // JSON storage for {prompt, imageUrls, aspectRatio, watermark, seeds, etc}
+  status: varchar({ length: 50 }).notNull().default('pending'), // pending | processing | completed | failed
+  result: text(), // JSON storage for result from Veo3 API
+  video_720p_url: text(), // R2 stored 720p video URL
+  video_1080p_url: text(), // R2 stored 1080p video URL (only for 16:9)
+  has_1080p: boolean().notNull().default(false),
+  credits_used: integer().notNull().default(0),
+  credits_refunded: integer().notNull().default(0),
+  error_message: text(),
+  error_code: varchar({ length: 50 }),
+  created_at: timestamp({ withTimezone: true }).defaultNow(),
+  updated_at: timestamp({ withTimezone: true }).defaultNow(),
+  completed_at: timestamp({ withTimezone: true }),
+});
