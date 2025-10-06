@@ -2,8 +2,8 @@
 // 这个文件可以在客户端和服务器端使用
 
 // 每个视频消耗的积分数
-export const CREDITS_PER_VEO3_FAST = 50; // veo3_fast 模型
-export const CREDITS_PER_VEO3_QUALITY = 180; // veo3 模型（高质量）
+export const CREDITS_PER_VEO3_FAST = 40; // veo3_fast 模型
+export const CREDITS_PER_VEO3_QUALITY = 150; // veo3 模型（高质量）
 export const CREDITS_PER_1080P = 8; // 升级到 1080P
 
 // 视频模型类型
