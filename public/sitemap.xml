@@ -18,6 +18,10 @@
     <lastmod>2025-09-10T10:00:00+00:00</lastmod>
   </url>
   <url>
+    <loc>https://nanobanana.org/veo3</loc>
+    <lastmod>2025-10-06T10:00:00+00:00</lastmod>
+  </url>
+  <url>
     <loc>https://nanobanana.org/zh</loc>
     <lastmod>2025-08-15T10:00:00+00:00</lastmod>
     <priority>1.0</priority>
@@ -33,6 +37,10 @@
   <url>
     <loc>https://nanobanana.org/zh/ai-image-upscaler</loc>
     <lastmod>2025-09-10T10:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://nanobanana.org/zh/veo3</loc>
+    <lastmod>2025-10-06T10:00:00+00:00</lastmod>
   </url>
   <url>
     <loc>https://nanobanana.org/ko</loc>
@@ -52,6 +60,10 @@
     <lastmod>2025-09-10T10:00:00+00:00</lastmod>
   </url>
   <url>
+    <loc>https://nanobanana.org/ko/veo3</loc>
+    <lastmod>2025-10-06T10:00:00+00:00</lastmod>
+  </url>
+  <url>
     <loc>https://nanobanana.org/ja</loc>
     <lastmod>2025-08-26T10:00:00+00:00</lastmod>
     <priority>1.0</priority>
@@ -67,6 +79,10 @@
   <url>
     <loc>https://nanobanana.org/ja/ai-image-upscaler</loc>
     <lastmod>2025-09-10T10:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://nanobanana.org/ja/veo3</loc>
+    <lastmod>2025-10-06T10:00:00+00:00</lastmod>
   </url>
   <url>
     <loc>https://nanobanana.org/es</loc>
@@ -86,6 +102,10 @@
     <lastmod>2025-09-10T10:00:00+00:00</lastmod>
   </url>
   <url>
+    <loc>https://nanobanana.org/es/veo3</loc>
+    <lastmod>2025-10-06T10:00:00+00:00</lastmod>
+  </url>
+  <url>
     <loc>https://nanobanana.org/de</loc>
     <lastmod>2025-08-28T10:00:00+00:00</lastmod>
     <priority>1.0</priority>
@@ -101,6 +121,10 @@
   <url>
     <loc>https://nanobanana.org/de/ai-image-upscaler</loc>
     <lastmod>2025-09-10T10:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://nanobanana.org/de/veo3</loc>
+    <lastmod>2025-10-06T10:00:00+00:00</lastmod>
   </url>
   <url>
     <loc>https://nanobanana.org/fr</loc>
@@ -120,6 +144,10 @@
     <lastmod>2025-09-10T10:00:00+00:00</lastmod>
   </url>
   <url>
+    <loc>https://nanobanana.org/fr/veo3</loc>
+    <lastmod>2025-10-06T10:00:00+00:00</lastmod>
+  </url>
+  <url>
     <loc>https://nanobanana.org/ru</loc>
     <lastmod>2025-09-03T10:00:00+00:00</lastmod>
     <priority>1.0</priority>
@@ -135,6 +163,10 @@
   <url>
     <loc>https://nanobanana.org/ru/ai-image-upscaler</loc>
     <lastmod>2025-09-10T10:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://nanobanana.org/ru/veo3</loc>
+    <lastmod>2025-10-06T10:00:00+00:00</lastmod>
   </url>
   <url>
     <loc>https://nanobanana.org/ar</loc>
@@ -154,6 +186,10 @@
     <lastmod>2025-09-10T10:00:00+00:00</lastmod>
   </url>
   <url>
+    <loc>https://nanobanana.org/ar/veo3</loc>
+    <lastmod>2025-10-06T10:00:00+00:00</lastmod>
+  </url>
+  <url>
     <loc>https://nanobanana.org/pt</loc>
     <lastmod>2025-09-24T10:00:00+00:00</lastmod>
     <priority>1.0</priority>
@@ -169,5 +205,9 @@
   <url>
     <loc>https://nanobanana.org/pt/ai-image-upscaler</loc>
     <lastmod>2025-09-24T10:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://nanobanana.org/pt/veo3</loc>
+    <lastmod>2025-10-06T10:00:00+00:00</lastmod>
   </url>
 </urlset>
