@@ -41,8 +41,10 @@ export default function NanoBananaWorkspace({
     taskId,
     aiDescription,
     errorMessage,
+    imageSize,
     setMode,
     setPrompt,
+    setImageSize,
     addImages,
     addImageFromUrl,
     removeImage,
@@ -77,11 +79,13 @@ export default function NanoBananaWorkspace({
               uploadedImages={uploadedImages}
               prompt={prompt}
               status={status}
+              imageSize={imageSize}
               onModeChange={setMode}
               onAddImages={addImages}
               onRemoveImage={removeImage}
               onClearImages={clearImages}
               onPromptChange={setPrompt}
+              onImageSizeChange={setImageSize}
               onSubmit={submitTask}
             />
           </div>

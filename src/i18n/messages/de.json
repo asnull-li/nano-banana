@@ -178,13 +178,30 @@
         "clear_all": "Alle Bilder löschen",
         "error_invalid_type": "Nicht unterstütztes Dateiformat, nur JPG, PNG, WebP werden unterstützt",
         "error_too_large": "Dateigröße überschreitet 10MB-Limit",
-        "error_too_many": "Maximal 5 Dateien können gleichzeitig hochgeladen werden"
+        "error_too_many": "Maximal 10 Dateien können gleichzeitig hochgeladen werden"
       },
       "prompt_input": {
         "title": "Beschreiben Sie Ihre Idee",
         "placeholder_image_edit": "Beschreiben Sie den gewünschten Effekt, einschließlich Stil, Farbe, Komposition und andere Details...",
         "placeholder_text_to_image": "Beschreiben Sie detailliert das Bild, das Sie generieren möchten, einschließlich Subjekt, Szene, Stil, Farbe usw...",
         "tip": "Detaillierte Beschreibungen führen zu besseren Ergebnissen"
+      },
+      "image_size_selector": {
+        "title": "Seitenverhältnis",
+        "auto": "Auto",
+        "ratios": {
+          "auto": "KI auto-entscheiden",
+          "1:1": "Sozial-Avatar",
+          "9:16": "Vertikales Video",
+          "16:9": "Horizontales Video",
+          "3:4": "Hochformat-Foto",
+          "4:3": "Querformat-Foto",
+          "3:2": "Klassisches Foto",
+          "2:3": "Vertikales Klassisch",
+          "5:4": "Mittelformat",
+          "4:5": "Vertikales Mittel",
+          "21:9": "Ultrawide"
+        }
       },
       "credits_display": {
         "title": "Guthabenverbrauch",
@@ -222,7 +239,7 @@
       },
       "image_card": {
         "image_load_failed": "Bildladevorgang fehlgeschlagen",
-        "image_number": "Bild #{number}",
+        "image_number": "#{number}",
         "from_link": "Vom Link"
       },
       "image_action_bar": {
@@ -301,7 +318,7 @@
       "generation_success": "{count} Bilder erfolgreich generiert!",
       "get_results_failed": "Ergebnisse abrufen fehlgeschlagen",
       "task_failed": "Aufgabenausführung fehlgeschlagen",
-      "max_images_warning": "Maximal 5 Bilder erlaubt, automatisch begrenzt"
+      "max_images_warning": "Maximal 10 Bilder erlaubt, automatisch begrenzt"
     },
     "validation": {
       "please_enter_prompt": "Bitte geben Sie eine Beschreibung ein",

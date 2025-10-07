@@ -178,13 +178,30 @@
         "clear_all": "すべての画像をクリア",
         "error_invalid_type": "サポートされていないファイル形式です。JPG、PNG、WebPのみサポートされています",
         "error_too_large": "ファイルサイズが10MBの制限を超えています",
-        "error_too_many": "一度に最大5ファイルまでアップロードできます"
+        "error_too_many": "一度に最大10ファイルまでアップロードできます"
       },
       "prompt_input": {
         "title": "アイデアを描写してください",
         "placeholder_image_edit": "スタイル、色、構図などの詳細を含む、希望する効果を描写してください...",
         "placeholder_text_to_image": "主体、シーン、スタイル、色などを含む、生成したい画像を詳細に描写してください...",
         "tip": "詳細な描写がより良い結果をもたらします"
+      },
+      "image_size_selector": {
+        "title": "アスペクト比",
+        "auto": "Auto",
+        "ratios": {
+          "auto": "AI自動決定",
+          "1:1": "SNSアイコン",
+          "9:16": "縦型動画",
+          "16:9": "横型動画",
+          "3:4": "縦型写真",
+          "4:3": "横型写真",
+          "3:2": "クラシック写真",
+          "2:3": "縦型クラシック",
+          "5:4": "中判",
+          "4:5": "縦型中判",
+          "21:9": "ウルトラワイド"
+        }
       },
       "credits_display": {
         "title": "クレジット消費",
@@ -222,7 +239,7 @@
       },
       "image_card": {
         "image_load_failed": "画像の読み込みに失敗しました",
-        "image_number": "画像 #{number}",
+        "image_number": "#{number}",
         "from_link": "リンクから"
       },
       "image_action_bar": {
@@ -301,7 +318,7 @@
       "generation_success": "{count}枚の画像を正常に生成しました！",
       "get_results_failed": "結果の取得に失敗しました",
       "task_failed": "タスクの実行に失敗しました",
-      "max_images_warning": "最大5枚まで、自動的に制限されました"
+      "max_images_warning": "最大10枚の画像が許可され、自動的に制限されます"
     },
     "validation": {
       "please_enter_prompt": "プロンプトを入力してください",

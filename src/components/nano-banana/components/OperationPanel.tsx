@@ -12,6 +12,7 @@ import { useTranslations } from "next-intl";
 import ModeSelector from "./operation/ModeSelector";
 import ImageUploadArea from "./operation/ImageUploadArea";
 import PromptInput from "./operation/PromptInput";
+import ImageSizeSelector from "./operation/ImageSizeSelector";
 import CreditsDisplay from "./operation/CreditsDisplay";
 import GenerateButton from "./operation/GenerateButton";
 
@@ -22,11 +23,13 @@ interface OperationPanelProps {
   uploadedImages: UploadedImage[];
   prompt: string;
   status: string;
+  imageSize: string;
   onModeChange: (mode: "image-to-image" | "text-to-image") => void;
   onAddImages: (files: File[]) => void;
   onRemoveImage: (id: string) => void;
   onClearImages: () => void;
   onPromptChange: (prompt: string) => void;
+  onImageSizeChange: (size: string) => void;
   onSubmit: () => void;
 }
 
@@ -35,11 +38,13 @@ export default function OperationPanel({
   uploadedImages,
   prompt,
   status,
+  imageSize,
   onModeChange,
   onAddImages,
   onRemoveImage,
   onClearImages,
   onPromptChange,
+  onImageSizeChange,
   onSubmit,
 }: OperationPanelProps) {
   const { credits } = useCredits();
@@ -101,6 +106,13 @@ export default function OperationPanel({
           mode={mode}
           prompt={prompt}
           onPromptChange={onPromptChange}
+          disabled={isProcessing}
+        />
+
+        {/* 图片尺寸选择 */}
+        <ImageSizeSelector
+          value={imageSize}
+          onChange={onImageSizeChange}
           disabled={isProcessing}
         />
 

@@ -54,15 +54,17 @@ async function createKieTask(request: KieApiRequest): Promise<string> {
 export async function submitTextToImage(
   prompt: string,
   numImages: number = 1,
-  webhookUrl?: string
+  webhookUrl?: string,
+  imageSize: string = "auto",
+  outputFormat: string = "png"
 ): Promise<string> {
   const request: KieApiRequest = {
     model: "google/nano-banana",
     callBackUrl: webhookUrl,
     input: {
       prompt,
-      output_format: "png",
-      image_size: "auto",
+      output_format: outputFormat,
+      image_size: imageSize,
     },
   };
 
@@ -80,7 +82,9 @@ export async function submitImageEdit(
   prompt: string,
   imageUrls: string[],
   numImages: number = 1,
-  webhookUrl?: string
+  webhookUrl?: string,
+  imageSize: string = "auto",
+  outputFormat: string = "png"
 ): Promise<string> {
   const request: KieApiRequest = {
     model: "google/nano-banana-edit",
@@ -88,8 +92,8 @@ export async function submitImageEdit(
     input: {
       prompt,
       image_urls: imageUrls,
-      output_format: "png",
-      image_size: "auto",
+      output_format: outputFormat,
+      image_size: imageSize,
     },
   };
 

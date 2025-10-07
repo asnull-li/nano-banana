@@ -178,13 +178,30 @@
         "clear_all": "모든 이미지 지우기",
         "error_invalid_type": "지원되지 않는 파일 형식입니다. JPG, PNG, WebP만 지원됩니다",
         "error_too_large": "파일 크기가 10MB 제한을 초과합니다",
-        "error_too_many": "한 번에 최대 5개 파일만 업로드할 수 있습니다"
+        "error_too_many": "한 번에 최대 10개 파일만 업로드할 수 있습니다"
       },
       "prompt_input": {
         "title": "아이디어 설명하기",
         "placeholder_image_edit": "스타일, 색상, 구도 등의 세부 사항을 포함하여 원하는 효과를 설명해주세요...",
         "placeholder_text_to_image": "주제, 장면, 스타일, 색상 등을 포함하여 생성하고 싶은 이미지를 자세히 설명해주세요...",
         "tip": "자세한 설명이 더 나은 결과를 가져옵니다"
+      },
+      "image_size_selector": {
+        "title": "화면 비율",
+        "auto": "Auto",
+        "ratios": {
+          "auto": "AI 자동 결정",
+          "1:1": "소셜 아바타",
+          "9:16": "세로 동영상",
+          "16:9": "가로 동영상",
+          "3:4": "세로 사진",
+          "4:3": "가로 사진",
+          "3:2": "클래식 사진",
+          "2:3": "세로 클래식",
+          "5:4": "중형 포맷",
+          "4:5": "세로 중형",
+          "21:9": "울트라와이드"
+        }
       },
       "credits_display": {
         "title": "크레딧 소모",
@@ -222,7 +239,7 @@
       },
       "image_card": {
         "image_load_failed": "이미지 로딩 실패",
-        "image_number": "이미지 #{number}",
+        "image_number": "#{number}",
         "from_link": "링크에서"
       },
       "image_action_bar": {
@@ -301,7 +318,7 @@
       "generation_success": "{count}개 이미지를 성공적으로 생성했습니다!",
       "get_results_failed": "결과 가져오기 실패",
       "task_failed": "작업 실행 실패",
-      "max_images_warning": "최대 5개 이미지만 허용, 자동으로 제한됨"
+      "max_images_warning": "최대 10개 이미지 허용, 자동으로 제한됨"
     },
     "validation": {
       "please_enter_prompt": "프롬프트를 입력해주세요",

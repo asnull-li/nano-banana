@@ -178,13 +178,30 @@
         "clear_all": "Clear all images",
         "error_invalid_type": "Unsupported file format, only JPG, PNG, WebP are supported",
         "error_too_large": "File size exceeds 10MB limit",
-        "error_too_many": "Maximum 5 files can be uploaded at once"
+        "error_too_many": "Maximum 10 files can be uploaded at once"
       },
       "prompt_input": {
         "title": "Describe your idea",
         "placeholder_image_edit": "Describe the effect you want, including style, color, composition and other details...",
         "placeholder_text_to_image": "Describe in detail the image you want to generate, including subject, scene, style, color, etc...",
         "tip": "Detailed descriptions lead to better results"
+      },
+      "image_size_selector": {
+        "title": "Aspect Ratio",
+        "auto": "Auto",
+        "ratios": {
+          "auto": "AI auto-decide",
+          "1:1": "Social avatar",
+          "9:16": "Vertical video",
+          "16:9": "Horizontal video",
+          "3:4": "Portrait photo",
+          "4:3": "Landscape photo",
+          "3:2": "Classic photo",
+          "2:3": "Vertical classic",
+          "5:4": "Medium format",
+          "4:5": "Vertical medium",
+          "21:9": "Ultrawide"
+        }
       },
       "credits_display": {
         "title": "Credit Cost",
@@ -222,7 +239,7 @@
       },
       "image_card": {
         "image_load_failed": "Image loading failed",
-        "image_number": "Image #{number}",
+        "image_number": "#{number}",
         "from_link": "From link"
       },
       "image_action_bar": {
@@ -301,7 +318,7 @@
       "generation_success": "Successfully generated {count} images!",
       "get_results_failed": "Failed to get results",
       "task_failed": "Task execution failed",
-      "max_images_warning": "Maximum 5 images allowed, automatically limited"
+      "max_images_warning": "Maximum 10 images allowed, automatically limited"
     },
     "validation": {
       "please_enter_prompt": "Please enter a prompt",

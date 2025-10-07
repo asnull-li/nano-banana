@@ -178,13 +178,30 @@
         "clear_all": "Effacer toutes les images",
         "error_invalid_type": "Format de fichier non pris en charge, seuls JPG, PNG, WebP sont supportés",
         "error_too_large": "La taille du fichier dépasse la limite de 10MB",
-        "error_too_many": "Maximum 5 fichiers peuvent être téléchargés à la fois"
+        "error_too_many": "Maximum 10 fichiers peuvent être téléchargés à la fois"
       },
       "prompt_input": {
         "title": "Décrivez votre idée",
         "placeholder_image_edit": "Décrivez l'effet que vous voulez, y compris le style, la couleur, la composition et d'autres détails...",
         "placeholder_text_to_image": "Décrivez en détail l'image que vous voulez générer, y compris le sujet, la scène, le style, la couleur, etc...",
         "tip": "Les descriptions détaillées mènent à de meilleurs résultats"
+      },
+      "image_size_selector": {
+        "title": "Rapport d'Aspect",
+        "auto": "Auto",
+        "ratios": {
+          "auto": "IA auto-décide",
+          "1:1": "Avatar social",
+          "9:16": "Vidéo verticale",
+          "16:9": "Vidéo horizontale",
+          "3:4": "Photo portrait",
+          "4:3": "Photo paysage",
+          "3:2": "Photo classique",
+          "2:3": "Portrait classique",
+          "5:4": "Format moyen",
+          "4:5": "Portrait moyen",
+          "21:9": "Ultra-large"
+        }
       },
       "credits_display": {
         "title": "Consommation de crédits",
@@ -222,7 +239,7 @@
       },
       "image_card": {
         "image_load_failed": "Échec du chargement de l'image",
-        "image_number": "Image #{number}",
+        "image_number": "#{number}",
         "from_link": "Depuis le lien"
       },
       "image_action_bar": {
@@ -301,7 +318,7 @@
       "generation_success": "{count} images générées avec succès !",
       "get_results_failed": "Échec de l'obtention des résultats",
       "task_failed": "Échec de l'exécution de la tâche",
-      "max_images_warning": "Maximum 5 images autorisées, automatiquement limité"
+      "max_images_warning": "Maximum 10 images autorisées, limité automatiquement"
     },
     "validation": {
       "please_enter_prompt": "Veuillez entrer une description",

@@ -178,13 +178,30 @@
         "clear_all": "Limpar todas as imagens",
         "error_invalid_type": "Formato de arquivo não suportado, apenas JPG, PNG, WebP são suportados",
         "error_too_large": "Tamanho do arquivo excede o limite de 10MB",
-        "error_too_many": "Máximo de 5 arquivos podem ser carregados por vez"
+        "error_too_many": "Máximo de 10 arquivos podem ser carregados por vez"
       },
       "prompt_input": {
         "title": "Descreva sua ideia",
         "placeholder_image_edit": "Descreva o efeito que você quer, incluindo estilo, cor, composição e outros detalhes...",
         "placeholder_text_to_image": "Descreva em detalhes a imagem que você quer gerar, incluindo assunto, cena, estilo, cor, etc...",
         "tip": "Descrições detalhadas levam a melhores resultados"
+      },
+      "image_size_selector": {
+        "title": "Proporção",
+        "auto": "Auto",
+        "ratios": {
+          "auto": "IA auto-decide",
+          "1:1": "Avatar social",
+          "9:16": "Vídeo vertical",
+          "16:9": "Vídeo horizontal",
+          "3:4": "Foto retrato",
+          "4:3": "Foto paisagem",
+          "3:2": "Foto clássica",
+          "2:3": "Retrato clássico",
+          "5:4": "Formato médio",
+          "4:5": "Retrato médio",
+          "21:9": "Ultra-largo"
+        }
       },
       "credits_display": {
         "title": "Custo de Crédito",
@@ -222,7 +239,7 @@
       },
       "image_card": {
         "image_load_failed": "Falha no carregamento da imagem",
-        "image_number": "Imagem #{number}",
+        "image_number": "#{number}",
         "from_link": "Do link"
       },
       "image_action_bar": {
@@ -301,7 +318,7 @@
       "generation_success": "{count} imagens geradas com sucesso!",
       "get_results_failed": "Falha ao obter resultados",
       "task_failed": "Falha na execução da tarefa",
-      "max_images_warning": "Máximo de 5 imagens permitidas, automaticamente limitado"
+      "max_images_warning": "Máximo de 10 imagens permitidas, limitado automaticamente"
     },
     "validation": {
       "please_enter_prompt": "Por favor, digite um prompt",

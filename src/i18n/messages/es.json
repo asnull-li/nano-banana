@@ -178,13 +178,30 @@
         "clear_all": "Limpiar todas las imágenes",
         "error_invalid_type": "Formato de archivo no compatible, solo se admiten JPG, PNG, WebP",
         "error_too_large": "El tamaño del archivo excede el límite de 10MB",
-        "error_too_many": "Se pueden subir máximo 5 archivos a la vez"
+        "error_too_many": "Se pueden subir máximo 10 archivos a la vez"
       },
       "prompt_input": {
         "title": "Describe tu idea",
         "placeholder_image_edit": "Describe el efecto que deseas, incluyendo estilo, color, composición y otros detalles...",
         "placeholder_text_to_image": "Describe detalladamente la imagen que quieres generar, incluyendo sujeto, escena, estilo, color, etc...",
         "tip": "Las descripciones detalladas conducen a mejores resultados"
+      },
+      "image_size_selector": {
+        "title": "Relación de Aspecto",
+        "auto": "Auto",
+        "ratios": {
+          "auto": "IA auto-decide",
+          "1:1": "Avatar social",
+          "9:16": "Vídeo vertical",
+          "16:9": "Vídeo horizontal",
+          "3:4": "Foto retrato",
+          "4:3": "Foto paisaje",
+          "3:2": "Foto clásica",
+          "2:3": "Retrato clásico",
+          "5:4": "Formato medio",
+          "4:5": "Retrato medio",
+          "21:9": "Ultra ancho"
+        }
       },
       "credits_display": {
         "title": "Consumo de Créditos",
@@ -222,7 +239,7 @@
       },
       "image_card": {
         "image_load_failed": "Error al cargar la imagen",
-        "image_number": "Imagen #{number}",
+        "image_number": "#{number}",
         "from_link": "Desde enlace"
       },
       "image_action_bar": {
@@ -301,7 +318,7 @@
       "generation_success": "¡{count} imágenes generadas exitosamente!",
       "get_results_failed": "Error al obtener resultados",
       "task_failed": "Error en la ejecución de la tarea",
-      "max_images_warning": "Máximo 5 imágenes permitidas, limitado automáticamente"
+      "max_images_warning": "Máximo 10 imágenes permitidas, limitado automáticamente"
     },
     "validation": {
       "please_enter_prompt": "Por favor ingresa una descripción",

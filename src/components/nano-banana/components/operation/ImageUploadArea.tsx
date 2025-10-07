@@ -63,7 +63,7 @@ export default function ImageUploadArea({
     },
     disabled: disabled,
     multiple: true,
-    maxFiles: 5,
+    maxFiles: 10,
     maxSize: 10 * 1024 * 1024, // 10MB
   });
 
@@ -75,7 +75,7 @@ export default function ImageUploadArea({
         </h3>
         {uploadedImages.length > 0 && (
           <Badge className="bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400 border-green-200 dark:border-green-700">
-            {uploadedImages.length}/5
+            {uploadedImages.length}/10
           </Badge>
         )}
       </div>
@@ -94,7 +94,7 @@ export default function ImageUploadArea({
         ))}
 
         {/* 添加图片卡片 */}
-        {uploadedImages.length < 5 && (
+        {uploadedImages.length < 10 && (
           <div
             {...getRootProps()}
             className={cn(

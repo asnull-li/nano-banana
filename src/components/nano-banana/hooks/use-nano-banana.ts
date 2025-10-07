@@ -48,6 +48,7 @@ export function useNanoBanana(options: UseNanoBananaOptions = {}) {
   const [taskId, setTaskId] = useState<string | null>(null);
   const [aiDescription, setAiDescription] = useState<string>("");
   const [errorMessage, setErrorMessage] = useState<string>("");
+  const [imageSize, setImageSize] = useState<string>("auto");
 
   const pollIntervalRef = useRef<NodeJS.Timeout | null>(null);
 
@@ -183,9 +184,9 @@ export function useNanoBanana(options: UseNanoBananaOptions = {}) {
       setUploadedImages((prev) => {
         const updated = [...prev, ...newImages];
 
-        // 如果超过5张，需要清理被移除图片的 Blob URL
-        if (updated.length > 5) {
-          const toRemove = updated.slice(5);
+        // 如果超过10张，需要清理被移除图片的 Blob URL
+        if (updated.length > 10) {
+          const toRemove = updated.slice(10);
           console.log(
             "清理超出限制的图片 Blob URLs:",
             toRemove.map((img) => img.preview)
@@ -196,12 +197,12 @@ export function useNanoBanana(options: UseNanoBananaOptions = {}) {
             }
           });
 
-          // 如果超过5张，提示用户
+          // 如果超过10张，提示用户
           toast.warning(t("messages.max_images_warning"));
         }
 
-        // 限制最多5张图片
-        return updated.slice(0, 5);
+        // 限制最多10张图片
+        return updated.slice(0, 10);
       });
     },
     [t]
@@ -392,6 +393,8 @@ export function useNanoBanana(options: UseNanoBananaOptions = {}) {
           prompt: prompt.trim(),
           image_urls: mode === "image-to-image" ? imageUrls : undefined,
           num_images: 1, // 固定为1张
+          image_size: imageSize,
+          output_format: "png", // 固定为 png
         }),
       });
 
@@ -474,10 +477,12 @@ export function useNanoBanana(options: UseNanoBananaOptions = {}) {
     taskId,
     aiDescription,
     errorMessage,
+    imageSize,
 
     // 方法
     setMode,
     setPrompt,
+    setImageSize,
     addImages,
     addImageFromUrl,
     removeImage,

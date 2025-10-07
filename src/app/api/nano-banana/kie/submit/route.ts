@@ -6,7 +6,14 @@ import { submitTextToImage, submitImageEdit } from "@/lib/kie-client";
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { type, prompt, image_urls, num_images = 1 } = body;
+    const {
+      type,
+      prompt,
+      image_urls,
+      num_images = 1,
+      image_size = "auto",
+      output_format = "png"
+    } = body;
 
     // 1. 验证用户身份
     const user_uuid = await getUserUuid();
@@ -51,12 +58,12 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Kie.ai 支持最多5张图片
-    if (type === "image-to-image" && image_urls.length > 5) {
+    // Kie.ai 支持最多10张图片
+    if (type === "image-to-image" && image_urls.length > 10) {
       return NextResponse.json(
         {
           success: false,
-          error: "Maximum 5 images allowed for image-to-image mode",
+          error: "Maximum 10 images allowed for image-to-image mode",
         },
         { status: 400 }
       );
@@ -83,6 +90,32 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // 验证 image_size 参数
+    const validImageSizes = [
+      "1:1", "9:16", "16:9", "3:4", "4:3", "3:2", "2:3", "5:4", "4:5", "21:9", "auto"
+    ];
+    if (!validImageSizes.includes(image_size)) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: `Invalid image_size. Must be one of: ${validImageSizes.join(", ")}`,
+        },
+        { status: 400 }
+      );
+    }
+
+    // 验证 output_format 参数
+    const validOutputFormats = ["png", "jpeg"];
+    if (!validOutputFormats.includes(output_format)) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: `Invalid output_format. Must be one of: ${validOutputFormats.join(", ")}`,
+        },
+        { status: 400 }
+      );
+    }
+
     // 3. 生成webhook URL
     const webhookUrl =
       process.env.NODE_ENV === "development"
@@ -93,13 +126,21 @@ export async function POST(request: NextRequest) {
     let request_id: string;
     try {
       if (type === "text-to-image") {
-        request_id = await submitTextToImage(prompt, num_images, webhookUrl);
+        request_id = await submitTextToImage(
+          prompt,
+          num_images,
+          webhookUrl,
+          image_size,
+          output_format
+        );
       } else {
         request_id = await submitImageEdit(
           prompt,
           image_urls,
           num_images,
-          webhookUrl
+          webhookUrl,
+          image_size,
+          output_format
         );
       }
     } catch (kieError) {
