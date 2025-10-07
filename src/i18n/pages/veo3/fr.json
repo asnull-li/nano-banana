@@ -97,7 +97,9 @@
       "auto_translate_tooltip_line1": "Traduit automatiquement les prompts non anglais en anglais pour une meilleure qualité de génération vidéo.",
       "auto_translate_tooltip_line2": "Recommandé de laisser activé pour des résultats optimaux.",
       "auto_translate_enabled": "Les prompts seront traduits automatiquement en anglais",
-      "auto_translate_disabled": "La langue du prompt d'origine sera utilisée"
+      "auto_translate_disabled": "La langue du prompt d'origine sera utilisée",
+      "credits_cost": "Coût en Crédits",
+      "credits_unit": "crédits"
     },
     "generate_button": {
       "uploading": "Téléchargement en cours...",

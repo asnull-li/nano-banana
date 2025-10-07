@@ -581,6 +581,25 @@ export default function Veo3Workspace({
               texts={t.controls}
             />
 
+            {/* Credits Cost Display */}
+            <div className="flex items-center justify-between px-3 py-2 bg-gradient-to-r from-green-50 to-cyan-50 dark:from-green-950/20 dark:to-cyan-950/20 rounded-lg border border-green-200/50 dark:border-green-800/50">
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                <span className="text-sm font-medium text-slate-700 dark:text-slate-300">
+                  {pageData?.workspace?.controls?.credits_cost ||
+                    "Credits Cost"}
+                </span>
+              </div>
+              <div className="flex items-center gap-1">
+                <span className="text-lg font-bold text-green-600 dark:text-green-400">
+                  {requiredCredits}
+                </span>
+                <span className="text-sm text-slate-500 dark:text-slate-400">
+                  {pageData?.workspace?.controls?.credits_unit || "credits"}
+                </span>
+              </div>
+            </div>
+
             {/* Generate Button */}
             <Button
               onClick={handleGenerate}

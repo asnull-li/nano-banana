@@ -97,7 +97,9 @@
       "auto_translate_tooltip_line1": "영어가 아닌 프롬프트를 자동으로 영어로 번역하여 더 나은 동영상 생성 품질을 실현.",
       "auto_translate_tooltip_line2": "최적의 결과를 위해 활성화 상태 유지 권장.",
       "auto_translate_enabled": "프롬프트가 자동으로 영어로 번역됩니다",
-      "auto_translate_disabled": "원본 프롬프트 언어가 사용됩니다"
+      "auto_translate_disabled": "원본 프롬프트 언어가 사용됩니다",
+      "credits_cost": "크레딧 비용",
+      "credits_unit": "크레딧"
     },
     "generate_button": {
       "uploading": "업로드 중...",

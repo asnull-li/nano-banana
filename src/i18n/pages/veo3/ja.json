@@ -97,7 +97,9 @@
       "auto_translate_tooltip_line1": "非英語のプロンプトを自動的に英語に翻訳して、より良い動画生成品質を実現。",
       "auto_translate_tooltip_line2": "最適な結果を得るために有効にしておくことを推奨。",
       "auto_translate_enabled": "プロンプトは自動的に英語に翻訳されます",
-      "auto_translate_disabled": "元のプロンプト言語が使用されます"
+      "auto_translate_disabled": "元のプロンプト言語が使用されます",
+      "credits_cost": "クレジットコスト",
+      "credits_unit": "クレジット"
     },
     "generate_button": {
       "uploading": "アップロード中...",

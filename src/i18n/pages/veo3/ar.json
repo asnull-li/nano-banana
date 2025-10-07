@@ -97,7 +97,9 @@
       "auto_translate_tooltip_line1": "ترجمة الموجهات غير الإنجليزية تلقائيًا إلى الإنجليزية لجودة أفضل في توليد الفيديو.",
       "auto_translate_tooltip_line2": "يُوصى بالحفاظ على التفعيل للحصول على أفضل النتائج.",
       "auto_translate_enabled": "سيتم ترجمة الموجهات تلقائيًا إلى الإنجليزية",
-      "auto_translate_disabled": "سيتم استخدام لغة الموجه الأصلية"
+      "auto_translate_disabled": "سيتم استخدام لغة الموجه الأصلية",
+      "credits_cost": "تكلفة الأرصدة",
+      "credits_unit": "أرصدة"
     },
     "generate_button": {
       "uploading": "جارٍ التحميل...",

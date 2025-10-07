@@ -97,7 +97,9 @@
       "auto_translate_tooltip_line1": "自动将非英文提示词翻译为英文，以获得更好的视频生成质量。",
       "auto_translate_tooltip_line2": "建议保持启用以获得最佳效果。",
       "auto_translate_enabled": "提示词将自动翻译为英文",
-      "auto_translate_disabled": "将使用原始提示词语言"
+      "auto_translate_disabled": "将使用原始提示词语言",
+      "credits_cost": "积分消耗",
+      "credits_unit": "积分"
     },
     "generate_button": {
       "uploading": "上传中...",

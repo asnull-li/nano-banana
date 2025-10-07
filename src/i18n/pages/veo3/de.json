@@ -97,7 +97,9 @@
       "auto_translate_tooltip_line1": "Übersetzen Sie nicht-englische Prompts automatisch ins Englische für bessere Videogenerierungsqualität.",
       "auto_translate_tooltip_line2": "Empfohlen aktiviert zu lassen für optimale Ergebnisse.",
       "auto_translate_enabled": "Prompts werden automatisch ins Englische übersetzt",
-      "auto_translate_disabled": "Die ursprüngliche Prompt-Sprache wird verwendet"
+      "auto_translate_disabled": "Die ursprüngliche Prompt-Sprache wird verwendet",
+      "credits_cost": "Credits-Kosten",
+      "credits_unit": "Credits"
     },
     "generate_button": {
       "uploading": "Hochladen...",
