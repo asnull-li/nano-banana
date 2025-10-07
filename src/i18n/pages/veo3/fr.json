@@ -223,6 +223,22 @@
       {
         "question": "Veo3 est-il adapté aux débutants ?",
         "answer": "Absolument ! Bien que Veo3 offre des fonctionnalités avancées pour les professionnels, il est conçu pour être accessible à tous. Il suffit d'entrer une description textuelle ou de télécharger une image, et Veo3 gère le processus complexe de génération vidéo. Notre interface intuitive facilite le démarrage de la création de vidéos professionnelles Veo3 immédiatement, quel que soit votre parcours technique."
+      },
+      {
+        "question": "Quelle est la durée des vidéos générées par Veo3 ?",
+        "answer": "Les vidéos générées par Veo3 durent 8 secondes. Il s'agit de la durée de sortie standard pour le modèle Veo3, offrant suffisamment de temps pour présenter votre contenu créatif tout en maintenant des résultats de génération vidéo de haute qualité."
+      },
+      {
+        "question": "Comment obtenir une meilleure qualité vidéo avec Veo3 ?",
+        "answer": "Pour obtenir la meilleure qualité vidéo avec Veo3, suivez ces recommandations : 1) Utilisez des prompts détaillés et spécifiques qui décrivent clairement la scène, les actions, l'éclairage et le style souhaités ; 2) Choisissez le Mode Qualité (modèle standard Veo3) plutôt que le Mode Rapide pour des résultats vidéo plus raffinés ; 3) Pour les vidéos au format 16:9, vous pouvez passer à la version HD 1080P pour une expérience de visualisation cristalline et une présentation professionnelle."
+      },
+      {
+        "question": "Pourquoi la génération de ma vidéo échoue-t-elle toujours ?",
+        "answer": "Les échecs de génération vidéo se produisent généralement pour plusieurs raisons : 1) Votre prompt peut violer les politiques de contenu, en particulier lorsqu'il implique des personnes réelles, des enfants, de la violence ou du contenu sensible - Veo3 rejettera de telles demandes ; 2) Examinez attentivement le message d'erreur spécifique renvoyé par le système, qui indiquera la raison exacte de l'échec ; 3) Si le problème persiste, contactez notre équipe de support technique pour obtenir de l'aide pour diagnostiquer et résoudre le problème. Modifier votre prompt pour respecter les exigences de politique résout généralement la plupart des échecs de génération."
+      },
+      {
+        "question": "Comment générer des vidéos Veo3 de plus de 8 secondes ?",
+        "answer": "Les clips vidéo individuels créés directement dans Veo3 sont limités à 8 secondes. Si vous devez créer un contenu vidéo plus long, vous pouvez générer plusieurs clips vidéo de 8 secondes séparément, puis utiliser des outils d'édition vidéo externes (tels qu'Adobe Premiere, Final Cut Pro ou CapCut) pour assembler ces clips en une vidéo complète plus longue. Cette approche vous permet de créer des œuvres vidéo professionnelles de n'importe quelle durée tout en maintenant une haute qualité pour chaque segment."
       }
     ]
   }
