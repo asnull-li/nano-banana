@@ -100,6 +100,9 @@ export default function Footer({ footer }: { footer: FooterType }) {
             )}
           </div>
         </footer>
+        <a href="https://aistage.net" title="AIStage" className="text-black">
+          AIStage
+        </a>
 
         <FooterLanguageLinks />
       </div>
