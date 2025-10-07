@@ -1,49 +1,49 @@
 {
   "meta": {
-    "title": "Veo3 AI Video Generator - Text to Video & Image to Video with Veo3",
-    "description": "Create stunning videos with Veo3, Google's AI video generator. Text to video & image to video with 720P/1080P quality. Professional video generation."
+    "title": "Veo 3 AI Video Generator - Text to Video & Image to Video with Veo 3",
+    "description": "Create stunning videos with Veo 3, Google's AI video generator. Text to video & image to video with 720P/1080P quality. Professional video generation."
   },
   "hero": {
-    "title": "Veo3 AI Video Generator",
-    "description": "Unlock the power of Veo3 to create professional-quality videos from text prompts or images. Google's Veo3 model delivers exceptional video generation with native audio, 4K quality, and advanced creative controls."
+    "title": "Veo 3 AI Video Generator",
+    "description": "Unlock the power of Veo 3 to create professional-quality videos from text prompts or images. Google's Veo 3 model delivers exceptional video generation with native audio, 4K quality, and advanced creative controls."
   },
   "features": {
-    "title": "Experience Professional Video Creation with Veo3 AI Technology",
-    "description": "Google's Veo3 brings state-of-the-art video generation with unparalleled quality and creative control for filmmakers and content creators.",
+    "title": "Experience Professional Video Creation with Veo 3 AI Technology",
+    "description": "Google's Veo 3 brings state-of-the-art video generation with unparalleled quality and creative control for filmmakers and content creators.",
     "items": [
       {
-        "title": "Advanced Veo3 Video Generation",
-        "description": "Veo3 delivers exceptional video quality with support for 4K resolution. This powerful Veo3 model generates highly realistic videos with improved physics simulation, natural movements, and photorealistic detail preservation. Whether you're creating from text or images, Veo3 ensures professional results every time."
+        "title": "Advanced Veo 3 Video Generation",
+        "description": "Veo 3 delivers exceptional video quality with support for 4K resolution. This powerful Veo 3 model generates highly realistic videos with improved physics simulation, natural movements, and photorealistic detail preservation. Whether you're creating from text or images, Veo 3 ensures professional results every time."
       },
       {
-        "title": "Text-to-Video and Image-to-Video with Veo3",
-        "description": "Experience seamless video creation with Veo3's dual-mode generation. Convert text prompts into stunning videos or transform static images into dynamic content. Veo3's advanced prompt adherence technology follows complex multi-scene instructions with greater accuracy than ever before."
+        "title": "Text-to-Video and Image-to-Video with Veo 3",
+        "description": "Experience seamless video creation with Veo 3's dual-mode generation. Convert text prompts into stunning videos or transform static images into dynamic content. Veo 3's advanced prompt adherence technology follows complex multi-scene instructions with greater accuracy than ever before."
       },
       {
-        "title": "Native Audio Generation in Veo3",
-        "description": "Veo3 stands out with native audio generation capabilities. The Veo3 model automatically generates synchronized sound effects, dialogue, and background audio that perfectly matches your video content. This unique Veo3 feature brings your videos to life with professional audio quality."
+        "title": "Native Audio Generation in Veo 3",
+        "description": "Veo 3 stands out with native audio generation capabilities. The Veo 3 model automatically generates synchronized sound effects, dialogue, and background audio that perfectly matches your video content. This unique Veo 3 feature brings your videos to life with professional audio quality."
       },
       {
-        "title": "Creative Control with Veo3",
-        "description": "Unlock unlimited creativity with Veo3's advanced controls. Use reference images for style matching, maintain character consistency across scenes, define camera movements, and control motion paths. Veo3 gives you the precision tools needed for professional video production and storytelling."
+        "title": "Creative Control with Veo 3",
+        "description": "Unlock unlimited creativity with Veo 3's advanced controls. Use reference images for style matching, maintain character consistency across scenes, define camera movements, and control motion paths. Veo 3 gives you the precision tools needed for professional video production and storytelling."
       }
     ]
   },
   "how_to_use": {
-    "title": "How to Create Videos with Veo3 AI Video Generator",
-    "description": "Generate professional videos with Veo3 in just three simple steps using our intuitive interface.",
+    "title": "How to Create Videos with Veo 3 AI Video Generator",
+    "description": "Generate professional videos with Veo 3 in just three simple steps using our intuitive interface.",
     "items": [
       {
         "title": "Enter Your Prompt or Upload Image",
-        "description": "Start your Veo3 video creation by entering a detailed text prompt or uploading an image. Veo3 supports both text-to-video and image-to-video generation, giving you flexibility in how you create. The more detailed your prompt, the better Veo3 can understand your creative vision."
+        "description": "Start your Veo 3 video creation by entering a detailed text prompt or uploading an image. Veo 3 supports both text-to-video and image-to-video generation, giving you flexibility in how you create. The more detailed your prompt, the better Veo 3 can understand your creative vision."
       },
       {
-        "title": "Configure Veo3 Generation Settings",
-        "description": "Customize your Veo3 video with advanced options. Choose between text-to-video or image-to-video mode, select 720P standard quality or upgrade to 1080P high definition. Veo3 allows you to refine creative controls for optimal results that match your specific needs."
+        "title": "Configure Veo 3 Generation Settings",
+        "description": "Customize your Veo 3 video with advanced options. Choose between text-to-video or image-to-video mode, select 720P standard quality or upgrade to 1080P high definition. Veo 3 allows you to refine creative controls for optimal results that match your specific needs."
       },
       {
-        "title": "Generate and Download Your Veo3 Video",
-        "description": "Click generate and let Veo3 create your professional video. Once Veo3 completes processing, preview your video with synchronized audio and download in your preferred quality. Your Veo3-generated video is ready for sharing, editing, or commercial use."
+        "title": "Generate and Download Your Veo 3 Video",
+        "description": "Click generate and let Veo 3 create your professional video. Once Veo 3 completes processing, preview your video with synchronized audio and download in your preferred quality. Your Veo 3-generated video is ready for sharing, editing, or commercial use."
       }
     ]
   },
@@ -54,15 +54,15 @@
     },
     "upload_zone": {
       "title": "Upload Reference Image",
-      "description": "Upload an image for Veo3 image-to-video generation",
+      "description": "Upload an image for Veo 3 image-to-video generation",
       "supported_formats": "Supported formats: JPEG, PNG, WebP",
       "max_size": "Maximum file size: 10MB",
       "error_file_too_large": "File is too large. Maximum size is 10MB.",
       "error_invalid_type": "Invalid file type. Please upload an image.",
-      "preview_alt": "Veo3 reference image preview",
+      "preview_alt": "Veo 3 reference image preview",
       "delete_tooltip": "Remove image",
       "replace_tooltip": "Replace image",
-      "drop_text": "Drop to upload for Veo3",
+      "drop_text": "Drop to upload for Veo 3",
       "click_or_drag": "Click or drag to upload"
     },
     "prompt": {
@@ -108,7 +108,7 @@
     },
     "empty_state": {
       "title": "No Video Yet",
-      "description": "Enter a prompt and click generate to create your first video with Veo3",
+      "description": "Enter a prompt and click generate to create your first video with Veo 3",
       "modes": "Text-to-video or Image-to-video generation"
     },
     "processing_state": {
@@ -181,64 +181,64 @@
     }
   },
   "faq": {
-    "title": "Veo3 Video Generator - Frequently Asked Questions",
-    "description": "Get answers to common questions about Veo3 AI video generation.",
+    "title": "Veo 3 Video Generator - Frequently Asked Questions",
+    "description": "Get answers to common questions about Veo 3 AI video generation.",
     "contact": {
-      "question_text": "Have more questions about Veo3?",
-      "support_link": "Contact our Veo3 support team"
+      "question_text": "Have more questions about Veo 3?",
+      "support_link": "Contact our Veo 3 support team"
     },
     "items": [
       {
-        "question": "What is Veo3 and how does it work?",
-        "answer": "Veo3 is Google's state-of-the-art AI video generation model that creates professional-quality videos from text prompts or images. Veo3 uses advanced machine learning to generate videos with 4K resolution, native audio, and photorealistic quality. The Veo3 model excels at understanding complex prompts and maintaining consistency across scenes, making it perfect for content creators and filmmakers."
+        "question": "What is Veo 3 and how does it work?",
+        "answer": "Veo 3 is Google's state-of-the-art AI video generation model that creates professional-quality videos from text prompts or images. Veo 3 uses advanced machine learning to generate videos with 4K resolution, native audio, and photorealistic quality. The Veo 3 model excels at understanding complex prompts and maintaining consistency across scenes, making it perfect for content creators and filmmakers."
       },
       {
-        "question": "Can Veo3 generate videos from both text and images?",
-        "answer": "Yes! Veo3 is a versatile video generator that supports both text-to-video and image-to-video generation. You can describe your vision in text and let Veo3 create it from scratch, or upload an existing image and have Veo3 animate it into a dynamic video. Both modes leverage Veo3's powerful AI capabilities for professional results."
+        "question": "Can Veo 3 generate videos from both text and images?",
+        "answer": "Yes! Veo 3 is a versatile video generator that supports both text-to-video and image-to-video generation. You can describe your vision in text and let Veo 3 create it from scratch, or upload an existing image and have Veo 3 animate it into a dynamic video. Both modes leverage Veo 3's powerful AI capabilities for professional results."
       },
       {
-        "question": "Does Veo3 include audio generation?",
-        "answer": "Absolutely! One of Veo3's standout features is native audio generation. Unlike other video generators, Veo3 automatically creates synchronized sound effects, dialogue, and background music that perfectly matches your video content. This makes Veo3-generated videos complete and ready to use without additional audio editing."
+        "question": "Does Veo 3 include audio generation?",
+        "answer": "Absolutely! One of Veo 3's standout features is native audio generation. Unlike other video generators, Veo 3 automatically creates synchronized sound effects, dialogue, and background music that perfectly matches your video content. This makes Veo 3-generated videos complete and ready to use without additional audio editing."
       },
       {
-        "question": "How long does Veo3 take to generate a video?",
-        "answer": "Veo3 video generation typically takes 2-5 minutes depending on the complexity of your prompt, selected quality, and current server load. Pro+ members benefit from priority processing, which means faster Veo3 generation times. The Veo3 system is optimized for efficiency while maintaining the highest quality output."
+        "question": "How long does Veo 3 take to generate a video?",
+        "answer": "Veo 3 video generation typically takes 2-5 minutes depending on the complexity of your prompt, selected quality, and current server load. Pro+ members benefit from priority processing, which means faster Veo 3 generation times. The Veo 3 system is optimized for efficiency while maintaining the highest quality output."
       },
       {
-        "question": "What makes Veo3 different from other AI video generators?",
-        "answer": "Veo3 stands out with several unique advantages: native audio generation, 4K quality support, advanced prompt adherence, improved physics simulation, and creative controls like character consistency and camera movement. Veo3 is developed by Google DeepMind, bringing cutting-edge research to practical video generation. The Veo3 model delivers more realistic and controllable results than previous generation tools."
+        "question": "What makes Veo 3 different from other AI video generators?",
+        "answer": "Veo 3 stands out with several unique advantages: native audio generation, 4K quality support, advanced prompt adherence, improved physics simulation, and creative controls like character consistency and camera movement. Veo 3 is developed by Google DeepMind, bringing cutting-edge research to practical video generation. The Veo 3 model delivers more realistic and controllable results than previous generation tools."
       },
       {
-        "question": "Can I use Veo3-generated videos for commercial purposes?",
-        "answer": "Yes, all videos generated with Veo3 through our platform are suitable for commercial use. Veo3 creates original content based on your prompts, making it perfect for marketing videos, social media content, presentations, and professional projects. Always ensure your prompts don't infringe on copyrighted materials."
+        "question": "Can I use Veo 3-generated videos for commercial purposes?",
+        "answer": "Yes, all videos generated with Veo 3 through our platform are suitable for commercial use. Veo 3 creates original content based on your prompts, making it perfect for marketing videos, social media content, presentations, and professional projects. Always ensure your prompts don't infringe on copyrighted materials."
       },
       {
-        "question": "How much does Veo3 video generation cost?",
-        "answer": "Veo3 video generation uses a credit-based system. Each 720P Veo3 video costs a certain number of credits, while 1080P HD generation requires additional credits. This flexible pricing ensures you only pay for the Veo3 videos you create. Check the workspace controls for current credit costs."
+        "question": "How much does Veo 3 video generation cost?",
+        "answer": "Veo 3 video generation uses a credit-based system. Each 720P Veo 3 video costs a certain number of credits, while 1080P HD generation requires additional credits. This flexible pricing ensures you only pay for the Veo 3 videos you create. Check the workspace controls for current credit costs."
       },
       {
-        "question": "What creative controls does Veo3 offer?",
-        "answer": "Veo3 provides advanced creative controls including style matching from reference images, character consistency across scenes, camera movement definitions, and motion path control. These Veo3 features give you precision control over your video generation, making it suitable for professional filmmaking and complex storytelling projects."
+        "question": "What creative controls does Veo 3 offer?",
+        "answer": "Veo 3 provides advanced creative controls including style matching from reference images, character consistency across scenes, camera movement definitions, and motion path control. These Veo 3 features give you precision control over your video generation, making it suitable for professional filmmaking and complex storytelling projects."
       },
       {
-        "question": "Is Veo3 suitable for beginners?",
-        "answer": "Absolutely! While Veo3 offers advanced features for professionals, it's designed to be accessible for everyone. Simply enter a text description or upload an image, and Veo3 handles the complex video generation process. Our intuitive interface makes it easy to start creating professional Veo3 videos immediately, regardless of your technical background."
+        "question": "Is Veo 3 suitable for beginners?",
+        "answer": "Absolutely! While Veo 3 offers advanced features for professionals, it's designed to be accessible for everyone. Simply enter a text description or upload an image, and Veo 3 handles the complex video generation process. Our intuitive interface makes it easy to start creating professional Veo 3 videos immediately, regardless of your technical background."
       },
       {
-        "question": "How long are Veo3 generated videos?",
-        "answer": "Veo3 generated videos are 8 seconds long. This is the standard output duration for the Veo3 model, providing enough time to showcase your creative content while maintaining high-quality video generation results."
+        "question": "How long are Veo 3 generated videos?",
+        "answer": "Veo 3 generated videos are 8 seconds long. This is the standard output duration for the Veo 3 model, providing enough time to showcase your creative content while maintaining high-quality video generation results."
       },
       {
-        "question": "How can I get better Veo3 video quality?",
-        "answer": "To achieve the best Veo3 video quality, follow these recommendations: 1) Use detailed and specific prompts that clearly describe the scene, actions, lighting, and style you want; 2) Choose Quality Mode (Veo3 standard model) instead of Fast Mode for more refined video results; 3) For 16:9 aspect ratio videos, you can upgrade to 1080P HD version for crystal-clear viewing experience and professional presentation."
+        "question": "How can I get better Veo 3 video quality?",
+        "answer": "To achieve the best Veo 3 video quality, follow these recommendations: 1) Use detailed and specific prompts that clearly describe the scene, actions, lighting, and style you want; 2) Choose Quality Mode (Veo 3 standard model) instead of Fast Mode for more refined video results; 3) For 16:9 aspect ratio videos, you can upgrade to 1080P HD version for crystal-clear viewing experience and professional presentation."
       },
       {
         "question": "Why does my video generation always fail?",
-        "answer": "Video generation failures typically occur for several reasons: 1) Your prompt may violate content policies, especially when involving real people, children, violence, or sensitive content - Veo3 will reject such requests; 2) Carefully review the specific error message returned by the system, which will indicate the exact reason for failure; 3) If the issue persists, contact our technical support team for assistance in diagnosing and resolving the problem. Modifying your prompt to comply with policy requirements usually resolves most generation failures."
+        "answer": "Video generation failures typically occur for several reasons: 1) Your prompt may violate content policies, especially when involving real people, children, violence, or sensitive content - Veo 3 will reject such requests; 2) Carefully review the specific error message returned by the system, which will indicate the exact reason for failure; 3) If the issue persists, contact our technical support team for assistance in diagnosing and resolving the problem. Modifying your prompt to comply with policy requirements usually resolves most generation failures."
       },
       {
-        "question": "How to generate Veo3 videos longer than 8 seconds?",
-        "answer": "Individual video clips created directly in Veo3 are limited to 8 seconds. If you need to create longer video content, you can generate multiple 8-second video clips separately, then use external video editing tools (such as Adobe Premiere, Final Cut Pro, or CapCut) to stitch these clips together into a complete longer video. This approach allows you to create professional video works of any length while maintaining high quality for each segment."
+        "question": "How to generate Veo 3 videos longer than 8 seconds?",
+        "answer": "Individual video clips created directly in Veo 3 are limited to 8 seconds. If you need to create longer video content, you can generate multiple 8-second video clips separately, then use external video editing tools (such as Adobe Premiere, Final Cut Pro, or CapCut) to stitch these clips together into a complete longer video. This approach allows you to create professional video works of any length while maintaining high quality for each segment."
       }
     ]
   }
