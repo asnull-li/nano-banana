@@ -226,35 +226,7 @@
         "credits": 30000,
         "valid_months": 12
       },
-      {
-        "title": "حزمة رصيد تجريبية",
-        "description": "مثالية لتجربة توليد الصور بالذكاء الاصطناعي والمشاريع الصغيرة.",
-        "features_title": "الميزات المتضمنة",
-        "features": [
-          "50 رصيد توليد بالذكاء الاصطناعي",
-          "نموذج Nano Banana عالي الجودة",
-          "صلاحية الرصيد لمدة شهر واحد"
-        ],
-        "group": "credits-packs",
-        "interval": "one-time",
-        "amount": 599,
-        "cn_amount": 0,
-        "currency": "USD",
-        "price": "$5.99",
-        "original_price": "$19.99",
-        "unit": "USD",
-        "is_featured": false,
-        "tip": "مناسب لاختبار النتائج",
-        "button": {
-          "title": "اشترِ حزمة الرصيد التجريبية",
-          "url": "/#pricing",
-          "icon": "RiFlashlightFill"
-        },
-        "product_id": "credits-packs-0",
-        "product_name": "Nano Banana حزمة الرصيد التجريبية",
-        "credits": 50,
-        "valid_months": 1
-      },
+
       {
         "title": "حزمة الرصيد الأساسية",
         "description": "شراء لمرة واحدة، الرصيد لا ينتهي أبدًا",

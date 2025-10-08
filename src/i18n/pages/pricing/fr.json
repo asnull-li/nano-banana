@@ -227,35 +227,6 @@
         "valid_months": 12
       },
       {
-        "title": "Pack de Crédits d'Essai",
-        "description": "Parfait pour essayer la génération d'images IA et les petits projets.",
-        "features_title": "Ce qui est inclus",
-        "features": [
-          "50 crédits de génération IA",
-          "Modèles haute qualité Nano Banana",
-          "Crédits valides pour 1 mois"
-        ],
-        "group": "credits-packs",
-        "interval": "one-time",
-        "amount": 599,
-        "cn_amount": 1999,
-        "currency": "USD",
-        "price": "$5.99",
-        "original_price": "$19.99",
-        "unit": "USD",
-        "is_featured": false,
-        "tip": "Parfait pour tester les effets",
-        "button": {
-          "title": "Acheter Pack d'Essai",
-          "url": "/#pricing",
-          "icon": "RiFlashlightFill"
-        },
-        "product_id": "credits-packs-0",
-        "product_name": "Nano Banana Pack de Crédits d'Essai",
-        "credits": 50,
-        "valid_months": 1
-      },
-      {
         "title": "Pack de Crédits Débutant",
         "description": "Achat unique, crédits n'expirent jamais",
         "features_title": "Ce qui est inclus",

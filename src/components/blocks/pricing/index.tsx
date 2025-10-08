@@ -132,13 +132,7 @@ export default function Pricing({ pricing }: { pricing: PricingType }) {
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-br from-green-500/10 to-cyan-500/10 rounded-full blur-3xl" />
       <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-gradient-to-tr from-cyan-500/10 to-green-500/10 rounded-full blur-3xl" />
 
-      <div
-        className={` ${
-          group === "credits-packs"
-            ? "sm:max-w-[90vw] max-w-[92vw] mx-auto"
-            : "container"
-        } relative z-10`}
-      >
+      <div className={`container relative z-10`}>
         <div className="mx-auto mb-10 text-center max-w-3xl">
           <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-green-500 to-cyan-500 rounded-full mb-6 shadow-lg shadow-green-500/25">
             <Sparkles className="h-5 w-5 text-white" />
@@ -186,7 +180,9 @@ export default function Pricing({ pricing }: { pricing: PricingType }) {
                         htmlFor={item.name}
                         className="flex h-full cursor-pointer flex-col md:flex-row md:items-center justify-center px-3 md:px-7 py-2 md:py-0 font-semibold text-muted-foreground peer-data-[state=checked]:text-white transition-all duration-300 hover:text-green-600 gap-1 md:gap-0 min-h-12 md:min-h-0"
                       >
-                        <span className="text-sm md:text-base whitespace-nowrap">{item.title}</span>
+                        <span className="text-sm md:text-base whitespace-nowrap">
+                          {item.title}
+                        </span>
 
                         <div className="flex items-center gap-1 md:ml-2">
                           {item.label && (

@@ -226,35 +226,7 @@
         "credits": 30000,
         "valid_months": 12
       },
-      {
-        "title": "Пробный пакет кредитов",
-        "description": "Идеально для пробы генерации изображений ИИ и небольших проектов.",
-        "features_title": "Что включено",
-        "features": [
-          "50 кредитов генерации ИИ",
-          "Высококачественные модели Nano Banana",
-          "Кредиты действительны 1 месяц"
-        ],
-        "group": "credits-packs",
-        "interval": "one-time",
-        "amount": 599,
-        "cn_amount": 0,
-        "currency": "USD",
-        "price": "$5.99",
-        "original_price": "$19.99",
-        "unit": "USD",
-        "is_featured": false,
-        "tip": "Идеально для тестирования эффектов",
-        "button": {
-          "title": "Купить пробный пакет",
-          "url": "/#pricing",
-          "icon": "RiFlashlightFill"
-        },
-        "product_id": "credits-packs-0",
-        "product_name": "Nano Banana Trial Credits Pack",
-        "credits": 50,
-        "valid_months": 1
-      },
+
       {
         "title": "Стартовый пакет кредитов",
         "description": "Одноразовая покупка, кредиты не истекают",

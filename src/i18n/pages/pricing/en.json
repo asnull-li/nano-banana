@@ -226,35 +226,7 @@
         "credits": 30000,
         "valid_months": 12
       },
-      {
-        "title": "Trial Credits Pack",
-        "description": "Perfect for trying out AI image generation and small projects.",
-        "features_title": "What's included",
-        "features": [
-          "50 AI generation credits",
-          "Nano Banana high quality models",
-          "Credits valid for 1 month"
-        ],
-        "group": "credits-packs",
-        "interval": "one-time",
-        "amount": 599,
-        "cn_amount": 0,
-        "currency": "USD",
-        "price": "$5.99",
-        "original_price": "$19.99",
-        "unit": "USD",
-        "is_featured": false,
-        "tip": "Perfect for testing effects",
-        "button": {
-          "title": "Buy Trial Credits Pack",
-          "url": "/#pricing",
-          "icon": "RiFlashlightFill"
-        },
-        "product_id": "credits-packs-0",
-        "product_name": "Nano Banana Trial Credits Pack",
-        "credits": 50,
-        "valid_months": 1
-      },
+
       {
         "title": "Starter Credits Pack",
         "description": "One-time purchase, credits never expire",

@@ -226,35 +226,7 @@
         "credits": 30000,
         "valid_months": 12
       },
-      {
-        "title": "Pacote de Créditos de Teste",
-        "description": "Perfeito para experimentar geração de imagens IA e projetos pequenos.",
-        "features_title": "O que está incluído",
-        "features": [
-          "50 créditos de geração IA",
-          "Modelos de alta qualidade Nano Banana",
-          "Créditos válidos por 1 mês"
-        ],
-        "group": "credits-packs",
-        "interval": "one-time",
-        "amount": 599,
-        "cn_amount": 0,
-        "currency": "USD",
-        "price": "$5.99",
-        "original_price": "$19.99",
-        "unit": "USD",
-        "is_featured": false,
-        "tip": "Perfeito para testar efeitos",
-        "button": {
-          "title": "Comprar Pacote de Créditos de Teste",
-          "url": "/#pricing",
-          "icon": "RiFlashlightFill"
-        },
-        "product_id": "credits-packs-0",
-        "product_name": "Nano Banana Pacote de Créditos de Teste",
-        "credits": 50,
-        "valid_months": 1
-      },
+
       {
         "title": "Pacote de Créditos Iniciante",
         "description": "Compra única, créditos nunca expiram",

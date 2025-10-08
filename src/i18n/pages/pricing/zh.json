@@ -227,36 +227,6 @@
         "valid_months": 12
       },
       {
-        "title": "试用积分包",
-        "description": "适合体验 AI 图像生成和小型项目。",
-        "features_title": "包含功能",
-        "features": [
-          "50 个 AI 生成积分",
-          "Nano Banana高质量模型",
-          "积分 1 个月有效期"
-        ],
-        "group": "credits-packs",
-        "interval": "one-time",
-        "amount": 599,
-        "cn_amount": 1999,
-        "currency": "USD",
-        "price": "$5.99",
-        "original_price": "$19.99",
-        "original_cn_price": "¥41",
-        "unit": "USD",
-        "is_featured": false,
-        "tip": "适合测试效果",
-        "button": {
-          "title": "购买试用积分包",
-          "url": "/#pricing",
-          "icon": "RiFlashlightFill"
-        },
-        "product_id": "credits-packs-0",
-        "product_name": "Nano Banana 试用积分包",
-        "credits": 50,
-        "valid_months": 1
-      },
-      {
         "title": "入门积分包",
         "description": "一次采购，积分永不过期",
         "features_title": "包含功能",

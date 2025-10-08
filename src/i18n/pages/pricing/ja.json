@@ -226,35 +226,7 @@
         "credits": 30000,
         "valid_months": 12
       },
-      {
-        "title": "トライアルクレジットパック",
-        "description": "AI画像生成を試したり、小規模プロジェクトに最適です。",
-        "features_title": "含まれる機能",
-        "features": [
-          "50 AI生成クレジット",
-          "Nano Banana高品質モデル",
-          "クレジット有効期間1ヶ月"
-        ],
-        "group": "credits-packs",
-        "interval": "one-time",
-        "amount": 599,
-        "cn_amount": 1999,
-        "currency": "USD",
-        "price": "$5.99",
-        "original_price": "$19.99",
-        "unit": "USD",
-        "is_featured": false,
-        "tip": "効果テストに適しています",
-        "button": {
-          "title": "トライアルクレジットパックを購入",
-          "url": "/#pricing",
-          "icon": "RiFlashlightFill"
-        },
-        "product_id": "credits-packs-0",
-        "product_name": "Nano Banana トライアルクレジットパック",
-        "credits": 50,
-        "valid_months": 1
-      },
+
       {
         "title": "エントリークレジットパック",
         "description": "一回限りの購入、クレジットは永遠に期限が切れません",

@@ -226,35 +226,7 @@
         "credits": 30000,
         "valid_months": 12
       },
-      {
-        "title": "Test Credit-Paket",
-        "description": "Perfekt zum Ausprobieren der KI-Bildgenerierung und für kleine Projekte.",
-        "features_title": "Was enthalten ist",
-        "features": [
-          "50 KI-Generierungs-Credits",
-          "Nano Banana Hochqualitätsmodelle",
-          "Credits gültig für 1 Monat"
-        ],
-        "group": "credits-packs",
-        "interval": "one-time",
-        "amount": 599,
-        "cn_amount": 1999,
-        "currency": "USD",
-        "price": "$5.99",
-        "original_price": "$19.99",
-        "unit": "USD",
-        "is_featured": false,
-        "tip": "Perfekt zum Testen der Effekte",
-        "button": {
-          "title": "Test Credit-Paket kaufen",
-          "url": "/#pricing",
-          "icon": "RiFlashlightFill"
-        },
-        "product_id": "credits-packs-0",
-        "product_name": "Nano Banana Test Credit-Paket",
-        "credits": 50,
-        "valid_months": 1
-      },
+
       {
         "title": "Starter Credit-Paket",
         "description": "Einmalkauf, Credits laufen nie ab",
