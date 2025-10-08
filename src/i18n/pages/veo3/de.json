@@ -63,7 +63,8 @@
       "delete_tooltip": "Bild entfernen",
       "replace_tooltip": "Bild ersetzen",
       "drop_text": "Zum Hochladen auf Veo 3 ablegen",
-      "click_or_drag": "Klicken oder ziehen Sie zum Hochladen"
+      "click_or_drag": "Klicken oder ziehen Sie zum Hochladen",
+      "processing": "Verarbeitung..."
     },
     "prompt": {
       "label": "Prompt",

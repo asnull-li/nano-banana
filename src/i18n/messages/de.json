@@ -246,6 +246,7 @@
         "download": "Herunterladen",
         "enhance": "Bildverbesserung",
         "continue_edit": "Erneut bearbeiten",
+        "image_to_video": "Bild zu Video",
         "image_not_found": "Bild nicht gefunden",
         "invalid_image_url": "Ungültige Bild-URL",
         "continue_edit_coming_soon": "Funktion zur Weiterbearbeitung kommt bald"
@@ -257,6 +258,7 @@
         "download": "Herunterladen",
         "copy_link": "Link kopieren",
         "copied": "Kopiert",
+        "image_to_video": "Bild zu Video",
         "view_large": "Groß anzeigen"
       },
       "image_preview": {
@@ -348,6 +350,8 @@
     "no_more": "Alle Datensätze geladen",
     "image_preview": "Bildvorschau",
     "enhance_image": "Verbessern",
+    "image_to_video": "Bild zu Video",
+    "i2v": "B2V",
     "copy_link": "Link kopieren",
     "copied": "Kopiert!",
     "link_copied": "Link in die Zwischenablage kopiert",

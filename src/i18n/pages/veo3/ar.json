@@ -63,7 +63,8 @@
       "delete_tooltip": "إزالة الصورة",
       "replace_tooltip": "استبدال الصورة",
       "drop_text": "أفلت للتحميل إلى Veo 3",
-      "click_or_drag": "انقر أو اسحب للتحميل"
+      "click_or_drag": "انقر أو اسحب للتحميل",
+      "processing": "جاري المعالجة..."
     },
     "prompt": {
       "label": "الموجه",

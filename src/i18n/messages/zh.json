@@ -246,6 +246,7 @@
         "download": "下载",
         "enhance": "图片增强",
         "continue_edit": "再次编辑",
+        "image_to_video": "图生视频",
         "image_not_found": "未找到图片",
         "invalid_image_url": "无效的图片链接",
         "continue_edit_coming_soon": "继续编辑功能即将上线"
@@ -257,6 +258,7 @@
         "download": "下载",
         "copy_link": "复制链接",
         "copied": "已复制",
+        "image_to_video": "图生视频",
         "view_large": "查看大图"
       },
       "image_preview": {
@@ -348,6 +350,8 @@
     "no_more": "已加载全部记录",
     "image_preview": "图片预览",
     "enhance_image": "增强",
+    "image_to_video": "图生视频",
+    "i2v": "图生视频",
     "copy_link": "复制链接",
     "copied": "已复制！",
     "link_copied": "链接已复制到剪贴板",

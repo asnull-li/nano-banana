@@ -246,6 +246,7 @@
         "download": "Download",
         "enhance": "Melhoramento de Imagem",
         "continue_edit": "Editar Novamente",
+        "image_to_video": "Imagem para Vídeo",
         "image_not_found": "Imagem não encontrada",
         "invalid_image_url": "URL da imagem inválida",
         "continue_edit_coming_soon": "Recurso de edição contínua em breve"
@@ -257,6 +258,7 @@
         "download": "Download",
         "copy_link": "Copiar Link",
         "copied": "Copiado",
+        "image_to_video": "Imagem para Vídeo",
         "view_large": "Ver Grande"
       },
       "image_preview": {
@@ -348,6 +350,8 @@
     "no_more": "Todos os registros carregados",
     "image_preview": "Pré-visualização da Imagem",
     "enhance_image": "Melhorar",
+    "image_to_video": "Imagem para Vídeo",
+    "i2v": "I2V",
     "copy_link": "Copiar Link",
     "copied": "Copiado!",
     "link_copied": "Link copiado para a área de transferência",

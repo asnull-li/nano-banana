@@ -246,6 +246,7 @@
         "download": "Télécharger",
         "enhance": "Amélioration d'image",
         "continue_edit": "Éditer à nouveau",
+        "image_to_video": "Image vers vidéo",
         "image_not_found": "Image non trouvée",
         "invalid_image_url": "URL d'image invalide",
         "continue_edit_coming_soon": "La fonction de continuer l'édition sera bientôt disponible"
@@ -257,6 +258,7 @@
         "download": "Télécharger",
         "copy_link": "Copier le lien",
         "copied": "Copié",
+        "image_to_video": "Image vers Vidéo",
         "view_large": "Voir en grand"
       },
       "image_preview": {
@@ -348,8 +350,11 @@
     "no_more": "Tous les enregistrements chargés",
     "image_preview": "Aperçu de l'image",
     "enhance_image": "Améliorer",
+    "image_to_video": "Image vers Vidéo",
+    "i2v": "I2V",
     "copy_link": "Copier le lien",
     "copied": "Copié !",
+        "image_to_video": "Image vers Vidéo",
     "link_copied": "Lien copié dans le presse-papiers",
     "copy_failed": "Échec de la copie du lien",
     "coming_soon": "Bientôt disponible !",

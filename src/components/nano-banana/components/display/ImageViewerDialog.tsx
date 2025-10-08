@@ -6,7 +6,7 @@ import {
   DialogDescription,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { ChevronLeft, ChevronRight, Download, Sparkles, X } from "lucide-react";
+import { ChevronLeft, ChevronRight, Download, Sparkles, Video } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
@@ -53,6 +53,29 @@ export default function ImageViewerDialog({
       searchParams.set("imageUrl", currentResult.url);
 
       router.push(`/ai-image-upscaler?${searchParams.toString()}`);
+      onClose();
+    } catch (error) {
+      console.error("Invalid image URL:", error);
+      toast.error(t("invalid_image_url"));
+    }
+  };
+
+  // 处理图生视频
+  const handleImageToVideo = () => {
+    if (!currentResult?.url) {
+      toast.error(t("image_not_found"));
+      return;
+    }
+
+    try {
+      // 验证图片URL是否有效
+      new URL(currentResult.url);
+
+      // 将当前图片URL作为查询参数，跳转到veo3页面
+      const searchParams = new URLSearchParams();
+      searchParams.set("imageUrl", currentResult.url);
+
+      router.push(`/veo3?${searchParams.toString()}`);
       onClose();
     } catch (error) {
       console.error("Invalid image URL:", error);
@@ -138,6 +161,7 @@ export default function ImageViewerDialog({
                   variant="ghost"
                   className="text-white hover:bg-white/20 h-8 w-8 p-0 rounded-full"
                   onClick={() => onDownload?.()}
+                  title={t("download")}
                 >
                   <Download className="h-4 w-4" />
                 </Button>
@@ -147,8 +171,19 @@ export default function ImageViewerDialog({
                   variant="ghost"
                   className="text-white hover:bg-white/20 h-8 w-8 p-0 rounded-full"
                   onClick={handleEnhance}
+                  title={t("enhance")}
                 >
                   <Sparkles className="h-4 w-4" />
+                </Button>
+
+                <Button
+                  size="sm"
+                  variant="ghost"
+                  className="text-white hover:bg-white/20 h-8 w-8 p-0 rounded-full"
+                  onClick={handleImageToVideo}
+                  title="Image to Video"
+                >
+                  <Video className="h-4 w-4" />
                 </Button>
               </div>
             </div>

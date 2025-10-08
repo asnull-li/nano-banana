@@ -59,6 +59,7 @@ export default function Veo3Workspace({
   const [inputImagePreview, setInputImagePreview] = useState<string | null>(
     initialImageUrl || null
   );
+  const [isUrlMode, setIsUrlMode] = useState<boolean>(false);
   const [isGenerating, setIsGenerating] = useState(false);
   const [isUploading, setIsUploading] = useState(false);
   const [currentTask, setCurrentTask] = useState<Veo3Task | null>(null);
@@ -142,9 +143,189 @@ export default function Veo3Workspace({
       // Then poll every 3 seconds
       pollingIntervalRef.current = setInterval(() => {
         pollTaskStatus(taskId);
-      }, 3000);
+      }, 10000);
     },
     [pollTaskStatus]
+  );
+
+  // Handle mode change
+  const handleModeChange = (newMode: Veo3TaskType) => {
+    setMode(newMode);
+
+    // Clear image when switching to text-to-video
+    if (newMode === "text-to-video" && inputImagePreview) {
+      if (inputImagePreview.startsWith("blob:")) {
+        URL.revokeObjectURL(inputImagePreview);
+      }
+      setInputImageFile(null);
+      setInputImagePreview(null);
+      setIsUrlMode(false);
+    }
+
+    // Change aspect ratio if Auto is selected but switching to text-to-video
+    if (newMode === "text-to-video" && aspectRatio === "Auto") {
+      setAspectRatio("16:9");
+    }
+  };
+
+  // Handle image selection (not upload yet)
+  const handleImageSelect = useCallback(
+    (file: File, preview: string) => {
+      // Empty file means remove (from ImageUploadZone clear action)
+      if (!file.name) {
+        // 清理旧的 blob URL
+        if (inputImagePreview && inputImagePreview.startsWith("blob:")) {
+          URL.revokeObjectURL(inputImagePreview);
+        }
+        setInputImageFile(null);
+        setInputImagePreview(null);
+        setIsUrlMode(false);
+        return;
+      }
+
+      // 清理旧的 blob URL
+      if (inputImagePreview && inputImagePreview.startsWith("blob:")) {
+        URL.revokeObjectURL(inputImagePreview);
+      }
+
+      // 保存文件和预览，不立即上传
+      setInputImageFile(file);
+      setInputImagePreview(preview);
+      setIsUrlMode(false); // 切换到文件模式
+    },
+    [inputImagePreview]
+  );
+
+  // Handle image upload from URL (without downloading, directly use URL)
+  const handleImageUploadFromUrl = useCallback(
+    (url: string, _filename: string) => {
+      // 清除File对象，因为我们使用URL模式
+      setInputImageFile(null);
+      setInputImagePreview(url); // 直接使用原始URL作为预览
+      setIsUrlMode(true); // 标记为URL模式
+    },
+    []
+  );
+
+  // Validate image URL and use it directly (without downloading)
+  const loadImageFromUrl = useCallback(
+    async (url: string) => {
+      try {
+        // Validate URL format
+        let validUrl: URL;
+        try {
+          validUrl = new URL(url);
+        } catch {
+          throw new Error("Invalid URL format");
+        }
+
+        // Check if it's an image URL (basic check)
+        const validExtensions = [".jpg", ".jpeg", ".png", ".webp", ".gif"];
+        const hasImageExtension = validExtensions.some((ext) =>
+          validUrl.pathname.toLowerCase().endsWith(ext)
+        );
+
+        if (
+          !hasImageExtension &&
+          !url.includes("blob:") &&
+          !url.includes("data:")
+        ) {
+          // If no obvious image extension, we still try to validate but give a warning
+          console.warn(
+            "URL might not be an image, but attempting to validate anyway"
+          );
+        }
+
+        // Use HEAD request to validate image info (without downloading content)
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 15000); // 15s timeout
+
+        let contentType = "";
+
+        try {
+          const response = await fetch(url, {
+            method: "HEAD",
+            signal: controller.signal,
+            mode: "cors",
+            headers: {
+              Accept: "image/*",
+            },
+          });
+
+          clearTimeout(timeoutId);
+
+          if (!response.ok) {
+            throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+          }
+
+          contentType = response.headers.get("content-type") || "";
+        } catch (headError) {
+          clearTimeout(timeoutId);
+
+          // Fallback strategy when HEAD request fails: use URL directly but with warning
+          console.warn(
+            "HEAD request failed, proceeding with URL validation bypass:",
+            headError
+          );
+
+          // Basic validation based on URL extension
+          if (
+            !hasImageExtension &&
+            !url.includes("blob:") &&
+            !url.includes("data:")
+          ) {
+            throw new Error(
+              "Unable to validate image format. Please ensure the URL points to a valid image file."
+            );
+          }
+
+          // Skip other validation, use URL directly
+          contentType = "image/jpeg"; // default type
+          console.warn(
+            "Proceeding without server-side validation due to CORS or network restrictions."
+          );
+        }
+
+        // Validate content type (if response was received)
+        if (contentType && !contentType.startsWith("image/")) {
+          throw new Error(
+            `Invalid content type: ${contentType}. Expected an image.`
+          );
+        }
+
+        // Use original URL directly for preview and processing
+        handleImageUploadFromUrl(
+          url,
+          validUrl.pathname.split("/").pop() || "image.jpg"
+        );
+
+        toast.success(
+          t.toast?.image_loaded || "Image loaded successfully from URL"
+        );
+      } catch (error) {
+        console.error("Failed to validate image from URL:", error);
+
+        let errorMessage =
+          t.toast?.image_load_failed || "Failed to load image from URL";
+
+        // Provide more specific error message
+        if (error instanceof Error) {
+          if (error.name === "AbortError") {
+            errorMessage = "Request timed out. Please try again.";
+          } else if (error.message.includes("CORS")) {
+            errorMessage =
+              "Unable to access image due to CORS policy. Please try uploading the image directly.";
+          } else if (error.message.includes("Invalid URL")) {
+            errorMessage = "Invalid image URL format.";
+          } else if (error.message.includes("Invalid content type")) {
+            errorMessage = "The URL doesn't point to a valid image file.";
+          }
+        }
+
+        toast.error(errorMessage);
+      }
+    },
+    [handleImageUploadFromUrl, t.toast]
   );
 
   // Cleanup polling on unmount
@@ -165,50 +346,12 @@ export default function Veo3Workspace({
     };
   }, [inputImagePreview]);
 
-  // Handle mode change
-  const handleModeChange = (newMode: Veo3TaskType) => {
-    setMode(newMode);
-
-    // Clear image when switching to text-to-video
-    if (newMode === "text-to-video" && inputImagePreview) {
-      if (inputImagePreview.startsWith("blob:")) {
-        URL.revokeObjectURL(inputImagePreview);
-      }
-      setInputImageFile(null);
-      setInputImagePreview(null);
+  // Handle initial image URL from query params
+  useEffect(() => {
+    if (initialImageUrl && initialImageUrl.trim()) {
+      loadImageFromUrl(initialImageUrl);
     }
-
-    // Change aspect ratio if Auto is selected but switching to text-to-video
-    if (newMode === "text-to-video" && aspectRatio === "Auto") {
-      setAspectRatio("16:9");
-    }
-  };
-
-  // Handle image selection (not upload yet)
-  const handleImageSelect = useCallback(
-    (file: File, preview: string) => {
-      // Empty file means remove (from ImageUploadZone clear action)
-      if (!file.name) {
-        // 清理旧的 blob URL
-        if (inputImagePreview && inputImagePreview.startsWith("blob:")) {
-          URL.revokeObjectURL(inputImagePreview);
-        }
-        setInputImageFile(null);
-        setInputImagePreview(null);
-        return;
-      }
-
-      // 清理旧的 blob URL
-      if (inputImagePreview && inputImagePreview.startsWith("blob:")) {
-        URL.revokeObjectURL(inputImagePreview);
-      }
-
-      // 保存文件和预览，不立即上传
-      setInputImageFile(file);
-      setInputImagePreview(preview);
-    },
-    [inputImagePreview]
-  );
+  }, [initialImageUrl, loadImageFromUrl]);
 
   // Handle generate
   const handleGenerate = async () => {
@@ -229,7 +372,7 @@ export default function Veo3Workspace({
     }
 
     // Check image for image-to-video mode
-    if (mode === "image-to-video" && !inputImageFile) {
+    if (mode === "image-to-video" && !inputImageFile && !isUrlMode) {
       toast.error(
         t.toast?.image_required ||
           "Please upload an image for image-to-video generation"
@@ -267,8 +410,10 @@ export default function Veo3Workspace({
     const initialTask: Veo3Task = {
       id: "pending",
       status:
-        mode === "image-to-video" && inputImageFile
-          ? "uploading"
+        mode === "image-to-video" && (inputImageFile || isUrlMode)
+          ? isUrlMode
+            ? "processing"
+            : "uploading"
           : "processing",
       type: mode,
       prompt,
@@ -281,6 +426,7 @@ export default function Veo3Workspace({
       canUpgradeTo1080p: aspectRatio === "16:9",
       watermark,
       seeds,
+      isUrlMode, // 保留URL模式状态
     };
 
     setCurrentTask(initialTask);
@@ -289,23 +435,30 @@ export default function Veo3Workspace({
       let uploadedImageUrl: string | undefined = undefined;
 
       // Upload image first if in image-to-video mode
-      if (mode === "image-to-video" && inputImageFile) {
-        setIsUploading(true);
-        toast.info(t.toast?.uploading_image || "Uploading image...");
+      if (mode === "image-to-video") {
+        if (isUrlMode && inputImagePreview) {
+          // URL模式：直接使用原始URL，跳过上传步骤
+          uploadedImageUrl = inputImagePreview;
+          toast.info(t.toast?.processing_start || "Using image from URL...");
+        } else if (inputImageFile) {
+          // File模式：需要先上传文件
+          setIsUploading(true);
+          toast.info(t.toast?.uploading_image || "Uploading image...");
 
-        try {
-          uploadedImageUrl = await uploadImage(inputImageFile);
-          toast.success(
-            t.toast?.image_uploaded || "Image uploaded successfully"
-          );
-        } catch (error) {
-          throw new Error(
-            error instanceof Error
-              ? error.message
-              : t.toast?.upload_failed || "Failed to upload image"
-          );
-        } finally {
-          setIsUploading(false);
+          try {
+            uploadedImageUrl = await uploadImage(inputImageFile);
+            toast.success(
+              t.toast?.image_uploaded || "Image uploaded successfully"
+            );
+          } catch (error) {
+            throw new Error(
+              error instanceof Error
+                ? error.message
+                : t.toast?.upload_failed || "Failed to upload image"
+            );
+          } finally {
+            setIsUploading(false);
+          }
         }
       }
 
@@ -517,6 +670,7 @@ export default function Veo3Workspace({
     setPrompt("");
     setInputImageFile(null);
     setInputImagePreview(null);
+    setIsUrlMode(false);
     setWatermark("");
     setSeeds(undefined);
     setEnableTranslation(true);

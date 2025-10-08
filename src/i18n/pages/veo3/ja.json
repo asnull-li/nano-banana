@@ -63,7 +63,8 @@
       "delete_tooltip": "画像を削除",
       "replace_tooltip": "画像を置き換え",
       "drop_text": "Veo 3にアップロードするためにドロップ",
-      "click_or_drag": "クリックまたはドラッグしてアップロード"
+      "click_or_drag": "クリックまたはドラッグしてアップロード",
+      "processing": "処理中..."
     },
     "prompt": {
       "label": "プロンプト",

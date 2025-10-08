@@ -15,6 +15,7 @@ import {
   Sparkles,
   Copy,
   CheckCircle,
+  Video,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { toast } from "sonner";
@@ -85,6 +86,28 @@ export default function ImagePreviewDialog({
     }
   };
 
+  const handleImageToVideo = () => {
+    if (!currentImage) {
+      toast.error(t("no_image_selected") || "No image selected");
+      return;
+    }
+
+    try {
+      // 验证图片URL是否有效
+      new URL(currentImage);
+
+      // 将当前图片URL作为查询参数，跳转到veo3页面
+      const searchParams = new URLSearchParams();
+      searchParams.set("imageUrl", currentImage);
+
+      router.push(`/veo3?${searchParams.toString()}`);
+      onClose();
+    } catch (error) {
+      console.error("Invalid image URL:", error);
+      toast.error(t("invalid_image_url") || "Invalid image URL");
+    }
+  };
+
   return (
     <Dialog open={!!images} onOpenChange={onClose}>
       <DialogContent className="max-w-[95vw] max-h-[95vh] p-0 overflow-hidden flex flex-col">
@@ -98,24 +121,19 @@ export default function ImagePreviewDialog({
                 </span>
               )}
             </span>
-            {/* <Button
-              variant="ghost"
-              size="icon"
-              onClick={onClose}
-              className="h-8 w-8 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800"
-            >
-              <X className="h-4 w-4" />
-            </Button> */}
           </DialogTitle>
         </DialogHeader>
 
         <div className="flex flex-col flex-1 min-h-0">
           {/* 图片容器 - 计算可用高度 */}
-          <div className="relative flex items-center justify-center bg-muted/20 overflow-hidden" style={{
-            height: hasMultipleImages
-              ? 'calc(100vh - 280px)' // 为header + 操作按钮 + 缩略图预留空间
-              : 'calc(100vh - 200px)'  // 为header + 操作按钮预留空间
-            }}>
+          <div
+            className="relative flex items-center justify-center bg-muted/20 overflow-hidden"
+            style={{
+              height: hasMultipleImages
+                ? "calc(100vh - 280px)" // 为header + 操作按钮 + 缩略图预留空间
+                : "calc(100vh - 200px)", // 为header + 操作按钮预留空间
+            }}
+          >
             <img
               src={currentImage}
               alt={`Preview ${currentIndex + 1}`}
@@ -147,11 +165,11 @@ export default function ImagePreviewDialog({
 
           {/* 操作区域 - 固定在底部 */}
           <div className="flex-shrink-0 p-3 sm:p-4 bg-gradient-to-t from-slate-50 to-transparent dark:from-slate-900 dark:to-transparent border-t border-slate-200 dark:border-slate-700">
-            <div className="flex gap-2 justify-center">
+            <div className="flex flex-wrap gap-2 justify-center">
               {/* 下载按钮 */}
               <Button
                 size="sm"
-                className="flex-1 max-w-[120px] sm:max-w-[150px] bg-gradient-to-r from-green-500 to-cyan-500 text-white hover:from-green-600 hover:to-cyan-600 shadow-lg shadow-green-500/25 text-xs sm:text-sm"
+                className="flex-1 min-w-[100px] max-w-[150px] bg-gradient-to-r from-green-500 to-cyan-500 text-white hover:from-green-600 hover:to-cyan-600 shadow-lg shadow-green-500/25 text-xs sm:text-sm"
                 onClick={() => onDownload(currentImage)}
               >
                 <Download className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
@@ -162,8 +180,7 @@ export default function ImagePreviewDialog({
               {/* 图像增强按钮 */}
               <Button
                 size="sm"
-                variant="outline"
-                className="flex-1 max-w-[120px] sm:max-w-[150px] bg-gradient-to-r from-green-500 to-cyan-500 text-white hover:from-green-600 hover:to-cyan-600 shadow-lg shadow-green-500/25 text-xs sm:text-sm"
+                className="flex-1 min-w-[100px] max-w-[150px] bg-gradient-to-r from-green-500 to-cyan-500 text-white hover:from-green-600 hover:to-cyan-600 shadow-lg shadow-green-500/25 text-xs sm:text-sm"
                 onClick={handleEnhance}
               >
                 <Sparkles className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
@@ -171,11 +188,22 @@ export default function ImagePreviewDialog({
                 <span className="sm:hidden">{t("enhance_image")}</span>
               </Button>
 
+              {/* 图生视频按钮 */}
+              <Button
+                size="sm"
+                className="flex-1 min-w-[100px] max-w-[150px] bg-gradient-to-r from-blue-500 to-purple-500 text-white hover:from-blue-600 hover:to-purple-600 shadow-lg shadow-blue-500/25 text-xs sm:text-sm"
+                onClick={handleImageToVideo}
+              >
+                <Video className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
+                <span className="hidden sm:inline">{t("image_to_video")}</span>
+                <span className="sm:hidden">{t("i2v")}</span>
+              </Button>
+
               {/* 复制链接按钮 */}
               <Button
                 size="sm"
                 variant="outline"
-                className="flex-1 max-w-[120px] sm:max-w-[150px] border-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-800 text-xs sm:text-sm"
+                className="flex-1 min-w-[100px] max-w-[150px] border-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-800 text-xs sm:text-sm"
                 onClick={() => handleCopyLink(currentImage, currentIndex)}
               >
                 {copiedIndex === currentIndex ? (

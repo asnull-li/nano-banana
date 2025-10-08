@@ -63,7 +63,8 @@
       "delete_tooltip": "Eliminar imagen",
       "replace_tooltip": "Reemplazar imagen",
       "drop_text": "Suelta para subir a Veo 3",
-      "click_or_drag": "Haz clic o arrastra para subir"
+      "click_or_drag": "Haz clic o arrastra para subir",
+      "processing": "Procesando..."
     },
     "prompt": {
       "label": "Prompt",

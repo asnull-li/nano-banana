@@ -63,7 +63,8 @@
       "delete_tooltip": "移除图片",
       "replace_tooltip": "替换图片",
       "drop_text": "拖放到此处上传到 Veo 3",
-      "click_or_drag": "点击或拖拽上传"
+      "click_or_drag": "点击或拖拽上传",
+      "processing": "处理中..."
     },
     "prompt": {
       "label": "提示词",

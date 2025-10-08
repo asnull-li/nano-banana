@@ -63,7 +63,8 @@
       "delete_tooltip": "Remover imagem",
       "replace_tooltip": "Substituir imagem",
       "drop_text": "Solte para carregar no Veo 3",
-      "click_or_drag": "Clique ou arraste para carregar"
+      "click_or_drag": "Clique ou arraste para carregar",
+      "processing": "Processando..."
     },
     "prompt": {
       "label": "Prompt",

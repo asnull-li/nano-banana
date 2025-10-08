@@ -153,7 +153,8 @@ export default function CompletedState({
                 {texts.preparing_1080p || "Preparing 1080P HD Version"}
               </p>
               <p className="text-xs text-emerald-600/80 dark:text-emerald-400/80">
-                {texts.preparing_1080p_hint || "This may take 1-2 minutes. The video will appear automatically when ready..."}
+                {texts.preparing_1080p_hint ||
+                  "This may take 1-2 minutes. The video will appear automatically when ready..."}
               </p>
             </div>
           </div>
@@ -171,7 +172,11 @@ export default function CompletedState({
               {texts.completed || "Completed"}
             </Badge>
             <span className="text-xs text-slate-500 dark:text-slate-400">
-              {task.aspectRatio} • {task.model === "veo3" ? (texts.mode_quality || "Quality") : (texts.mode_fast || "Fast")} Mode
+              {task.aspectRatio} •{" "}
+              {task.model === "veo3"
+                ? texts.mode_quality || "Quality"
+                : texts.mode_fast || "Fast"}{" "}
+              Mode
             </span>
           </div>
           <p className="text-sm text-slate-700 dark:text-slate-300 line-clamp-2">
@@ -195,7 +200,8 @@ export default function CompletedState({
             ) : (
               <>
                 <Sparkles className="w-3 h-3 mr-1.5" />
-                {texts.upgrade_button?.replace("${credits}", "8") || "Upgrade to 1080p (8 credits)"}
+                {texts.upgrade_button?.replace("${credits}", "10") ||
+                  "Upgrade to 1080p (10 credits)"}
               </>
             )}
           </Button>
@@ -205,7 +211,9 @@ export default function CompletedState({
       {/* Input Image Display */}
       {task.inputImage && (
         <div className="p-3 bg-slate-50 dark:bg-slate-800/50 rounded-lg border border-slate-200 dark:border-slate-700">
-          <p className="text-xs text-slate-600 dark:text-slate-400 mb-2">{texts.input_image_label || "Input Image:"}</p>
+          <p className="text-xs text-slate-600 dark:text-slate-400 mb-2">
+            {texts.input_image_label || "Input Image:"}
+          </p>
           <img
             src={task.inputImage}
             alt="Input"

@@ -63,7 +63,8 @@
       "delete_tooltip": "Supprimer l'image",
       "replace_tooltip": "Remplacer l'image",
       "drop_text": "Déposer pour télécharger vers Veo 3",
-      "click_or_drag": "Cliquez ou faites glisser pour télécharger"
+      "click_or_drag": "Cliquez ou faites glisser pour télécharger",
+      "processing": "Traitement..."
     },
     "prompt": {
       "label": "Prompt",

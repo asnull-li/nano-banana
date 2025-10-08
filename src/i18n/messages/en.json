@@ -246,6 +246,7 @@
         "download": "Download",
         "enhance": "Image Enhancement",
         "continue_edit": "Edit Again",
+        "image_to_video": "Image to Video",
         "image_not_found": "Image not found",
         "invalid_image_url": "Invalid image URL",
         "continue_edit_coming_soon": "Continue editing feature coming soon"
@@ -257,6 +258,7 @@
         "download": "Download",
         "copy_link": "Copy Link",
         "copied": "Copied",
+        "image_to_video": "Image to Video",
         "view_large": "View Large"
       },
       "image_preview": {
@@ -348,8 +350,11 @@
     "no_more": "All records loaded",
     "image_preview": "Image Preview",
     "enhance_image": "Enhance",
+    "image_to_video": "Image to Video",
+    "i2v": "I2V",
     "copy_link": "Copy Link",
     "copied": "Copied!",
+        "image_to_video": "Image to Video",
     "link_copied": "Link copied to clipboard",
     "copy_failed": "Failed to copy link",
     "coming_soon": "Coming soon!",

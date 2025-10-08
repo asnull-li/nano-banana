@@ -246,6 +246,7 @@
         "download": "다운로드",
         "enhance": "이미지 향상",
         "continue_edit": "다시 편집",
+        "image_to_video": "이미지를 동영상으로",
         "image_not_found": "이미지를 찾을 수 없습니다",
         "invalid_image_url": "유효하지 않은 이미지 URL",
         "continue_edit_coming_soon": "계속 편집 기능이 곧 출시됩니다"
@@ -257,6 +258,7 @@
         "download": "다운로드",
         "copy_link": "링크 복사",
         "copied": "복사됨",
+        "image_to_video": "이미지를 비디오로",
         "view_large": "크게 보기"
       },
       "image_preview": {
@@ -348,6 +350,8 @@
     "no_more": "모든 기록 로드 완료",
     "image_preview": "이미지 미리보기",
     "enhance_image": "향상",
+    "image_to_video": "이미지를 비디오로",
+    "i2v": "이미지를 비디오로",
     "copy_link": "링크 복사",
     "copied": "복사됨!",
     "link_copied": "링크가 클립보드에 복사됨",

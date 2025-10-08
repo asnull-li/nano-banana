@@ -246,6 +246,7 @@
         "download": "تنزيل",
         "enhance": "تحسين الصورة",
         "continue_edit": "تحرير مرة أخرى",
+        "image_to_video": "تحويل الصورة إلى فيديو",
         "image_not_found": "لم يتم العثور على الصورة",
         "invalid_image_url": "رابط صورة غير صالح",
         "continue_edit_coming_soon": "ميزة مواصلة التحرير ستكون متاحة قريباً"
@@ -257,6 +258,7 @@
         "download": "تنزيل",
         "copy_link": "نسخ الرابط",
         "copied": "تم النسخ",
+        "image_to_video": "صورة إلى فيديو",
         "view_large": "عرض بحجم كبير"
       },
       "image_preview": {
@@ -348,6 +350,8 @@
     "no_more": "تم تحميل جميع السجلات",
     "image_preview": "معاينة الصورة",
     "enhance_image": "تحسين",
+    "image_to_video": "صورة إلى فيديو",
+    "i2v": "صورة إلى فيديو",
     "copy_link": "نسخ الرابط",
     "copied": "تم النسخ!",
     "link_copied": "تم نسخ الرابط إلى الحافظة",
