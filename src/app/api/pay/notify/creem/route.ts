@@ -47,6 +47,38 @@ export async function POST(req: Request) {
         const paid_detail = JSON.stringify(session);
 
         await updateOrder({ order_no, paid_email, paid_detail });
+
+        // 如果是订阅订单，初始化订阅信息
+        if (session.subscription?.id) {
+          console.log(
+            `Initializing subscription info for order ${order_no}, subscription: ${session.subscription.id}`
+          );
+
+          // 获取订阅详细信息（从 metadata 或从 subscription 对象）
+          const subscriptionId = session.subscription.id;
+          const paid_at = getIsoTimestr();
+
+          // 注意：checkout.completed 中的 session 对象可能没有完整的订阅信息
+          // 我们只初始化基本的 sub_id 和 sub_times
+          // 详细信息会在 subscription.paid 事件中更新
+          await updateOrderSubscription(
+            order_no,
+            subscriptionId,
+            1, // interval_count 默认为 1
+            0, // cycle_anchor，暂时设为 0，会在 subscription.paid 中更新
+            0, // period_end，暂时设为 0，会在 subscription.paid 中更新
+            0, // period_start，暂时设为 0，会在 subscription.paid 中更新
+            "paid",
+            paid_at,
+            1, // 首次订阅，sub_times = 1
+            paid_email,
+            paid_detail
+          );
+
+          console.log(
+            `Subscription info initialized for ${order_no}, sub_id: ${subscriptionId}`
+          );
+        }
         break;
       }
 
@@ -127,18 +159,61 @@ async function handleSubscriptionRenewal(subscription: any) {
       return;
     }
 
-    // 区分首次订阅和续订：如果 sub_times 为 null 或 0，说明是首次订阅，已经在 checkout.completed 中处理过了
-    const currentSubTimes = order.sub_times || 0;
-    if (currentSubTimes === 0) {
+    // 区分首次订阅和续订：通过比较订阅创建时间和当前周期开始时间
+    const subscriptionCreatedAt = new Date(subscription.created_at);
+    const currentPeriodStart = new Date(subscription.current_period_start_date);
+    const timeDiff = Math.abs(
+      currentPeriodStart.getTime() - subscriptionCreatedAt.getTime()
+    );
+
+    // 如果时间差小于 1 小时，认为是首次订阅（由 checkout.completed 处理）
+    const isFirstSubscription = timeDiff < 3600000; // 1小时 = 3600000毫秒
+
+    if (isFirstSubscription) {
       console.log(
-        "Skipping first subscription payment (handled by checkout.completed)"
+        `Skipping first subscription payment (time diff: ${Math.round(timeDiff / 1000)}s, handled by checkout.completed)`
       );
+
+      // 防御性逻辑：如果 checkout.completed 还没来得及初始化订阅信息，这里先初始化
+      if (!order.sub_id) {
+        console.log("Initializing subscription info for first payment");
+        const paid_at = getIsoTimestr();
+        const paid_email = subscription.customer?.email || user_email || "";
+        const paid_detail = JSON.stringify(subscription);
+        const period_start = Math.floor(subscriptionCreatedAt.getTime() / 1000);
+        const period_end = Math.floor(new Date(subscription.current_period_end_date).getTime() / 1000);
+
+        await updateOrderSubscription(
+          order_no,
+          subscription.id,
+          1,
+          period_start,
+          period_end,
+          period_start,
+          "paid",
+          paid_at,
+          1, // 首次订阅，sub_times = 1
+          paid_email,
+          paid_detail
+        );
+        console.log("Subscription info initialized");
+      }
       return;
     }
 
     console.log(
-      `✅ This is a subscription renewal (sub_times: ${currentSubTimes})`
+      `✅ This is a subscription renewal (time diff: ${Math.round(timeDiff / 1000 / 86400)}days, created: ${subscriptionCreatedAt.toISOString()}, period_start: ${currentPeriodStart.toISOString()})`
     );
+
+    // 获取当前的续订次数，如果为空则设为 1（兼容老数据）
+    const currentSubTimes = order.sub_id ? (order.sub_times || 1) : 0;
+
+    // 防御性逻辑：如果续订时发现订单没有 sub_id，说明是老数据或 checkout.completed 没有正确处理
+    if (!order.sub_id) {
+      console.warn(
+        `⚠️ Renewal detected but order has no sub_id, initializing subscription info first`
+      );
+    }
 
     // 设置积分过期时间为当前周期结束时间
     const periodEndDate = new Date(subscription.current_period_end_date);
@@ -164,7 +239,7 @@ async function handleSubscriptionRenewal(subscription: any) {
       new Date(subscription.current_period_end_date).getTime() / 1000
     );
 
-    // 续订次数 +1
+    // 续订次数 +1（如果是老数据第一次续订，从 1 开始）
     const newSubTimes = currentSubTimes + 1;
 
     await updateOrderSubscription(
