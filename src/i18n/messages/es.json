@@ -357,6 +357,29 @@
     "link_copied": "Enlace copiado al portapapeles",
     "copy_failed": "Error al copiar enlace",
     "coming_soon": "¡Próximamente!",
+    "tabs": {
+      "nano_banana": "Generación de Imágenes",
+      "veo3": "Generación de Videos",
+      "upscaler": "Mejora de Imágenes"
+    },
+    "veo3": {
+      "video_preview": "Vista Previa de Video",
+      "720p": "720p",
+      "1080p": "1080p (HD)",
+      "prompt": "Indicación",
+      "input_image": "Imagen de Entrada",
+      "download_video": "Descargar Video"
+    },
+    "upscaler": {
+      "compare_title": "Vista Previa de Comparación",
+      "scale": "Factor de Escala",
+      "face_enhance": "Mejora Facial",
+      "enabled": "Activado",
+      "disabled": "Desactivado",
+      "drag_hint": "Arrastra el divisor para comparar imágenes",
+      "download_original": "Descargar Original",
+      "download_enhanced": "Descargar Mejorada"
+    },
     "error": {
       "unknown": "Ocurrió un error desconocido"
     },

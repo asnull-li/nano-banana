@@ -354,10 +354,32 @@
     "i2v": "I2V",
     "copy_link": "Copier le lien",
     "copied": "Copié !",
-        "image_to_video": "Image vers Vidéo",
     "link_copied": "Lien copié dans le presse-papiers",
     "copy_failed": "Échec de la copie du lien",
     "coming_soon": "Bientôt disponible !",
+    "tabs": {
+      "nano_banana": "Génération d'Images",
+      "veo3": "Génération de Vidéos",
+      "upscaler": "Amélioration d'Images"
+    },
+    "veo3": {
+      "video_preview": "Aperçu Vidéo",
+      "720p": "720p",
+      "1080p": "1080p (HD)",
+      "prompt": "Invite",
+      "input_image": "Image d'Entrée",
+      "download_video": "Télécharger la Vidéo"
+    },
+    "upscaler": {
+      "compare_title": "Aperçu de Comparaison",
+      "scale": "Facteur d'Échelle",
+      "face_enhance": "Amélioration du Visage",
+      "enabled": "Activé",
+      "disabled": "Désactivé",
+      "drag_hint": "Faites glisser le séparateur pour comparer les images",
+      "download_original": "Télécharger l'Original",
+      "download_enhanced": "Télécharger l'Améliorée"
+    },
     "error": {
       "unknown": "Une erreur inconnue s'est produite"
     },

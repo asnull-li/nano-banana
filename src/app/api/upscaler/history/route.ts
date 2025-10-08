@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getUserUuid } from "@/services/user";
-import { findTasksByUser } from "@/models/veo3";
+import { findTasksByUser } from "@/models/upscaler";
 
 export async function GET(request: NextRequest) {
   try {
@@ -31,21 +31,17 @@ export async function GET(request: NextRequest) {
       return {
         task_id: task.task_id,
         status: task.status,
-        type: task.type,
-        model: task.model,
         input: {
-          prompt: input.prompt,
-          aspect_ratio: input.aspectRatio,
-          has_image: !!input.imageUrls,
+          original_image_url: input.image,
+          scale: input.scale,
+          face_enhance: input.face_enhance,
         },
-        video_720p_url: task.video_720p_url,
-        video_1080p_url: task.video_1080p_url,
-        has_1080p: task.has_1080p,
+        upscaled_image_url: result?.images?.[0]?.url || null,
         credits_used: task.credits_used,
         credits_refunded: task.credits_refunded,
         error_message: task.error_message,
         created_at: task.created_at,
-        completed_at: task.completed_at,
+        updated_at: task.updated_at,
       };
     });
 
@@ -55,7 +51,7 @@ export async function GET(request: NextRequest) {
       total: formattedTasks.length,
     });
   } catch (error) {
-    console.error("Veo3 History API error:", error);
+    console.error("Upscaler History API error:", error);
     return NextResponse.json(
       {
         success: false,

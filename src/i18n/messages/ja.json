@@ -357,6 +357,29 @@
     "link_copied": "リンクがクリップボードにコピーされました",
     "copy_failed": "リンクのコピーに失敗しました",
     "coming_soon": "近日公開！",
+    "tabs": {
+      "nano_banana": "画像生成",
+      "veo3": "動画生成",
+      "upscaler": "画像強化"
+    },
+    "veo3": {
+      "video_preview": "動画プレビュー",
+      "720p": "720p",
+      "1080p": "1080p (HD)",
+      "prompt": "プロンプト",
+      "input_image": "入力画像",
+      "download_video": "動画をダウンロード"
+    },
+    "upscaler": {
+      "compare_title": "比較プレビュー",
+      "scale": "拡大率",
+      "face_enhance": "顔強化",
+      "enabled": "有効",
+      "disabled": "無効",
+      "drag_hint": "区切り線をドラッグして画像を比較",
+      "download_original": "オリジナルをダウンロード",
+      "download_enhanced": "強化版をダウンロード"
+    },
     "error": {
       "unknown": "不明なエラーが発生しました"
     },

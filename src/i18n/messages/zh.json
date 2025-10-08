@@ -357,6 +357,29 @@
     "link_copied": "链接已复制到剪贴板",
     "copy_failed": "复制链接失败",
     "coming_soon": "敬请期待！",
+    "tabs": {
+      "nano_banana": "图片生成",
+      "veo3": "视频生成",
+      "upscaler": "图片增强"
+    },
+    "veo3": {
+      "video_preview": "视频预览",
+      "720p": "720p",
+      "1080p": "1080p (高清)",
+      "prompt": "提示词",
+      "input_image": "输入图片",
+      "download_video": "下载视频"
+    },
+    "upscaler": {
+      "compare_title": "对比预览",
+      "scale": "放大倍数",
+      "face_enhance": "人脸增强",
+      "enabled": "已启用",
+      "disabled": "未启用",
+      "drag_hint": "拖拽分割线对比图片",
+      "download_original": "下载原图",
+      "download_enhanced": "下载增强图"
+    },
     "error": {
       "unknown": "发生未知错误"
     },

@@ -357,6 +357,29 @@
     "link_copied": "링크가 클립보드에 복사됨",
     "copy_failed": "링크 복사 실패",
     "coming_soon": "곧 출시 예정!",
+    "tabs": {
+      "nano_banana": "이미지 생성",
+      "veo3": "비디오 생성",
+      "upscaler": "이미지 향상"
+    },
+    "veo3": {
+      "video_preview": "비디오 미리보기",
+      "720p": "720p",
+      "1080p": "1080p (HD)",
+      "prompt": "프롬프트",
+      "input_image": "입력 이미지",
+      "download_video": "비디오 다운로드"
+    },
+    "upscaler": {
+      "compare_title": "비교 미리보기",
+      "scale": "배율",
+      "face_enhance": "얼굴 향상",
+      "enabled": "활성화됨",
+      "disabled": "비활성화됨",
+      "drag_hint": "분할선을 드래그하여 이미지 비교",
+      "download_original": "원본 다운로드",
+      "download_enhanced": "향상된 이미지 다운로드"
+    },
     "error": {
       "unknown": "알 수 없는 오류가 발생했습니다"
     },

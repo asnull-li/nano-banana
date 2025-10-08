@@ -354,10 +354,32 @@
     "i2v": "I2V",
     "copy_link": "Copy Link",
     "copied": "Copied!",
-        "image_to_video": "Image to Video",
     "link_copied": "Link copied to clipboard",
     "copy_failed": "Failed to copy link",
     "coming_soon": "Coming soon!",
+    "tabs": {
+      "nano_banana": "Image Generation",
+      "veo3": "Video Generation",
+      "upscaler": "Image Enhancement"
+    },
+    "veo3": {
+      "video_preview": "Video Preview",
+      "720p": "720p",
+      "1080p": "1080p (HD)",
+      "prompt": "Prompt",
+      "input_image": "Input Image",
+      "download_video": "Download Video"
+    },
+    "upscaler": {
+      "compare_title": "Comparison Preview",
+      "scale": "Scale Factor",
+      "face_enhance": "Face Enhancement",
+      "enabled": "Enabled",
+      "disabled": "Disabled",
+      "drag_hint": "Drag the divider to compare images",
+      "download_original": "Download Original",
+      "download_enhanced": "Download Enhanced"
+    },
     "error": {
       "unknown": "Unknown error occurred"
     },

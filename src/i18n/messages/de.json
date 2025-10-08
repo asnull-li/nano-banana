@@ -357,6 +357,29 @@
     "link_copied": "Link in die Zwischenablage kopiert",
     "copy_failed": "Link kopieren fehlgeschlagen",
     "coming_soon": "Demnächst verfügbar!",
+    "tabs": {
+      "nano_banana": "Bildgenerierung",
+      "veo3": "Videogenerierung",
+      "upscaler": "Bildverbesserung"
+    },
+    "veo3": {
+      "video_preview": "Videovorschau",
+      "720p": "720p",
+      "1080p": "1080p (HD)",
+      "prompt": "Eingabeaufforderung",
+      "input_image": "Eingabebild",
+      "download_video": "Video Herunterladen"
+    },
+    "upscaler": {
+      "compare_title": "Vergleichsvorschau",
+      "scale": "Skalierungsfaktor",
+      "face_enhance": "Gesichtsverbesserung",
+      "enabled": "Aktiviert",
+      "disabled": "Deaktiviert",
+      "drag_hint": "Ziehen Sie den Teiler, um Bilder zu vergleichen",
+      "download_original": "Original Herunterladen",
+      "download_enhanced": "Verbessert Herunterladen"
+    },
     "error": {
       "unknown": "Ein unbekannter Fehler ist aufgetreten"
     },

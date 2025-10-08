@@ -357,6 +357,29 @@
     "link_copied": "تم نسخ الرابط إلى الحافظة",
     "copy_failed": "فشل نسخ الرابط",
     "coming_soon": "قريباً!",
+    "tabs": {
+      "nano_banana": "توليد الصور",
+      "veo3": "توليد الفيديو",
+      "upscaler": "تحسين الصور"
+    },
+    "veo3": {
+      "video_preview": "معاينة الفيديو",
+      "720p": "720p",
+      "1080p": "1080p (HD)",
+      "prompt": "المطالبة",
+      "input_image": "صورة الإدخال",
+      "download_video": "تحميل الفيديو"
+    },
+    "upscaler": {
+      "compare_title": "معاينة المقارنة",
+      "scale": "عامل التحجيم",
+      "face_enhance": "تحسين الوجه",
+      "enabled": "مفعل",
+      "disabled": "معطل",
+      "drag_hint": "اسحب الفاصل لمقارنة الصور",
+      "download_original": "تحميل الأصلي",
+      "download_enhanced": "تحميل المحسن"
+    },
     "error": {
       "unknown": "حدث خطأ غير معروف"
     },
