@@ -242,5 +242,31 @@
         "answer": "Veo 3에서 직접 생성된 개별 동영상 클립은 8초로 제한됩니다. 더 긴 동영상 콘텐츠를 만들어야 하는 경우 여러 개의 8초 동영상 클립을 별도로 생성한 다음 외부 동영상 편집 도구(Adobe Premiere, Final Cut Pro, CapCut 등)를 사용하여 이러한 클립을 완전한 긴 동영상으로 연결할 수 있습니다. 이 방식을 통해 각 세그먼트의 높은 품질을 유지하면서 원하는 길이의 전문 동영상 작품을 만들 수 있습니다."
       }
     ]
+  },
+  "examples": {
+    "title": "Veo 3 창작 예시",
+    "subtitle": "Veo 3의 강력한 동영상 생성 기능을 탐색하고, 이미지에서 동영상으로, 텍스트에서 애니메이션으로, AI 동영상 제작의 무한한 가능성을 경험해보세요",
+    "image_to_video": {
+      "title": "이미지를 동영상으로",
+      "description": "정적 이미지를 업로드하면 Veo 3가 생명을 불어넣어 부드럽고 자연스러운 동적 동영상 효과를 만들어냅니다",
+      "input_image_url": "https://file.nanobanana.org/showcase/veo3/woman-city-doodle.jpg",
+      "input_image_alt": "도시 낙서 스타일 여성 일러스트",
+      "output_video_url": "https://file.nanobanana.org/showcase/veo3/woman-city-doodle.mp4"
+    },
+    "text_to_video": {
+      "title": "텍스트를 동영상으로",
+      "description": "텍스트 설명만으로도 Veo 3는 당신의 창의적 비전을 이해하고 놀라운 전문급 동영상 콘텐츠를 생성할 수 있습니다",
+      "input_prompt": "반사성 유기 크롬으로 만들어진 높은 건물들이 밝은 정오의 태양 아래 반짝이는 광활한 미래 도시 풍경을 통과하는 초고속 추적 샷. 무지개 빛 플레어와 수정 같은 보케가 프레임 전체에 흩어지며 카메라가 구조물 사이를 역동적으로 이동합니다.",
+      "output_video_url": "https://file.nanobanana.org/showcase/veo3/tmp7uoz8hjv.mp4"
+    },
+    "labels": {
+      "original_image": "원본 이미지",
+      "prompt_text": "프롬프트",
+      "ai_generated_video": "AI 생성 동영상",
+      "video_duration": "8초",
+      "video_quality": "720P",
+      "video_info": "8초 • 720P",
+      "browser_not_supported": "브라우저가 동영상 재생을 지원하지 않습니다."
+    }
   }
 }

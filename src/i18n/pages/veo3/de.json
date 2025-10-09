@@ -242,5 +242,31 @@
         "answer": "Einzelne Videoclips, die direkt in Veo 3 erstellt werden, sind auf 8 Sekunden begrenzt. Wenn Sie längere Videoinhalte erstellen müssen, können Sie mehrere 8-Sekunden-Videoclips separat generieren und dann externe Videobearbeitungstools (wie Adobe Premiere, Final Cut Pro oder CapCut) verwenden, um diese Clips zu einem vollständigen längeren Video zusammenzufügen. Dieser Ansatz ermöglicht es Ihnen, professionelle Videoarbeiten beliebiger Länge zu erstellen und gleichzeitig eine hohe Qualität für jedes Segment beizubehalten."
       }
     ]
+  },
+  "examples": {
+    "title": "Veo 3 Kreative Beispiele",
+    "subtitle": "Entdecken Sie die mächtigen Videogenerierungsfähigkeiten von Veo 3, von Bildern zu Videos, von Text zu Animationen, erleben Sie die unendlichen Möglichkeiten der KI-Videoerzeugung",
+    "image_to_video": {
+      "title": "Bild zu Video",
+      "description": "Laden Sie ein statisches Bild hoch und Veo 3 wird es zum Leben erwecken, indem es glatte und natürliche dynamische Videoeffekte erstellt",
+      "input_image_url": "https://file.nanobanana.org/showcase/veo3/woman-city-doodle.jpg",
+      "input_image_alt": "Städtische Doodle-Stil weibliche Illustration",
+      "output_video_url": "https://file.nanobanana.org/showcase/veo3/woman-city-doodle.mp4"
+    },
+    "text_to_video": {
+      "title": "Text zu Video",
+      "description": "Mit nur Textbeschreibungen kann Veo 3 Ihre kreative Vision verstehen und atemberaubende professionelle Videoinhalte generieren",
+      "input_prompt": "Ultra-schnelle Verfolgungsaufnahme durch eine weitläufige futuristische Stadtlandschaft, wo hoch aufragende Gebäude aus reflektierendem organischem Chrom bestehen und unter einer hellen Mittagssonne glänzen. Regenbogen-Lichtreflexe und kristallines Bokeh verteilen sich über den Rahmen, während sich die Kamera dynamisch zwischen den Strukturen bewegt.",
+      "output_video_url": "https://file.nanobanana.org/showcase/veo3/tmp7uoz8hjv.mp4"
+    },
+    "labels": {
+      "original_image": "Originalbild",
+      "prompt_text": "Prompt",
+      "ai_generated_video": "KI-generiertes Video",
+      "video_duration": "8 Sekunden",
+      "video_quality": "720P",
+      "video_info": "8s • 720P",
+      "browser_not_supported": "Ihr Browser unterstützt keine Videowiedergabe."
+    }
   }
 }

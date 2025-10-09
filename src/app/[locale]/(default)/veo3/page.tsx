@@ -6,6 +6,7 @@ import FeaturesSection from "@/components/template/features-section";
 import HowToUseSection from "@/components/template/how-to-use-section";
 import FaqSection from "@/components/template/faq-section";
 import { Veo3Workspace } from "@/components/workspace/veo3";
+import Veo3ExamplesSection from "@/components/workspace/veo3/components/veo3-examples-section";
 
 export async function generateMetadata({
   params,
@@ -49,7 +50,10 @@ export default async function Veo3Page({
   const page = await getVeo3Page(locale);
 
   // 从URL查询参数中获取初始图片URL
-  const initialImageUrl = typeof resolvedSearchParams.imageUrl === 'string' ? resolvedSearchParams.imageUrl : null;
+  const initialImageUrl =
+    typeof resolvedSearchParams.imageUrl === "string"
+      ? resolvedSearchParams.imageUrl
+      : null;
 
   return (
     <>
@@ -62,6 +66,9 @@ export default async function Veo3Page({
         pageData={page}
         initialImageUrl={initialImageUrl}
       />
+
+      {/* Examples Section */}
+      <Veo3ExamplesSection pageData={page} />
 
       {/* Features Section */}
       <FeaturesSection pageData={page} />

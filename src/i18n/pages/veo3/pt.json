@@ -242,5 +242,31 @@
         "answer": "Os clipes de vídeo individuais criados diretamente no Veo 3 são limitados a 8 segundos. Se você precisar criar conteúdo de vídeo mais longo, pode gerar vários clipes de vídeo de 8 segundos separadamente e, em seguida, usar ferramentas de edição de vídeo externas (como Adobe Premiere, Final Cut Pro ou CapCut) para unir esses clipes em um vídeo completo mais longo. Essa abordagem permite criar obras de vídeo profissionais de qualquer duração, mantendo alta qualidade para cada segmento."
       }
     ]
+  },
+  "examples": {
+    "title": "Exemplos Criativos do Veo 3",
+    "subtitle": "Explore as poderosas capacidades de geração de vídeo do Veo 3, de imagens para vídeos, de texto para animações, experimente as infinitas possibilidades da criação de vídeo com IA",
+    "image_to_video": {
+      "title": "Imagem para Vídeo",
+      "description": "Carregue uma imagem estática e o Veo 3 dará vida a ela, criando efeitos de vídeo dinâmicos suaves e naturais",
+      "input_image_url": "https://file.nanobanana.org/showcase/veo3/woman-city-doodle.jpg",
+      "input_image_alt": "Ilustração feminina estilo doodle urbano",
+      "output_video_url": "https://file.nanobanana.org/showcase/veo3/woman-city-doodle.mp4"
+    },
+    "text_to_video": {
+      "title": "Texto para Vídeo",
+      "description": "Com apenas descrições de texto, o Veo 3 pode entender sua visão criativa e gerar conteúdo de vídeo profissional impressionante",
+      "input_prompt": "Tomada de rastreamento ultrarrápida através de uma paisagem urbana futurística expansiva onde edifícios imponentes são feitos de cromo orgânico reflexivo, brilhando sob um sol brilhante do meio-dia. Clarões de luz arco-íris e bokeh cristalino se espalham pelo quadro enquanto a câmera se move dinamicamente entre as estruturas.",
+      "output_video_url": "https://file.nanobanana.org/showcase/veo3/tmp7uoz8hjv.mp4"
+    },
+    "labels": {
+      "original_image": "Imagem Original",
+      "prompt_text": "Prompt",
+      "ai_generated_video": "Vídeo Gerado por IA",
+      "video_duration": "8 segundos",
+      "video_quality": "720P",
+      "video_info": "8s • 720P",
+      "browser_not_supported": "Seu navegador não suporta reprodução de vídeo."
+    }
   }
 }

@@ -242,5 +242,31 @@
         "answer": "Veo 3で直接作成される個々の動画クリップは8秒に制限されています。より長い動画コンテンツを作成する必要がある場合は、複数の8秒動画クリップを個別に生成し、外部の動画編集ツール(Adobe Premiere、Final Cut Pro、CapCutなど)を使用してこれらのクリップを完全な長い動画につなぎ合わせることができます。このアプローチにより、各セグメントの高品質を維持しながら、任意の長さのプロフェッショナルな動画作品を作成できます。"
       }
     ]
+  },
+  "examples": {
+    "title": "Veo 3 クリエイティブ例",
+    "subtitle": "Veo 3の強力な動画生成機能を探索し、画像から動画へ、テキストからアニメーションへ、AI動画制作の無限の可能性を体験してください",
+    "image_to_video": {
+      "title": "画像から動画へ",
+      "description": "静止画像をアップロードすると、Veo 3がそれに命を吹き込み、滑らかで自然な動的動画効果を作成します",
+      "input_image_url": "https://file.nanobanana.org/showcase/veo3/woman-city-doodle.jpg",
+      "input_image_alt": "都市落書きスタイルの女性イラスト",
+      "output_video_url": "https://file.nanobanana.org/showcase/veo3/woman-city-doodle.mp4"
+    },
+    "text_to_video": {
+      "title": "テキストから動画へ",
+      "description": "テキストの説明だけで、Veo 3はあなたの創造的なビジョンを理解し、素晴らしいプロフェッショナルグレードの動画コンテンツを生成できます",
+      "input_prompt": "反射性の有機クロムで作られた高層ビルが明るい正午の太陽の下で輝く、広大な未来都市景観を通る超高速追跡ショット。虹色の光フレアと結晶のようなボケが画面全体に散らばり、カメラが構造物の間を動的に織り交ぜます。",
+      "output_video_url": "https://file.nanobanana.org/showcase/veo3/tmp7uoz8hjv.mp4"
+    },
+    "labels": {
+      "original_image": "元画像",
+      "prompt_text": "プロンプト",
+      "ai_generated_video": "AI生成動画",
+      "video_duration": "8秒",
+      "video_quality": "720P",
+      "video_info": "8秒 • 720P",
+      "browser_not_supported": "お使いのブラウザは動画再生をサポートしていません。"
+    }
   }
 }

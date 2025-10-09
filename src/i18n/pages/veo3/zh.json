@@ -242,5 +242,31 @@
         "answer": "直接在 Veo 3 中制作的单个视频片段限制为 8 秒。如果您需要制作更长的视频内容，可以分别生成多个 8 秒的视频片段，然后使用外部的视频剪辑工具（如 Adobe Premiere、Final Cut Pro、剪映等）将这些片段拼接成完整的长视频。这种方式可以让您创建任意长度的专业视频作品，同时保持每个片段的高质量。"
       }
     ]
+  },
+  "examples": {
+    "title": "Veo 3 创作示例",
+    "subtitle": "探索 Veo 3 强大的视频生成能力，从图片到视频，从文字到动画，体验 AI 视频创作的无限可能",
+    "image_to_video": {
+      "title": "图片生成视频",
+      "description": "上传一张静态图片或选择 Nano Banana 生成的图片，Veo 3 将为其注入生命力，创造出流畅自然的动态视频效果",
+      "input_image_url": "https://file.nanobanana.org/showcase/veo3/woman-city-doodle.jpg",
+      "input_image_alt": "城市涂鸦风格女性插画",
+      "output_video_url": "https://file.nanobanana.org/showcase/veo3/woman-city-doodle.mp4"
+    },
+    "text_to_video": {
+      "title": "文本生成视频",
+      "description": "仅凭文字描述，Veo 3 就能理解您的创意愿景，生成令人惊叹的专业级视频内容",
+      "input_prompt": "超快速的追踪镜头穿过一座错综复杂的未来都市，高耸的建筑物由反射性的有机铬制成，在明亮的正午阳光下闪闪发光。彩虹般的光芒和水晶般的散景在镜头中四处散播，摄像机在结构之间动态穿梭。画面过渡到一个无缝的近距离放大镜头，镜头对准了一个半透明的铬制蜂巢，一只高度详细的机器人工蜂正在以机械精度进行工作。场景以超现实的4K清晰度、柔和的镜头深度和背景中的环境科幻音频呈现，营造出一部高预算赛博朋克电影的氛围。",
+      "output_video_url": "https://file.nanobanana.org/showcase/veo3/tmp7uoz8hjv.mp4"
+    },
+    "labels": {
+      "original_image": "原始图片",
+      "prompt_text": "提示词",
+      "ai_generated_video": "AI 生成视频",
+      "video_duration": "8秒",
+      "video_quality": "720P",
+      "video_info": "8秒 • 720P",
+      "browser_not_supported": "您的浏览器不支持视频播放。"
+    }
   }
 }

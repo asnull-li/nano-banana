@@ -242,5 +242,31 @@
         "answer": "Les clips vidéo individuels créés directement dans Veo 3 sont limités à 8 secondes. Si vous devez créer un contenu vidéo plus long, vous pouvez générer plusieurs clips vidéo de 8 secondes séparément, puis utiliser des outils d'édition vidéo externes (tels qu'Adobe Premiere, Final Cut Pro ou CapCut) pour assembler ces clips en une vidéo complète plus longue. Cette approche vous permet de créer des œuvres vidéo professionnelles de n'importe quelle durée tout en maintenant une haute qualité pour chaque segment."
       }
     ]
+  },
+  "examples": {
+    "title": "Exemples Créatifs de Veo 3",
+    "subtitle": "Explorez les puissantes capacités de génération vidéo de Veo 3, des images aux vidéos, du texte aux animations, découvrez les possibilités infinies de la création vidéo IA",
+    "image_to_video": {
+      "title": "Image vers Vidéo",
+      "description": "Téléchargez une image statique et Veo 3 lui donnera vie, créant des effets vidéo dynamiques fluides et naturels",
+      "input_image_url": "https://file.nanobanana.org/showcase/veo3/woman-city-doodle.jpg",
+      "input_image_alt": "Illustration féminine style doodle urbain",
+      "output_video_url": "https://file.nanobanana.org/showcase/veo3/woman-city-doodle.mp4"
+    },
+    "text_to_video": {
+      "title": "Texte vers Vidéo",
+      "description": "Avec de simples descriptions textuelles, Veo 3 peut comprendre votre vision créative et générer un contenu vidéo professionnel époustouflant",
+      "input_prompt": "Prise de vue de suivi ultra-rapide à travers un paysage urbain futuriste tentaculaire où les bâtiments imposants sont faits de chrome organique réfléchissant, scintillant sous un soleil éclatant de midi. Des éclats de lumière arc-en-ciel et un bokeh cristallin se dispersent dans le cadre tandis que la caméra se déplace dynamiquement entre les structures.",
+      "output_video_url": "https://file.nanobanana.org/showcase/veo3/tmp7uoz8hjv.mp4"
+    },
+    "labels": {
+      "original_image": "Image Originale",
+      "prompt_text": "Prompt",
+      "ai_generated_video": "Vidéo Générée par IA",
+      "video_duration": "8 secondes",
+      "video_quality": "720P",
+      "video_info": "8s • 720P",
+      "browser_not_supported": "Votre navigateur ne supporte pas la lecture vidéo."
+    }
   }
 }
