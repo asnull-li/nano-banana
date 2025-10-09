@@ -37,16 +37,22 @@ export default function Veo3VideoDialog({
       ? video1080pUrl
       : video720pUrl;
 
-  const handleDownload = async () => {
-    if (!currentVideoUrl) return;
+  const handleDownload = async (downloadQuality?: "720p" | "1080p") => {
+    const targetQuality = downloadQuality || quality;
+    const targetVideoUrl =
+      targetQuality === "1080p" && has1080p && video1080pUrl
+        ? video1080pUrl
+        : video720pUrl;
+
+    if (!targetVideoUrl) return;
 
     try {
-      const response = await fetch(currentVideoUrl);
+      const response = await fetch(targetVideoUrl);
       const blob = await response.blob();
       const url = window.URL.createObjectURL(blob);
       const a = document.createElement("a");
       a.href = url;
-      a.download = `veo3-video-${quality}.mp4`;
+      a.download = `veo3-video-${targetQuality}.mp4`;
       document.body.appendChild(a);
       a.click();
       window.URL.revokeObjectURL(url);
@@ -128,14 +134,34 @@ export default function Veo3VideoDialog({
               <p className="text-sm text-muted-foreground">{prompt}</p>
             </div>
 
-            {/* Download Button */}
-            <Button
-              onClick={handleDownload}
-              className="w-full bg-gradient-to-r from-green-600 to-cyan-600 hover:from-green-700 hover:to-cyan-700"
-            >
-              <Download className="mr-2 h-4 w-4" />
-              {t("download_video")} ({quality})
-            </Button>
+            {/* Download Buttons */}
+            {has1080p && video1080pUrl ? (
+              <div className="flex gap-2">
+                <Button
+                  onClick={() => handleDownload("720p")}
+                  className="flex-1 bg-gradient-to-r from-green-600 to-cyan-600 hover:from-green-700 hover:to-cyan-700"
+                >
+                  <Download className="mr-2 h-4 w-4" />
+                  {t("download_video")} (720p)
+                </Button>
+                <Button
+                  onClick={() => handleDownload("1080p")}
+                  className="flex-1 bg-gradient-to-r from-green-600 to-cyan-600 hover:from-green-700 hover:to-cyan-700"
+                >
+                  <Download className="mr-2 h-4 w-4" />
+                  {t("download_video")} (1080p)
+                  <Sparkles className="ml-1 h-3 w-3" />
+                </Button>
+              </div>
+            ) : (
+              <Button
+                onClick={() => handleDownload()}
+                className="w-full bg-gradient-to-r from-green-600 to-cyan-600 hover:from-green-700 hover:to-cyan-700"
+              >
+                <Download className="mr-2 h-4 w-4" />
+                {t("download_video")} ({quality})
+              </Button>
+            )}
           </div>
         </div>
       </DialogContent>
