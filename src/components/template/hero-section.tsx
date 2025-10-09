@@ -11,7 +11,7 @@ interface HeroSectionProps {
 
 export default function HeroSection({ pageData }: HeroSectionProps) {
   return (
-    <section className="relative py-12 lg:py-24 overflow-hidden">
+    <section className="relative py-12 lg:py-20 overflow-hidden">
       {/* Animated Background Effects */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-20 left-10 w-72 h-72 bg-green-500/10 rounded-full blur-3xl animate-pulse" />
@@ -20,7 +20,7 @@ export default function HeroSection({ pageData }: HeroSectionProps) {
       </div>
 
       <div className="container relative z-10">
-        <div className="text-center max-w-4xl mx-auto">
+        <div className="text-center mx-auto">
           {/* Title */}
           <h1 className="mb-6 text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
             <span className="bg-gradient-to-r from-green-500 via-emerald-500 to-cyan-500 bg-clip-text text-transparent">
@@ -29,7 +29,7 @@ export default function HeroSection({ pageData }: HeroSectionProps) {
           </h1>
 
           {/* Description */}
-          <p className="mx-auto max-w-2xl text-lg lg:text-xl leading-relaxed text-gray-600 dark:text-gray-400 mb-8">
+          <p className="mx-auto text-lg lg:text-xl leading-relaxed text-gray-600 dark:text-gray-400 mb-8">
             {pageData?.hero?.description ||
               "Professional AI-powered technology for stunning results."}
           </p>
