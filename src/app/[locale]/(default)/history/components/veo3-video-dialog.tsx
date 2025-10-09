@@ -7,7 +7,7 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { Download, Sparkles } from "lucide-react";
+import { Download, Sparkles, Loader2 } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
@@ -31,6 +31,7 @@ export default function Veo3VideoDialog({
 }: Veo3VideoDialogProps) {
   const t = useTranslations("history.veo3");
   const [quality, setQuality] = useState<"720p" | "1080p">("720p");
+  const [downloading, setDownloading] = useState<"720p" | "1080p" | null>(null);
 
   const currentVideoUrl =
     quality === "1080p" && has1080p && video1080pUrl
@@ -46,6 +47,8 @@ export default function Veo3VideoDialog({
 
     if (!targetVideoUrl) return;
 
+    setDownloading(targetQuality);
+
     try {
       const response = await fetch(targetVideoUrl);
       const blob = await response.blob();
@@ -59,6 +62,8 @@ export default function Veo3VideoDialog({
       document.body.removeChild(a);
     } catch (error) {
       console.error("Download failed:", error);
+    } finally {
+      setDownloading(null);
     }
   };
 
@@ -139,27 +144,50 @@ export default function Veo3VideoDialog({
               <div className="flex gap-2">
                 <Button
                   onClick={() => handleDownload("720p")}
-                  className="flex-1 bg-gradient-to-r from-green-600 to-cyan-600 hover:from-green-700 hover:to-cyan-700"
+                  disabled={downloading !== null}
+                  className="flex-1 bg-gradient-to-r from-green-600 to-cyan-600 hover:from-green-700 hover:to-cyan-700 disabled:opacity-50"
                 >
-                  <Download className="mr-2 h-4 w-4" />
-                  {t("download_video")} (720p)
+                  {downloading === "720p" ? (
+                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                  ) : (
+                    <Download className="mr-2 h-4 w-4" />
+                  )}
+                  {downloading === "720p"
+                    ? "Downloading..."
+                    : `${t("download_video")} (720p)`}
                 </Button>
                 <Button
                   onClick={() => handleDownload("1080p")}
-                  className="flex-1 bg-gradient-to-r from-green-600 to-cyan-600 hover:from-green-700 hover:to-cyan-700"
+                  disabled={downloading !== null}
+                  className="flex-1 bg-gradient-to-r from-green-600 to-cyan-600 hover:from-green-700 hover:to-cyan-700 disabled:opacity-50"
                 >
-                  <Download className="mr-2 h-4 w-4" />
-                  {t("download_video")} (1080p)
-                  <Sparkles className="ml-1 h-3 w-3" />
+                  {downloading === "1080p" ? (
+                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                  ) : (
+                    <Download className="mr-2 h-4 w-4" />
+                  )}
+                  {downloading === "1080p"
+                    ? "Downloading..."
+                    : `${t("download_video")} (1080p)`}
+                  {downloading !== "1080p" && (
+                    <Sparkles className="ml-1 h-3 w-3" />
+                  )}
                 </Button>
               </div>
             ) : (
               <Button
                 onClick={() => handleDownload()}
-                className="w-full bg-gradient-to-r from-green-600 to-cyan-600 hover:from-green-700 hover:to-cyan-700"
+                disabled={downloading !== null}
+                className="w-full bg-gradient-to-r from-green-600 to-cyan-600 hover:from-green-700 hover:to-cyan-700 disabled:opacity-50"
               >
-                <Download className="mr-2 h-4 w-4" />
-                {t("download_video")} ({quality})
+                {downloading ? (
+                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                ) : (
+                  <Download className="mr-2 h-4 w-4" />
+                )}
+                {downloading
+                  ? "Downloading..."
+                  : `${t("download_video")} (${quality})`}
               </Button>
             )}
           </div>
