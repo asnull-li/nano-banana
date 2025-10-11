@@ -22,6 +22,11 @@
           "url": "/veo3",
           "icon": "RiImageAiFill"
         },
+        {
+          "title": "Sora 2",
+          "url": "/sora2",
+          "icon": "RiImageAiFill"
+        },
 
         {
           "title": "My Creations",

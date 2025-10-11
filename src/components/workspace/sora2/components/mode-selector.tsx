@@ -7,20 +7,30 @@ interface ModeSelectorProps {
   mode: Sora2TaskType;
   onModeChange: (mode: Sora2TaskType) => void;
   disabled?: boolean;
+  texts?: any;
 }
 
 export default function ModeSelector({
   mode,
   onModeChange,
   disabled = false,
+  texts = {},
 }: ModeSelectorProps) {
   const modes: Array<{
     value: Sora2TaskType;
     label: string;
     icon: React.ComponentType<{ className?: string }>;
   }> = [
-    { value: "text-to-video", label: "Text to Video", icon: Film },
-    { value: "image-to-video", label: "Image to Video", icon: Image },
+    {
+      value: "text-to-video",
+      label: texts.text_to_video || "Text to Video",
+      icon: Film,
+    },
+    {
+      value: "image-to-video",
+      label: texts.image_to_video || "Image to Video",
+      icon: Image,
+    },
   ];
 
   return (

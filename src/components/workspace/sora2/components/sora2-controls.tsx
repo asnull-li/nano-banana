@@ -11,6 +11,7 @@ interface Sora2ControlsProps {
   removeWatermark: boolean;
   onRemoveWatermarkChange: (remove: boolean) => void;
   disabled?: boolean;
+  texts?: any;
 }
 
 export default function Sora2Controls({
@@ -19,14 +20,15 @@ export default function Sora2Controls({
   removeWatermark,
   onRemoveWatermarkChange,
   disabled = false,
+  texts = {},
 }: Sora2ControlsProps) {
   const aspectRatioOptions: Array<{
     value: Sora2AspectRatio;
     label: string;
     icon: React.ComponentType<{ className?: string }>;
   }> = [
-    { value: "landscape", label: "Landscape", icon: Monitor },
-    { value: "portrait", label: "Portrait", icon: Smartphone },
+    { value: "landscape", label: texts.landscape || "Landscape", icon: Monitor },
+    { value: "portrait", label: texts.portrait || "Portrait", icon: Smartphone },
   ];
 
   return (
@@ -36,7 +38,7 @@ export default function Sora2Controls({
         <div className="flex items-center gap-2">
           <Maximize2 className="w-4 h-4 text-cyan-500" />
           <Label className="text-sm font-medium text-slate-700 dark:text-slate-300">
-            Aspect Ratio
+            {texts.aspect_ratio_label || "Aspect Ratio"}
           </Label>
         </div>
 
@@ -96,7 +98,7 @@ export default function Sora2Controls({
             htmlFor="removeWatermark"
             className="text-sm font-medium text-slate-700 dark:text-slate-300 cursor-pointer"
           >
-            Remove Watermark
+            {texts.remove_watermark_label || "Remove Watermark"}
           </Label>
         </div>
         <Switch

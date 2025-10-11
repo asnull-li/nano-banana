@@ -5,11 +5,17 @@ import { Sora2Task } from "../../types";
 
 interface ProcessingStateProps {
   task: Sora2Task;
+  texts?: any;
 }
 
-export default function ProcessingState({ task }: ProcessingStateProps) {
+export default function ProcessingState({
+  task,
+  texts = {},
+}: ProcessingStateProps) {
   const statusText =
-    task.status === "uploading" ? "Uploading image..." : "Generating video...";
+    task.status === "uploading"
+      ? texts.uploading_title || "Uploading image..."
+      : texts.generating_title || "Generating video...";
 
   return (
     <div className="flex flex-col items-center justify-center py-16 px-4">
@@ -20,7 +26,8 @@ export default function ProcessingState({ task }: ProcessingStateProps) {
         {statusText}
       </h3>
       <p className="text-sm text-slate-500 dark:text-slate-400 text-center max-w-md">
-        Please wait while we process your request. This may take a few minutes.
+        {texts.description ||
+          "Please wait while we process your request. This may take a few minutes."}
       </p>
       {task.prompt && (
         <div className="mt-4 p-3 bg-slate-50 dark:bg-slate-800 rounded-lg max-w-md">

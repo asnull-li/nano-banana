@@ -1,5 +1,6 @@
 interface HeroData {
   title?: string;
+  subtitle?: string;
   description?: string;
 }
 
@@ -22,14 +23,23 @@ export default function HeroSection({ pageData }: HeroSectionProps) {
       <div className="container relative z-10">
         <div className="text-center mx-auto">
           {/* Title */}
-          <h1 className="mb-6 text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
+          <h1 className="mb-4 text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
             <span className="bg-gradient-to-r from-green-500 via-emerald-500 to-cyan-500 bg-clip-text text-transparent">
               {pageData?.hero?.title || "Nano Banana"}
             </span>
           </h1>
 
+          {/* Subtitle */}
+          {pageData?.hero?.subtitle && (
+            <div className="mb-6 flex items-center justify-center gap-2 flex-wrap">
+              <p className="text-base sm:text-lg font-semibold text-emerald-600 dark:text-emerald-400">
+                {pageData.hero.subtitle}
+              </p>
+            </div>
+          )}
+
           {/* Description */}
-          <p className="mx-auto text-lg lg:text-xl leading-relaxed text-gray-600 dark:text-gray-400 mb-8">
+          <p className="mx-auto max-w-3xl text-lg lg:text-xl leading-relaxed text-gray-600 dark:text-gray-400 mb-8">
             {pageData?.hero?.description ||
               "Professional AI-powered technology for stunning results."}
           </p>

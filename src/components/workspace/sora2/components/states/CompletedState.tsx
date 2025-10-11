@@ -8,12 +8,14 @@ interface CompletedStateProps {
   task: Sora2Task;
   onDownload?: (videoUrl: string) => void;
   isDownloading?: boolean;
+  texts?: any;
 }
 
 export default function CompletedState({
   task,
   onDownload,
   isDownloading = false,
+  texts = {},
 }: CompletedStateProps) {
   if (!task.videoUrl) {
     return <div className="text-center py-8 text-slate-500">No video URL available</div>;
@@ -43,12 +45,12 @@ export default function CompletedState({
           {isDownloading ? (
             <>
               <Loader2 className="w-4 h-4 mr-2 animate-spin" />
-              Downloading...
+              {texts.downloading || "Downloading..."}
             </>
           ) : (
             <>
               <Download className="w-4 h-4 mr-2" />
-              Download Video
+              {texts.download || "Download Video"}
             </>
           )}
         </Button>
@@ -58,7 +60,8 @@ export default function CompletedState({
       {task.prompt && (
         <div className="p-3 bg-slate-50 dark:bg-slate-800 rounded-lg">
           <p className="text-xs text-slate-600 dark:text-slate-400">
-            <span className="font-semibold">Prompt:</span> {task.prompt}
+            <span className="font-semibold">{texts.prompt_label || "Prompt:"}</span>{" "}
+            {task.prompt}
           </p>
         </div>
       )}

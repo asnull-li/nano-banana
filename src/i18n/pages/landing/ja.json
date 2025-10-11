@@ -23,6 +23,11 @@
           "icon": "RiImageAiFill"
         },
         {
+          "title": "Sora2",
+          "url": "/sora2",
+          "icon": "RiImageAiFill"
+        },
+        {
           "title": "作成履歴",
           "url": "/history",
           "icon": "RiHistoryLine"

@@ -23,6 +23,11 @@
           "icon": "RiImageAiFill"
         },
         {
+          "title": "Sora 2",
+          "url": "/sora2",
+          "icon": "RiImageAiFill"
+        },
+        {
           "title": "سجل الإنشاءات",
           "url": "/history",
           "icon": "RiHistoryLine"

@@ -24,13 +24,17 @@ import ImageUploadZone from "@/components/workspace/upscaler/components/image-up
 
 interface Sora2WorkspaceProps {
   className?: string;
+  pageData?: any;
   initialImageUrl?: string | null;
 }
 
 export default function Sora2Workspace({
   className,
+  pageData,
   initialImageUrl,
 }: Sora2WorkspaceProps) {
+  // 获取多语言文本
+  const t = pageData?.workspace || {};
   const { credits, refreshCredits } = useCredits();
   const { user, setShowSignModal } = useAppContext();
   const router = useRouter();
@@ -87,9 +91,16 @@ export default function Sora2Workspace({
           await refreshCredits();
 
           if (task.status === "completed") {
-            toast.success("Video Generated! Your video is ready to view.");
+            toast.success(
+              t.toast?.video_generated ||
+                "Video Generated! Your video is ready to view."
+            );
           } else {
-            toast.error(task.error || "An error occurred during generation");
+            toast.error(
+              task.error ||
+                t.toast?.error_occurred ||
+                "An error occurred during generation"
+            );
           }
         }
       } catch (error) {
@@ -182,31 +193,48 @@ export default function Sora2Workspace({
   const handleGenerate = async () => {
     // Validation
     if (!prompt.trim()) {
-      toast.error("Please enter a prompt for video generation");
+      toast.error(
+        t.toast?.prompt_required || "Please enter a prompt for video generation"
+      );
       return;
     }
 
     if (prompt.length < MIN_PROMPT_LENGTH || prompt.length > MAX_PROMPT_LENGTH) {
-      toast.error(`Prompt must be between ${MIN_PROMPT_LENGTH} and ${MAX_PROMPT_LENGTH} characters`);
+      const msg = t.toast?.prompt_length_error
+        ?.replace("${min}", MIN_PROMPT_LENGTH)
+        .replace("${max}", MAX_PROMPT_LENGTH);
+      toast.error(
+        msg ||
+          `Prompt must be between ${MIN_PROMPT_LENGTH} and ${MAX_PROMPT_LENGTH} characters`
+      );
       return;
     }
 
     // Check image for image-to-video mode
     if (mode === "image-to-video" && !inputImageFile && !isUrlMode) {
-      toast.error("Please upload an image for image-to-video generation");
+      toast.error(
+        t.toast?.image_required ||
+          "Please upload an image for image-to-video generation"
+      );
       return;
     }
 
     // Check login
     if (!user) {
-      toast.warning("Please login to generate videos");
+      toast.warning(t.toast?.login_required || "Please login to generate videos");
       setShowSignModal(true);
       return;
     }
 
     // Check credits
     if (credits.left_credits < CREDITS_PER_SORA2) {
-      toast.warning(`You need ${CREDITS_PER_SORA2} credits to generate videos`);
+      const msg = t.toast?.insufficient_credits?.replace(
+        "${credits}",
+        CREDITS_PER_SORA2
+      );
+      toast.warning(
+        msg || `You need ${CREDITS_PER_SORA2} credits to generate videos`
+      );
       router.push("/pricing");
       return;
     }
@@ -236,17 +264,21 @@ export default function Sora2Workspace({
       if (mode === "image-to-video") {
         if (isUrlMode && inputImagePreview) {
           uploadedImageUrl = inputImagePreview;
-          toast.info("Using image from URL...");
+          toast.info(t.toast?.uploading_image || "Using image from URL...");
         } else if (inputImageFile) {
           setIsUploading(true);
-          toast.info("Uploading image...");
+          toast.info(t.toast?.uploading_image || "Uploading image...");
 
           try {
             uploadedImageUrl = await uploadImage(inputImageFile);
-            toast.success("Image uploaded successfully");
+            toast.success(
+              t.toast?.image_uploaded || "Image uploaded successfully"
+            );
           } catch (error) {
             throw new Error(
-              error instanceof Error ? error.message : "Failed to upload image"
+              error instanceof Error
+                ? error.message
+                : t.toast?.upload_failed || "Failed to upload image"
             );
           } finally {
             setIsUploading(false);
@@ -303,7 +335,7 @@ export default function Sora2Workspace({
     setIsDownloading(true);
 
     try {
-      toast.info("Downloading video...");
+      toast.info(t.toast?.downloading_video || "Downloading video...");
 
       const response = await fetch(videoUrl);
       if (!response.ok) throw new Error("Failed to fetch video");
@@ -320,10 +352,14 @@ export default function Sora2Workspace({
 
       setTimeout(() => URL.revokeObjectURL(blobUrl), 100);
 
-      toast.success("Video downloaded successfully");
+      toast.success(
+        t.toast?.download_success || "Video downloaded successfully"
+      );
     } catch (error) {
       console.error("Download error:", error);
-      toast.error("Failed to download video. Please try again.");
+      toast.error(
+        t.toast?.download_failed || "Failed to download video. Please try again."
+      );
     } finally {
       setIsDownloading(false);
     }
@@ -362,6 +398,7 @@ export default function Sora2Workspace({
               mode={mode}
               onModeChange={handleModeChange}
               disabled={isGenerating}
+              texts={t.mode_selector}
             />
 
             {/* Image Upload */}
@@ -370,7 +407,7 @@ export default function Sora2Workspace({
                 onImageUpload={handleImageSelect}
                 currentImage={inputImagePreview}
                 disabled={isGenerating || isUploading}
-                pageData={{}}
+                pageData={pageData}
               />
             )}
 
@@ -380,6 +417,7 @@ export default function Sora2Workspace({
               onPromptChange={setPrompt}
               disabled={isGenerating}
               maxLength={MAX_PROMPT_LENGTH}
+              texts={t.prompt}
             />
 
             {/* Controls */}
@@ -389,6 +427,7 @@ export default function Sora2Workspace({
               removeWatermark={removeWatermark}
               onRemoveWatermarkChange={setRemoveWatermark}
               disabled={isGenerating}
+              texts={t.controls}
             />
 
             {/* Credits Display */}
@@ -396,7 +435,7 @@ export default function Sora2Workspace({
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
                 <span className="text-sm font-medium text-slate-700 dark:text-slate-300">
-                  Credits Cost
+                  {t.controls?.credits_cost || "Credits Cost"}
                 </span>
               </div>
               <div className="flex items-center gap-1">
@@ -404,7 +443,7 @@ export default function Sora2Workspace({
                   {CREDITS_PER_SORA2}
                 </span>
                 <span className="text-sm text-slate-500 dark:text-slate-400">
-                  credits
+                  {t.controls?.credits_unit || "credits"}
                 </span>
               </div>
             </div>
@@ -418,17 +457,20 @@ export default function Sora2Workspace({
               {isUploading ? (
                 <>
                   <RefreshCw className="w-4 h-4 mr-2 animate-spin" />
-                  Uploading...
+                  {t.generate_button?.uploading || "Uploading..."}
                 </>
               ) : isGenerating ? (
                 <>
                   <RefreshCw className="w-4 h-4 mr-2 animate-spin" />
-                  Generating...
+                  {t.generate_button?.generating || "Generating..."}
                 </>
               ) : (
                 <>
                   <Wand2 className="w-4 h-4 mr-2" />
-                  Generate Video ({CREDITS_PER_SORA2} credits)
+                  {t.generate_button?.generate?.replace(
+                    "${credits}",
+                    CREDITS_PER_SORA2
+                  ) || `Generate Video (${CREDITS_PER_SORA2} credits)`}
                 </>
               )}
             </Button>
@@ -442,6 +484,10 @@ export default function Sora2Workspace({
               task={currentTask}
               onDownload={handleDownload}
               isDownloading={isDownloading}
+              emptyStateTexts={t.empty_state}
+              processingStateTexts={t.processing_state}
+              failedStateTexts={t.failed_state}
+              completedStateTexts={t.completed_state}
             />
 
             {/* Reset Button */}
@@ -453,7 +499,7 @@ export default function Sora2Workspace({
                   className="w-full"
                 >
                   <RefreshCw className="w-4 h-4 mr-2" />
-                  New Video
+                  {t.toast?.new_video || "New Video"}
                 </Button>
               </div>
             )}

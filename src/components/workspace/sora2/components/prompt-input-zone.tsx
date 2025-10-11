@@ -9,6 +9,7 @@ interface PromptInputZoneProps {
   onPromptChange: (prompt: string) => void;
   disabled?: boolean;
   maxLength?: number;
+  texts?: any;
 }
 
 export default function PromptInputZone({
@@ -16,13 +17,14 @@ export default function PromptInputZone({
   onPromptChange,
   disabled = false,
   maxLength = 5000,
+  texts = {},
 }: PromptInputZoneProps) {
   return (
     <div className="space-y-3">
       <div className="flex items-center gap-2">
         <FileText className="w-4 h-4 text-emerald-500" />
         <Label className="text-sm font-medium text-slate-700 dark:text-slate-300">
-          Prompt
+          {texts.label || "Prompt"}
         </Label>
       </div>
 
@@ -30,13 +32,15 @@ export default function PromptInputZone({
         value={prompt}
         onChange={(e) => onPromptChange(e.target.value)}
         disabled={disabled}
-        placeholder="Describe the video you want to generate..."
+        placeholder={
+          texts.placeholder || "Describe the video you want to generate..."
+        }
         className="min-h-[120px] resize-none text-sm"
         maxLength={maxLength}
       />
 
       <div className="flex justify-between text-xs text-slate-500 dark:text-slate-400">
-        <span>Describe your desired video motion and content</span>
+        <span>{texts.helper || "Describe your desired video motion and content"}</span>
         <span>
           {prompt.length} / {maxLength}
         </span>

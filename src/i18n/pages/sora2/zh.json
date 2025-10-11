@@ -1,0 +1,180 @@
+{
+  "meta": {
+    "title": "Sora2 AI 视频生成器 - 无水印，无需邀请码",
+    "description": "OpenAI 的 Sora2 AI 视频生成器：从文本或图像创建逼真视频。无水印、无邀请码、无需下载应用。文本转视频和图像转视频工具。"
+  },
+  "hero": {
+    "title": "Sora2 AI 视频生成器",
+    "subtitle": "无水印 • 无需邀请码 • 无需下载应用",
+    "description": "体验 OpenAI 最新的 Sora2 AI 视频生成模型。将文本描述或图像转换为令人惊叹的逼真视频，具有先进的运动效果和物理一致性。非常适合创意项目和社交媒体内容 - 立即开始生成专业视频，无任何障碍。"
+  },
+  "features": {
+    "title": "为什么选择我们的 Sora2 AI 视频生成器",
+    "description": "OpenAI 的 Sora2 代表了 AI 视频生成的突破。体验专业视频创作，无水印、无需邀请码、无需下载应用。",
+    "items": [
+      {
+        "title": "先进的物理模拟和逼真运动",
+        "description": "Sora2 提供前所未有的物理准确性，具有逼真的运动效果和物理一致性。与之前扭曲现实的视频生成器不同，Sora2 遵循真实世界的物理定律 - 篮球自然反弹，冲浪者展示正确的浮力动力学，物体在复杂序列中保持视觉一致性。"
+      },
+      {
+        "title": "双模式生成 - 文本转视频和图像转视频",
+        "description": "从纯文本提示创建视频或将静态图像转换为动态运动序列。Sora2 支持文本转视频和图像转视频生成，允许您描述电影场景或为现有图像添加自然运动，同时保持视觉连贯性。"
+      },
+      {
+        "title": "灵活的输出和宽高比适配任何平台",
+        "description": "生成最长 15 秒的竖屏或横屏格式视频，非常适合社交媒体、移动应用和电影内容。Sora2 提供标准和高清渲染选项，平衡速度与质量，满足从快速社交帖子到专业内容创作的各种制作需求。"
+      },
+      {
+        "title": "精准的创意控制和风格多样性",
+        "description": "Sora2 提供对场景、动作和艺术风格的精细控制。生成逼真镜头、电影序列或风格化动画，具有出色的提示遵循能力。该模型在写实、电影和动漫风格方面表现出色，执行复杂的多镜头指令，同时保持一致的世界状态。"
+      }
+    ]
+  },
+  "how_to_use": {
+    "title": "如何使用 Sora2 生成视频 - 简单 3 步流程",
+    "description": "使用 Sora2 在几分钟内创建专业 AI 生成的视频。我们直观的界面让每个人都能轻松生成视频。",
+    "items": [
+      {
+        "title": "第 1 步：选择您的输入方式",
+        "description": "选择文本转视频模式以使用详细提示描述您的场景，或选择图像转视频模式上传参考图像。Sora2 API 支持两种方法，允许您描述摄像机运动、动作和视觉风格，或将静态图像转换为自然运动序列，保持视觉一致性。"
+      },
+      {
+        "title": "第 2 步：配置视频设置",
+        "description": "通过选择宽高比（社交媒体的竖屏或电影内容的横屏）、质量设置和最长 15 秒的视频时长来自定义输出。Sora2 提供灵活的配置，平衡渲染速度与视频质量，适应从快速帖子到专业项目的不同制作需求。"
+      },
+      {
+        "title": "第 3 步：生成并下载您的视频",
+        "description": "点击生成，让 Sora2 以先进的世界模拟能力处理您的请求。该模型将创建具有逼真物理、一致对象恒常性和精确遵循您指令的视频。预览结果并下载高质量视频，可立即用于社交媒体、创意项目或商业用途。"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Sora2 AI 视频生成器 - 常见问题",
+    "description": "关于使用 Sora2 进行专业视频生成所需了解的一切。了解功能、能力和最佳实践。",
+    "contact": {
+      "question_text": "还有更多关于 Sora2 的问题？",
+      "support_link": "联系我们的支持团队"
+    },
+    "items": [
+      {
+        "question": "什么是 Sora2，它与其他视频生成器有何不同？",
+        "answer": "Sora2 是 OpenAI 最新的 AI 视频生成模型，代表了视频 AI 技术的重大突破。与之前扭曲物体和弯曲现实的视频生成器不同，Sora2 以前所未有的准确性遵循真实世界的物理定律。它可以模拟复杂场景，如奥运级体操、具有准确浮力和刚性动力学的冲浪板后空翻，以及自然的物体交互。Sora2 从文本提示或参考图像生成具有电影质量、逼真运动效果和物理一致性的视频。"
+      },
+      {
+        "question": "Sora2 视频生成的主要功能是什么？",
+        "answer": "Sora2 提供多项突破性功能：双模式生成（文本转视频和图像转视频）、具有逼真运动的高级物理模拟、竖屏和横屏格式的灵活宽高比、最长 15 秒的高清输出选项、对场景和风格的精准创意控制，以及对写实、电影和动漫美学的支持。该模型还具有增强的提示遵循能力，可以在整个视频中执行复杂的多镜头指令，同时保持一致的世界状态。"
+      },
+      {
+        "question": "Sora2 如何处理生成视频中的物理和真实感？",
+        "answer": "Sora2 在物理准确性和真实感方面表现出色。当篮球运动员投篮未中时，球会自然地从篮板反弹，而不是像旧模型那样传送到篮筐。系统可以模拟适当的浮力、物体恒常性、重力和材料属性。这种物理一致性使 Sora2 适合创建逼真的训练模拟、体育内容和需要真实运动动力学的专业创意项目。"
+      },
+      {
+        "question": "我可以将 Sora2 用于社交媒体和商业内容吗？",
+        "answer": "可以！Sora2 非常适合社交媒体和商业应用。该模型生成最长 15 秒的视频，具有针对不同平台优化的灵活宽高比 - TikTok、Instagram Reels 和 YouTube Shorts 的竖屏格式，或传统视频内容的横屏格式。通过我们平台使用 Sora2 生成的视频适合营销、广告和内容创作的商业用途。系统产生无水印的高质量输出，可立即发布。"
+      },
+      {
+        "question": "为什么 Sora2 比早期模型更能遵循提示？",
+        "answer": "与早期视频生成模型相比，Sora2 显示出显著改进的提示遵循能力。它可以在多个镜头中执行复杂的多部分指令，同时保持视觉和叙事一致性。该模型理解摄像机运动、角色动作、场景过渡和艺术风格的详细描述。这种增强的可控性使创作者能够精确实现特定的创意愿景，无论是生成逼真的纪录片风格镜头、电影序列还是风格化动画。"
+      },
+      {
+        "question": "Sora2 的费用是多少，积分系统如何运作？",
+        "answer": "Sora2 使用透明的基于积分的定价系统。每次视频生成根据您选择的设置（如分辨率、宽高比和视频时长（最长 15 秒））消耗积分。标准质量生成需要较少积分，而高清输出使用更多积分。您可以购买适合您制作需求的积分套餐。无需订阅 - 只需为您生成的内容付费。在工作区界面查看每次生成的当前积分费用。"
+      }
+    ]
+  },
+  "examples": {
+    "title": "Sora2 视频生成示例 - 见证强大能力",
+    "subtitle": "探索 Sora2 如何将静态图像和文本描述转换为具有先进物理模拟和电影质量的惊艳逼真视频",
+    "image_to_video": {
+      "title": "图像转视频 - 让您的照片动起来",
+      "description": "上传任何静态图像，观看 Sora2 以自然运动使其栩栩如生，保持视觉一致性和物理真实感。我们的图像转视频模式在保留原始美学的同时添加流畅的动态运动，遵循真实世界的物理。",
+      "input_image_url": "https://file.nanobanana.org/showcase/sora2/sora2_input-image.png",
+      "input_image_alt": "Sora2 图像转视频生成的示例源图像",
+      "output_video_url": "https://file.nanobanana.org/showcase/sora2/sora_2_i2v_output.mp4"
+    },
+    "text_to_video": {
+      "title": "文本转视频 - 从文字到电影场景",
+      "description": "用文字描述您的愿景，让 Sora2 生成精确遵循您指令的专业质量视频。我们的文本转视频模式理解包括摄像机运动、照明、动作和艺术风格在内的复杂提示，创造出您想象的内容。",
+      "input_prompt": "夕阳西下，宁静郊区街道上的好莱坞式分手场景。一对三十多岁的男女面对面，轻声但充满情感地交谈，嘴唇与分手对话同步。电影照明，温暖的日落色调，浅景深，秋叶在微风中飘动，逼真的自然声音，无背景音乐",
+      "output_video_url": "https://file.nanobanana.org/showcase/sora2/sora_t2v_output.mp4"
+    },
+    "labels": {
+      "original_image": "原始图像",
+      "prompt_text": "文本提示",
+      "ai_generated_video": "Sora2 生成视频",
+      "browser_not_supported": "您的浏览器不支持视频播放。",
+      "video_info": "由 Sora2 生成"
+    }
+  },
+  "workspace": {
+    "mode_selector": {
+      "text_to_video": "文本转视频",
+      "image_to_video": "图像转视频"
+    },
+    "upload_zone": {
+      "title": "上传图片",
+      "click_or_drag": "点击或拖拽上传",
+      "drop_text": "释放以上传",
+      "supported_formats": "支持 PNG、JPG、JPEG、WEBP • 最大 10MB",
+      "preview_alt": "上传预览",
+      "delete_tooltip": "删除图片",
+      "replace_tooltip": "替换图片",
+      "processing": "处理中...",
+      "error_file_too_large": "文件太大。最大尺寸为 10MB。",
+      "error_invalid_type": "无效的文件类型。请上传图片。"
+    },
+    "prompt": {
+      "label": "提示词",
+      "placeholder": "描述您想生成的视频...",
+      "helper": "描述您期望的视频运动和内容"
+    },
+    "controls": {
+      "aspect_ratio_label": "宽高比",
+      "landscape": "横屏",
+      "portrait": "竖屏",
+      "remove_watermark_label": "移除水印",
+      "credits_cost": "积分费用",
+      "credits_unit": "积分"
+    },
+    "generate_button": {
+      "uploading": "上传中...",
+      "generating": "生成中...",
+      "generate": "生成视频 (${credits} 积分)"
+    },
+    "empty_state": {
+      "title": "准备生成",
+      "description": "输入提示词并点击生成，使用 Sora2 创建精彩视频"
+    },
+    "processing_state": {
+      "uploading_title": "正在上传图片...",
+      "generating_title": "正在生成视频...",
+      "description": "请稍候，我们正在处理您的请求。这可能需要几分钟。"
+    },
+    "failed_state": {
+      "title": "生成失败",
+      "description": "视频生成过程中发生错误",
+      "credits_refunded": "您的积分已退还"
+    },
+    "completed_state": {
+      "downloading": "下载中...",
+      "download": "下载视频",
+      "prompt_label": "提示词："
+    },
+    "toast": {
+      "video_generated": "视频已生成！您的视频已准备好查看。",
+      "error_occurred": "生成过程中发生错误",
+      "prompt_required": "请输入视频生成的提示词",
+      "prompt_length_error": "提示词必须在 ${min} 到 ${max} 个字符之间",
+      "image_required": "请为图像转视频生成上传图片",
+      "login_required": "请登录以生成视频",
+      "insufficient_credits": "您需要 ${credits} 积分来生成视频",
+      "uploading_image": "正在上传图片...",
+      "image_uploaded": "图片上传成功",
+      "upload_failed": "图片上传失败",
+      "downloading_video": "正在下载视频...",
+      "download_success": "视频下载成功",
+      "download_failed": "视频下载失败。请重试。",
+      "new_video": "新视频"
+    }
+  }
+}
