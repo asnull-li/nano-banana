@@ -28,6 +28,8 @@ export enum CreditsTransType {
   Veo3_quality = "veo3_quality", // cost for veo3 high quality video generation
   Veo3_1080p = "veo3_1080p", // cost for upgrading to 1080P video
   Veo3_refund = "veo3_refund", // refund for failed veo3 tasks
+  Sora2 = "sora2", // cost for sora 2 video generation
+  Sora2_refund = "sora2_refund", // refund for failed sora 2 tasks
 }
 
 export enum CreditsAmount {

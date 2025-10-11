@@ -202,3 +202,23 @@ export const veo3Tasks = pgTable("veo3_tasks", {
   updated_at: timestamp({ withTimezone: true }).defaultNow(),
   completed_at: timestamp({ withTimezone: true }),
 });
+
+// Sora 2 Video Tasks table
+export const sora2Tasks = pgTable("sora2_tasks", {
+  id: integer().primaryKey().generatedAlwaysAsIdentity(),
+  task_id: varchar({ length: 255 }).notNull().unique(),
+  request_id: varchar({ length: 255 }).notNull().unique(), // KIE Jobs API taskId
+  user_uuid: varchar({ length: 255 }).notNull(),
+  type: varchar({ length: 50 }).notNull(), // 'text-to-video' | 'image-to-video'
+  input: text().notNull(), // JSON storage for {prompt, image_urls?, aspect_ratio, remove_watermark}
+  status: varchar({ length: 50 }).notNull().default('waiting'), // waiting | success | fail (KIE Jobs API states)
+  result: text(), // JSON storage for complete resultJson from KIE Jobs API
+  video_url: text(), // R2 stored video URL
+  credits_used: integer().notNull().default(0),
+  credits_refunded: integer().notNull().default(0),
+  error_message: text(),
+  error_code: varchar({ length: 50 }),
+  created_at: timestamp({ withTimezone: true }).defaultNow(),
+  updated_at: timestamp({ withTimezone: true }).defaultNow(),
+  completed_at: timestamp({ withTimezone: true }),
+});
