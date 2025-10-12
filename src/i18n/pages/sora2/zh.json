@@ -128,10 +128,23 @@
       "placeholder": "描述您想生成的视频...",
       "helper": "描述您期望的视频运动和内容"
     },
+    "model_selector": {
+      "label": "模型版本",
+      "sora2": "Sora 2",
+      "sora2_pro": "Sora 2 Pro"
+    },
     "controls": {
       "aspect_ratio_label": "宽高比",
       "landscape": "横屏",
       "portrait": "竖屏",
+      "duration_label": "时长",
+      "duration_10s": "10秒",
+      "duration_15s": "15秒",
+      "quality_label": "画质",
+      "quality_standard": "标准",
+      "quality_high": "高清",
+      "generation_time_title": "⏱️ 生成时间：",
+      "generation_time_desc": "10秒的HD通常需要10-20分钟才能生成，15秒的HD大约需要30分钟（这反映了OpenAI的原生交付速度）。我们强烈建议谨慎使用15秒HD选项，因为它需要更长的时间，并可能有轻微的瑕疵。",
       "remove_watermark_label": "移除水印",
       "credits_cost": "积分费用",
       "credits_unit": "积分"

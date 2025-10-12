@@ -3,13 +3,16 @@
 import { useState, useCallback } from "react";
 import { toast } from "sonner";
 import { useR2Upload } from "@/hooks/use-r2-upload";
-import { Sora2TaskType, Sora2AspectRatio } from "../types";
+import { Sora2TaskType, Sora2AspectRatio, Sora2Model, Sora2Duration, Sora2Quality } from "../types";
 
 export interface GenerateVideoRequest {
+  model: Sora2Model;
   type: Sora2TaskType;
   prompt: string;
   image_urls?: string[];
   aspect_ratio?: Sora2AspectRatio;
+  n_frames?: Sora2Duration;
+  size?: Sora2Quality;
   remove_watermark?: boolean;
 }
 
@@ -29,8 +32,11 @@ export interface TaskStatusResponse {
     status: "processing" | "completed" | "failed";
     type: Sora2TaskType;
     input: {
+      model?: Sora2Model;
       prompt: string;
       aspect_ratio: Sora2AspectRatio;
+      n_frames?: Sora2Duration;
+      size?: Sora2Quality;
       remove_watermark: boolean;
     };
     result?: {

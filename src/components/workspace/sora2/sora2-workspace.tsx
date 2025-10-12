@@ -1,22 +1,33 @@
 "use client";
 
-import { useState, useCallback, useEffect, useRef } from "react";
+import { useState, useCallback, useEffect, useRef, useMemo } from "react";
 import { Button } from "@/components/ui/button";
 import { Wand2, RefreshCw } from "lucide-react";
 import { useCredits } from "@/hooks/use-credits";
 import { useAppContext } from "@/contexts/app";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
-import { Sora2Task, Sora2TaskType, Sora2AspectRatio } from "./types";
 import {
+  Sora2Task,
+  Sora2TaskType,
+  Sora2AspectRatio,
+  Sora2Model,
+  Sora2Duration,
+  Sora2Quality,
+} from "./types";
+import {
+  DEFAULT_MODEL,
   DEFAULT_ASPECT_RATIO,
+  DEFAULT_DURATION,
+  DEFAULT_QUALITY,
   DEFAULT_REMOVE_WATERMARK,
-  CREDITS_PER_SORA2,
+  calculateCredits,
   MIN_PROMPT_LENGTH,
   MAX_PROMPT_LENGTH,
 } from "@/lib/constants/sora2";
 import { useSora2API } from "./hooks/use-sora2-api";
 import ModeSelector from "./components/mode-selector";
+import ModelVersionSelector from "./components/model-version-selector";
 import PromptInputZone from "./components/prompt-input-zone";
 import Sora2Controls from "./components/sora2-controls";
 import VideoOutputDisplay from "./components/video-output-display";
@@ -44,9 +55,15 @@ export default function Sora2Workspace({
   const [mode, setMode] = useState<Sora2TaskType>(
     initialImageUrl ? "image-to-video" : "text-to-video"
   );
+  const [model, setModel] = useState<Sora2Model>(DEFAULT_MODEL);
   const [prompt, setPrompt] = useState("");
-  const [aspectRatio, setAspectRatio] = useState<Sora2AspectRatio>(DEFAULT_ASPECT_RATIO);
-  const [removeWatermark, setRemoveWatermark] = useState(DEFAULT_REMOVE_WATERMARK);
+  const [aspectRatio, setAspectRatio] =
+    useState<Sora2AspectRatio>(DEFAULT_ASPECT_RATIO);
+  const [duration, setDuration] = useState<Sora2Duration>(DEFAULT_DURATION);
+  const [quality, setQuality] = useState<Sora2Quality>(DEFAULT_QUALITY);
+  const [removeWatermark, setRemoveWatermark] = useState(
+    DEFAULT_REMOVE_WATERMARK
+  );
   const [inputImageFile, setInputImageFile] = useState<File | null>(null);
   const [inputImagePreview, setInputImagePreview] = useState<string | null>(
     initialImageUrl || null
@@ -56,6 +73,12 @@ export default function Sora2Workspace({
   const [isUploading, setIsUploading] = useState(false);
   const [currentTask, setCurrentTask] = useState<Sora2Task | null>(null);
   const [isDownloading, setIsDownloading] = useState(false);
+
+  // 动态计算所需积分
+  const creditsNeeded = useMemo(
+    () => calculateCredits(model, duration, quality),
+    [model, duration, quality]
+  );
 
   // Polling
   const pollingIntervalRef = useRef<NodeJS.Timeout | null>(null);
@@ -69,10 +92,16 @@ export default function Sora2Workspace({
         // Convert API response to Sora2Task
         const task: Sora2Task = {
           id: response.task.task_id,
-          status: response.task.status === "processing" ? "processing" : response.task.status,
+          status:
+            response.task.status === "processing"
+              ? "processing"
+              : response.task.status,
           type: response.task.type,
+          model: response.task.input.model || "sora2",
           prompt: response.task.input.prompt,
           aspectRatio: response.task.input.aspect_ratio,
+          duration: response.task.input.n_frames,
+          quality: response.task.input.size,
           removeWatermark: response.task.input.remove_watermark,
           inputImage: null,
           videoUrl: response.task.video_url || null,
@@ -199,7 +228,10 @@ export default function Sora2Workspace({
       return;
     }
 
-    if (prompt.length < MIN_PROMPT_LENGTH || prompt.length > MAX_PROMPT_LENGTH) {
+    if (
+      prompt.length < MIN_PROMPT_LENGTH ||
+      prompt.length > MAX_PROMPT_LENGTH
+    ) {
       const msg = t.toast?.prompt_length_error
         ?.replace("${min}", MIN_PROMPT_LENGTH)
         .replace("${max}", MAX_PROMPT_LENGTH);
@@ -221,19 +253,21 @@ export default function Sora2Workspace({
 
     // Check login
     if (!user) {
-      toast.warning(t.toast?.login_required || "Please login to generate videos");
+      toast.warning(
+        t.toast?.login_required || "Please login to generate videos"
+      );
       setShowSignModal(true);
       return;
     }
 
     // Check credits
-    if (credits.left_credits < CREDITS_PER_SORA2) {
+    if (credits.left_credits < creditsNeeded) {
       const msg = t.toast?.insufficient_credits?.replace(
         "${credits}",
-        CREDITS_PER_SORA2
+        creditsNeeded
       );
       toast.warning(
-        msg || `You need ${CREDITS_PER_SORA2} credits to generate videos`
+        msg || `You need ${creditsNeeded} credits to generate videos`
       );
       router.push("/pricing");
       return;
@@ -244,11 +278,18 @@ export default function Sora2Workspace({
     // Create initial task
     const initialTask: Sora2Task = {
       id: "pending",
-      status: mode === "image-to-video" && (inputImageFile || isUrlMode) ?
-        (isUrlMode ? "processing" : "uploading") : "processing",
+      status:
+        mode === "image-to-video" && (inputImageFile || isUrlMode)
+          ? isUrlMode
+            ? "processing"
+            : "uploading"
+          : "processing",
       type: mode,
+      model,
       prompt,
       aspectRatio,
+      duration,
+      quality,
       removeWatermark,
       inputImage: null,
       videoUrl: null,
@@ -295,10 +336,13 @@ export default function Sora2Workspace({
 
       // Submit task
       const taskId = await submitVideoTask({
+        model,
         type: mode,
         prompt,
         image_urls: uploadedImageUrl ? [uploadedImageUrl] : undefined,
         aspect_ratio: aspectRatio,
+        n_frames: model === "sora2-pro" ? duration : undefined,
+        size: model === "sora2-pro" ? quality : undefined,
         remove_watermark: removeWatermark,
       });
 
@@ -307,8 +351,11 @@ export default function Sora2Workspace({
         id: taskId,
         status: "processing",
         type: mode,
+        model,
         prompt,
         aspectRatio,
+        duration,
+        quality,
         removeWatermark,
         inputImage: uploadedImageUrl || null,
         videoUrl: null,
@@ -358,7 +405,8 @@ export default function Sora2Workspace({
     } catch (error) {
       console.error("Download error:", error);
       toast.error(
-        t.toast?.download_failed || "Failed to download video. Please try again."
+        t.toast?.download_failed ||
+          "Failed to download video. Please try again."
       );
     } finally {
       setIsDownloading(false);
@@ -373,11 +421,14 @@ export default function Sora2Workspace({
 
     setCurrentTask(null);
     setMode("text-to-video");
+    setModel(DEFAULT_MODEL);
     setPrompt("");
     setInputImageFile(null);
     setInputImagePreview(null);
     setIsUrlMode(false);
     setAspectRatio(DEFAULT_ASPECT_RATIO);
+    setDuration(DEFAULT_DURATION);
+    setQuality(DEFAULT_QUALITY);
     setRemoveWatermark(DEFAULT_REMOVE_WATERMARK);
     if (pollingIntervalRef.current) {
       clearInterval(pollingIntervalRef.current);
@@ -385,7 +436,8 @@ export default function Sora2Workspace({
     }
   };
 
-  const canGenerate = prompt.trim().length >= MIN_PROMPT_LENGTH && !isGenerating;
+  const canGenerate =
+    prompt.trim().length >= MIN_PROMPT_LENGTH && !isGenerating;
 
   return (
     <div className={`w-full ${className}`}>
@@ -420,10 +472,23 @@ export default function Sora2Workspace({
               texts={t.prompt}
             />
 
+            {/* Model Version Selector */}
+            <ModelVersionSelector
+              model={model}
+              onModelChange={setModel}
+              disabled={isGenerating}
+              texts={t.model_selector}
+            />
+
             {/* Controls */}
             <Sora2Controls
+              model={model}
               aspectRatio={aspectRatio}
               onAspectRatioChange={setAspectRatio}
+              duration={duration}
+              onDurationChange={setDuration}
+              quality={quality}
+              onQualityChange={setQuality}
               removeWatermark={removeWatermark}
               onRemoveWatermarkChange={setRemoveWatermark}
               disabled={isGenerating}
@@ -440,7 +505,7 @@ export default function Sora2Workspace({
               </div>
               <div className="flex items-center gap-1">
                 <span className="text-lg font-bold text-green-600 dark:text-green-400">
-                  {CREDITS_PER_SORA2}
+                  {creditsNeeded}
                 </span>
                 <span className="text-sm text-slate-500 dark:text-slate-400">
                   {t.controls?.credits_unit || "credits"}
@@ -469,8 +534,8 @@ export default function Sora2Workspace({
                   <Wand2 className="w-4 h-4 mr-2" />
                   {t.generate_button?.generate?.replace(
                     "${credits}",
-                    CREDITS_PER_SORA2
-                  ) || `Generate Video (${CREDITS_PER_SORA2} credits)`}
+                    creditsNeeded
+                  ) || `Generate Video (${creditsNeeded} credits)`}
                 </>
               )}
             </Button>

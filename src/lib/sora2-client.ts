@@ -1,16 +1,19 @@
 // Sora 2 API 客户端封装（基于 KIE Jobs API）
 
-import { Sora2TaskType, Sora2AspectRatio } from "./constants/sora2";
+import { Sora2TaskType, Sora2AspectRatio, Sora2Model, Sora2Duration, Sora2Quality } from "./constants/sora2";
 
 // Mock 模式开关 - 开发环境下节省成本
 const ENABLE_MOCK = process.env.NEXT_PUBLIC_SORA2_MOCK === "true";
 
 // Sora 2 生成视频请求参数
 interface Sora2GenerateRequest {
+  model: Sora2Model;
   type: Sora2TaskType;
   prompt: string;
   imageUrls?: string[];
   aspectRatio?: Sora2AspectRatio;
+  nFrames?: Sora2Duration; // 仅 Pro 版本
+  size?: Sora2Quality; // 仅 Pro 版本
   removeWatermark?: boolean;
   callBackUrl?: string;
 }
@@ -91,19 +94,30 @@ export async function generateSora2Video(
     throw new Error("KIE_API_KEY not configured");
   }
 
-  // 根据任务类型确定模型
-  const model = params.type === "text-to-video"
-    ? "sora-2-text-to-video"
-    : "sora-2-image-to-video";
+  // 根据模型版本和任务类型确定 API model 名称
+  const isPro = params.model === "sora2-pro";
+  const modelPrefix = isPro ? "sora-2-pro" : "sora-2";
+  const modelSuffix = params.type === "text-to-video" ? "text-to-video" : "image-to-video";
+  const apiModelName = `${modelPrefix}-${modelSuffix}`;
 
   const requestBody: any = {
-    model,
+    model: apiModelName,
     input: {
       prompt: params.prompt,
       aspect_ratio: params.aspectRatio || "landscape",
       remove_watermark: params.removeWatermark ?? true,
     },
   };
+
+  // 添加 Pro 版本专属参数
+  if (isPro) {
+    if (params.nFrames) {
+      requestBody.input.n_frames = params.nFrames;
+    }
+    if (params.size) {
+      requestBody.input.size = params.size;
+    }
+  }
 
   // 添加图片URL（仅在 image-to-video 模式下）
   if (params.type === "image-to-video" && params.imageUrls) {
@@ -116,9 +130,12 @@ export async function generateSora2Video(
   }
 
   console.log("Sora 2 generate request:", {
-    model,
+    model: apiModelName,
+    version: params.model,
     type: params.type,
     aspectRatio: params.aspectRatio,
+    nFrames: params.nFrames,
+    size: params.size,
     hasImageUrls: !!params.imageUrls?.length,
   });
 

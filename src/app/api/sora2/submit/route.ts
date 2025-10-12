@@ -5,10 +5,16 @@ import { generateSora2Video } from "@/lib/sora2-client";
 import {
   Sora2TaskType,
   Sora2AspectRatio,
+  Sora2Model,
+  Sora2Duration,
+  Sora2Quality,
   MIN_PROMPT_LENGTH,
   MAX_PROMPT_LENGTH,
   MAX_IMAGE_URLS,
+  DEFAULT_MODEL,
   DEFAULT_ASPECT_RATIO,
+  DEFAULT_DURATION,
+  DEFAULT_QUALITY,
   DEFAULT_REMOVE_WATERMARK,
 } from "@/lib/constants/sora2";
 
@@ -16,10 +22,13 @@ export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
     const {
+      model = DEFAULT_MODEL,
       type,
       prompt,
       image_urls,
       aspect_ratio = DEFAULT_ASPECT_RATIO,
+      n_frames = DEFAULT_DURATION,
+      size = DEFAULT_QUALITY,
       remove_watermark = DEFAULT_REMOVE_WATERMARK,
     } = body;
 
@@ -38,6 +47,17 @@ export async function POST(request: NextRequest) {
         {
           success: false,
           error: "Missing required parameters: type and prompt",
+        },
+        { status: 400 }
+      );
+    }
+
+    // 验证模型类型
+    if (!["sora2", "sora2-pro"].includes(model)) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: "Invalid model. Must be 'sora2' or 'sora2-pro'",
         },
         { status: 400 }
       );
@@ -104,6 +124,29 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // 验证 Pro 版本参数
+    if (model === "sora2-pro") {
+      if (n_frames && !["10", "15"].includes(n_frames)) {
+        return NextResponse.json(
+          {
+            success: false,
+            error: "Invalid n_frames. Must be '10' or '15'",
+          },
+          { status: 400 }
+        );
+      }
+
+      if (size && !["standard", "high"].includes(size)) {
+        return NextResponse.json(
+          {
+            success: false,
+            error: "Invalid size. Must be 'standard' or 'high'",
+          },
+          { status: 400 }
+        );
+      }
+    }
+
     // 3. 生成 webhook URL
     const webhookUrl =
       process.env.NODE_ENV === "development"
@@ -114,10 +157,13 @@ export async function POST(request: NextRequest) {
     let request_id: string;
     try {
       request_id = await generateSora2Video({
+        model: model as Sora2Model,
         type: type as Sora2TaskType,
         prompt,
         imageUrls: type === "image-to-video" ? image_urls : undefined,
         aspectRatio: aspect_ratio as Sora2AspectRatio,
+        nFrames: model === "sora2-pro" ? (n_frames as Sora2Duration) : undefined,
+        size: model === "sora2-pro" ? (size as Sora2Quality) : undefined,
         removeWatermark: remove_watermark,
         callBackUrl: webhookUrl,
       });
@@ -137,10 +183,13 @@ export async function POST(request: NextRequest) {
     try {
       const result = await processSubmitRequest({
         userUuid: user_uuid,
+        model: model as Sora2Model,
         type: type as Sora2TaskType,
         prompt,
         imageUrls: type === "image-to-video" ? image_urls : undefined,
         aspectRatio: aspect_ratio as Sora2AspectRatio,
+        nFrames: model === "sora2-pro" ? (n_frames as Sora2Duration) : undefined,
+        size: model === "sora2-pro" ? (size as Sora2Quality) : undefined,
         removeWatermark: remove_watermark,
         requestId: request_id,
       });

@@ -15,45 +15,60 @@ import { getSnowId } from "@/lib/hash";
 import {
   Sora2TaskType,
   Sora2AspectRatio,
-  CREDITS_PER_SORA2,
+  Sora2Model,
+  Sora2Duration,
+  Sora2Quality,
+  calculateCredits,
 } from "@/lib/constants/sora2";
 import { transferVideoToR2 } from "@/lib/video-transfer";
 
 // 处理视频生成提交逻辑
 export async function processSubmitRequest({
   userUuid,
+  model,
   type,
   prompt,
   imageUrls,
   aspectRatio = "landscape",
+  nFrames,
+  size,
   removeWatermark = true,
   requestId,
 }: {
   userUuid: string;
+  model: Sora2Model;
   type: Sora2TaskType;
   prompt: string;
   imageUrls?: string[];
   aspectRatio?: Sora2AspectRatio;
+  nFrames?: Sora2Duration;
+  size?: Sora2Quality;
   removeWatermark?: boolean;
   requestId: string;
 }) {
+  // 动态计算所需积分
+  const creditsNeeded = calculateCredits(model, nFrames, size);
+
   // 检查用户积分
-  const creditCheck = await checkUserCredits(userUuid, CREDITS_PER_SORA2);
+  const creditCheck = await checkUserCredits(userUuid, creditsNeeded);
   if (!creditCheck.hasEnough) {
     throw new Error(
-      `Insufficient credits. Required: ${CREDITS_PER_SORA2}, Available: ${creditCheck.currentCredits}`
+      `Insufficient credits. Required: ${creditsNeeded}, Available: ${creditCheck.currentCredits}`
     );
   }
 
   // 生成任务ID
   const taskId = getSnowId();
 
-  // 构建输入参数 JSON
+  // 构建输入参数 JSON（包含所有参数）
   const input = {
+    model,
     prompt,
     imageUrls,
-    aspectRatio,
-    removeWatermark,
+    aspect_ratio: aspectRatio,
+    n_frames: nFrames,
+    size,
+    remove_watermark: removeWatermark,
   };
 
   // 创建数据库记录
@@ -64,7 +79,7 @@ export async function processSubmitRequest({
     type,
     input: JSON.stringify(input),
     status: "waiting",
-    credits_used: CREDITS_PER_SORA2,
+    credits_used: creditsNeeded,
     credits_refunded: 0,
     created_at: new Date(),
     updated_at: new Date(),
@@ -78,14 +93,14 @@ export async function processSubmitRequest({
   await decreaseCredits({
     user_uuid: userUuid,
     trans_type: CreditsTransType.Sora2,
-    credits: CREDITS_PER_SORA2,
+    credits: creditsNeeded,
   });
 
   return {
     taskId,
     requestId,
-    creditsUsed: CREDITS_PER_SORA2,
-    remainingCredits: creditCheck.currentCredits - CREDITS_PER_SORA2,
+    creditsUsed: creditsNeeded,
+    remainingCredits: creditCheck.currentCredits - creditsNeeded,
   };
 }
 

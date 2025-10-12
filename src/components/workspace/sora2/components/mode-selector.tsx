@@ -34,7 +34,7 @@ export default function ModeSelector({
   ];
 
   return (
-    <div className="grid grid-cols-2 gap-2">
+    <div className="bg-slate-200/60 dark:bg-slate-800/50 rounded-xl p-1 grid grid-cols-2 gap-1">
       {modes.map((modeOption) => {
         const isSelected = mode === modeOption.value;
         const IconComponent = modeOption.icon;
@@ -45,36 +45,33 @@ export default function ModeSelector({
             onClick={() => onModeChange(modeOption.value)}
             disabled={disabled}
             className={`
-              p-3 rounded-lg border transition-all duration-200 relative
+              px-4 py-2.5 rounded-lg transition-all duration-200
               ${
                 isSelected
-                  ? "border-emerald-500/60 bg-emerald-500/10 dark:bg-emerald-500/20"
-                  : "border-slate-200/80 dark:border-slate-600/60 hover:border-emerald-400/60 dark:hover:border-emerald-400/60 hover:bg-emerald-50/50 dark:hover:bg-emerald-500/10"
+                  ? "bg-white dark:bg-slate-700/80 shadow-sm"
+                  : "hover:bg-slate-300/40 dark:hover:bg-slate-700/40"
               }
-              ${disabled ? "opacity-50 cursor-not-allowed" : "cursor-pointer hover:scale-105"}
+              ${disabled ? "opacity-50 cursor-not-allowed" : "cursor-pointer"}
             `}
           >
             <div className="flex items-center justify-center gap-2">
               <IconComponent
-                className={`w-5 h-5 ${
+                className={`w-4 h-4 ${
                   isSelected
-                    ? "text-emerald-600 dark:text-emerald-400"
+                    ? "text-slate-700 dark:text-white"
                     : "text-slate-500 dark:text-slate-400"
                 }`}
               />
               <span
-                className={`text-sm font-semibold ${
+                className={`text-sm font-medium ${
                   isSelected
-                    ? "text-emerald-600 dark:text-emerald-400"
-                    : "text-slate-700 dark:text-slate-300"
+                    ? "text-slate-800 dark:text-white"
+                    : "text-slate-600 dark:text-slate-400"
                 }`}
               >
                 {modeOption.label}
               </span>
             </div>
-            {isSelected && (
-              <div className="absolute top-1 right-1 w-1.5 h-1.5 bg-emerald-500 rounded-full"></div>
-            )}
           </button>
         );
       })}
