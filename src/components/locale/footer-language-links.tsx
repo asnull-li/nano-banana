@@ -1,6 +1,8 @@
-import { getLocale } from "next-intl/server";
+"use client";
+
 import { locales, localeNames } from "@/i18n/locale";
 import { Link } from "@/i18n/navigation";
+import { useParams, usePathname } from "next/navigation";
 
 const languageFlags: Record<string, string> = {
   en: "🇺🇸",
@@ -15,8 +17,13 @@ const languageFlags: Record<string, string> = {
   pt: "🇵🇹",
 };
 
-export default async function FooterLanguageLinks() {
-  const currentLocale = await getLocale();
+export default function FooterLanguageLinks() {
+  const params = useParams();
+  const pathname = usePathname();
+  const currentLocale = params.locale as string;
+
+  // 移除当前语言前缀，获取纯路径
+  const pathWithoutLocale = pathname.replace(`/${currentLocale}`, "") || "/";
 
   return (
     <div className="w-full mt-12 pt-6 border-t border-muted-foreground/10">
@@ -27,7 +34,7 @@ export default async function FooterLanguageLinks() {
           return (
             <Link
               key={locale}
-              href="/"
+              href={pathWithoutLocale}
               locale={locale}
               className={`
                 flex items-center gap-1.5 text-sm transition-all duration-200
