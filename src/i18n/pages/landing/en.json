@@ -419,6 +419,26 @@
               "target": "_self"
             }
           ]
+        },
+        {
+          "title": "Other Services",
+          "children": [
+            {
+              "title": "AI Image Upscaler",
+              "url": "/ai-image-upscaler",
+              "target": "_self"
+            },
+            {
+              "title": "Veo 3",
+              "url": "/veo3",
+              "target": "_self"
+            },
+            {
+              "title": "Sora 2",
+              "url": "/sora2",
+              "target": "_self"
+            }
+          ]
         }
       ]
     },

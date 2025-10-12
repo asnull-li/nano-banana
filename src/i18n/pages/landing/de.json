@@ -417,6 +417,26 @@
               "target": "_self"
             }
           ]
+        },
+        {
+          "title": "Weitere Dienste",
+          "children": [
+            {
+              "title": "KI-Bildverbesserer",
+              "url": "/ai-image-upscaler",
+              "target": "_self"
+            },
+            {
+              "title": "Veo3",
+              "url": "/veo3",
+              "target": "_self"
+            },
+            {
+              "title": "Sora2",
+              "url": "/sora2",
+              "target": "_self"
+            }
+          ]
         }
       ]
     },

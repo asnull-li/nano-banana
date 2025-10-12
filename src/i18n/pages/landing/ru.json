@@ -418,6 +418,26 @@
               "target": "_self"
             }
           ]
+        },
+        {
+          "title": "Другие Сервисы",
+          "children": [
+            {
+              "title": "Улучшитель изображений ИИ",
+              "url": "/ai-image-upscaler",
+              "target": "_self"
+            },
+            {
+              "title": "Veo3",
+              "url": "/veo3",
+              "target": "_self"
+            },
+            {
+              "title": "Sora2",
+              "url": "/sora2",
+              "target": "_self"
+            }
+          ]
         }
       ]
     },

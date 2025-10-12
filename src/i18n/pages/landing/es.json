@@ -418,6 +418,26 @@
               "target": "_self"
             }
           ]
+        },
+        {
+          "title": "Otros Servicios",
+          "children": [
+            {
+              "title": "Mejorador de Imágenes IA",
+              "url": "/ai-image-upscaler",
+              "target": "_self"
+            },
+            {
+              "title": "Veo3",
+              "url": "/veo3",
+              "target": "_self"
+            },
+            {
+              "title": "Sora2",
+              "url": "/sora2",
+              "target": "_self"
+            }
+          ]
         }
       ]
     },

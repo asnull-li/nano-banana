@@ -419,6 +419,26 @@
               "target": "_self"
             }
           ]
+        },
+        {
+          "title": "その他のサービス",
+          "children": [
+            {
+              "title": "AI画像アップスケーラー",
+              "url": "/ai-image-upscaler",
+              "target": "_self"
+            },
+            {
+              "title": "Veo3",
+              "url": "/veo3",
+              "target": "_self"
+            },
+            {
+              "title": "Sora2",
+              "url": "/sora2",
+              "target": "_self"
+            }
+          ]
         }
       ]
     },

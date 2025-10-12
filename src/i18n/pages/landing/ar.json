@@ -417,6 +417,26 @@
               "target": "_self"
             }
           ]
+        },
+        {
+          "title": "خدمات أخرى",
+          "children": [
+            {
+              "title": "محسن الصور بالذكاء الاصطناعي",
+              "url": "/ai-image-upscaler",
+              "target": "_self"
+            },
+            {
+              "title": "Veo3",
+              "url": "/veo3",
+              "target": "_self"
+            },
+            {
+              "title": "Sora2",
+              "url": "/sora2",
+              "target": "_self"
+            }
+          ]
         }
       ]
     },
