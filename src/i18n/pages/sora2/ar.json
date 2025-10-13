@@ -112,7 +112,7 @@
       "image_to_video": "صورة إلى فيديو"
     },
     "model_selector": {
-      "label": "Model Version",
+      "label": "إصدار النموذج",
       "sora2": "Sora 2",
       "sora2_pro": "Sora 2 Pro"
     },
@@ -137,14 +137,14 @@
       "aspect_ratio_label": "نسبة العرض",
       "landscape": "أفقي",
       "portrait": "عمودي",
-      "duration_label": "Duration",
-      "duration_10s": "10s",
-      "duration_15s": "15s",
-      "quality_label": "Quality",
-      "quality_standard": "Standard",
-      "quality_high": "High",
-      "generation_time_title": "⏱️ Generation Time:",
-      "generation_time_desc": "10s HD typically takes 10-20 minutes, 15s HD takes ~30 minutes (reflects OpenAI's native delivery speed). We strongly recommend using the 15s HD option with caution as it requires longer time and may have slight imperfections.",
+      "duration_label": "المدة",
+      "duration_10s": "10 ثوان",
+      "duration_15s": "15 ثانية",
+      "quality_label": "الجودة",
+      "quality_standard": "قياسية",
+      "quality_high": "عالية",
+      "generation_time_title": "⏱️ وقت التوليد:",
+      "generation_time_desc": "HD 10 ثوان يستغرق عادة 10-20 دقيقة، HD 15 ثانية يستغرق حوالي 30 دقيقة (يعكس سرعة التسليم الأصلية من OpenAI). نوصي بشدة باستخدام خيار HD 15 ثانية بحذر لأنه يتطلب وقتًا أطول وقد يحتوي على عيوب طفيفة.",
       "remove_watermark_label": "إزالة العلامة المائية",
       "credits_cost": "تكلفة الاعتمادات",
       "credits_unit": "اعتمادات"

@@ -112,7 +112,7 @@
       "image_to_video": "Bild zu Video"
     },
     "model_selector": {
-      "label": "Model Version",
+      "label": "Modellversion",
       "sora2": "Sora 2",
       "sora2_pro": "Sora 2 Pro"
     },
@@ -137,14 +137,14 @@
       "aspect_ratio_label": "Seitenverhältnis",
       "landscape": "Querformat",
       "portrait": "Hochformat",
-      "duration_label": "Duration",
+      "duration_label": "Dauer",
       "duration_10s": "10s",
       "duration_15s": "15s",
-      "quality_label": "Quality",
+      "quality_label": "Qualität",
       "quality_standard": "Standard",
-      "quality_high": "High",
-      "generation_time_title": "⏱️ Generation Time:",
-      "generation_time_desc": "10s HD typically takes 10-20 minutes, 15s HD takes ~30 minutes (reflects OpenAI's native delivery speed). We strongly recommend using the 15s HD option with caution as it requires longer time and may have slight imperfections.",
+      "quality_high": "Hoch",
+      "generation_time_title": "⏱️ Generierungszeit:",
+      "generation_time_desc": "10s HD dauert normalerweise 10-20 Minuten, 15s HD dauert etwa 30 Minuten (entspricht der nativen Liefergeschwindigkeit von OpenAI). Wir empfehlen dringend, die 15s HD-Option mit Vorsicht zu verwenden, da sie mehr Zeit benötigt und leichte Unvollkommenheiten aufweisen kann.",
       "remove_watermark_label": "Wasserzeichen Entfernen",
       "credits_cost": "Credit-Kosten",
       "credits_unit": "Credits"

@@ -112,7 +112,7 @@
       "image_to_video": "Изображение в Видео"
     },
     "model_selector": {
-      "label": "Model Version",
+      "label": "Версия Модели",
       "sora2": "Sora 2",
       "sora2_pro": "Sora 2 Pro"
     },
@@ -137,14 +137,14 @@
       "aspect_ratio_label": "Соотношение Сторон",
       "landscape": "Альбомная",
       "portrait": "Портретная",
-      "duration_label": "Duration",
-      "duration_10s": "10s",
-      "duration_15s": "15s",
-      "quality_label": "Quality",
-      "quality_standard": "Standard",
-      "quality_high": "High",
-      "generation_time_title": "⏱️ Generation Time:",
-      "generation_time_desc": "10s HD typically takes 10-20 minutes, 15s HD takes ~30 minutes (reflects OpenAI's native delivery speed). We strongly recommend using the 15s HD option with caution as it requires longer time and may have slight imperfections.",
+      "duration_label": "Продолжительность",
+      "duration_10s": "10с",
+      "duration_15s": "15с",
+      "quality_label": "Качество",
+      "quality_standard": "Стандартное",
+      "quality_high": "Высокое",
+      "generation_time_title": "⏱️ Время Генерации:",
+      "generation_time_desc": "HD 10с обычно занимает 10-20 минут, HD 15с занимает около 30 минут (отражает нативную скорость доставки OpenAI). Мы настоятельно рекомендуем использовать опцию HD 15с с осторожностью, так как она требует больше времени и может иметь незначительные недостатки.",
       "remove_watermark_label": "Удалить Водяной Знак",
       "credits_cost": "Стоимость в Кредитах",
       "credits_unit": "кредитов"

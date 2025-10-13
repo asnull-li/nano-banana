@@ -112,7 +112,7 @@
       "image_to_video": "이미지-비디오"
     },
     "model_selector": {
-      "label": "Model Version",
+      "label": "모델 버전",
       "sora2": "Sora 2",
       "sora2_pro": "Sora 2 Pro"
     },
@@ -137,14 +137,14 @@
       "aspect_ratio_label": "종횡비",
       "landscape": "가로",
       "portrait": "세로",
-      "duration_label": "Duration",
-      "duration_10s": "10s",
-      "duration_15s": "15s",
-      "quality_label": "Quality",
-      "quality_standard": "Standard",
-      "quality_high": "High",
-      "generation_time_title": "⏱️ Generation Time:",
-      "generation_time_desc": "10s HD typically takes 10-20 minutes, 15s HD takes ~30 minutes (reflects OpenAI's native delivery speed). We strongly recommend using the 15s HD option with caution as it requires longer time and may have slight imperfections.",
+      "duration_label": "시간",
+      "duration_10s": "10초",
+      "duration_15s": "15초",
+      "quality_label": "화질",
+      "quality_standard": "표준",
+      "quality_high": "고화질",
+      "generation_time_title": "⏱️ 생성 시간：",
+      "generation_time_desc": "10초 HD는 일반적으로 10-20분, 15초 HD는 약 30분이 소요됩니다(OpenAI의 기본 제공 속도 반영). 15초 HD 옵션은 더 긴 시간이 필요하고 약간의 불완전함이 있을 수 있으므로 신중하게 사용하시기 바랍니다.",
       "remove_watermark_label": "워터마크 제거",
       "credits_cost": "크레딧 비용",
       "credits_unit": "크레딧"

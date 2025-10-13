@@ -112,7 +112,7 @@
       "image_to_video": "画像から動画"
     },
     "model_selector": {
-      "label": "Model Version",
+      "label": "モデルバージョン",
       "sora2": "Sora 2",
       "sora2_pro": "Sora 2 Pro"
     },
@@ -137,14 +137,14 @@
       "aspect_ratio_label": "アスペクト比",
       "landscape": "横向き",
       "portrait": "縦向き",
-      "duration_label": "Duration",
-      "duration_10s": "10s",
-      "duration_15s": "15s",
-      "quality_label": "Quality",
-      "quality_standard": "Standard",
-      "quality_high": "High",
-      "generation_time_title": "⏱️ Generation Time:",
-      "generation_time_desc": "10s HD typically takes 10-20 minutes, 15s HD takes ~30 minutes (reflects OpenAI's native delivery speed). We strongly recommend using the 15s HD option with caution as it requires longer time and may have slight imperfections.",
+      "duration_label": "時長",
+      "duration_10s": "10秒",
+      "duration_15s": "15秒",
+      "quality_label": "画質",
+      "quality_standard": "標準",
+      "quality_high": "高精細",
+      "generation_time_title": "⏱️ 生成時間：",
+      "generation_time_desc": "10秒のHDは通常10〜20分、15秒のHDは約30分かかります（これはOpenAIのネイティブ配信速度を反映しています）。15秒のHDオプションは時間がかかり、わずかな不完全さがある可能性があるため、慎重に使用することを強くお勧めします。",
       "remove_watermark_label": "ウォーターマークを削除",
       "credits_cost": "クレジットコスト",
       "credits_unit": "クレジット"
