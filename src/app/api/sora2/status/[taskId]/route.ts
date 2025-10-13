@@ -60,9 +60,12 @@ export async function GET(
         status: frontendStatus,
         type: task.type,
         input: {
+          model: input.model,
           prompt: input.prompt,
-          aspect_ratio: input.aspectRatio,
-          remove_watermark: input.removeWatermark,
+          aspect_ratio: input.aspect_ratio,
+          n_frames: input.n_frames,
+          size: input.size,
+          remove_watermark: input.remove_watermark,
         },
         result: result
           ? {

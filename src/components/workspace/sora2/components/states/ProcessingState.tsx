@@ -1,6 +1,6 @@
 "use client";
 
-import { Loader2 } from "lucide-react";
+import { Loader2, Clock, AlertCircle } from "lucide-react";
 import { Sora2Task } from "../../types";
 
 interface ProcessingStateProps {
@@ -13,6 +13,7 @@ export default function ProcessingState({
   texts = {},
 }: ProcessingStateProps) {
   const isPro = task.model === "sora2-pro";
+  console.log(task);
 
   const statusText =
     task.status === "uploading"
@@ -40,21 +41,35 @@ export default function ProcessingState({
       )}
 
       {/* Generation Time Notice - Only for Pro */}
-      {isPro && (
-        <div className="mt-4 p-3 bg-amber-50/50 dark:bg-amber-950/20 rounded-lg border border-amber-200/50 dark:border-amber-800/30 max-w-md">
-          <p className="text-xs text-amber-800 dark:text-amber-200 leading-relaxed">
-            <span className="font-semibold">
-              {texts.generation_time_title || "⏱️ Generation Time:"}
-            </span>{" "}
-            {texts.generation_time_desc ||
-              "10s HD typically takes 10-20 minutes, 15s HD takes ~30 minutes (reflects OpenAI's native delivery speed). We strongly recommend using the 15s HD option with caution as it requires longer time and may have slight imperfections."}
-          </p>
-          <p className="text-xs text-amber-700 dark:text-amber-300 mt-2">
-            {texts.wait_notice ||
-              "You can leave this page or start a new generation task. Once completed, you can find your result in My Creations."}
-          </p>
-        </div>
-      )}
+      {isPro &&
+        (task.status === "uploading" || task.status === "processing") && (
+          <div className="mt-6 max-w-md mx-auto">
+            <div className="p-4 rounded-lg bg-slate-50/80 dark:bg-slate-800/50 border border-slate-200/50 dark:border-slate-700/50">
+              <div className="space-y-3">
+                <div className="flex items-start gap-2.5">
+                  <Clock className="w-4 h-4 text-slate-500 dark:text-slate-400 flex-shrink-0 mt-0.5" />
+                  <div className="flex-1 space-y-1">
+                    <p className="text-sm font-medium text-slate-700 dark:text-slate-300">
+                      {texts.generation_time_title || "⏱️ Generation Time"}
+                    </p>
+                    <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                      {texts.generation_time_desc ||
+                        "10s HD typically takes 10-20 minutes, 15s HD takes ~30 minutes (reflects OpenAI's native delivery speed). We strongly recommend using the 15s HD option with caution as it requires longer time and may have slight imperfections."}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-2.5 pt-2 border-t border-slate-200/50 dark:border-slate-700/50">
+                  <AlertCircle className="w-4 h-4 text-slate-500 dark:text-slate-400 flex-shrink-0 mt-0.5" />
+                  <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                    {texts.wait_notice ||
+                      "You can leave this page or start a new generation task. Once completed, you can find your result in My Creations."}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
     </div>
   );
 }
