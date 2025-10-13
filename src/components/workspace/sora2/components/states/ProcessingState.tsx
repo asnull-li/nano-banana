@@ -12,6 +12,8 @@ export default function ProcessingState({
   task,
   texts = {},
 }: ProcessingStateProps) {
+  const isPro = task.model === "sora2-pro";
+
   const statusText =
     task.status === "uploading"
       ? texts.uploading_title || "Uploading image..."
@@ -33,6 +35,23 @@ export default function ProcessingState({
         <div className="mt-4 p-3 bg-slate-50 dark:bg-slate-800 rounded-lg max-w-md">
           <p className="text-xs text-slate-600 dark:text-slate-400 line-clamp-2">
             {task.prompt}
+          </p>
+        </div>
+      )}
+
+      {/* Generation Time Notice - Only for Pro */}
+      {isPro && (
+        <div className="mt-4 p-3 bg-amber-50/50 dark:bg-amber-950/20 rounded-lg border border-amber-200/50 dark:border-amber-800/30 max-w-md">
+          <p className="text-xs text-amber-800 dark:text-amber-200 leading-relaxed">
+            <span className="font-semibold">
+              {texts.generation_time_title || "⏱️ Generation Time:"}
+            </span>{" "}
+            {texts.generation_time_desc ||
+              "10s HD typically takes 10-20 minutes, 15s HD takes ~30 minutes (reflects OpenAI's native delivery speed). We strongly recommend using the 15s HD option with caution as it requires longer time and may have slight imperfections."}
+          </p>
+          <p className="text-xs text-amber-700 dark:text-amber-300 mt-2">
+            {texts.wait_notice ||
+              "You can leave this page or start a new generation task. Once completed, you can find your result in My Creations."}
           </p>
         </div>
       )}

@@ -161,7 +161,10 @@
     "processing_state": {
       "uploading_title": "正在上传图片...",
       "generating_title": "正在生成视频...",
-      "description": "请稍候，我们正在处理您的请求。这可能需要几分钟。"
+      "description": "请稍候，我们正在处理您的请求。这可能需要几分钟。",
+      "generation_time_title": "⏱️ 生成时间：",
+      "generation_time_desc": "10秒的HD通常需要10-20分钟才能生成，15秒的HD大约需要30分钟（这反映了OpenAI的原生交付速度）。我们强烈建议谨慎使用15秒HD选项，因为它需要更长的时间，并可能有轻微的瑕疵。",
+      "wait_notice": "您可以离开此页面或开始新的生成任务。生成完成后，您可以在我的创作记录中找到您的结果。"
     },
     "failed_state": {
       "title": "生成失败",

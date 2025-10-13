@@ -161,7 +161,10 @@
     "processing_state": {
       "uploading_title": "Carregando imagem...",
       "generating_title": "Gerando vídeo...",
-      "description": "Por favor, aguarde enquanto processamos seu pedido. Isso pode levar alguns minutos."
+      "description": "Por favor, aguarde enquanto processamos seu pedido. Isso pode levar alguns minutos.",
+      "generation_time_title": "⏱️ Tempo de Geração:",
+      "generation_time_desc": "HD de 10s normalmente leva 10-20 minutos, HD de 15s leva cerca de 30 minutos (reflete a velocidade de entrega nativa do OpenAI). Recomendamos fortemente usar a opção HD de 15s com cautela, pois requer mais tempo e pode ter pequenas imperfeições.",
+      "wait_notice": "Você pode sair desta página ou iniciar uma nova tarefa de geração. Uma vez concluída, você pode encontrar seu resultado em Minhas Criações."
     },
     "failed_state": {
       "title": "Geração Falhou",
