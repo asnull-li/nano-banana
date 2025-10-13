@@ -359,7 +359,8 @@
     "coming_soon": "قريباً!",
     "tabs": {
       "nano_banana": "توليد الصور",
-      "veo3": "توليد الفيديو",
+      "veo3": "Veo 3",
+      "sora2": "Sora 2",
       "upscaler": "تحسين الصور"
     },
     "veo3": {
@@ -369,6 +370,11 @@
       "prompt": "المطالبة",
       "input_image": "صورة الإدخال",
       "download_video": "تحميل الفيديو"
+    },
+    "sora2": {
+      "video_preview": "Sora 2 Video Preview",
+      "prompt": "Prompt",
+      "download_video": "Download Video"
     },
     "upscaler": {
       "compare_title": "معاينة المقارنة",

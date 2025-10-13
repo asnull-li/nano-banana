@@ -1,86 +1,64 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getUserUuid } from "@/services/user";
-import { findTaskById } from "@/models/sora2";
+import { db } from "@/db";
+import { sora2Tasks } from "@/db/schema";
+import { eq, and } from "drizzle-orm";
 
-export async function GET(
+export async function DELETE(
   request: NextRequest,
   { params }: { params: Promise<{ taskId: string }> }
 ) {
   try {
     const { taskId } = await params;
 
-    // 1. 验证用户身份
-    const user_uuid = await getUserUuid();
-    if (!user_uuid) {
+    // 验证用户身份
+    const userUuid = await getUserUuid();
+    if (!userUuid) {
       return NextResponse.json(
         { success: false, error: "Authentication required" },
         { status: 401 }
       );
     }
 
-    // 2. 查询任务
-    const task = await findTaskById(taskId);
+    // 验证任务是否属于当前用户
+    const [task] = await db()
+      .select()
+      .from(sora2Tasks)
+      .where(
+        and(
+          eq(sora2Tasks.task_id, taskId),
+          eq(sora2Tasks.user_uuid, userUuid)
+        )
+      )
+      .limit(1);
+
     if (!task) {
       return NextResponse.json(
-        { success: false, error: "Task not found" },
+        { success: false, error: "Task not found or unauthorized" },
         { status: 404 }
       );
     }
 
-    // 3. 验证任务所属
-    if (task.user_uuid !== user_uuid) {
-      return NextResponse.json(
-        { success: false, error: "Unauthorized access" },
-        { status: 403 }
+    // 删除任务
+    await db()
+      .delete(sora2Tasks)
+      .where(
+        and(
+          eq(sora2Tasks.task_id, taskId),
+          eq(sora2Tasks.user_uuid, userUuid)
+        )
       );
-    }
 
-    // 4. 解析输入和结果
-    const input = task.input ? JSON.parse(task.input) : {};
-    const result = task.result ? JSON.parse(task.result) : null;
-
-    // 5. 映射状态
-    let frontendStatus = task.status;
-    if (task.status === "waiting") {
-      frontendStatus = "processing";
-    } else if (task.status === "success") {
-      frontendStatus = "completed";
-    } else if (task.status === "fail") {
-      frontendStatus = "failed";
-    }
-
-    // 6. 返回完整的任务详情
     return NextResponse.json({
       success: true,
-      task: {
-        task_id: task.task_id,
-        request_id: task.request_id,
-        user_uuid: task.user_uuid,
-        type: task.type,
-        status: frontendStatus,
-        input: {
-          prompt: input.prompt,
-          imageUrls: input.imageUrls,
-          aspectRatio: input.aspectRatio,
-          removeWatermark: input.removeWatermark,
-        },
-        result: result,
-        video_url: task.video_url,
-        credits_used: task.credits_used,
-        credits_refunded: task.credits_refunded,
-        error_message: task.error_message,
-        error_code: task.error_code,
-        created_at: task.created_at,
-        updated_at: task.updated_at,
-        completed_at: task.completed_at,
-      },
+      message: "Task deleted successfully",
     });
   } catch (error) {
-    console.error("Sora 2 History Detail API error:", error);
+    console.error("Delete sora2 task API error:", error);
     return NextResponse.json(
       {
         success: false,
-        error: "Internal server error",
+        error: "Failed to delete task",
         details: error instanceof Error ? error.message : undefined,
       },
       { status: 500 }

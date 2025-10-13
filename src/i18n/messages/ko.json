@@ -359,7 +359,8 @@
     "coming_soon": "곧 출시 예정!",
     "tabs": {
       "nano_banana": "이미지 생성",
-      "veo3": "비디오 생성",
+      "veo3": "Veo 3",
+      "sora2": "Sora 2",
       "upscaler": "이미지 향상"
     },
     "veo3": {
@@ -369,6 +370,11 @@
       "prompt": "프롬프트",
       "input_image": "입력 이미지",
       "download_video": "비디오 다운로드"
+    },
+    "sora2": {
+      "video_preview": "Sora 2 Video Preview",
+      "prompt": "Prompt",
+      "download_video": "Download Video"
     },
     "upscaler": {
       "compare_title": "비교 미리보기",

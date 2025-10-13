@@ -9,10 +9,12 @@ import HistoryTabs, { HistoryTabType } from "./history-tabs";
 import PageHeader from "./page-header";
 import HistoryCard from "./history-card";
 import Veo3HistoryCard, { Veo3Task } from "./veo3-history-card";
+import Sora2HistoryCard, { Sora2Task } from "./sora2-history-card";
 import UpscalerHistoryCard, { UpscalerTask } from "./upscaler-history-card";
 import EmptyState from "./empty-state";
 import ImagePreviewDialog from "./image-preview-dialog";
 import Veo3VideoDialog from "./veo3-video-dialog";
+import Sora2VideoDialog from "./sora2-video-dialog";
 import UpscalerCompareDialog from "./upscaler-compare-dialog";
 import DeleteConfirmDialog from "./delete-confirm-dialog";
 import LoadMoreButton from "./load-more-button";
@@ -77,6 +79,14 @@ export default function HistoryClient({
     page: 0,
   });
 
+  const [sora2Data, setSora2Data] = useState<TabData<Sora2Task>>({
+    tasks: [],
+    isLoaded: false,
+    isLoading: false,
+    hasMore: false,
+    page: 0,
+  });
+
   const [upscalerData, setUpscalerData] = useState<TabData<UpscalerTask>>({
     tasks: [],
     isLoaded: false,
@@ -90,6 +100,9 @@ export default function HistoryClient({
   const [selectedVeo3Video, setSelectedVeo3Video] = useState<Veo3Task | null>(
     null
   );
+  const [selectedSora2Video, setSelectedSora2Video] = useState<Sora2Task | null>(
+    null
+  );
   const [selectedUpscalerTask, setSelectedUpscalerTask] =
     useState<UpscalerTask | null>(null);
   const [deleteTaskId, setDeleteTaskId] = useState<string | null>(null);
@@ -101,6 +114,9 @@ export default function HistoryClient({
   useEffect(() => {
     if (activeTab === "veo3" && !veo3Data.isLoaded && !veo3Data.isLoading) {
       loadVeo3Data();
+    }
+    if (activeTab === "sora2" && !sora2Data.isLoaded && !sora2Data.isLoading) {
+      loadSora2Data();
     }
     if (
       activeTab === "upscaler" &&
@@ -130,6 +146,28 @@ export default function HistoryClient({
     } catch (error) {
       toast.error(t("load_more_error"));
       setVeo3Data((prev) => ({ ...prev, isLoading: false }));
+    }
+  };
+
+  // 加载 Sora2 数据
+  const loadSora2Data = async () => {
+    setSora2Data((prev) => ({ ...prev, isLoading: true }));
+    try {
+      const response = await fetch("/api/sora2/history?limit=20");
+      const data = await response.json();
+
+      if (data.success && data.tasks) {
+        setSora2Data({
+          tasks: data.tasks,
+          isLoaded: true,
+          isLoading: false,
+          hasMore: data.tasks.length === 20,
+          page: 1,
+        });
+      }
+    } catch (error) {
+      toast.error(t("load_more_error"));
+      setSora2Data((prev) => ({ ...prev, isLoading: false }));
     }
   };
 
@@ -206,6 +244,8 @@ export default function HistoryClient({
         apiPath = `/api/nano-banana/history/${deleteTaskId}`;
       } else if (deleteTabType === "veo3") {
         apiPath = `/api/veo3/history/${deleteTaskId}`;
+      } else if (deleteTabType === "sora2") {
+        apiPath = `/api/sora2/history/${deleteTaskId}`;
       } else if (deleteTabType === "upscaler") {
         apiPath = `/api/upscaler/history/${deleteTaskId}`;
       }
@@ -224,6 +264,11 @@ export default function HistoryClient({
         }));
       } else if (deleteTabType === "veo3") {
         setVeo3Data((prev) => ({
+          ...prev,
+          tasks: prev.tasks.filter((task) => task.task_id !== deleteTaskId),
+        }));
+      } else if (deleteTabType === "sora2") {
+        setSora2Data((prev) => ({
           ...prev,
           tasks: prev.tasks.filter((task) => task.task_id !== deleteTaskId),
         }));
@@ -371,6 +416,39 @@ export default function HistoryClient({
       );
     }
 
+    if (activeTab === "sora2") {
+      if (!sora2Data.isLoaded) {
+        return (
+          <div className="flex items-center justify-center py-20">
+            <div className="text-center space-y-2">
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-600 mx-auto"></div>
+              <p className="text-muted-foreground">{t("loading")}</p>
+            </div>
+          </div>
+        );
+      }
+
+      if (sora2Data.tasks.length === 0) {
+        return <EmptyState locale={locale} />;
+      }
+
+      return (
+        <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          {sora2Data.tasks.map((task) => (
+            <Sora2HistoryCard
+              key={task.task_id}
+              task={task}
+              onViewVideo={() => setSelectedSora2Video(task)}
+              onDelete={(taskId) => {
+                setDeleteTaskId(taskId);
+                setDeleteTabType("sora2");
+              }}
+            />
+          ))}
+        </div>
+      );
+    }
+
     if (activeTab === "upscaler") {
       if (!upscalerData.isLoaded) {
         return (
@@ -434,6 +512,16 @@ export default function HistoryClient({
           video1080pUrl={selectedVeo3Video.video_1080p_url}
           has1080p={selectedVeo3Video.has_1080p}
           prompt={selectedVeo3Video.input.prompt}
+        />
+      )}
+
+      {/* 对话框 - Sora2 视频预览 */}
+      {selectedSora2Video && (
+        <Sora2VideoDialog
+          isOpen={!!selectedSora2Video}
+          onClose={() => setSelectedSora2Video(null)}
+          videoUrl={selectedSora2Video.video_url}
+          prompt={selectedSora2Video.input.prompt}
         />
       )}
 

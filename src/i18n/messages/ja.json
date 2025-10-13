@@ -359,7 +359,8 @@
     "coming_soon": "近日公開！",
     "tabs": {
       "nano_banana": "画像生成",
-      "veo3": "動画生成",
+      "veo3": "Veo 3",
+      "sora2": "Sora 2",
       "upscaler": "画像強化"
     },
     "veo3": {
@@ -369,6 +370,11 @@
       "prompt": "プロンプト",
       "input_image": "入力画像",
       "download_video": "動画をダウンロード"
+    },
+    "sora2": {
+      "video_preview": "Sora 2 Video Preview",
+      "prompt": "Prompt",
+      "download_video": "Download Video"
     },
     "upscaler": {
       "compare_title": "比較プレビュー",

@@ -39,12 +39,21 @@ export async function GET(request: NextRequest) {
         task_id: task.task_id,
         status: frontendStatus,
         type: task.type,
-        prompt: input.prompt,
-        aspect_ratio: input.aspectRatio,
+        input: {
+          model: input.model,
+          prompt: input.prompt,
+          imageUrls: input.imageUrls,
+          aspect_ratio: input.aspect_ratio || input.aspectRatio,
+          n_frames: input.n_frames,
+          size: input.size,
+          remove_watermark: input.remove_watermark,
+        },
         video_url: task.video_url,
+        credits_used: task.credits_used,
+        credits_refunded: task.credits_refunded || 0,
+        error_message: task.error_message,
         created_at: task.created_at,
         completed_at: task.completed_at,
-        credits_used: task.credits_used,
       };
     });
 

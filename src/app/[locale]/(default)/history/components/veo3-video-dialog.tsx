@@ -87,7 +87,7 @@ export default function Veo3VideoDialog({
                   onClick={() => setQuality("720p")}
                   className={cn(
                     quality === "720p"
-                      ? "bg-gradient-to-r from-green-600 to-cyan-600"
+                      ? "bg-gradient-to-r from-green-600 to-cyan-600 text-white"
                       : ""
                   )}
                 >
@@ -99,7 +99,7 @@ export default function Veo3VideoDialog({
                   onClick={() => setQuality("1080p")}
                   className={cn(
                     quality === "1080p"
-                      ? "bg-gradient-to-r from-green-600 to-cyan-600"
+                      ? "bg-gradient-to-r from-green-600 to-cyan-600 text-white"
                       : ""
                   )}
                 >
@@ -145,7 +145,7 @@ export default function Veo3VideoDialog({
                 <Button
                   onClick={() => handleDownload("720p")}
                   disabled={downloading !== null}
-                  className="flex-1 bg-gradient-to-r from-green-600 to-cyan-600 hover:from-green-700 hover:to-cyan-700 disabled:opacity-50"
+                  className="flex-1 bg-gradient-to-r from-green-600 to-cyan-600 hover:from-green-700 hover:to-cyan-700 text-white disabled:opacity-50"
                 >
                   {downloading === "720p" ? (
                     <Loader2 className="mr-2 h-4 w-4 animate-spin" />
@@ -159,7 +159,7 @@ export default function Veo3VideoDialog({
                 <Button
                   onClick={() => handleDownload("1080p")}
                   disabled={downloading !== null}
-                  className="flex-1 bg-gradient-to-r from-green-600 to-cyan-600 hover:from-green-700 hover:to-cyan-700 disabled:opacity-50"
+                  className="flex-1 bg-gradient-to-r from-green-600 to-cyan-600 hover:from-green-700 hover:to-cyan-700 text-white disabled:opacity-50"
                 >
                   {downloading === "1080p" ? (
                     <Loader2 className="mr-2 h-4 w-4 animate-spin" />
@@ -178,7 +178,7 @@ export default function Veo3VideoDialog({
               <Button
                 onClick={() => handleDownload()}
                 disabled={downloading !== null}
-                className="w-full bg-gradient-to-r from-green-600 to-cyan-600 hover:from-green-700 hover:to-cyan-700 disabled:opacity-50"
+                className="w-full bg-gradient-to-r from-green-600 to-cyan-600 hover:from-green-700 hover:to-cyan-700 text-white disabled:opacity-50"
               >
                 {downloading ? (
                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />

@@ -359,7 +359,8 @@
     "coming_soon": "¡Próximamente!",
     "tabs": {
       "nano_banana": "Generación de Imágenes",
-      "veo3": "Generación de Videos",
+      "veo3": "Veo 3",
+      "sora2": "Sora 2",
       "upscaler": "Mejora de Imágenes"
     },
     "veo3": {
@@ -369,6 +370,11 @@
       "prompt": "Indicación",
       "input_image": "Imagen de Entrada",
       "download_video": "Descargar Video"
+    },
+    "sora2": {
+      "video_preview": "Sora 2 Video Preview",
+      "prompt": "Prompt",
+      "download_video": "Download Video"
     },
     "upscaler": {
       "compare_title": "Vista Previa de Comparación",
