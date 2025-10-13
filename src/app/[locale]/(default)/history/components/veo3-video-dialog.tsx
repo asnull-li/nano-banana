@@ -71,21 +71,22 @@ export default function Veo3VideoDialog({
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-5xl w-[95vw] h-[90vh] p-0 gap-0 bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-900 border-green-200/50 dark:border-green-800/50 flex flex-col">
         {/* Header */}
-        <DialogHeader className="p-6 pb-4 border-b border-green-200/30 dark:border-green-800/30">
-          <div className="flex items-center justify-between">
-            <DialogTitle className="text-2xl font-bold bg-gradient-to-r from-green-600 to-cyan-600 bg-clip-text text-transparent flex items-center gap-3">
-              <div className="w-3 h-3 bg-gradient-to-r from-green-500 to-cyan-500 rounded-full animate-pulse"></div>
+        <DialogHeader className="p-4 sm:p-6 pb-3 sm:pb-4 border-b border-green-200/30 dark:border-green-800/30">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <DialogTitle className="text-lg sm:text-2xl font-bold bg-gradient-to-r from-green-600 to-cyan-600 bg-clip-text text-transparent flex items-center gap-2 sm:gap-3">
+              <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-gradient-to-r from-green-500 to-cyan-500 rounded-full animate-pulse"></div>
               {t("video_preview")}
             </DialogTitle>
 
             {/* Quality selector */}
             {has1080p && video1080pUrl && (
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 self-start sm:self-auto">
                 <Button
                   size="sm"
                   variant={quality === "720p" ? "default" : "outline"}
                   onClick={() => setQuality("720p")}
                   className={cn(
+                    "text-xs sm:text-sm",
                     quality === "720p"
                       ? "bg-gradient-to-r from-green-600 to-cyan-600 text-white"
                       : ""
@@ -98,6 +99,7 @@ export default function Veo3VideoDialog({
                   variant={quality === "1080p" ? "default" : "outline"}
                   onClick={() => setQuality("1080p")}
                   className={cn(
+                    "text-xs sm:text-sm",
                     quality === "1080p"
                       ? "bg-gradient-to-r from-green-600 to-cyan-600 text-white"
                       : ""
@@ -112,9 +114,9 @@ export default function Veo3VideoDialog({
         </DialogHeader>
 
         {/* Main Content */}
-        <div className="flex-1 flex flex-col p-6 gap-4 min-h-0">
+        <div className="flex-1 flex flex-col p-4 sm:p-6 gap-3 sm:gap-4 min-h-0">
           {/* Video Player */}
-          <div className="flex-1 relative bg-black rounded-xl overflow-hidden shadow-2xl">
+          <div className="flex-1 relative bg-black rounded-lg sm:rounded-xl overflow-hidden shadow-2xl">
             {currentVideoUrl ? (
               <video
                 key={currentVideoUrl}
@@ -130,7 +132,7 @@ export default function Veo3VideoDialog({
           </div>
 
           {/* Info Section */}
-          <div className="bg-white/50 dark:bg-slate-800/50 rounded-xl border border-green-200/30 dark:border-green-800/30 p-4 space-y-3">
+          <div className="bg-white/50 dark:bg-slate-800/50 rounded-lg sm:rounded-xl border border-green-200/30 dark:border-green-800/30 p-3 sm:p-4 space-y-2 sm:space-y-3">
             {/* Prompt */}
             <div>
               <h4 className="text-sm font-semibold text-green-600 dark:text-green-400 mb-1">
@@ -141,16 +143,16 @@ export default function Veo3VideoDialog({
 
             {/* Download Buttons */}
             {has1080p && video1080pUrl ? (
-              <div className="flex gap-2">
+              <div className="flex flex-col sm:flex-row gap-2">
                 <Button
                   onClick={() => handleDownload("720p")}
                   disabled={downloading !== null}
-                  className="flex-1 bg-gradient-to-r from-green-600 to-cyan-600 hover:from-green-700 hover:to-cyan-700 text-white disabled:opacity-50"
+                  className="flex-1 bg-gradient-to-r from-green-600 to-cyan-600 hover:from-green-700 hover:to-cyan-700 text-white disabled:opacity-50 text-xs sm:text-sm"
                 >
                   {downloading === "720p" ? (
-                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                    <Loader2 className="mr-2 h-3.5 w-3.5 sm:h-4 sm:w-4 animate-spin" />
                   ) : (
-                    <Download className="mr-2 h-4 w-4" />
+                    <Download className="mr-2 h-3.5 w-3.5 sm:h-4 sm:w-4" />
                   )}
                   {downloading === "720p"
                     ? "Downloading..."
@@ -159,31 +161,28 @@ export default function Veo3VideoDialog({
                 <Button
                   onClick={() => handleDownload("1080p")}
                   disabled={downloading !== null}
-                  className="flex-1 bg-gradient-to-r from-green-600 to-cyan-600 hover:from-green-700 hover:to-cyan-700 text-white disabled:opacity-50"
+                  className="flex-1 bg-gradient-to-r from-green-600 to-cyan-600 hover:from-green-700 hover:to-cyan-700 text-white disabled:opacity-50 text-xs sm:text-sm"
                 >
                   {downloading === "1080p" ? (
-                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                    <Loader2 className="mr-2 h-3.5 w-3.5 sm:h-4 sm:w-4 animate-spin" />
                   ) : (
-                    <Download className="mr-2 h-4 w-4" />
+                    <Download className="mr-2 h-3.5 w-3.5 sm:h-4 sm:w-4" />
                   )}
                   {downloading === "1080p"
                     ? "Downloading..."
                     : `${t("download_video")} (1080p)`}
-                  {downloading !== "1080p" && (
-                    <Sparkles className="ml-1 h-3 w-3" />
-                  )}
                 </Button>
               </div>
             ) : (
               <Button
                 onClick={() => handleDownload()}
                 disabled={downloading !== null}
-                className="w-full bg-gradient-to-r from-green-600 to-cyan-600 hover:from-green-700 hover:to-cyan-700 text-white disabled:opacity-50"
+                className="w-full bg-gradient-to-r from-green-600 to-cyan-600 hover:from-green-700 hover:to-cyan-700 text-white disabled:opacity-50 text-xs sm:text-sm"
               >
                 {downloading ? (
-                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                  <Loader2 className="mr-2 h-3.5 w-3.5 sm:h-4 sm:w-4 animate-spin" />
                 ) : (
-                  <Download className="mr-2 h-4 w-4" />
+                  <Download className="mr-2 h-3.5 w-3.5 sm:h-4 sm:w-4" />
                 )}
                 {downloading
                   ? "Downloading..."
