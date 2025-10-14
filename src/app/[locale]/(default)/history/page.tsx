@@ -49,8 +49,11 @@ export default async function HistoryPage({
     redirect(`/${locale}/auth/signin`);
   }
 
+  // 获取页面数据（包含翻译）
+  const pageData = await getHistoryPage(locale);
+
   // 获取初始数据
   const initialTasks = await findTasksByUser(userUuid, 20);
 
-  return <HistoryClient initialTasks={initialTasks} locale={locale} />;
+  return <HistoryClient initialTasks={initialTasks} locale={locale} pageData={pageData} />;
 }

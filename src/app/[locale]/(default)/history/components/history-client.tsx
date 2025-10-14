@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { toast } from "sonner";
-import { useTranslations } from "next-intl";
+import { NextIntlClientProvider, useTranslations } from "next-intl";
 
 // 导入组件
 import HistoryTabs, { HistoryTabType } from "./history-tabs";
@@ -41,6 +41,7 @@ interface NanoBananaTask {
 interface HistoryClientProps {
   initialTasks: NanoBananaTask[];
   locale: string;
+  pageData: any;
 }
 
 interface TabData<T> {
@@ -51,9 +52,10 @@ interface TabData<T> {
   page: number;
 }
 
-export default function HistoryClient({
+function HistoryClientInner({
   initialTasks,
   locale,
+  pageData,
 }: HistoryClientProps) {
   const t = useTranslations("history");
 
@@ -488,7 +490,7 @@ export default function HistoryClient({
   return (
     <div className="container py-10">
       {/* 页面标题 */}
-      <PageHeader />
+      <PageHeader pageData={pageData} />
 
       {/* Tab 切换 */}
       <HistoryTabs activeTab={activeTab} onTabChange={setActiveTab} />
@@ -547,5 +549,16 @@ export default function HistoryClient({
         onConfirm={handleDelete}
       />
     </div>
+  );
+}
+
+export default function HistoryClient(props: HistoryClientProps) {
+  return (
+    <NextIntlClientProvider
+      locale={props.locale}
+      messages={{ history: props.pageData }}
+    >
+      <HistoryClientInner {...props} />
+    </NextIntlClientProvider>
   );
 }

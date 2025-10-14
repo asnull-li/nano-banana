@@ -1,6 +1,12 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { Download, Sparkles, Edit3, Video } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { Download, Sparkles, Edit3, Video, Film, Clapperboard } from "lucide-react";
 import { toast } from "sonner";
 import { useRouter } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
@@ -52,7 +58,7 @@ export default function ImageActionBar({
     }
   };
 
-  const handleImageToVideo = () => {
+  const handleImageToVideo = (model: "veo3" | "sora2") => {
     if (!imageUrl) {
       toast.error(t("image_not_found"));
       return;
@@ -62,11 +68,12 @@ export default function ImageActionBar({
       // 验证图片URL是否有效
       new URL(imageUrl);
 
-      // 将当前图片URL作为查询参数，跳转到veo3页面
+      // 将当前图片URL作为查询参数，跳转到对应页面
       const searchParams = new URLSearchParams();
       searchParams.set("imageUrl", imageUrl);
 
-      router.push(`/veo3?${searchParams.toString()}`);
+      const targetPath = model === "veo3" ? "/veo3" : "/sora2";
+      router.push(`${targetPath}?${searchParams.toString()}`);
     } catch (error) {
       console.error("Invalid image URL:", error);
       toast.error(t("invalid_image_url"));
@@ -99,17 +106,30 @@ export default function ImageActionBar({
           <span className="truncate">{t("enhance")}</span>
         </Button>
 
-        {/* 图生视频按钮 */}
-        <Button
-          onClick={handleImageToVideo}
-          disabled={disabled}
-          variant="outline"
-          className="border-purple-300 text-purple-600 hover:bg-purple-50 hover:border-purple-400 dark:border-purple-700 dark:text-purple-400 dark:hover:bg-purple-950/20 transition-all duration-200 text-xs sm:text-sm px-2 sm:px-3"
-          size="sm"
-        >
-          <Video className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2 flex-shrink-0" />
-          <span className="truncate">{t("image_to_video")}</span>
-        </Button>
+        {/* 图生视频下拉菜单 */}
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button
+              disabled={disabled}
+              variant="outline"
+              className="border-purple-300 text-purple-600 hover:bg-purple-50 hover:border-purple-400 dark:border-purple-700 dark:text-purple-400 dark:hover:bg-purple-950/20 transition-all duration-200 text-xs sm:text-sm px-2 sm:px-3"
+              size="sm"
+            >
+              <Video className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2 flex-shrink-0" />
+              <span className="truncate">{t("image_to_video")}</span>
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent>
+            <DropdownMenuItem onClick={() => handleImageToVideo("veo3")}>
+              <Film className="h-4 w-4 mr-2" />
+              {t("use_veo3")}
+            </DropdownMenuItem>
+            <DropdownMenuItem onClick={() => handleImageToVideo("sora2")}>
+              <Clapperboard className="h-4 w-4 mr-2" />
+              {t("use_sora2")}
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
 
         {/* 继续编辑按钮 */}
         <Button

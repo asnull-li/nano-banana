@@ -249,7 +249,9 @@
         "image_to_video": "Image vers vidéo",
         "image_not_found": "Image non trouvée",
         "invalid_image_url": "URL d'image invalide",
-        "continue_edit_coming_soon": "La fonction de continuer l'édition sera bientôt disponible"
+        "continue_edit_coming_soon": "La fonction de continuer l'édition sera bientôt disponible",
+        "use_veo3": "Utiliser Veo 3",
+        "use_sora2": "Utiliser Sora 2"
       },
       "ai_description": {
         "title": "Description générée par IA"
@@ -276,7 +278,10 @@
         "close": "Fermer",
         "prev_image": "Précédent",
         "next_image": "Suivant",
-        "image_count": "{current} / {total}"
+        "image_count": "{current} / {total}",
+        "use_veo3": "Utiliser Veo 3",
+        "use_sora2": "Utiliser Sora 2",
+        "image_to_video": "Image en Vidéo"
       },
       "quick_prompts": {
         "image_mode": {
@@ -325,80 +330,6 @@
     "validation": {
       "please_enter_prompt": "Veuillez entrer une description",
       "please_upload_image": "Veuillez télécharger au moins une image"
-    }
-  },
-  "history": {
-    "title": "Historique de création Nano Banana",
-    "description": "Voir toutes les images que vous avez générées et éditées avec Nano Banana auparavant",
-    "status": {
-      "completed": "Terminé",
-      "failed": "Échoué",
-      "processing": "En cours",
-      "pending": "En attente"
-    },
-    "credits_used": "{amount} crédits",
-    "credits_refunded": "Remboursé {amount} crédits",
-    "images": "images",
-    "view": "Voir",
-    "download": "Télécharger",
-    "download_success": "Image téléchargée avec succès",
-    "delete_success": "Enregistrement supprimé avec succès",
-    "delete_error": "Échec de la suppression de l'enregistrement",
-    "load_more": "Charger plus",
-    "loading": "Chargement...",
-    "load_more_error": "Échec du chargement de plus d'enregistrements",
-    "no_more": "Tous les enregistrements chargés",
-    "image_preview": "Aperçu de l'image",
-    "enhance_image": "Améliorer",
-    "image_to_video": "Image vers Vidéo",
-    "i2v": "I2V",
-    "copy_link": "Copier le lien",
-    "copied": "Copié !",
-    "link_copied": "Lien copié dans le presse-papiers",
-    "copy_failed": "Échec de la copie du lien",
-    "coming_soon": "Bientôt disponible !",
-    "tabs": {
-      "nano_banana": "Génération d'Images",
-      "veo3": "Veo 3",
-      "sora2": "Sora 2",
-      "upscaler": "Amélioration d'Images"
-    },
-    "veo3": {
-      "video_preview": "Aperçu Vidéo",
-      "720p": "720p",
-      "1080p": "1080p (HD)",
-      "prompt": "Invite",
-      "input_image": "Image d'Entrée",
-      "download_video": "Télécharger la Vidéo"
-    },
-    "sora2": {
-      "video_preview": "Sora 2 Video Preview",
-      "prompt": "Prompt",
-      "download_video": "Download Video"
-    },
-    "upscaler": {
-      "compare_title": "Aperçu de Comparaison",
-      "scale": "Facteur d'Échelle",
-      "face_enhance": "Amélioration du Visage",
-      "enabled": "Activé",
-      "disabled": "Désactivé",
-      "drag_hint": "Faites glisser le séparateur pour comparer les images",
-      "download_original": "Télécharger l'Original",
-      "download_enhanced": "Télécharger l'Améliorée"
-    },
-    "error": {
-      "unknown": "Une erreur inconnue s'est produite"
-    },
-    "empty": {
-      "title": "Aucun historique de génération",
-      "description": "Commencez à créer des images incroyables avec l'IA",
-      "action": "Commencer à créer"
-    },
-    "delete_confirm": {
-      "title": "Supprimer l'enregistrement",
-      "description": "Êtes-vous sûr de vouloir supprimer cet enregistrement de génération ? Cette action ne peut pas être annulée.",
-      "cancel": "Annuler",
-      "confirm": "Supprimer"
     }
   }
 }

@@ -9,6 +9,12 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import {
   Download,
   ChevronLeft,
   ChevronRight,
@@ -16,6 +22,8 @@ import {
   Copy,
   CheckCircle,
   Video,
+  Film,
+  Clapperboard,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { toast } from "sonner";
@@ -86,7 +94,7 @@ export default function ImagePreviewDialog({
     }
   };
 
-  const handleImageToVideo = () => {
+  const handleImageToVideo = (model: "veo3" | "sora2") => {
     if (!currentImage) {
       toast.error(t("no_image_selected") || "No image selected");
       return;
@@ -96,11 +104,12 @@ export default function ImagePreviewDialog({
       // 验证图片URL是否有效
       new URL(currentImage);
 
-      // 将当前图片URL作为查询参数，跳转到veo3页面
+      // 将当前图片URL作为查询参数，跳转到对应页面
       const searchParams = new URLSearchParams();
       searchParams.set("imageUrl", currentImage);
 
-      router.push(`/veo3?${searchParams.toString()}`);
+      const targetPath = model === "veo3" ? "/veo3" : "/sora2";
+      router.push(`${targetPath}?${searchParams.toString()}`);
       onClose();
     } catch (error) {
       console.error("Invalid image URL:", error);
@@ -189,15 +198,28 @@ export default function ImagePreviewDialog({
               </Button>
 
               {/* 图生视频按钮 */}
-              <Button
-                size="sm"
-                className="flex-1 min-w-[100px] max-w-[150px] bg-gradient-to-r from-blue-500 to-purple-500 text-white hover:from-blue-600 hover:to-purple-600 shadow-lg shadow-blue-500/25 text-xs sm:text-sm"
-                onClick={handleImageToVideo}
-              >
-                <Video className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
-                <span className="hidden sm:inline">{t("image_to_video")}</span>
-                <span className="sm:hidden">{t("i2v")}</span>
-              </Button>
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button
+                    size="sm"
+                    className="flex-1 min-w-[100px] max-w-[150px] bg-gradient-to-r from-blue-500 to-purple-500 text-white hover:from-blue-600 hover:to-purple-600 shadow-lg shadow-blue-500/25 text-xs sm:text-sm"
+                  >
+                    <Video className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
+                    <span className="hidden sm:inline">{t("image_to_video")}</span>
+                    <span className="sm:hidden">{t("i2v")}</span>
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent>
+                  <DropdownMenuItem onClick={() => handleImageToVideo("veo3")}>
+                    <Film className="h-4 w-4 mr-2" />
+                    {t("use_veo3")}
+                  </DropdownMenuItem>
+                  <DropdownMenuItem onClick={() => handleImageToVideo("sora2")}>
+                    <Clapperboard className="h-4 w-4 mr-2" />
+                    {t("use_sora2")}
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
 
               {/* 复制链接按钮 */}
               <Button

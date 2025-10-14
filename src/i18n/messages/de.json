@@ -249,7 +249,9 @@
         "image_to_video": "Bild zu Video",
         "image_not_found": "Bild nicht gefunden",
         "invalid_image_url": "Ungültige Bild-URL",
-        "continue_edit_coming_soon": "Funktion zur Weiterbearbeitung kommt bald"
+        "continue_edit_coming_soon": "Funktion zur Weiterbearbeitung kommt bald",
+        "use_veo3": "Veo 3 verwenden",
+        "use_sora2": "Sora 2 verwenden"
       },
       "ai_description": {
         "title": "KI-generierte Beschreibung"
@@ -276,7 +278,10 @@
         "close": "Schließen",
         "prev_image": "Vorheriges",
         "next_image": "Nächstes",
-        "image_count": "{current} / {total}"
+        "image_count": "{current} / {total}",
+        "use_veo3": "Veo 3 verwenden",
+        "use_sora2": "Sora 2 verwenden",
+        "image_to_video": "Bild zu Video"
       },
       "quick_prompts": {
         "image_mode": {
@@ -325,80 +330,6 @@
     "validation": {
       "please_enter_prompt": "Bitte geben Sie eine Beschreibung ein",
       "please_upload_image": "Bitte laden Sie mindestens ein Bild hoch"
-    }
-  },
-  "history": {
-    "title": "Nano Banana Kreationshistorie",
-    "description": "Alle Bilder anzeigen, die Sie zuvor mit Nano Banana generiert und bearbeitet haben",
-    "status": {
-      "completed": "Abgeschlossen",
-      "failed": "Fehlgeschlagen",
-      "processing": "Wird verarbeitet",
-      "pending": "Ausstehend"
-    },
-    "credits_used": "{amount} Guthaben",
-    "credits_refunded": "{amount} Guthaben erstattet",
-    "images": "Bilder",
-    "view": "Anzeigen",
-    "download": "Herunterladen",
-    "download_success": "Bild erfolgreich heruntergeladen",
-    "delete_success": "Datensatz erfolgreich gelöscht",
-    "delete_error": "Fehler beim Löschen des Datensatzes",
-    "load_more": "Mehr laden",
-    "loading": "Wird geladen...",
-    "load_more_error": "Fehler beim Laden weiterer Datensätze",
-    "no_more": "Alle Datensätze geladen",
-    "image_preview": "Bildvorschau",
-    "enhance_image": "Verbessern",
-    "image_to_video": "Bild zu Video",
-    "i2v": "B2V",
-    "copy_link": "Link kopieren",
-    "copied": "Kopiert!",
-    "link_copied": "Link in die Zwischenablage kopiert",
-    "copy_failed": "Link kopieren fehlgeschlagen",
-    "coming_soon": "Demnächst verfügbar!",
-    "tabs": {
-      "nano_banana": "Bildgenerierung",
-      "veo3": "Veo 3",
-      "sora2": "Sora 2",
-      "upscaler": "Bildverbesserung"
-    },
-    "veo3": {
-      "video_preview": "Videovorschau",
-      "720p": "720p",
-      "1080p": "1080p (HD)",
-      "prompt": "Eingabeaufforderung",
-      "input_image": "Eingabebild",
-      "download_video": "Video Herunterladen"
-    },
-    "sora2": {
-      "video_preview": "Sora 2 Video Preview",
-      "prompt": "Prompt",
-      "download_video": "Download Video"
-    },
-    "upscaler": {
-      "compare_title": "Vergleichsvorschau",
-      "scale": "Skalierungsfaktor",
-      "face_enhance": "Gesichtsverbesserung",
-      "enabled": "Aktiviert",
-      "disabled": "Deaktiviert",
-      "drag_hint": "Ziehen Sie den Teiler, um Bilder zu vergleichen",
-      "download_original": "Original Herunterladen",
-      "download_enhanced": "Verbessert Herunterladen"
-    },
-    "error": {
-      "unknown": "Ein unbekannter Fehler ist aufgetreten"
-    },
-    "empty": {
-      "title": "Keine Generierungshistorie",
-      "description": "Beginnen Sie mit der Erstellung erstaunlicher Bilder mit KI",
-      "action": "Kreation beginnen"
-    },
-    "delete_confirm": {
-      "title": "Datensatz löschen",
-      "description": "Sind Sie sicher, dass Sie diesen Generierungsdatensatz löschen möchten? Diese Aktion kann nicht rückgängig gemacht werden.",
-      "cancel": "Abbrechen",
-      "confirm": "Löschen"
     }
   }
 }

@@ -1,17 +1,106 @@
 {
   "metadata": {
-    "title": "Creation History - Nano Banana",
-    "description": "View and manage your AI-generated image creation history"
+    "title": "سجل الإنشاء - Nano Banana",
+    "description": "عرض وإدارة سجل إنشاء الصور المولدة بالذكاء الاصطناعي"
   },
-  "image_preview": "Image Preview",
-  "download": "Download",
-  "enhance_image": "Enhance Image",
-  "copy_link": "Copy Link",
-  "copied": "Copied",
-  "link_copied": "Link copied to clipboard",
-  "copy_failed": "Failed to copy",
-  "coming_soon": "Coming Soon",
-  "no_image_selected": "No image selected",
-  "redirecting_to_upscaler": "Redirecting to image upscaler...",
-  "invalid_image_url": "Invalid image URL"
+  "status": {
+    "completed": "مكتمل",
+    "failed": "فشل",
+    "processing": "جاري المعالجة",
+    "pending": "قيد الانتظار"
+  },
+  "actions": {
+    "view": "عرض",
+    "download": "تحميل",
+    "delete": "حذف",
+    "enhance": "تحسين"
+  },
+  "labels": {
+    "prompt": "الأمر",
+    "images": "الصور",
+    "credits": "الأرصدة",
+    "created_at": "تاريخ الإنشاء",
+    "provider": "المزود"
+  },
+  "messages": {
+    "no_tasks": "لا يوجد سجل إنشاء",
+    "loading": "جاري التحميل...",
+    "load_more": "تحميل المزيد",
+    "delete_confirm": "هل أنت متأكد من حذف هذه المهمة؟",
+    "delete_success": "تم الحذف بنجاح",
+    "delete_failed": "فشل الحذف",
+    "download_success": "تم التحميل بنجاح",
+    "download_failed": "فشل التحميل"
+  },
+  "image_preview": "معاينة الصورة",
+  "download": "تنزيل",
+  "enhance_image": "تحسين",
+  "image_to_video": "صورة إلى فيديو",
+  "i2v": "صورة إلى فيديو",
+  "use_veo3": "استخدم Veo 3",
+  "use_sora2": "استخدم Sora 2",
+  "copy_link": "نسخ الرابط",
+  "copied": "تم النسخ!",
+  "link_copied": "تم نسخ الرابط إلى الحافظة",
+  "copy_failed": "فشل نسخ الرابط",
+  "coming_soon": "قريباً!",
+  "no_image_selected": "لم يتم تحديد صورة",
+  "redirecting_to_upscaler": "إعادة التوجيه إلى موسع الصورة...",
+  "invalid_image_url": "رابط صورة غير صالح",
+  "title": "سجل إنشاءات Nano Banana",
+  "description": "عرض جميع الصور التي أنشأتها وحررتها باستخدام Nano Banana من قبل",
+  "credits_used": "{amount} رصيد",
+  "credits_refunded": "تم استرداد {amount} رصيد",
+  "images": "صور",
+  "view": "عرض",
+  "download_success": "تم تنزيل الصورة بنجاح",
+  "delete_success": "تم حذف السجل بنجاح",
+  "delete_error": "فشل حذف السجل",
+  "load_more": "تحميل المزيد",
+  "loading": "جاري التحميل...",
+  "load_more_error": "فشل تحميل المزيد من السجلات",
+  "no_more": "تم تحميل جميع السجلات",
+  "tabs": {
+    "nano_banana": "توليد الصور",
+    "veo3": "Veo 3",
+    "sora2": "Sora 2",
+    "upscaler": "تحسين الصور"
+  },
+  "veo3": {
+    "video_preview": "معاينة الفيديو",
+    "720p": "720p",
+    "1080p": "1080p (HD)",
+    "prompt": "المطالبة",
+    "input_image": "صورة الإدخال",
+    "download_video": "تحميل الفيديو"
+  },
+  "sora2": {
+    "video_preview": "Sora 2 Video Preview",
+    "prompt": "Prompt",
+    "download_video": "Download Video"
+  },
+  "upscaler": {
+    "compare_title": "معاينة المقارنة",
+    "scale": "عامل التحجيم",
+    "face_enhance": "تحسين الوجه",
+    "enabled": "مفعل",
+    "disabled": "معطل",
+    "drag_hint": "اسحب الفاصل لمقارنة الصور",
+    "download_original": "تحميل الأصلي",
+    "download_enhanced": "تحميل المحسن"
+  },
+  "error": {
+    "unknown": "حدث خطأ غير معروف"
+  },
+  "empty": {
+    "title": "لا يوجد سجل إنشاء",
+    "description": "ابدأ بإنشاء صور مذهلة باستخدام الذكاء الاصطناعي",
+    "action": "ابدأ الإنشاء"
+  },
+  "delete_confirm": {
+    "title": "حذف السجل",
+    "description": "هل أنت متأكد من حذف سجل الإنشاء هذا؟ لا يمكن التراجع عن هذا الإجراء.",
+    "cancel": "إلغاء",
+    "confirm": "حذف"
+  }
 }

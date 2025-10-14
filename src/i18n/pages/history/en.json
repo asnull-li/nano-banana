@@ -34,13 +34,73 @@
   },
   "image_preview": "Image Preview",
   "download": "Download",
-  "enhance_image": "Enhance Image",
+  "enhance_image": "Enhance",
+  "image_to_video": "Image to Video",
+  "i2v": "I2V",
+  "use_veo3": "Use Veo 3",
+  "use_sora2": "Use Sora 2",
   "copy_link": "Copy Link",
-  "copied": "Copied",
+  "copied": "Copied!",
   "link_copied": "Link copied to clipboard",
-  "copy_failed": "Failed to copy",
-  "coming_soon": "Coming Soon",
+  "copy_failed": "Failed to copy link",
+  "coming_soon": "Coming soon!",
   "no_image_selected": "No image selected",
   "redirecting_to_upscaler": "Redirecting to image upscaler...",
-  "invalid_image_url": "Invalid image URL"
+  "invalid_image_url": "Invalid image URL",
+  "title": "Nano Banana Creation History",
+  "description": "View all images you have generated and edited with Nano Banana before",
+  "credits_used": "{amount} credits",
+  "credits_refunded": "Refunded {amount} credits",
+  "images": "images",
+  "view": "View",
+  "download_success": "Image downloaded successfully",
+  "delete_success": "Record deleted successfully",
+  "delete_error": "Failed to delete record",
+  "load_more": "Load More",
+  "loading": "Loading...",
+  "load_more_error": "Failed to load more records",
+  "no_more": "All records loaded",
+  "tabs": {
+    "nano_banana": "Image Generation",
+    "veo3": "Veo 3",
+    "sora2": "Sora 2",
+    "upscaler": "Image Enhancement"
+  },
+  "veo3": {
+    "video_preview": "Video Preview",
+    "720p": "720p",
+    "1080p": "1080p (HD)",
+    "prompt": "Prompt",
+    "input_image": "Input Image",
+    "download_video": "Download Video"
+  },
+  "sora2": {
+    "video_preview": "Sora 2 Video Preview",
+    "prompt": "Prompt",
+    "download_video": "Download Video"
+  },
+  "upscaler": {
+    "compare_title": "Comparison Preview",
+    "scale": "Scale Factor",
+    "face_enhance": "Face Enhancement",
+    "enabled": "Enabled",
+    "disabled": "Disabled",
+    "drag_hint": "Drag the divider to compare images",
+    "download_original": "Download Original",
+    "download_enhanced": "Download Enhanced"
+  },
+  "error": {
+    "unknown": "Unknown error occurred"
+  },
+  "empty": {
+    "title": "No Generation History",
+    "description": "Start creating amazing images with AI",
+    "action": "Start Creating"
+  },
+  "delete_confirm": {
+    "title": "Delete Record",
+    "description": "Are you sure you want to delete this generation record? This action cannot be undone.",
+    "cancel": "Cancel",
+    "confirm": "Delete"
+  }
 }

@@ -1,17 +1,106 @@
 {
   "metadata": {
-    "title": "Creation History - Nano Banana",
-    "description": "View and manage your AI-generated image creation history"
+    "title": "Erstellungsverlauf - Nano Banana",
+    "description": "KI-generierte Bilderstellungshistorie anzeigen und verwalten"
   },
-  "image_preview": "Image Preview",
-  "download": "Download",
-  "enhance_image": "Enhance Image",
-  "copy_link": "Copy Link",
-  "copied": "Copied",
-  "link_copied": "Link copied to clipboard",
-  "copy_failed": "Failed to copy",
-  "coming_soon": "Coming Soon",
-  "no_image_selected": "No image selected",
-  "redirecting_to_upscaler": "Redirecting to image upscaler...",
-  "invalid_image_url": "Invalid image URL"
+  "status": {
+    "completed": "Abgeschlossen",
+    "failed": "Fehlgeschlagen",
+    "processing": "Wird verarbeitet",
+    "pending": "Ausstehend"
+  },
+  "actions": {
+    "view": "Ansehen",
+    "download": "Herunterladen",
+    "delete": "Löschen",
+    "enhance": "Verbessern"
+  },
+  "labels": {
+    "prompt": "Prompt",
+    "images": "Bilder",
+    "credits": "Credits",
+    "created_at": "Erstellt",
+    "provider": "Anbieter"
+  },
+  "messages": {
+    "no_tasks": "Keine Erstellungshistorie",
+    "loading": "Wird geladen...",
+    "load_more": "Mehr laden",
+    "delete_confirm": "Möchten Sie diese Aufgabe wirklich löschen?",
+    "delete_success": "Erfolgreich gelöscht",
+    "delete_failed": "Löschen fehlgeschlagen",
+    "download_success": "Erfolgreich heruntergeladen",
+    "download_failed": "Download fehlgeschlagen"
+  },
+  "image_preview": "Bildvorschau",
+  "download": "Herunterladen",
+  "enhance_image": "Verbessern",
+  "image_to_video": "Bild zu Video",
+  "i2v": "B2V",
+  "use_veo3": "Veo 3 verwenden",
+  "use_sora2": "Sora 2 verwenden",
+  "copy_link": "Link kopieren",
+  "copied": "Kopiert!",
+  "link_copied": "Link in die Zwischenablage kopiert",
+  "copy_failed": "Link kopieren fehlgeschlagen",
+  "coming_soon": "Demnächst verfügbar!",
+  "no_image_selected": "Kein Bild ausgewählt",
+  "redirecting_to_upscaler": "Weiterleitung zum Bildvergrößerer...",
+  "invalid_image_url": "Ungültige Bild-URL",
+  "title": "Nano Banana Kreationshistorie",
+  "description": "Alle Bilder anzeigen, die Sie zuvor mit Nano Banana generiert und bearbeitet haben",
+  "credits_used": "{amount} Guthaben",
+  "credits_refunded": "{amount} Guthaben erstattet",
+  "images": "Bilder",
+  "view": "Anzeigen",
+  "download_success": "Bild erfolgreich heruntergeladen",
+  "delete_success": "Datensatz erfolgreich gelöscht",
+  "delete_error": "Fehler beim Löschen des Datensatzes",
+  "load_more": "Mehr laden",
+  "loading": "Wird geladen...",
+  "load_more_error": "Fehler beim Laden weiterer Datensätze",
+  "no_more": "Alle Datensätze geladen",
+  "tabs": {
+    "nano_banana": "Bildgenerierung",
+    "veo3": "Veo 3",
+    "sora2": "Sora 2",
+    "upscaler": "Bildverbesserung"
+  },
+  "veo3": {
+    "video_preview": "Videovorschau",
+    "720p": "720p",
+    "1080p": "1080p (HD)",
+    "prompt": "Eingabeaufforderung",
+    "input_image": "Eingabebild",
+    "download_video": "Video Herunterladen"
+  },
+  "sora2": {
+    "video_preview": "Sora 2 Video Preview",
+    "prompt": "Prompt",
+    "download_video": "Download Video"
+  },
+  "upscaler": {
+    "compare_title": "Vergleichsvorschau",
+    "scale": "Skalierungsfaktor",
+    "face_enhance": "Gesichtsverbesserung",
+    "enabled": "Aktiviert",
+    "disabled": "Deaktiviert",
+    "drag_hint": "Ziehen Sie den Teiler, um Bilder zu vergleichen",
+    "download_original": "Original Herunterladen",
+    "download_enhanced": "Verbessert Herunterladen"
+  },
+  "error": {
+    "unknown": "Ein unbekannter Fehler ist aufgetreten"
+  },
+  "empty": {
+    "title": "Keine Generierungshistorie",
+    "description": "Beginnen Sie mit der Erstellung erstaunlicher Bilder mit KI",
+    "action": "Kreation beginnen"
+  },
+  "delete_confirm": {
+    "title": "Datensatz löschen",
+    "description": "Sind Sie sicher, dass Sie diesen Generierungsdatensatz löschen möchten? Diese Aktion kann nicht rückgängig gemacht werden.",
+    "cancel": "Abbrechen",
+    "confirm": "Löschen"
+  }
 }

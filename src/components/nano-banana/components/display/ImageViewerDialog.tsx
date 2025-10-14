@@ -6,7 +6,13 @@ import {
   DialogDescription,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { ChevronLeft, ChevronRight, Download, Sparkles, Video } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { ChevronLeft, ChevronRight, Download, Sparkles, Video, Film, Clapperboard } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
@@ -61,7 +67,7 @@ export default function ImageViewerDialog({
   };
 
   // 处理图生视频
-  const handleImageToVideo = () => {
+  const handleImageToVideo = (model: "veo3" | "sora2") => {
     if (!currentResult?.url) {
       toast.error(t("image_not_found"));
       return;
@@ -71,11 +77,12 @@ export default function ImageViewerDialog({
       // 验证图片URL是否有效
       new URL(currentResult.url);
 
-      // 将当前图片URL作为查询参数，跳转到veo3页面
+      // 将当前图片URL作为查询参数，跳转到对应页面
       const searchParams = new URLSearchParams();
       searchParams.set("imageUrl", currentResult.url);
 
-      router.push(`/veo3?${searchParams.toString()}`);
+      const targetPath = model === "veo3" ? "/veo3" : "/sora2";
+      router.push(`${targetPath}?${searchParams.toString()}`);
       onClose();
     } catch (error) {
       console.error("Invalid image URL:", error);
@@ -176,15 +183,28 @@ export default function ImageViewerDialog({
                   <Sparkles className="h-4 w-4" />
                 </Button>
 
-                <Button
-                  size="sm"
-                  variant="ghost"
-                  className="text-white hover:bg-white/20 h-8 w-8 p-0 rounded-full"
-                  onClick={handleImageToVideo}
-                  title="Image to Video"
-                >
-                  <Video className="h-4 w-4" />
-                </Button>
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                    <Button
+                      size="sm"
+                      variant="ghost"
+                      className="text-white hover:bg-white/20 h-8 w-8 p-0 rounded-full"
+                      title={t("image_to_video")}
+                    >
+                      <Video className="h-4 w-4" />
+                    </Button>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent>
+                    <DropdownMenuItem onClick={() => handleImageToVideo("veo3")}>
+                      <Film className="h-4 w-4 mr-2" />
+                      {t("use_veo3")}
+                    </DropdownMenuItem>
+                    <DropdownMenuItem onClick={() => handleImageToVideo("sora2")}>
+                      <Clapperboard className="h-4 w-4 mr-2" />
+                      {t("use_sora2")}
+                    </DropdownMenuItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
               </div>
             </div>
           </div>

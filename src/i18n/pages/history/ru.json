@@ -1,17 +1,106 @@
 {
   "metadata": {
-    "title": "Creation History - Nano Banana",
-    "description": "View and manage your AI-generated image creation history"
+    "title": "История создания - Nano Banana",
+    "description": "Просмотр и управление историей создания изображений, созданных ИИ"
   },
-  "image_preview": "Image Preview",
-  "download": "Download",
-  "enhance_image": "Enhance Image",
-  "copy_link": "Copy Link",
-  "copied": "Copied",
-  "link_copied": "Link copied to clipboard",
-  "copy_failed": "Failed to copy",
-  "coming_soon": "Coming Soon",
-  "no_image_selected": "No image selected",
-  "redirecting_to_upscaler": "Redirecting to image upscaler...",
-  "invalid_image_url": "Invalid image URL"
+  "status": {
+    "completed": "Завершено",
+    "failed": "Неудачно",
+    "processing": "Обработка",
+    "pending": "Ожидание"
+  },
+  "actions": {
+    "view": "Просмотр",
+    "download": "Скачать",
+    "delete": "Удалить",
+    "enhance": "Улучшить"
+  },
+  "labels": {
+    "prompt": "Промпт",
+    "images": "Изображения",
+    "credits": "Кредиты",
+    "created_at": "Создано",
+    "provider": "Провайдер"
+  },
+  "messages": {
+    "no_tasks": "Нет истории создания",
+    "loading": "Загрузка...",
+    "load_more": "Загрузить еще",
+    "delete_confirm": "Вы уверены, что хотите удалить эту задачу?",
+    "delete_success": "Успешно удалено",
+    "delete_failed": "Не удалось удалить",
+    "download_success": "Успешно скачано",
+    "download_failed": "Не удалось скачать"
+  },
+  "image_preview": "Предварительный просмотр изображения",
+  "download": "Скачать",
+  "enhance_image": "Улучшить",
+  "image_to_video": "Изображение в видео",
+  "i2v": "Изображение в видео",
+  "use_veo3": "Использовать Veo 3",
+  "use_sora2": "Использовать Sora 2",
+  "copy_link": "Скопировать ссылку",
+  "copied": "Скопировано!",
+  "link_copied": "Ссылка скопирована в буфер обмена",
+  "copy_failed": "Не удалось скопировать ссылку",
+  "coming_soon": "Скоро будет доступно!",
+  "no_image_selected": "Изображение не выбрано",
+  "redirecting_to_upscaler": "Перенаправление к увеличителю изображений...",
+  "invalid_image_url": "Неверный URL изображения",
+  "title": "История создания Nano Banana",
+  "description": "Просмотр всех изображений, которые вы создавали и редактировали с помощью Nano Banana ранее",
+  "credits_used": "{amount} кредитов",
+  "credits_refunded": "Возвращено {amount} кредитов",
+  "images": "изображения",
+  "view": "Просмотр",
+  "download_success": "Изображение успешно загружено",
+  "delete_success": "Запись успешно удалена",
+  "delete_error": "Не удалось удалить запись",
+  "load_more": "Загрузить больше",
+  "loading": "Загрузка...",
+  "load_more_error": "Не удалось загрузить дополнительные записи",
+  "no_more": "Все записи загружены",
+  "tabs": {
+    "nano_banana": "Генерация Изображений",
+    "veo3": "Veo 3",
+    "sora2": "Sora 2",
+    "upscaler": "Улучшение Изображений"
+  },
+  "veo3": {
+    "video_preview": "Предпросмотр Видео",
+    "720p": "720p",
+    "1080p": "1080p (HD)",
+    "prompt": "Запрос",
+    "input_image": "Входное Изображение",
+    "download_video": "Скачать Видео"
+  },
+  "sora2": {
+    "video_preview": "Sora 2 Video Preview",
+    "prompt": "Prompt",
+    "download_video": "Download Video"
+  },
+  "upscaler": {
+    "compare_title": "Предпросмотр Сравнения",
+    "scale": "Коэффициент Масштабирования",
+    "face_enhance": "Улучшение Лица",
+    "enabled": "Включено",
+    "disabled": "Отключено",
+    "drag_hint": "Перетащите разделитель для сравнения изображений",
+    "download_original": "Скачать Оригинал",
+    "download_enhanced": "Скачать Улучшенное"
+  },
+  "error": {
+    "unknown": "Произошла неизвестная ошибка"
+  },
+  "empty": {
+    "title": "Нет истории генерации",
+    "description": "Начните создавать удивительные изображения с помощью ИИ",
+    "action": "Начать создание"
+  },
+  "delete_confirm": {
+    "title": "Удалить запись",
+    "description": "Вы уверены, что хотите удалить эту запись генерации? Это действие нельзя отменить.",
+    "cancel": "Отмена",
+    "confirm": "Удалить"
+  }
 }

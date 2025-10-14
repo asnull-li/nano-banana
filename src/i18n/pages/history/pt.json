@@ -4,8 +4,8 @@
     "description": "Visualize e gerencie seu histórico de criação de imagens geradas por IA"
   },
   "status": {
-    "completed": "Concluído",
-    "failed": "Falhado",
+    "completed": "Completo",
+    "failed": "Falhou",
     "processing": "Processando",
     "pending": "Pendente"
   },
@@ -34,13 +34,73 @@
   },
   "image_preview": "Pré-visualização da Imagem",
   "download": "Download",
-  "enhance_image": "Melhorar Imagem",
+  "enhance_image": "Melhorar",
   "copy_link": "Copiar Link",
-  "copied": "Copiado",
+  "copied": "Copiado!",
   "link_copied": "Link copiado para a área de transferência",
-  "copy_failed": "Falha ao copiar",
-  "coming_soon": "Em Breve",
+  "copy_failed": "Falha ao copiar link",
+  "coming_soon": "Em breve!",
   "no_image_selected": "Nenhuma imagem selecionada",
   "redirecting_to_upscaler": "Redirecionando para o ampliador de imagem...",
-  "invalid_image_url": "URL da imagem inválida"
+  "invalid_image_url": "URL da imagem inválida",
+  "title": "Histórico de Criação Nano Banana",
+  "description": "Visualize todas as imagens que você gerou e editou com Nano Banana antes",
+  "credits_used": "{amount} créditos",
+  "credits_refunded": "Reembolsado {amount} créditos",
+  "images": "imagens",
+  "view": "Ver",
+  "download_success": "Imagem baixada com sucesso",
+  "delete_success": "Registro deletado com sucesso",
+  "delete_error": "Falha ao deletar registro",
+  "load_more": "Carregar Mais",
+  "loading": "Carregando...",
+  "load_more_error": "Falha ao carregar mais registros",
+  "no_more": "Todos os registros carregados",
+  "image_to_video": "Imagem para Vídeo",
+  "i2v": "I2V",
+  "use_veo3": "Usar Veo 3",
+  "use_sora2": "Usar Sora 2",
+  "tabs": {
+    "nano_banana": "Geração de Imagens",
+    "veo3": "Veo 3",
+    "sora2": "Sora 2",
+    "upscaler": "Aprimoramento de Imagens"
+  },
+  "veo3": {
+    "video_preview": "Visualização de Vídeo",
+    "720p": "720p",
+    "1080p": "1080p (HD)",
+    "prompt": "Prompt",
+    "input_image": "Imagem de Entrada",
+    "download_video": "Baixar Vídeo"
+  },
+  "sora2": {
+    "video_preview": "Sora 2 Video Preview",
+    "prompt": "Prompt",
+    "download_video": "Download Video"
+  },
+  "upscaler": {
+    "compare_title": "Visualização de Comparação",
+    "scale": "Fator de Escala",
+    "face_enhance": "Aprimoramento Facial",
+    "enabled": "Ativado",
+    "disabled": "Desativado",
+    "drag_hint": "Arraste o divisor para comparar imagens",
+    "download_original": "Baixar Original",
+    "download_enhanced": "Baixar Aprimorada"
+  },
+  "error": {
+    "unknown": "Erro desconhecido ocorreu"
+  },
+  "empty": {
+    "title": "Nenhum Histórico de Geração",
+    "description": "Comece criando imagens incríveis com IA",
+    "action": "Começar a Criar"
+  },
+  "delete_confirm": {
+    "title": "Deletar Registro",
+    "description": "Tem certeza de que deseja deletar este registro de geração? Esta ação não pode ser desfeita.",
+    "cancel": "Cancelar",
+    "confirm": "Deletar"
+  }
 }

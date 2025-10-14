@@ -2,5 +2,105 @@
   "metadata": {
     "title": "作成履歴 - Nano Banana",
     "description": "AIで生成した画像の作成履歴を表示・管理"
+  },
+  "status": {
+    "completed": "完了",
+    "failed": "失敗",
+    "processing": "処理中",
+    "pending": "待機中"
+  },
+  "actions": {
+    "view": "表示",
+    "download": "ダウンロード",
+    "delete": "削除",
+    "enhance": "強化"
+  },
+  "labels": {
+    "prompt": "プロンプト",
+    "images": "画像",
+    "credits": "クレジット",
+    "created_at": "作成日",
+    "provider": "プロバイダー"
+  },
+  "messages": {
+    "no_tasks": "作成履歴がありません",
+    "loading": "読み込み中...",
+    "load_more": "さらに読み込む",
+    "delete_confirm": "このタスクを削除してもよろしいですか？",
+    "delete_success": "削除に成功しました",
+    "delete_failed": "削除に失敗しました",
+    "download_success": "ダウンロードに成功しました",
+    "download_failed": "ダウンロードに失敗しました"
+  },
+  "image_preview": "画像プレビュー",
+  "download": "ダウンロード",
+  "enhance_image": "強化",
+  "image_to_video": "画像から動画",
+  "i2v": "画像から動画",
+  "use_veo3": "Veo 3を使用",
+  "use_sora2": "Sora 2を使用",
+  "copy_link": "リンクをコピー",
+  "copied": "コピーしました！",
+  "link_copied": "リンクがクリップボードにコピーされました",
+  "copy_failed": "リンクのコピーに失敗しました",
+  "coming_soon": "近日公開！",
+  "no_image_selected": "画像が選択されていません",
+  "redirecting_to_upscaler": "画像アップスケーラーにリダイレクト中...",
+  "invalid_image_url": "無効な画像URL",
+  "title": "Nano Banana創作記録",
+  "description": "これまでにNano Bananaで生成・編集した全ての画像を表示",
+  "credits_used": "{amount} クレジット",
+  "credits_refunded": "{amount} クレジット返金",
+  "images": "画像",
+  "view": "表示",
+  "download_success": "画像のダウンロードが成功しました",
+  "delete_success": "記録が正常に削除されました",
+  "delete_error": "記録の削除に失敗しました",
+  "load_more": "もっと読み込む",
+  "loading": "読み込み中...",
+  "load_more_error": "追加記録の読み込みに失敗しました",
+  "no_more": "すべての記録が読み込まれました",
+  "tabs": {
+    "nano_banana": "画像生成",
+    "veo3": "Veo 3",
+    "sora2": "Sora 2",
+    "upscaler": "画像強化"
+  },
+  "veo3": {
+    "video_preview": "動画プレビュー",
+    "720p": "720p",
+    "1080p": "1080p (HD)",
+    "prompt": "プロンプト",
+    "input_image": "入力画像",
+    "download_video": "動画をダウンロード"
+  },
+  "sora2": {
+    "video_preview": "Sora 2 Video Preview",
+    "prompt": "Prompt",
+    "download_video": "Download Video"
+  },
+  "upscaler": {
+    "compare_title": "比較プレビュー",
+    "scale": "拡大率",
+    "face_enhance": "顔強化",
+    "enabled": "有効",
+    "disabled": "無効",
+    "drag_hint": "区切り線をドラッグして画像を比較",
+    "download_original": "オリジナルをダウンロード",
+    "download_enhanced": "強化版をダウンロード"
+  },
+  "error": {
+    "unknown": "不明なエラーが発生しました"
+  },
+  "empty": {
+    "title": "生成履歴がありません",
+    "description": "AIで素晴らしい画像の作成を始めましょう",
+    "action": "創作を開始"
+  },
+  "delete_confirm": {
+    "title": "記録を削除",
+    "description": "この生成記録を削除してもよろしいですか？この操作は元に戻せません。",
+    "cancel": "キャンセル",
+    "confirm": "削除"
   }
 }

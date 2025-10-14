@@ -249,7 +249,9 @@
         "image_to_video": "Изображение в видео",
         "image_not_found": "Изображение не найдено",
         "invalid_image_url": "Недействительная ссылка на изображение",
-        "continue_edit_coming_soon": "Функция продолжения редактирования скоро появится"
+        "continue_edit_coming_soon": "Функция продолжения редактирования скоро появится",
+        "use_veo3": "Использовать Veo 3",
+        "use_sora2": "Использовать Sora 2"
       },
       "ai_description": {
         "title": "ИИ-сгенерированное описание"
@@ -276,7 +278,10 @@
         "close": "Закрыть",
         "prev_image": "Предыдущее",
         "next_image": "Следующее",
-        "image_count": "{current} / {total}"
+        "image_count": "{current} / {total}",
+        "use_veo3": "Использовать Veo 3",
+        "use_sora2": "Использовать Sora 2",
+        "image_to_video": "Изображение в видео"
       },
       "quick_prompts": {
         "image_mode": {
@@ -325,80 +330,6 @@
     "validation": {
       "please_enter_prompt": "Пожалуйста, введите описание",
       "please_upload_image": "Пожалуйста, загрузите хотя бы одно изображение"
-    }
-  },
-  "history": {
-    "title": "История создания Nano Banana",
-    "description": "Просмотр всех изображений, которые вы создавали и редактировали с помощью Nano Banana ранее",
-    "status": {
-      "completed": "Завершено",
-      "failed": "Неудачно",
-      "processing": "Обработка",
-      "pending": "Ожидание"
-    },
-    "credits_used": "{amount} кредитов",
-    "credits_refunded": "Возвращено {amount} кредитов",
-    "images": "изображения",
-    "view": "Просмотр",
-    "download": "Скачать",
-    "download_success": "Изображение успешно загружено",
-    "delete_success": "Запись успешно удалена",
-    "delete_error": "Не удалось удалить запись",
-    "load_more": "Загрузить больше",
-    "loading": "Загрузка...",
-    "load_more_error": "Не удалось загрузить дополнительные записи",
-    "no_more": "Все записи загружены",
-    "image_preview": "Предварительный просмотр изображения",
-    "enhance_image": "Улучшить",
-    "image_to_video": "Изображение в видео",
-    "i2v": "Изображение в видео",
-    "copy_link": "Скопировать ссылку",
-    "copied": "Скопировано!",
-    "link_copied": "Ссылка скопирована в буфер обмена",
-    "copy_failed": "Не удалось скопировать ссылку",
-    "coming_soon": "Скоро будет доступно!",
-    "tabs": {
-      "nano_banana": "Генерация Изображений",
-      "veo3": "Veo 3",
-      "sora2": "Sora 2",
-      "upscaler": "Улучшение Изображений"
-    },
-    "veo3": {
-      "video_preview": "Предпросмотр Видео",
-      "720p": "720p",
-      "1080p": "1080p (HD)",
-      "prompt": "Запрос",
-      "input_image": "Входное Изображение",
-      "download_video": "Скачать Видео"
-    },
-    "sora2": {
-      "video_preview": "Sora 2 Video Preview",
-      "prompt": "Prompt",
-      "download_video": "Download Video"
-    },
-    "upscaler": {
-      "compare_title": "Предпросмотр Сравнения",
-      "scale": "Коэффициент Масштабирования",
-      "face_enhance": "Улучшение Лица",
-      "enabled": "Включено",
-      "disabled": "Отключено",
-      "drag_hint": "Перетащите разделитель для сравнения изображений",
-      "download_original": "Скачать Оригинал",
-      "download_enhanced": "Скачать Улучшенное"
-    },
-    "error": {
-      "unknown": "Произошла неизвестная ошибка"
-    },
-    "empty": {
-      "title": "Нет истории генерации",
-      "description": "Начните создавать удивительные изображения с помощью ИИ",
-      "action": "Начать создание"
-    },
-    "delete_confirm": {
-      "title": "Удалить запись",
-      "description": "Вы уверены, что хотите удалить эту запись генерации? Это действие нельзя отменить.",
-      "cancel": "Отмена",
-      "confirm": "Удалить"
     }
   }
 }
