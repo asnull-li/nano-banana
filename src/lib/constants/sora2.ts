@@ -1,7 +1,7 @@
 // Sora 2 视频生成相关常量配置
 
 // 每个视频消耗的积分数（Sora 2 普通版）
-export const CREDITS_PER_SORA2 = 15;
+export const CREDITS_PER_SORA2 = 10;
 
 // 任务类型
 export type Sora2TaskType = "text-to-video" | "image-to-video";
@@ -54,11 +54,11 @@ export function calculateCredits(
   const creditsMatrix: Record<Sora2Quality, Record<Sora2Duration, number>> = {
     standard: {
       "10": 40,
-      "15": 60,
+      "15": 50,
     },
     high: {
-      "10": 90,
-      "15": 180,
+      "10": 80,
+      "15": 160,
     },
   };
 
