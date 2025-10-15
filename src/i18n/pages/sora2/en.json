@@ -65,6 +65,14 @@
         "answer": "Sora 2 offers several groundbreaking features: dual-mode generation (text-to-video and image-to-video), advanced physics simulation with realistic motion, flexible aspect ratios for portrait and landscape formats, high-definition output options up to 15 seconds in length, precise creative control over scenes and styles, and support for photorealistic, cinematic, and anime aesthetics. The model also features enhanced prompt adherence and can execute complex multi-shot instructions while maintaining consistent world states throughout the video."
       },
       {
+        "question": "How long does it take to generate videos with Sora 2?",
+        "answer": "Generation time varies based on the model version and settings you choose. Sora 2 standard quality typically takes 3-5 minutes to generate. For Sora 2 Pro with HD quality: 10-second HD videos typically take 10-20 minutes to generate, and 15-second HD videos take around 30 minutes (this reflects OpenAI's native delivery speed). We strongly recommend using the 15-second HD option with caution, as it takes longer and may have minor imperfections. You can leave the page after submitting - completed videos will appear in your My Creations section."
+      },
+      {
+        "question": "Why do my video generations keep failing?",
+        "answer": "Video generation failures typically occur due to content policy violations. OpenAI's safety systems will block requests that contain: realistic photos of identifiable people (to prevent deepfakes and misuse), sexually explicit content, graphic violence or gore, or other prohibited content. To ensure successful generation, avoid uploading realistic human face photos and refrain from using prompts that describe violent, explicit, or harmful content. If you believe your content is appropriate but still experiencing failures, try rephrasing your prompt or using different reference images."
+      },
+      {
         "question": "How does Sora 2 handle physics and realism in generated videos?",
         "answer": "Sora 2 excels at physical accuracy and realism. When a basketball player misses a shot, the ball bounces off the backboard naturally instead of teleporting to the hoop like in older models. The system can simulate proper buoyancy, object permanence, gravity, and material properties. This physics consistency makes Sora 2 suitable for creating realistic training simulations, sports content, and professional creative projects that require authentic motion dynamics."
       },

@@ -65,6 +65,14 @@
         "answer": "Sora 2 ofrece varias características innovadoras: generación de modo dual (texto a video e imagen a video), simulación física avanzada con movimiento realista, relaciones de aspecto flexibles para formatos vertical y horizontal, opciones de salida de alta definición de hasta 15 segundos de duración, control creativo preciso sobre escenas y estilos, y soporte para estéticas fotorrealistas, cinematográficas y anime. El modelo también cuenta con adherencia mejorada a las indicaciones y puede ejecutar instrucciones complejas de múltiples tomas mientras mantiene estados del mundo consistentes a lo largo del video."
       },
       {
+        "question": "¿Cuánto tiempo tarda en generar videos con Sora 2?",
+        "answer": "El tiempo de generación varía según la versión del modelo y la configuración que elijas. La calidad estándar de Sora 2 normalmente tarda de 3 a 5 minutos en generarse. Para Sora 2 Pro con calidad HD: los videos HD de 10 segundos suelen tardar de 10 a 20 minutos en generarse, y los videos HD de 15 segundos tardan alrededor de 30 minutos (esto refleja la velocidad de entrega nativa de OpenAI). Recomendamos encarecidamente usar la opción HD de 15 segundos con precaución, ya que requiere más tiempo y puede tener imperfecciones menores. Puedes salir de la página después de enviar: los videos completados aparecerán en tu sección Mis Creaciones."
+      },
+      {
+        "question": "¿Por qué siguen fallando mis generaciones de video?",
+        "answer": "Los fallos de generación de video suelen ocurrir debido a violaciones de la política de contenido. Los sistemas de seguridad de OpenAI bloquearán solicitudes que contengan: fotos realistas de personas identificables (para prevenir deepfakes y uso indebido), contenido sexualmente explícito, violencia gráfica o gore, u otro contenido prohibido. Para garantizar una generación exitosa, evita subir fotos realistas de rostros humanos y abstente de usar indicaciones que describan contenido violento, explícito o dañino. Si crees que tu contenido es apropiado pero aún experimentas fallos, intenta reformular tu indicación o usar diferentes imágenes de referencia."
+      },
+      {
         "question": "¿Cómo maneja Sora 2 la física y el realismo en los videos generados?",
         "answer": "Sora 2 sobresale en precisión física y realismo. Cuando un jugador de baloncesto falla un tiro, la pelota rebota del tablero naturalmente en lugar de teletransportarse a la canasta como en modelos antiguos. El sistema puede simular flotabilidad adecuada, permanencia de objetos, gravedad y propiedades de materiales. Esta consistencia física hace que Sora 2 sea adecuado para crear simulaciones de entrenamiento realistas, contenido deportivo y proyectos creativos profesionales que requieren dinámicas de movimiento auténticas."
       },

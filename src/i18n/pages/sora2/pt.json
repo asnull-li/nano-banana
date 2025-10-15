@@ -65,6 +65,14 @@
         "answer": "O Sora 2 oferece vários recursos inovadores: geração de modo duplo (texto para vídeo e imagem para vídeo), simulação física avançada com movimento realista, proporções de aspecto flexíveis para formatos retrato e paisagem, opções de saída de alta definição de até 15 segundos de duração, controle criativo preciso sobre cenas e estilos, e suporte para estéticas fotorrealistas, cinematográficas e de anime. O modelo também possui aderência aprimorada ao prompt e pode executar instruções complexas de múltiplas tomadas enquanto mantém estados de mundo consistentes ao longo do vídeo."
       },
       {
+        "question": "Quanto tempo leva para gerar vídeos com o Sora 2?",
+        "answer": "O tempo de geração varia com base na versão do modelo e nas configurações escolhidas. A qualidade padrão do Sora 2 normalmente leva de 3 a 5 minutos para gerar. Para o Sora 2 Pro com qualidade HD: vídeos HD de 10 segundos normalmente levam de 10 a 20 minutos para gerar, e vídeos HD de 15 segundos levam cerca de 30 minutos (isso reflete a velocidade de entrega nativa do OpenAI). Recomendamos fortemente usar a opção HD de 15 segundos com cautela, pois requer mais tempo e pode ter pequenas imperfeições. Você pode sair da página após o envio - os vídeos concluídos aparecerão na sua seção Minhas Criações."
+      },
+      {
+        "question": "Por que minhas gerações de vídeo continuam falhando?",
+        "answer": "Falhas na geração de vídeo geralmente ocorrem devido a violações da política de conteúdo. Os sistemas de segurança do OpenAI bloquearão solicitações que contenham: fotos realistas de pessoas identificáveis (para prevenir deepfakes e uso indevido), conteúdo sexualmente explícito, violência gráfica ou gore, ou outro conteúdo proibido. Para garantir uma geração bem-sucedida, evite carregar fotos realistas de rostos humanos e abstenha-se de usar prompts que descrevam conteúdo violento, explícito ou prejudicial. Se você acredita que seu conteúdo é apropriado mas ainda está enfrentando falhas, tente reformular seu prompt ou usar imagens de referência diferentes."
+      },
+      {
         "question": "Como o Sora 2 lida com física e realismo em vídeos gerados?",
         "answer": "O Sora 2 se destaca em precisão física e realismo. Quando um jogador de basquete erra um arremesso, a bola quica naturalmente na tabela em vez de se teletransportar para a cesta como em modelos antigos. O sistema pode simular flutuabilidade adequada, permanência de objetos, gravidade e propriedades de materiais. Essa consistência física torna o Sora 2 adequado para criar simulações de treinamento realistas, conteúdo esportivo e projetos criativos profissionais que requerem dinâmica de movimento autêntica."
       },
