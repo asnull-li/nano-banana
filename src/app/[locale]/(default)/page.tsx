@@ -66,6 +66,18 @@ export default async function LandingPage({
       {page.testimonial && <Testimonial section={page.testimonial} />}
       {page.faq && <FAQ section={page.faq} />}
       {page.cta && <CTA section={page.cta} />}
+      <div className="container mx-auto w-full flex justify-center">
+        <a
+          href="https://theresanaiforthat.com/ai/nano-banana-ai-image-generator/?ref=featured&v=6806181"
+          target="_blank"
+          rel="nofollow"
+        >
+          <img
+            width="300"
+            src="https://media.theresanaiforthat.com/featured-on-taaft.png?width=600"
+          />
+        </a>
+      </div>
     </>
   );
 }
