@@ -89,7 +89,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json(
         {
           success: false,
-          error: `Maximum ${MAX_IMAGE_URLS} image allowed for image-to-video mode`,
+          error: `Maximum ${MAX_IMAGE_URLS} images allowed for image-to-video mode`,
         },
         { status: 400 }
       );

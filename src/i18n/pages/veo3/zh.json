@@ -66,6 +66,14 @@
       "click_or_drag": "点击或拖拽上传",
       "processing": "处理中..."
     },
+    "keyframe_mode": {
+      "label": "首尾帧模式",
+      "description": "您可以精确控制AI视频的开始和结束，允许您控制第一帧和最后一帧，创建流畅的电影过渡效果",
+      "start_frame": "首帧",
+      "end_frame": "尾帧",
+      "start_frame_required": "请上传首帧图片",
+      "end_frame_required": "请上传尾帧图片"
+    },
     "prompt": {
       "label": "提示词",
       "tooltip": "描述您想生成的视频。具体详细的描述将获得最佳效果。",
@@ -168,6 +176,8 @@
       "insufficient_credits": "您需要 ${credits} 积分来使用 ${mode} 模式生成",
       "uploading_image": "正在上传图片...",
       "image_uploaded": "图片上传成功",
+      "uploading_images": "正在上传首帧和尾帧...",
+      "images_uploaded": "首帧和尾帧上传成功",
       "upload_failed": "上传图片失败",
       "upgraded_1080p": "已升级到 1080P！您的高清视频已准备就绪",
       "upgrade_timeout": "1080P 升级超时。服务器仍在处理中，请稍后重试。",

@@ -12,6 +12,7 @@ interface ImageUploadZoneProps {
   currentImage?: string | null;
   className?: string;
   pageData?: any;
+  label?: string;
 }
 
 const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10MB
@@ -22,6 +23,7 @@ export default function ImageUploadZone({
   currentImage,
   className,
   pageData,
+  label,
 }: ImageUploadZoneProps) {
   const onDrop = useCallback(
     (acceptedFiles: File[], rejectedFiles: any[]) => {
@@ -79,11 +81,7 @@ export default function ImageUploadZone({
 
   return (
     <div className={className}>
-      <h3 className="text-sm font-medium text-slate-700 dark:text-slate-300 mb-3">
-        {pageData?.workspace?.upload_zone?.title || "上传图片"}
-      </h3>
-
-      <div className="relative overflow-hidden rounded-2xl border-2 border-dashed border-green-300 dark:border-green-700 transition-all duration-300">
+      <div className="relative overflow-hidden rounded-xl border-2 border-dashed border-green-300 dark:border-green-600 transition-all duration-300">
         {currentImage ? (
           // Preview State
           <div className="relative group h-48">
@@ -93,33 +91,33 @@ export default function ImageUploadZone({
                 pageData?.workspace?.upload_zone?.preview_alt ||
                 "Uploaded preview"
               }
-              className="w-full h-full object-contain bg-slate-50 dark:bg-slate-800"
+              className="w-full h-full object-contain bg-slate-100 dark:bg-slate-800 transition-transform duration-300 group-hover:scale-110"
             />
             {!disabled && (
               <>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute top-2 right-2 flex gap-2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                  <div
+                <div className="absolute top-2 right-2 flex gap-2 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                  <button
                     onClick={handleClearImage}
-                    className="p-2 bg-red-500/90 backdrop-blur-sm text-white rounded-full hover:bg-red-600 hover:scale-110 transition-all duration-200 cursor-pointer shadow-lg"
+                    className="p-1.5 bg-red-500 text-white rounded-full hover:bg-red-600 hover:scale-110 transition-all duration-200 cursor-pointer"
                     title={
                       pageData?.workspace?.upload_zone?.delete_tooltip ||
                       "删除图片"
                     }
                   >
-                    <X className="w-4 h-4" />
-                  </div>
+                    <X className="w-3 h-3" />
+                  </button>
                   <div {...getRootProps()} className="cursor-pointer">
                     <input {...getInputProps()} />
-                    <div
-                      className="p-2 bg-green-500/90 backdrop-blur-sm text-white rounded-full hover:bg-green-600 hover:scale-110 transition-all duration-200 shadow-lg"
+                    <button
+                      className="p-1.5 bg-green-500 text-white rounded-full hover:bg-green-600 hover:scale-110 transition-all duration-200"
                       title={
                         pageData?.workspace?.upload_zone?.replace_tooltip ||
                         "替换图片"
                       }
                     >
-                      <Upload className="w-4 h-4" />
-                    </div>
+                      <Upload className="w-3 h-3" />
+                    </button>
                   </div>
                 </div>
               </>
@@ -130,45 +128,47 @@ export default function ImageUploadZone({
           <div
             {...getRootProps()}
             className={cn(
-              "text-center cursor-pointer transition-all duration-300 h-32 flex items-center justify-center",
+              "h-32 text-center cursor-pointer transition-all duration-300 flex flex-col items-center justify-center space-y-3 group",
               isDragActive
-                ? "border-green-500 bg-green-50/50 dark:bg-green-950/40 scale-[1.02]"
-                : "border-green-300 dark:border-green-700",
-              disabled
-                ? "cursor-not-allowed opacity-50"
-                : "hover:border-green-500 hover:bg-green-50/30 dark:hover:bg-green-950/30 hover:scale-[1.01]"
+                ? "border-green-400 bg-green-50 dark:bg-green-950/20 scale-105"
+                : "hover:border-green-400 hover:bg-green-50/50 dark:hover:bg-green-950/10",
+              disabled && "opacity-50 pointer-events-none"
             )}
           >
             <input {...getInputProps()} />
 
-            <div className="flex flex-col items-center gap-2">
-              <div className="relative">
-                {isDragActive ? (
-                  <Upload className="w-8 h-8 text-green-600 dark:text-green-400 animate-bounce" />
-                ) : (
-                  <div className="relative group">
-                    <ImageIcon className="w-8 h-8 text-green-600 dark:text-green-400 transition-transform duration-300 group-hover:scale-110" />
-                    <div className="absolute inset-0 bg-green-500/10 blur-md rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  </div>
-                )}
-                {isDragActive && (
-                  <div className="absolute inset-0 bg-green-500/30 blur-lg rounded-full animate-pulse"></div>
-                )}
-              </div>
-
-              <div className="space-y-0">
-                <p className="text-sm font-medium text-slate-800 dark:text-slate-200">
-                  {isDragActive
-                    ? pageData?.workspace?.upload_zone?.drop_text || "释放上传"
-                    : pageData?.workspace?.upload_zone?.click_or_drag ||
-                      "点击或拖拽上传"}
-                </p>
-                <p className="text-xs text-slate-500 dark:text-slate-500">
-                  {pageData?.workspace?.upload_zone?.supported_formats ||
-                    "支持 PNG、JPG、JPEG、WEBP • 最大 10MB"}
-                </p>
-              </div>
+            <div className={cn(
+              "p-3 rounded-full transition-all duration-300",
+              "bg-green-100 dark:bg-green-900/30",
+              "group-hover:bg-green-200 dark:group-hover:bg-green-800/50",
+              "group-hover:scale-110"
+            )}>
+              <Upload className={cn(
+                "h-4 w-4 text-green-500 transition-transform duration-300",
+                "group-hover:rotate-12"
+              )} />
             </div>
+
+            <div className="text-center">
+              <p className="text-xs font-medium text-green-600 dark:text-green-400 group-hover:text-green-700 dark:group-hover:text-green-300">
+                {label || pageData?.workspace?.upload_zone?.title || "Add Image"}
+              </p>
+              <p className="text-[10px] text-green-500 dark:text-green-500">
+                JPG, PNG, WebP
+              </p>
+              <p className="text-[10px] text-green-500 dark:text-green-500">
+                Max 10MB
+              </p>
+            </div>
+
+            {/* 拖拽激活指示器 */}
+            {isDragActive && (
+              <div className="absolute inset-0 rounded-xl bg-green-400/20 flex items-center justify-center">
+                <div className="text-green-600 font-medium animate-bounce">
+                  {pageData?.workspace?.upload_zone?.drop_text || "Release to Upload"}
+                </div>
+              </div>
+            )}
           </div>
         )}
 

@@ -66,6 +66,14 @@
       "click_or_drag": "Clique ou arraste para carregar",
       "processing": "Processando..."
     },
+    "keyframe_mode": {
+      "label": "Modo de Quadros-Chave",
+      "description": "Você pode controlar com precisão o início e o fim do seu vídeo AI, permitindo que você controle o primeiro e o último quadro e crie transições cinematográficas suaves",
+      "start_frame": "Quadro Inicial",
+      "end_frame": "Quadro Final",
+      "start_frame_required": "Por favor, carregue a imagem do quadro inicial",
+      "end_frame_required": "Por favor, carregue a imagem do quadro final"
+    },
     "prompt": {
       "label": "Prompt",
       "tooltip": "Descreva o vídeo que você deseja gerar. Seja específico e detalhado para melhores resultados.",
@@ -168,6 +176,8 @@
       "insufficient_credits": "Você precisa de ${credits} créditos para gerar com modo ${mode}",
       "uploading_image": "Carregando imagem...",
       "image_uploaded": "Imagem carregada com sucesso",
+      "uploading_images": "Carregando quadros inicial e final...",
+      "images_uploaded": "Quadros inicial e final carregados com sucesso",
       "upload_failed": "Falha ao carregar imagem",
       "upgraded_1080p": "Atualizado para 1080P! Seu vídeo de alta qualidade está pronto",
       "upgrade_timeout": "Tempo limite de atualização para 1080P. O servidor ainda está processando, tente novamente mais tarde.",

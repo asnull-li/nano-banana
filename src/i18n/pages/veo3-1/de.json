@@ -1,0 +1,292 @@
+{
+  "meta": {
+    "title": "Veo 3.1 Video-Generator - Keyframe-Kontrolle & Native Audio",
+    "description": "Erstellen Sie kinoreife Videos mit Veo 3.1. Keyframe-Kontrolle, Erweiterung über 8s hinaus, Multi-Bild-Referenzen, native Audio. 1080P Qualität aus Text oder Bildern."
+  },
+  "hero": {
+    "title": "Veo 3.1 AI Video-Generator",
+    "description": "Erleben Sie kinoreife AI-Videoproduktion mit Veo 3.1. Kontrollieren Sie jeden Frame mit dem Keyframe-Modus, erweitern Sie Szenen über 8 Sekunden hinaus und generieren Sie synchronisierte native Audio. Veo 3.1 bringt realistische Bewegungsgenerierung, Multi-Bild-Referenz-Kontrolle und 1080P-Qualität. Von Text oder Bildern zu professionellen Videos—beginnen Sie heute mit der Erstellung mit Veo 3.1."
+  },
+  "features": {
+    "title": "Revolutionäre Funktionen des Veo 3.1 AI Video-Generators",
+    "description": "Veo 3.1 führt bahnbrechende Fähigkeiten für kinoreife Videoproduktion ein. Kontrollieren Sie Keyframes, erweitern Sie die Dauer, verwenden Sie Multi-Bild-Referenzen und generieren Sie native Audio mit Googles fortschrittlichster AI-Video-Technologie.",
+    "items": [
+      {
+        "title": "Keyframe-Kontrolle in Veo 3.1 - Start- und End-Frame-Präzision",
+        "description": "Kontrollieren Sie präzise den Anfang und das Ende Ihres AI-Videos mit dem Keyframe-Modus. Kontrollieren Sie den ersten und letzten Frame, um glatte kinoreife Übergänge zu erstellen. Diese Keyframe-Funktion verleiht Ihren Clips klares Tempo und Rhythmus und stellt sicher, dass sich jede Szene vollständig und absichtlich anfühlt mit fortschrittlicher Frame-Kontrolle."
+      },
+      {
+        "title": "Multi-Bild-Referenzen in Veo 3.1",
+        "description": "Leiten Sie die visuelle Richtung Ihres Videos mit mehreren Referenzbildern. Stellen Sie verschiedene Bilder bereit, um Charakterdesign, Beleuchtungsstil oder Farbton zu formen. Veo 3.1 gewährleistet visuelle Konsistenz über jeden Schuss hinweg und erhält kohärente Ästhetik durch Ihr generiertes Video mit Multi-Bild-Referenz-Technologie."
+      },
+      {
+        "title": "Native Audio und Verbesserte Soundeffekte in Veo 3.1",
+        "description": "Veo 3.1 fügt automatisch native Audio zu Ihren Kreationen hinzu, einschließlich Dialoge, Umgebungsgeräusche und aktionssynchronisierte Audio. Audio synchronisiert sich perfekt mit Visuals und verbessert Immersion und Realismus. Dies eliminiert die Notwendigkeit für separate Audiobearbeitung und erweckt Videos mit professionellem Sound zum Leben."
+      },
+      {
+        "title": "Video-Dauer über 8 Sekunden erweitern",
+        "description": "Durchbrechen Sie die 8-Sekunden-Grenze mit der Erweiterungsfunktion. Setzen Sie Aktionen und Narrative natürlich fort, um längere, dynamischere Videos zu erstellen. Veo 3.1 ermöglicht nahtlose Szenenfortsetzung, perfekt für komplexes Storytelling und professionelle Videoproduktion."
+      },
+      {
+        "title": "Charakterkonsistenz-Design in Veo 3.1",
+        "description": "Laden Sie Charakter-Referenzbilder hoch, um konsistente Identität, Aussehen und Aktionen über jeden Frame sicherzustellen. Veo 3.1 erhält visuelle Konsistenz über mehrere Szenen hinweg und erstellt glatte, professionelle Narrative. Diese Charakterkonsistenz-Funktion ist ideal für charaktergetriebenes Storytelling und Markeninhalte."
+      }
+    ]
+  },
+  "how_to_use": {
+    "title": "Wie man kinoreife Videos mit dem Veo 3.1 AI Video-Generator erstellt",
+    "description": "Generieren Sie professionelle Videos mit Veo 3.1 in einfachen Schritten. Verwenden Sie Keyframe-Kontrolle, Multi-Bild-Referenzen und native Audio, um kinoreife Inhalte zu erstellen.",
+    "items": [
+      {
+        "title": "Richten Sie Ihr Veo 3.1-Projekt mit Keyframes oder Bildern ein",
+        "description": "Beginnen Sie Ihre Veo 3.1-Videoproduktion, indem Sie einen detaillierten Textprompt eingeben oder Bilder hochladen. Verwenden Sie Veo 3.1s Keyframe-Modus, um Start- und End-Frames zu kontrollieren, oder stellen Sie mehrere Referenzbilder für konsistenten visuellen Stil bereit. Veo 3.1 unterstützt sowohl Text-zu-Video- als auch Bild-zu-Video-Generierung mit erweiterten Kontrolloptionen."
+      },
+      {
+        "title": "Konfigurieren Sie Veo 3.1 Erweiterte Generierungseinstellungen",
+        "description": "Passen Sie Ihr Veo 3.1-Video mit professionellen Optionen an. Aktivieren Sie Keyframe-Kontrolle, wählen Sie mehrere Referenzbilder für Charakterkonsistenz, wählen Sie 720P oder upgraden Sie auf 1080P-Qualität. Veo 3.1 ermöglicht es Ihnen, kreative Kontrollen einschließlich Bewegungsgenerierung und Audio-Synchronisation für optimale kinoreife Ergebnisse feinzutunen."
+      },
+      {
+        "title": "Generieren, Erweitern und Laden Sie Ihr Veo 3.1-Video herunter",
+        "description": "Klicken Sie auf Generieren und lassen Sie Veo 3.1 Ihr professionelles Video mit nativer Audio erstellen. Verwenden Sie Veo 3.1s Erweiterungsfunktion, um Ihr Video über 8 Sekunden hinaus fortzusetzen. Sobald Veo 3.1 die Verarbeitung abgeschlossen hat, sehen Sie sich Ihr Video mit synchronisierten Soundeffekten in der Vorschau an und laden Sie es in Ihrer bevorzugten Qualität herunter. Ihr Veo 3.1-generiertes Video ist bereit für professionelle Nutzung."
+      }
+    ]
+  },
+  "workspace": {
+    "mode_selector": {
+      "text_to_video": "Text zu Video",
+      "image_to_video": "Bild zu Video"
+    },
+    "upload_zone": {
+      "title": "Referenzbild hochladen",
+      "description": "Laden Sie Bilder für Veo 3.1 Multi-Bild-Referenz oder Keyframe-Kontrolle hoch",
+      "supported_formats": "Unterstützte Formate: JPEG, PNG, WebP",
+      "max_size": "Maximale Dateigröße: 10MB",
+      "error_file_too_large": "Die Datei ist zu groß. Die maximale Größe beträgt 10MB.",
+      "error_invalid_type": "Ungültiger Dateityp. Bitte laden Sie ein Bild hoch.",
+      "preview_alt": "Veo 3.1 Referenzbild Vorschau",
+      "delete_tooltip": "Bild entfernen",
+      "replace_tooltip": "Bild ersetzen",
+      "drop_text": "Zum Hochladen auf Veo 3.1 ablegen",
+      "click_or_drag": "Klicken oder ziehen Sie zum Hochladen",
+      "processing": "Verarbeitung..."
+    },
+    "keyframe_mode": {
+      "label": "Keyframe-Modus",
+      "description": "Veo 3.1 ermöglicht es Ihnen, den Anfang und das Ende Ihres AI-Videos präzise zu kontrollieren. Kontrollieren Sie den ersten und letzten Frame mit Veo 3.1s Keyframe-Funktion, um glatte kinoreife Übergänge zu erstellen und den narrativen Fluss aufrechtzuerhalten.",
+      "start_frame": "Start-Frame",
+      "end_frame": "End-Frame",
+      "start_frame_required": "Bitte laden Sie das Start-Frame-Bild hoch",
+      "end_frame_required": "Bitte laden Sie das End-Frame-Bild hoch"
+    },
+    "prompt": {
+      "label": "Prompt",
+      "tooltip": "Beschreiben Sie das Video, das Sie generieren möchten. Seien Sie spezifisch und detailliert für beste Ergebnisse.",
+      "placeholder": "Beschreiben Sie Ihr Video... z.B. 'Eine süße Katze, die in Zeitlupe mit einem Wollknäuel spielt, kinematografische Beleuchtung, 4K-Qualität'",
+      "min_chars_required": "Mindestens ${count} Zeichen erforderlich",
+      "approaching_limit": "Nähert sich dem Zeichenlimit"
+    },
+    "controls": {
+      "model_label": "Modell",
+      "model_tooltip_line1": "Schnellmodus: Schnelle Generierung",
+      "model_tooltip_line2": "Qualitätsmodus: Beste Qualitätsausgabe",
+      "model_fast": "Schnellmodus",
+      "model_fast_desc": "Schnelle Generierung",
+      "model_quality": "Qualitätsmodus",
+      "model_quality_desc": "Hochwertige Ausgabe",
+      "aspect_ratio_label": "Seitenverhältnis",
+      "aspect_ratio_tooltip_line1": "16:9 unterstützt 1080P-Upgrade",
+      "aspect_ratio_tooltip_line2": "9:16 für mobile Videos",
+      "aspect_ratio_tooltip_line3": "Auto lässt KI entscheiden",
+      "advanced_options": "Erweiterte Optionen",
+      "watermark_label": "Wasserzeichen",
+      "watermark_placeholder": "Text-Wasserzeichen hinzufügen...",
+      "random_seed_label": "Zufallsseed",
+      "random_seed_tooltip_line1": "Steuert Video-Zufälligkeit (10000-99999).",
+      "random_seed_tooltip_line2": "Gleicher Seed generiert ähnliche Videos.",
+      "random_seed_tooltip_line3": "Leer lassen für automatische Zuweisung.",
+      "random_seed_placeholder": "10000 - 99999",
+      "random_seed_hint": "Gleicher Seed generiert ähnliche Videos. Leer lassen für automatische Zuweisung.",
+      "auto_translate_label": "Automatische Prompt-Übersetzung",
+      "auto_translate_tooltip_line1": "Übersetzen Sie nicht-englische Prompts automatisch ins Englische für bessere Videogenerierungsqualität.",
+      "auto_translate_tooltip_line2": "Empfohlen aktiviert zu lassen für optimale Ergebnisse.",
+      "auto_translate_enabled": "Prompts werden automatisch ins Englische übersetzt",
+      "auto_translate_disabled": "Die ursprüngliche Prompt-Sprache wird verwendet",
+      "credits_cost": "Credits-Kosten",
+      "credits_unit": "Credits"
+    },
+    "generate_button": {
+      "uploading": "Hochladen...",
+      "generating": "Generieren...",
+      "generate": "Video generieren (${credits} Credits)"
+    },
+    "empty_state": {
+      "title": "Noch kein Video",
+      "description": "Geben Sie einen Prompt ein und klicken Sie auf generieren, um Ihr erstes Video mit Veo 3.1s Keyframe-Kontrolle und nativer Audio zu erstellen",
+      "modes": "Text-zu-Video- oder Bild-zu-Video-Generierung mit Veo 3.1"
+    },
+    "processing_state": {
+      "uploading_title": "Hochladen...",
+      "generating_title": "Video wird generiert...",
+      "uploading_description": "Ihr Bild wird auf den Server hochgeladen...",
+      "generating_description": "Ihr Video wird generiert. Dies kann einige Minuten dauern...",
+      "model_quality": "Qualitätsmodus",
+      "model_fast": "Schnellmodus",
+      "prompt_label": "Prompt:",
+      "dont_close": "Bitte schließen Sie diese Seite nicht während der Generierung..."
+    },
+    "failed_state": {
+      "title": "Generierung fehlgeschlagen",
+      "error_default": "Ein unerwarteter Fehler ist während der Videogenerierung aufgetreten",
+      "prompt_label": "Ihr Prompt:",
+      "credits_refunded": "Ihre Credits wurden erstattet. Wenn das Problem weiterhin besteht, wenden Sie sich bitte an unser Support-Team.",
+      "try_again": "Erneut versuchen",
+      "contact_support": "Support kontaktieren",
+      "need_help": "Benötigen Sie Hilfe? Senden Sie uns eine E-Mail an:"
+    },
+    "completed_state": {
+      "quality_720p": "720p",
+      "quality_1080p": "1080p HD",
+      "download": "Herunterladen",
+      "downloading": "Herunterladen...",
+      "preparing_1080p": "1080P HD-Version wird vorbereitet",
+      "preparing_1080p_hint": "Dies kann 1-2 Minuten dauern. Das Video wird automatisch angezeigt, wenn es fertig ist...",
+      "completed": "Abgeschlossen",
+      "mode_quality": "Qualität",
+      "mode_fast": "Schnell",
+      "upgrade_button": "Auf 1080p aktualisieren (${credits} Credits)",
+      "upgrading": "Aktualisierung...",
+      "input_image_label": "Eingabebild:"
+    },
+    "upgrade_modal": {
+      "title": "Auf 1080P aktualisieren",
+      "description": "Aktualisieren Sie Ihr Video auf kristallklare 1080P-Auflösung für ein besseres Seherlebnis.",
+      "enhanced_quality_title": "Verbesserte Qualität",
+      "enhanced_quality_description": "Aktualisieren Sie Ihr Video auf kristallklare 1080P-Auflösung für ein besseres Seherlebnis und professionelle Präsentation.",
+      "cost_label": "Kosten",
+      "balance_label": "Ihr Guthaben",
+      "insufficient_credits": "Sie haben nicht genügend Credits. Bitte laden Sie zuerst auf.",
+      "hint": "Das aktualisierte 1080P-Video wird generiert und neben Ihrer 720P-Version gespeichert. Sie können jederzeit zwischen ihnen wechseln.",
+      "cancel": "Abbrechen",
+      "confirm": "Bestätigen (${credits} Credits)",
+      "confirming": "Aktualisierung..."
+    },
+    "toast": {
+      "video_generated": "Video generiert! Ihr Video ist bereit zur Ansicht.",
+      "error_occurred": "Ein Fehler ist während der Generierung aufgetreten",
+      "prompt_required": "Bitte geben Sie einen Prompt für die Videogenerierung ein",
+      "prompt_length_error": "Der Prompt muss zwischen 3 und 5000 Zeichen lang sein",
+      "image_required": "Bitte laden Sie ein Bild für die Bild-zu-Video-Generierung hoch",
+      "login_required": "Bitte melden Sie sich an, um Videos zu generieren",
+      "insufficient_credits": "Sie benötigen ${credits} Credits, um mit ${mode}-Modus zu generieren",
+      "uploading_image": "Bild wird hochgeladen...",
+      "image_uploaded": "Bild erfolgreich hochgeladen",
+      "upload_failed": "Fehler beim Hochladen des Bildes",
+      "upgraded_1080p": "Auf 1080P aktualisiert! Ihr hochwertiges Video ist bereit",
+      "upgrade_timeout": "1080P-Upgrade-Zeitüberschreitung. Der Server verarbeitet noch, bitte versuchen Sie es später erneut.",
+      "preparing_1080p": "1080P-Video wird vom Server vorbereitet. Dies dauert 1-2 Minuten, bitte warten Sie...",
+      "still_processing": "Verarbeitung läuft noch... (${seconds}s vergangen)",
+      "upgrade_failed": "Fehler beim Aktualisieren des Videos",
+      "need_credits_1080p": "Sie benötigen ${credits} Credits für 1080P-Upgrade",
+      "downloading_video": "${quality} Video wird heruntergeladen...",
+      "download_success": "${quality} Video erfolgreich heruntergeladen",
+      "download_failed": "Fehler beim Herunterladen des Videos. Bitte versuchen Sie es erneut.",
+      "new_video": "Neues Video"
+    }
+  },
+  "faq": {
+    "title": "Veo 3.1 Video-Generator - Häufig gestellte Fragen",
+    "description": "Erhalten Sie Antworten auf häufige Fragen zur Veo 3.1 AI-Videogenerierung, Keyframe-Kontrolle, Multi-Bild-Referenzen und nativen Audio-Funktionen.",
+    "contact": {
+      "question_text": "Haben Sie weitere Fragen zu Veo 3.1?",
+      "support_link": "Kontaktieren Sie unser Veo 3.1-Support-Team"
+    },
+    "items": [
+      {
+        "question": "Was ist Veo 3.1 und was ist neu im Vergleich zu Veo 3?",
+        "answer": "Veo 3.1 ist Googles neuestes AI-Videogenerierungsmodell mit revolutionären neuen Funktionen. Veo 3.1 führt Keyframe-Kontrolle für präzises Start- und End-Frame-Management ein, Multi-Bild-Referenz-Unterstützung für konsistenten visuellen Stil, verbesserte native Audio mit reichhaltigeren Soundeffekten, die Fähigkeit, Videos über 8 Sekunden hinaus zu erweitern, und verbesserte Charakterkonsistenz über Szenen hinweg. Veo 3.1 liefert kinoreife Videos mit 1080P-Auflösung und realistischer Bewegungsgenerierung."
+      },
+      {
+        "question": "Wie funktioniert die Keyframe-Kontrolle in Veo 3.1?",
+        "answer": "Veo 3.1s Keyframe-Kontrolle ermöglicht es Ihnen, den ersten und letzten Frame Ihres Videos präzise zu definieren. Laden Sie Start- und End-Frame-Bilder hoch, und Veo 3.1 generiert glatte Übergänge zwischen ihnen. Diese Funktion gibt Ihnen vollständige Kontrolle darüber, wie Ihr Video beginnt und endet, erstellt kinoreife Übergänge und erhält den narrativen Fluss durch Ihren generierten Inhalt."
+      },
+      {
+        "question": "Was sind Multi-Bild-Referenzen in Veo 3.1?",
+        "answer": "Veo 3.1s Multi-Bild-Referenzen ermöglichen es Ihnen, die visuelle Richtung Ihres Videos mit mehreren Referenzbildern zu leiten. Stellen Sie verschiedene Bilder bereit, um Charakterdesign, Beleuchtungsstil, Farbpalette oder Szenenzusammensetzung zu definieren. Veo 3.1 gewährleistet visuelle Konsistenz über alle Frames hinweg und erhält kohärente Ästhetik durch Ihr generiertes Video. Dies macht es perfekt für die Aufrechterhaltung der Markenidentität und Charakterkonsistenz."
+      },
+      {
+        "question": "Generiert Veo 3.1 native Audio?",
+        "answer": "Ja! Veo 3.1 verfügt über verbesserte native Audio-Generierung mit reichhaltigeren Soundeffekten. Es erstellt automatisch synchronisierte Dialoge, Umgebungsgeräusche und aktionsangepasste Audio-Effekte, die perfekt mit Ihren Video-Visuals synchronisiert sind. Die Audio ist professionell gemischt und synchronisiert, eliminiert die Notwendigkeit für separate Audiobearbeitung und erweckt Ihre Veo 3.1-Videos zum Leben."
+      },
+      {
+        "question": "Kann ich Veo 3.1-Videos über 8 Sekunden hinaus erweitern?",
+        "answer": "Ja! Veo 3.1s Erweiterungsfunktion ermöglicht es Ihnen, die 8-Sekunden-Grenze zu durchbrechen. Sie können Aktionen und Narrative natürlich fortsetzen, um längere, dynamischere Videos zu erstellen. Veo 3.1s Erweiterungsfunktion erhält visuelle und narrative Konsistenz und macht es perfekt für komplexes Storytelling und professionelle Videoprojekte, die erweiterte Dauer erfordern."
+      },
+      {
+        "question": "Wie funktioniert Charakterkonsistenz in Veo 3.1?",
+        "answer": "Veo 3.1s Charakterkonsistenz-Funktion stellt sicher, dass Ihre Charaktere dieselbe Identität, Aussehen und Stil über alle Frames hinweg beibehalten. Laden Sie Charakter-Referenzbilder hoch, und Veo 3.1 erhält visuelle Konsistenz durch Ihr Video. Dies macht es ideal für charaktergetriebene Narrative, Markenmaskottchen und Multi-Szenen-Storytelling, wo Charaktererkennung wesentlich ist."
+      },
+      {
+        "question": "Was macht Veo 3.1 anders als andere AI-Video-Generatoren?",
+        "answer": "Veo 3.1 sticht mit bahnbrechenden Funktionen hervor: Keyframe-Kontrolle für präzises Frame-Management, Multi-Bild-Referenzen für konsistenten Stil, erweiterte Video-Dauer über 8 Sekunden hinaus, verbesserte native Audio mit synchronisierten Soundeffekten, verbesserte Charakterkonsistenz und realistische Bewegungsgenerierung mit 1080P-Qualität. Veo 3.1 wird von Google DeepMind entwickelt und bringt die fortschrittlichste AI-Video-Technologie zu Kreativen und Filmemachern."
+      },
+      {
+        "question": "Kann ich Veo 3.1-generierte Videos für kommerzielle Zwecke verwenden?",
+        "answer": "Ja! Alle mit Veo 3.1 generierten Videos sind für kommerzielle Nutzung geeignet. Veo 3.1 erstellt originelle Inhalte basierend auf Ihren Prompts und Referenzbildern und macht es perfekt für Marketing-Videos, Social-Media-Inhalte, Markenpräsentationen und professionelle Filmprojekte. Veo 3.1s hochwertige Ausgabe mit nativer Audio und 1080P-Auflösung ist produktionsbereit für kommerzielle Anwendungen."
+      },
+      {
+        "question": "Wie viel kostet die Veo 3.1-Videogenerierung?",
+        "answer": "Veo 3.1-Videogenerierung verwendet ein kreditbasiertes System. Jedes 720P Veo 3.1-Video kostet eine bestimmte Anzahl von Credits, wobei 1080P HD-Upgrades zusätzliche Credits erfordern. Erweiterte Funktionen wie Keyframe-Kontrolle, Multi-Bild-Referenzen und Video-Erweiterung sind in den Generierungskosten enthalten. Diese flexible Preisgestaltung stellt sicher, dass Sie nur für die Veo 3.1-Videos bezahlen, die Sie erstellen, mit vollem Zugang zu allen professionellen Funktionen."
+      },
+      {
+        "question": "Welche kreativen Kontrollen bietet Veo 3.1?",
+        "answer": "Veo 3.1 bietet umfangreiche kreative Kontrollen: Keyframe-Modus für präzise Start-/End-Frame-Kontrolle, Multi-Bild-Referenzen für konsistenten visuellen Stil, Charakterkonsistenz über Szenen hinweg, Video-Erweiterung über 8 Sekunden hinaus, native Audio-Generierung und realistische Bewegungskontrolle. Diese Veo 3.1-Funktionen geben Ihnen kinoreife Präzision für professionelle Filmproduktion, Markeninhalte und komplexe Storytelling-Projekte mit vollständiger kreativer Freiheit."
+      },
+      {
+        "question": "Ist Veo 3.1 für Anfänger geeignet?",
+        "answer": "Absolut! Während Veo 3.1 erweiterte Funktionen wie Keyframe-Kontrolle und Multi-Bild-Referenzen für Profis bietet, ist es so konzipiert, dass es für jeden zugänglich ist. Geben Sie einfach eine Textbeschreibung ein oder laden Sie Bilder hoch, und Veo 3.1 übernimmt den komplexen Videogenerierungsprozess. Unsere intuitive Benutzeroberfläche macht es einfach, sofort mit der Erstellung professioneller Veo 3.1-Videos mit nativer Audio und kinoreifer Qualität zu beginnen, unabhängig von Ihrem technischen Hintergrund."
+      },
+      {
+        "question": "Wie lang sind von Veo 3.1 generierte Videos?",
+        "answer": "Von Veo 3.1 generierte Videos beginnen bei 8 Sekunden, aber mit der innovativen Erweiterungsfunktion können Sie längere Videos erstellen, indem Sie Aktion und Narrative natürlich fortsetzen. Im Gegensatz zu früheren Modellen ermöglicht Veo 3.1 es Ihnen, die 8-Sekunden-Grenze mit der Erweiterungsfähigkeit zu durchbrechen, was Ihnen die Flexibilität gibt, Videos unterschiedlicher Längen zu erstellen, während hochwertige Ausgabe und visuelle Konsistenz erhalten bleiben."
+      },
+      {
+        "question": "Wie kann ich bessere Veo 3.1-Videoqualität erzielen?",
+        "answer": "Um die beste Veo 3.1-Videoqualität zu erzielen: 1) Verwenden Sie detaillierte Prompts, die Szene, Aktionen, Beleuchtung und Stil beschreiben; 2) Nutzen Sie Veo 3.1s Keyframe-Kontrolle, um präzise Start- und End-Frames zu definieren; 3) Stellen Sie mehrere Referenzbilder für konsistenten Stil bereit; 4) Aktivieren Sie Charakterkonsistenz für charaktergetriebene Inhalte; 5) Wählen Sie Qualitätsmodus für verfeinerte Ergebnisse; 6) Upgraden Sie auf 1080P HD für kristallklare professionelle Präsentation mit verbesserter Auflösung."
+      },
+      {
+        "question": "Warum schlägt meine Veo 3.1-Videogenerierung fehl?",
+        "answer": "Veo 3.1-Videogenerierung kann aus mehreren Gründen fehlschlagen: 1) Ihr Prompt verletzt Inhaltsrichtlinien bezüglich echter Personen, Kinder, Gewalt oder sensible Inhalte - Veo 3.1 setzt strenge Inhaltsrichtlinien durch; 2) Keyframe-Bilder können inkompatibel oder von geringer Qualität sein; 3) Überprüfen Sie die spezifische Fehlermeldung für genaue Fehlergründe; 4) Stellen Sie sicher, dass Referenzbilder Formatanforderungen erfüllen. Kontaktieren Sie unser Veo 3.1-Support-Team, wenn Probleme bestehen bleiben."
+      },
+      {
+        "question": "Wie erstellt man längere Videos mit Veo 3.1?",
+        "answer": "Veo 3.1 bietet zwei Ansätze für längere Videos: 1) Verwenden Sie Veo 3.1s eingebaute Erweiterungsfunktion, um Ihr Video natürlich über 8 Sekunden hinaus fortzusetzen und visuelle und narrative Konsistenz zu erhalten; 2) Generieren Sie mehrere Veo 3.1-Clips mit konsistenten Keyframes und Charakter-Referenzen, dann verwenden Sie Video-Bearbeitungstools, um nahtlose längere Inhalte zu erstellen. Veo 3.1s Keyframe-Kontrolle und Charakterkonsistenz-Funktionen lassen Multi-Clip-Projekte natürlich fließen."
+      }
+    ]
+  },
+  "examples": {
+    "title": "Veo 3.1 Kreative Beispiele - Keyframe-Kontrolle & Multi-Bild-Referenzen",
+    "subtitle": "Erkunden Sie Veo 3.1s revolutionäre Videogenerierungsfähigkeiten mit Keyframe-Kontrolle, Multi-Bild-Referenzen und nativer Audio. Von Bildern zu kinoreifen Videos, erleben Sie die unendlichen Möglichkeiten der Veo 3.1 AI-Videoproduktion.",
+    "image_to_video": {
+      "title": "Bild zu Video mit Veo 3.1",
+      "description": "Laden Sie ein statisches Bild hoch oder verwenden Sie Veo 3.1s Multi-Bild-Referenz-Funktion. Veo 3.1 erweckt Bilder mit realistischer Bewegung zum Leben und erstellt glatte und natürliche dynamische Videoeffekte mit synchronisierter nativer Audio.",
+      "input_image_url": "https://file.nanobanana.org/showcase/veo3/woman-city-doodle.jpg",
+      "input_image_alt": "Urban Doodle-Stil weibliche Illustration für Veo 3.1",
+      "output_video_url": "https://file.nanobanana.org/showcase/veo3/woman-city-doodle.mp4"
+    },
+    "text_to_video": {
+      "title": "Text zu Video mit Veo 3.1",
+      "description": "Mit detaillierten Textbeschreibungen versteht Veo 3.1 Ihre kreative Vision und generiert atemberaubende kinoreife Inhalte mit nativer Audio und realistischer Bewegung",
+      "input_prompt": "Ultra-schnelle Verfolgungsaufnahme durch eine weitläufige futuristische Stadtlandschaft, wo hoch aufragende Gebäude aus reflektierendem organischem Chrom bestehen und unter einer hellen Mittagssonne glänzen. Regenbogen-Lichtreflexe und kristallines Bokeh verteilen sich über den Rahmen, während sich die Kamera dynamisch zwischen den Strukturen bewegt. Die Sequenz geht in einen nahtlosen Nahaufnahme-Zoom in einen durchscheinenden Chrom-Bienenstock über, wo eine hochdetaillierte Roboter-Arbeitsbiene bei der Arbeit mit mechanischer Präzision zu sehen ist. Die Szene wird mit hyperrealistischer 4K-Klarheit, weicher Linsentiefe und umgebender Sci-Fi-Audio im Hintergrund gerendert, die die Stimmung eines hochbudgetierten Cyber-Futurismus-Films hervorruft.",
+      "output_video_url": "https://file.nanobanana.org/showcase/veo3/tmp7uoz8hjv.mp4"
+    },
+    "labels": {
+      "original_image": "Originalbild",
+      "prompt_text": "Prompt",
+      "ai_generated_video": "KI-generiertes Video",
+      "video_duration": "8 Sekunden",
+      "video_quality": "720P",
+      "video_info": "8s • 720P",
+      "browser_not_supported": "Ihr Browser unterstützt keine Videowiedergabe."
+    }
+  }
+}

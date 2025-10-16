@@ -29,6 +29,10 @@ export async function getSora2Page(locale: string): Promise<any> {
   return (await getPage("sora2", locale)) as any;
 }
 
+export async function getVeo3_1Page(locale: string): Promise<any> {
+  return (await getPage("veo3-1", locale)) as any;
+}
+
 export async function getPage(
   name: string,
   locale: string

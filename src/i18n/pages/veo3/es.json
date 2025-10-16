@@ -66,6 +66,14 @@
       "click_or_drag": "Haz clic o arrastra para subir",
       "processing": "Procesando..."
     },
+    "keyframe_mode": {
+      "label": "Modo de Fotogramas Clave",
+      "description": "Puede controlar con precisión el inicio y el final de su video AI, permitiéndole controlar el primer y último fotograma y crear transiciones cinematográficas suaves",
+      "start_frame": "Fotograma Inicial",
+      "end_frame": "Fotograma Final",
+      "start_frame_required": "Por favor sube la imagen del fotograma inicial",
+      "end_frame_required": "Por favor sube la imagen del fotograma final"
+    },
     "prompt": {
       "label": "Prompt",
       "tooltip": "Describe el video que quieres generar. Sé específico y detallado para mejores resultados.",
@@ -168,6 +176,8 @@
       "insufficient_credits": "Necesitas ${credits} créditos para generar con modo ${mode}",
       "uploading_image": "Subiendo imagen...",
       "image_uploaded": "Imagen subida exitosamente",
+      "uploading_images": "Subiendo fotogramas inicial y final...",
+      "images_uploaded": "Fotogramas inicial y final subidos exitosamente",
       "upload_failed": "Error al subir la imagen",
       "upgraded_1080p": "¡Actualizado a 1080P! Tu video de alta calidad está listo",
       "upgrade_timeout": "Tiempo de espera de actualización a 1080P. El servidor todavía está procesando, por favor intenta de nuevo más tarde.",

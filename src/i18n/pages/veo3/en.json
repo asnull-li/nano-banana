@@ -66,6 +66,14 @@
       "click_or_drag": "Click or drag to upload",
       "processing": "Processing..."
     },
+    "keyframe_mode": {
+      "label": "Keyframe Mode",
+      "description": "You can precisely control the start and end of your AI video, allowing you to control the first and last frames and create smooth cinematic transitions",
+      "start_frame": "Start Frame",
+      "end_frame": "End Frame",
+      "start_frame_required": "Please upload start frame image",
+      "end_frame_required": "Please upload end frame image"
+    },
     "prompt": {
       "label": "Prompt",
       "tooltip": "Describe the video you want to generate. Be specific and detailed for best results.",
@@ -168,6 +176,8 @@
       "insufficient_credits": "You need ${credits} credits to generate with ${mode} mode",
       "uploading_image": "Uploading image...",
       "image_uploaded": "Image uploaded successfully",
+      "uploading_images": "Uploading start and end frames...",
+      "images_uploaded": "Start and end frames uploaded successfully",
       "upload_failed": "Failed to upload image",
       "upgraded_1080p": "Upgraded to 1080P! Your high-quality video is ready",
       "upgrade_timeout": "1080P upgrade timeout. The server is still processing, please try again later.",

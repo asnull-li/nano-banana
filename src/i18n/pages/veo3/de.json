@@ -66,6 +66,14 @@
       "click_or_drag": "Klicken oder ziehen Sie zum Hochladen",
       "processing": "Verarbeitung..."
     },
+    "keyframe_mode": {
+      "label": "Keyframe-Modus",
+      "description": "Sie können den Start und das Ende Ihres KI-Videos präzise steuern, sodass Sie das erste und letzte Bild kontrollieren und fließende filmische Übergänge erstellen können",
+      "start_frame": "Startbild",
+      "end_frame": "Endbild",
+      "start_frame_required": "Bitte laden Sie das Startbild hoch",
+      "end_frame_required": "Bitte laden Sie das Endbild hoch"
+    },
     "prompt": {
       "label": "Prompt",
       "tooltip": "Beschreiben Sie das Video, das Sie generieren möchten. Seien Sie spezifisch und detailliert für beste Ergebnisse.",
@@ -168,6 +176,8 @@
       "insufficient_credits": "Sie benötigen ${credits} Credits, um mit ${mode}-Modus zu generieren",
       "uploading_image": "Bild wird hochgeladen...",
       "image_uploaded": "Bild erfolgreich hochgeladen",
+      "uploading_images": "Hochladen des Start- und Endbilds...",
+      "images_uploaded": "Start- und Endbild erfolgreich hochgeladen",
       "upload_failed": "Fehler beim Hochladen des Bildes",
       "upgraded_1080p": "Auf 1080P aktualisiert! Ihr hochwertiges Video ist bereit",
       "upgrade_timeout": "1080P-Upgrade-Zeitüberschreitung. Der Server verarbeitet noch, bitte versuchen Sie es später erneut.",

@@ -27,7 +27,7 @@ export const MIN_PROMPT_LENGTH = 3;
 export const MAX_PROMPT_LENGTH = 2000;
 
 // 图片URL数量限制（image-to-video 模式）
-export const MAX_IMAGE_URLS = 1; // Veo3 目前支持1张图片
+export const MAX_IMAGE_URLS = 2; // Veo3 支持最多2张图片（首尾帧模式）
 
 // 根据模型获取积分消耗
 export function getCreditsForModel(model: Veo3Model): number {

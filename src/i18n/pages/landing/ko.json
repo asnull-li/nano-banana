@@ -23,6 +23,11 @@
           "icon": "RiImageAiFill"
         },
         {
+          "title": "Veo3.1",
+          "url": "/veo3-1",
+          "icon": "RiImageAiFill"
+        },
+        {
           "title": "Sora2",
           "url": "/sora2",
           "icon": "RiImageAiFill"
@@ -429,8 +434,13 @@
               "target": "_self"
             },
             {
-              "title": "Veo3",
+              "title": "Veo 3",
               "url": "/veo3",
+              "target": "_self"
+            },
+            {
+              "title": "Veo 3.1",
+              "url": "/veo3-1",
               "target": "_self"
             },
             {

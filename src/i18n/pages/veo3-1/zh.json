@@ -1,0 +1,292 @@
+{
+  "meta": {
+    "title": "Veo3.1 视频生成器 - 关键帧控制与原生音频",
+    "description": "使用 Veo3.1 创建电影级视频。关键帧控制、8秒以上扩展、多图片参考、原生音频。从文本或图片生成 1080P 高质量视频。"
+  },
+  "hero": {
+    "title": "Veo3.1 AI视频生成器",
+    "description": "体验 Veo3.1 带来的电影级 AI 视频创作。使用关键帧模式控制每一帧，将场景扩展至 8 秒以上，并生成同步的原生音频。Veo3.1 带来逼真的动作生成、多图片参考控制和 1080P 高质量。从文本或图片到专业视频——今天就开始使用 Veo3.1 创作吧。"
+  },
+  "features": {
+    "title": "Veo3.1 AI视频生成器的革命性功能",
+    "description": "Veo3.1 为电影级视频制作引入了突破性功能。控制关键帧、扩展时长、使用多图片参考，并使用 Google 最先进的 AI 视频技术生成原生音频。",
+    "items": [
+      {
+        "title": "Veo3.1 的关键帧控制 - 精确控制首尾帧",
+        "description": "使用关键帧模式精确控制 AI 视频的开始和结束。控制第一帧和最后一帧，创造流畅的电影级过渡效果。这个关键帧功能为你的片段赋予清晰的节奏和韵律，确保每个场景都感觉完整且富有意图，拥有先进的帧控制能力。"
+      },
+      {
+        "title": "Veo3.1 的多图片参考",
+        "description": "使用多个参考图片引导视频的视觉方向。提供不同的图片来塑造角色设计、光线风格或色调。Veo3.1 确保每个镜头的视觉一致性，在整个生成视频中保持连贯的美学，采用多图片参考技术。"
+      },
+      {
+        "title": "Veo3.1 的原生音频和增强音效",
+        "description": "Veo3.1 会自动为你的创作添加原生音频，包括对话、环境音效和动作同步音频。音频与视觉完美同步，增强沉浸感和真实感。这消除了单独音频编辑的需求，并通过专业声音让视频栩栩如生。"
+      },
+      {
+        "title": "将视频时长扩展至 8 秒以上",
+        "description": "使用扩展功能突破 8 秒限制。自然地延续动作和叙事，创建更长、更动态的视频。Veo3.1 允许无缝的场景延续,非常适合复杂的故事讲述和专业视频制作。"
+      },
+      {
+        "title": "Veo3.1 的角色一致性设计",
+        "description": "上传角色参考图片，确保在每一帧中保持一致的身份、外观和动作。Veo3.1 在多个场景中保持视觉一致性，创造流畅、专业的叙事。这个角色一致性功能非常适合角色驱动的故事讲述和品牌内容。"
+      }
+    ]
+  },
+  "how_to_use": {
+    "title": "如何使用 Veo3.1 AI视频生成器创建电影级视频",
+    "description": "通过简单的步骤使用 Veo3.1 生成专业视频。使用关键帧控制、多图片参考和原生音频创建电影级质量的内容。",
+    "items": [
+      {
+        "title": "使用关键帧或图片设置你的 Veo3.1 项目",
+        "description": "通过输入详细的文本提示词或上传图片开始你的 Veo3.1 视频创作。使用 Veo3.1 的关键帧模式控制开始和结束帧，或提供多个参考图片以保持一致的视觉风格。Veo3.1 支持文本生成视频和图片生成视频，并具有高级控制选项。"
+      },
+      {
+        "title": "配置 Veo3.1 高级生成设置",
+        "description": "使用专业选项自定义你的 Veo3.1 视频。启用关键帧控制，选择多个参考图片以保持角色一致性，选择 720P 或升级到 1080P 质量。Veo3.1 允许你微调创意控制，包括动作生成和音频同步，以获得最佳的电影级效果。"
+      },
+      {
+        "title": "生成、扩展并下载你的 Veo3.1 视频",
+        "description": "点击生成，让 Veo3.1 创建你的专业视频，带有原生音频。使用 Veo3.1 的扩展功能将视频延续至 8 秒以上。一旦 Veo3.1 完成处理，预览带有同步音效的视频，并以你喜欢的质量下载。你的 Veo3.1 生成的视频已准备好用于专业用途。"
+      }
+    ]
+  },
+  "workspace": {
+    "mode_selector": {
+      "text_to_video": "文本生成视频",
+      "image_to_video": "图片生成视频"
+    },
+    "upload_zone": {
+      "title": "上传参考图片",
+      "description": "上传图片用于 Veo3.1 多图片参考或关键帧控制",
+      "supported_formats": "支持格式：JPEG、PNG、WebP",
+      "max_size": "最大文件大小：10MB",
+      "error_file_too_large": "文件过大。最大大小为 10MB。",
+      "error_invalid_type": "无效的文件类型。请上传图片。",
+      "preview_alt": "Veo3.1 参考图片预览",
+      "delete_tooltip": "移除图片",
+      "replace_tooltip": "替换图片",
+      "drop_text": "拖放到此处上传到 Veo3.1",
+      "click_or_drag": "点击或拖拽上传",
+      "processing": "处理中..."
+    },
+    "keyframe_mode": {
+      "label": "关键帧模式",
+      "description": "Veo3.1 允许你精确控制 AI 视频的开始和结束。使用 Veo3.1 的关键帧功能控制第一帧和最后一帧，创造流畅的电影级过渡效果并保持叙事流畅。",
+      "start_frame": "首帧",
+      "end_frame": "尾帧",
+      "start_frame_required": "请上传首帧图片",
+      "end_frame_required": "请上传尾帧图片"
+    },
+    "prompt": {
+      "label": "提示词",
+      "tooltip": "描述你想生成的视频。具体详细的描述将获得最佳效果。",
+      "placeholder": "描述你的视频... 例如：'一只可爱的猫正在玩毛线球，慢动作，电影级打光，4K 画质'",
+      "min_chars_required": "最少需要 ${count} 个字符",
+      "approaching_limit": "接近字符限制"
+    },
+    "controls": {
+      "model_label": "模型",
+      "model_tooltip_line1": "快速模式：快速生成",
+      "model_tooltip_line2": "质量模式：最佳质量输出",
+      "model_fast": "快速模式",
+      "model_fast_desc": "快速生成",
+      "model_quality": "质量模式",
+      "model_quality_desc": "高质量输出",
+      "aspect_ratio_label": "宽高比",
+      "aspect_ratio_tooltip_line1": "16:9 支持 1080P 升级",
+      "aspect_ratio_tooltip_line2": "9:16 适合移动端视频",
+      "aspect_ratio_tooltip_line3": "自动让 AI 决定",
+      "advanced_options": "高级选项",
+      "watermark_label": "水印",
+      "watermark_placeholder": "添加文字水印...",
+      "random_seed_label": "随机种子",
+      "random_seed_tooltip_line1": "控制视频随机性 (10000-99999)。",
+      "random_seed_tooltip_line2": "相同种子生成相似视频。",
+      "random_seed_tooltip_line3": "留空自动分配。",
+      "random_seed_placeholder": "10000 - 99999",
+      "random_seed_hint": "相同种子生成相似视频。留空自动分配。",
+      "auto_translate_label": "自动翻译提示词",
+      "auto_translate_tooltip_line1": "自动将非英文提示词翻译为英文，以获得更好的视频生成质量。",
+      "auto_translate_tooltip_line2": "建议保持启用以获得最佳效果。",
+      "auto_translate_enabled": "提示词将自动翻译为英文",
+      "auto_translate_disabled": "将使用原始提示词语言",
+      "credits_cost": "积分消耗",
+      "credits_unit": "积分"
+    },
+    "generate_button": {
+      "uploading": "上传中...",
+      "generating": "生成中...",
+      "generate": "生成视频 (${credits} 积分)"
+    },
+    "empty_state": {
+      "title": "还没有视频",
+      "description": "输入提示词并点击生成，使用 Veo3.1 的关键帧控制和原生音频创建你的第一个视频",
+      "modes": "使用 Veo3.1 进行文本生成视频或图片生成视频"
+    },
+    "processing_state": {
+      "uploading_title": "上传中...",
+      "generating_title": "正在生成视频...",
+      "uploading_description": "正在上传你的图片到服务器...",
+      "generating_description": "你的视频正在生成中。这可能需要几分钟...",
+      "model_quality": "质量模式",
+      "model_fast": "快速模式",
+      "prompt_label": "提示词：",
+      "dont_close": "生成过程中请不要关闭此页面..."
+    },
+    "failed_state": {
+      "title": "生成失败",
+      "error_default": "视频生成过程中发生意外错误",
+      "prompt_label": "你的提示词：",
+      "credits_refunded": "你的积分已退还。如果问题持续存在，请联系我们的支持团队。",
+      "try_again": "重试",
+      "contact_support": "联系客服",
+      "need_help": "需要帮助？发送邮件至："
+    },
+    "completed_state": {
+      "quality_720p": "720p",
+      "quality_1080p": "1080p 高清",
+      "download": "下载",
+      "downloading": "下载中...",
+      "preparing_1080p": "正在准备 1080P 高清版本",
+      "preparing_1080p_hint": "这可能需要 1-2 分钟。视频准备好后会自动出现...",
+      "completed": "已完成",
+      "mode_quality": "质量",
+      "mode_fast": "快速",
+      "upgrade_button": "升级到 1080p (${credits} 积分)",
+      "upgrading": "升级中...",
+      "input_image_label": "输入图片："
+    },
+    "upgrade_modal": {
+      "title": "升级到 1080P",
+      "description": "将你的视频升级到超清晰的 1080P 分辨率，获得更好的观看体验。",
+      "enhanced_quality_title": "增强质量",
+      "enhanced_quality_description": "将你的视频升级到超清晰的 1080P 分辨率，获得更好的观看体验和专业呈现效果。",
+      "cost_label": "费用",
+      "balance_label": "你的余额",
+      "insufficient_credits": "你的积分不足。请先充值。",
+      "hint": "升级后的 1080P 视频将被生成并保存在你的 720P 版本旁边。你可以随时在它们之间切换。",
+      "cancel": "取消",
+      "confirm": "确认 (${credits} 积分)",
+      "confirming": "升级中..."
+    },
+    "toast": {
+      "video_generated": "视频已生成！你的视频已准备好观看。",
+      "error_occurred": "生成过程中发生错误",
+      "prompt_required": "请输入提示词以生成视频",
+      "prompt_length_error": "提示词必须在 3 到 5000 个字符之间",
+      "image_required": "请上传图片以进行图片生成视频",
+      "login_required": "请登录以生成视频",
+      "insufficient_credits": "你需要 ${credits} 积分来使用 ${mode} 模式生成",
+      "uploading_image": "正在上传图片...",
+      "image_uploaded": "图片上传成功",
+      "upload_failed": "上传图片失败",
+      "upgraded_1080p": "已升级到 1080P！你的高清视频已准备就绪",
+      "upgrade_timeout": "1080P 升级超时。服务器仍在处理中，请稍后重试。",
+      "preparing_1080p": "服务器正在准备 1080P 视频。这将需要 1-2 分钟，请稍候...",
+      "still_processing": "仍在处理中... (已过 ${seconds} 秒)",
+      "upgrade_failed": "升级视频失败",
+      "need_credits_1080p": "你需要 ${credits} 积分进行 1080P 升级",
+      "downloading_video": "正在下载 ${quality} 视频...",
+      "download_success": "${quality} 视频下载成功",
+      "download_failed": "下载视频失败。请重试。",
+      "new_video": "新视频"
+    }
+  },
+  "faq": {
+    "title": "Veo3.1 视频生成器 - 常见问题",
+    "description": "获取关于 Veo3.1 AI 视频生成、关键帧控制、多图片参考和原生音频功能的常见问题解答。",
+    "contact": {
+      "question_text": "有更多关于 Veo3.1 的问题？",
+      "support_link": "联系我们的 Veo3.1 支持团队"
+    },
+    "items": [
+      {
+        "question": "什么是 Veo3.1？与 Veo 3 相比有什么新功能？",
+        "answer": "Veo3.1 是 Google 最新的 AI 视频生成模型，具有革命性的新功能。Veo3.1 引入了关键帧控制以实现精确的首尾帧管理、多图片参考支持以保持一致的视觉风格、增强的原生音频和更丰富的音效、将视频扩展至 8 秒以上的能力，以及改进的跨场景角色一致性。Veo3.1 提供 1080P 分辨率的电影级质量视频和逼真的动作生成。"
+      },
+      {
+        "question": "Veo3.1 的关键帧控制是如何工作的？",
+        "answer": "Veo3.1 的关键帧控制允许你精确定义视频的第一帧和最后一帧。上传开始和结束帧图片，Veo3.1 会在它们之间生成流畅的过渡。这个功能让你完全控制视频的开始和结束方式，创造电影级的过渡效果，并在整个生成内容中保持叙事流畅。"
+      },
+      {
+        "question": "Veo3.1 的多图片参考是什么？",
+        "answer": "Veo3.1 的多图片参考允许你使用多个参考图片引导视频的视觉方向。提供不同的图片来定义角色设计、光线风格、色彩搭配或场景构成。Veo3.1 确保所有帧的视觉一致性，在整个生成视频中保持连贯的美学。这使其非常适合保持品牌形象和角色一致性。"
+      },
+      {
+        "question": "Veo3.1 会生成原生音频吗？",
+        "answer": "是的！Veo3.1 具有增强的原生音频生成功能和更丰富的音效。它自动创建同步的对话、环境声音和与动作匹配的音频效果，与你的视频视觉完美同步。音频经过专业混音和同步，消除了单独音频编辑的需求，让你的 Veo3.1 视频栩栩如生。"
+      },
+      {
+        "question": "我可以将 Veo3.1 视频扩展至 8 秒以上吗？",
+        "answer": "可以！Veo3.1 的扩展功能允许你突破 8 秒限制。你可以自然地延续动作和叙事，创建更长、更动态的视频。Veo3.1 的扩展功能保持视觉和叙事的一致性，非常适合需要延长时长的复杂故事讲述和专业视频项目。"
+      },
+      {
+        "question": "Veo3.1 的角色一致性是如何工作的？",
+        "answer": "Veo3.1 的角色一致性功能确保你的角色在所有帧中保持相同的身份、外观和风格。上传角色参考图片，Veo3.1 会在整个视频中保持视觉一致性。这使其非常适合角色驱动的叙事、品牌吉祥物以及需要角色识别的多场景故事讲述。"
+      },
+      {
+        "question": "Veo3.1 与其他 AI 视频生成器有什么不同？",
+        "answer": "Veo3.1 以突破性功能脱颖而出：用于精确帧管理的关键帧控制、用于一致风格的多图片参考、扩展至 8 秒以上的视频时长、带有同步音效的增强原生音频、改进的角色一致性，以及具有 1080P 质量的逼真动作生成。Veo3.1 由 Google DeepMind 开发，为创作者和电影制作人带来最先进的 AI 视频技术。"
+      },
+      {
+        "question": "我可以将 Veo3.1 生成的视频用于商业用途吗？",
+        "answer": "可以！使用 Veo3.1 生成的所有视频都适合商业使用。Veo3.1 根据你的提示词和参考图片创建原创内容，非常适合营销视频、社交媒体内容、品牌演示和专业电影项目。Veo3.1 的高质量输出带有原生音频和 1080P 分辨率，可用于商业应用的生产级质量。"
+      },
+      {
+        "question": "Veo3.1 视频生成的费用是多少？",
+        "answer": "Veo3.1 视频生成使用基于积分的系统。每个 720P Veo3.1 视频需要一定数量的积分，1080P 高清升级需要额外的积分。关键帧控制、多图片参考和视频扩展等高级功能包含在生成成本中。这种灵活的定价确保你只为创建的 Veo3.1 视频付费，并完全访问所有专业功能。"
+      },
+      {
+        "question": "Veo3.1 提供哪些创意控制？",
+        "answer": "Veo3.1 提供广泛的创意控制：用于精确首尾帧控制的关键帧模式、用于一致视觉风格的多图片参考、跨场景的角色一致性、扩展至 8 秒以上的视频、原生音频生成和逼真的动作控制。这些 Veo3.1 功能为你提供电影级的精度，用于专业电影制作、品牌内容和具有完全创意自由的复杂故事讲述项目。"
+      },
+      {
+        "question": "Veo3.1 适合初学者吗？",
+        "answer": "当然！虽然 Veo3.1 为专业人士提供了关键帧控制和多图片参考等高级功能，但它的设计旨在让每个人都能轻松使用。只需输入文字描述或上传图片，Veo3.1 就会处理复杂的视频生成过程。我们直观的界面让你可以立即开始创建带有原生音频和电影级质量的专业 Veo3.1 视频，无论你的技术背景如何。"
+      },
+      {
+        "question": "Veo3.1 生成的视频有多长？",
+        "answer": "Veo3.1 生成的视频从 8 秒开始，但通过创新的扩展功能，你可以通过自然地延续动作和叙事来创建更长的视频。与以前的模型不同，Veo3.1 允许你使用扩展能力突破 8 秒限制，让你可以灵活地创建不同长度的视频，同时保持高质量输出和视觉一致性。"
+      },
+      {
+        "question": "如何获得更好的 Veo3.1 视频质量？",
+        "answer": "要获得最佳的 Veo3.1 视频质量：1) 使用详细的提示词描述场景、动作、光线和风格；2) 利用 Veo3.1 的关键帧控制来定义精确的开始和结束帧；3) 提供多个参考图片以保持一致的风格；4) 为角色驱动的内容启用角色一致性；5) 选择质量模式以获得精细效果；6) 升级到 1080P 高清以获得超清晰的专业呈现和增强的分辨率。"
+      },
+      {
+        "question": "为什么我的 Veo3.1 视频生成失败？",
+        "answer": "Veo3.1 视频生成可能因几个原因失败：1) 你的提示词违反了关于真实人物、儿童、暴力或敏感内容的内容政策 - Veo3.1 执行严格的内容指南；2) 关键帧图片可能不兼容或质量低；3) 查看具体的错误消息以了解确切的失败原因；4) 确保参考图片符合格式要求。如果问题持续存在，请联系我们的 Veo3.1 支持团队。"
+      },
+      {
+        "question": "如何使用 Veo3.1 创建更长的视频？",
+        "answer": "Veo3.1 提供两种创建更长视频的方法：1) 使用 Veo3.1 的内置扩展功能自然地将视频延续至 8 秒以上，保持视觉和叙事的一致性；2) 使用一致的关键帧和角色参考生成多个 Veo3.1 片段，然后使用视频编辑工具创建无缝的更长内容。Veo3.1 的关键帧控制和角色一致性功能使多片段项目自然流畅。"
+      }
+    ]
+  },
+  "examples": {
+    "title": "Veo3.1 创作示例 - 关键帧控制与多图片参考",
+    "subtitle": "探索 Veo3.1 革命性的视频生成能力，包括关键帧控制、多图片参考和原生音频。从图片到电影级视频，体验 Veo3.1 AI 视频创作的无限可能。",
+    "image_to_video": {
+      "title": "使用 Veo3.1 进行图片生成视频",
+      "description": "上传一张静态图片或使用 Veo3.1 的多图片参考功能。Veo3.1 为图片注入生命力，创造逼真的动作，通过同步的原生音频创建流畅自然的动态视频效果。",
+      "input_image_url": "https://file.nanobanana.org/showcase/veo3/woman-city-doodle.jpg",
+      "input_image_alt": "城市涂鸦风格女性插画，用于 Veo3.1",
+      "output_video_url": "https://file.nanobanana.org/showcase/veo3/woman-city-doodle.mp4"
+    },
+    "text_to_video": {
+      "title": "使用 Veo3.1 进行文本生成视频",
+      "description": "通过详细的文字描述，Veo3.1 理解你的创意愿景，并生成带有原生音频和逼真动作的令人惊叹的电影级内容",
+      "input_prompt": "超快速的追踪镜头穿过一座错综复杂的未来都市，高耸的建筑物由反射性的有机铬制成，在明亮的正午阳光下闪闪发光。彩虹般的光芒和水晶般的散景在镜头中四处散播，摄像机在结构之间动态穿梭。画面过渡到一个无缝的近距离放大镜头，镜头对准了一个半透明的铬制蜂巢，一只高度详细的机器人工蜂正在以机械精度进行工作。场景以超现实的4K清晰度、柔和的镜头深度和背景中的环境科幻音频呈现，营造出一部高预算赛博朋克电影的氛围。",
+      "output_video_url": "https://file.nanobanana.org/showcase/veo3/tmp7uoz8hjv.mp4"
+    },
+    "labels": {
+      "original_image": "原始图片",
+      "prompt_text": "提示词",
+      "ai_generated_video": "AI 生成视频",
+      "video_duration": "8秒",
+      "video_quality": "720P",
+      "video_info": "8秒 • 720P",
+      "browser_not_supported": "你的浏览器不支持视频播放。"
+    }
+  }
+}

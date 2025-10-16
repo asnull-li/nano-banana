@@ -2,7 +2,9 @@
 
 import { useState, useCallback, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
-import { Wand2, RefreshCw } from "lucide-react";
+import { Switch } from "@/components/ui/switch";
+import { Label } from "@/components/ui/label";
+import { Wand2, RefreshCw, Info } from "lucide-react";
 import { useCredits } from "@/hooks/use-credits";
 import { useAppContext } from "@/contexts/app";
 import { useRouter } from "next/navigation";
@@ -45,9 +47,7 @@ export default function Veo3Workspace({
     useVeo3API();
 
   // State
-  const [mode, setMode] = useState<Veo3TaskType>(
-    initialImageUrl ? "image-to-video" : "text-to-video"
-  );
+  const [mode, setMode] = useState<Veo3TaskType>("image-to-video");
   const [prompt, setPrompt] = useState("");
   const [model, setModel] = useState<Veo3Model>(DEFAULT_VEO3_MODEL);
   const [aspectRatio, setAspectRatio] =
@@ -68,6 +68,12 @@ export default function Veo3Workspace({
   const [downloadingQuality, setDownloadingQuality] = useState<
     "720p" | "1080p" | null
   >(null);
+
+  // Keyframe mode states
+  const [keyframeMode, setKeyframeMode] = useState(false);
+  const [endImageFile, setEndImageFile] = useState<File | null>(null);
+  const [endImagePreview, setEndImagePreview] = useState<string | null>(null);
+  const [isEndImageUrlMode, setIsEndImageUrlMode] = useState<boolean>(false);
 
   // Polling
   const pollingIntervalRef = useRef<NodeJS.Timeout | null>(null);
@@ -152,14 +158,24 @@ export default function Veo3Workspace({
   const handleModeChange = (newMode: Veo3TaskType) => {
     setMode(newMode);
 
-    // Clear image when switching to text-to-video
-    if (newMode === "text-to-video" && inputImagePreview) {
-      if (inputImagePreview.startsWith("blob:")) {
+    // Clear images when switching to text-to-video
+    if (newMode === "text-to-video") {
+      // Clear start frame
+      if (inputImagePreview && inputImagePreview.startsWith("blob:")) {
         URL.revokeObjectURL(inputImagePreview);
       }
       setInputImageFile(null);
       setInputImagePreview(null);
       setIsUrlMode(false);
+
+      // Clear end frame and keyframe mode
+      if (endImagePreview && endImagePreview.startsWith("blob:")) {
+        URL.revokeObjectURL(endImagePreview);
+      }
+      setEndImageFile(null);
+      setEndImagePreview(null);
+      setIsEndImageUrlMode(false);
+      setKeyframeMode(false);
     }
 
     // Change aspect ratio if Auto is selected but switching to text-to-video
@@ -203,6 +219,43 @@ export default function Veo3Workspace({
       setInputImageFile(null);
       setInputImagePreview(url); // 直接使用原始URL作为预览
       setIsUrlMode(true); // 标记为URL模式
+    },
+    []
+  );
+
+  // Handle end image selection (for keyframe mode)
+  const handleEndImageSelect = useCallback(
+    (file: File, preview: string) => {
+      // Empty file means remove
+      if (!file.name) {
+        if (endImagePreview && endImagePreview.startsWith("blob:")) {
+          URL.revokeObjectURL(endImagePreview);
+        }
+        setEndImageFile(null);
+        setEndImagePreview(null);
+        setIsEndImageUrlMode(false);
+        return;
+      }
+
+      // 清理旧的 blob URL
+      if (endImagePreview && endImagePreview.startsWith("blob:")) {
+        URL.revokeObjectURL(endImagePreview);
+      }
+
+      // 保存文件和预览
+      setEndImageFile(file);
+      setEndImagePreview(preview);
+      setIsEndImageUrlMode(false);
+    },
+    [endImagePreview]
+  );
+
+  // Handle end image upload from URL (for keyframe mode)
+  const handleEndImageUploadFromUrl = useCallback(
+    (url: string, _filename: string) => {
+      setEndImageFile(null);
+      setEndImagePreview(url);
+      setIsEndImageUrlMode(true);
     },
     []
   );
@@ -346,12 +399,34 @@ export default function Veo3Workspace({
     };
   }, [inputImagePreview]);
 
+  // Cleanup end image blob URL on unmount
+  useEffect(() => {
+    return () => {
+      if (endImagePreview && endImagePreview.startsWith("blob:")) {
+        URL.revokeObjectURL(endImagePreview);
+      }
+    };
+  }, [endImagePreview]);
+
   // Handle initial image URL from query params
   useEffect(() => {
     if (initialImageUrl && initialImageUrl.trim()) {
       loadImageFromUrl(initialImageUrl);
     }
   }, [initialImageUrl, loadImageFromUrl]);
+
+  // Handle keyframe mode toggle - clear end frame when disabled
+  useEffect(() => {
+    if (!keyframeMode && endImagePreview) {
+      // Clear end frame when keyframe mode is disabled
+      if (endImagePreview.startsWith("blob:")) {
+        URL.revokeObjectURL(endImagePreview);
+      }
+      setEndImageFile(null);
+      setEndImagePreview(null);
+      setIsEndImageUrlMode(false);
+    }
+  }, [keyframeMode]);
 
   // Handle generate
   const handleGenerate = async () => {
@@ -372,12 +447,29 @@ export default function Veo3Workspace({
     }
 
     // Check image for image-to-video mode
-    if (mode === "image-to-video" && !inputImageFile && !isUrlMode) {
-      toast.error(
-        t.toast?.image_required ||
-          "Please upload an image for image-to-video generation"
-      );
-      return;
+    if (mode === "image-to-video") {
+      if (keyframeMode) {
+        // Keyframe mode: need both start and end images
+        if (!inputImageFile && !isUrlMode) {
+          toast.error(
+            t.keyframe_mode?.start_frame_required || "请上传首帧图片"
+          );
+          return;
+        }
+        if (!endImageFile && !isEndImageUrlMode) {
+          toast.error(t.keyframe_mode?.end_frame_required || "请上传尾帧图片");
+          return;
+        }
+      } else {
+        // Single image mode: need one image
+        if (!inputImageFile && !isUrlMode) {
+          toast.error(
+            t.toast?.image_required ||
+              "Please upload an image for image-to-video generation"
+          );
+          return;
+        }
+      }
     }
 
     // Check login
@@ -432,32 +524,69 @@ export default function Veo3Workspace({
     setCurrentTask(initialTask);
 
     try {
-      let uploadedImageUrl: string | undefined = undefined;
+      let uploadedImageUrls: string[] = [];
 
-      // Upload image first if in image-to-video mode
+      // Upload image(s) first if in image-to-video mode
       if (mode === "image-to-video") {
-        if (isUrlMode && inputImagePreview) {
-          // URL模式：直接使用原始URL，跳过上传步骤
-          uploadedImageUrl = inputImagePreview;
-          toast.info(t.toast?.processing_start || "Using image from URL...");
-        } else if (inputImageFile) {
-          // File模式：需要先上传文件
+        if (keyframeMode) {
+          // Keyframe mode: upload start and end frames
           setIsUploading(true);
-          toast.info(t.toast?.uploading_image || "Uploading image...");
+          toast.info(
+            t.toast?.uploading_images || "Uploading start and end frames..."
+          );
 
           try {
-            uploadedImageUrl = await uploadImage(inputImageFile);
+            // Upload start frame
+            const startUrl = isUrlMode
+              ? inputImagePreview!
+              : await uploadImage(inputImageFile!);
+
+            // Upload end frame
+            const endUrl = isEndImageUrlMode
+              ? endImagePreview!
+              : await uploadImage(endImageFile!);
+
+            uploadedImageUrls = [startUrl, endUrl];
+
             toast.success(
-              t.toast?.image_uploaded || "Image uploaded successfully"
+              t.toast?.images_uploaded ||
+                "Start and end frames uploaded successfully"
             );
           } catch (error) {
             throw new Error(
               error instanceof Error
                 ? error.message
-                : t.toast?.upload_failed || "Failed to upload image"
+                : t.toast?.upload_failed || "Failed to upload images"
             );
           } finally {
             setIsUploading(false);
+          }
+        } else {
+          // Single image mode
+          if (isUrlMode && inputImagePreview) {
+            // URL模式：直接使用原始URL，跳过上传步骤
+            uploadedImageUrls = [inputImagePreview];
+            toast.info(t.toast?.processing_start || "Using image from URL...");
+          } else if (inputImageFile) {
+            // File模式：需要先上传文件
+            setIsUploading(true);
+            toast.info(t.toast?.uploading_image || "Uploading image...");
+
+            try {
+              const url = await uploadImage(inputImageFile);
+              uploadedImageUrls = [url];
+              toast.success(
+                t.toast?.image_uploaded || "Image uploaded successfully"
+              );
+            } catch (error) {
+              throw new Error(
+                error instanceof Error
+                  ? error.message
+                  : t.toast?.upload_failed || "Failed to upload image"
+              );
+            } finally {
+              setIsUploading(false);
+            }
           }
         }
       }
@@ -466,7 +595,7 @@ export default function Veo3Workspace({
       setCurrentTask({
         ...initialTask,
         status: "processing",
-        inputImage: uploadedImageUrl || null,
+        inputImage: uploadedImageUrls.length > 0 ? uploadedImageUrls[0] : null,
       });
 
       // Submit task - returns task_id as string
@@ -474,7 +603,7 @@ export default function Veo3Workspace({
         type: mode,
         prompt,
         model,
-        image_urls: uploadedImageUrl ? [uploadedImageUrl] : undefined,
+        image_urls: uploadedImageUrls.length > 0 ? uploadedImageUrls : undefined,
         aspect_ratio: aspectRatio,
         watermark: watermark || undefined,
         seeds,
@@ -489,7 +618,7 @@ export default function Veo3Workspace({
         prompt,
         model,
         aspectRatio,
-        inputImage: uploadedImageUrl || null,
+        inputImage: uploadedImageUrls.length > 0 ? uploadedImageUrls[0] : null,
         video720pUrl: null,
         video1080pUrl: null,
         has1080p: false,
@@ -660,17 +789,25 @@ export default function Veo3Workspace({
 
   // Handle reset
   const handleReset = () => {
-    // 清理 blob URL
+    // 清理首帧 blob URL
     if (inputImagePreview && inputImagePreview.startsWith("blob:")) {
       URL.revokeObjectURL(inputImagePreview);
     }
+    // 清理尾帧 blob URL
+    if (endImagePreview && endImagePreview.startsWith("blob:")) {
+      URL.revokeObjectURL(endImagePreview);
+    }
 
     setCurrentTask(null);
-    setMode("text-to-video");
+    setMode("image-to-video");
     setPrompt("");
     setInputImageFile(null);
     setInputImagePreview(null);
     setIsUrlMode(false);
+    setKeyframeMode(false);
+    setEndImageFile(null);
+    setEndImagePreview(null);
+    setIsEndImageUrlMode(false);
     setWatermark("");
     setSeeds(undefined);
     setEnableTranslation(true);
@@ -698,17 +835,66 @@ export default function Veo3Workspace({
               texts={t.mode_selector}
             />
 
-            {/* Image Upload (only in image-to-video mode) */}
-            <div
-              style={{ display: mode === "image-to-video" ? "block" : "none" }}
-            >
-              <ImageUploadZone
-                onImageUpload={handleImageSelect}
-                currentImage={inputImagePreview}
-                disabled={isGenerating || isUploading}
-                pageData={pageData}
-              />
-            </div>
+            {/* Image Upload Zone (only in image-to-video mode) */}
+            {mode === "image-to-video" && (
+              <div className="space-y-4">
+                {/* Image Upload Zone(s) */}
+                {keyframeMode ? (
+                  <div className="grid grid-cols-2 gap-3">
+                    <ImageUploadZone
+                      label={t.keyframe_mode?.start_frame || "首帧"}
+                      onImageUpload={handleImageSelect}
+                      currentImage={inputImagePreview}
+                      disabled={isGenerating || isUploading}
+                      pageData={pageData}
+                    />
+                    <ImageUploadZone
+                      label={t.keyframe_mode?.end_frame || "尾帧"}
+                      onImageUpload={handleEndImageSelect}
+                      currentImage={endImagePreview}
+                      disabled={isGenerating || isUploading}
+                      pageData={pageData}
+                    />
+                  </div>
+                ) : (
+                  <ImageUploadZone
+                    onImageUpload={handleImageSelect}
+                    currentImage={inputImagePreview}
+                    disabled={isGenerating || isUploading}
+                    pageData={pageData}
+                  />
+                )}
+
+                {/* Keyframe Mode Switch */}
+                <div className="flex items-start gap-3 p-3 bg-gradient-to-r from-green-50 to-cyan-50 dark:from-green-950/20 dark:to-cyan-950/20 rounded-lg border border-green-200/50 dark:border-green-800/50">
+                  <div className="flex-1 space-y-2">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-2">
+                        <Label
+                          htmlFor="keyframe-mode"
+                          className="text-sm font-medium text-slate-700 dark:text-slate-300 cursor-pointer"
+                        >
+                          {t.keyframe_mode?.label || "首尾帧模式"}
+                        </Label>
+                        <Switch
+                          id="keyframe-mode"
+                          checked={keyframeMode}
+                          onCheckedChange={setKeyframeMode}
+                          disabled={isGenerating}
+                        />
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-2 text-xs text-slate-600 dark:text-slate-400">
+                      <Info className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                      <p className="leading-relaxed">
+                        {t.keyframe_mode?.description ||
+                          "您可以精确控制AI视频的开始和结束，允许您控制第一帧和最后一帧，创建流畅的电影过渡效果"}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
 
             {/* Prompt Input */}
             <PromptInputZone

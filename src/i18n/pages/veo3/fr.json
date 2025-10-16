@@ -66,6 +66,14 @@
       "click_or_drag": "Cliquez ou faites glisser pour télécharger",
       "processing": "Traitement..."
     },
+    "keyframe_mode": {
+      "label": "Mode Images Clés",
+      "description": "Vous pouvez contrôler précisément le début et la fin de votre vidéo IA, vous permettant de contrôler les première et dernière images et de créer des transitions cinématographiques fluides",
+      "start_frame": "Image de Début",
+      "end_frame": "Image de Fin",
+      "start_frame_required": "Veuillez télécharger l'image de début",
+      "end_frame_required": "Veuillez télécharger l'image de fin"
+    },
     "prompt": {
       "label": "Prompt",
       "tooltip": "Décrivez la vidéo que vous souhaitez générer. Soyez spécifique et détaillé pour de meilleurs résultats.",
@@ -168,6 +176,8 @@
       "insufficient_credits": "Vous avez besoin de ${credits} crédits pour générer avec le mode ${mode}",
       "uploading_image": "Téléchargement de l'image en cours...",
       "image_uploaded": "Image téléchargée avec succès",
+      "uploading_images": "Téléchargement des images de début et de fin...",
+      "images_uploaded": "Images de début et de fin téléchargées avec succès",
       "upload_failed": "Échec du téléchargement de l'image",
       "upgraded_1080p": "Passé à 1080P ! Votre vidéo haute qualité est prête",
       "upgrade_timeout": "Délai d'expiration de la mise à niveau 1080P. Le serveur traite toujours, veuillez réessayer plus tard.",

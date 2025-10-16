@@ -66,6 +66,14 @@
       "click_or_drag": "클릭하거나 드래그하여 업로드",
       "processing": "처리 중..."
     },
+    "keyframe_mode": {
+      "label": "키프레임 모드",
+      "description": "AI 비디오의 시작과 끝을 정확하게 제어하여 첫 번째와 마지막 프레임을 제어하고 부드러운 영화적 전환을 만들 수 있습니다",
+      "start_frame": "시작 프레임",
+      "end_frame": "끝 프레임",
+      "start_frame_required": "시작 프레임 이미지를 업로드해주세요",
+      "end_frame_required": "끝 프레임 이미지를 업로드해주세요"
+    },
     "prompt": {
       "label": "프롬프트",
       "tooltip": "생성하고 싶은 동영상을 설명하세요. 최상의 결과를 위해 구체적이고 상세하게 작성하세요.",
@@ -168,6 +176,8 @@
       "insufficient_credits": "${mode} 모드로 생성하려면 ${credits} 크레딧이 필요합니다",
       "uploading_image": "이미지 업로드 중...",
       "image_uploaded": "이미지가 성공적으로 업로드되었습니다",
+      "uploading_images": "시작 및 끝 프레임 업로드 중...",
+      "images_uploaded": "시작 및 끝 프레임이 성공적으로 업로드되었습니다",
       "upload_failed": "이미지 업로드 실패",
       "upgraded_1080p": "1080P로 업그레이드했습니다! 고품질 동영상이 준비되었습니다",
       "upgrade_timeout": "1080P 업그레이드 시간 초과. 서버가 아직 처리 중입니다. 나중에 다시 시도하세요.",

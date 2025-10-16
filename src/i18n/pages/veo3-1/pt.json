@@ -1,0 +1,292 @@
+{
+  "meta": {
+    "title": "Gerador de Vídeo Veo 3.1 - Controle de Quadros-Chave e Áudio Nativo",
+    "description": "Crie vídeos cinematográficos com Veo 3.1. Controle de quadros-chave, extensão além de 8s, referências multi-imagem, áudio nativo. Qualidade 1080P a partir de texto ou imagens."
+  },
+  "hero": {
+    "title": "Gerador de Vídeo IA Veo 3.1",
+    "description": "Experimente a criação de vídeo IA de qualidade cinematográfica com Veo 3.1. Controle cada quadro com o modo de quadros-chave, estenda cenas além de 8 segundos e gere áudio nativo sincronizado. Veo 3.1 traz geração de movimento realista, controle de referência multi-imagem e qualidade 1080P. De texto ou imagens para vídeos profissionais—comece a criar com Veo 3.1 hoje."
+  },
+  "features": {
+    "title": "Recursos Revolucionários do Gerador de Vídeo IA Veo 3.1",
+    "description": "Veo 3.1 introduz capacidades revolucionárias para produção de vídeo cinematográfico. Controle quadros-chave, estenda a duração, use referências multi-imagem e gere áudio nativo com a tecnologia de vídeo IA mais avançada do Google.",
+    "items": [
+      {
+        "title": "Controle de Quadros-Chave no Veo 3.1 - Precisão de Quadros de Início e Fim",
+        "description": "Controle precisamente o início e fim do seu vídeo IA com o modo de quadros-chave. Controle o primeiro e último quadro para criar transições cinematográficas suaves. Este recurso de quadros-chave dá aos seus clipes ritmo e cadência claros, garantindo que cada cena se sinta completa e intencional com controle avançado de quadros."
+      },
+      {
+        "title": "Referências Multi-Imagem no Veo 3.1",
+        "description": "Guie a direção visual do seu vídeo com múltiplas imagens de referência. Forneça diferentes imagens para moldar o design de personagens, estilo de iluminação ou tom de cor. Veo 3.1 garante consistência visual através de cada tomada, mantendo uma estética coerente ao longo do seu vídeo gerado com tecnologia de referência multi-imagem."
+      },
+      {
+        "title": "Áudio Nativo e Efeitos Sonoros Aprimorados no Veo 3.1",
+        "description": "Veo 3.1 adiciona automaticamente áudio nativo às suas criações, incluindo diálogos, efeitos sonoros ambientais e áudio sincronizado com a ação. O áudio se sincroniza perfeitamente com os visuais, melhorando a imersão e o realismo. Isso elimina a necessidade de edição de áudio separada e dá vida aos vídeos com som profissional."
+      },
+      {
+        "title": "Estender Duração do Vídeo Além de 8 Segundos",
+        "description": "Quebre o limite de 8 segundos com o recurso de extensão. Continue naturalmente ações e narrativas para criar vídeos mais longos e dinâmicos. Veo 3.1 permite continuação de cena sem interrupções, perfeito para narrativa complexa e produção de vídeo profissional."
+      },
+      {
+        "title": "Design de Consistência de Personagens no Veo 3.1",
+        "description": "Carregue imagens de referência de personagens para garantir identidade, aparência e ações consistentes através de cada quadro. Veo 3.1 mantém consistência visual através de múltiplas cenas, criando narrativas suaves e profissionais. Este recurso de consistência de personagens é ideal para narrativa centrada em personagens e conteúdo de marca."
+      }
+    ]
+  },
+  "how_to_use": {
+    "title": "Como Criar Vídeos Cinematográficos com o Gerador de Vídeo IA Veo 3.1",
+    "description": "Gere vídeos profissionais com Veo 3.1 em passos simples. Use controle de quadros-chave, referências multi-imagem e áudio nativo para criar conteúdo de qualidade cinematográfica.",
+    "items": [
+      {
+        "title": "Configure seu Projeto Veo 3.1 com Quadros-Chave ou Imagens",
+        "description": "Comece sua criação de vídeo Veo 3.1 inserindo um prompt de texto detalhado ou carregando imagens. Use o modo de quadros-chave do Veo 3.1 para controlar quadros de início e fim, ou forneça múltiplas imagens de referência para estilo visual consistente. Veo 3.1 suporta tanto geração de texto-para-vídeo quanto imagem-para-vídeo com opções de controle avançadas."
+      },
+      {
+        "title": "Configure Definições de Geração Avançadas do Veo 3.1",
+        "description": "Personalize seu vídeo Veo 3.1 com opções profissionais. Habilite controle de quadros-chave, selecione múltiplas imagens de referência para consistência de personagens, escolha 720P ou atualize para qualidade 1080P. Veo 3.1 permite que você ajuste controles criativos incluindo geração de movimento e sincronização de áudio para resultados cinematográficos ótimos."
+      },
+      {
+        "title": "Gere, Estenda e Baixe seu Vídeo Veo 3.1",
+        "description": "Clique em gerar e deixe o Veo 3.1 criar seu vídeo profissional com áudio nativo. Use o recurso de extensão do Veo 3.1 para continuar seu vídeo além de 8 segundos. Uma vez que o Veo 3.1 complete o processamento, visualize seu vídeo com efeitos sonoros sincronizados e baixe na sua qualidade preferida. Seu vídeo gerado pelo Veo 3.1 está pronto para uso profissional."
+      }
+    ]
+  },
+  "workspace": {
+    "mode_selector": {
+      "text_to_video": "Texto para Vídeo",
+      "image_to_video": "Imagem para Vídeo"
+    },
+    "upload_zone": {
+      "title": "Carregar Imagem de Referência",
+      "description": "Carregue imagens para referência multi-imagem do Veo 3.1 ou controle de quadros-chave",
+      "supported_formats": "Formatos suportados: JPEG, PNG, WebP",
+      "max_size": "Tamanho máximo do arquivo: 10MB",
+      "error_file_too_large": "O arquivo é muito grande. O tamanho máximo é 10MB.",
+      "error_invalid_type": "Tipo de arquivo inválido. Por favor carregue uma imagem.",
+      "preview_alt": "Pré-visualização da imagem de referência Veo 3.1",
+      "delete_tooltip": "Remover imagem",
+      "replace_tooltip": "Substituir imagem",
+      "drop_text": "Solte para carregar no Veo 3.1",
+      "click_or_drag": "Clique ou arraste para carregar",
+      "processing": "Processando..."
+    },
+    "keyframe_mode": {
+      "label": "Modo Quadros-Chave",
+      "description": "Veo 3.1 permite que você controle precisamente o início e fim do seu vídeo IA. Controle o primeiro e último quadro com o recurso de quadros-chave do Veo 3.1 para criar transições cinematográficas suaves e manter o fluxo narrativo.",
+      "start_frame": "Quadro Inicial",
+      "end_frame": "Quadro Final",
+      "start_frame_required": "Por favor carregue a imagem do quadro inicial",
+      "end_frame_required": "Por favor carregue a imagem do quadro final"
+    },
+    "prompt": {
+      "label": "Prompt",
+      "tooltip": "Descreva o vídeo que você deseja gerar. Seja específico e detalhado para melhores resultados.",
+      "placeholder": "Descreva seu vídeo... ex., 'Um gato fofo brincando com um novelo de lã em câmera lenta, iluminação cinematográfica, qualidade 4K'",
+      "min_chars_required": "Mínimo de ${count} caracteres necessários",
+      "approaching_limit": "Aproximando-se do limite de caracteres"
+    },
+    "controls": {
+      "model_label": "Modelo",
+      "model_tooltip_line1": "Modo Rápido: Geração rápida",
+      "model_tooltip_line2": "Modo Qualidade: Melhor saída de qualidade",
+      "model_fast": "Modo Rápido",
+      "model_fast_desc": "Geração rápida",
+      "model_quality": "Modo Qualidade",
+      "model_quality_desc": "Saída de alta qualidade",
+      "aspect_ratio_label": "Proporção",
+      "aspect_ratio_tooltip_line1": "16:9 suporta atualização para 1080P",
+      "aspect_ratio_tooltip_line2": "9:16 para vídeos móveis",
+      "aspect_ratio_tooltip_line3": "Auto permite que a IA decida",
+      "advanced_options": "Opções Avançadas",
+      "watermark_label": "Marca d'água",
+      "watermark_placeholder": "Adicionar marca d'água de texto...",
+      "random_seed_label": "Semente Aleatória",
+      "random_seed_tooltip_line1": "Controla aleatoriedade do vídeo (10000-99999).",
+      "random_seed_tooltip_line2": "Mesma semente gera vídeos similares.",
+      "random_seed_tooltip_line3": "Deixe em branco para atribuição automática.",
+      "random_seed_placeholder": "10000 - 99999",
+      "random_seed_hint": "Mesma semente gera vídeos similares. Deixe em branco para atribuição automática.",
+      "auto_translate_label": "Tradução Automática do Prompt",
+      "auto_translate_tooltip_line1": "Traduz automaticamente prompts não ingleses para inglês para melhor qualidade de geração de vídeo.",
+      "auto_translate_tooltip_line2": "Recomendado manter ativado para resultados ótimos.",
+      "auto_translate_enabled": "Prompts serão traduzidos automaticamente para inglês",
+      "auto_translate_disabled": "O idioma original do prompt será usado",
+      "credits_cost": "Custo de Créditos",
+      "credits_unit": "créditos"
+    },
+    "generate_button": {
+      "uploading": "Carregando...",
+      "generating": "Gerando...",
+      "generate": "Gerar Vídeo (${credits} créditos)"
+    },
+    "empty_state": {
+      "title": "Ainda Sem Vídeo",
+      "description": "Insira um prompt e clique em gerar para criar seu primeiro vídeo com controle de quadros-chave e áudio nativo do Veo 3.1",
+      "modes": "Geração texto-para-vídeo ou imagem-para-vídeo com Veo 3.1"
+    },
+    "processing_state": {
+      "uploading_title": "Carregando...",
+      "generating_title": "Gerando Vídeo...",
+      "uploading_description": "Carregando sua imagem para o servidor...",
+      "generating_description": "Seu vídeo está sendo gerado. Isso pode levar alguns minutos...",
+      "model_quality": "Modo Qualidade",
+      "model_fast": "Modo Rápido",
+      "prompt_label": "Prompt:",
+      "dont_close": "Por favor, não feche esta página durante a geração..."
+    },
+    "failed_state": {
+      "title": "Geração Falhou",
+      "error_default": "Ocorreu um erro inesperado durante a geração do vídeo",
+      "prompt_label": "Seu Prompt:",
+      "credits_refunded": "Seus créditos foram reembolsados. Se o problema persistir, entre em contato com nossa equipe de suporte.",
+      "try_again": "Tentar Novamente",
+      "contact_support": "Contatar Suporte",
+      "need_help": "Precisa de ajuda? Envie-nos um e-mail para:"
+    },
+    "completed_state": {
+      "quality_720p": "720p",
+      "quality_1080p": "1080p HD",
+      "download": "Baixar",
+      "downloading": "Baixando...",
+      "preparing_1080p": "Preparando Versão 1080P HD",
+      "preparing_1080p_hint": "Isso pode levar 1-2 minutos. O vídeo aparecerá automaticamente quando estiver pronto...",
+      "completed": "Concluído",
+      "mode_quality": "Qualidade",
+      "mode_fast": "Rápido",
+      "upgrade_button": "Atualizar para 1080p (${credits} créditos)",
+      "upgrading": "Atualizando...",
+      "input_image_label": "Imagem de Entrada:"
+    },
+    "upgrade_modal": {
+      "title": "Atualizar para 1080P",
+      "description": "Atualize seu vídeo para resolução cristalina 1080P para uma melhor experiência de visualização.",
+      "enhanced_quality_title": "Qualidade Aprimorada",
+      "enhanced_quality_description": "Atualize seu vídeo para resolução cristalina 1080P para uma melhor experiência de visualização e apresentação profissional.",
+      "cost_label": "Custo",
+      "balance_label": "Seu saldo",
+      "insufficient_credits": "Você não tem créditos suficientes. Por favor, recarregue primeiro.",
+      "hint": "O vídeo 1080P atualizado será gerado e salvo junto com sua versão 720P. Você pode alternar entre eles a qualquer momento.",
+      "cancel": "Cancelar",
+      "confirm": "Confirmar (${credits} créditos)",
+      "confirming": "Atualizando..."
+    },
+    "toast": {
+      "video_generated": "Vídeo Gerado! Seu vídeo está pronto para visualização.",
+      "error_occurred": "Ocorreu um erro durante a geração",
+      "prompt_required": "Por favor, insira um prompt para geração de vídeo",
+      "prompt_length_error": "O prompt deve ter entre 3 e 5000 caracteres",
+      "image_required": "Por favor, carregue uma imagem para geração imagem-para-vídeo",
+      "login_required": "Por favor, faça login para gerar vídeos",
+      "insufficient_credits": "Você precisa de ${credits} créditos para gerar com modo ${mode}",
+      "uploading_image": "Carregando imagem...",
+      "image_uploaded": "Imagem carregada com sucesso",
+      "upload_failed": "Falha ao carregar imagem",
+      "upgraded_1080p": "Atualizado para 1080P! Seu vídeo de alta qualidade está pronto",
+      "upgrade_timeout": "Tempo limite de atualização para 1080P. O servidor ainda está processando, tente novamente mais tarde.",
+      "preparing_1080p": "O vídeo 1080P está sendo preparado pelo servidor. Isso levará 1-2 minutos, por favor aguarde...",
+      "still_processing": "Ainda processando... (${seconds}s decorridos)",
+      "upgrade_failed": "Falha ao atualizar vídeo",
+      "need_credits_1080p": "Você precisa de ${credits} créditos para atualização 1080P",
+      "downloading_video": "Baixando vídeo ${quality}...",
+      "download_success": "Vídeo ${quality} baixado com sucesso",
+      "download_failed": "Falha ao baixar vídeo. Por favor, tente novamente.",
+      "new_video": "Novo Vídeo"
+    }
+  },
+  "faq": {
+    "title": "Gerador de Vídeo Veo 3.1 - Perguntas Frequentes",
+    "description": "Obtenha respostas para perguntas comuns sobre geração de vídeo IA Veo 3.1, controle de quadros-chave, referências multi-imagem e recursos de áudio nativo.",
+    "contact": {
+      "question_text": "Tem mais perguntas sobre Veo 3.1?",
+      "support_link": "Entre em contato com nossa equipe de suporte Veo 3.1"
+    },
+    "items": [
+      {
+        "question": "O que é Veo 3.1 e o que há de novo comparado ao Veo 3?",
+        "answer": "Veo 3.1 é o mais recente modelo de geração de vídeo IA do Google com recursos revolucionários novos. Veo 3.1 introduz controle de quadros-chave para gerenciamento preciso de quadros de início e fim, suporte de referências multi-imagem para estilo visual consistente, áudio nativo aprimorado com efeitos sonoros mais ricos, a capacidade de estender vídeos além de 8 segundos, e consistência de personagens melhorada através de cenas. Veo 3.1 entrega vídeos de qualidade cinematográfica com resolução 1080P e geração de movimento realista."
+      },
+      {
+        "question": "Como funciona o controle de quadros-chave no Veo 3.1?",
+        "answer": "O controle de quadros-chave do Veo 3.1 permite que você defina precisamente o primeiro e último quadro do seu vídeo. Carregue imagens de quadros de início e fim, e o Veo 3.1 gera transições suaves entre eles. Este recurso lhe dá controle completo sobre como seu vídeo começa e termina, criando transições cinematográficas e mantendo o fluxo narrativo através do seu conteúdo gerado."
+      },
+      {
+        "question": "O que são referências multi-imagem no Veo 3.1?",
+        "answer": "As referências multi-imagem do Veo 3.1 permitem que você guie a direção visual do seu vídeo usando múltiplas imagens de referência. Forneça diferentes imagens para definir design de personagens, estilo de iluminação, paleta de cores ou composição de cena. Veo 3.1 garante consistência visual através de todos os quadros, mantendo uma estética coerente ao longo do seu vídeo gerado. Isso o torna perfeito para manter identidade de marca e consistência de personagens."
+      },
+      {
+        "question": "O Veo 3.1 gera áudio nativo?",
+        "answer": "Sim! Veo 3.1 possui geração de áudio nativo aprimorada com efeitos sonoros mais ricos. Ele cria automaticamente diálogos sincronizados, sons ambientais e efeitos de áudio que combinam com a ação que se sincronizam perfeitamente com seus visuais de vídeo. O áudio é profissionalmente mixado e sincronizado, eliminando a necessidade de edição de áudio separada e dando vida aos seus vídeos Veo 3.1."
+      },
+      {
+        "question": "Posso estender vídeos Veo 3.1 além de 8 segundos?",
+        "answer": "Sim! O recurso de extensão do Veo 3.1 permite que você quebre o limite de 8 segundos. Você pode naturalmente continuar ações e narrativas para criar vídeos mais longos e dinâmicos. A função de extensão do Veo 3.1 mantém consistência visual e narrativa, tornando-a perfeita para narrativa complexa e projetos de vídeo profissionais que requerem duração estendida."
+      },
+      {
+        "question": "Como funciona a consistência de personagens no Veo 3.1?",
+        "answer": "O recurso de consistência de personagens do Veo 3.1 garante que seus personagens mantenham a mesma identidade, aparência e estilo através de todos os quadros. Carregue imagens de referência de personagens, e o Veo 3.1 mantém consistência visual através do seu vídeo. Isso o torna ideal para narrativas centradas em personagens, mascotes de marca e narrativa multi-cena onde o reconhecimento de personagens é essencial."
+      },
+      {
+        "question": "O que torna o Veo 3.1 diferente de outros geradores de vídeo IA?",
+        "answer": "Veo 3.1 se destaca com recursos revolucionários: controle de quadros-chave para gerenciamento preciso de quadros, referências multi-imagem para estilo consistente, duração de vídeo estendida além de 8 segundos, áudio nativo aprimorado com efeitos sonoros sincronizados, consistência de personagens melhorada, e geração de movimento realista com qualidade 1080P. Veo 3.1 é desenvolvido pelo Google DeepMind, trazendo a tecnologia de vídeo IA mais avançada para criadores e cineastas."
+      },
+      {
+        "question": "Posso usar vídeos gerados pelo Veo 3.1 para propósitos comerciais?",
+        "answer": "Sim! Todos os vídeos gerados com Veo 3.1 são adequados para uso comercial. Veo 3.1 cria conteúdo original baseado em seus prompts e imagens de referência, tornando-o perfeito para vídeos de marketing, conteúdo de mídia social, apresentações de marca e projetos de filmes profissionais. A saída de alta qualidade do Veo 3.1 com áudio nativo e resolução 1080P está pronta para produção para aplicações comerciais."
+      },
+      {
+        "question": "Quanto custa a geração de vídeo Veo 3.1?",
+        "answer": "A geração de vídeo Veo 3.1 usa um sistema baseado em créditos. Cada vídeo Veo 3.1 720P custa um certo número de créditos, com atualizações HD 1080P requerendo créditos adicionais. Recursos avançados como controle de quadros-chave, referências multi-imagem e extensão de vídeo estão incluídos no custo de geração. Esta precificação flexível garante que você pague apenas pelos vídeos Veo 3.1 que criar com acesso completo a todos os recursos profissionais."
+      },
+      {
+        "question": "Quais controles criativos o Veo 3.1 oferece?",
+        "answer": "Veo 3.1 oferece controles criativos extensos: modo de quadros-chave para controle preciso de quadros de início/fim, referências multi-imagem para estilo visual consistente, consistência de personagens através de cenas, extensão de vídeo além de 8 segundos, geração de áudio nativo e controle de movimento realista. Estes recursos do Veo 3.1 lhe dão precisão de nível cinematográfico para produção cinematográfica profissional, conteúdo de marca e projetos de narrativa complexos com liberdade criativa completa."
+      },
+      {
+        "question": "O Veo 3.1 é adequado para iniciantes?",
+        "answer": "Absolutamente! Embora o Veo 3.1 ofereça recursos avançados como controle de quadros-chave e referências multi-imagem para profissionais, ele é projetado para ser acessível a todos. Simplesmente insira uma descrição de texto ou carregue imagens, e o Veo 3.1 lida com o processo complexo de geração de vídeo. Nossa interface intuitiva torna fácil começar a criar vídeos Veo 3.1 profissionais com áudio nativo e qualidade cinematográfica imediatamente, independentemente do seu background técnico."
+      },
+      {
+        "question": "Qual é a duração dos vídeos gerados pelo Veo 3.1?",
+        "answer": "Os vídeos gerados pelo Veo 3.1 começam em 8 segundos, mas com o recurso de extensão inovador, você pode criar vídeos mais longos continuando naturalmente a ação e narrativa. Ao contrário de modelos anteriores, Veo 3.1 permite que você quebre o limite de 8 segundos usando a capacidade de extensão, dando-lhe flexibilidade para criar vídeos de comprimentos variados enquanto mantém saída de alta qualidade e consistência visual."
+      },
+      {
+        "question": "Como obter melhor qualidade de vídeo Veo 3.1?",
+        "answer": "Para alcançar a melhor qualidade de vídeo Veo 3.1: 1) Use prompts detalhados descrevendo cena, ações, iluminação e estilo; 2) Utilize o controle de quadros-chave do Veo 3.1 para definir quadros de início e fim precisos; 3) Forneça múltiplas imagens de referência para estilo consistente; 4) Habilite consistência de personagens para conteúdo centrado em personagens; 5) Escolha Modo Qualidade para resultados refinados; 6) Atualize para 1080P HD para apresentação profissional cristalina com resolução aprimorada."
+      },
+      {
+        "question": "Por que minha geração de vídeo Veo 3.1 falha?",
+        "answer": "A geração de vídeo Veo 3.1 pode falhar por várias razões: 1) Seu prompt viola políticas de conteúdo sobre pessoas reais, crianças, violência ou conteúdo sensível - Veo 3.1 aplica diretrizes de conteúdo rigorosas; 2) Imagens de quadros-chave podem ser incompatíveis ou de baixa qualidade; 3) Revise a mensagem de erro específica para razões exatas de falha; 4) Certifique-se de que imagens de referência atendam aos requisitos de formato. Entre em contato com nossa equipe de suporte Veo 3.1 se os problemas persistirem."
+      },
+      {
+        "question": "Como criar vídeos mais longos com Veo 3.1?",
+        "answer": "Veo 3.1 oferece duas abordagens para vídeos mais longos: 1) Use o recurso de extensão integrado do Veo 3.1 para continuar naturalmente seu vídeo além de 8 segundos, mantendo consistência visual e narrativa; 2) Gere múltiplos clipes Veo 3.1 com quadros-chave consistentes e referências de personagens, então use ferramentas de edição de vídeo para criar conteúdo mais longo sem interrupções. Os recursos de controle de quadros-chave e consistência de personagens do Veo 3.1 fazem projetos multi-clipe fluírem naturalmente."
+      }
+    ]
+  },
+  "examples": {
+    "title": "Exemplos Criativos Veo 3.1 - Controle de Quadros-Chave e Referências Multi-Imagem",
+    "subtitle": "Explore as capacidades revolucionárias de geração de vídeo do Veo 3.1 com controle de quadros-chave, referências multi-imagem e áudio nativo. De imagens para vídeos cinematográficos, experimente as possibilidades infinitas da criação de vídeo IA Veo 3.1.",
+    "image_to_video": {
+      "title": "Imagem para Vídeo com Veo 3.1",
+      "description": "Carregue uma imagem estática ou use o recurso de referência multi-imagem do Veo 3.1. Veo 3.1 dá vida às imagens com movimento realista, criando efeitos de vídeo dinâmicos suaves e naturais com áudio nativo sincronizado.",
+      "input_image_url": "https://file.nanobanana.org/showcase/veo3/woman-city-doodle.jpg",
+      "input_image_alt": "Ilustração feminina estilo doodle urbano para Veo 3.1",
+      "output_video_url": "https://file.nanobanana.org/showcase/veo3/woman-city-doodle.mp4"
+    },
+    "text_to_video": {
+      "title": "Texto para Vídeo com Veo 3.1",
+      "description": "Com descrições de texto detalhadas, Veo 3.1 entende sua visão criativa e gera conteúdo cinematográfico impressionante com áudio nativo e movimento realista",
+      "input_prompt": "Tomada de rastreamento ultrarrápida através de uma paisagem urbana futurística expansiva onde edifícios imponentes são feitos de cromo orgânico reflexivo, brilhando sob um sol brilhante do meio-dia. Clarões de luz arco-íris e bokeh cristalino se espalham pelo quadro enquanto a câmera se move dinamicamente entre as estruturas. A sequência se transforma em um zoom de close-up sem interrupções em uma colmeia de cromo translúcido, onde uma abelha operária robótica altamente detalhada é vista criando com precisão mecânica. A cena é renderizada com clareza 4K hiper-realista, profundidade de lente suave e áudio sci-fi ambiental zumbindo no fundo, evocando o humor de um filme cyber-futurista de alto orçamento.",
+      "output_video_url": "https://file.nanobanana.org/showcase/veo3/tmp7uoz8hjv.mp4"
+    },
+    "labels": {
+      "original_image": "Imagem Original",
+      "prompt_text": "Prompt",
+      "ai_generated_video": "Vídeo Gerado por IA",
+      "video_duration": "8 segundos",
+      "video_quality": "720P",
+      "video_info": "8s • 720P",
+      "browser_not_supported": "Seu navegador não suporta reprodução de vídeo."
+    }
+  }
+}
