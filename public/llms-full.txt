@@ -1,19 +1,115 @@
-# Nano Banana - Full Documentation
+# Nano Banana AI Creative Platform - Complete Documentation
 
-> Google's upcoming revolutionary AI model for advanced image generation and editing, featuring consistent character editing and scene preservation with state-of-the-art contextual understanding.
+> Google's revolutionary AI model for advanced image generation and editing, featuring consistent character editing and scene preservation with state-of-the-art contextual understanding.
 
-Nano Banana represents Google's next-generation approach to AI-powered visual creation, combining cutting-edge machine learning with intuitive text prompting for professional-grade image manipulation and generation. This groundbreaking model surpasses existing solutions like Flux Kontext with superior performance, faster inference speeds, and unmatched character consistency.
+Nano Banana represents Google's next-generation approach to AI-powered visual creation, combining cutting-edge machine learning with intuitive text prompting for professional-grade image manipulation and generation. This groundbreaking model surpasses existing solutions like Flux Kontext with superior performance, faster inference speeds, and unmatched character consistency, providing creators with a complete AI creative ecosystem.
 
-## Core Features
+## Platform Overview
 
-### Text to Image Generation
-Generate stunning, high-quality images from simple text prompts using Nano Banana's advanced transformer-based architecture. The model understands complex scene descriptions, artistic styles, and can generate photorealistic or stylized outputs based on your requirements. With state-of-the-art natural language understanding, Nano Banana transforms your ideas into visual reality with unprecedented accuracy.
+Nano Banana is more than just an image generation tool—it's a comprehensive AI creative platform that integrates image generation, video creation, and image enhancement services. Our platform supports a complete creative workflow from Nano Banana image generation to Veo 3, Veo 3.1, and Sora 2 video generation, plus AI image enhancement, enabling creators to fulfill all their visual content needs in one unified platform.
 
-### Image to Image Editing
+## Core Services Detailed
+
+### Nano Banana Image Generation
+
+#### Text to Image Generation
+Generate stunning, high-quality images from simple text prompts using Nano Banana's advanced Transformer-based architecture. The model understands complex scene descriptions, artistic styles, and can generate photorealistic or stylized outputs based on your requirements. With state-of-the-art natural language understanding, Nano Banana transforms your ideas into visual reality with unprecedented accuracy.
+
+#### Image Editing Capabilities
 Transform existing images with contextual understanding that preserves important elements while making targeted modifications. Nano Banana's image-to-image capabilities allow you to change expressions, add or remove objects, alter backgrounds, or completely reimagine scenes while maintaining the original's essence. The model excels at understanding spatial relationships and preserving image coherence.
 
-### In-Context Image Generation
+#### In-Context Image Generation
 Unlike traditional text-to-image models, Nano Banana performs in-context image generation by combining text and image inputs. This revolutionary approach enables seamless visual concept extraction and modification, delivering coherent renderings every time. You can use reference images to guide style, composition, or specific elements while using text to direct the creative process.
+
+### Veo 3 AI Video Generator
+
+#### Advanced Video Generation Technology
+Veo 3 is Google's state-of-the-art AI video generation model that delivers exceptional video quality with support for 4K resolution. This powerful Veo 3 model generates highly realistic videos with improved physics simulation, natural movements, and photorealistic detail preservation. Whether you're creating from text or images, Veo 3 ensures professional results every time.
+
+#### Dual-Mode Generation Capabilities
+Experience seamless video creation with Veo 3's dual-mode generation:
+- **Text-to-Video**: Convert text prompts into stunning video content
+- **Image-to-Video**: Transform static images into dynamic content while maintaining visual consistency
+- **Advanced Prompt Understanding**: Veo 3's sophisticated prompt adherence technology follows complex multi-scene instructions with unprecedented accuracy
+
+#### Native Audio Generation
+Veo 3 stands out with native audio generation capabilities. The Veo 3 model automatically generates synchronized sound effects, dialogue, and background audio that perfectly matches your video content. This unique Veo 3 feature brings your videos to life with professional audio quality, eliminating the need for additional audio post-production.
+
+#### Creative Control Features
+Unlock unlimited creativity with Veo 3's advanced controls:
+- **Style Matching**: Use reference images for style matching
+- **Character Consistency**: Maintain character consistency across scenes
+- **Camera Movement**: Define camera movements and motion paths
+- **Quality Options**: Support for 720P standard quality and 1080P HD upgrade
+
+### Veo 3.1 AI Video Generator
+
+#### Revolutionary Keyframe Control
+Veo 3.1 introduces groundbreaking keyframe control technology, allowing you to precisely control the start and end frames of your AI video. This keyframe mode enables smooth cinematic transitions and gives your clips clear pacing and rhythm, ensuring every scene feels complete and intentional with advanced frame control capabilities.
+
+#### Multi-Image Reference System
+Guide your video's visual direction with Veo 3.1's multi-image reference technology. Provide different images to shape character design, lighting style, or color tone. Veo 3.1 ensures visual consistency across every shot, maintaining coherent aesthetics throughout your generated video with sophisticated multi-image reference processing.
+
+#### Extended Duration Beyond 8 Seconds
+Break through the traditional 8-second limit with Veo 3.1's extend feature. Naturally continue actions and narratives to create longer, more dynamic videos. Veo 3.1 allows seamless scene continuation, perfect for complex storytelling and professional video production that requires extended narrative flow.
+
+#### Enhanced Native Audio and Sound Effects
+Veo 3.1 automatically adds native audio to your creations, including dialogue, ambient sound effects, and action-synchronized audio. Audio perfectly syncs with visuals, enhancing immersion and realism. This eliminates the need for separate audio editing and brings videos to life with professional sound design.
+
+#### Character Consistency Design
+Upload character reference images to ensure consistent identity, appearance, and actions across every frame. Veo 3.1 maintains visual consistency across multiple scenes, creating smooth, professional narratives. This character consistency feature is ideal for character-driven storytelling and brand content creation.
+
+### Sora 2 AI Video Generator
+
+#### OpenAI's Breakthrough Technology
+Sora 2 is OpenAI's latest AI video generation model that represents a major breakthrough in video AI technology. Unlike previous video generators that distort objects and bend reality, Sora 2 follows real-world physics laws with unprecedented accuracy. It can simulate complex scenarios like Olympic-level gymnastics, surfboard backflips with accurate buoyancy and rigidity dynamics, and natural object interactions.
+
+#### Advanced Physics Simulation
+Sora 2 delivers unprecedented physical accuracy with realistic motion effects and physics consistency:
+- **Real Physics**: Basketballs bounce naturally, surfers demonstrate proper buoyancy dynamics
+- **Object Permanence**: Objects maintain visual consistency throughout complex sequences
+- **Gravity Simulation**: Accurate gravity effects and material property simulation
+- **Motion Coherence**: Natural, fluid motion trajectories and action sequences
+
+#### Dual-Mode Generation System
+Sora 2 supports flexible video creation approaches:
+- **Text-to-Video**: Create videos from pure text prompts, understanding complex scene descriptions
+- **Image-to-Video**: Transform static images into dynamic motion sequences while maintaining visual coherence
+- **Multi-Format Support**: Support for portrait and landscape formats, adapting to different platform needs
+- **Flexible Duration**: Generate high-quality video content up to 15 seconds long
+
+#### Barrier-Free User Experience
+Our Sora 2 platform provides a convenient user experience:
+- **No Watermark Output**: Generated videos have no watermarks and are ready for commercial use
+- **No Invitation Code Required**: Start using immediately without waiting for invitations
+- **No Download Needed**: Web-based online service, create anywhere, anytime
+- **Instant Generation**: Fast processing with efficient creative workflows
+
+### AI Image Upscaler
+
+#### Professional-Grade Image Quality Enhancement
+Nano Banana Image Upscaler uses advanced AI technology specifically designed to enhance the quality and resolution of Nano Banana-generated images. Our AI technology dramatically improves overall image quality and clarity while perfectly preserving complex details, transforming low-resolution photos into crisp, high-definition images.
+
+#### Smart Upscaling Technology
+Experience seamless image upscaling with cutting-edge algorithms:
+- **High-Ratio Upscaling**: Scale images up to 4x their original resolution
+- **Detail Preservation**: Maintain natural textures, sharp edges, and photorealistic details
+- **Intelligent Algorithms**: Advanced AI algorithms ensure quality preservation throughout the upscaling process
+- **Multi-Format Support**: Support for JPEG, PNG, WebP, and other image formats
+
+#### Professional-Grade Processing Capabilities
+Provide professional-level image processing features suitable for all types of users:
+- **Photographer-Focused**: Studio-quality image enhancement effects
+- **Designer Tools**: High-quality output meeting professional design requirements
+- **Batch Processing**: Support for batch enhancement of multiple images
+- **Noise Reduction**: Advanced noise reduction and detail enhancement features
+
+#### Fast and Efficient Processing
+Optimized processing engine ensures efficient workflows:
+- **Second-Level Processing**: Complete image enhancement in seconds
+- **High-Quality Output**: Guarantee quality without compromising speed
+- **Instant Preview**: Real-time viewing of enhancement effects
+- **One-Click Download**: Immediately download high-definition images after processing
 
 ## Key Technologies
 
@@ -40,81 +136,127 @@ Consistently outperforms competing models in both automated metrics and human ev
 ### Scalability
 Designed for enterprise-scale deployment with support for batch processing, parallel generation, and efficient resource utilization. Nano Banana can handle thousands of concurrent requests while maintaining consistent quality and performance.
 
-## Pricing Tiers
+## Pricing Plans
 
-### Trial Plan - $5.99 (One-time)
-Perfect for trying out AI image generation and small projects:
-- 30 AI generation credits
-- Access to Pro & Max quality models
-- Text-to-image generation capabilities
-- Image-to-image editing features
+### Flexible Credit-Based System
+We use a transparent credit-based pricing system, allowing you to pay only for the services you actually use. Credit consumption for different services:
+
+#### Nano Banana Image Generation
+- **Standard Generation**: 4 credits per image
+- **High-Quality Generation**: 4 credits per image
+- **Batch Generation**: Support for generating multiple images at once
+
+#### Veo 3 Video Generation
+- **720P Standard Quality**: Credits consumed based on mode and duration
+- **1080P HD Upgrade**: Additional credits for HD quality upgrade
+- **Fast Mode**: Fewer credits for quick generation
+- **Quality Mode**: More credits for best quality output
+
+#### Veo 3.1 Video Generation
+- **Keyframe Control**: Premium credits for advanced frame control
+- **Multi-Image References**: Additional credits for multiple reference processing
+- **Extended Duration**: Extra credits for videos beyond 8 seconds
+- **Enhanced Audio**: Included in standard generation cost
+
+#### Sora 2 Video Generation
+- **Standard Quality**: Base credit consumption
+- **High-Definition Quality**: More credits for better effects
+- **10-Second Videos**: Standard credit consumption
+- **15-Second Videos**: More credits for longer duration support
+
+#### AI Image Upscaler
+- **3x Upscaling**: Base credit consumption
+- **4x Upscaling**: More credits for highest quality
+- **Batch Processing**: Support for multiple image processing
+
+### Subscription Plans
+
+#### Starter Plan - $9.99/month
+Perfect for trying out AI creation and small projects:
+- 200 AI generation credits monthly
+- Access to all high-quality models
+- Text-to-image generation
+- Image editing features
+- 3x, 4x image enhancement service
 - Standard generation speed
 - Standard customer support
-- High-resolution downloads
-- Valid for 1 month
 
-### Pro Plan - $23.99/month
+#### Pro Plan - $23.99/month (Most Popular)
 Ideal for creators, designers, and content professionals:
-- 400 AI generation credits monthly
+- 700 AI generation credits monthly
 - Priority processing speed
 - Advanced editing features
-- Batch processing capabilities
+- Multi-image reference generation
 - High-speed download channel
 - Priority customer support
-- Extended commercial license
-- All Trial features included
+- Commercial license
 
-### Premium Plan - $89.99/month
+#### Premium Plan - $89.99/month
 For teams, agencies, and high-volume commercial use:
-- 1500 AI generation credits monthly
-- Fastest generation speed available
+- 2000 AI generation credits monthly
+- Fastest generation speed
 - Most advanced AI editing capabilities
-- Permanent cloud image storage
-- Unlimited commercial license
+- Permanent image storage
 - Dedicated account manager
-- All Pro features included
-- Custom integration support
+
+### Credit Packs (One-time Purchase)
+- **Starter Credit Pack**: 500 credits - $29.99 (Never expire)
+- **Professional Credit Pack**: 2000 credits - $99.99 (Never expire)
+- **Premium Credit Pack**: 7000 credits - $230 (Never expire)
 
 ## Use Cases
 
 ### Creative Industries
 - Digital art and illustration creation
 - Concept art for games and films
-- Marketing and advertising visuals
+- Marketing and advertising visual design
 - Social media content generation
-- Book and magazine illustrations
+- Book and magazine illustration production
 
 ### E-commerce
-- Product visualization and mockups
+- Product visualization and mockup creation
 - Virtual try-on experiences
-- Catalog image generation
+- Product catalog image generation
 - Marketing material creation
 - Brand asset development
 
-### Entertainment
+### Entertainment Industry
 - Character design and development
 - Storyboard creation
 - Visual effects pre-visualization
-- Comic and manga production
+- Comic and anime production
 - Animation concept development
 
-### Education
+### Education Sector
 - Educational material illustration
 - Scientific visualization
 - Historical recreation
 - Interactive learning content
 - Presentation enhancement
 
+### Video Creation
+- **Short Video Production**: Use Veo 3, Veo 3.1, and Sora 2 to create TikTok, Instagram Reels content
+- **Advertising Videos**: Quickly produce product promotion and marketing videos
+- **Educational Videos**: Create engaging educational and training content
+- **Social Media**: Produce attractive social platform video content
+- **Cinematic Content**: Leverage Veo 3.1's keyframe control for professional film production
+
 ## Getting Started
 
-### Step 1: Initial Setup
-Begin your creative journey with Nano Banana by accessing the web interface at https://nanobanana.org. Upload your reference image or start with a text prompt for instant generation. The intuitive interface guides you through the process with helpful tooltips and suggestions.
+### Step 1: Platform Registration
+Visit https://nanobanana.org to begin your AI creative journey. After registering an account, you'll receive free credits to experience all services. The intuitive interface design includes helpful tips and suggestions to guide you through the entire creative process.
 
-### Step 2: Creative Editing
-Use Nano Banana's powerful text instructions to modify your images. Change expressions, add objects, or transform entire scenes seamlessly. The model understands natural language commands like "make the sunset more vibrant" or "add a playful smile to the character."
+### Step 2: Choose Your Service
+Select the appropriate service based on your creative needs:
+- **Image Creation**: Use Nano Banana for text-to-image generation or image editing
+- **Video Production**: Choose Veo 3, Veo 3.1, or Sora 2 for video generation
+- **Image Enhancement**: Use AI Image Upscaler to improve image quality
 
-### Step 3: Iterative Refinement
-Build upon previous edits with Nano Banana's iterative capabilities, refining your creation step-by-step while preserving character consistency. Each iteration maintains context from previous edits, allowing for complex multi-stage transformations.
+### Step 3: Create and Optimize
+Use powerful text instructions to modify your images or videos. The models understand natural language commands like "make the sunset more vibrant" or "add a playful smile to the character." Use iterative features to gradually refine your creations while maintaining character consistency.
+
+### Step 4: Download and Use
+Preview your creative results and download high-quality images or videos when satisfied. All generated content supports commercial use and can be directly used for your projects, social media, or business purposes.
 
 ## API Integration
 
@@ -127,19 +269,27 @@ Efficient batch processing capabilities for high-volume generation tasks. Proces
 ### Webhooks
 Real-time notifications for generation completion, enabling asynchronous workflows and event-driven architectures.
 
-## Additional Resources
+## Technical Support & Resources
 
-### Documentation
+### API Integration
+Comprehensive RESTful API for seamless integration into existing workflows and applications. Support for all major programming languages with official SDKs for Python, JavaScript, Java, and Go.
+
+### Batch Processing
+Efficient batch processing capabilities for high-volume generation tasks. Process hundreds of images or videos simultaneously with optimized resource allocation and priority queuing.
+
+### Technical Documentation
 Comprehensive technical documentation available at https://nanobanana.org/docs, including API references, best practices, and troubleshooting guides.
 
 ### Community Support
 Active developer community with forums, Discord channels, and regular workshops. Share creations, get feedback, and learn from other users.
 
-### Terms of Service
-Full terms of service and usage guidelines at https://nanobanana.org/terms-of-service. Clear policies on commercial use, content restrictions, and intellectual property.
+### Customer Service
+Professional customer support team providing technical support through support@nanobanana.org. Typically responds within one business day to resolve any issues you encounter during use.
 
-### Privacy Policy
-Detailed privacy policy at https://nanobanana.org/privacy-policy covering data handling, storage, and user rights. GDPR compliant with transparent data practices.
+### Legal Information
+- **Terms of Service**: https://nanobanana.org/terms-of-service - Complete terms of service and usage guidelines
+- **Privacy Policy**: https://nanobanana.org/privacy-policy - Detailed privacy policy covering data processing, storage, and user rights
+- **Refund Policy**: https://nanobanana.org/refund-policy - Refund terms and process descriptions
 
 ## Technical Architecture
 
@@ -147,11 +297,22 @@ Detailed privacy policy at https://nanobanana.org/privacy-policy covering data h
 Built on Google's latest transformer architecture with proprietary enhancements for visual understanding and generation. Trained on diverse, high-quality datasets with careful attention to bias mitigation and safety.
 
 ### Infrastructure
-Deployed on Google Cloud Platform with global edge locations for low-latency access. Auto-scaling capabilities ensure consistent performance during peak usage.
+Deployed on Google Cloud Platform with global edge locations for low-latency access. Auto-scaling capabilities ensure consistent performance during peak usage periods.
 
 ### Security
 Enterprise-grade security with encryption at rest and in transit. SOC 2 Type II certified with regular security audits and compliance monitoring.
 
 ---
 
-*Nano Banana - Transforming imagination into reality with Google's most advanced AI image technology.*
+## Start Your AI Creative Journey Today
+
+Visit [nanobanana.org](https://nanobanana.org) to experience the complete AI creative platform. From image generation to video production, from image enhancement to batch processing—fulfill all your creative needs in one place.
+
+**Featured Services:**
+- **Nano Banana**: Advanced image generation and editing with character consistency
+- **Veo 3**: Professional video generation with 4K support and native audio
+- **Veo 3.1**: Revolutionary keyframe control and multi-image references for cinematic videos
+- **Sora 2**: Physics-accurate video generation up to 15 seconds
+- **AI Image Upscaler**: Professional-grade image enhancement up to 4x resolution
+
+*Nano Banana - Transforming imagination into reality with Google's most advanced AI technology.*

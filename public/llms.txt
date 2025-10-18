@@ -1,17 +1,43 @@
-# Nano Banana
+# Nano Banana AI Creative Platform
 
-> Google's upcoming revolutionary AI model for advanced image generation and editing, featuring consistent character editing and scene preservation with state-of-the-art contextual understanding.
+> Google's revolutionary AI model for advanced image generation and editing, featuring consistent character editing and scene preservation with state-of-the-art contextual understanding.
 
 Nano Banana represents Google's next-generation approach to AI-powered visual creation, combining cutting-edge machine learning with intuitive text prompting for professional-grade image manipulation and generation.
 
-## Core Features
+## Core Services
+
+### Nano Banana Image Generation
 - [Text to Image](https://nanobanana.org/#nano-banana): Generate images from text prompts with advanced AI
-- [Image to Image](https://nanobanana.org/#nano-banana): Edit and transform existing images with contextual understanding
+- [Image Editing](https://nanobanana.org/#nano-banana): Edit and transform existing images with contextual understanding
 - [Feature Highlights](https://nanobanana.org/#feature): Explore character consistency and scene preservation capabilities
 
+### Veo 3 AI Video Generator
+- [Text to Video](https://nanobanana.org/veo3): Google's Veo 3 model with 4K resolution and native audio
+- [Image to Video](https://nanobanana.org/veo3): Transform static images into dynamic video content
+- [Professional Video Creation](https://nanobanana.org/veo3): Cinema-quality video generation with 720P/1080P support
+
+### Veo 3.1 AI Video Generator
+- [Keyframe Control](https://nanobanana.org/veo3-1): Precise control over start and end frames for cinematic transitions
+- [Multi-Image References](https://nanobanana.org/veo3-1): Use multiple reference images for consistent visual style
+- [Extended Duration](https://nanobanana.org/veo3-1): Break through 8-second limit with seamless scene continuation
+- [Native Audio Generation](https://nanobanana.org/veo3-1): Synchronized sound effects and dialogue
+
+### Sora 2 AI Video Generator
+- [OpenAI Sora 2](https://nanobanana.org/sora2): No watermark, no invitation code required
+- [Physics Simulation](https://nanobanana.org/sora2): Advanced physical accuracy and realistic motion effects
+- [Multi-Format Support](https://nanobanana.org/sora2): Portrait and landscape formats, up to 15 seconds
+
+### AI Image Upscaler
+- [Quality Enhancement](https://nanobanana.org/ai-image-upscaler): Professional AI-driven image quality improvement
+- [Smart Upscaling](https://nanobanana.org/ai-image-upscaler): Up to 4x resolution enhancement with detail preservation
+- [Batch Processing](https://nanobanana.org/ai-image-upscaler): Fast and efficient professional-grade image processing
+
 ## Key Resources
-- [Pricing](https://nanobanana.org/pricing): Free tier and subscription options
+- [Pricing Plans](https://nanobanana.org/pricing): Flexible credit-based and subscription options
+- [Showcase](https://nanobanana.org/showcase): View amazing AI-generated creations
+- [My Creations](https://nanobanana.org/history): Manage all your AI-generated content
 
 ## Additional Information
 - [Terms of Service](https://nanobanana.org/terms-of-service): Usage terms and policies
 - [Privacy Policy](https://nanobanana.org/privacy-policy): Data protection and privacy statement
+- [Refund Policy](https://nanobanana.org/refund-policy): Refund terms and procedures
