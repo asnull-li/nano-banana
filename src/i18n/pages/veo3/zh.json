@@ -50,7 +50,11 @@
   "workspace": {
     "mode_selector": {
       "text_to_video": "文本生成视频",
-      "image_to_video": "图片生成视频"
+      "image_to_video": "图片生成视频",
+      "reference_to_video": "参考图生成视频"
+    },
+    "reference_mode": {
+      "notice": "参考图生成视频模式仅支持快速模式（veo3_fast）和 16:9 宽高比。上传 1-3 张参考图片来指导视频生成。"
     },
     "upload_zone": {
       "title": "上传参考图片",

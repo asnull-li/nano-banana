@@ -3,7 +3,7 @@
 import { useState, useCallback } from "react";
 import { toast } from "sonner";
 import { useR2Upload } from "@/hooks/use-r2-upload";
-import { Veo3Model, Veo3TaskType, AspectRatio } from "../types";
+import { Veo3Model, Veo3TaskType, AspectRatio, GenerationType } from "../types";
 
 export interface GenerateVideoRequest {
   type: Veo3TaskType;
@@ -14,6 +14,7 @@ export interface GenerateVideoRequest {
   watermark?: string;
   seeds?: number;
   enable_translation?: boolean;
+  generation_type?: GenerationType;
 }
 
 export interface GenerateVideoResponse {

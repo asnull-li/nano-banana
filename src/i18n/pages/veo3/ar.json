@@ -50,7 +50,11 @@
   "workspace": {
     "mode_selector": {
       "text_to_video": "نص إلى فيديو",
-      "image_to_video": "صورة إلى فيديو"
+      "image_to_video": "صورة إلى فيديو",
+      "reference_to_video": "مرجع إلى فيديو"
+    },
+    "reference_mode": {
+      "notice": "يدعم وضع المرجع إلى فيديو الوضع السريع (veo3_fast) ونسبة العرض إلى الارتفاع 16:9 فقط. قم بتحميل 1-3 صور مرجعية لتوجيه إنشاء الفيديو."
     },
     "upload_zone": {
       "title": "تحميل صورة مرجعية",

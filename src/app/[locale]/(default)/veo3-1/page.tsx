@@ -62,7 +62,7 @@ export default async function Veo3Page({
 
       {/* Workspace Section */}
       <Veo3Workspace
-        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12"
+        className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 pb-12"
         pageData={page}
         initialImageUrl={initialImageUrl}
       />

@@ -50,7 +50,11 @@
   "workspace": {
     "mode_selector": {
       "text_to_video": "テキストから動画",
-      "image_to_video": "画像から動画"
+      "image_to_video": "画像から動画",
+      "reference_to_video": "リファレンスから動画"
+    },
+    "reference_mode": {
+      "notice": "リファレンスから動画モードは、高速モード（veo3_fast）と16:9のアスペクト比のみをサポートしています。動画生成をガイドするために1〜3枚のリファレンス画像をアップロードしてください。"
     },
     "upload_zone": {
       "title": "参照画像をアップロード",

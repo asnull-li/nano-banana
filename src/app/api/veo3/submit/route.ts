@@ -6,11 +6,14 @@ import {
   Veo3Model,
   Veo3TaskType,
   AspectRatio,
+  GenerationType,
   MIN_PROMPT_LENGTH,
   MAX_PROMPT_LENGTH,
   MAX_IMAGE_URLS,
   DEFAULT_VEO3_MODEL,
   DEFAULT_ASPECT_RATIO,
+  getImageUrlsLimit,
+  validateGenerationType,
 } from "@/lib/constants/veo3";
 
 export async function POST(request: NextRequest) {
@@ -26,6 +29,7 @@ export async function POST(request: NextRequest) {
       seeds,
       enable_fallback = false,
       enable_translation = true,
+      generation_type,
     } = body;
 
     // 1. 验证用户身份
@@ -84,15 +88,53 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // 检查图片数量限制
-    if (type === "image-to-video" && image_urls.length > MAX_IMAGE_URLS) {
-      return NextResponse.json(
-        {
-          success: false,
-          error: `Maximum ${MAX_IMAGE_URLS} images allowed for image-to-video mode`,
-        },
-        { status: 400 }
-      );
+    // 检查图片数量限制（根据 generationType 动态判断）
+    if (type === "image-to-video") {
+      // 校验 generationType 合法性
+      if (
+        generation_type &&
+        !["FIRST_AND_LAST_FRAMES_2_VIDEO", "REFERENCE_2_VIDEO"].includes(generation_type)
+      ) {
+        return NextResponse.json(
+          {
+            success: false,
+            error: "Invalid generation_type. Must be 'FIRST_AND_LAST_FRAMES_2_VIDEO' or 'REFERENCE_2_VIDEO'",
+          },
+          { status: 400 }
+        );
+      }
+
+      // 校验图片数量
+      const limits = getImageUrlsLimit(generation_type as GenerationType);
+      const imageCount = image_urls?.length || 0;
+
+      if (imageCount < limits.min || imageCount > limits.max) {
+        return NextResponse.json(
+          {
+            success: false,
+            error: `${generation_type || 'FIRST_AND_LAST_FRAMES_2_VIDEO'} mode requires ${limits.min}-${limits.max} image(s)`,
+          },
+          { status: 400 }
+        );
+      }
+
+      // 校验 REFERENCE_2_VIDEO 的模型和宽高比限制
+      if (generation_type === "REFERENCE_2_VIDEO") {
+        const validation = validateGenerationType(
+          generation_type,
+          model as Veo3Model,
+          aspect_ratio as AspectRatio
+        );
+        if (!validation.valid) {
+          return NextResponse.json(
+            {
+              success: false,
+              error: validation.error,
+            },
+            { status: 400 }
+          );
+        }
+      }
     }
 
     // 验证提示词长度
@@ -139,6 +181,7 @@ export async function POST(request: NextRequest) {
         callBackUrl: webhookUrl,
         enableFallback: enable_fallback,
         enableTranslation: enable_translation,
+        generationType: generation_type as GenerationType,
       });
     } catch (veo3Error) {
       console.error("Veo3 API error:", veo3Error);
@@ -164,6 +207,7 @@ export async function POST(request: NextRequest) {
         watermark,
         seeds,
         requestId: request_id,
+        generationType: generation_type as GenerationType,
       });
 
       return NextResponse.json({

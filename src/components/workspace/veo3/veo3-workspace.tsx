@@ -9,7 +9,14 @@ import { useCredits } from "@/hooks/use-credits";
 import { useAppContext } from "@/contexts/app";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
-import { Veo3Model, AspectRatio, Veo3Task, Veo3TaskType } from "./types";
+import {
+  Veo3Model,
+  AspectRatio,
+  Veo3Task,
+  Veo3TaskType,
+  ModeOption,
+  GenerationType,
+} from "./types";
 import {
   DEFAULT_VEO3_MODEL,
   DEFAULT_ASPECT_RATIO,
@@ -23,6 +30,7 @@ import Veo3Controls from "./components/veo3-controls";
 import VideoOutputDisplay from "./components/video-output-display";
 import Upgrade1080pModal from "./components/upgrade-1080p-modal";
 import ImageUploadZone from "@/components/workspace/upscaler/components/image-upload-zone";
+import MultiImageUploadZone from "./components/multi-image-upload-zone";
 
 // 导入样式
 import "./veo3-styles.css";
@@ -47,7 +55,7 @@ export default function Veo3Workspace({
     useVeo3API();
 
   // State
-  const [mode, setMode] = useState<Veo3TaskType>("image-to-video");
+  const [mode, setMode] = useState<ModeOption>("image-to-video");
   const [prompt, setPrompt] = useState("");
   const [model, setModel] = useState<Veo3Model>(DEFAULT_VEO3_MODEL);
   const [aspectRatio, setAspectRatio] =
@@ -74,6 +82,12 @@ export default function Veo3Workspace({
   const [endImageFile, setEndImageFile] = useState<File | null>(null);
   const [endImagePreview, setEndImagePreview] = useState<string | null>(null);
   const [isEndImageUrlMode, setIsEndImageUrlMode] = useState<boolean>(false);
+
+  // Reference to video mode states (multiple images)
+  const [referenceImageFiles, setReferenceImageFiles] = useState<File[]>([]);
+  const [referenceImagePreviews, setReferenceImagePreviews] = useState<
+    string[]
+  >([]);
 
   // Polling
   const pollingIntervalRef = useRef<NodeJS.Timeout | null>(null);
@@ -155,7 +169,7 @@ export default function Veo3Workspace({
   );
 
   // Handle mode change
-  const handleModeChange = (newMode: Veo3TaskType) => {
+  const handleModeChange = (newMode: ModeOption) => {
     setMode(newMode);
 
     // Clear images when switching to text-to-video
@@ -176,6 +190,48 @@ export default function Veo3Workspace({
       setEndImagePreview(null);
       setIsEndImageUrlMode(false);
       setKeyframeMode(false);
+
+      // Clear reference images
+      referenceImagePreviews.forEach((preview) => {
+        if (preview.startsWith("blob:")) {
+          URL.revokeObjectURL(preview);
+        }
+      });
+      setReferenceImageFiles([]);
+      setReferenceImagePreviews([]);
+    }
+
+    // Clear reference images when switching to image-to-video
+    if (newMode === "image-to-video") {
+      referenceImagePreviews.forEach((preview) => {
+        if (preview.startsWith("blob:")) {
+          URL.revokeObjectURL(preview);
+        }
+      });
+      setReferenceImageFiles([]);
+      setReferenceImagePreviews([]);
+    }
+
+    // Clear single/keyframe images when switching to reference-to-video
+    if (newMode === "reference-to-video") {
+      if (inputImagePreview && inputImagePreview.startsWith("blob:")) {
+        URL.revokeObjectURL(inputImagePreview);
+      }
+      setInputImageFile(null);
+      setInputImagePreview(null);
+      setIsUrlMode(false);
+
+      if (endImagePreview && endImagePreview.startsWith("blob:")) {
+        URL.revokeObjectURL(endImagePreview);
+      }
+      setEndImageFile(null);
+      setEndImagePreview(null);
+      setIsEndImageUrlMode(false);
+      setKeyframeMode(false);
+
+      // Force model and aspect ratio for reference mode
+      setModel("veo3_fast");
+      setAspectRatio("16:9");
     }
 
     // Change aspect ratio if Auto is selected but switching to text-to-video
@@ -258,6 +314,22 @@ export default function Veo3Workspace({
       setIsEndImageUrlMode(true);
     },
     []
+  );
+
+  // Handle reference images change (for reference-to-video mode)
+  const handleReferenceImagesChange = useCallback(
+    (files: File[], previews: string[]) => {
+      // Clean up old previews
+      referenceImagePreviews.forEach((preview) => {
+        if (preview.startsWith("blob:") && !previews.includes(preview)) {
+          URL.revokeObjectURL(preview);
+        }
+      });
+
+      setReferenceImageFiles(files);
+      setReferenceImagePreviews(previews);
+    },
+    [referenceImagePreviews]
   );
 
   // Validate image URL and use it directly (without downloading)
@@ -408,6 +480,17 @@ export default function Veo3Workspace({
     };
   }, [endImagePreview]);
 
+  // Cleanup reference images blob URLs on unmount
+  useEffect(() => {
+    return () => {
+      referenceImagePreviews.forEach((preview) => {
+        if (preview.startsWith("blob:")) {
+          URL.revokeObjectURL(preview);
+        }
+      });
+    };
+  }, [referenceImagePreviews]);
+
   // Handle initial image URL from query params
   useEffect(() => {
     if (initialImageUrl && initialImageUrl.trim()) {
@@ -472,6 +555,23 @@ export default function Veo3Workspace({
       }
     }
 
+    // Check images for reference-to-video mode
+    if (mode === "reference-to-video") {
+      if (referenceImageFiles.length === 0) {
+        toast.error(
+          t.toast?.reference_images_required ||
+            "Please upload 1-3 reference images for reference-to-video generation"
+        );
+        return;
+      }
+      if (referenceImageFiles.length > 3) {
+        toast.error(
+          t.toast?.too_many_images || "Maximum 3 reference images allowed"
+        );
+        return;
+      }
+    }
+
     // Check login
     if (!user) {
       toast.warning(
@@ -498,16 +598,25 @@ export default function Veo3Workspace({
 
     setIsGenerating(true);
 
+    // Convert ModeOption to Veo3TaskType for API
+    const apiTaskType: Veo3TaskType =
+      mode === "text-to-video" ? "text-to-video" : "image-to-video";
+    const generationType: GenerationType | undefined =
+      mode === "image-to-video"
+        ? "FIRST_AND_LAST_FRAMES_2_VIDEO"
+        : mode === "reference-to-video"
+        ? "REFERENCE_2_VIDEO"
+        : undefined;
+
     // Create initial task immediately to show processing state
     const initialTask: Veo3Task = {
       id: "pending",
       status:
-        mode === "image-to-video" && (inputImageFile || isUrlMode)
-          ? isUrlMode
-            ? "processing"
-            : "uploading"
+        (mode === "image-to-video" && (inputImageFile || isUrlMode)) ||
+        (mode === "reference-to-video" && referenceImageFiles.length > 0)
+          ? "uploading"
           : "processing",
-      type: mode,
+      type: apiTaskType,
       prompt,
       model,
       aspectRatio,
@@ -526,7 +635,7 @@ export default function Veo3Workspace({
     try {
       let uploadedImageUrls: string[] = [];
 
-      // Upload image(s) first if in image-to-video mode
+      // Upload image(s) first if in image-to-video or reference-to-video mode
       if (mode === "image-to-video") {
         if (keyframeMode) {
           // Keyframe mode: upload start and end frames
@@ -589,6 +698,33 @@ export default function Veo3Workspace({
             }
           }
         }
+      } else if (mode === "reference-to-video") {
+        // Reference mode: upload all reference images
+        setIsUploading(true);
+        toast.info(
+          t.toast?.uploading_reference_images ||
+            `Uploading ${referenceImageFiles.length} reference image(s)...`
+        );
+
+        try {
+          const uploadPromises = referenceImageFiles.map((file) =>
+            uploadImage(file)
+          );
+          uploadedImageUrls = await Promise.all(uploadPromises);
+
+          toast.success(
+            t.toast?.reference_images_uploaded ||
+              `${uploadedImageUrls.length} reference image(s) uploaded successfully`
+          );
+        } catch (error) {
+          throw new Error(
+            error instanceof Error
+              ? error.message
+              : t.toast?.upload_failed || "Failed to upload reference images"
+          );
+        } finally {
+          setIsUploading(false);
+        }
       }
 
       // Update task status to processing after upload
@@ -600,21 +736,23 @@ export default function Veo3Workspace({
 
       // Submit task - returns task_id as string
       const taskId = await submitVideoTask({
-        type: mode,
+        type: apiTaskType,
         prompt,
         model,
-        image_urls: uploadedImageUrls.length > 0 ? uploadedImageUrls : undefined,
+        image_urls:
+          uploadedImageUrls.length > 0 ? uploadedImageUrls : undefined,
         aspect_ratio: aspectRatio,
         watermark: watermark || undefined,
         seeds,
         enable_translation: enableTranslation,
+        generation_type: generationType,
       });
 
       // Update task with real task ID
       const newTask: Veo3Task = {
         id: taskId,
         status: "processing",
-        type: mode,
+        type: apiTaskType,
         prompt,
         model,
         aspectRatio,
@@ -797,6 +935,12 @@ export default function Veo3Workspace({
     if (endImagePreview && endImagePreview.startsWith("blob:")) {
       URL.revokeObjectURL(endImagePreview);
     }
+    // 清理参考图 blob URLs
+    referenceImagePreviews.forEach((preview) => {
+      if (preview.startsWith("blob:")) {
+        URL.revokeObjectURL(preview);
+      }
+    });
 
     setCurrentTask(null);
     setMode("image-to-video");
@@ -808,6 +952,8 @@ export default function Veo3Workspace({
     setEndImageFile(null);
     setEndImagePreview(null);
     setIsEndImageUrlMode(false);
+    setReferenceImageFiles([]);
+    setReferenceImagePreviews([]);
     setWatermark("");
     setSeeds(undefined);
     setEnableTranslation(true);
@@ -823,7 +969,7 @@ export default function Veo3Workspace({
   return (
     <div className={`w-full ${className}`}>
       {/* 响应式网格布局 */}
-      <div className="veo3-workspace grid grid-cols-1 lg:grid-cols-[400px_1fr] gap-4 px-0 lg:px-4">
+      <div className="veo3-workspace grid grid-cols-1 lg:grid-cols-[500px_1fr] gap-4 px-0 lg:px-4">
         {/* Left Panel - Controls */}
         <div className="veo3-panel-left bg-white/80 dark:bg-zinc-800/50 backdrop-blur-sm border border-slate-200/50 dark:border-zinc-700/50 rounded-xl shadow-xl">
           <div className="veo3-panel-content p-6 space-y-4">
@@ -889,6 +1035,32 @@ export default function Veo3Workspace({
                       <p className="leading-relaxed">
                         {t.keyframe_mode?.description ||
                           "您可以精确控制AI视频的开始和结束，允许您控制第一帧和最后一帧，创建流畅的电影过渡效果"}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* Reference Images Upload Zone (only in reference-to-video mode) */}
+            {mode === "reference-to-video" && (
+              <div className="space-y-4">
+                <MultiImageUploadZone
+                  onImagesChange={handleReferenceImagesChange}
+                  currentImages={referenceImagePreviews}
+                  disabled={isGenerating || isUploading}
+                  maxImages={3}
+                  pageData={pageData}
+                />
+
+                {/* Reference Mode Notice */}
+                <div className="flex items-start gap-3 p-3 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-950/20 dark:to-purple-950/20 rounded-lg border border-blue-200/50 dark:border-blue-800/50">
+                  <div className="flex-1 space-y-2">
+                    <div className="flex items-start gap-2 text-xs text-slate-700 dark:text-slate-300">
+                      <Info className="w-4 h-4 mt-0.5 flex-shrink-0 text-blue-600 dark:text-blue-400" />
+                      <p className="leading-relaxed font-medium">
+                        {t.reference_mode?.notice ||
+                          "Reference to Video mode only supports Fast Mode (veo3_fast) and 16:9 aspect ratio. Upload 1-3 reference images to guide the video generation."}
                       </p>
                     </div>
                   </div>

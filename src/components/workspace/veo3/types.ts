@@ -5,6 +5,12 @@ export type Veo3TaskType = "text-to-video" | "image-to-video";
 export type AspectRatio = "16:9" | "9:16" | "Auto";
 export type TaskStatus = "idle" | "uploading" | "processing" | "completed" | "failed";
 
+// 前端 UI 模式选择（包含 3 个选项）
+export type ModeOption = "text-to-video" | "image-to-video" | "reference-to-video";
+
+// 视频生成类型（用于区分图生视频的不同模式）
+export type GenerationType = "FIRST_AND_LAST_FRAMES_2_VIDEO" | "REFERENCE_2_VIDEO";
+
 export interface Veo3Task {
   id: string;
   status: TaskStatus;
@@ -34,8 +40,10 @@ export interface GenerateVideoParams {
   type: Veo3TaskType;
   prompt: string;
   model: Veo3Model;
-  imageUrls?: string[];
-  aspectRatio?: AspectRatio;
+  image_urls?: string[];
+  aspect_ratio?: AspectRatio;
   watermark?: string;
   seeds?: number;
+  enable_translation?: boolean;
+  generation_type?: GenerationType;
 }

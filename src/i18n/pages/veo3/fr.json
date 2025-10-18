@@ -50,7 +50,11 @@
   "workspace": {
     "mode_selector": {
       "text_to_video": "Texte vers Vidéo",
-      "image_to_video": "Image vers Vidéo"
+      "image_to_video": "Image vers Vidéo",
+      "reference_to_video": "Référence vers Vidéo"
+    },
+    "reference_mode": {
+      "notice": "Le mode Référence vers Vidéo ne prend en charge que le Mode Rapide (veo3_fast) et le format 16:9. Téléchargez 1 à 3 images de référence pour guider la génération vidéo."
     },
     "upload_zone": {
       "title": "Télécharger Image de Référence",

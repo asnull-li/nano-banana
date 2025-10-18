@@ -54,7 +54,11 @@
   "workspace": {
     "mode_selector": {
       "text_to_video": "Text zu Video",
-      "image_to_video": "Bild zu Video"
+      "image_to_video": "Bild zu Video",
+      "reference_to_video": "Referenz zu Video"
+    },
+    "reference_mode": {
+      "notice": "Der Referenz zu Video-Modus unterstützt nur den Schnellmodus (veo3_fast) und das Seitenverhältnis 16:9. Laden Sie 1-3 Referenzbilder hoch, um die Videogenerierung zu steuern."
     },
     "upload_zone": {
       "title": "Referenzbild hochladen",

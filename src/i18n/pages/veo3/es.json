@@ -50,7 +50,11 @@
   "workspace": {
     "mode_selector": {
       "text_to_video": "Texto a Video",
-      "image_to_video": "Imagen a Video"
+      "image_to_video": "Imagen a Video",
+      "reference_to_video": "Referencia a Video"
+    },
+    "reference_mode": {
+      "notice": "El modo Referencia a Video solo admite el Modo Rápido (veo3_fast) y relación de aspecto 16:9. Sube 1-3 imágenes de referencia para guiar la generación del video."
     },
     "upload_zone": {
       "title": "Subir Imagen de Referencia",

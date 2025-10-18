@@ -16,9 +16,13 @@ import {
   Veo3Model,
   Veo3TaskType,
   AspectRatio,
+  GenerationType,
   getCreditsForModel,
   CREDITS_PER_1080P,
   supports1080p,
+  getImageUrlsLimit,
+  validateGenerationType,
+  DEFAULT_IMAGE_TO_VIDEO_GENERATION_TYPE,
 } from "@/lib/constants/veo3";
 import { transferVideoToR2 } from "@/lib/video-transfer";
 
@@ -33,6 +37,7 @@ export async function processSubmitRequest({
   watermark,
   seeds,
   requestId,
+  generationType,
 }: {
   userUuid: string;
   type: Veo3TaskType;
@@ -43,7 +48,33 @@ export async function processSubmitRequest({
   watermark?: string;
   seeds?: number;
   requestId: string;
+  generationType?: GenerationType;
 }) {
+  // 处理 generationType 默认值和校验
+  let finalGenerationType = generationType;
+
+  if (type === "image-to-video") {
+    // 如果是图生视频但未指定 generationType，使用默认值
+    if (!finalGenerationType) {
+      finalGenerationType = DEFAULT_IMAGE_TO_VIDEO_GENERATION_TYPE;
+    }
+
+    // 校验图片数量
+    const limits = getImageUrlsLimit(finalGenerationType);
+    const imageCount = imageUrls?.length || 0;
+
+    if (imageCount < limits.min || imageCount > limits.max) {
+      throw new Error(
+        `${finalGenerationType} mode requires ${limits.min}-${limits.max} image(s), but got ${imageCount}`
+      );
+    }
+
+    // 校验 REFERENCE_2_VIDEO 的模型和宽高比限制
+    const validation = validateGenerationType(finalGenerationType, model, aspectRatio);
+    if (!validation.valid) {
+      throw new Error(validation.error);
+    }
+  }
   // 计算积分消耗
   const creditsNeeded = getCreditsForModel(model);
 
@@ -65,6 +96,7 @@ export async function processSubmitRequest({
     aspectRatio,
     watermark,
     seeds,
+    generationType: finalGenerationType,
   };
 
   // 创建数据库记录

@@ -14,7 +14,7 @@ import {
   ChevronUp,
 } from "lucide-react";
 import { useState } from "react";
-import { Veo3Model, AspectRatio, Veo3TaskType } from "../types";
+import { Veo3Model, AspectRatio, ModeOption } from "../types";
 import {
   Tooltip,
   TooltipContent,
@@ -23,7 +23,7 @@ import {
 } from "@/components/ui/tooltip";
 
 interface Veo3ControlsProps {
-  mode: Veo3TaskType;
+  mode: ModeOption;
   model: Veo3Model;
   onModelChange: (model: Veo3Model) => void;
   aspectRatio: AspectRatio;
@@ -94,10 +94,15 @@ export default function Veo3Controls({
     return true;
   });
 
+  // Hide model and aspect ratio controls in reference-to-video mode
+  const hideModelControl = mode === "reference-to-video";
+  const hideAspectRatioControl = mode === "reference-to-video";
+
   return (
     <div className={className}>
       <div className="space-y-5">
         {/* Model Selection */}
+        {!hideModelControl && (
         <div className="space-y-3">
           <div className="flex items-center gap-2">
             <Film className="w-4 h-4 text-emerald-500" />
@@ -165,8 +170,10 @@ export default function Veo3Controls({
             })}
           </div>
         </div>
+        )}
 
         {/* Aspect Ratio */}
+        {!hideAspectRatioControl && (
         <div className="space-y-3">
           <div className="flex items-center gap-2">
             <Maximize2 className="w-4 h-4 text-cyan-500" />
@@ -246,6 +253,7 @@ export default function Veo3Controls({
             })}
           </div>
         </div>
+        )}
 
         {/* Advanced Options */}
         <div className="p-3 bg-emerald-50/30 dark:bg-emerald-900/10 rounded-lg border border-emerald-200/50 dark:border-emerald-700/30">

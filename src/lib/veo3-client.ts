@@ -1,6 +1,6 @@
 // Veo3 API 客户端封装
 
-import { Veo3Model, AspectRatio } from "./constants/veo3";
+import { Veo3Model, AspectRatio, GenerationType } from "./constants/veo3";
 
 // Mock 模式开关 - 开发环境下节省成本
 const ENABLE_MOCK = process.env.NEXT_PUBLIC_VEO3_MOCK === "true";
@@ -16,6 +16,7 @@ interface Veo3GenerateRequest {
   callBackUrl?: string;
   enableFallback?: boolean;
   enableTranslation?: boolean;
+  generationType?: GenerationType;
 }
 
 // Veo3 生成视频响应
@@ -109,6 +110,7 @@ export async function generateVideo(
     callBackUrl: params.callBackUrl,
     enableFallback: params.enableFallback ?? false,
     enableTranslation: params.enableTranslation ?? true,
+    generationType: params.generationType,
   };
 
   console.log("Veo3 generate request:", {

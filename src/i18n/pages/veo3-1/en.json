@@ -54,7 +54,11 @@
   "workspace": {
     "mode_selector": {
       "text_to_video": "Text to Video",
-      "image_to_video": "Image to Video"
+      "image_to_video": "Image to Video",
+      "reference_to_video": "Reference to Video"
+    },
+    "reference_mode": {
+      "notice": "Reference to Video mode only supports Fast Mode (veo3_fast) and 16:9 aspect ratio. Upload 1-3 reference images to guide the video generation."
     },
     "upload_zone": {
       "title": "Upload Reference Image",

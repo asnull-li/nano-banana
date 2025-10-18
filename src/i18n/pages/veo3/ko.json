@@ -50,7 +50,11 @@
   "workspace": {
     "mode_selector": {
       "text_to_video": "텍스트를 동영상으로",
-      "image_to_video": "이미지를 동영상으로"
+      "image_to_video": "이미지를 동영상으로",
+      "reference_to_video": "참조를 동영상으로"
+    },
+    "reference_mode": {
+      "notice": "참조를 동영상으로 모드는 빠른 모드(veo3_fast)와 16:9 화면 비율만 지원합니다. 동영상 생성을 안내하기 위해 1-3개의 참조 이미지를 업로드하세요."
     },
     "upload_zone": {
       "title": "참조 이미지 업로드",
