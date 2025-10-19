@@ -141,8 +141,8 @@ export default function Sora2Controls({
         </div>
       </div>
 
-      {/* Duration - Only for Pro */}
-      {isPro && duration && onDurationChange && (
+      {/* Duration - Both versions support */}
+      {duration && onDurationChange && (
         <div className="space-y-3">
           <div className="flex items-center gap-2">
             <Clock className="w-4 h-4 text-blue-500" />

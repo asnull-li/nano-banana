@@ -47,7 +47,7 @@ export async function processSubmitRequest({
   requestId: string;
 }) {
   // 动态计算所需积分
-  const creditsNeeded = calculateCredits(model, nFrames, size);
+  const creditsNeeded = calculateCredits(model, nFrames, size, removeWatermark);
 
   // 检查用户积分
   const creditCheck = await checkUserCredits(userUuid, creditsNeeded);

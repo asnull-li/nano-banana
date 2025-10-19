@@ -76,8 +76,8 @@ export default function Sora2Workspace({
 
   // 动态计算所需积分
   const creditsNeeded = useMemo(
-    () => calculateCredits(model, duration, quality),
-    [model, duration, quality]
+    () => calculateCredits(model, duration, quality, removeWatermark),
+    [model, duration, quality, removeWatermark]
   );
 
   // Polling
@@ -341,7 +341,7 @@ export default function Sora2Workspace({
         prompt,
         image_urls: uploadedImageUrl ? [uploadedImageUrl] : undefined,
         aspect_ratio: aspectRatio,
-        n_frames: model === "sora2-pro" ? duration : undefined,
+        n_frames: duration,
         size: model === "sora2-pro" ? quality : undefined,
         remove_watermark: removeWatermark,
       });

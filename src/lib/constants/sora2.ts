@@ -23,7 +23,7 @@ export const DEFAULT_MODEL: Sora2Model = "sora2";
 export const DEFAULT_DURATION: Sora2Duration = "10";
 export const DEFAULT_QUALITY: Sora2Quality = "standard";
 export const DEFAULT_ASPECT_RATIO: Sora2AspectRatio = "landscape";
-export const DEFAULT_REMOVE_WATERMARK = true;
+export const DEFAULT_REMOVE_WATERMARK = false;
 
 // 提示词长度限制
 export const MIN_PROMPT_LENGTH = 3;
@@ -32,25 +32,29 @@ export const MAX_PROMPT_LENGTH = 5000;
 // 图片URL数量限制（image-to-video 模式）
 export const MAX_IMAGE_URLS = 1; // Sora 2 支持1张图片
 
-// 根据任务类型获取积分消耗（向后兼容，Sora 2 普通版）
-export function getCreditsForTask(type: Sora2TaskType): number {
-  return CREDITS_PER_SORA2;
-}
-
 // 动态计算积分（支持双版本）
 export function calculateCredits(
   model: Sora2Model,
   duration?: Sora2Duration,
-  quality?: Sora2Quality
+  quality?: Sora2Quality,
+  removeWatermark?: boolean
 ): number {
-  // Sora 2 普通版：固定 15 积分
+  const selectedDuration = duration || DEFAULT_DURATION;
+  const selectedQuality = quality || DEFAULT_QUALITY;
+  const watermarkEnabled = removeWatermark ?? DEFAULT_REMOVE_WATERMARK;
+
+  // Sora 2 普通版：根据时长和水印计算
+  // 10s + 水印移除 = 10 积分, 不移除 = 8 积分
+  // 15s + 水印移除 = 12 积分, 不移除 = 10 积分
   if (model === "sora2") {
-    return CREDITS_PER_SORA2;
+    const baseCredits = selectedDuration === "10" ? 10 : 12;
+    const watermarkDiscount = watermarkEnabled ? 0 : 2;
+    return baseCredits - watermarkDiscount;
   }
 
-  // Sora 2 Pro：根据时长和画质计算
-  // 标准画质: 10秒=40, 15秒=60
-  // 高画质: 10秒=90, 15秒=180
+  // Sora 2 Pro：根据时长和画质计算(不受水印参数影响)
+  // 标准画质: 10秒=40, 15秒=50
+  // 高画质: 10秒=80, 15秒=160
   const creditsMatrix: Record<Sora2Quality, Record<Sora2Duration, number>> = {
     standard: {
       "10": 40,
@@ -61,9 +65,6 @@ export function calculateCredits(
       "15": 160,
     },
   };
-
-  const selectedDuration = duration || DEFAULT_DURATION;
-  const selectedQuality = quality || DEFAULT_QUALITY;
 
   return creditsMatrix[selectedQuality][selectedDuration];
 }

@@ -109,14 +109,14 @@ export async function generateSora2Video(
     },
   };
 
-  // 添加 Pro 版本专属参数
-  if (isPro) {
-    if (params.nFrames) {
-      requestBody.input.n_frames = params.nFrames;
-    }
-    if (params.size) {
-      requestBody.input.size = params.size;
-    }
+  // 添加 n_frames 参数(两个版本都支持)
+  if (params.nFrames) {
+    requestBody.input.n_frames = params.nFrames;
+  }
+
+  // 添加 size 参数(仅 Pro 版本支持)
+  if (isPro && params.size) {
+    requestBody.input.size = params.size;
   }
 
   // 添加图片URL（仅在 image-to-video 模式下）

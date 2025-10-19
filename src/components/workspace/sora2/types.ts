@@ -15,7 +15,7 @@ export interface Sora2Task {
   prompt: string;
   aspectRatio: Sora2AspectRatio;
   removeWatermark: boolean;
-  duration?: Sora2Duration; // 仅 Pro 版本
+  duration?: Sora2Duration; // 两个版本都支持
   quality?: Sora2Quality; // 仅 Pro 版本
   inputImage: string | null; // For image-to-video mode
   videoUrl: string | null;
@@ -37,6 +37,6 @@ export interface GenerateVideoParams {
   image_urls?: string[];
   aspect_ratio?: Sora2AspectRatio;
   remove_watermark?: boolean;
-  n_frames?: Sora2Duration; // 仅 Pro 版本
+  n_frames?: Sora2Duration; // 两个版本都支持
   size?: Sora2Quality; // 仅 Pro 版本
 }

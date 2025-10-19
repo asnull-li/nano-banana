@@ -124,18 +124,19 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // 验证 Pro 版本参数
-    if (model === "sora2-pro") {
-      if (n_frames && !["10", "15"].includes(n_frames)) {
-        return NextResponse.json(
-          {
-            success: false,
-            error: "Invalid n_frames. Must be '10' or '15'",
-          },
-          { status: 400 }
-        );
-      }
+    // 验证 n_frames 参数(两个版本都支持)
+    if (n_frames && !["10", "15"].includes(n_frames)) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: "Invalid n_frames. Must be '10' or '15'",
+        },
+        { status: 400 }
+      );
+    }
 
+    // 验证 size 参数(仅 Pro 版本支持)
+    if (model === "sora2-pro") {
       if (size && !["standard", "high"].includes(size)) {
         return NextResponse.json(
           {
@@ -162,7 +163,7 @@ export async function POST(request: NextRequest) {
         prompt,
         imageUrls: type === "image-to-video" ? image_urls : undefined,
         aspectRatio: aspect_ratio as Sora2AspectRatio,
-        nFrames: model === "sora2-pro" ? (n_frames as Sora2Duration) : undefined,
+        nFrames: n_frames as Sora2Duration,
         size: model === "sora2-pro" ? (size as Sora2Quality) : undefined,
         removeWatermark: remove_watermark,
         callBackUrl: webhookUrl,
@@ -188,7 +189,7 @@ export async function POST(request: NextRequest) {
         prompt,
         imageUrls: type === "image-to-video" ? image_urls : undefined,
         aspectRatio: aspect_ratio as Sora2AspectRatio,
-        nFrames: model === "sora2-pro" ? (n_frames as Sora2Duration) : undefined,
+        nFrames: n_frames as Sora2Duration,
         size: model === "sora2-pro" ? (size as Sora2Quality) : undefined,
         removeWatermark: remove_watermark,
         requestId: request_id,
