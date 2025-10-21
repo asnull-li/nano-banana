@@ -449,6 +449,16 @@
               "target": "_self"
             }
           ]
+        },
+        {
+          "title": "その他",
+          "children": [
+            {
+              "title": "気候アクション計画",
+              "url": "https://climate.stripe.com/AoIcTh",
+              "target": "_blank"
+            }
+          ]
         }
       ]
     },

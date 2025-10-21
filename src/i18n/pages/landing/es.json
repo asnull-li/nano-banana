@@ -448,6 +448,16 @@
               "target": "_self"
             }
           ]
+        },
+        {
+          "title": "Otros",
+          "children": [
+            {
+              "title": "Plan de Acción Climática",
+              "url": "https://climate.stripe.com/AoIcTh",
+              "target": "_blank"
+            }
+          ]
         }
       ]
     },

@@ -448,6 +448,16 @@
               "target": "_self"
             }
           ]
+        },
+        {
+          "title": "Прочее",
+          "children": [
+            {
+              "title": "План климатических действий",
+              "url": "https://climate.stripe.com/AoIcTh",
+              "target": "_blank"
+            }
+          ]
         }
       ]
     },

@@ -447,6 +447,16 @@
               "target": "_self"
             }
           ]
+        },
+        {
+          "title": "Sonstiges",
+          "children": [
+            {
+              "title": "Klimaschutz-Plan",
+              "url": "https://climate.stripe.com/AoIcTh",
+              "target": "_blank"
+            }
+          ]
         }
       ]
     },

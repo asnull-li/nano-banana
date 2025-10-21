@@ -449,6 +449,16 @@
               "target": "_self"
             }
           ]
+        },
+        {
+          "title": "Other",
+          "children": [
+            {
+              "title": "Climate Action Plan",
+              "url": "https://climate.stripe.com/AoIcTh",
+              "target": "_blank"
+            }
+          ]
         }
       ]
     },

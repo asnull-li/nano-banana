@@ -449,6 +449,16 @@
               "target": "_self"
             }
           ]
+        },
+        {
+          "title": "기타",
+          "children": [
+            {
+              "title": "기후 행동 계획",
+              "url": "https://climate.stripe.com/AoIcTh",
+              "target": "_blank"
+            }
+          ]
         }
       ]
     },

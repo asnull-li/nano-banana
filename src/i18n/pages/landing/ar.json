@@ -447,6 +447,16 @@
               "target": "_self"
             }
           ]
+        },
+        {
+          "title": "أخرى",
+          "children": [
+            {
+              "title": "خطة العمل المناخي",
+              "url": "https://climate.stripe.com/AoIcTh",
+              "target": "_blank"
+            }
+          ]
         }
       ]
     },
