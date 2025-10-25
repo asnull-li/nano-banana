@@ -6,7 +6,15 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Download, Sparkles, Edit3, Video, Film, Clapperboard } from "lucide-react";
+import {
+  Download,
+  Sparkles,
+  Edit3,
+  Video,
+  Film,
+  Clapperboard,
+  Play,
+} from "lucide-react";
 import { toast } from "sonner";
 import { useRouter } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
@@ -58,7 +66,7 @@ export default function ImageActionBar({
     }
   };
 
-  const handleImageToVideo = (model: "veo3" | "sora2") => {
+  const handleImageToVideo = (model: "veo3" | "sora2" | "wan25") => {
     if (!imageUrl) {
       toast.error(t("image_not_found"));
       return;
@@ -72,7 +80,13 @@ export default function ImageActionBar({
       const searchParams = new URLSearchParams();
       searchParams.set("imageUrl", imageUrl);
 
-      const targetPath = model === "veo3" ? "/veo3" : "/sora2";
+      let targetPath = "/sora2"; // 默认值
+      if (model === "veo3") {
+        targetPath = "/veo3";
+      } else if (model === "wan25") {
+        targetPath = "/wan2-5";
+      }
+
       router.push(`${targetPath}?${searchParams.toString()}`);
     } catch (error) {
       console.error("Invalid image URL:", error);
@@ -127,6 +141,10 @@ export default function ImageActionBar({
             <DropdownMenuItem onClick={() => handleImageToVideo("sora2")}>
               <Clapperboard className="h-4 w-4 mr-2" />
               {t("use_sora2")}
+            </DropdownMenuItem>
+            <DropdownMenuItem onClick={() => handleImageToVideo("wan25")}>
+              <Play className="h-4 w-4 mr-2" />
+              {t("use_wan25")}
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>

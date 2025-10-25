@@ -251,7 +251,8 @@
         "invalid_image_url": "Ungültige Bild-URL",
         "continue_edit_coming_soon": "Funktion zur Weiterbearbeitung kommt bald",
         "use_veo3": "Veo 3 verwenden",
-        "use_sora2": "Sora 2 verwenden"
+        "use_sora2": "Sora 2 verwenden",
+        "use_wan25": "Wan 2.5 verwenden"
       },
       "ai_description": {
         "title": "KI-generierte Beschreibung"
@@ -281,6 +282,7 @@
         "image_count": "{current} / {total}",
         "use_veo3": "Veo 3 verwenden",
         "use_sora2": "Sora 2 verwenden",
+        "use_wan25": "Wan 2.5 verwenden",
         "image_to_video": "Bild zu Video"
       },
       "quick_prompts": {

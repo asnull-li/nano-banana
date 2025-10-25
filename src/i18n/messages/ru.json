@@ -251,7 +251,8 @@
         "invalid_image_url": "Недействительная ссылка на изображение",
         "continue_edit_coming_soon": "Функция продолжения редактирования скоро появится",
         "use_veo3": "Использовать Veo 3",
-        "use_sora2": "Использовать Sora 2"
+        "use_sora2": "Использовать Sora 2",
+        "use_wan25": "Использовать Wan 2.5"
       },
       "ai_description": {
         "title": "ИИ-сгенерированное описание"
@@ -281,6 +282,7 @@
         "image_count": "{current} / {total}",
         "use_veo3": "Использовать Veo 3",
         "use_sora2": "Использовать Sora 2",
+        "use_wan25": "Использовать Wan 2.5",
         "image_to_video": "Изображение в видео"
       },
       "quick_prompts": {

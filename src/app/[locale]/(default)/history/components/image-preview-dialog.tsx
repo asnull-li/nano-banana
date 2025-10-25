@@ -24,6 +24,7 @@ import {
   Video,
   Film,
   Clapperboard,
+  Play,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { toast } from "sonner";
@@ -94,7 +95,7 @@ export default function ImagePreviewDialog({
     }
   };
 
-  const handleImageToVideo = (model: "veo3" | "sora2") => {
+  const handleImageToVideo = (model: "veo3" | "sora2" | "wan25") => {
     if (!currentImage) {
       toast.error(t("no_image_selected") || "No image selected");
       return;
@@ -108,7 +109,13 @@ export default function ImagePreviewDialog({
       const searchParams = new URLSearchParams();
       searchParams.set("imageUrl", currentImage);
 
-      const targetPath = model === "veo3" ? "/veo3" : "/sora2";
+      let targetPath = "/sora2"; // 默认值
+      if (model === "veo3") {
+        targetPath = "/veo3";
+      } else if (model === "wan25") {
+        targetPath = "/wan2-5";
+      }
+
       router.push(`${targetPath}?${searchParams.toString()}`);
       onClose();
     } catch (error) {
@@ -205,7 +212,9 @@ export default function ImagePreviewDialog({
                     className="flex-1 min-w-[100px] max-w-[150px] bg-gradient-to-r from-blue-500 to-purple-500 text-white hover:from-blue-600 hover:to-purple-600 shadow-lg shadow-blue-500/25 text-xs sm:text-sm"
                   >
                     <Video className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
-                    <span className="hidden sm:inline">{t("image_to_video")}</span>
+                    <span className="hidden sm:inline">
+                      {t("image_to_video")}
+                    </span>
                     <span className="sm:hidden">{t("i2v")}</span>
                   </Button>
                 </DropdownMenuTrigger>
@@ -217,6 +226,10 @@ export default function ImagePreviewDialog({
                   <DropdownMenuItem onClick={() => handleImageToVideo("sora2")}>
                     <Clapperboard className="h-4 w-4 mr-2" />
                     {t("use_sora2")}
+                  </DropdownMenuItem>
+                  <DropdownMenuItem onClick={() => handleImageToVideo("wan25")}>
+                    <Play className="h-4 w-4 mr-2" />
+                    {t("use_wan25")}
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>

@@ -251,7 +251,8 @@
         "invalid_image_url": "رابط صورة غير صالح",
         "continue_edit_coming_soon": "ميزة مواصلة التحرير ستكون متاحة قريباً",
         "use_veo3": "استخدام Veo 3",
-        "use_sora2": "استخدام Sora 2"
+        "use_sora2": "استخدام Sora 2",
+        "use_wan25": "استخدام Wan 2.5"
       },
       "ai_description": {
         "title": "وصف مُنشأ بالذكاء الاصطناعي"
@@ -281,6 +282,7 @@
         "image_count": "{current} / {total}",
         "use_veo3": "استخدام Veo 3",
         "use_sora2": "استخدام Sora 2",
+        "use_wan25": "استخدام Wan 2.5",
         "image_to_video": "صورة إلى فيديو"
       },
       "quick_prompts": {

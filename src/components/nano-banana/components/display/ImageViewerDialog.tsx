@@ -12,7 +12,16 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { ChevronLeft, ChevronRight, Download, Sparkles, Video, Film, Clapperboard } from "lucide-react";
+import {
+  ChevronLeft,
+  ChevronRight,
+  Download,
+  Sparkles,
+  Video,
+  Film,
+  Clapperboard,
+  Play,
+} from "lucide-react";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
@@ -67,7 +76,7 @@ export default function ImageViewerDialog({
   };
 
   // 处理图生视频
-  const handleImageToVideo = (model: "veo3" | "sora2") => {
+  const handleImageToVideo = (model: "veo3" | "sora2" | "wan25") => {
     if (!currentResult?.url) {
       toast.error(t("image_not_found"));
       return;
@@ -81,7 +90,13 @@ export default function ImageViewerDialog({
       const searchParams = new URLSearchParams();
       searchParams.set("imageUrl", currentResult.url);
 
-      const targetPath = model === "veo3" ? "/veo3" : "/sora2";
+      let targetPath = "/sora2"; // 默认值
+      if (model === "veo3") {
+        targetPath = "/veo3";
+      } else if (model === "wan25") {
+        targetPath = "/wan2-5";
+      }
+
       router.push(`${targetPath}?${searchParams.toString()}`);
       onClose();
     } catch (error) {
@@ -195,13 +210,23 @@ export default function ImageViewerDialog({
                     </Button>
                   </DropdownMenuTrigger>
                   <DropdownMenuContent>
-                    <DropdownMenuItem onClick={() => handleImageToVideo("veo3")}>
+                    <DropdownMenuItem
+                      onClick={() => handleImageToVideo("veo3")}
+                    >
                       <Film className="h-4 w-4 mr-2" />
                       {t("use_veo3")}
                     </DropdownMenuItem>
-                    <DropdownMenuItem onClick={() => handleImageToVideo("sora2")}>
+                    <DropdownMenuItem
+                      onClick={() => handleImageToVideo("sora2")}
+                    >
                       <Clapperboard className="h-4 w-4 mr-2" />
                       {t("use_sora2")}
+                    </DropdownMenuItem>
+                    <DropdownMenuItem
+                      onClick={() => handleImageToVideo("wan25")}
+                    >
+                      <Play className="h-4 w-4 mr-2" />
+                      {t("use_wan25")}
                     </DropdownMenuItem>
                   </DropdownMenuContent>
                 </DropdownMenu>

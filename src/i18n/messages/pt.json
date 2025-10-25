@@ -251,7 +251,8 @@
         "invalid_image_url": "URL da imagem inválida",
         "continue_edit_coming_soon": "Recurso de edição contínua em breve",
         "use_veo3": "Usar Veo 3",
-        "use_sora2": "Usar Sora 2"
+        "use_sora2": "Usar Sora 2",
+        "use_wan25": "Usar Wan 2.5"
       },
       "ai_description": {
         "title": "Descrição Gerada pela IA"
@@ -281,6 +282,7 @@
         "image_count": "{current} / {total}",
         "use_veo3": "Usar Veo 3",
         "use_sora2": "Usar Sora 2",
+        "use_wan25": "Usar Wan 2.5",
         "image_to_video": "Imagem para Vídeo"
       },
       "quick_prompts": {

@@ -251,7 +251,8 @@
         "invalid_image_url": "无效的图片链接",
         "continue_edit_coming_soon": "继续编辑功能即将上线",
         "use_veo3": "使用 Veo 3",
-        "use_sora2": "使用 Sora 2"
+        "use_sora2": "使用 Sora 2",
+        "use_wan25": "使用 Wan 2.5"
       },
       "ai_description": {
         "title": "AI 生成描述"
@@ -281,6 +282,7 @@
         "image_count": "{current} / {total}",
         "use_veo3": "使用 Veo 3",
         "use_sora2": "使用 Sora 2",
+        "use_wan25": "使用 Wan 2.5",
         "image_to_video": "图生视频"
       },
       "quick_prompts": {

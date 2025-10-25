@@ -251,7 +251,8 @@
         "invalid_image_url": "유효하지 않은 이미지 URL",
         "continue_edit_coming_soon": "계속 편집 기능이 곧 출시됩니다",
         "use_veo3": "Veo 3 사용",
-        "use_sora2": "Sora 2 사용"
+        "use_sora2": "Sora 2 사용",
+        "use_wan25": "Wan 2.5 사용"
       },
       "ai_description": {
         "title": "AI 생성 설명"
@@ -281,6 +282,7 @@
         "image_count": "{current} / {total}",
         "use_veo3": "Veo 3 사용",
         "use_sora2": "Sora 2 사용",
+        "use_wan25": "Wan 2.5 사용",
         "image_to_video": "이미지를 비디오로"
       },
       "quick_prompts": {
