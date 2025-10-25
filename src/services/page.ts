@@ -33,6 +33,10 @@ export async function getVeo3_1Page(locale: string): Promise<any> {
   return (await getPage("veo3-1", locale)) as any;
 }
 
+export async function getWan25Page(locale: string): Promise<any> {
+  return (await getPage("wan2-5", locale)) as any;
+}
+
 export async function getPage(
   name: string,
   locale: string

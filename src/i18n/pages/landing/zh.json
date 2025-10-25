@@ -18,20 +18,32 @@
           "icon": "RiImageAiFill"
         },
         {
-          "title": "Veo3",
-          "url": "/veo3",
-          "icon": "RiImageAiFill"
+          "title": "AI视频生成器",
+          "icon": "RiVideoLine",
+          "children": [
+            {
+              "title": "Veo3",
+              "url": "/veo3",
+              "icon": "RiVideoLine"
+            },
+            {
+              "title": "Veo3.1",
+              "url": "/veo3-1",
+              "icon": "RiVideoLine"
+            },
+            {
+              "title": "Sora2",
+              "url": "/sora2",
+              "icon": "RiVideoLine"
+            },
+            {
+              "title": "Wan 2.5",
+              "url": "/wan2-5",
+              "icon": "RiVideoLine"
+            }
+          ]
         },
-        {
-          "title": "Veo3.1",
-          "url": "/veo3-1",
-          "icon": "RiImageAiFill"
-        },
-        {
-          "title": "Sora2",
-          "url": "/sora2",
-          "icon": "RiImageAiFill"
-        },
+
         {
           "title": "创作记录",
           "url": "/history",
@@ -444,6 +456,11 @@
             {
               "title": "Sora2",
               "url": "/sora2",
+              "target": "_self"
+            },
+            {
+              "title": "Wan2.5",
+              "url": "/wan2-5",
               "target": "_self"
             }
           ]

@@ -30,6 +30,8 @@ export enum CreditsTransType {
   Veo3_refund = "veo3_refund", // refund for failed veo3 tasks
   Sora2 = "sora2", // cost for sora 2 video generation
   Sora2_refund = "sora2_refund", // refund for failed sora 2 tasks
+  Wan25 = "wan25", // cost for wan 2.5 video generation
+  Wan25_refund = "wan25_refund", // refund for failed wan 2.5 tasks
 }
 
 export enum CreditsAmount {

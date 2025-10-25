@@ -1,0 +1,187 @@
+{
+  "meta": {
+    "title": "Wan 2.5: AI Video with Native Audio | Text & Image to Video",
+    "description": "First AI video generator with synchronized audio. Create 10s videos with speech, music & sound effects from text/images. 720p/1080p. Maximum creative freedom."
+  },
+  "hero": {
+    "title": "Wan 2.5: AI Video Generator with Native Audio",
+    "subtitle": "Synchronized Sound • Lip-Sync Speech • Dynamic Visuals • Creative Freedom",
+    "description": "Alibaba's breakthrough Wan 2.5 model generates videos with native audio - speech, music, and sound effects synchronized to visuals. Create 10-second videos from text or images in 720p/1080p. Maximum creative freedom for bold, dynamic content. No audio post-production needed."
+  },
+  "features": {
+    "title": "Why Wan 2.5 Is the Most Advanced AI Video Generator",
+    "description": "First video AI model with native audio generation. Wan 2.5 eliminates audio post-production by creating synchronized soundtracks, speech, and sound effects during video generation. Unmatched creative freedom for diverse content styles.",
+    "items": [
+      {
+        "title": "Native Audio Generation - Industry First",
+        "description": "Wan 2.5 generates video and audio simultaneously: synchronized speech with lip movements, background music matching video rhythm, environmental sounds, and ambient effects. No separate recording or audio editing needed - everything is created together in one process."
+      },
+      {
+        "title": "Superior Stability & Coherent Motion",
+        "description": "Advanced camera language with smooth transitions, stable object tracking, and consistent character continuity across frames. Eliminates common AI video issues like flickering, jittering, or morphing. Professional-grade cinematography with natural movement flow."
+      },
+      {
+        "title": "Flexible Duration & Multi-Resolution Support",
+        "description": "Generate 5-second or 10-second videos (longer than most competitors' 8s limit) in 720p or 1080p resolution. Multiple aspect ratios: 16:9 landscape, 9:16 portrait, 1:1 square. Optimized for YouTube, TikTok, Instagram, and all social platforms."
+      },
+      {
+        "title": "Maximum Creative Freedom & Diverse Content",
+        "description": "Lenient content moderation enables bold, dynamic, and impactful video creation. Support for text-to-video and image-to-video modes. Multimodal inputs including text, images, and audio references. Excellent multilingual support including Chinese and other languages."
+      }
+    ]
+  },
+  "how_to_use": {
+    "title": "How to Create Videos with Audio in 3 Simple Steps",
+    "description": "Generate professional videos with synchronized audio using Wan 2.5. No audio editing skills required - speech, music, and sound effects are created automatically with your video.",
+    "items": [
+      {
+        "title": "Step 1: Choose Text or Image Input",
+        "description": "Text-to-Video: Describe your scene, camera movements, actions, and audio requirements. Image-to-Video: Upload a reference image and describe desired motion. Wan 2.5 will generate matching audio including speech, music, and environmental sounds."
+      },
+      {
+        "title": "Step 2: Configure Duration, Resolution & Aspect Ratio",
+        "description": "Duration: 5 seconds (quick content) or 10 seconds (richer storytelling). Resolution: 720p (faster rendering) or 1080p (maximum quality). Aspect Ratio: 16:9 landscape, 9:16 vertical, or 1:1 square. Optional: Add negative prompts to exclude unwanted elements."
+      },
+      {
+        "title": "Step 3: Generate & Download with Native Audio",
+        "description": "Click generate and Wan 2.5 creates your video with synchronized audio in minutes. Preview the complete video with sound, lip-synced speech, and background music. Download ready-to-use content for YouTube, TikTok, Instagram, or commercial projects."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Wan 2.5 Frequently Asked Questions - Native Audio Video Generation",
+    "description": "Complete guide to Wan 2.5's audio-visual generation capabilities, pricing, content policies, and comparison with other AI video models like Sora 2, Veo 3.",
+    "contact": {
+      "question_text": "Have more questions about Wan 2.5?",
+      "support_link": "Contact our support team"
+    },
+    "items": [
+      {
+        "question": "What is Wan 2.5 and what makes its native audio unique?",
+        "answer": "Wan 2.5 is Alibaba's AI video generation model with industry-first native audio capability. Unlike other AI video tools that generate silent videos, Wan 2.5 creates synchronized speech, background music, sound effects, and lip movements simultaneously with visuals. It supports text-to-video and image-to-video generation in 5s/10s durations, 720p/1080p resolutions, and multiple aspect ratios (16:9, 9:16, 1:1)."
+      },
+      {
+        "question": "How does Wan 2.5 compare to Sora 2, Veo 3, and other AI video generators?",
+        "answer": "Wan 2.5 advantages: Native audio generation (speech + music + sound effects) - competitors require separate audio production; 10-second duration vs. most competitors' 8-second limit; More affordable credit pricing; Lenient content policies for creative freedom; Strong multilingual support including Chinese. Competitive with Sora 2 and Veo 3 in visual quality while offering unique audio capabilities and better value."
+      },
+      {
+        "question": "What are Wan 2.5's video duration, resolution, and aspect ratio options?",
+        "answer": "Duration: 5 seconds or 10 seconds. Resolution: 720p or 1080p. Aspect Ratio: 16:9 horizontal (YouTube, desktop), 9:16 vertical (TikTok, Instagram Stories), 1:1 square (Instagram posts). Text-to-video mode supports all aspect ratios; image-to-video inherits source image ratio. All videos include native audio."
+      },
+      {
+        "question": "How much does Wan 2.5 cost? Credit pricing explained.",
+        "answer": "Credit-based pay-per-use (no subscription): 5s 720p = 60 credits, 5s 1080p = 100 credits, 10s 720p = 120 credits, 10s 1080p = 200 credits. All prices include native audio generation (speech, music, sound effects). More cost-effective than Veo 3 and comparable models."
+      },
+      {
+        "question": "What content can I create? Are there content restrictions?",
+        "answer": "Wan 2.5 offers maximum creative freedom with lenient content moderation, enabling bold, dynamic, and impactful video creation. Suitable for diverse creative expressions, social media viral content, advertising, artistic projects, and commercial use. Greater flexibility compared to stricter competitors, while maintaining legal compliance."
+      },
+      {
+        "question": "Can I use Wan 2.5 videos commercially? What about copyright?",
+        "answer": "Yes! All Wan 2.5 generated videos (including audio) are suitable for commercial use: marketing campaigns, advertising, YouTube monetization, social media content, client projects, product demonstrations. You own the output. The native audio generation means no copyright concerns for background music or sound effects."
+      },
+      {
+        "question": "How do I get the best results from Wan 2.5's audio generation?",
+        "answer": "For optimal audio-visual results: Describe desired audio in your prompt (e.g., 'dramatic orchestral music,' 'character speaking with deep voice,' 'ambient forest sounds'). Specify camera movements and visual rhythm for matching soundtrack. Use negative prompts to exclude unwanted audio elements. The AI automatically synchronizes lip movements with speech and music with visual pacing."
+      },
+      {
+        "question": "Does Wan 2.5 support languages other than English?",
+        "answer": "Yes! Wan 2.5 has excellent multilingual support including Chinese, Spanish, French, German, Russian, Arabic, Korean, Japanese, Portuguese, and more. The native audio generation supports speech synthesis in multiple languages with proper pronunciation and lip-sync."
+      }
+    ]
+  },
+  "examples": {
+    "title": "Wan 2.5 Video Examples with Native Audio",
+    "subtitle": "See how Wan 2.5 transforms text and images into complete audio-visual experiences",
+    "image_to_video": {
+      "title": "Image to Video with Audio",
+      "description": "Transform static images into dynamic videos with synchronized soundtracks, speech, and environmental audio",
+      "input_image_url": "https://file.nanobanana.org/showcase/wan%202.5/i2v-image.png",
+      "input_image_alt": "A figure skater performing in a surreal underground cavern with bioluminescent water",
+      "output_video_url": "https://file.nanobanana.org/showcase/wan%202.5/i2v-video.mp4"
+    },
+    "text_to_video": {
+      "title": "Text to Video with Native Audio",
+      "description": "Create complete videos with visuals, speech, and music from text descriptions alone",
+      "input_prompt": "A dimly lit jazz bar at night, wooden tables glowing under warm pendant lights. Patrons sip drinks and chat quietly while a three-piece band performs on stage. The saxophone player stands under a spotlight, gleaming instrument reflecting the light. No dialogue. Ambient audio: smooth live jazz music with saxophone and piano, clinking glasses, low murmur of audience conversations, occasional burst of laughter from a nearby table. Camera: slow pan across the crowd, then gentle zoom toward the saxophone player’s solo, focusing on expressive hand movements.",
+      "output_video_url": "https://file.nanobanana.org/showcase/wan%202.5/t2v-video.mp4"
+    }
+  },
+  "workspace": {
+    "mode_selector": {
+      "title": "Generation Mode",
+      "text_to_video": "Text to Video",
+      "text_to_video_desc": "Generate from text prompt",
+      "image_to_video": "Image to Video",
+      "image_to_video_desc": "Animate your image"
+    },
+    "prompt": {
+      "label": "Prompt",
+      "placeholder": "Describe the video you want to generate...",
+      "helper_text": "Be specific about actions, camera movements, and visual style"
+    },
+    "controls": {
+      "duration_label": "Duration",
+      "duration_5s": "5s",
+      "duration_10s": "10s",
+      "resolution_label": "Resolution",
+      "resolution_720p": "720p",
+      "resolution_1080p": "1080p",
+      "aspect_ratio_label": "Aspect Ratio",
+      "aspect_16_9": "16:9",
+      "aspect_9_16": "9:16",
+      "aspect_1_1": "1:1",
+      "aspect_ratio_tip": "The output video aspect ratio will match your uploaded image",
+      "credits_cost": "Credits Cost",
+      "credits_unit": "credits"
+    },
+    "advanced_settings": {
+      "title": "Advanced Settings",
+      "negative_prompt_label": "Negative Prompt",
+      "negative_prompt_placeholder": "Describe what you don't want in the video...",
+      "negative_prompt_helper": "Optional: Describe content to avoid in the generated video",
+      "seed_label": "Seed",
+      "seed_placeholder": "Random (leave empty)",
+      "seed_helper": "Optional: Use a specific seed for reproducible results"
+    },
+    "generate_button": {
+      "generate": "Generate Video (${credits} credits)",
+      "generating": "Generating...",
+      "uploading": "Uploading..."
+    },
+    "empty_state": {
+      "title": "Ready to Create",
+      "description": "Configure your settings and click generate to start creating amazing videos"
+    },
+    "processing_state": {
+      "title": "Generating Your Video",
+      "description": "Please wait while we process your request. This may take a few minutes."
+    },
+    "completed_state": {
+      "title": "Video Ready!",
+      "description": "Your video has been generated successfully",
+      "download_button": "Download Video"
+    },
+    "failed_state": {
+      "title": "Generation Failed",
+      "description": "Something went wrong. Please try again.",
+      "retry_button": "Try Again"
+    },
+    "toast": {
+      "prompt_required": "Please enter a prompt",
+      "prompt_length_error": "Prompt must be between ${min} and ${max} characters",
+      "image_required": "Please upload an image",
+      "login_required": "Please login to generate videos",
+      "insufficient_credits": "You need ${credits} credits",
+      "uploading_image": "Uploading image...",
+      "image_uploaded": "Image uploaded successfully",
+      "upload_failed": "Failed to upload image",
+      "video_generated": "Video generated successfully!",
+      "error_occurred": "An error occurred",
+      "downloading_video": "Downloading video...",
+      "download_success": "Video downloaded successfully",
+      "download_failed": "Failed to download video",
+      "new_video": "New Video"
+    }
+  }
+}

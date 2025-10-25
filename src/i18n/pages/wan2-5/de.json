@@ -1,0 +1,187 @@
+{
+  "meta": {
+    "title": "Wan 2.5: KI-Videogenerator mit nativem Audio | Text & Bild zu Video",
+    "description": "Erster KI-Videogenerator mit synchronisiertem Audio. Erstellen Sie 10s-Videos mit Sprache, Musik & Soundeffekten aus Text/Bildern. 720p/1080p. Maximale kreative Freiheit."
+  },
+  "hero": {
+    "title": "Wan 2.5: KI-Videogenerator mit nativem Audio",
+    "subtitle": "Synchronisierter Sound • Lippensynchrone Sprache • Dynamische Visuals • Kreative Freiheit",
+    "description": "Alibabas bahnbrechendes Wan 2.5-Modell generiert Videos mit nativem Audio - Sprache, Musik und Soundeffekte synchronisiert mit Visuals. Erstellen Sie 10-Sekunden-Videos aus Text oder Bildern in 720p/1080p. Maximale kreative Freiheit für mutige, dynamische Inhalte. Keine Audio-Nachbearbeitung erforderlich."
+  },
+  "features": {
+    "title": "Warum Wan 2.5 der fortschrittlichste KI-Videogenerator ist",
+    "description": "Erstes Video-KI-Modell mit nativer Audiogenerierung. Wan 2.5 eliminiert Audio-Nachbearbeitung durch Erstellung synchronisierter Soundtracks, Sprache und Soundeffekte während der Videogenerierung. Unübertroffene kreative Freiheit für vielfältige Inhaltsstile.",
+    "items": [
+      {
+        "title": "Native Audiogenerierung - Branchenneuheit",
+        "description": "Wan 2.5 generiert Video und Audio gleichzeitig: synchronisierte Sprache mit Lippenbewegungen, Hintergrundmusik passend zum Videorhythmus, Umgebungsgeräusche und Ambient-Effekte. Keine separate Aufnahme oder Audiobearbeitung nötig - alles wird in einem Prozess erstellt."
+      },
+      {
+        "title": "Überlegene Stabilität & kohärente Bewegung",
+        "description": "Fortgeschrittene Kamerasprache mit fließenden Übergängen, stabiler Objektverfolgung und konsistenter Charakterkontinuität über Frames hinweg. Beseitigt häufige KI-Videoprobleme wie Flackern, Ruckeln oder Morphing. Professionelle Kinematografie mit natürlichem Bewegungsfluss."
+      },
+      {
+        "title": "Flexible Dauer & Multi-Auflösungsunterstützung",
+        "description": "Generieren Sie 5-Sekunden- oder 10-Sekunden-Videos (länger als die 8s-Grenze der meisten Wettbewerber) in 720p oder 1080p Auflösung. Mehrere Seitenverhältnisse: 16:9 Querformat, 9:16 Hochformat, 1:1 Quadrat. Optimiert für YouTube, TikTok, Instagram und alle Social-Media-Plattformen."
+      },
+      {
+        "title": "Maximale kreative Freiheit & vielfältige Inhalte",
+        "description": "Nachsichtige Content-Moderation ermöglicht mutige, dynamische und wirkungsvolle Videoerstellung. Unterstützung für Text-zu-Video- und Bild-zu-Video-Modi. Multimodale Eingaben einschließlich Text, Bilder und Audio-Referenzen. Hervorragende mehrsprachige Unterstützung einschließlich Deutsch."
+      }
+    ]
+  },
+  "how_to_use": {
+    "title": "Videos mit Audio in 3 einfachen Schritten erstellen",
+    "description": "Generieren Sie professionelle Videos mit synchronisiertem Audio mit Wan 2.5. Keine Audiobearbeitungskenntnisse erforderlich - Sprache, Musik und Soundeffekte werden automatisch mit Ihrem Video erstellt.",
+    "items": [
+      {
+        "title": "Schritt 1: Text- oder Bildeingabe wählen",
+        "description": "Text-zu-Video: Beschreiben Sie Ihre Szene, Kamerabewegungen, Aktionen und Audioanforderungen. Bild-zu-Video: Laden Sie ein Referenzbild hoch und beschreiben Sie die gewünschte Bewegung. Wan 2.5 generiert passendes Audio einschließlich Sprache, Musik und Umgebungsgeräusche."
+      },
+      {
+        "title": "Schritt 2: Dauer, Auflösung & Seitenverhältnis konfigurieren",
+        "description": "Dauer: 5 Sekunden (schneller Content) oder 10 Sekunden (reicheres Storytelling). Auflösung: 720p (schnelleres Rendering) oder 1080p (maximale Qualität). Seitenverhältnis: 16:9 Querformat, 9:16 Hochformat oder 1:1 Quadrat. Optional: Negative Prompts hinzufügen, um unerwünschte Elemente auszuschließen."
+      },
+      {
+        "title": "Schritt 3: Generieren & Herunterladen mit nativem Audio",
+        "description": "Klicken Sie auf Generieren und Wan 2.5 erstellt Ihr Video mit synchronisiertem Audio in Minuten. Vorschau des vollständigen Videos mit Sound, lippensynchroner Sprache und Hintergrundmusik. Download von einsatzbereiten Inhalten für YouTube, TikTok, Instagram oder kommerzielle Projekte."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Wan 2.5 Häufig gestellte Fragen - Native Audio-Videogenerierung",
+    "description": "Vollständiger Leitfaden zu Wan 2.5's Audio-Visual-Generierungsfähigkeiten, Preisgestaltung, Content-Richtlinien und Vergleich mit anderen KI-Videomodellen wie Sora 2, Veo 3.",
+    "contact": {
+      "question_text": "Haben Sie weitere Fragen zu Wan 2.5?",
+      "support_link": "Kontaktieren Sie unser Support-Team"
+    },
+    "items": [
+      {
+        "question": "Was ist Wan 2.5 und was macht sein natives Audio einzigartig?",
+        "answer": "Wan 2.5 ist Alibabas KI-Videogenerierungsmodell mit branchenweit erster nativer Audiofähigkeit. Im Gegensatz zu anderen KI-Videotools, die stumme Videos generieren, erstellt Wan 2.5 synchronisierte Sprache, Hintergrundmusik, Soundeffekte und Lippenbewegungen gleichzeitig mit Visuals. Es unterstützt Text-zu-Video- und Bild-zu-Video-Generierung in 5s/10s Dauern, 720p/1080p Auflösungen und mehreren Seitenverhältnissen (16:9, 9:16, 1:1)."
+      },
+      {
+        "question": "Wie vergleicht sich Wan 2.5 mit Sora 2, Veo 3 und anderen KI-Videogeneratoren?",
+        "answer": "Wan 2.5 Vorteile: Native Audiogenerierung (Sprache + Musik + Soundeffekte) - Wettbewerber benötigen separate Audioproduktion; 10-Sekunden-Dauer vs. 8-Sekunden-Limit der meisten Wettbewerber; Günstigere Credit-Preise; Nachsichtige Content-Richtlinien für kreative Freiheit; Starke mehrsprachige Unterstützung einschließlich Deutsch. Konkurrenzfähig mit Sora 2 und Veo 3 in visueller Qualität bei gleichzeitiger Bereitstellung einzigartiger Audiofähigkeiten und besserem Wert."
+      },
+      {
+        "question": "Welche Videodauer-, Auflösungs- und Seitenverhältnis-Optionen bietet Wan 2.5?",
+        "answer": "Dauer: 5 Sekunden oder 10 Sekunden. Auflösung: 720p oder 1080p. Seitenverhältnis: 16:9 horizontal (YouTube, Desktop), 9:16 vertikal (TikTok, Instagram Stories), 1:1 Quadrat (Instagram Posts). Text-zu-Video-Modus unterstützt alle Seitenverhältnisse; Bild-zu-Video übernimmt Quellbildverhältnis. Alle Videos enthalten natives Audio."
+      },
+      {
+        "question": "Wie viel kostet Wan 2.5? Credit-Preise erklärt.",
+        "answer": "Credit-basierte Pay-per-Use (kein Abonnement): 5s 720p = 60 Credits, 5s 1080p = 100 Credits, 10s 720p = 120 Credits, 10s 1080p = 200 Credits. Alle Preise beinhalten native Audiogenerierung (Sprache, Musik, Soundeffekte). Kosteneffektiver als Veo 3 und vergleichbare Modelle."
+      },
+      {
+        "question": "Welchen Content kann ich erstellen? Gibt es Content-Einschränkungen?",
+        "answer": "Wan 2.5 bietet maximale kreative Freiheit mit nachsichtiger Content-Moderation und ermöglicht mutige, dynamische und wirkungsvolle Videoerstellung. Geeignet für vielfältige kreative Ausdrucksformen, virale Social-Media-Inhalte, Werbung, künstlerische Projekte und kommerzielle Nutzung. Größere Flexibilität im Vergleich zu strengeren Wettbewerbern bei gleichzeitiger Einhaltung gesetzlicher Vorschriften."
+      },
+      {
+        "question": "Kann ich Wan 2.5-Videos kommerziell nutzen? Was ist mit Urheberrechten?",
+        "answer": "Ja! Alle mit Wan 2.5 generierten Videos (einschließlich Audio) sind für kommerzielle Nutzung geeignet: Marketingkampagnen, Werbung, YouTube-Monetarisierung, Social-Media-Inhalte, Kundenprojekte, Produktdemonstrationen. Sie besitzen die Ausgabe. Die native Audiogenerierung bedeutet keine Urheberrechtsbedenken für Hintergrundmusik oder Soundeffekte."
+      },
+      {
+        "question": "Wie erziele ich die besten Ergebnisse mit Wan 2.5's Audiogenerierung?",
+        "answer": "Für optimale audiovisuelle Ergebnisse: Beschreiben Sie gewünschtes Audio in Ihrem Prompt (z.B. 'dramatische Orchestermusik', 'Charakter mit tiefer Stimme sprechend', 'Umgebungsgeräusche des Waldes'). Geben Sie Kamerabewegungen und visuellen Rhythmus für passenden Soundtrack an. Verwenden Sie negative Prompts, um unerwünschte Audioelemente auszuschließen. Die KI synchronisiert automatisch Lippenbewegungen mit Sprache und Musik mit visuellem Tempo."
+      },
+      {
+        "question": "Unterstützt Wan 2.5 andere Sprachen als Englisch?",
+        "answer": "Ja! Wan 2.5 hat hervorragende mehrsprachige Unterstützung einschließlich Deutsch, Chinesisch, Spanisch, Französisch, Russisch, Arabisch, Koreanisch, Japanisch, Portugiesisch und mehr. Die native Audiogenerierung unterstützt Sprachsynthese in mehreren Sprachen mit korrekter Aussprache und Lippensynchronisation."
+      }
+    ]
+  },
+  "examples": {
+    "title": "Wan 2.5 Videobeispiele mit nativem Audio",
+    "subtitle": "Sehen Sie, wie Wan 2.5 Text und Bilder in vollständige audiovisuelle Erlebnisse verwandelt",
+    "image_to_video": {
+      "title": "Bild zu Video mit Audio",
+      "description": "Verwandeln Sie statische Bilder in dynamische Videos mit synchronisierten Soundtracks, Sprache und Umgebungsaudio",
+      "input_image_url": "https://file.nanobanana.org/showcase/wan%202.5/i2v-image.png",
+      "input_image_alt": "Eine Eiskunstläuferin, die in einer surrealen unterirdischen Höhle mit biolumineszentem Wasser auftritt",
+      "output_video_url": "https://file.nanobanana.org/showcase/wan%202.5/i2v-video.mp4"
+    },
+    "text_to_video": {
+      "title": "Text zu Video mit nativem Audio",
+      "description": "Erstellen Sie vollständige Videos mit Visuals, Sprache und Musik allein aus Textbeschreibungen",
+      "input_prompt": "Eine schwach beleuchtete Jazzbar nachts, Holztische glühen unter warmen Pendelleuchten. Gäste nippen an Getränken und unterhalten sich leise, während eine dreiköpfige Band auf der Bühne spielt. Der Saxophonist steht im Scheinwerferlicht, glänzendes Instrument reflektiert das Licht. Kein Dialog. Ambient-Audio: sanfte Live-Jazzmusik mit Saxophon und Klavier, klirrende Gläser, leises Gemurmel von Publikumsgesprächen, gelegentlicher Lachausbruch von einem nahen Tisch. Kamera: langsamer Schwenk über die Menge, dann sanftes Heranzoomen zum Saxophon-Solo, Fokus auf ausdrucksstarke Handbewegungen.",
+      "output_video_url": "https://file.nanobanana.org/showcase/wan%202.5/t2v-video.mp4"
+    }
+  },
+  "workspace": {
+    "mode_selector": {
+      "title": "Generierungsmodus",
+      "text_to_video": "Text zu Video",
+      "text_to_video_desc": "Aus Text-Prompt generieren",
+      "image_to_video": "Bild zu Video",
+      "image_to_video_desc": "Ihr Bild animieren"
+    },
+    "prompt": {
+      "label": "Prompt",
+      "placeholder": "Beschreiben Sie das Video, das Sie generieren möchten...",
+      "helper_text": "Seien Sie spezifisch über Aktionen, Kamerabewegungen und visuellen Stil"
+    },
+    "controls": {
+      "duration_label": "Dauer",
+      "duration_5s": "5s",
+      "duration_10s": "10s",
+      "resolution_label": "Auflösung",
+      "resolution_720p": "720p",
+      "resolution_1080p": "1080p",
+      "aspect_ratio_label": "Seitenverhältnis",
+      "aspect_16_9": "16:9",
+      "aspect_9_16": "9:16",
+      "aspect_1_1": "1:1",
+      "aspect_ratio_tip": "Das Seitenverhältnis des Ausgabevideos entspricht Ihrem hochgeladenen Bild",
+      "credits_cost": "Credit-Kosten",
+      "credits_unit": "Credits"
+    },
+    "advanced_settings": {
+      "title": "Erweiterte Einstellungen",
+      "negative_prompt_label": "Negativer Prompt",
+      "negative_prompt_placeholder": "Beschreiben Sie, was Sie nicht im Video haben möchten...",
+      "negative_prompt_helper": "Optional: Beschreiben Sie Inhalte, die im generierten Video vermieden werden sollen",
+      "seed_label": "Seed",
+      "seed_placeholder": "Zufällig (leer lassen)",
+      "seed_helper": "Optional: Verwenden Sie einen bestimmten Seed für reproduzierbare Ergebnisse"
+    },
+    "generate_button": {
+      "generate": "Video generieren (${credits} Credits)",
+      "generating": "Wird generiert...",
+      "uploading": "Wird hochgeladen..."
+    },
+    "empty_state": {
+      "title": "Bereit zum Erstellen",
+      "description": "Konfigurieren Sie Ihre Einstellungen und klicken Sie auf Generieren, um erstaunliche Videos zu erstellen"
+    },
+    "processing_state": {
+      "title": "Ihr Video wird generiert",
+      "description": "Bitte warten Sie, während wir Ihre Anfrage verarbeiten. Dies kann einige Minuten dauern."
+    },
+    "completed_state": {
+      "title": "Video bereit!",
+      "description": "Ihr Video wurde erfolgreich generiert",
+      "download_button": "Video herunterladen"
+    },
+    "failed_state": {
+      "title": "Generierung fehlgeschlagen",
+      "description": "Etwas ist schief gelaufen. Bitte versuchen Sie es erneut.",
+      "retry_button": "Erneut versuchen"
+    },
+    "toast": {
+      "prompt_required": "Bitte geben Sie einen Prompt ein",
+      "prompt_length_error": "Prompt muss zwischen ${min} und ${max} Zeichen lang sein",
+      "image_required": "Bitte laden Sie ein Bild hoch",
+      "login_required": "Bitte melden Sie sich an, um Videos zu generieren",
+      "insufficient_credits": "Sie benötigen ${credits} Credits",
+      "uploading_image": "Bild wird hochgeladen...",
+      "image_uploaded": "Bild erfolgreich hochgeladen",
+      "upload_failed": "Bild-Upload fehlgeschlagen",
+      "video_generated": "Video erfolgreich generiert!",
+      "error_occurred": "Ein Fehler ist aufgetreten",
+      "downloading_video": "Video wird heruntergeladen...",
+      "download_success": "Video erfolgreich heruntergeladen",
+      "download_failed": "Video-Download fehlgeschlagen",
+      "new_video": "Neues Video"
+    }
+  }
+}

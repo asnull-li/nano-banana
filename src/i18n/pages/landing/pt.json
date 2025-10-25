@@ -18,19 +18,30 @@
           "icon": "RiImageAiFill"
         },
         {
-          "title": "Veo 3",
-          "url": "/veo3",
-          "icon": "RiImageAiFill"
-        },
-        {
-          "title": "Veo 3.1",
-          "url": "/veo3-1",
-          "icon": "RiImageAiFill"
-        },
-        {
-          "title": "Sora 2",
-          "url": "/sora2",
-          "icon": "RiImageAiFill"
+          "title": "Gerador de Vídeo IA",
+          "icon": "RiVideoLine",
+          "children": [
+            {
+              "title": "Veo 3",
+              "url": "/veo3",
+              "icon": "RiVideoLine"
+            },
+            {
+              "title": "Veo 3.1",
+              "url": "/veo3-1",
+              "icon": "RiVideoLine"
+            },
+            {
+              "title": "Sora 2",
+              "url": "/sora2",
+              "icon": "RiVideoLine"
+            },
+            {
+              "title": "Wan 2.5",
+              "url": "/wan2-5",
+              "icon": "RiVideoLine"
+            }
+          ]
         },
         {
           "title": "Minhas Criações",
@@ -444,6 +455,11 @@
             {
               "title": "Sora2",
               "url": "/sora2",
+              "target": "_self"
+            },
+            {
+              "title": "Wan 2.5",
+              "url": "/wan2-5",
               "target": "_self"
             }
           ]
