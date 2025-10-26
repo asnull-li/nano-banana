@@ -7,6 +7,9 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
+  const page = await getAboutPage(locale);
+  const { metadata } = page;
+
   let canonicalUrl = `${process.env.NEXT_PUBLIC_WEB_URL}/about`;
 
   if (locale !== "en") {
@@ -14,8 +17,8 @@ export async function generateMetadata({
   }
 
   return {
-    title: "About Nano Banana | 关于我们",
-    description: "Learn about Nano Banana's mission, vision, and our commitment to climate action.",
+    title: metadata?.title || "About Nano Banana",
+    description: metadata?.description || "Learn about Nano Banana's mission, vision, and our commitment to climate action.",
     alternates: {
       canonical: canonicalUrl,
     },
