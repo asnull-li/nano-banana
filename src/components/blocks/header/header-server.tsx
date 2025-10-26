@@ -50,6 +50,11 @@ export default function HeaderServer({ header }: { header: HeaderType }) {
                           <Icon name={item.icon} className="size-4 shrink-0 mr-2" />
                         )}
                         <span>{item.title}</span>
+                        {item.is_new && (
+                          <span className="ml-1 px-1.5 py-0.5 text-[10px] font-bold text-white bg-red-500 [.dark_&]:bg-red-600 rounded-full animate-pulse">
+                            NEW
+                          </span>
+                        )}
                         <ChevronDown className="size-4 ml-1 transition-transform group-hover:rotate-180" />
                       </div>
                       {/* 静态下拉菜单 - 默认隐藏,SEO 可见 */}
@@ -74,8 +79,13 @@ export default function HeaderServer({ header }: { header: HeaderType }) {
                                   </div>
                                 )}
                                 <div className="flex-1">
-                                  <div className="text-sm font-semibold text-slate-900 [.dark_&]:text-slate-100 group-hover/item:text-green-600 [.dark_&]:group-hover/item:text-green-400 transition-colors">
+                                  <div className="text-sm font-semibold text-slate-900 [.dark_&]:text-slate-100 group-hover/item:text-green-600 [.dark_&]:group-hover/item:text-green-400 transition-colors flex items-center gap-1">
                                     {iitem.title}
+                                    {iitem.is_new && (
+                                      <span className="px-1.5 py-0.5 text-[10px] font-bold text-white bg-red-500 [.dark_&]:bg-red-600 rounded-full animate-pulse">
+                                        NEW
+                                      </span>
+                                    )}
                                   </div>
                                   <p className="line-clamp-2 text-xs leading-snug text-slate-500 [.dark_&]:text-slate-400">
                                     {iitem.description}
@@ -97,6 +107,11 @@ export default function HeaderServer({ header }: { header: HeaderType }) {
                         <Icon name={item.icon} className="size-4 shrink-0 mr-2" />
                       )}
                       {item.title}
+                      {item.is_new && (
+                        <span className="ml-1 px-1.5 py-0.5 text-[10px] font-bold text-white bg-red-500 [.dark_&]:bg-red-600 rounded-full animate-pulse">
+                          NEW
+                        </span>
+                      )}
                     </Link>
                   )}
                 </div>

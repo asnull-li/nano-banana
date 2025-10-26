@@ -20,26 +20,32 @@
         {
           "title": "Gerador de Vídeo IA",
           "icon": "RiVideoLine",
+          "is_new": true,
           "children": [
             {
               "title": "Veo 3",
               "url": "/veo3",
-              "icon": "RiVideoLine"
+              "icon": "RiVideoLine",
+              "description": "Suporta sincronização de vídeo + áudio com excelente física realista"
             },
             {
               "title": "Veo 3.1",
               "url": "/veo3-1",
-              "icon": "RiVideoLine"
+              "icon": "RiVideoLine",
+              "description": "Suporta vídeo de primeiro/último quadro, geração com múltiplas imagens de referência"
             },
             {
               "title": "Sora 2",
               "url": "/sora2",
-              "icon": "RiVideoLine"
+              "icon": "RiVideoLine",
+              "description": "Suporta geração de vídeos HD de 10s e 15s"
             },
             {
               "title": "Wan 2.5",
               "url": "/wan2-5",
-              "icon": "RiVideoLine"
+              "icon": "RiVideoLine",
+              "is_new": true,
+              "description": "Política de conteúdo relaxada com alta liberdade criativa"
             }
           ]
         },

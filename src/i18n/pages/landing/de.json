@@ -20,26 +20,32 @@
         {
           "title": "KI-Videogenerator",
           "icon": "RiVideoLine",
+          "is_new": true,
           "children": [
             {
               "title": "Veo 3",
               "url": "/veo3",
-              "icon": "RiVideoLine"
+              "icon": "RiVideoLine",
+              "description": "Unterstützt Video + Audio-Synchronisation mit hervorragender realistischer Physik"
             },
             {
               "title": "Veo 3.1",
               "url": "/veo3-1",
-              "icon": "RiVideoLine"
+              "icon": "RiVideoLine",
+              "description": "Unterstützt Erst-/Letztbild-Video, Multi-Bild-Referenz-Videogenerierung"
             },
             {
               "title": "Sora 2",
               "url": "/sora2",
-              "icon": "RiVideoLine"
+              "icon": "RiVideoLine",
+              "description": "Unterstützt HD-Videogenerierung von 10s und 15s"
             },
             {
               "title": "Wan 2.5",
               "url": "/wan2-5",
-              "icon": "RiVideoLine"
+              "icon": "RiVideoLine",
+              "is_new": true,
+              "description": "Lockere Inhaltsrichtlinie mit hoher kreativer Freiheit"
             }
           ]
         },

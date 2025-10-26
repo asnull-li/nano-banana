@@ -20,26 +20,32 @@
         {
           "title": "Генератор видео AI",
           "icon": "RiVideoLine",
+          "is_new": true,
           "children": [
             {
               "title": "Veo 3",
               "url": "/veo3",
-              "icon": "RiVideoLine"
+              "icon": "RiVideoLine",
+              "description": "Поддерживает синхронизацию видео + аудио с отличной реалистичной физикой"
             },
             {
               "title": "Veo 3.1",
               "url": "/veo3-1",
-              "icon": "RiVideoLine"
+              "icon": "RiVideoLine",
+              "description": "Поддерживает видео первого/последнего кадра, генерация с мульти-изображениями"
             },
             {
               "title": "Sora 2",
               "url": "/sora2",
-              "icon": "RiVideoLine"
+              "icon": "RiVideoLine",
+              "description": "Поддерживает генерацию HD-видео 10с и 15с"
             },
             {
               "title": "Wan 2.5",
               "url": "/wan2-5",
-              "icon": "RiVideoLine"
+              "icon": "RiVideoLine",
+              "is_new": true,
+              "description": "Мягкая политика контента с высокой творческой свободой"
             }
           ]
         },

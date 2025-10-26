@@ -20,26 +20,32 @@
         {
           "title": "AIビデオジェネレーター",
           "icon": "RiVideoLine",
+          "is_new": true,
           "children": [
             {
               "title": "Veo 3",
               "url": "/veo3",
-              "icon": "RiVideoLine"
+              "icon": "RiVideoLine",
+              "description": "優れたリアルな物理感でビデオ＋オーディオ同期をサポート"
             },
             {
               "title": "Veo 3.1",
               "url": "/veo3-1",
-              "icon": "RiVideoLine"
+              "icon": "RiVideoLine",
+              "description": "始終フレームビデオ、マルチ画像参照ビデオ生成をサポート"
             },
             {
               "title": "Sora 2",
               "url": "/sora2",
-              "icon": "RiVideoLine"
+              "icon": "RiVideoLine",
+              "description": "10秒と15秒のHDビデオ生成をサポート"
             },
             {
               "title": "Wan 2.5",
               "url": "/wan2-5",
-              "icon": "RiVideoLine"
+              "icon": "RiVideoLine",
+              "is_new": true,
+              "description": "緩やかなコンテンツポリシーで高い創作自由度を維持"
             }
           ]
         },

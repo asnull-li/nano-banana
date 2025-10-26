@@ -20,26 +20,32 @@
         {
           "title": "مولدات فيديو AI",
           "icon": "RiVideoLine",
+          "is_new": true,
           "children": [
             {
               "title": "Veo 3",
               "url": "/veo3",
-              "icon": "RiVideoLine"
+              "icon": "RiVideoLine",
+              "description": "يدعم مزامنة الفيديو + الصوت مع فيزياء واقعية ممتازة"
             },
             {
               "title": "Veo 3.1",
               "url": "/veo3-1",
-              "icon": "RiVideoLine"
+              "icon": "RiVideoLine",
+              "description": "يدعم فيديو الإطار الأول/الأخير، توليد الفيديو بمراجع متعددة"
             },
             {
               "title": "Sora 2",
               "url": "/sora2",
-              "icon": "RiVideoLine"
+              "icon": "RiVideoLine",
+              "description": "يدعم توليد مقاطع فيديو HD بمدة 10 و15 ثانية"
             },
             {
               "title": "Wan 2.5",
               "url": "/wan2-5",
-              "icon": "RiVideoLine"
+              "icon": "RiVideoLine",
+              "is_new": true,
+              "description": "سياسة محتوى مرنة مع حرية إبداعية عالية"
             }
           ]
         },

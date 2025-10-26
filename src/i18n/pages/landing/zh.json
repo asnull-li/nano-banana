@@ -20,26 +20,32 @@
         {
           "title": "AI视频生成器",
           "icon": "RiVideoLine",
+          "is_new": true,
           "children": [
             {
               "title": "Veo3",
               "url": "/veo3",
-              "icon": "RiVideoLine"
+              "icon": "RiVideoLine",
+              "description": "支持画面＋音频同步、优秀的现实物理感强"
             },
             {
               "title": "Veo3.1",
               "url": "/veo3-1",
-              "icon": "RiVideoLine"
+              "icon": "RiVideoLine",
+              "description": "支持首尾帧视频，多图参考生成视频"
             },
             {
               "title": "Sora2",
               "url": "/sora2",
-              "icon": "RiVideoLine"
+              "icon": "RiVideoLine",
+              "description": "支持生成 10 秒和 15 秒的高清视频"
             },
             {
               "title": "Wan 2.5",
               "url": "/wan2-5",
-              "icon": "RiVideoLine"
+              "icon": "RiVideoLine",
+              "description": "较为宽松的内容政策，保持高创作自由度",
+              "is_new": true
             }
           ]
         },

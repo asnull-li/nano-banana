@@ -174,6 +174,11 @@ export default function HeaderClient({ header }: { header: HeaderType }) {
                                 />
                               )}
                               <span>{item.title}</span>
+                              {item.is_new && (
+                                <span className="ml-1 px-1.5 py-0.5 text-[10px] font-bold text-white bg-red-500 [.dark_&]:bg-red-600 rounded-full animate-pulse">
+                                  NEW
+                                </span>
+                              )}
                             </div>
                           </AccordionTrigger>
                           <AccordionContent className="mt-2">
@@ -193,8 +198,13 @@ export default function HeaderClient({ header }: { header: HeaderType }) {
                                   />
                                 )}
                                 <div>
-                                  <div className="text-sm font-semibold">
+                                  <div className="text-sm font-semibold flex items-center gap-1">
                                     {iitem.title}
+                                    {iitem.is_new && (
+                                      <span className="px-1.5 py-0.5 text-[10px] font-bold text-white bg-red-500 [.dark_&]:bg-red-600 rounded-full animate-pulse">
+                                        NEW
+                                      </span>
+                                    )}
                                   </div>
                                   <p className="text-sm leading-snug text-slate-500 [.dark_&]:text-slate-400">
                                     {iitem.description}
@@ -217,6 +227,11 @@ export default function HeaderClient({ header }: { header: HeaderType }) {
                           <Icon name={item.icon} className="size-4 shrink-0" />
                         )}
                         {item.title}
+                        {item.is_new && (
+                          <span className="ml-1 px-1.5 py-0.5 text-[10px] font-bold text-white bg-red-500 [.dark_&]:bg-red-600 rounded-full animate-pulse">
+                            NEW
+                          </span>
+                        )}
                       </Link>
                     );
                   })}
