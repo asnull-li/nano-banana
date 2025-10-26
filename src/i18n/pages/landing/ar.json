@@ -468,6 +468,11 @@
           "title": "أخرى",
           "children": [
             {
+              "title": "من نحن",
+              "url": "/about",
+              "target": "_self"
+            },
+            {
               "title": "خطة العمل المناخي",
               "url": "https://climate.stripe.com/AoIcTh",
               "target": "_blank"

@@ -469,6 +469,11 @@
           "title": "Autres",
           "children": [
             {
+              "title": "À Propos de Nous",
+              "url": "/about",
+              "target": "_self"
+            },
+            {
               "title": "Plan d'Action Climatique",
               "url": "https://climate.stripe.com/AoIcTh",
               "target": "_blank"

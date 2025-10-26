@@ -1,0 +1,14 @@
+{
+  "about": {
+    "title": "About Nano Banana Org",
+    "subtitle": "Innovation Meets Sustainability",
+    "paragraph1": "Nano Banana Org is a revolutionary AI-powered platform dedicated to providing creators worldwide with cutting-edge image and video generation technology. As an independent platform, we are not affiliated with any third-party organizations and maintain neutral and independent operations. Our core technology is based on deep learning and neural networks, capable of understanding and realizing users' creative visions.",
+    "paragraph2": "We believe technology should serve human creativity, enabling everyone to turn imagination into reality. Through continuous innovation and optimization, we strive to lower creative barriers and make AI technology accessible to more people.",
+    "climateTitle": "Our Climate Commitment",
+    "paragraph3": "As a responsible technology company, we embrace green sustainability as our core principle, which is why we chose green as our brand's theme color. We recognize that technological advancement and environmental protection are equally important. We pledge to contribute 0.1% of our revenue through the Stripe Climate program to improve the atmosphere, supporting carbon removal technology development and contributing to Earth's sustainable future.",
+    "climateButton": "Learn About Our Carbon Removal Initiative",
+    "contactTitle": "Contact Us",
+    "paragraph4": "Whether you're a creator, partner, or interested in our technology, we look forward to hearing from you. For any questions, suggestions, or partnership inquiries, please feel free to reach out.",
+    "email": "support@nanobanana.org"
+  }
+}

@@ -469,6 +469,11 @@
           "title": "Прочее",
           "children": [
             {
+              "title": "О нас",
+              "url": "/about",
+              "target": "_self"
+            },
+            {
               "title": "План климатических действий",
               "url": "https://climate.stripe.com/AoIcTh",
               "target": "_blank"

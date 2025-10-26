@@ -469,6 +469,11 @@
           "title": "其他",
           "children": [
             {
+              "title": "关于我们",
+              "url": "/about",
+              "target": "_self"
+            },
+            {
               "title": "除碳计划",
               "url": "https://climate.stripe.com/AoIcTh",
               "target": "_blank"
