@@ -65,6 +65,7 @@
     "nano_banana": "Image Generation",
     "veo3": "Veo 3",
     "sora2": "Sora 2",
+    "wan25": "Wan 2.5",
     "upscaler": "Image Enhancement"
   },
   "veo3": {
@@ -78,6 +79,14 @@
   "sora2": {
     "video_preview": "Sora 2 Video Preview",
     "prompt": "Prompt",
+    "download_video": "Download Video"
+  },
+  "wan25": {
+    "video_preview": "Wan 2.5 Video Preview",
+    "prompt": "Prompt",
+    "duration": "Duration",
+    "resolution": "Resolution",
+    "aspect_ratio": "Aspect Ratio",
     "download_video": "Download Video"
   },
   "upscaler": {

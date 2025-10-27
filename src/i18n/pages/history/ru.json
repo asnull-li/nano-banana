@@ -65,6 +65,7 @@
     "nano_banana": "Генерация Изображений",
     "veo3": "Veo 3",
     "sora2": "Sora 2",
+    "wan25": "Wan 2.5",
     "upscaler": "Улучшение Изображений"
   },
   "veo3": {
@@ -79,6 +80,14 @@
     "video_preview": "Sora 2 Video Preview",
     "prompt": "Prompt",
     "download_video": "Download Video"
+  },
+  "wan25": {
+    "video_preview": "Предпросмотр Видео Wan 2.5",
+    "prompt": "Запрос",
+    "duration": "Длительность",
+    "resolution": "Разрешение",
+    "aspect_ratio": "Соотношение Сторон",
+    "download_video": "Скачать Видео"
   },
   "upscaler": {
     "compare_title": "Предпросмотр Сравнения",

@@ -2,10 +2,10 @@
 
 import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
-import { ImageIcon, Film, Sparkles, Clapperboard } from "lucide-react";
+import { ImageIcon, Film, Sparkles, Clapperboard, Wand2 } from "lucide-react";
 import { LucideIcon } from "lucide-react";
 
-export type HistoryTabType = "nano-banana" | "veo3" | "sora2" | "upscaler";
+export type HistoryTabType = "nano-banana" | "veo3" | "sora2" | "wan25" | "upscaler";
 
 interface HistoryTabsProps {
   activeTab: HistoryTabType;
@@ -22,6 +22,7 @@ export default function HistoryTabs({
     { id: "nano-banana", label: t("nano_banana"), icon: ImageIcon },
     { id: "veo3", label: t("veo3"), icon: Film },
     { id: "sora2", label: t("sora2"), icon: Clapperboard },
+    { id: "wan25", label: t("wan25"), icon: Wand2 },
     { id: "upscaler", label: t("upscaler"), icon: Sparkles },
   ];
 

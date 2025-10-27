@@ -65,6 +65,7 @@
     "nano_banana": "توليد الصور",
     "veo3": "Veo 3",
     "sora2": "Sora 2",
+    "wan25": "Wan 2.5",
     "upscaler": "تحسين الصور"
   },
   "veo3": {
@@ -79,6 +80,14 @@
     "video_preview": "Sora 2 Video Preview",
     "prompt": "Prompt",
     "download_video": "Download Video"
+  },
+  "wan25": {
+    "video_preview": "معاينة فيديو Wan 2.5",
+    "prompt": "المطالبة",
+    "duration": "المدة",
+    "resolution": "الدقة",
+    "aspect_ratio": "نسبة العرض إلى الارتفاع",
+    "download_video": "تحميل الفيديو"
   },
   "upscaler": {
     "compare_title": "معاينة المقارنة",

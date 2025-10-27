@@ -65,6 +65,7 @@
     "nano_banana": "图片生成",
     "veo3": "Veo 3",
     "sora2": "Sora 2",
+    "wan25": "Wan 2.5",
     "upscaler": "图片增强"
   },
   "veo3": {
@@ -78,6 +79,14 @@
   "sora2": {
     "video_preview": "Sora 2 视频预览",
     "prompt": "提示词",
+    "download_video": "下载视频"
+  },
+  "wan25": {
+    "video_preview": "Wan 2.5 视频预览",
+    "prompt": "提示词",
+    "duration": "时长",
+    "resolution": "分辨率",
+    "aspect_ratio": "宽高比",
     "download_video": "下载视频"
   },
   "upscaler": {

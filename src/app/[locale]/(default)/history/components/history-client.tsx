@@ -10,11 +10,13 @@ import PageHeader from "./page-header";
 import HistoryCard from "./history-card";
 import Veo3HistoryCard, { Veo3Task } from "./veo3-history-card";
 import Sora2HistoryCard, { Sora2Task } from "./sora2-history-card";
+import Wan25HistoryCard, { Wan25Task } from "./wan25-history-card";
 import UpscalerHistoryCard, { UpscalerTask } from "./upscaler-history-card";
 import EmptyState from "./empty-state";
 import ImagePreviewDialog from "./image-preview-dialog";
 import Veo3VideoDialog from "./veo3-video-dialog";
 import Sora2VideoDialog from "./sora2-video-dialog";
+import Wan25VideoDialog from "./wan25-video-dialog";
 import UpscalerCompareDialog from "./upscaler-compare-dialog";
 import DeleteConfirmDialog from "./delete-confirm-dialog";
 import LoadMoreButton from "./load-more-button";
@@ -89,6 +91,14 @@ function HistoryClientInner({
     page: 0,
   });
 
+  const [wan25Data, setWan25Data] = useState<TabData<Wan25Task>>({
+    tasks: [],
+    isLoaded: false,
+    isLoading: false,
+    hasMore: false,
+    page: 0,
+  });
+
   const [upscalerData, setUpscalerData] = useState<TabData<UpscalerTask>>({
     tasks: [],
     isLoaded: false,
@@ -105,6 +115,9 @@ function HistoryClientInner({
   const [selectedSora2Video, setSelectedSora2Video] = useState<Sora2Task | null>(
     null
   );
+  const [selectedWan25Video, setSelectedWan25Video] = useState<Wan25Task | null>(
+    null
+  );
   const [selectedUpscalerTask, setSelectedUpscalerTask] =
     useState<UpscalerTask | null>(null);
   const [deleteTaskId, setDeleteTaskId] = useState<string | null>(null);
@@ -119,6 +132,9 @@ function HistoryClientInner({
     }
     if (activeTab === "sora2" && !sora2Data.isLoaded && !sora2Data.isLoading) {
       loadSora2Data();
+    }
+    if (activeTab === "wan25" && !wan25Data.isLoaded && !wan25Data.isLoading) {
+      loadWan25Data();
     }
     if (
       activeTab === "upscaler" &&
@@ -170,6 +186,28 @@ function HistoryClientInner({
     } catch (error) {
       toast.error(t("load_more_error"));
       setSora2Data((prev) => ({ ...prev, isLoading: false }));
+    }
+  };
+
+  // 加载 Wan 2.5 数据
+  const loadWan25Data = async () => {
+    setWan25Data((prev) => ({ ...prev, isLoading: true }));
+    try {
+      const response = await fetch("/api/wan25/history?limit=20");
+      const data = await response.json();
+
+      if (data.success && data.tasks) {
+        setWan25Data({
+          tasks: data.tasks,
+          isLoaded: true,
+          isLoading: false,
+          hasMore: data.tasks.length === 20,
+          page: 1,
+        });
+      }
+    } catch (error) {
+      toast.error(t("load_more_error"));
+      setWan25Data((prev) => ({ ...prev, isLoading: false }));
     }
   };
 
@@ -248,6 +286,8 @@ function HistoryClientInner({
         apiPath = `/api/veo3/history/${deleteTaskId}`;
       } else if (deleteTabType === "sora2") {
         apiPath = `/api/sora2/history/${deleteTaskId}`;
+      } else if (deleteTabType === "wan25") {
+        apiPath = `/api/wan25/history/${deleteTaskId}`;
       } else if (deleteTabType === "upscaler") {
         apiPath = `/api/upscaler/history/${deleteTaskId}`;
       }
@@ -271,6 +311,11 @@ function HistoryClientInner({
         }));
       } else if (deleteTabType === "sora2") {
         setSora2Data((prev) => ({
+          ...prev,
+          tasks: prev.tasks.filter((task) => task.task_id !== deleteTaskId),
+        }));
+      } else if (deleteTabType === "wan25") {
+        setWan25Data((prev) => ({
           ...prev,
           tasks: prev.tasks.filter((task) => task.task_id !== deleteTaskId),
         }));
@@ -451,6 +496,39 @@ function HistoryClientInner({
       );
     }
 
+    if (activeTab === "wan25") {
+      if (!wan25Data.isLoaded) {
+        return (
+          <div className="flex items-center justify-center py-20">
+            <div className="text-center space-y-2">
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-600 mx-auto"></div>
+              <p className="text-muted-foreground">{t("loading")}</p>
+            </div>
+          </div>
+        );
+      }
+
+      if (wan25Data.tasks.length === 0) {
+        return <EmptyState locale={locale} />;
+      }
+
+      return (
+        <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          {wan25Data.tasks.map((task) => (
+            <Wan25HistoryCard
+              key={task.task_id}
+              task={task}
+              onViewVideo={() => setSelectedWan25Video(task)}
+              onDelete={(taskId) => {
+                setDeleteTaskId(taskId);
+                setDeleteTabType("wan25");
+              }}
+            />
+          ))}
+        </div>
+      );
+    }
+
     if (activeTab === "upscaler") {
       if (!upscalerData.isLoaded) {
         return (
@@ -524,6 +602,19 @@ function HistoryClientInner({
           onClose={() => setSelectedSora2Video(null)}
           videoUrl={selectedSora2Video.video_url}
           prompt={selectedSora2Video.input.prompt}
+        />
+      )}
+
+      {/* 对话框 - Wan 2.5 视频预览 */}
+      {selectedWan25Video && (
+        <Wan25VideoDialog
+          isOpen={!!selectedWan25Video}
+          onClose={() => setSelectedWan25Video(null)}
+          videoUrl={selectedWan25Video.video_url}
+          prompt={selectedWan25Video.input.prompt}
+          duration={selectedWan25Video.input.duration}
+          resolution={selectedWan25Video.input.resolution}
+          aspectRatio={selectedWan25Video.input.aspect_ratio}
         />
       )}
 
