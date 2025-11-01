@@ -11,6 +11,7 @@ export const locales = [
   "ru",
   "ar",
   "pt",
+  "it",
 ];
 
 export const localeNames: any = {
@@ -24,6 +25,7 @@ export const localeNames: any = {
   ru: "Русский",
   ar: "العربية",
   pt: "Português",
+  it: "Italiano",
 };
 
 export const defaultLocale = "en";

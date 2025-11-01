@@ -1,0 +1,164 @@
+{
+  "metadata": {
+    "title": "Vetrina Nano Banana - Editor di Immagini AI Nano Banana",
+    "description": "Esplora straordinarie opere d'arte generate dall'IA e design creativi alimentati da tecnologia avanzata di generazione e modifica delle immagini"
+  },
+  "showcase": {
+    "name": "vetrina",
+    "title": "Vetrina Nano Banana",
+    "description": "Esplora vari tipi di effetti di elaborazione delle immagini e sperimenta la potenza della tecnologia AI professionale.",
+    "subtitle": "Libera la tua creatività ed esplora più modi per giocare, non solo i casi qui sotto.",
+    "items": [
+      {
+        "id": "background-replacement",
+        "category": "Sostituzione Sfondo",
+        "title": "Sostituzione Sfondo",
+        "description": "Separa il soggetto dallo sfondo originale e sostituiscilo con una nuova scena più creativa.",
+        "original": "https://file.nanobanana.org/showcase/1.webp",
+        "effects": [
+          {
+            "id": "vintage-desk",
+            "name": "Scrivania Vintage",
+            "image": "https://file.nanobanana.org/showcase/1-1.png",
+            "prompt": "Cambia lo sfondo in una vasta prateria",
+            "description": "Posiziona il soggetto in un'ambientazione da laboratorio artigianale"
+          },
+          {
+            "id": "tropical-beach",
+            "name": "Spiaggia Tropicale",
+            "image": "https://file.nanobanana.org/showcase/1-2.png",
+            "prompt": "Cambia lo sfondo in una strada di montagna tortuosa",
+            "description": "Sfondo di spiaggia soleggiata con acqua cristallina"
+          },
+          {
+            "id": "modern-office",
+            "name": "Ufficio Moderno",
+            "image": "https://file.nanobanana.org/showcase/1-3.png",
+            "prompt": "Cambia lo sfondo in un banco da lavoro retrò per utensili",
+            "description": "Spazio ufficio pulito e minimalista"
+          }
+        ]
+      },
+      {
+        "id": "lighting-adjustment",
+        "category": "Regolazione Illuminazione",
+        "title": "Regolazione Illuminazione",
+        "description": "Regola gli effetti di illuminazione con l'IA per cambiare l'atmosfera e dare alle tue immagini un aspetto cinematografico.",
+        "original": "https://file.nanobanana.org/showcase/2.webp",
+        "effects": [
+          {
+            "id": "golden-hour",
+            "name": "Ora Dorata",
+            "image": "https://file.nanobanana.org/showcase/2-1.png",
+            "prompt": "Aggiungi effetto luce solare calda",
+            "description": "Ricrea la magica illuminazione dell'ora dorata"
+          },
+          {
+            "id": "dramatic-shadows",
+            "name": "Ombre Drammatiche",
+            "image": "https://file.nanobanana.org/showcase/2-2.png",
+            "prompt": "Regola sui toni freddi dell'ora blu",
+            "description": "Illuminazione drammatica ad alto contrasto"
+          },
+          {
+            "id": "soft-glow",
+            "name": "Bagliore Morbido",
+            "image": "https://file.nanobanana.org/showcase/2-3.png",
+            "prompt": "Passa a una scena notturna con sorgenti luminose puntuali",
+            "description": "Effetto luce delicato e lusinghiero"
+          }
+        ]
+      },
+      {
+        "id": "style-conversion",
+        "category": "Conversione Stile",
+        "title": "Conversione Stile",
+        "description": "Trasforma le tue foto in diversi stili artistici con l'IA.",
+        "original": "https://file.nanobanana.org/showcase/3.webp",
+        "effects": [
+          {
+            "id": "oil-painting",
+            "name": "Pittura a Olio",
+            "image": "https://file.nanobanana.org/showcase/3-1.webp",
+            "prompt": "Converti in stile anime giapponese",
+            "description": "Effetto artistico classico della pittura a olio"
+          },
+          {
+            "id": "watercolor",
+            "name": "Acquerello",
+            "image": "https://file.nanobanana.org/showcase/3-2.webp",
+            "prompt": "Converti in uno stile pittorico a olio ricco",
+            "description": "Delicato stile artistico ad acquerello"
+          },
+          {
+            "id": "anime",
+            "name": "Stile Anime",
+            "image": "https://file.nanobanana.org/showcase/3-3.webp",
+            "prompt": "Converti in uno stile pixel art retrò",
+            "description": "Stile personaggio anime giapponese"
+          }
+        ]
+      },
+      {
+        "id": "color-change",
+        "category": "Cambio Colore",
+        "title": "Cambio Colore",
+        "description": "Gradazione di colore professionale per cambiare completamente l'atmosfera delle tue foto.",
+        "original": "https://file.nanobanana.org/showcase/4.webp",
+        "effects": [
+          {
+            "id": "vibrant",
+            "name": "Colori Vivaci",
+            "image": "https://file.nanobanana.org/showcase/4-1.png",
+            "prompt": "Cambia tutte le foglie verdi in rosse",
+            "description": "Colori vividi che catturano l'attenzione"
+          },
+          {
+            "id": "moody",
+            "name": "Tonalità Intense",
+            "image": "https://file.nanobanana.org/showcase/4-2.png",
+            "prompt": "Cambia tutte le foglie verdi in gialle",
+            "description": "Gradazione di colore profonda e atmosferica"
+          },
+          {
+            "id": "vintage",
+            "name": "Pellicola Vintage",
+            "image": "https://file.nanobanana.org/showcase/4-3.png",
+            "prompt": "Cambia tutte le foglie verdi in blu",
+            "description": "Palette di colori classica della pellicola"
+          }
+        ]
+      },
+      {
+        "id": "age-transformation",
+        "category": "Trasformazione dell'Età",
+        "title": "Trasformazione dell'Età",
+        "description": "Vedi te stesso a diverse età con tecnologia AI avanzata.",
+        "original": "https://file.nanobanana.org/showcase/5.webp",
+        "effects": [
+          {
+            "id": "younger",
+            "name": "10 Anni Più Giovane",
+            "image": "https://file.nanobanana.org/showcase/5-1.webp",
+            "prompt": "Cambia l'età a 3 anni",
+            "description": "Effetto di ringiovanimento naturale"
+          },
+          {
+            "id": "teenage",
+            "name": "Anni Adolescenziali",
+            "image": "https://file.nanobanana.org/showcase/5-2.webp",
+            "prompt": "Cambia l'età a 16 anni",
+            "description": "Aspetto adolescenziale giovanile"
+          },
+          {
+            "id": "elderly",
+            "name": "Tu del Futuro",
+            "image": "https://file.nanobanana.org/showcase/5-3.webp",
+            "prompt": "Cambia l'età a 60 anni",
+            "description": "Simulazione di invecchiamento naturale"
+          }
+        ]
+      }
+    ]
+  }
+}

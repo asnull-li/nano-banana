@@ -1,0 +1,526 @@
+{
+  "template": "shipany-template-one",
+  "theme": "dark",
+  "header": {
+    "brand": {
+      "title": "Nano Banana",
+      "logo": {
+        "src": "/logo.png",
+        "alt": "Nano Banana"
+      },
+      "url": "/"
+    },
+    "nav": {
+      "items": [
+        {
+          "title": "Miglioramento Immagini",
+          "url": "/ai-image-upscaler",
+          "icon": "RiImageAiFill"
+        },
+        {
+          "title": "Generatore Video AI",
+          "icon": "RiVideoLine",
+          "is_new": true,
+          "children": [
+            {
+              "title": "Veo 3",
+              "url": "/veo3",
+              "icon": "RiVideoLine",
+              "description": "Supporta sincronizzazione video + audio con eccellente fisica realistica"
+            },
+            {
+              "title": "Veo 3.1",
+              "url": "/veo3-1",
+              "icon": "RiVideoLine",
+              "description": "Supporta video primo/ultimo fotogramma, generazione video con riferimento multi-immagine"
+            },
+            {
+              "title": "Sora 2",
+              "url": "/sora2",
+              "icon": "RiVideoLine",
+              "description": "Supporta generazione video HD da 10s e 15s"
+            },
+            {
+              "title": "Wan 2.5",
+              "url": "/wan2-5",
+              "icon": "RiVideoLine",
+              "description": "Politica sui contenuti rilassata con alta libertà creativa",
+              "is_new": true
+            }
+          ]
+        },
+
+        {
+          "title": "Le Mie Creazioni",
+          "url": "/history",
+          "icon": "RiHistoryLine"
+        },
+        {
+          "title": "Prezzi",
+          "url": "/pricing",
+          "icon": "RiMoneyDollarCircleLine"
+        },
+        {
+          "title": "Vetrina",
+          "url": "/showcase",
+          "icon": "RiApps2Line"
+        }
+      ]
+    },
+
+    "show_sign": true,
+    "show_theme": true,
+    "show_locale": true
+  },
+  "hero": {
+    "title": "Nano Banana",
+    "highlight_text": "Nano Banana",
+    "description": "Il modello AI avanzato di Nano Banana offre editing coerente dei personaggi e preservazione delle scene che supera Flux Kontext.<br/>Scegli Nano Banana per sperimentare il futuro dell'editing di immagini AI con semplici prompt testuali.",
+    "announcement": {
+      "label": "2025",
+      "title": "🚀 Prova Nano Banana Gratis",
+      "url": "/#nano-banana"
+    },
+    "tip": "🎨 Inizia a creare con Nano Banana oggi",
+    "buttons": [
+      {
+        "title": "Prova Nano Banana",
+        "icon": "RiFlashlightFill",
+        "url": "#nano-banana",
+        "target": "_self",
+        "variant": "default"
+      },
+      {
+        "title": "Vedi Esempi di Nano Banana",
+        "icon": "RiBookOpenLine",
+        "url": "/showcase",
+        "target": "_self",
+        "variant": "outline"
+      }
+    ],
+    "show_happy_users": true,
+    "show_badge": false
+  },
+  "branding": {
+    "title": "ShipAny è costruito sulle spalle dei giganti",
+    "items": [
+      {
+        "title": "Next.js",
+        "image": {
+          "src": "/imgs/logos/nextjs.svg",
+          "alt": "Next.js"
+        }
+      },
+      {
+        "title": "React",
+        "image": {
+          "src": "/imgs/logos/react.svg",
+          "alt": "React"
+        }
+      },
+      {
+        "title": "TailwindCSS",
+        "image": {
+          "src": "/imgs/logos/tailwindcss.svg",
+          "alt": "TailwindCSS"
+        }
+      },
+      {
+        "title": "Shadcn/UI",
+        "image": {
+          "src": "/imgs/logos/shadcn.svg",
+          "alt": "Shadcn/UI"
+        }
+      },
+      {
+        "title": "Vercel",
+        "image": {
+          "src": "/imgs/logos/vercel.svg",
+          "alt": "Vercel"
+        }
+      }
+    ]
+  },
+  "introduce": {
+    "name": "introduce",
+    "title": "Cos'è Nano Banana",
+    "label": "Introduzione",
+    "description": "Nano Banana è una piattaforma rivoluzionaria di generazione ed editing di immagini basata su AI che offre editing coerente dei personaggi e preservazione delle scene. A differenza dei modelli tradizionali text-to-image, Nano Banana esegue generazione di immagini in contesto, permettendoti di creare prompt con testo e immagini estraendo e modificando concetti visivi in modo fluido.",
+    "image": {
+      "src": "/imgs/features/1.png"
+    },
+    "items": [
+      {
+        "title": "Generazione di Immagini in Contesto",
+        "description": "Nano Banana combina input di testo e immagini per un'estrazione e modifica fluida dei concetti visivi, offrendo rendering coerenti ogni volta.",
+        "icon": "RiImageEditLine"
+      },
+      {
+        "title": "Coerenza dei Personaggi",
+        "description": "Nano Banana preserva elementi unici come personaggi o oggetti di riferimento attraverso più scene e ambienti con precisione impareggiabile.",
+        "icon": "RiUserHeartLine"
+      },
+      {
+        "title": "Precisione nell'Editing Locale",
+        "description": "Effettua modifiche mirate di elementi specifici con Nano Banana senza influenzare il resto della tua immagine, consentendo editing istantaneo flessibile.",
+        "icon": "RiEditBoxLine"
+      }
+    ]
+  },
+  "benefit": {
+    "name": "benefit",
+    "title": "Perché Scegliere Nano Banana",
+    "label": "Vantaggi",
+    "description": "Sperimenta l'editing di immagini AI di nuova generazione con la tecnologia rivoluzionaria di Nano Banana che supera Flux Kontext in ogni aspetto.",
+    "items": [
+      {
+        "title": "Prestazioni Superiori",
+        "description": "Nano Banana offre velocità di inferenza più rapide e risultati di qualità superiore rispetto ai modelli concorrenti, con coerenza dei personaggi e comprensione del contesto all'avanguardia.",
+        "icon": "RiRocketLine",
+        "image": {
+          "src": "/imgs/features/2.png"
+        }
+      },
+      {
+        "title": "Maestria nell'Editing Iterativo",
+        "description": "Con Nano Banana, costruisci su modifiche precedenti attraverso più turni mantenendo personaggi, identità, stili e caratteristiche distintive attraverso diverse scene.",
+        "icon": "RiRefreshLine",
+        "image": {
+          "src": "/imgs/features/3.png"
+        }
+      },
+      {
+        "title": "Innovazione nel Riferimento di Stile",
+        "description": "Nano Banana genera scene nuove preservando stili unici dalle immagini di riferimento, guidati da semplici prompt testuali con latenza minima.",
+        "icon": "RiPaletteLine",
+        "image": {
+          "src": "/imgs/features/4.png"
+        }
+      }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "title": "Come Creare con Nano Banana",
+    "description": "Trasforma il tuo flusso di lavoro creativo con Nano Banana in tre semplici passaggi:",
+    "image": {
+      "src": "/imgs/features/1.png"
+    },
+    "image_position": "left",
+    "text_align": "center",
+    "items": [
+      {
+        "title": "Inizia con Nano Banana",
+        "description": "Inizia il tuo viaggio creativo con Nano Banana caricando la tua immagine di riferimento o partendo con un prompt testuale per generazione istantanea.",
+        "image": {
+          "src": "/imgs/features/5.png"
+        }
+      },
+      {
+        "title": "Modifica con Nano Banana",
+        "description": "Usa le potenti istruzioni testuali di Nano Banana per modificare le tue immagini - cambia espressioni, aggiungi oggetti o trasforma intere scene in modo fluido.",
+        "image": {
+          "src": "/imgs/features/6.png"
+        }
+      },
+      {
+        "title": "Itera con Nano Banana",
+        "description": "Costruisci su modifiche precedenti con le capacità iterative di Nano Banana, perfezionando la tua creazione passo dopo passo mantenendo la coerenza dei personaggi.",
+        "image": {
+          "src": "/imgs/features/7.png"
+        }
+      },
+      {
+        "title": "Perfeziona con Nano Banana",
+        "description": "Raggiungi il risultato desiderato con l'editing di precisione di Nano Banana - da regolazioni locali a trasformazioni complete delle scene in tempo minimo.",
+        "image": {
+          "src": "/imgs/features/8.png"
+        }
+      }
+    ]
+  },
+  "feature": {
+    "name": "feature",
+    "title": "Capacità Principali di Nano Banana",
+    "description": "Sperimenta la tecnologia di editing di immagini AI più avanzata con le funzionalità rivoluzionarie di Nano Banana.",
+    "items": [
+      {
+        "title": "Modello di Flusso Multimodale",
+        "description": "Nano Banana combina coerenza dei personaggi all'avanguardia, comprensione del contesto e capacità di editing locale con potente sintesi text-to-image.",
+        "icon": "RiFlowChart"
+      },
+      {
+        "title": "Tecnologia di Velocità Interattiva",
+        "description": "Nano Banana offre latenza minima sia per la generazione che per l'editing di immagini, operando fino a 8 volte più velocemente dei modelli leader attuali.",
+        "icon": "RiSpeedUpLine"
+      },
+      {
+        "title": "Editing di Immagini Basato su Testo",
+        "description": "Nano Banana consente editing istantaneo flessibile delle immagini attraverso semplici istruzioni testuali - non serve alcun flusso di lavoro di editing complesso o fine-tuning.",
+        "icon": "RiEditLine"
+      },
+      {
+        "title": "Rendering Fotorealistico",
+        "description": "Nano Banana fornisce forte aderenza ai prompt, rendering fotorealistico e tipografia competitiva con output di qualità distintiva.",
+        "icon": "RiImageLine"
+      },
+      {
+        "title": "Trasformazione delle Scene",
+        "description": "Nano Banana gestisce trasformazioni complesse di intere scene mantenendo coerenza visiva e consistenza dei personaggi attraverso i punti di vista.",
+        "icon": "RiMagicLine"
+      },
+      {
+        "title": "Preservazione della Qualità",
+        "description": "Nano Banana mantiene la qualità dell'immagine e la coerenza dei personaggi attraverso sessioni di editing iterativo, preservando caratteristiche distintive in modo fluido.",
+        "icon": "RiShieldCheckLine"
+      }
+    ]
+  },
+  "stats": {
+    "name": "stats",
+    "label": "Statistiche",
+    "title": "I Creatori Scelgono Nano Banana",
+    "description": "per prestazioni ed affidabilità impareggiabili nell'editing di immagini AI.",
+    "icon": "FaRegHeart",
+    "items": [
+      {
+        "title": "Utenti Nano Banana",
+        "label": "10K+",
+        "description": "Creatori"
+      },
+      {
+        "title": "Velocità Nano Banana",
+        "label": "8x",
+        "description": "Più Veloce"
+      },
+      {
+        "title": "Precisione Nano Banana",
+        "label": "99%",
+        "description": "Coerenza"
+      }
+    ]
+  },
+  "testimonial": {
+    "name": "testimonial",
+    "label": "Testimonianze",
+    "title": "Cosa Dicono i Creatori di Nano Banana",
+    "description": "Ascolta artisti, designer e creatori di contenuti che hanno trasformato il loro flusso di lavoro con Nano Banana.",
+    "icon": "GoThumbsup",
+    "items": [
+      {
+        "title": "Sarah Chen",
+        "label": "Artista Digitale & Illustratrice",
+        "description": "Nano Banana ha rivoluzionato il mio processo creativo! La coerenza dei personaggi è incredibile - posso mantenere lo stesso personaggio attraverso dozzine di scene. Nano Banana mi fa risparmiare ore ogni giorno.",
+        "image": {
+          "src": "/imgs/users/1.png"
+        }
+      },
+      {
+        "title": "Michael Rodriguez",
+        "label": "Creatore di Contenuti & Influencer",
+        "description": "Ho provato ogni editor di immagini AI, ma Nano Banana è in una categoria a parte. La funzione di editing iterativo mi permette di perfezionare ogni dettaglio. Nano Banana fa risaltare i miei contenuti.",
+        "image": {
+          "src": "/imgs/users/2.png"
+        }
+      },
+      {
+        "title": "Emily Watson",
+        "label": "Direttrice Creativa presso PixelStudio",
+        "description": "Il nostro team è passato a Nano Banana e la produttività è esplosa. La precisione nell'editing locale è impareggiabile - possiamo modificare elementi specifici senza influenzare l'intera immagine. Nano Banana è un punto di svolta.",
+        "image": {
+          "src": "/imgs/users/3.png"
+        }
+      },
+      {
+        "title": "Alex Kim",
+        "label": "Designer Freelance",
+        "description": "La velocità di Nano Banana mi ha stupito! Ciò che richiedeva ore ora richiede minuti. La funzione di riferimento dello stile mantiene il mio brand coerente in tutti i progetti. Non riesco a immaginare di lavorare senza Nano Banana.",
+        "image": {
+          "src": "/imgs/users/4.png"
+        }
+      },
+      {
+        "title": "Lisa Thompson",
+        "label": "Proprietaria Agenzia Marketing",
+        "description": "Consegniamo campagne 10 volte più velocemente con Nano Banana. I clienti adorano la qualità fotorealistica e noi amiamo l'efficienza. Nano Banana ha trasformato l'intera nostra pipeline creativa.",
+        "image": {
+          "src": "/imgs/users/5.png"
+        }
+      },
+      {
+        "title": "David Park",
+        "label": "Artista di Pre-Visualizzazione Cinematografica",
+        "description": "Nano Banana dà vita ai miei storyboard! Le capacità di trasformazione delle scene sono perfette per la prototipazione rapida. Ogni regista dovrebbe usare Nano Banana per il lavoro di pre-viz.",
+        "image": {
+          "src": "/imgs/users/6.png"
+        }
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "FAQ",
+    "title": "Domande Frequenti su Nano Banana",
+    "description": "Hai altre domande su Nano Banana? Contatta il nostro team di supporto per assistenza.",
+    "items": [
+      {
+        "title": "Cos'è esattamente Nano Banana e come funziona?",
+        "description": "Nano Banana è una piattaforma rivoluzionaria di generazione ed editing di immagini basata su AI che esegue generazione di immagini in contesto. A differenza dei modelli tradizionali text-to-image, Nano Banana combina input di testo e immagini per un'estrazione e modifica fluida dei concetti visivi, offrendo editing coerente dei personaggi e preservazione delle scene."
+      },
+      {
+        "title": "In che modo Nano Banana differisce da Flux Kontext?",
+        "description": "Nano Banana supera Flux Kontext con prestazioni superiori, velocità di inferenza più rapide (fino a 8 volte più veloce) e coerenza migliorata dei personaggi. Nano Banana offre migliore precisione nell'editing locale, capacità di editing iterativo migliorate e mantiene qualità dell'immagine superiore attraverso più sessioni di editing."
+      },
+      {
+        "title": "Che tipi di editing posso fare con Nano Banana?",
+        "description": "Nano Banana supporta editing completo delle immagini inclusa preservazione della coerenza dei personaggi, editing locale di elementi specifici, generazione di riferimenti di stile, trasformazione delle scene ed editing iterativo. Puoi modificare espressioni, aggiungere oggetti, cambiare sfondi o trasformare intere scene con semplici prompt testuali."
+      },
+      {
+        "title": "Quanto è veloce Nano Banana rispetto ad altri modelli AI?",
+        "description": "Nano Banana opera con latenza minima, offrendo risultati fino a 8 volte più veloci dei modelli leader attuali. La tecnologia di velocità interattiva assicura che sia la generazione che l'editing delle immagini avvengano in tempo reale, rendendo Nano Banana perfetto per flussi di lavoro creativi rapidi e processi di design iterativi."
+      },
+      {
+        "title": "Nano Banana può mantenere la coerenza dei personaggi attraverso più modifiche?",
+        "description": "Sì! Nano Banana eccelle nella coerenza dei personaggi, preservando elementi unici come personaggi o oggetti di riferimento attraverso più scene e ambienti. Il modello di flusso multimodale avanzato assicura che le caratteristiche distintive rimangano coerenti attraverso sessioni di editing iterativo."
+      },
+      {
+        "title": "Nano Banana è adatto per lavoro creativo professionale?",
+        "description": "Assolutamente! Nano Banana è progettato per creativi professionisti, offrendo rendering fotorealistico, tipografia competitiva e risultati di qualità professionale. Molti artisti professionisti, designer, creatori di contenuti e agenzie creative si affidano a Nano Banana per i loro flussi di lavoro quotidiani e progetti per clienti."
+      }
+    ]
+  },
+  "cta": {
+    "name": "cta",
+    "title": "Trasforma il Tuo Flusso di Lavoro Creativo con Nano Banana",
+    "description": "Sperimenta il futuro dell'editing di immagini AI. Inizia a creare con Nano Banana oggi.",
+    "buttons": [
+      {
+        "title": "Prova Nano Banana Ora",
+        "url": "/#nano-banana",
+        "target": "_self",
+        "icon": "GoArrowUpRight"
+      },
+      {
+        "title": "Vedi Esempi di Nano Banana",
+        "url": "/showcase",
+        "target": "_self",
+        "variant": "outline"
+      }
+    ]
+  },
+  "footer": {
+    "name": "footer",
+    "brand": {
+      "title": "Nano Banana",
+      "description": "Nano Banana è la piattaforma rivoluzionaria di generazione ed editing di immagini basata su AI che offre editing coerente dei personaggi e preservazione delle scene con prestazioni superiori.",
+      "logo": {
+        "src": "/logo.png",
+        "alt": "Nano Banana"
+      },
+      "url": "/"
+    },
+    "copyright": "© 2025 • Nano Banana ORG Tutti i diritti riservati.",
+    "nav": {
+      "items": [
+        {
+          "title": "Prodotto",
+          "children": [
+            {
+              "title": "Funzionalità",
+              "url": "/#feature",
+              "target": "_self"
+            },
+            {
+              "title": "Vetrina",
+              "url": "/showcase",
+              "target": "_self"
+            },
+            {
+              "title": "Prezzi",
+              "url": "/#pricing",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "Altri Servizi",
+          "children": [
+            {
+              "title": "Miglioramento Immagini AI",
+              "url": "/ai-image-upscaler",
+              "target": "_self"
+            },
+            {
+              "title": "Veo 3",
+              "url": "/veo3",
+              "target": "_self"
+            },
+            {
+              "title": "Veo 3.1",
+              "url": "/veo3-1",
+              "target": "_self"
+            },
+            {
+              "title": "Sora2",
+              "url": "/sora2",
+              "target": "_self"
+            },
+            {
+              "title": "Wan 2.5",
+              "url": "/wan2-5",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "Altro",
+          "children": [
+            {
+              "title": "Chi Siamo",
+              "url": "/about",
+              "target": "_self"
+            },
+            {
+              "title": "Piano d'Azione Climatica",
+              "url": "https://climate.stripe.com/AoIcTh",
+              "target": "_blank"
+            }
+          ]
+        }
+      ]
+    },
+    "social": {
+      "items": [
+        {
+          "title": "X",
+          "icon": "RiTwitterXFill",
+          "url": "https://x.com/GoogleDeepMind/status/1960341906790957283",
+          "target": "_self"
+        },
+
+        {
+          "title": "Email",
+          "icon": "RiMailLine",
+          "url": "mailto:support@nanobanana.org",
+          "target": "_self"
+        }
+      ]
+    },
+    "agreement": {
+      "items": [
+        {
+          "title": "Politica sulla Privacy",
+          "url": "/privacy-policy"
+        },
+        {
+          "title": "Termini di Servizio",
+          "url": "/terms-of-service"
+        },
+        {
+          "title": "Politica di Rimborso",
+          "url": "/refund-policy"
+        }
+      ]
+    }
+  }
+}

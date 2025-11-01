@@ -1,0 +1,116 @@
+{
+  "metadata": {
+    "title": "Cronologia Creazioni - Nano Banana",
+    "description": "Visualizza e gestisci la cronologia delle tue immagini generate dall'IA"
+  },
+  "status": {
+    "completed": "Completato",
+    "failed": "Fallito",
+    "processing": "Elaborazione",
+    "pending": "In attesa"
+  },
+  "actions": {
+    "view": "Visualizza",
+    "download": "Scarica",
+    "delete": "Elimina",
+    "enhance": "Migliora"
+  },
+  "labels": {
+    "prompt": "Prompt",
+    "images": "Immagini",
+    "credits": "Crediti",
+    "created_at": "Creato",
+    "provider": "Provider"
+  },
+  "messages": {
+    "no_tasks": "Nessuna cronologia di creazione",
+    "loading": "Caricamento...",
+    "load_more": "Carica altro",
+    "delete_confirm": "Sei sicuro di voler eliminare questa attività?",
+    "delete_success": "Eliminato con successo",
+    "delete_failed": "Eliminazione fallita",
+    "download_success": "Scaricato con successo",
+    "download_failed": "Download fallito"
+  },
+  "image_preview": "Anteprima Immagine",
+  "download": "Scarica",
+  "enhance_image": "Migliora",
+  "image_to_video": "Immagine in Video",
+  "i2v": "I2V",
+  "use_veo3": "Usa Veo 3",
+  "use_sora2": "Usa Sora 2",
+  "use_wan25": "Usa Wan 2.5",
+  "copy_link": "Copia Link",
+  "copied": "Copiato!",
+  "link_copied": "Link copiato negli appunti",
+  "copy_failed": "Copia del link fallita",
+  "coming_soon": "Prossimamente!",
+  "no_image_selected": "Nessuna immagine selezionata",
+  "redirecting_to_upscaler": "Reindirizzamento all'upscaler delle immagini...",
+  "invalid_image_url": "URL immagine non valido",
+  "title": "Cronologia Creazioni Nano Banana",
+  "description": "Visualizza tutte le immagini che hai generato e modificato con Nano Banana in precedenza",
+  "credits_used": "{amount} crediti",
+  "credits_refunded": "Rimborsati {amount} crediti",
+  "images": "immagini",
+  "view": "Visualizza",
+  "download_success": "Immagine scaricata con successo",
+  "delete_success": "Record eliminato con successo",
+  "delete_error": "Eliminazione del record fallita",
+  "load_more": "Carica altro",
+  "loading": "Caricamento...",
+  "load_more_error": "Caricamento di ulteriori record fallito",
+  "no_more": "Tutti i record caricati",
+  "tabs": {
+    "nano_banana": "Generazione Immagini",
+    "veo3": "Veo 3",
+    "sora2": "Sora 2",
+    "wan25": "Wan 2.5",
+    "upscaler": "Miglioramento Immagini"
+  },
+  "veo3": {
+    "video_preview": "Anteprima Video",
+    "720p": "720p",
+    "1080p": "1080p (HD)",
+    "prompt": "Prompt",
+    "input_image": "Immagine di Input",
+    "download_video": "Scarica Video"
+  },
+  "sora2": {
+    "video_preview": "Anteprima Video Sora 2",
+    "prompt": "Prompt",
+    "download_video": "Scarica Video"
+  },
+  "wan25": {
+    "video_preview": "Anteprima Video Wan 2.5",
+    "prompt": "Prompt",
+    "duration": "Durata",
+    "resolution": "Risoluzione",
+    "aspect_ratio": "Rapporto d'Aspetto",
+    "download_video": "Scarica Video"
+  },
+  "upscaler": {
+    "compare_title": "Anteprima Comparativa",
+    "scale": "Fattore di Scala",
+    "face_enhance": "Miglioramento Viso",
+    "enabled": "Abilitato",
+    "disabled": "Disabilitato",
+    "drag_hint": "Trascina il divisore per confrontare le immagini",
+    "download_original": "Scarica Originale",
+    "download_enhanced": "Scarica Migliorata"
+  },
+  "error": {
+    "unknown": "Si è verificato un errore sconosciuto"
+  },
+  "empty": {
+    "title": "Nessuna Cronologia di Generazione",
+    "description": "Inizia a creare immagini straordinarie con l'IA",
+    "action": "Inizia a Creare"
+  },
+  "delete_confirm": {
+    "title": "Elimina Record",
+    "description": "Sei sicuro di voler eliminare questo record di generazione? Questa azione non può essere annullata.",
+    "cancel": "Annulla",
+    "confirm": "Elimina"
+  }
+}

@@ -1,0 +1,337 @@
+{
+  "metadata": {
+    "title": "Nano Banana - Generatore di Immagini AI | Modifica immagini con la chat",
+    "description": "Nano Banana è un generatore di immagini alimentato dall'AI che ti permette di creare e modificare immagini attraverso conversazioni naturali. Una potente alternativa a Flux Kontext.",
+    "keywords": ""
+  },
+  "user": {
+    "sign_in": "Accedi",
+    "sign_out": "Esci",
+    "credits": "Crediti",
+    "api_keys": "Chiavi API",
+    "my_orders": "I Miei Ordini",
+    "user_center": "Centro Utente",
+    "admin_system": "Sistema Admin"
+  },
+  "sign_modal": {
+    "sign_in_title": "Accedi",
+    "sign_in_description": "Accedi al tuo account",
+    "sign_up_title": "Registrati",
+    "sign_up_description": "Crea un nuovo account",
+    "login_slogan": "Ottieni 10 Crediti Gratuiti Subito!",
+    "email": "Email",
+    "email_title": "Email",
+    "email_placeholder": "Inserisci la tua email",
+    "password_title": "Password",
+    "password_placeholder": "Inserisci la tua password",
+    "forgot_password": "Password dimenticata?",
+    "or": "Oppure",
+    "continue": "Continua",
+    "no_account": "Non hai ancora un account?",
+    "email_sign_in": "Accedi con Email",
+    "google_sign_in": "Accedi con Google",
+    "github_sign_in": "Accedi con GitHub",
+    "send_magic_link": "Invia link di accesso",
+    "sending": "Invio in corso...",
+    "email_sent": "Controlla la tua email, ti abbiamo inviato un link di accesso!",
+    "email_required": "Inserisci la tua email",
+    "code_required": "Inserisci email e codice di verifica",
+    "code_sent": "Il codice di verifica è stato inviato alla tua email",
+    "enter_email": "Inserisci la tua email",
+    "enter_code": "Inserisci il codice di verifica",
+    "send_code": "Invia codice di verifica",
+    "sending_code": "Invio in corso...",
+    "verification_code": "Codice di verifica",
+    "resend_code": "Reinvia",
+    "resend_in": "Conto alla rovescia per reinvio",
+    "sign_in": "Accedi",
+    "signing_in": "Accesso in corso...",
+    "back": "Indietro",
+    "invalid_code": "Codice di verifica non valido",
+    "code_expired": "Codice di verifica scaduto o inesistente",
+    "sign_in_failed": "Accesso fallito, riprova",
+    "close_title": "Chiudi",
+    "cancel_title": "Annulla",
+    "terms_text": "Continuando, accetti i nostri",
+    "terms_of_service": "Termini di Servizio",
+    "and": "e",
+    "privacy_policy": "Informativa sulla Privacy"
+  },
+  "my_orders": {
+    "title": "I Miei Ordini",
+    "description": "Ordini acquistati su ShipAny.",
+    "no_orders": "Nessun ordine trovato",
+    "tip": "",
+    "activate_order": "Attiva Ordine",
+    "actived": "Attivato",
+    "join_discord": "Unisciti a Discord",
+    "read_docs": "Leggi la Documentazione",
+    "table": {
+      "order_no": "N. Ordine",
+      "email": "Email",
+      "product_name": "Nome Prodotto",
+      "amount": "Importo",
+      "paid_at": "Pagato il",
+      "github_username": "Nome Utente GitHub",
+      "status": "Stato"
+    }
+  },
+  "my_credits": {
+    "title": "I Miei Crediti",
+    "left_tip": "Crediti rimanenti: {left_credits}",
+    "no_credits": "Nessun record di crediti",
+    "recharge": "Ricarica",
+    "table": {
+      "trans_no": "N. Transazione",
+      "trans_type": "Tipo Transazione",
+      "credits": "Crediti",
+      "updated_at": "Aggiornato il",
+      "status": "Stato"
+    }
+  },
+  "api_keys": {
+    "title": "Chiavi API",
+    "tip": "Conserva la tua chiave API in modo sicuro per evitare fughe di informazioni",
+    "no_api_keys": "Nessuna Chiave API",
+    "create_api_key": "Crea Chiave API",
+    "table": {
+      "name": "Nome",
+      "key": "Chiave",
+      "created_at": "Creato il"
+    },
+    "form": {
+      "name": "Nome",
+      "name_placeholder": "Nome Chiave API",
+      "submit": "Invia"
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "description": "Notizie, risorse e aggiornamenti su ShipAny",
+    "read_more_text": "Leggi di Più"
+  },
+  "my_invites": {
+    "title": "I Miei Inviti",
+    "description": "Visualizza i tuoi record di inviti",
+    "no_invites": "Nessun record di inviti trovato",
+    "my_invite_link": "Il Mio Link di Invito",
+    "edit_invite_link": "Modifica Link di Invito",
+    "copy_invite_link": "Copia Link di Invito",
+    "invite_code": "Codice Invito",
+    "invite_tip": "Invita 1 amico ad acquistare ShipAny, ricompensa $50.",
+    "invite_balance": "Saldo Ricompense Inviti",
+    "total_invite_count": "Conteggio Totale Inviti",
+    "total_paid_count": "Conteggio Totale Pagamenti",
+    "total_award_amount": "Importo Totale Ricompense",
+    "update_invite_code": "Imposta Codice Invito",
+    "update_invite_code_tip": "Inserisci il tuo codice invito personalizzato",
+    "update_invite_button": "Salva",
+    "no_orders": "Devi prima acquistare ShipAny prima di invitare amici",
+    "no_affiliates": "Non hai ancora il permesso di invitare amici, contattaci per fare richiesta.",
+    "table": {
+      "invite_time": "Data Invito",
+      "invite_user": "Utente Invitato",
+      "status": "Stato",
+      "reward_percent": "Percentuale Ricompensa",
+      "reward_amount": "Importo Ricompensa",
+      "pending": "Registrato, non pagato",
+      "completed": "Pagato"
+    }
+  },
+  "feedback": {
+    "title": "Feedback",
+    "description": "Ci piacerebbe conoscere le tue opinioni sul prodotto o su come migliorare l'esperienza del prodotto.",
+    "submit": "Invia",
+    "loading": "Invio in corso...",
+    "contact_tip": "Altri metodi di contatto",
+    "rating_tip": "Cosa ne pensi di ShipAny?",
+    "placeholder": "Lascia qui il tuo feedback..."
+  },
+  "pricing": {
+    "most_popular": "Più Popolare"
+  },
+  "nano_banana": {
+    "wrapper": {
+      "loading_text": "Caricamento di Nano Banana...",
+      "title": "Workbench di Creazione AI Nano Banana",
+      "description": "Usa la tecnologia AI avanzata per trasformare la tua immaginazione in bellissime immagini"
+    },
+    "workspace": {
+      "mode_selector": {
+        "image_edit": "Modifica Immagine",
+        "text_to_image": "Testo-a-Immagine"
+      },
+      "operation_panel": {
+        "login_required": "Effettua prima l'accesso",
+        "insufficient_credits": "Crediti insufficienti, necessari {amount} crediti",
+        "please_enter_prompt": "Inserisci un prompt",
+        "prompt_min_length": "Inserisci almeno 3 caratteri",
+        "generating": "Generazione in corso...",
+        "start_creation": "Inizia Creazione"
+      },
+      "image_upload": {
+        "title": "Immagini di Riferimento",
+        "add_image": "Aggiungi Immagine",
+        "max_size": "Max 10MB",
+        "supported_formats": "JPG, PNG, WebP",
+        "drag_to_upload": "Rilascia il file",
+        "clear_all": "Cancella tutte le immagini",
+        "error_invalid_type": "Formato file non supportato, solo JPG, PNG, WebP sono supportati",
+        "error_too_large": "La dimensione del file supera il limite di 10MB",
+        "error_too_many": "È possibile caricare al massimo 10 file alla volta"
+      },
+      "prompt_input": {
+        "title": "Descrivi la tua idea",
+        "placeholder_image_edit": "Descrivi l'effetto che desideri, inclusi stile, colore, composizione e altri dettagli...",
+        "placeholder_text_to_image": "Descrivi in dettaglio l'immagine che vuoi generare, inclusi soggetto, scena, stile, colore, ecc...",
+        "tip": "Descrizioni dettagliate portano a risultati migliori"
+      },
+      "image_size_selector": {
+        "title": "Rapporto d'Aspetto",
+        "auto": "Auto",
+        "ratios": {
+          "auto": "AI decide automaticamente",
+          "1:1": "Avatar social",
+          "9:16": "Video verticale",
+          "16:9": "Video orizzontale",
+          "3:4": "Foto ritratto",
+          "4:3": "Foto paesaggio",
+          "3:2": "Foto classica",
+          "2:3": "Verticale classica",
+          "5:4": "Formato medio",
+          "4:5": "Verticale medio",
+          "21:9": "Ultra-panoramico"
+        }
+      },
+      "credits_display": {
+        "title": "Costo in Crediti",
+        "unit": "crediti"
+      },
+      "display_panel": {
+        "generation_complete": "Generazione completata!",
+        "regenerate": "Rigenera",
+        "image_download_success": "Immagine scaricata con successo",
+        "download_failed": "Download fallito",
+        "link_copied": "Link copiato",
+        "copy_failed": "Copia fallita"
+      },
+      "empty_state": {
+        "title": "Pronto per iniziare a creare?",
+        "description": "Seleziona una modalità a sinistra, carica immagini o inserisci descrizioni, e lascia che l'AI crei elementi visivi straordinari per te",
+        "feature_ai": "Intelligenza AI",
+        "feature_speed": "Generazione Ultra-veloce",
+        "feature_quality": "Alta Qualità"
+      },
+      "progress_state": {
+        "title": "L'AI sta creando...",
+        "description": "Attendi un momento, qualcosa di straordinario sta arrivando",
+        "task_id": "ID Attività: {taskId}"
+      },
+      "error_state": {
+        "title": "Generazione fallita",
+        "default_message": "Spiacenti, si è verificato un problema durante la generazione dell'immagine. Riprova più tardi. Se il problema persiste, contatta il nostro team di supporto tecnico.",
+        "support_message": "Se il problema persiste, il nostro team di supporto tecnico ti aiuterà",
+        "retry_button": "Riprova",
+        "contact_support": "Contatta il supporto",
+        "support_email_text": "Email supporto tecnico:",
+        "email_subject": "Nano Banana - Richiesta supporto tecnico",
+        "email_body": "Salve,\\n\\nHo riscontrato un problema durante l'utilizzo di Nano Banana:\\n\\nMessaggio di errore: {title}\\nDescrizione dettagliata: {message}\\n\\nVi prego di assistere nella risoluzione, grazie!\\n\\nUtente"
+      },
+      "image_card": {
+        "image_load_failed": "Caricamento immagine fallito",
+        "image_number": "#{number}",
+        "from_link": "Da link"
+      },
+      "image_action_bar": {
+        "download": "Scarica",
+        "enhance": "Migliora Immagine",
+        "continue_edit": "Modifica Ancora",
+        "image_to_video": "Immagine a Video",
+        "image_not_found": "Immagine non trovata",
+        "invalid_image_url": "URL immagine non valido",
+        "continue_edit_coming_soon": "La funzione di modifica continua arriverà presto",
+        "use_veo3": "Usa Veo 3",
+        "use_sora2": "Usa Sora 2",
+        "use_wan25": "Usa Wan 2.5"
+      },
+      "ai_description": {
+        "title": "Descrizione Generata dall'AI"
+      },
+      "action_buttons": {
+        "download": "Scarica",
+        "copy_link": "Copia Link",
+        "copied": "Copiato",
+        "image_to_video": "Immagine a Video",
+        "view_large": "Visualizza Grande"
+      },
+      "image_preview": {
+        "download_success": "Immagine scaricata con successo",
+        "download_failed": "Download fallito",
+        "link_copied": "Link copiato",
+        "copy_failed": "Copia fallita",
+        "click_to_view": "Clicca per visualizzare l'immagine grande"
+      },
+      "image_viewer": {
+        "image_not_found": "Immagine non trovata",
+        "invalid_image_url": "URL immagine non valido",
+        "download": "Scarica",
+        "enhance": "Migliora Immagine",
+        "close": "Chiudi",
+        "prev_image": "Precedente",
+        "next_image": "Successivo",
+        "image_count": "{current} / {total}",
+        "use_veo3": "Usa Veo 3",
+        "use_sora2": "Usa Sora 2",
+        "use_wan25": "Usa Wan 2.5",
+        "image_to_video": "Immagine a Video"
+      },
+      "quick_prompts": {
+        "image_mode": {
+          "enhance_details": "Migliora Dettagli",
+          "enhance_details_prompt": "migliora dettagli, alta definizione, fine",
+          "art_style": "Stile Artistico",
+          "art_style_prompt": "stile artistico, texture pittura a olio",
+          "anime_style": "Stile Anime",
+          "anime_style_prompt": "stile anime, 2D",
+          "realistic_photo": "Foto Realistica",
+          "realistic_photo_prompt": "stile realistico, texture fotografica"
+        },
+        "text_mode": {
+          "art_creation": "Creazione Artistica",
+          "art_creation_prompt": "stile artistico, alta qualità, squisito",
+          "realistic_style": "Stile Realistico",
+          "realistic_style_prompt": "stile realistico, fotografia ad alta definizione",
+          "sci_fi": "Futuro Fantascienza",
+          "sci_fi_prompt": "stile fantascientifico, futuristico",
+          "creative_design": "Design Creativo",
+          "creative_design_prompt": "design creativo, prospettiva unica"
+        }
+      }
+    },
+    "hooks": {
+      "file_validation": {
+        "unsupported_format": "Formato file non supportato, solo JPG, PNG, WebP sono supportati",
+        "file_too_large": "La dimensione del file è {sizeMB}MB, supera il limite di 10MB",
+        "image_applied": "Immagine applicata all'area di riferimento",
+        "invalid_image_url": "URL immagine non valido"
+      }
+    },
+    "messages": {
+      "starting_upload": "Avvio caricamento di {count} immagini...",
+      "upload_success": "Tutte le immagini caricate con successo!",
+      "upload_failed": "Caricamento immagine fallito",
+      "upload_image_failed": "Impossibile caricare l'immagine {filename}",
+      "submit_failed": "Invio attività fallito",
+      "task_submitted": "Attività inviata, elaborazione in corso...",
+      "insufficient_credits": "Crediti insufficienti, ricarica e riprova",
+      "generation_success": "Generate con successo {count} immagini!",
+      "get_results_failed": "Impossibile ottenere i risultati",
+      "task_failed": "Esecuzione attività fallita",
+      "max_images_warning": "Massimo 10 immagini consentite, limitato automaticamente"
+    },
+    "validation": {
+      "please_enter_prompt": "Inserisci un prompt",
+      "please_upload_image": "Carica almeno un'immagine"
+    }
+  }
+}

@@ -1,0 +1,204 @@
+{
+  "meta": {
+    "title": "Sora 2 Generatore Video AI - Senza Watermark, Senza Codice d'Invito",
+    "description": "Generatore video AI Sora 2 di OpenAI: Crea video realistici da testo o immagini. Senza watermark, senza codice d'invito, senza download app. Strumento text-to-video e image-to-video."
+  },
+  "hero": {
+    "title": "Generatore Video AI Sora 2",
+    "subtitle": "Senza Watermark • Senza Codice d'Invito • Senza Download App",
+    "description": "Sperimenta l'ultimo modello di generazione video AI Sora 2 di OpenAI. Trasforma descrizioni testuali o immagini in video straordinari e realistici con effetti di movimento avanzati e coerenza fisica. Perfetto per progetti creativi e contenuti social media - inizia a generare video professionali istantaneamente senza alcuna barriera."
+  },
+  "features": {
+    "title": "Perché Scegliere il Nostro Generatore Video AI Sora 2",
+    "description": "Sora 2 di OpenAI rappresenta una svolta nella generazione video AI. Sperimenta la creazione video professionale senza watermark, senza codici d'invito e senza download di app richiesti.",
+    "items": [
+      {
+        "title": "Simulazione Fisica Avanzata e Movimento Realistico",
+        "description": "Sora 2 offre un'accuratezza fisica senza precedenti con effetti di movimento realistici e coerenza fisica. A differenza dei precedenti generatori video che distorcono la realtà, Sora 2 segue le leggi della fisica del mondo reale - i palloni da basket rimbalzano naturalmente, i surfisti dimostrano dinamiche di galleggiamento appropriate e gli oggetti mantengono la coerenza visiva durante sequenze complesse."
+      },
+      {
+        "title": "Generazione Doppia Modalità - Da Testo a Video e Da Immagine a Video",
+        "description": "Crea video da prompt testuali puri o trasforma immagini statiche in sequenze di movimento dinamico. Sora 2 supporta sia la generazione text-to-video che image-to-video, permettendoti di descrivere scene cinematografiche o animare immagini esistenti con movimento naturale mantenendo la coerenza visiva."
+      },
+      {
+        "title": "Output Flessibile e Rapporti d'Aspetto per Qualsiasi Piattaforma",
+        "description": "Genera video fino a 15 secondi in formato verticale o orizzontale, perfetti per social media, app mobile e contenuti cinematografici. Sora 2 offre opzioni di rendering standard e ad alta definizione, bilanciando velocità con qualità per soddisfare diverse esigenze di produzione dai post social veloci alla creazione di contenuti professionali."
+      },
+      {
+        "title": "Controllo Creativo Preciso e Versatilità di Stile",
+        "description": "Sora 2 fornisce un controllo granulare su scene, azioni e stili artistici. Genera riprese realistiche, sequenze cinematografiche o animazioni stilizzate con un'eccezionale aderenza al prompt. Il modello eccelle negli stili fotorealistici, cinematografici e anime, eseguendo istruzioni complesse multi-shot mantenendo stati del mondo coerenti."
+      }
+    ]
+  },
+  "how_to_use": {
+    "title": "Come Generare Video con Sora 2 - Semplice Processo in 3 Passi",
+    "description": "Crea video professionali generati dall'AI con Sora 2 in pochi minuti. La nostra interfaccia intuitiva rende la generazione video accessibile a tutti.",
+    "items": [
+      {
+        "title": "Passo 1: Scegli il Tuo Metodo di Input",
+        "description": "Seleziona la modalità text-to-video per descrivere la tua scena con prompt dettagliati, oppure scegli la modalità image-to-video per caricare un'immagine di riferimento. L'API Sora 2 supporta entrambi i metodi, permettendoti di descrivere movimenti della camera, azioni e stili visivi, o trasformare immagini statiche in sequenze di movimento naturale con coerenza visiva mantenuta."
+      },
+      {
+        "title": "Passo 2: Configura le Impostazioni Video",
+        "description": "Personalizza il tuo output selezionando il rapporto d'aspetto (verticale per i social media o orizzontale per contenuti cinematografici), impostazioni di qualità e durata del video fino a 15 secondi. Sora 2 offre configurazioni flessibili per bilanciare la velocità di rendering con la qualità video, adattandosi a diversi requisiti di produzione dai post social veloci ai progetti professionali."
+      },
+      {
+        "title": "Passo 3: Genera e Scarica il Tuo Video",
+        "description": "Clicca su genera e lascia che Sora 2 elabori la tua richiesta con capacità avanzate di simulazione del mondo. Il modello creerà il tuo video con fisica realistica, permanenza degli oggetti coerente e aderenza precisa alle tue istruzioni. Visualizza l'anteprima del risultato e scarica il tuo video di alta qualità pronto per social media, progetti creativi o uso commerciale."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Generatore Video AI Sora 2 - Domande Frequenti",
+    "description": "Tutto ciò che devi sapere sull'utilizzo di Sora 2 per la generazione video professionale. Scopri funzionalità, capacità e best practice.",
+    "contact": {
+      "question_text": "Hai altre domande su Sora 2?",
+      "support_link": "Contatta il nostro team di supporto"
+    },
+    "items": [
+      {
+        "question": "Cos'è Sora 2 e come si differenzia dagli altri generatori video?",
+        "answer": "Sora 2 è l'ultimo modello di generazione video AI di OpenAI che rappresenta una svolta importante nella tecnologia AI video. A differenza dei precedenti generatori video che distorcono gli oggetti e piegano la realtà, Sora 2 segue le leggi della fisica del mondo reale con un'accuratezza senza precedenti. Può simulare scenari complessi come ginnastica di livello olimpico, backflip su tavola da surf con dinamiche accurate di galleggiamento e rigidità, e interazioni naturali tra oggetti. Sora 2 genera video da prompt testuali o immagini di riferimento con qualità cinematografica, effetti di movimento realistici e coerenza fisica."
+      },
+      {
+        "question": "Quali sono le caratteristiche principali della generazione video Sora 2?",
+        "answer": "Sora 2 offre diverse funzionalità rivoluzionarie: generazione doppia modalità (text-to-video e image-to-video), simulazione fisica avanzata con movimento realistico, rapporti d'aspetto flessibili per formati verticali e orizzontali, opzioni di output ad alta definizione fino a 15 secondi di lunghezza, controllo creativo preciso su scene e stili, e supporto per estetiche fotorealistiche, cinematografiche e anime. Il modello presenta anche un'aderenza migliorata al prompt e può eseguire istruzioni complesse multi-shot mantenendo stati del mondo coerenti durante tutto il video."
+      },
+      {
+        "question": "Quanto tempo ci vuole per generare video con Sora 2?",
+        "answer": "Il tempo di generazione varia in base alla versione del modello e alle impostazioni scelte. La qualità standard di Sora 2 richiede tipicamente 3-5 minuti per generare. Per Sora 2 Pro con qualità HD: i video HD di 10 secondi richiedono tipicamente 10-20 minuti per generare, e i video HD di 15 secondi richiedono circa 30 minuti (questo riflette la velocità di consegna nativa di OpenAI). Raccomandiamo vivamente di utilizzare l'opzione HD a 15 secondi con cautela, poiché richiede più tempo e potrebbe avere piccole imperfezioni. Puoi lasciare la pagina dopo l'invio - i video completati appariranno nella sezione Le Mie Creazioni."
+      },
+      {
+        "question": "Perché le mie generazioni video continuano a fallire?",
+        "answer": "I fallimenti nella generazione video si verificano tipicamente a causa di violazioni delle politiche sui contenuti. I sistemi di sicurezza di OpenAI bloccheranno le richieste che contengono: foto realistiche di persone identificabili (per prevenire deepfake e abusi), contenuti sessualmente espliciti, violenza grafica o gore, o altri contenuti proibiti. Per garantire una generazione riuscita, evita di caricare foto realistiche di volti umani e astieniti dall'utilizzare prompt che descrivono contenuti violenti, espliciti o dannosi. Se ritieni che il tuo contenuto sia appropriato ma continui a riscontrare fallimenti, prova a riformulare il tuo prompt o a utilizzare immagini di riferimento diverse."
+      },
+      {
+        "question": "Come gestisce Sora 2 la fisica e il realismo nei video generati?",
+        "answer": "Sora 2 eccelle nell'accuratezza fisica e nel realismo. Quando un giocatore di basket manca un tiro, la palla rimbalza naturalmente sul tabellone invece di teletrasportarsi al canestro come nei modelli più vecchi. Il sistema può simulare un corretto galleggiamento, permanenza degli oggetti, gravità e proprietà dei materiali. Questa coerenza fisica rende Sora 2 adatto per creare simulazioni di addestramento realistiche, contenuti sportivi e progetti creativi professionali che richiedono dinamiche di movimento autentiche."
+      },
+      {
+        "question": "Posso utilizzare Sora 2 per contenuti social media e commerciali?",
+        "answer": "Sì! Sora 2 è perfetto per applicazioni social media e commerciali. Il modello genera video fino a 15 secondi di lunghezza con rapporti d'aspetto flessibili ottimizzati per diverse piattaforme - formato verticale per TikTok, Instagram Reels e YouTube Shorts, o orizzontale per contenuti video tradizionali. I video generati con Sora 2 attraverso la nostra piattaforma sono adatti per uso commerciale in marketing, pubblicità e creazione di contenuti. Il sistema produce output di alta qualità senza watermark, pronto per la pubblicazione immediata."
+      },
+      {
+        "question": "Cosa rende Sora 2 migliore nel seguire i prompt rispetto ai modelli precedenti?",
+        "answer": "Sora 2 dimostra un'aderenza al prompt significativamente migliorata rispetto ai precedenti modelli di generazione video. Può eseguire istruzioni complesse e multi-parte su più inquadrature mantenendo coerenza visiva e narrativa. Il modello comprende descrizioni dettagliate di movimenti della camera, azioni dei personaggi, transizioni di scena e stili artistici. Questa controllabilità migliorata consente ai creatori di raggiungere visioni creative specifiche con precisione, sia generando riprese in stile documentaristico realistico, sequenze cinematografiche o animazioni stilizzate."
+      },
+      {
+        "question": "Quanto costa Sora 2 e come funziona il sistema di crediti?",
+        "answer": "Sora 2 utilizza un sistema di prezzi trasparente basato sui crediti. Ogni generazione video consuma crediti in base alle impostazioni selezionate come risoluzione, rapporto d'aspetto e durata del video (massimo 15 secondi). Le generazioni di qualità standard richiedono meno crediti, mentre gli output ad alta definizione ne utilizzano di più. Puoi acquistare pacchetti di crediti adatti alle tue esigenze di produzione. Nessun abbonamento richiesto - paga solo per ciò che generi. Controlla l'interfaccia dell'area di lavoro per i costi attuali dei crediti per generazione."
+      }
+    ]
+  },
+  "examples": {
+    "title": "Esempi di Generazione Video Sora 2 - Scopri la Potenza in Azione",
+    "subtitle": "Scopri come Sora 2 trasforma immagini statiche e descrizioni testuali in video straordinari e realistici con simulazione fisica avanzata e qualità cinematografica",
+    "image_to_video": {
+      "title": "Da Immagine a Video - Anima le Tue Foto",
+      "description": "Carica qualsiasi immagine statica e guarda Sora 2 darle vita con movimento naturale, mantenendo coerenza visiva e realismo fisico. La nostra modalità image-to-video preserva l'estetica originale aggiungendo movimento fluido e dinamico che segue la fisica del mondo reale.",
+      "input_image_url": "https://file.nanobanana.org/showcase/sora2/sora2_input-image.png",
+      "input_image_alt": "Esempio di immagine sorgente per la generazione image-to-video di Sora 2",
+      "output_video_url": "https://file.nanobanana.org/showcase/sora2/sora_2_i2v_output.mp4"
+    },
+    "text_to_video": {
+      "title": "Da Testo a Video - Dalle Parole alle Scene Cinematografiche",
+      "description": "Descrivi la tua visione in testo e lascia che Sora 2 generi video di qualità professionale con aderenza precisa alle tue istruzioni. La nostra modalità text-to-video comprende prompt complessi inclusi movimenti della camera, illuminazione, azioni e stili artistici per creare esattamente ciò che immagini.",
+      "input_prompt": "Una drammatica scena di rottura hollywoodiana al tramonto in una tranquilla strada suburbana. Un uomo e una donna sui 30 anni si fronteggiano, parlando sottovoce ma emotivamente, con le labbra sincronizzate al dialogo di separazione. Illuminazione cinematografica, toni caldi del tramonto, profondità di campo ridotta, brezza leggera che muove le foglie autunnali, suono naturale realistico, nessuna musica di sottofondo",
+      "output_video_url": "https://file.nanobanana.org/showcase/sora2/sora_t2v_output.mp4"
+    },
+    "labels": {
+      "original_image": "Immagine Originale",
+      "prompt_text": "Prompt Testuale",
+      "ai_generated_video": "Video Generato da Sora 2",
+      "browser_not_supported": "Il tuo browser non supporta la riproduzione video.",
+      "video_info": "Generato da Sora 2"
+    }
+  },
+  "workspace": {
+    "mode_selector": {
+      "text_to_video": "Da Testo a Video",
+      "image_to_video": "Da Immagine a Video"
+    },
+    "model_selector": {
+      "label": "Versione Modello",
+      "sora2": "Sora 2",
+      "sora2_pro": "Sora 2 Pro"
+    },
+    "upload_zone": {
+      "title": "Carica Immagine",
+      "click_or_drag": "Clicca o trascina per caricare",
+      "drop_text": "Rilascia per caricare",
+      "supported_formats": "Supporta PNG, JPG, JPEG, WEBP • Max 10MB",
+      "preview_alt": "Anteprima caricata",
+      "delete_tooltip": "Elimina immagine",
+      "replace_tooltip": "Sostituisci immagine",
+      "processing": "Elaborazione...",
+      "error_file_too_large": "Il file è troppo grande. La dimensione massima è 10MB.",
+      "error_invalid_type": "Tipo di file non valido. Si prega di caricare un'immagine."
+    },
+    "prompt": {
+      "label": "Prompt",
+      "placeholder": "Descrivi il video che vuoi generare...",
+      "helper": "Descrivi il movimento e il contenuto video desiderato"
+    },
+    "controls": {
+      "aspect_ratio_label": "Rapporto d'Aspetto",
+      "landscape": "Orizzontale",
+      "portrait": "Verticale",
+      "duration_label": "Durata",
+      "duration_10s": "10s",
+      "duration_15s": "15s",
+      "quality_label": "Qualità",
+      "quality_standard": "Standard",
+      "quality_high": "Alta",
+      "generation_time_title": "⏱️ Tempo di Generazione:",
+      "generation_time_desc": "10s HD richiede tipicamente 10-20 minuti, 15s HD richiede ~30 minuti (riflette la velocità di consegna nativa di OpenAI). Raccomandiamo vivamente di utilizzare l'opzione HD a 15s con cautela poiché richiede più tempo e potrebbe avere leggere imperfezioni.",
+      "remove_watermark_label": "Rimuovi Watermark",
+      "credits_cost": "Costo in Crediti",
+      "credits_unit": "crediti"
+    },
+    "generate_button": {
+      "uploading": "Caricamento...",
+      "generating": "Generazione...",
+      "generate": "Genera Video (${credits} crediti)"
+    },
+    "empty_state": {
+      "title": "Pronto a Generare",
+      "description": "Inserisci il tuo prompt e clicca su genera per creare video straordinari con Sora 2"
+    },
+    "processing_state": {
+      "uploading_title": "Caricamento immagine...",
+      "generating_title": "Generazione video...",
+      "description": "Attendi mentre elaboriamo la tua richiesta. Potrebbero essere necessari alcuni minuti.",
+      "generation_time_title": "⏱️ Tempo di Generazione:",
+      "generation_time_desc": "10s HD richiede tipicamente 10-20 minuti, 15s HD richiede ~30 minuti (riflette la velocità di consegna nativa di OpenAI). Raccomandiamo vivamente di utilizzare l'opzione HD a 15s con cautela poiché richiede più tempo e potrebbe avere leggere imperfezioni.",
+      "wait_notice": "Puoi lasciare questa pagina o avviare una nuova attività di generazione. Una volta completato, puoi trovare il risultato in Le Mie Creazioni."
+    },
+    "failed_state": {
+      "title": "Generazione Fallita",
+      "description": "Si è verificato un errore durante la generazione del video",
+      "credits_refunded": "I tuoi crediti sono stati rimborsati"
+    },
+    "completed_state": {
+      "downloading": "Download...",
+      "download": "Scarica Video",
+      "prompt_label": "Prompt:"
+    },
+    "toast": {
+      "video_generated": "Video Generato! Il tuo video è pronto per la visualizzazione.",
+      "error_occurred": "Si è verificato un errore durante la generazione",
+      "prompt_required": "Inserisci un prompt per la generazione del video",
+      "prompt_length_error": "Il prompt deve contenere tra ${min} e ${max} caratteri",
+      "image_required": "Carica un'immagine per la generazione image-to-video",
+      "login_required": "Accedi per generare video",
+      "insufficient_credits": "Hai bisogno di ${credits} crediti per generare video",
+      "uploading_image": "Caricamento immagine...",
+      "image_uploaded": "Immagine caricata con successo",
+      "upload_failed": "Caricamento immagine fallito",
+      "downloading_video": "Download video...",
+      "download_success": "Video scaricato con successo",
+      "download_failed": "Download video fallito. Riprova.",
+      "new_video": "Nuovo Video"
+    }
+  }
+}

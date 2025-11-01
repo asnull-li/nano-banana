@@ -370,4 +370,41 @@
     <loc>https://nanobanana.org/pt/about</loc>
     <lastmod>2025-10-26T10:00:00+00:00</lastmod>
   </url>
+  <url>
+    <loc>https://nanobanana.org/it</loc>
+    <lastmod>2025-11-02T10:00:00+00:00</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://nanobanana.org/it/showcase</loc>
+    <lastmod>2025-11-02T10:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://nanobanana.org/it/pricing</loc>
+    <lastmod>2025-11-02T10:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://nanobanana.org/it/ai-image-upscaler</loc>
+    <lastmod>2025-11-02T10:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://nanobanana.org/it/veo3</loc>
+    <lastmod>2025-11-02T10:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://nanobanana.org/it/sora2</loc>
+    <lastmod>2025-11-02T10:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://nanobanana.org/it/veo3-1</loc>
+    <lastmod>2025-11-02T10:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://nanobanana.org/it/wan2-5</loc>
+    <lastmod>2025-11-02T10:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://nanobanana.org/it/about</loc>
+    <lastmod>2025-11-02T10:00:00+00:00</lastmod>
+  </url>
 </urlset>

@@ -1,0 +1,286 @@
+{
+  "meta": {
+    "title": "Veo 3 Generatore Video AI - Da Testo a Video e Da Immagine a Video con Veo 3",
+    "description": "Crea video straordinari con Veo 3, il generatore video AI di Google. Da testo a video e da immagine a video con qualità 720P/1080P. Generazione video professionale."
+  },
+  "hero": {
+    "title": "Generatore Video AI Veo 3",
+    "description": "Sblocca il potere di Veo 3 per creare video di qualità professionale da prompt di testo o immagini. Il modello Veo 3 di Google offre una generazione video eccezionale con audio nativo, qualità 4K e controlli creativi avanzati."
+  },
+  "features": {
+    "title": "Sperimenta la Creazione Video Professionale con la Tecnologia AI Veo 3",
+    "description": "Veo 3 di Google porta la generazione video all'avanguardia con qualità e controllo creativo senza pari per filmmaker e creatori di contenuti.",
+    "items": [
+      {
+        "title": "Generazione Video Avanzata Veo 3",
+        "description": "Veo 3 offre una qualità video eccezionale con supporto per risoluzione 4K. Questo potente modello Veo 3 genera video altamente realistici con simulazione fisica migliorata, movimenti naturali e conservazione dei dettagli fotorealistici. Che tu stia creando da testo o immagini, Veo 3 garantisce risultati professionali ogni volta."
+      },
+      {
+        "title": "Da Testo a Video e Da Immagine a Video con Veo 3",
+        "description": "Sperimenta una creazione video senza soluzione di continuità con la generazione a doppia modalità di Veo 3. Converti prompt di testo in video straordinari o trasforma immagini statiche in contenuti dinamici. La tecnologia avanzata di aderenza ai prompt di Veo 3 segue istruzioni complesse multi-scena con maggiore precisione che mai."
+      },
+      {
+        "title": "Generazione Audio Nativa in Veo 3",
+        "description": "Veo 3 si distingue con capacità di generazione audio nativa. Il modello Veo 3 genera automaticamente effetti sonori sincronizzati, dialoghi e audio di sottofondo che si abbinano perfettamente al contenuto del tuo video. Questa funzionalità unica di Veo 3 dà vita ai tuoi video con qualità audio professionale."
+      },
+      {
+        "title": "Controllo Creativo con Veo 3",
+        "description": "Sblocca creatività illimitata con i controlli avanzati di Veo 3. Usa immagini di riferimento per l'abbinamento dello stile, mantieni la coerenza dei personaggi tra le scene, definisci i movimenti della telecamera e controlla i percorsi di movimento. Veo 3 ti offre gli strumenti di precisione necessari per la produzione video professionale e lo storytelling."
+      }
+    ]
+  },
+  "how_to_use": {
+    "title": "Come Creare Video con il Generatore Video AI Veo 3",
+    "description": "Genera video professionali con Veo 3 in soli tre semplici passaggi utilizzando la nostra interfaccia intuitiva.",
+    "items": [
+      {
+        "title": "Inserisci il Tuo Prompt o Carica un'Immagine",
+        "description": "Inizia la tua creazione video Veo 3 inserendo un prompt di testo dettagliato o caricando un'immagine. Veo 3 supporta sia la generazione da testo a video che da immagine a video, offrendoti flessibilità nel modo in cui crei. Più dettagliato è il tuo prompt, meglio Veo 3 può comprendere la tua visione creativa."
+      },
+      {
+        "title": "Configura le Impostazioni di Generazione Veo 3",
+        "description": "Personalizza il tuo video Veo 3 con opzioni avanzate. Scegli tra modalità da testo a video o da immagine a video, seleziona qualità standard 720P o aggiorna a definizione ad alta 1080P. Veo 3 ti consente di perfezionare i controlli creativi per risultati ottimali che corrispondono alle tue esigenze specifiche."
+      },
+      {
+        "title": "Genera e Scarica il Tuo Video Veo 3",
+        "description": "Fai clic su genera e lascia che Veo 3 crei il tuo video professionale. Una volta che Veo 3 completa l'elaborazione, visualizza in anteprima il tuo video con audio sincronizzato e scarica nella qualità preferita. Il tuo video generato da Veo 3 è pronto per essere condiviso, modificato o utilizzato commercialmente."
+      }
+    ]
+  },
+  "workspace": {
+    "mode_selector": {
+      "text_to_video": "Da Testo a Video",
+      "image_to_video": "Da Immagine a Video",
+      "reference_to_video": "Da Riferimento a Video"
+    },
+    "reference_mode": {
+      "notice": "La modalità Da Riferimento a Video supporta solo la Modalità Veloce (veo3_fast) e il rapporto d'aspetto 16:9. Carica 1-3 immagini di riferimento per guidare la generazione del video."
+    },
+    "upload_zone": {
+      "title": "Carica Immagine di Riferimento",
+      "description": "Carica un'immagine per la generazione da immagine a video Veo 3",
+      "supported_formats": "Formati supportati: JPEG, PNG, WebP",
+      "max_size": "Dimensione massima del file: 10MB",
+      "error_file_too_large": "Il file è troppo grande. La dimensione massima è 10MB.",
+      "error_invalid_type": "Tipo di file non valido. Si prega di caricare un'immagine.",
+      "preview_alt": "Anteprima immagine di riferimento Veo 3",
+      "delete_tooltip": "Rimuovi immagine",
+      "replace_tooltip": "Sostituisci immagine",
+      "drop_text": "Rilascia per caricare per Veo 3",
+      "click_or_drag": "Fai clic o trascina per caricare",
+      "processing": "Elaborazione..."
+    },
+    "keyframe_mode": {
+      "label": "Modalità Fotogramma Chiave",
+      "description": "Puoi controllare con precisione l'inizio e la fine del tuo video AI, consentendoti di controllare il primo e l'ultimo fotogramma e creare transizioni cinematografiche fluide",
+      "start_frame": "Fotogramma Iniziale",
+      "end_frame": "Fotogramma Finale",
+      "start_frame_required": "Si prega di caricare l'immagine del fotogramma iniziale",
+      "end_frame_required": "Si prega di caricare l'immagine del fotogramma finale"
+    },
+    "prompt": {
+      "label": "Prompt",
+      "tooltip": "Descrivi il video che vuoi generare. Sii specifico e dettagliato per ottenere i migliori risultati.",
+      "placeholder": "Descrivi il tuo video... ad esempio, 'Un gatto carino che gioca con un gomitolo di lana al rallentatore, illuminazione cinematografica, qualità 4K'",
+      "min_chars_required": "Richiesti minimo ${count} caratteri",
+      "approaching_limit": "Avvicinamento al limite di caratteri"
+    },
+    "controls": {
+      "model_label": "Modello",
+      "model_tooltip_line1": "Modalità Veloce: Generazione rapida",
+      "model_tooltip_line2": "Modalità Qualità: Migliore output di qualità",
+      "model_fast": "Modalità Veloce",
+      "model_fast_desc": "Generazione rapida",
+      "model_quality": "Modalità Qualità",
+      "model_quality_desc": "Output di alta qualità",
+      "aspect_ratio_label": "Rapporto d'Aspetto",
+      "aspect_ratio_tooltip_line1": "16:9 supporta l'aggiornamento a 1080P",
+      "aspect_ratio_tooltip_line2": "9:16 per video mobile",
+      "aspect_ratio_tooltip_line3": "Auto lascia decidere all'AI",
+      "advanced_options": "Opzioni Avanzate",
+      "watermark_label": "Filigrana",
+      "watermark_placeholder": "Aggiungi filigrana di testo...",
+      "random_seed_label": "Seed Casuale",
+      "random_seed_tooltip_line1": "Controlla la casualità del video (10000-99999).",
+      "random_seed_tooltip_line2": "Lo stesso seed genera video simili.",
+      "random_seed_tooltip_line3": "Lascia vuoto per assegnazione automatica.",
+      "random_seed_placeholder": "10000 - 99999",
+      "random_seed_hint": "Lo stesso seed genera video simili. Lascia vuoto per assegnare automaticamente.",
+      "auto_translate_label": "Traduzione Automatica Prompt",
+      "auto_translate_tooltip_line1": "Traduci automaticamente i prompt non in inglese in inglese per una migliore qualità di generazione video.",
+      "auto_translate_tooltip_line2": "Si consiglia di mantenerlo abilitato per risultati ottimali.",
+      "auto_translate_enabled": "I prompt verranno tradotti automaticamente in inglese",
+      "auto_translate_disabled": "Verrà utilizzata la lingua originale del prompt",
+      "credits_cost": "Costo Crediti",
+      "credits_unit": "crediti"
+    },
+    "generate_button": {
+      "uploading": "Caricamento...",
+      "generating": "Generazione...",
+      "generate": "Genera Video (${credits} crediti)"
+    },
+    "empty_state": {
+      "title": "Nessun Video Ancora",
+      "description": "Inserisci un prompt e fai clic su genera per creare il tuo primo video con Veo 3",
+      "modes": "Generazione da testo a video o da immagine a video"
+    },
+    "processing_state": {
+      "uploading_title": "Caricamento...",
+      "generating_title": "Generazione Video...",
+      "uploading_description": "Caricamento della tua immagine sul server...",
+      "generating_description": "Il tuo video è in fase di generazione. Questo potrebbe richiedere alcuni minuti...",
+      "model_quality": "Modalità Qualità",
+      "model_fast": "Modalità Veloce",
+      "prompt_label": "Prompt:",
+      "dont_close": "Si prega di non chiudere questa pagina durante la generazione..."
+    },
+    "failed_state": {
+      "title": "Generazione Fallita",
+      "error_default": "Si è verificato un errore imprevisto durante la generazione del video",
+      "prompt_label": "Il Tuo Prompt:",
+      "credits_refunded": "I tuoi crediti sono stati rimborsati. Se il problema persiste, contatta il nostro team di supporto.",
+      "try_again": "Riprova",
+      "contact_support": "Contatta il Supporto",
+      "need_help": "Hai bisogno di aiuto? Inviaci un'email a:"
+    },
+    "completed_state": {
+      "quality_720p": "720p",
+      "quality_1080p": "1080p HD",
+      "download": "Scarica",
+      "downloading": "Download...",
+      "preparing_1080p": "Preparazione Versione HD 1080P",
+      "preparing_1080p_hint": "Questo potrebbe richiedere 1-2 minuti. Il video apparirà automaticamente quando pronto...",
+      "completed": "Completato",
+      "mode_quality": "Qualità",
+      "mode_fast": "Veloce",
+      "upgrade_button": "Aggiorna a 1080p (${credits} crediti)",
+      "upgrading": "Aggiornamento...",
+      "input_image_label": "Immagine di Input:"
+    },
+    "upgrade_modal": {
+      "title": "Aggiorna a 1080P",
+      "description": "Aggiorna il tuo video alla risoluzione cristallina 1080P per una migliore esperienza di visualizzazione.",
+      "enhanced_quality_title": "Qualità Migliorata",
+      "enhanced_quality_description": "Aggiorna il tuo video alla risoluzione cristallina 1080P per una migliore esperienza di visualizzazione e presentazione professionale.",
+      "cost_label": "Costo",
+      "balance_label": "Il tuo saldo",
+      "insufficient_credits": "Non hai abbastanza crediti. Si prega di ricaricare prima.",
+      "hint": "Il video 1080P aggiornato verrà generato e salvato insieme alla tua versione 720P. Puoi passare da uno all'altro in qualsiasi momento.",
+      "cancel": "Annulla",
+      "confirm": "Conferma (${credits} crediti)",
+      "confirming": "Aggiornamento..."
+    },
+    "toast": {
+      "video_generated": "Video Generato! Il tuo video è pronto per la visualizzazione.",
+      "error_occurred": "Si è verificato un errore durante la generazione",
+      "prompt_required": "Si prega di inserire un prompt per la generazione del video",
+      "prompt_length_error": "Il prompt deve contenere tra 3 e 5000 caratteri",
+      "image_required": "Si prega di caricare un'immagine per la generazione da immagine a video",
+      "login_required": "Si prega di effettuare il login per generare video",
+      "insufficient_credits": "Hai bisogno di ${credits} crediti per generare con la modalità ${mode}",
+      "uploading_image": "Caricamento immagine...",
+      "image_uploaded": "Immagine caricata con successo",
+      "uploading_images": "Caricamento fotogrammi iniziale e finale...",
+      "images_uploaded": "Fotogrammi iniziale e finale caricati con successo",
+      "upload_failed": "Caricamento dell'immagine fallito",
+      "upgraded_1080p": "Aggiornato a 1080P! Il tuo video di alta qualità è pronto",
+      "upgrade_timeout": "Timeout aggiornamento 1080P. Il server sta ancora elaborando, riprova più tardi.",
+      "preparing_1080p": "Il video 1080P è in fase di preparazione dal server. Ci vorranno 1-2 minuti, attendi...",
+      "still_processing": "Ancora in elaborazione... (${seconds}s trascorsi)",
+      "upgrade_failed": "Aggiornamento del video fallito",
+      "need_credits_1080p": "Hai bisogno di ${credits} crediti per l'aggiornamento 1080P",
+      "downloading_video": "Download video ${quality}...",
+      "download_success": "Video ${quality} scaricato con successo",
+      "download_failed": "Download del video fallito. Si prega di riprovare.",
+      "new_video": "Nuovo Video"
+    }
+  },
+  "faq": {
+    "title": "Generatore Video Veo 3 - Domande Frequenti",
+    "description": "Ottieni risposte alle domande comuni sulla generazione video AI Veo 3.",
+    "contact": {
+      "question_text": "Hai altre domande su Veo 3?",
+      "support_link": "Contatta il nostro team di supporto Veo 3"
+    },
+    "items": [
+      {
+        "question": "Cos'è Veo 3 e come funziona?",
+        "answer": "Veo 3 è il modello di generazione video AI all'avanguardia di Google che crea video di qualità professionale da prompt di testo o immagini. Veo 3 utilizza l'apprendimento automatico avanzato per generare video con risoluzione 4K, audio nativo e qualità fotorealistica. Il modello Veo 3 eccelle nella comprensione di prompt complessi e nel mantenimento della coerenza tra le scene, rendendolo perfetto per creatori di contenuti e filmmaker."
+      },
+      {
+        "question": "Veo 3 può generare video sia da testo che da immagini?",
+        "answer": "Sì! Veo 3 è un generatore video versatile che supporta sia la generazione da testo a video che da immagine a video. Puoi descrivere la tua visione in testo e lasciare che Veo 3 la crei da zero, oppure caricare un'immagine esistente e far animare Veo 3 in un video dinamico. Entrambe le modalità sfruttano le potenti capacità AI di Veo 3 per risultati professionali."
+      },
+      {
+        "question": "Veo 3 include la generazione audio?",
+        "answer": "Assolutamente! Una delle caratteristiche distintive di Veo 3 è la generazione audio nativa. A differenza di altri generatori video, Veo 3 crea automaticamente effetti sonori sincronizzati, dialoghi e musica di sottofondo che si abbinano perfettamente al contenuto del tuo video. Questo rende i video generati da Veo 3 completi e pronti per l'uso senza ulteriori modifiche audio."
+      },
+      {
+        "question": "Quanto tempo impiega Veo 3 per generare un video?",
+        "answer": "La generazione video Veo 3 richiede tipicamente 2-5 minuti a seconda della complessità del prompt, della qualità selezionata e del carico attuale del server. I membri Pro+ beneficiano dell'elaborazione prioritaria, il che significa tempi di generazione Veo 3 più rapidi. Il sistema Veo 3 è ottimizzato per l'efficienza mantenendo l'output di massima qualità."
+      },
+      {
+        "question": "Cosa rende Veo 3 diverso dagli altri generatori video AI?",
+        "answer": "Veo 3 si distingue con diversi vantaggi unici: generazione audio nativa, supporto qualità 4K, aderenza avanzata ai prompt, simulazione fisica migliorata e controlli creativi come coerenza dei personaggi e movimento della telecamera. Veo 3 è sviluppato da Google DeepMind, portando ricerca all'avanguardia alla generazione video pratica. Il modello Veo 3 offre risultati più realistici e controllabili rispetto agli strumenti di generazione precedenti."
+      },
+      {
+        "question": "Posso utilizzare i video generati da Veo 3 per scopi commerciali?",
+        "answer": "Sì, tutti i video generati con Veo 3 tramite la nostra piattaforma sono adatti per uso commerciale. Veo 3 crea contenuti originali basati sui tuoi prompt, rendendolo perfetto per video di marketing, contenuti sui social media, presentazioni e progetti professionali. Assicurati sempre che i tuoi prompt non violino materiali protetti da copyright."
+      },
+      {
+        "question": "Quanto costa la generazione video Veo 3?",
+        "answer": "La generazione video Veo 3 utilizza un sistema basato su crediti. Ogni video Veo 3 720P costa un certo numero di crediti, mentre la generazione HD 1080P richiede crediti aggiuntivi. Questo prezzo flessibile garantisce che paghi solo per i video Veo 3 che crei. Controlla i controlli dell'area di lavoro per i costi attuali dei crediti."
+      },
+      {
+        "question": "Quali controlli creativi offre Veo 3?",
+        "answer": "Veo 3 fornisce controlli creativi avanzati tra cui abbinamento dello stile da immagini di riferimento, coerenza dei personaggi tra le scene, definizioni di movimento della telecamera e controllo del percorso di movimento. Queste funzionalità Veo 3 ti offrono un controllo di precisione sulla generazione del tuo video, rendendolo adatto per filmmaking professionale e progetti di storytelling complessi."
+      },
+      {
+        "question": "Veo 3 è adatto ai principianti?",
+        "answer": "Assolutamente! Mentre Veo 3 offre funzionalità avanzate per i professionisti, è progettato per essere accessibile a tutti. Basta inserire una descrizione testuale o caricare un'immagine, e Veo 3 gestisce il complesso processo di generazione video. La nostra interfaccia intuitiva rende facile iniziare a creare video Veo 3 professionali immediatamente, indipendentemente dal tuo background tecnico."
+      },
+      {
+        "question": "Quanto durano i video generati da Veo 3?",
+        "answer": "I video generati da Veo 3 durano 8 secondi. Questa è la durata di output standard per il modello Veo 3, fornendo tempo sufficiente per mostrare il tuo contenuto creativo mantenendo risultati di generazione video di alta qualità."
+      },
+      {
+        "question": "Come posso ottenere una migliore qualità video Veo 3?",
+        "answer": "Per ottenere la migliore qualità video Veo 3, segui queste raccomandazioni: 1) Utilizza prompt dettagliati e specifici che descrivano chiaramente la scena, le azioni, l'illuminazione e lo stile che desideri; 2) Scegli la Modalità Qualità (modello standard Veo 3) invece della Modalità Veloce per risultati video più raffinati; 3) Per i video con rapporto d'aspetto 16:9, puoi aggiornare alla versione HD 1080P per un'esperienza di visualizzazione cristallina e presentazione professionale."
+      },
+      {
+        "question": "Perché la generazione del mio video fallisce sempre?",
+        "answer": "I fallimenti della generazione video si verificano tipicamente per diversi motivi: 1) Il tuo prompt potrebbe violare le politiche sui contenuti, specialmente quando coinvolge persone reali, bambini, violenza o contenuti sensibili - Veo 3 rifiuterà tali richieste; 2) Rivedi attentamente il messaggio di errore specifico restituito dal sistema, che indicherà il motivo esatto del fallimento; 3) Se il problema persiste, contatta il nostro team di supporto tecnico per assistenza nella diagnosi e risoluzione del problema. La modifica del prompt per conformarsi ai requisiti della policy solitamente risolve la maggior parte dei fallimenti di generazione."
+      },
+      {
+        "question": "Come generare video Veo 3 più lunghi di 8 secondi?",
+        "answer": "Le singole clip video create direttamente in Veo 3 sono limitate a 8 secondi. Se hai bisogno di creare contenuti video più lunghi, puoi generare più clip video da 8 secondi separatamente, quindi utilizzare strumenti di editing video esterni (come Adobe Premiere, Final Cut Pro o CapCut) per unire queste clip in un video completo più lungo. Questo approccio ti consente di creare opere video professionali di qualsiasi lunghezza mantenendo alta qualità per ogni segmento."
+      }
+    ]
+  },
+  "examples": {
+    "title": "Esempi Creativi Veo 3",
+    "subtitle": "Esplora le potenti capacità di generazione video di Veo 3, dalle immagini ai video, dal testo alle animazioni, sperimenta le infinite possibilità della creazione video AI",
+    "image_to_video": {
+      "title": "Da Immagine a Video",
+      "description": "Carica un'immagine statica o seleziona un'immagine generata da Nano Banana, Veo 3 le infonderà vitalità, creando effetti video dinamici fluidi e naturali.",
+      "input_image_url": "https://file.nanobanana.org/showcase/veo3/woman-city-doodle.jpg",
+      "input_image_alt": "Illustrazione femminile in stile doodle urbano",
+      "output_video_url": "https://file.nanobanana.org/showcase/veo3/woman-city-doodle.mp4"
+    },
+    "text_to_video": {
+      "title": "Da Testo a Video",
+      "description": "Con solo descrizioni testuali, Veo 3 può comprendere la tua visione creativa e generare contenuti video straordinari di livello professionale",
+      "input_prompt": "Ripresa ultra-veloce attraverso un vasto paesaggio urbano futuristico dove edifici imponenti sono realizzati in cromo organico riflettente, scintillanti sotto un sole intenso di mezzogiorno. Bagliori di luce arcobaleno e bokeh cristallino si disperdono attraverso l'inquadratura mentre la telecamera si muove dinamicamente tra le strutture. La sequenza si trasforma in uno zoom ravvicinato senza soluzione di continuità in un alveare di cromo traslucido, dove si vede un'ape robotica operaia altamente dettagliata che crea con precisione meccanica. La scena è resa con chiarezza iperrealistica 4K, profondità di lente morbida e audio sci-fi ambientale che ronza in sottofondo, evocando l'atmosfera di un film cyber-futurista ad alto budget.",
+      "output_video_url": "https://file.nanobanana.org/showcase/veo3/tmp7uoz8hjv.mp4"
+    },
+    "labels": {
+      "original_image": "Immagine Originale",
+      "prompt_text": "Prompt",
+      "ai_generated_video": "Video Generato dall'AI",
+      "video_duration": "8 secondi",
+      "video_quality": "720P",
+      "video_info": "8s • 720P",
+      "browser_not_supported": "Il tuo browser non supporta la riproduzione video."
+    }
+  }
+}

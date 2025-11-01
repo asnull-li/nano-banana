@@ -15,6 +15,7 @@ const languageFlags: Record<string, string> = {
   ru: "🇷🇺",
   ar: "🇸🇦",
   pt: "🇵🇹",
+  it: "🇮🇹",
 };
 
 export default function FooterLanguageLinks() {
