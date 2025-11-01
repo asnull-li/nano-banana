@@ -57,12 +57,12 @@ export function calculateCredits(
   // 高画质: 10秒=80, 15秒=160
   const creditsMatrix: Record<Sora2Quality, Record<Sora2Duration, number>> = {
     standard: {
-      "10": 40,
-      "15": 50,
+      "10": 125,
+      "15": 225,
     },
     high: {
-      "10": 80,
-      "15": 160,
+      "10": 275,
+      "15": 475,
     },
   };
 
